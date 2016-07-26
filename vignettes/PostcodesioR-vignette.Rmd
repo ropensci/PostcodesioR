@@ -24,17 +24,15 @@ devtools::install_github("erzk/PostcodesioR")
 
 ## Usage examples
 
-###
+First load the package after installation:
 
-## More Examples
-
-You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
-
-```{r, echo=FALSE, results='asis'}
-knitr::kable(head(mtcars, 10))
+```{r, eval = FALSE}
+library(PostcodesioR)
 ```
 
-Also a quote using `>`:
+### Fetching postcodes
 
-> "He who gives up [code] safety for [code] speed deserves neither."
-([via](https://twitter.com/hadleywickham/status/504368538874703872))
+### Reverse geocoding
+
+
+## More Examples
