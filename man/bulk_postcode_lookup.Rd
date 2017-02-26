@@ -7,9 +7,13 @@
 bulk_postcode_lookup(postcodes)
 }
 \arguments{
-\item{postcodes}{Accepts a JSON object containing an array of postcodes. Accepts up to 100 postcodes.}
+\item{postcodes}{Accepts a list of postcodes. Accepts up to 100 postcodes.}
 }
 \description{
 Returns a list of matching postcodes and respective available data.
+}
+\examples{
+pc_list <- list(postcodes = c("PR3 0SG", "M45 6GN", "EX165BL"))
+bulk_postcode_lookup(pc_list)
 }
 
