@@ -8,11 +8,10 @@
 #'
 #' @examples
 #' outward_code_lookup("E1")
-#'
 #' @export
 
 outward_code_lookup <- function(outcode) {
   r <- GET(paste0("https://api.postcodes.io/outcodes/", outcode))
-  warn_for_status(r) # https://cran.r-project.org/web/packages/httr/vignettes/quickstart.html
+  warn_for_status(r)
   content(r)
 }

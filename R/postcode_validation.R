@@ -7,7 +7,6 @@
 #'
 #' @examples
 #' postcode_validation("EC1Y 8LX")
-#'
 #' @export
 
 postcode_validation <- function(postcode) {

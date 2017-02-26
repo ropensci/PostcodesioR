@@ -13,7 +13,6 @@
 #'
 #' @examples
 #' reverse_geocoding("-3.158", "51.479")
-#'
 #' @export
 
 reverse_geocoding <- function(longitude, latitude) {
@@ -21,7 +20,6 @@ reverse_geocoding <- function(longitude, latitude) {
                   longitude,
                   "&lat=",
                   latitude))
-  warn_for_status(r) # https://cran.r-project.org/web/packages/httr/vignettes/quickstart.html
+  warn_for_status(r)
   content(r)
 }
-

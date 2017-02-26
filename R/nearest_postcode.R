@@ -12,11 +12,10 @@
 #'
 #' @examples
 #' nearest_postcode("EC1Y 8LX")
-#'
 #' @export
 
 nearest_postcode <- function(postcode) {
   r <- GET(paste0("https://api.postcodes.io/postcodes/", postcode, "/nearest"))
-  warn_for_status(r) # https://cran.r-project.org/web/packages/httr/vignettes/quickstart.html
+  warn_for_status(r)
   content(r)
 }

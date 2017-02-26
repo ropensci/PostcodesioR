@@ -12,11 +12,10 @@
 #'
 #' @examples
 #' postcode_query("EC1Y8LX")
-#'
 #' @export
 
 postcode_query <- function(postcode) {
   r <- GET(paste0("https://api.postcodes.io/postcodes?q=", postcode))
-  #warn_for_status(r) # https://cran.r-project.org/web/packages/httr/vignettes/quickstart.html
+  warn_for_status(r)
   content(r)
 }

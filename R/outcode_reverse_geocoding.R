@@ -15,7 +15,6 @@
 #' @examples
 #' outcode_reverse_geocoding("-3.15", "51.47")
 #' outcode_reverse_geocoding("-3.15807731271522", "51.4799900627036")
-#'
 #' @export
 
 outcode_reverse_geocoding <- function(longitude, latitude) {
@@ -23,6 +22,6 @@ outcode_reverse_geocoding <- function(longitude, latitude) {
                   longitude,
                   "&lat=",
                   latitude))
-  warn_for_status(r) # https://cran.r-project.org/web/packages/httr/vignettes/quickstart.html
+  warn_for_status(r)
   content(r)
 }
