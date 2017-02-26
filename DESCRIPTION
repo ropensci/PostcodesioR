@@ -12,7 +12,8 @@ Description: Free UK geocoding using data from Office for National Statistics.
 License: GPL-3
 URL: http://postcodes.io/docs, https://github.com/erzk
 LazyData: TRUE
-Imports:
+Depends:
+    R (>= 3.1),
     httr,
     xml2
 RoxygenNote: 5.0.1
