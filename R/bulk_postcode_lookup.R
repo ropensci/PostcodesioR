@@ -10,7 +10,8 @@
 #' @export
 
 bulk_postcode_lookup <- function(postcodes) {
-  # TODO check if postcodes is a list, if not transform into a list (preferably from a DF)
+  if (!is.list(postcodes))
+    stop("Please provide a list with postcodes.")
   r <- POST("https://api.postcodes.io/postcodes",
             body = postcodes,
             encode = "json")
@@ -18,7 +19,3 @@ bulk_postcode_lookup <- function(postcodes) {
   pc_content <- content(r)
   return(pc_content)
 }
-
-
-
-
