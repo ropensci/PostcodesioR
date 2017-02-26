@@ -9,6 +9,8 @@
 #' @return A random post code with corresponding characteristics.
 #' @examples
 #' random_postcode()
+#'
+#' @export
 
 random_postcode <- function() {
   r <- GET(paste0("https://api.postcodes.io/random/postcodes"))

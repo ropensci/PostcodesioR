@@ -12,6 +12,7 @@
 #'
 #' @examples
 #' bulk_reverse_geocoding()
+#' @export
 
 bulk_reverse_geocoding <- function(longitude, latitude) {
   r <- GET(paste0("https://api.postcodes.io/postcodes?lon=",

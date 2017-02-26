@@ -15,6 +15,8 @@
 #' @examples
 #' outcode_reverse_geocoding("-3.15", "51.47")
 #' outcode_reverse_geocoding("-3.15807731271522", "51.4799900627036")
+#'
+#' @export
 
 outcode_reverse_geocoding <- function(longitude, latitude) {
   r <- GET(paste0("https://api.postcodes.io/outcodes?lon=",

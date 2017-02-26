@@ -11,6 +11,8 @@
 #'
 #' @examples
 #' postcode_autocomplete("E1")
+#'
+#' @export
 
 postcode_autocomplete <- function(postcode) {
   r <- GET(paste0("https://api.postcodes.io/postcodes/", postcode, "/autocomplete"))

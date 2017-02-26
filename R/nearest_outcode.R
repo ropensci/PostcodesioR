@@ -12,6 +12,8 @@
 #' @examples
 #' nearest_postcode("EC1Y 8LX")
 #' nearest_postcode("EC1Y8LX")
+#'
+#' @export
 
 nearest_postcode <- function(postcode) {
   r <- GET(paste0("https://api.postcodes.io/postcodes/", postcode, "/nearest"))

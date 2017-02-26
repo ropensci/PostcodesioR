@@ -7,6 +7,8 @@
 #'
 #' @examples
 #' postcode_validation("EC1Y 8LX")
+#'
+#' @export
 
 postcode_validation <- function(postcode) {
   r <- GET(paste0("https://api.postcodes.io/postcodes/", postcode, "/validate"))

@@ -7,6 +7,7 @@
 #' @examples
 #' pc_list <- list(postcodes = c("PR3 0SG", "M45 6GN", "EX165BL"))
 #' bulk_postcode_lookup(pc_list)
+#' @export
 
 bulk_postcode_lookup <- function(postcodes) {
   # TODO check if postcodes is a list, if not transform into a list (preferably from a DF)

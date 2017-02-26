@@ -13,6 +13,8 @@
 #'
 #' @examples
 #' reverse_geocoding("-3.158", "51.479")
+#'
+#' @export
 
 reverse_geocoding <- function(longitude, latitude) {
   r <- GET(paste0("https://api.postcodes.io/postcodes?lon=",

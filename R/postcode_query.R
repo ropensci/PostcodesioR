@@ -12,6 +12,8 @@
 #'
 #' @examples
 #' postcode_query("EC1Y8LX")
+#'
+#' @export
 
 postcode_query <- function(postcode) {
   r <- GET(paste0("https://api.postcodes.io/postcodes?q=", postcode))
