@@ -7,16 +7,15 @@
 outward_code_lookup(outcode)
 }
 \arguments{
-\item{outcode}{A string.}
+\item{outcode}{A string. The outward code representing the first half of any postcode (separated by a space).}
 }
 \value{
 The list of geographical properties.
 }
 \description{
 Geolocation data for the centroid of the outward code specified.
-The outward code represents the first half of any postcode (separated by a space).
 }
 \examples{
 outward_code_lookup("E1")
-}
 
+}

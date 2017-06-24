@@ -7,9 +7,9 @@
 outcode_reverse_geocoding(longitude, latitude)
 }
 \arguments{
-\item{longitude}{A string. Needs to have at least two decimal points.}
+\item{longitude}{A string, integer or float. Needs to have at least two decimal points.}
 
-\item{latitude}{A string. Needs to have at least two decimal points.}
+\item{latitude}{A string, integer or float. Needs to have at least two decimal points.}
 }
 \value{
 A list of geographical properties.
@@ -26,6 +26,7 @@ radius= (not required) Limits number of postcodes matches to return. Defaults to
 }
 \examples{
 outcode_reverse_geocoding("-3.15", "51.47")
+outcode_reverse_geocoding(-3.15, 51.47)
 outcode_reverse_geocoding("-3.15807731271522", "51.4799900627036")
-}
 
+}
