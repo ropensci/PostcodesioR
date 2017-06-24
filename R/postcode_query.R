@@ -7,15 +7,28 @@
 #' query= (not required) aliases to q=
 #'
 #' limit= (not required) Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.
-#' @param postcode A string.
+#'
+#' @import httr
+#'
+#' @param postcode A string. Valid UK postcode.
+#' @param limit An integer. Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.
+#'
+#' @export
+#'
 #' @return A list of geographic properties.
 #'
 #' @examples
 #' postcode_query("EC1Y8LX")
-#' @export
-
-postcode_query <- function(postcode) {
-  r <- GET(paste0("https://api.postcodes.io/postcodes?q=", postcode))
+#' postcode_query("EC1", limit = 11)
+#'
+postcode_query <- function(postcode, limit = 10) {
+  if (!is.character(postcode) || nchar(postcode) < 2) {
+    stop("Please provide a valid UK outcode.")
+  }
+  if (limit > 100) {
+    stop("Please provide an integer lower than 100.")
+  }
+  r <- GET(paste0("https://api.postcodes.io/postcodes?q=", postcode, "&limit=", limit))
   warn_for_status(r)
   content(r)
 }
