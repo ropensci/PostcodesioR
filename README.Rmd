@@ -39,7 +39,7 @@ https://walczak.org/2016/07/postcode-and-geolocation-api-for-the-uk/
 
 This package is a wrapper around [postcodes.io](http://postcodes.io/) which is a free Postcode lookup API and geocoder for the UK.
 
-Currently there is a limit to the number of API calls. However, postcoes.io provide full list of geolocation data that can be used locally without limitations. Original data is sourced from [Office for National Statistics Data Porta](https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page).
+Currently there is a limit to the number of API calls. However, postcoes.io provide full list of geolocation data that can be used locally without limitations. Original data is sourced from [Office for National Statistics Data Portal](https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page).
 That [file](https://github.com/ideal-postcodes/postcodes.io/blob/master/latest) is rather large so I didn't include it with the package.
 
 For more info see the original [documentation](https://postcodes.io/docs).
