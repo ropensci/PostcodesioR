@@ -6,19 +6,38 @@
 #' Each geolocation object accepts an optional radius (meters) and limit argument.
 #' Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #'
-#' @param A list containing an array of geolocation objects.
+#' @import httr
+#'
+#' @param geolocations A list containing an array of geolocation objects.
 #'
 #' @return A list with available data.
 #'
-#' @examples
-#' bulk_reverse_geocoding()
 #' @export
-
-bulk_reverse_geocoding <- function(longitude, latitude) {
-  r <- GET(paste0("https://api.postcodes.io/postcodes?lon=",
-                  longitude,
-                  "&lat=",
-                  latitude))
+#'
+#' @examples
+#'
+#' geolocations_list <- structure(
+#' list(
+#' geolocations = structure(
+#' list(
+#' longitude = c(-3.15807731271522, -1.12935802905177),
+#' latitude = c(51.4799900627036, 50.7186356978817),
+#' limit = c(NA, 100L),
+#' radius = c(NA, 500L)),
+#' .Names = c("longitude", "latitude", "limit", "radius"),
+#' class = "data.frame",
+#' row.names = 1:2)),
+#' .Names = "geolocations")
+#'
+#' bulk_reverse_geocoding(geolocations_list)
+#'
+bulk_reverse_geocoding <- function(geolocations) {
+  if (!is.list(geolocations))
+    stop("Please provide a list with geolocations.")
+  r <- POST("https://api.postcodes.io/postcodes",
+            body = geolocations,
+            encode = "json")
   warn_for_status(r)
-  content(r)
+  pc_content <- content(r)
+  return(pc_content)
 }
