@@ -2,7 +2,9 @@
 title: "PostcodesioR Introduction"
 author: "Eryk Walczak"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
+output: 
+  rmarkdown::html_vignette:
+    smart: no
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
   %\VignetteEngine{knitr::rmarkdown}
