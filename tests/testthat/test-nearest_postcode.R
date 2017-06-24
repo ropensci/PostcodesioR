@@ -1,0 +1,12 @@
+context("nearest_postcode")
+
+test_that("nearest_postcode works as expected", {
+  incorrect_postcode1 <- 3.15807
+  incorrect_postcode2 <- "E"
+
+  nearest_postcode_result <- nearest_postcode("EC1Y 8LX")
+
+  expect_error(nearest_postcode(incorrect_postcode1))
+  expect_error(nearest_postcode(incorrect_postcode2))
+  expect_that(nearest_postcode_result, is_a("list"))
+})
