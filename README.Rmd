@@ -1,11 +1,16 @@
 ---
 title: "README"
 author: Eryk Walczak
-date: 11 August, 2016
 output:
   md_document:
     variant: markdown_github
 ---
+
+[![Travis-CI Build Status](https://travis-ci.org/erzk/PostcodesioR.svg?branch=master)](https://travis-ci.org/erzk/PostcodesioR)
+
+# PostcodesioR
+
+Wrapper around postcodes.io - a free Postcode lookup API and geocoder for the UK.
 
 ## Installation
 
@@ -13,7 +18,7 @@ This package is still in a development version and is available only on GitHub. 
 In order to install it use the  following commands:
 
 ```{r, eval=FALSE}
-# install.packages("devtools")
+if (!require("devtools")) install.packages("devtools")
 devtools::install_github("erzk/PostcodesioR")
 ```
 
