@@ -4,10 +4,12 @@
 \alias{postcode_query}
 \title{Postcode query}
 \usage{
-postcode_query(postcode)
+postcode_query(postcode, limit = 10)
 }
 \arguments{
-\item{postcode}{A string.}
+\item{postcode}{A string. Valid UK postcode.}
+
+\item{limit}{An integer. Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.}
 }
 \value{
 A list of geographic properties.
@@ -24,5 +26,6 @@ limit= (not required) Limits number of postcodes matches to return. Defaults to 
 }
 \examples{
 postcode_query("EC1Y8LX")
-}
+postcode_query("EC1", limit = 11)
 
+}

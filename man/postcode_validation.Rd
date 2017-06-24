@@ -7,7 +7,7 @@
 postcode_validation(postcode)
 }
 \arguments{
-\item{postcode}{A string.}
+\item{postcode}{A string. Valid UK postcode.}
 }
 \value{
 A list consisting of the HTTP response, and True or False (meaning valid or invalid respectively).
@@ -16,6 +16,7 @@ A list consisting of the HTTP response, and True or False (meaning valid or inva
 Convenience method to validate a postcode.
 }
 \examples{
-postcode_validation("EC1Y 8LX")
-}
+postcode_validation("EC1Y 8LX") # returns TRUE
+postcode_validation("XYZ") # returns FALSE
 
+}
