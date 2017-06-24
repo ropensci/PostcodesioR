@@ -1,4 +1,4 @@
-#' Reverse geocoding - NOT WORKING
+#' Reverse geocoding
 #'
 #' Returns nearest postcodes for a given longitude and latitude. Accepts up to 100 geolocations.
 #'
@@ -10,7 +10,7 @@
 #'
 #' @param geolocations A list containing an array of geolocation objects.
 #'
-#' @return A list with available data.
+#' @return A list with the geocoded data.
 #'
 #' @export
 #'
