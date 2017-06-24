@@ -2,17 +2,21 @@
 #'
 #' Returns a random postcode and all available data for that postcode.
 #'
-#' Optional Query Parameters
+#' @import httr
 #'
-#' outcode= (not required) Filters random postcodes by outcode. Returns null if invalid outcode.
+#' @param outcode A string. Filters random postcodes by outcode. Returns null if invalid outcode. Optional.
 #'
 #' @return A random post code with corresponding characteristics.
+#'
+#' @export
+#'
 #' @examples
 #' random_postcode()
-#' @export
-
-random_postcode <- function() {
-  r <- GET(paste0("https://api.postcodes.io/random/postcodes"))
+#' random_postcode("N1")
+#'
+random_postcode <- function(outcode = NULL) {
+  r <- GET("https://api.postcodes.io/random/postcodes",
+           query = list(outcode = outcode))
   warn_for_status(r)
   content(r)
 }
