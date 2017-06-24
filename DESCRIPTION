@@ -9,7 +9,7 @@ Description: Free UK geocoding using data from Office for National Statistics.
     It is using several functions to get information about post codes, outward
     codes, reverse geocoding, nearest post codes/outward codes, validation, or
     randomly generate a post code.
-License: GPL-3
+License: GPL-3 + file LICENSE
 URL: http://postcodes.io/docs, https://github.com/erzk
 LazyData: TRUE
 Depends:
@@ -18,5 +18,6 @@ Depends:
     xml2
 RoxygenNote: 5.0.1
 Suggests: knitr,
-    rmarkdown
+    rmarkdown,
+    testthat
 VignetteBuilder: knitr
