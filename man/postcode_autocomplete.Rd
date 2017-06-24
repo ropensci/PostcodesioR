@@ -4,23 +4,21 @@
 \alias{postcode_autocomplete}
 \title{Postcode autocomplete}
 \usage{
-postcode_autocomplete(postcode)
+postcode_autocomplete(postcode, limit = 10)
 }
 \arguments{
-\item{postcode}{A string.}
+\item{postcode}{A string. Valid UK postcode.}
+
+\item{limit}{An integer. Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.}
 }
 \value{
-A list of suggested postcodes. Defaults to 10.
+A list of suggested postcodes.
 }
 \description{
 Convenience method to return an list of matching postcodes.
 }
-\details{
-Optional Query Parameters
-
-limit= (not required) Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.
-}
 \examples{
 postcode_autocomplete("E1")
-}
+postcode_autocomplete("E1", limit = 11)
 
+}
