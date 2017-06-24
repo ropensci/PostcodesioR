@@ -4,12 +4,19 @@
 \alias{reverse_geocoding}
 \title{Reverse geocoding}
 \usage{
-reverse_geocoding(longitude, latitude)
+reverse_geocoding(longitude, latitude, limit = 10, radius = 100,
+  wideSearch = NULL)
 }
 \arguments{
 \item{longitude}{A string. Needs to have at least three decimal points.}
 
 \item{latitude}{A string. Needs to have at least three decimal points.}
+
+\item{limit}{An integer. Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.}
+
+\item{radius}{An integer. Limits number of postcodes matches to return. Defaults to 100m. Needs to be less than 2,000m.}
+
+\item{wideSearch}{TRUE or FALSE. Search up to 20km radius, but subject to a maximum of 10 results. Since lookups over a wide area can be very expensive, we've created this method to allow you choose to make the trade off between search radius and number of results. Defaults to false. When enabled, radius and limits over 10 are ignored.}
 }
 \value{
 A list with available data.
@@ -17,13 +24,9 @@ A list with available data.
 \description{
 Returns nearest postcodes for a given longitude and latitude.
 }
-\details{
-Optional Query Parameters:
-limit= (not required) Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.
-radius= (not required) Limits number of postcodes matches to return. Defaults to 100m. Needs to be less than 2,000m.
-wideSearch= (not required) Search up to 20km radius, but subject to a maximum of 10 results. Since lookups over a wide area can be very expensive, we've created this method to allow you choose to make the trade off between search radius and number of results. Defaults to false. When enabled, radius and limits over 10 are ignored.
-}
 \examples{
-reverse_geocoding("-3.158", "51.479")
-}
+reverse_geocoding(0.127, 51.507)
+reverse_geocoding("0.1275", "51.5073", limit = 3)
+reverse_geocoding("0.1275", "51.5073", limit = 11, radius = 200)
 
+}
