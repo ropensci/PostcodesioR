@@ -2,7 +2,7 @@ Package: PostcodesioR
 Type: Package
 Title: API wrapper around Postcodes.io (a free Postcode lookup API and geocoder
     for the UK)
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: person("Eryk", "Walczak", email = "erykjwalczak@gmail.com",
   role = c("aut", "cre"))
 Description: Free UK geocoding using data from Office for National Statistics.
@@ -14,8 +14,7 @@ URL: http://postcodes.io/docs, https://github.com/erzk
 LazyData: TRUE
 Depends:
     R (>= 3.1),
-    httr,
-    xml2
+    httr
 RoxygenNote: 6.0.1
 Suggests: knitr,
     rmarkdown,
