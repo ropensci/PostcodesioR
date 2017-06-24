@@ -2,15 +2,15 @@
 % Please edit documentation in R/bulk_reverse_geocoding.R
 \name{bulk_reverse_geocoding}
 \alias{bulk_reverse_geocoding}
-\title{Reverse geocoding - NOT WORKING}
+\title{Reverse geocoding}
 \usage{
-bulk_reverse_geocoding(longitude, latitude)
+bulk_reverse_geocoding(geolocations)
 }
 \arguments{
-\item{A}{list containing an array of geolocation objects.}
+\item{geolocations}{A list containing an array of geolocation objects.}
 }
 \value{
-A list with available data.
+A list with the geocoded data.
 }
 \description{
 Returns nearest postcodes for a given longitude and latitude. Accepts up to 100 geolocations.
@@ -21,6 +21,20 @@ Each geolocation object accepts an optional radius (meters) and limit argument.
 Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 }
 \examples{
-bulk_reverse_geocoding()
-}
 
+geolocations_list <- structure(
+list(
+geolocations = structure(
+list(
+longitude = c(-3.15807731271522, -1.12935802905177),
+latitude = c(51.4799900627036, 50.7186356978817),
+limit = c(NA, 100L),
+radius = c(NA, 500L)),
+.Names = c("longitude", "latitude", "limit", "radius"),
+class = "data.frame",
+row.names = 1:2)),
+.Names = "geolocations")
+
+bulk_reverse_geocoding(geolocations_list)
+
+}
