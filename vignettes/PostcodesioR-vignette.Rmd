@@ -18,7 +18,7 @@ This package is a wrapper around [postcodes.io](http://postcodes.io/) which is a
 This package is currently uploaded only to GitHub. To install it use the following commands:
 
 ```{r, eval = FALSE}
-install.packages("devtools")
+if (!require("devtools")) install.packages("devtools")
 devtools::install_github("erzk/PostcodesioR")
 ```
 
@@ -31,6 +31,8 @@ library(PostcodesioR)
 ```
 
 ### Fetching postcodes
+
+
 
 ### Reverse geocoding
 
