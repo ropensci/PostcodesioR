@@ -11,7 +11,7 @@
 #' @import httr
 #'
 #' @param postcode A string. Valid UK postcode.
-#' @param limit An integer. Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.
+#' @param limit An integer. Limits the number of matches to return. Defaults to 10. Needs to be less than 100.
 #'
 #' @export
 #'
