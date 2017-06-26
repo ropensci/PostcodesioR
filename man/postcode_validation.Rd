@@ -10,7 +10,7 @@ postcode_validation(postcode)
 \item{postcode}{A string. Valid UK postcode.}
 }
 \value{
-A list consisting of the HTTP response, and True or False (meaning valid or invalid respectively).
+A logical vector: True or False (meaning respectively valid or invalid postcode).
 }
 \description{
 Convenience method to validate a postcode.

@@ -8,7 +8,7 @@
 #'
 #' @export
 #'
-#' @return A list consisting of the HTTP response, and True or False (meaning valid or invalid respectively).
+#' @return A logical vector: True or False (meaning respectively valid or invalid postcode).
 #'
 #' @examples
 #' postcode_validation("EC1Y 8LX") # returns TRUE
@@ -17,5 +17,7 @@
 postcode_validation <- function(postcode) {
   r <- GET(paste0("https://api.postcodes.io/postcodes/", postcode, "/validate"))
   warn_for_status(r)
-  content(r)
+  r <- content(r)
+  r <- r[[2]]
+  return(r)
 }
