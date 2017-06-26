@@ -9,7 +9,7 @@ place_query(place, limit = 10)
 \arguments{
 \item{place}{A string. Name of a place to search for.}
 
-\item{limit.}{An integer. Limits the number of matches to return. Defaults to 10. Needs to be less than 100.}
+\item{limit}{An integer. Limits the number of matches to return. Defaults to 10. Needs to be less than 100.}
 }
 \value{
 A list with available places.

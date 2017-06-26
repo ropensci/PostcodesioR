@@ -5,7 +5,7 @@
 #' @import httr
 #'
 #' @param place A string. Name of a place to search for.
-#' @param limit. An integer. Limits the number of matches to return. Defaults to 10. Needs to be less than 100.
+#' @param limit An integer. Limits the number of matches to return. Defaults to 10. Needs to be less than 100.
 #'
 #' @return A list with available places.
 #'
