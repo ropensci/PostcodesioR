@@ -11,7 +11,7 @@ output:
 
 # PostcodesioR
 
-This package is a wrapper around [postcodes.io](http://postcodes.io/) which is a free Postcode lookup API and geocoder for the UK.
+This package is a wrapper around [postcodes.io](https://postcodes.io/) which is a free Postcode lookup API and geocoder for the UK.
 
 ## Installation
 
@@ -201,5 +201,6 @@ Currently, there is a limit to the number of API calls. However, [postcodes.io](
 That [file](https://github.com/ideal-postcodes/postcodes.io/blob/master/latest) is rather large so I didn't include it in the package.
 
 For more info see the original [documentation](https://postcodes.io/docs).
+
 The reference manual can be accessed [here](https://github.com/erzk/PostcodesioR/blob/master/PostcodesioR.pdf).
-For more examples of usage go to my [blog](https://walczak.org/tag/postcodesior/).
+Go to my [blog](https://walczak.org/tag/postcodesior/) for more examples.
