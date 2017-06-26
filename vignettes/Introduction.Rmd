@@ -5,6 +5,7 @@ date: "`r Sys.Date()`"
 output: 
   rmarkdown::html_vignette:
     smart: no
+    toc: true
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
   %\VignetteEngine{knitr::rmarkdown}
@@ -15,7 +16,7 @@ PostcodesioR is an API wrapper for postcodes.io. It allows acquiring geographic 
 
 ## Installation
 
-```{r}
+```{r, message = FALSE, warning = FALSE, eval = FALSE}
 if (!require("devtools")) install.packages("devtools")
 devtools::install_github("erzk/PostcodesioR")
 ```
@@ -77,22 +78,49 @@ str(bulk_rev_geo)
 
 #### Postcodes
 
+Generates a data frame with a random UK postcode and corresponding geographic information:
+
 ```{r}
 # without restrictions
 random_postcode()
 ```
+
+The random postcode can also belong to a particular outcode:
 
 ```{r}
 # restrict to an outcode
 random_postcode("N1")
 ```
 
-
 #### Places
+
+You can also generate a random place, specified by an OSGB code, with corresponding geographic information:
 
 ```{r}
 random_place()
 ```
+
+### Postcode validation
+
+This function can validate a UK postcode:
+
+```{r}
+postcode_validation("EC1Y 8LX") # actual UK postcode
+```
+
+```{r}
+postcode_validation("XYZ") # incorrect UK postcode
+```
+
+### Find nearest postcode or outcode
+
+```{r}
+near_pc <- nearest_postcode("EC1Y 8LX")
+
+#overview
+near_pc$result[1]
+```
+
 
 
 ## Notes
