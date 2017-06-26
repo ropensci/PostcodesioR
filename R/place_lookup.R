@@ -4,7 +4,7 @@
 #'
 #' @import httr
 #'
-#' @param code A string. Ordnance Survey National Grid code.
+#' @param code A string. The unique identifier for places - Ordnance Survey (OSGB) code.
 #'
 #' @return A list with available places.
 #'
