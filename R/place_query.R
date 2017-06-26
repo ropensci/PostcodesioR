@@ -17,7 +17,7 @@
 #'
 place_query <- function(place, limit = 10) {
   if (!is.character(place) || nchar(place) < 2) {
-    stop("Please provide a valid Ordnance Survey code.")
+    stop("Please provide a valid place name.")
   }
   if (limit > 100) {
     stop("Please provide an integer lower than 100.")
