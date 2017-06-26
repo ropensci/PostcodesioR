@@ -7,7 +7,7 @@
 place_lookup(code)
 }
 \arguments{
-\item{code}{A string. Ordnance Survey National Grid code.}
+\item{code}{A string. The unique identifier for places - Ordnance Survey (OSGB) code.}
 }
 \value{
 A list with available places.
