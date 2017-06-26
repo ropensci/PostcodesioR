@@ -23,36 +23,59 @@ devtools::install_github("erzk/PostcodesioR")
 
 ## Examples
 
-### Lookup postcodes
+Where possible, the functions return data frames. In many cases, the object being returned are rather complex so I left them as the lists.
+
+### Lookup postcodes and outcodes
 
 #### Single postcode
 
+Provide a postcode to obtain all available information: 
+
 ```{r, message = FALSE, warning = FALSE}
+# load the package
 library(PostcodesioR)
+
 lookup_result <- postcode_lookup("EC1Y8LX")
+
+#overview
 str(lookup_result)
 ```
 
 #### Multiple postcodes
 
-```{r, eval = FALSE}
+```{r}
 pc_list <- list(postcodes = c("PR3 0SG", "M45 6GN", "EX165BL"))
 bulk_lookup_result <- bulk_postcode_lookup(pc_list)
-str(bulk_lookup_result)
+
+#overview
+str(bulk_lookup_result$result[1])
 ```
 
+#### Outward code lookup
+
+Provide an outcode to obtain geolocation data for the centroid of the specifid outcode:
+
+```{r}
+ocl <- outward_code_lookup("E1")
+
+#overview
+str(ocl)
+```
 
 ### Reverse geocoding
 
-#### Single
+Provide latitude and longitude to obtain geographic information. Different levels of aggregation are available, i.e. postcode or outcode.
+
+#### Single postcode
 
 ```{r}
 rev_geo <- reverse_geocoding(0.127, 51.507)
-str(rev_geo)
+
+# overview
+str(rev_geo$result[1])
 ```
 
-
-#### Multiple
+#### Multiple postcodes
 
 ```{r, eval = FALSE}
 # create a JSON object with the coordinates
@@ -70,9 +93,18 @@ geolocations_list <- structure(
  .Names = "geolocations")
 
 bulk_rev_geo <- bulk_reverse_geocoding(geolocations_list)
-str(bulk_rev_geo)
+
+#overview
+str(bulk_rev_geo$result)
 ```
 
+#### Single outcode
+
+```{r}
+out_rev_geocode <- outcode_reverse_geocoding("-3.15", "51.47")
+# overview
+str(out_rev_geocode$result[1])
+```
 
 ### Generate random entries
 
@@ -85,7 +117,7 @@ Generates a data frame with a random UK postcode and corresponding geographic in
 random_postcode()
 ```
 
-The random postcode can also belong to a particular outcode:
+A randomly generated postcode can also belong to a particular outcode:
 
 ```{r}
 # restrict to an outcode
@@ -112,16 +144,44 @@ postcode_validation("EC1Y 8LX") # actual UK postcode
 postcode_validation("XYZ") # incorrect UK postcode
 ```
 
-### Find nearest postcode or outcode
+### Find nearest postcodes or outcodes
+
+Provide a postcode to get a list of the nearest postcodes:
 
 ```{r}
 near_pc <- nearest_postcode("EC1Y 8LX")
 
 #overview
-near_pc$result[1]
+str(near_pc$result[1])
 ```
 
+You can also use outcodes:
 
+```{r}
+near_outcode <- nearest_outcode("EC1Y")
+# overview
+str(near_outcode$result[2])
+```
+
+### Find places
+
+Provide a name of a place of interest. You can specify the number of results (default is 10):
+
+```{r}
+place_query_result <- place_query("Hills", limit = 11)
+
+# overview
+str(place_query_result$result[1])
+```
+
+You can also find a place using an OSGB code:
+
+```{r}
+place_lookup_result <- place_lookup("osgb4000000074544700")
+
+# overview
+str(place_lookup_result$result)
+```
 
 ## Notes
 
