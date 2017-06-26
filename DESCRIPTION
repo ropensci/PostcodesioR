@@ -3,8 +3,8 @@ Type: Package
 Title: API wrapper around Postcodes.io (a free Postcode lookup API and geocoder
     for the UK)
 Version: 0.1.1
-Authors@R: person("Eryk", "Walczak", email = "erykjwalczak@gmail.com",
-  role = c("aut", "cre"))
+Author: Eryk Walczak <eryk.j.walczak@gmail.com>
+Maintainer: Eryk Walczak <eryk.j.walczak@gmail.com>
 Description: Free UK geocoding using data from Office for National Statistics.
     It is using several functions to get information about post codes, outward
     codes, reverse geocoding, nearest post codes/outward codes, validation, or
