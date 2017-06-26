@@ -88,37 +88,37 @@ str(bulk_lookup_result$result[1])
 
     ## List of 1
     ##  $ :List of 2
-    ##   ..$ query : chr "EX165BL"
+    ##   ..$ query : chr "PR3 0SG"
     ##   ..$ result:List of 23
-    ##   .. ..$ postcode                  : chr "EX16 5BL"
+    ##   .. ..$ postcode                  : chr "PR3 0SG"
     ##   .. ..$ quality                   : int 1
-    ##   .. ..$ eastings                  : int 294480
-    ##   .. ..$ northings                 : int 112251
+    ##   .. ..$ eastings                  : int 351012
+    ##   .. ..$ northings                 : int 440302
     ##   .. ..$ country                   : chr "England"
-    ##   .. ..$ nhs_ha                    : chr "South West"
-    ##   .. ..$ longitude                 : num -3.5
-    ##   .. ..$ latitude                  : num 50.9
-    ##   .. ..$ parliamentary_constituency: chr "Tiverton and Honiton"
-    ##   .. ..$ european_electoral_region : chr "South West"
-    ##   .. ..$ primary_care_trust        : chr "Devon"
-    ##   .. ..$ region                    : chr "South West"
-    ##   .. ..$ lsoa                      : chr "Mid Devon 005C"
-    ##   .. ..$ msoa                      : chr "Mid Devon 005"
-    ##   .. ..$ incode                    : chr "5BL"
-    ##   .. ..$ outcode                   : chr "EX16"
-    ##   .. ..$ admin_district            : chr "Mid Devon"
-    ##   .. ..$ parish                    : chr "Tiverton"
-    ##   .. ..$ admin_county              : chr "Devon"
-    ##   .. ..$ admin_ward                : chr "Westexe"
-    ##   .. ..$ ccg                       : chr "NHS North, East, West Devon"
-    ##   .. ..$ nuts                      : chr "Devon CC"
+    ##   .. ..$ nhs_ha                    : chr "North West"
+    ##   .. ..$ longitude                 : num -2.75
+    ##   .. ..$ latitude                  : num 53.9
+    ##   .. ..$ parliamentary_constituency: chr "Wyre and Preston North"
+    ##   .. ..$ european_electoral_region : chr "North West"
+    ##   .. ..$ primary_care_trust        : chr "North Lancashire Teaching"
+    ##   .. ..$ region                    : chr "North West"
+    ##   .. ..$ lsoa                      : chr "Wyre 006A"
+    ##   .. ..$ msoa                      : chr "Wyre 006"
+    ##   .. ..$ incode                    : chr "0SG"
+    ##   .. ..$ outcode                   : chr "PR3"
+    ##   .. ..$ admin_district            : chr "Wyre"
+    ##   .. ..$ parish                    : chr "Myerscough and Bilsborrow"
+    ##   .. ..$ admin_county              : chr "Lancashire"
+    ##   .. ..$ admin_ward                : chr "Brock with Catterall"
+    ##   .. ..$ ccg                       : NULL
+    ##   .. ..$ nuts                      : chr "Lancaster and Wyre"
     ##   .. ..$ codes                     :List of 6
-    ##   .. .. ..$ admin_district: chr "E07000042"
-    ##   .. .. ..$ admin_county  : chr "E10000008"
-    ##   .. .. ..$ admin_ward    : chr "E05003531"
-    ##   .. .. ..$ parish        : chr "E04003055"
-    ##   .. .. ..$ ccg           : chr "E38000129"
-    ##   .. .. ..$ nuts          : chr "UKK43"
+    ##   .. .. ..$ admin_district: chr "E07000128"
+    ##   .. .. ..$ admin_county  : chr "E10000017"
+    ##   .. .. ..$ admin_ward    : chr "E05009934"
+    ##   .. .. ..$ parish        : chr "E04005340"
+    ##   .. .. ..$ ccg           : chr "E38000216"
+    ##   .. .. ..$ nuts          : chr "UKD44"
 
 #### Outward code lookup
 
@@ -268,17 +268,17 @@ random_postcode()
 ```
 
     ##   postcode quality eastings northings country     nhs_ha longitude
-    ## 1  SN4 4NT       1   407016    181495 England South West -1.900248
+    ## 1  M44 6AU       1   371965    394132 England North West -2.423535
     ##   latitude parliamentary_constituency european_electoral_region
-    ## 1 51.53232            North Wiltshire                South West
-    ##   primary_care_trust     region           lsoa          msoa incode
-    ## 1          Wiltshire South West Wiltshire 007G Wiltshire 007    4NT
-    ##   outcode admin_district                parish admin_county
-    ## 1     SN4      Wiltshire Royal Wootton Bassett           NA
-    ##                    admin_ward           ccg      nuts admin_district
-    ## 1 Royal Wootton Bassett South NHS Wiltshire Wiltshire      E06000054
-    ##   admin_county admin_ward    parish       ccg  nuts
-    ## 1    E99999999  E05008424 E04011870 E38000206 UKK15
+    ## 1 53.44321   Worsley and Eccles South                North West
+    ##   primary_care_trust     region         lsoa        msoa incode outcode
+    ## 1            Salford North West Salford 030E Salford 030    6AU     M44
+    ##   admin_district                   parish admin_county admin_ward
+    ## 1        Salford Salford, unparished area           NA  Cadishead
+    ##           ccg                          nuts admin_district admin_county
+    ## 1 NHS Salford Greater Manchester South West      E08000006    E99999999
+    ##   admin_ward    parish       ccg  nuts
+    ## 1  E05000762 E43000160 E38000143 UKD34
 
 A randomly generated postcode can also belong to a particular outcode:
 
@@ -287,18 +287,18 @@ A randomly generated postcode can also belong to a particular outcode:
 random_postcode("N1")
 ```
 
-    ##   postcode quality eastings northings country nhs_ha  longitude latitude
-    ## 1   N1 8DD       1   531628    183173 England London -0.1037275 51.53213
-    ##     parliamentary_constituency european_electoral_region
-    ## 1 Islington South and Finsbury                    London
-    ##   primary_care_trust region           lsoa          msoa incode outcode
-    ## 1          Islington London Islington 020E Islington 020    8DD      N1
-    ##   admin_district                     parish admin_county admin_ward
-    ## 1      Islington Islington, unparished area           NA St Peter's
-    ##             ccg                   nuts admin_district admin_county
-    ## 1 NHS Islington Haringey and Islington      E09000019    E99999999
-    ##   admin_ward    parish       ccg  nuts
-    ## 1  E05000380 E43000209 E38000088 UKI43
+    ##   postcode quality eastings northings country nhs_ha   longitude latitude
+    ## 1   N1 4NN       1   533260    185057 England London -0.07950065 51.54868
+    ##   parliamentary_constituency european_electoral_region primary_care_trust
+    ## 1            Islington North                    London          Islington
+    ##   region           lsoa          msoa incode outcode admin_district
+    ## 1 London Islington 012A Islington 012    4NN      N1      Islington
+    ##                       parish admin_county admin_ward           ccg
+    ## 1 Islington, unparished area           NA    Mildmay NHS Islington
+    ##                     nuts admin_district admin_county admin_ward    parish
+    ## 1 Haringey and Islington      E09000019    E99999999  E05000377 E43000209
+    ##         ccg  nuts
+    ## 1 E38000088 UKI43
 
 #### Places
 
@@ -308,14 +308,16 @@ You can also generate a random place, specified by an OSGB code, with correspond
 random_place()
 ```
 
-    ##                   code   name_1 name_1_lang name_2 name_2_lang local_type
-    ## 1 osgb4000000074576153 Newlands        NULL   NULL        NULL     Hamlet
-    ##   outcode county_unitary county_unitary_type district_borough
-    ## 1     DH8 Northumberland    UnitaryAuthority             NULL
-    ##   district_borough_type     region country longitude latitude eastings
-    ## 1                  NULL North East England -1.857616 54.89585   409230
-    ##   northings min_eastings min_northings max_eastings max_northings
-    ## 1    555688       408848        555233       409348        555781
+    ##                   code      name_1 name_1_lang name_2 name_2_lang
+    ## 1 osgb4000000074571195 Bottom Boat        NULL   NULL        NULL
+    ##   local_type outcode county_unitary county_unitary_type district_borough
+    ## 1    Village     WF3           NULL                NULL        Wakefield
+    ##   district_borough_type                   region country longitude
+    ## 1  MetropolitanDistrict Yorkshire and the Humber England -1.462715
+    ##   latitude eastings northings min_eastings min_northings max_eastings
+    ## 1 53.71782   435555    424735       435377        424557       436305
+    ##   max_northings
+    ## 1        425264
 
 ### Postcode validation
 
@@ -421,27 +423,27 @@ str(place_query_result$result[1])
 
     ## List of 1
     ##  $ :List of 21
-    ##   ..$ code                 : chr "osgb4000000074555020"
-    ##   ..$ name_1               : chr "Hillswick"
+    ##   ..$ code                 : chr "osgb4000000074580249"
+    ##   ..$ name_1               : chr "Hillsdale"
     ##   ..$ name_1_lang          : NULL
     ##   ..$ name_2               : NULL
     ##   ..$ name_2_lang          : NULL
-    ##   ..$ local_type           : chr "Village"
-    ##   ..$ outcode              : chr "ZE2"
-    ##   ..$ county_unitary       : chr "Shetland Islands"
-    ##   ..$ county_unitary_type  : chr "UnitaryAuthority"
-    ##   ..$ district_borough     : NULL
-    ##   ..$ district_borough_type: NULL
-    ##   ..$ region               : chr "Scotland"
-    ##   ..$ country              : chr "Scotland"
-    ##   ..$ longitude            : num -1.49
-    ##   ..$ latitude             : num 60.5
-    ##   ..$ eastings             : int 428069
-    ##   ..$ northings            : int 1176687
-    ##   ..$ min_eastings         : int 427887
-    ##   ..$ min_northings        : int 1176558
-    ##   ..$ max_eastings         : int 429250
-    ##   ..$ max_northings        : int 1178072
+    ##   ..$ local_type           : chr "Hamlet"
+    ##   ..$ outcode              : chr "ST13"
+    ##   ..$ county_unitary       : chr "Staffordshire"
+    ##   ..$ county_unitary_type  : chr "County"
+    ##   ..$ district_borough     : chr "Staffordshire Moorlands"
+    ##   ..$ district_borough_type: chr "District"
+    ##   ..$ region               : chr "West Midlands"
+    ##   ..$ country              : chr "England"
+    ##   ..$ longitude            : num -1.89
+    ##   ..$ latitude             : num 53.1
+    ##   ..$ eastings             : int 407661
+    ##   ..$ northings            : int 355209
+    ##   ..$ min_eastings         : int 407258
+    ##   ..$ min_northings        : int 354822
+    ##   ..$ max_eastings         : int 408138
+    ##   ..$ max_northings        : int 355500
 
 You can also find a place using an OSGB code:
 
@@ -478,6 +480,6 @@ str(place_lookup_result$result)
 Notes
 -----
 
-Currently there is a limit to the number of API calls. However, postcoes.io provide full list of geolocation data that can be used locally without limitations. Original data is sourced from [Office for National Statistics Data Portal](https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page). That [file](https://github.com/ideal-postcodes/postcodes.io/blob/master/latest) is rather large so I didn’t include it with the package.
+Currently, there is a limit to the number of API calls. However, [postcodes.io](https://postcodes.io/) provides full list of geolocation data that can be used locally without limitations. The original data is sourced from [Office for National Statistics Data Portal](https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page). That [file](https://github.com/ideal-postcodes/postcodes.io/blob/master/latest) is rather large so I didn’t include it in the package.
 
 For more info see the original [documentation](https://postcodes.io/docs). The reference manual can be accessed [here](https://github.com/erzk/PostcodesioR/blob/master/PostcodesioR.pdf). For more examples of usage go to my [blog](https://walczak.org/tag/postcodesior/).
