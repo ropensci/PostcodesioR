@@ -33,8 +33,8 @@ library(PostcodesioR)
 
 ## Examples
 
-For examples of usage go to my blog:
-https://walczak.org/2016/07/postcode-and-geolocation-api-for-the-uk/
+The reference manual can be accessed [here](https://github.com/erzk/PostcodesioR/blob/master/PostcodesioR.pdf).
+For more examples of usage go to my [blog](https://walczak.org/2016/07/postcode-and-geolocation-api-for-the-uk/).
 
 ## Notes
 
