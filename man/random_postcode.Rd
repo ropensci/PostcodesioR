@@ -10,7 +10,7 @@ random_postcode(outcode = NULL)
 \item{outcode}{A string. Filters random postcodes by outcode. Returns null if invalid outcode. Optional.}
 }
 \value{
-A random post code with corresponding characteristics.
+A data frame with a random post code with corresponding characteristics.
 }
 \description{
 Returns a random postcode and all available data for that postcode.

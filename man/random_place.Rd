@@ -7,7 +7,7 @@
 random_place()
 }
 \value{
-A list describing a random place and all associated data.
+A data frame describing a random place and all associated data.
 }
 \description{
 Returns a random place and all associated data

@@ -4,7 +4,7 @@
 #'
 #' @import httr
 #'
-#' @return A list describing a random place and all associated data.
+#' @return A data frame describing a random place and all associated data.
 #'
 #' @export
 #'
@@ -14,6 +14,9 @@
 random_place <- function() {
   r <- GET("https://api.postcodes.io/random/places")
   warn_for_status(r)
-  content(r)
+  r <- content(r)
+  r <- r[[2]]
+  r <- data.frame(t(sapply(r, `[`)))
+  return(r)
 }
 
