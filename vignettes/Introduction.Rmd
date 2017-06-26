@@ -15,7 +15,7 @@ PostcodesioR is an API wrapper for postcodes.io. It allows acquiring geographic 
 
 ## Installation
 
-```{r, eval=FALSE}
+```{r}
 if (!require("devtools")) install.packages("devtools")
 devtools::install_github("erzk/PostcodesioR")
 ```
@@ -26,21 +26,73 @@ devtools::install_github("erzk/PostcodesioR")
 
 #### Single postcode
 
+```{r, message = FALSE, warning = FALSE}
+library(PostcodesioR)
+lookup_result <- postcode_lookup("EC1Y8LX")
+str(lookup_result)
+```
 
 #### Multiple postcodes
+
+```{r, eval = FALSE}
+pc_list <- list(postcodes = c("PR3 0SG", "M45 6GN", "EX165BL"))
+bulk_lookup_result <- bulk_postcode_lookup(pc_list)
+str(bulk_lookup_result)
+```
+
 
 ### Reverse geocoding
 
 #### Single
 
+```{r}
+rev_geo <- reverse_geocoding(0.127, 51.507)
+str(rev_geo)
+```
+
+
 #### Multiple
+
+```{r, eval = FALSE}
+# create a JSON object with the coordinates
+geolocations_list <- structure(
+ list(
+ geolocations = structure(
+ list(
+ longitude = c(-3.15807731271522, -1.12935802905177),
+ latitude = c(51.4799900627036, 50.7186356978817),
+ limit = c(NA, 100L),
+ radius = c(NA, 500L)),
+ .Names = c("longitude", "latitude", "limit", "radius"),
+ class = "data.frame",
+ row.names = 1:2)),
+ .Names = "geolocations")
+
+bulk_rev_geo <- bulk_reverse_geocoding(geolocations_list)
+str(bulk_rev_geo)
+```
+
 
 ### Generate random entries
 
 #### Postcodes
 
+```{r}
+# without restrictions
+random_postcode()
+```
+
+```{r}
+# restrict to an outcode
+random_postcode("N1")
+```
+
 
 #### Places
+
+```{r}
+random_place()
+```
 
 
 ## Notes
