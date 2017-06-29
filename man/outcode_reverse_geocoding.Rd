@@ -4,12 +4,16 @@
 \alias{outcode_reverse_geocoding}
 \title{Outcode reverse geocoding}
 \usage{
-outcode_reverse_geocoding(longitude, latitude)
+outcode_reverse_geocoding(longitude, latitude, limit = 10, radius = 5000)
 }
 \arguments{
 \item{longitude}{A string, integer or float. Needs to have at least two decimal points.}
 
 \item{latitude}{A string, integer or float. Needs to have at least two decimal points.}
+
+\item{limit}{A string, integer or float. Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.}
+
+\item{radius}{A string, integer or float. Limits number of postcodes matches to return. Defaults to 5,000m. Needs to be less than 25,000m.}
 }
 \value{
 A list of geographical properties.
@@ -17,16 +21,10 @@ A list of geographical properties.
 \description{
 Returns nearest outcodes for a given longitude and latitude.
 }
-\details{
-Optional Query Parameters
-
-limit= (not required) Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.
-
-radius= (not required) Limits number of postcodes matches to return. Defaults to 5,000m. Needs to be less than 25,000m.
-}
 \examples{
 outcode_reverse_geocoding("-3.15", "51.47")
 outcode_reverse_geocoding(-3.15, 51.47)
 outcode_reverse_geocoding("-3.15807731271522", "51.4799900627036")
+outcode_reverse_geocoding(-3.15, 51.47, limit = 11, radius = 20000)
 
 }
