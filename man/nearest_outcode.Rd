@@ -4,7 +4,7 @@
 \alias{nearest_outcode}
 \title{Nearest outcode}
 \usage{
-nearest_outcode(outcode, limit = NULL, radius = NULL)
+nearest_outcode(outcode, limit = 10, radius = 5000)
 }
 \arguments{
 \item{outcode}{A string with a UK postcode.}
@@ -21,5 +21,7 @@ Returns nearest outcodes for a given outcode.
 }
 \examples{
 nearest_outcode("EC1Y")
+nearest_outcode("EC1Y", limit = 11)
+nearest_outcode("EC1Y", limit = 11, radius = 6000)
 
 }

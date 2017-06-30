@@ -14,14 +14,26 @@
 #'
 #' @examples
 #' nearest_outcode("EC1Y")
+#' nearest_outcode("EC1Y", limit = 11)
+#' nearest_outcode("EC1Y", limit = 11, radius = 6000)
 #'
-nearest_outcode <- function(outcode, limit = NULL, radius = NULL) {
+nearest_outcode <- function(outcode, limit = 10, radius = 5000) {
   if (!is.character(outcode) || nchar(outcode) < 2) {
     stop("Please provide a valid UK outcode.")
   }
-  r <- GET(paste0("https://api.postcodes.io/outcodes/", outcode, "/nearest"))
-  # r <- GET("https://api.postcodes.io/outcodes",
-  #         query = list(outcode = outcode, limit = limit, radius = radius)) #TODO fix to include 'nearest' after the query
+  if (limit > 100) {
+    stop("Please provide an integer lower than 100.")
+  }
+  if (radius > 25000 || radius < 5000) {
+    stop("Please provide a radius between 5000 and 25000 (m).")
+  }
+  r <- GET(paste0("https://api.postcodes.io/outcodes/",
+                  outcode,
+                  "/nearest",
+                  "?limit=",
+                  limit,
+                  "?radius=",
+                  radius))
   warn_for_status(r)
   content(r)
 }
