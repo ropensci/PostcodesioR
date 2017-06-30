@@ -2,12 +2,6 @@
 #'
 #' Submit a postcode query and receive a complete list of postcode matches and all associated postcode data.
 #'
-#' Optional Query Parameters
-#'
-#' query= (not required) aliases to q=
-#'
-#' limit= (not required) Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.
-#'
 #' @import httr
 #'
 #' @param postcode A string. Valid UK postcode.

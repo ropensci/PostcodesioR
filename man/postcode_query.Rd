@@ -17,13 +17,6 @@ A list of geographic properties.
 \description{
 Submit a postcode query and receive a complete list of postcode matches and all associated postcode data.
 }
-\details{
-Optional Query Parameters
-
-query= (not required) aliases to q=
-
-limit= (not required) Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.
-}
 \examples{
 postcode_query("EC1Y8LX")
 postcode_query("EC1", limit = 11)
