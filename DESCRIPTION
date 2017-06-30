@@ -1,7 +1,6 @@
 Package: PostcodesioR
 Type: Package
-Title: API wrapper around Postcodes.io (a free Postcode lookup API and geocoder
-    for the UK)
+Title: API wrapper around postcodes.io (free UK postcode lookup and geocoder)
 Version: 0.1.1
 Author: Eryk Walczak <eryk.j.walczak@gmail.com>
 Maintainer: Eryk Walczak <eryk.j.walczak@gmail.com>

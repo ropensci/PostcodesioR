@@ -11,7 +11,7 @@ output:
 
 # PostcodesioR
 
-This package is a wrapper around [postcodes.io](https://postcodes.io/) which is a free Postcode lookup API and geocoder for the UK.
+This package is an API wrapper around [postcodes.io](https://postcodes.io/) which is a free UK postcode lookup and geocoder.
 
 ## Installation
 

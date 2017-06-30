@@ -26,4 +26,3 @@ random_postcode <- function(outcode = NULL) {
                  as.data.frame(pc_result$codes, stringsAsFactors = FALSE))
   return(pc_df)
 }
-

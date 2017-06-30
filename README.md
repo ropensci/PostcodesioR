@@ -3,7 +3,7 @@
 PostcodesioR
 ============
 
-This package is a wrapper around [postcodes.io](https://postcodes.io/) which is a free Postcode lookup API and geocoder for the UK.
+This package is an API wrapper around [postcodes.io](https://postcodes.io/) which is a free UK postcode lookup and geocoder.
 
 Installation
 ------------
@@ -88,37 +88,37 @@ str(bulk_lookup_result$result[1])
 
     ## List of 1
     ##  $ :List of 2
-    ##   ..$ query : chr "M45 6GN"
+    ##   ..$ query : chr "PR3 0SG"
     ##   ..$ result:List of 23
-    ##   .. ..$ postcode                  : chr "M45 6GN"
+    ##   .. ..$ postcode                  : chr "PR3 0SG"
     ##   .. ..$ quality                   : int 1
-    ##   .. ..$ eastings                  : int 380416
-    ##   .. ..$ northings                 : int 406002
+    ##   .. ..$ eastings                  : int 351012
+    ##   .. ..$ northings                 : int 440302
     ##   .. ..$ country                   : chr "England"
     ##   .. ..$ nhs_ha                    : chr "North West"
-    ##   .. ..$ longitude                 : num -2.3
-    ##   .. ..$ latitude                  : num 53.6
-    ##   .. ..$ parliamentary_constituency: chr "Bury South"
+    ##   .. ..$ longitude                 : num -2.75
+    ##   .. ..$ latitude                  : num 53.9
+    ##   .. ..$ parliamentary_constituency: chr "Wyre and Preston North"
     ##   .. ..$ european_electoral_region : chr "North West"
-    ##   .. ..$ primary_care_trust        : chr "Bury"
+    ##   .. ..$ primary_care_trust        : chr "North Lancashire Teaching"
     ##   .. ..$ region                    : chr "North West"
-    ##   .. ..$ lsoa                      : chr "Bury 019C"
-    ##   .. ..$ msoa                      : chr "Bury 019"
-    ##   .. ..$ incode                    : chr "6GN"
-    ##   .. ..$ outcode                   : chr "M45"
-    ##   .. ..$ admin_district            : chr "Bury"
-    ##   .. ..$ parish                    : chr "Bury, unparished area"
-    ##   .. ..$ admin_county              : NULL
-    ##   .. ..$ admin_ward                : chr "Pilkington Park"
-    ##   .. ..$ ccg                       : chr "NHS Bury"
-    ##   .. ..$ nuts                      : chr "Greater Manchester North East"
+    ##   .. ..$ lsoa                      : chr "Wyre 006A"
+    ##   .. ..$ msoa                      : chr "Wyre 006"
+    ##   .. ..$ incode                    : chr "0SG"
+    ##   .. ..$ outcode                   : chr "PR3"
+    ##   .. ..$ admin_district            : chr "Wyre"
+    ##   .. ..$ parish                    : chr "Myerscough and Bilsborrow"
+    ##   .. ..$ admin_county              : chr "Lancashire"
+    ##   .. ..$ admin_ward                : chr "Brock with Catterall"
+    ##   .. ..$ ccg                       : NULL
+    ##   .. ..$ nuts                      : chr "Lancaster and Wyre"
     ##   .. ..$ codes                     :List of 6
-    ##   .. .. ..$ admin_district: chr "E08000002"
-    ##   .. .. ..$ admin_county  : chr "E99999999"
-    ##   .. .. ..$ admin_ward    : chr "E05000677"
-    ##   .. .. ..$ parish        : chr "E43000156"
-    ##   .. .. ..$ ccg           : chr "E38000024"
-    ##   .. .. ..$ nuts          : chr "UKD37"
+    ##   .. .. ..$ admin_district: chr "E07000128"
+    ##   .. .. ..$ admin_county  : chr "E10000017"
+    ##   .. .. ..$ admin_ward    : chr "E05009934"
+    ##   .. .. ..$ parish        : chr "E04005340"
+    ##   .. .. ..$ ccg           : chr "E38000216"
+    ##   .. .. ..$ nuts          : chr "UKD44"
 
 #### Outward code lookup
 
@@ -267,22 +267,22 @@ Generates a data frame with a random UK postcode and corresponding geographic in
 random_postcode()
 ```
 
-    ##   postcode quality eastings northings  country   nhs_ha longitude latitude
-    ## 1 AB41 6QU       1   394212    822397 Scotland Grampian -2.097673 57.29215
+    ##   postcode quality eastings northings country
+    ## 1  SA8 4QD       1   273501    205319   Wales
+    ##                                           nhs_ha longitude latitude
+    ## 1 Abertawe Bro Morgannwg University Health Board -3.833164 51.73227
     ##   parliamentary_constituency european_electoral_region
-    ## 1                     Gordon                  Scotland
-    ##                           primary_care_trust region
-    ## 1 Aberdeenshire Community Health Partnership     NA
-    ##                          lsoa                   msoa incode outcode
-    ## 1 Balmedie and Potterton - 06 Balmedie and Potterton    6QU    AB41
-    ##   admin_district parish admin_county admin_ward
-    ## 1  Aberdeenshire     NA           NA         NA
-    ##                                          ccg
-    ## 1 Aberdeenshire Community Health Partnership
-    ##                              nuts admin_district admin_county admin_ward
-    ## 1 Aberdeen City and Aberdeenshire      S12000034    S99999999  S13002856
+    ## 1                      Neath                     Wales
+    ##                  primary_care_trust region                   lsoa
+    ## 1 Abertawe Bro Morgannwg University     NA Neath Port Talbot 004B
+    ##                    msoa incode outcode    admin_district     parish
+    ## 1 Neath Port Talbot 004    4QD     SA8 Neath Port Talbot Pontardawe
+    ##   admin_county admin_ward                               ccg
+    ## 1           NA Pontardawe Abertawe Bro Morgannwg University
+    ##                             nuts admin_district admin_county admin_ward
+    ## 1 Bridgend and Neath Port Talbot      W06000012    W99999999  W05000582
     ##      parish       ccg  nuts
-    ## 1 S99999999 S03000013 UKM50
+    ## 1 W04000621 W11000026 UKL17
 
 A randomly generated postcode can also belong to a particular outcode:
 
@@ -291,18 +291,18 @@ A randomly generated postcode can also belong to a particular outcode:
 random_postcode("N1")
 ```
 
-    ##   postcode quality eastings northings country nhs_ha   longitude latitude
-    ## 1   N1 5RU       1   533241    183601 England London -0.08032523  51.5356
+    ##   postcode quality eastings northings country nhs_ha  longitude latitude
+    ## 1   N1 8QN       1   531990    183876 England London -0.0982484 51.53836
     ##     parliamentary_constituency european_electoral_region
-    ## 1 Hackney South and Shoreditch                    London
-    ##          primary_care_trust region         lsoa        msoa incode outcode
-    ## 1 City and Hackney Teaching London Hackney 025C Hackney 025    5RU      N1
-    ##   admin_district                   parish admin_county
-    ## 1        Hackney Hackney, unparished area           NA
-    ##                 admin_ward                  ccg               nuts
-    ## 1 Hoxton East & Shoreditch NHS City and Hackney Hackney and Newham
-    ##   admin_district admin_county admin_ward    parish       ccg  nuts
-    ## 1      E09000012    E99999999  E05009377 E43000202 E38000035 UKI41
+    ## 1 Islington South and Finsbury                    London
+    ##   primary_care_trust region           lsoa          msoa incode outcode
+    ## 1          Islington London Islington 018D Islington 018    8QN      N1
+    ##   admin_district                     parish admin_county admin_ward
+    ## 1      Islington Islington, unparished area           NA St Peter's
+    ##             ccg                   nuts admin_district admin_county
+    ## 1 NHS Islington Haringey and Islington      E09000019    E99999999
+    ##   admin_ward    parish       ccg  nuts
+    ## 1  E05000380 E43000209 E38000088 UKI43
 
 #### Places
 
@@ -312,14 +312,14 @@ You can also generate a random place, specified by an OSGB code, with correspond
 random_place()
 ```
 
-    ##                   code          name_1 name_1_lang name_2 name_2_lang
-    ## 1 osgb4000000074318818 Whitmoor Bottom        NULL   NULL        NULL
-    ##   local_type outcode county_unitary county_unitary_type district_borough
-    ## 1     Hamlet    GU26         Surrey              County         Waverley
-    ##   district_borough_type     region country  longitude latitude eastings
-    ## 1              District South East England -0.7662108 51.11602   486456
-    ##   northings min_eastings min_northings max_eastings max_northings
-    ## 1    135916       485996        135838       486602        136348
+    ##                   code       name_1 name_1_lang name_2 name_2_lang
+    ## 1 osgb4000000074550905 St Twynnells        NULL   NULL        NULL
+    ##   local_type outcode             county_unitary county_unitary_type
+    ## 1    Village    SA71 Sir Benfro - Pembrokeshire    UnitaryAuthority
+    ##   district_borough district_borough_type region country longitude latitude
+    ## 1             NULL                  NULL  Wales   Wales -4.965156 51.63993
+    ##   eastings northings min_eastings min_northings max_eastings max_northings
+    ## 1   194923    197623       194722        197363       195222        197863
 
 ### Postcode validation
 
@@ -425,27 +425,27 @@ str(place_query_result$result[1])
 
     ## List of 1
     ##  $ :List of 21
-    ##   ..$ code                 : chr "osgb4000000074567818"
+    ##   ..$ code                 : chr "osgb4000000074556177"
     ##   ..$ name_1               : chr "Hillside"
     ##   ..$ name_1_lang          : NULL
     ##   ..$ name_2               : NULL
     ##   ..$ name_2_lang          : NULL
-    ##   ..$ local_type           : chr "Hamlet"
-    ##   ..$ outcode              : chr "WV16"
-    ##   ..$ county_unitary       : chr "Shropshire"
+    ##   ..$ local_type           : chr "Suburban Area"
+    ##   ..$ outcode              : chr "AB12"
+    ##   ..$ county_unitary       : chr "Aberdeenshire"
     ##   ..$ county_unitary_type  : chr "UnitaryAuthority"
     ##   ..$ district_borough     : NULL
     ##   ..$ district_borough_type: NULL
-    ##   ..$ region               : chr "West Midlands"
-    ##   ..$ country              : chr "England"
-    ##   ..$ longitude            : num -2.59
-    ##   ..$ latitude             : num 52.5
-    ##   ..$ eastings             : int 359799
-    ##   ..$ northings            : int 287859
-    ##   ..$ min_eastings         : int 358944
-    ##   ..$ min_northings        : int 287609
-    ##   ..$ max_eastings         : int 360231
-    ##   ..$ max_northings        : int 288109
+    ##   ..$ region               : chr "Scotland"
+    ##   ..$ country              : chr "Scotland"
+    ##   ..$ longitude            : num -2.13
+    ##   ..$ latitude             : num 57.1
+    ##   ..$ eastings             : int 392408
+    ##   ..$ northings            : int 797836
+    ##   ..$ min_eastings         : int 391968
+    ##   ..$ min_northings        : int 797475
+    ##   ..$ max_eastings         : int 392879
+    ##   ..$ max_northings        : int 798135
 
 You can also find a place using an OSGB code:
 
