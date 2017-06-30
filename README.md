@@ -1,4 +1,4 @@
-[![Travis-CI Build Status](https://travis-ci.org/erzk/PostcodesioR.svg?branch=master)](https://travis-ci.org/erzk/PostcodesioR) [![Coverage Status](https://img.shields.io/codecov/c/github/erzk/PostcodesioR/master.svg)](https://codecov.io/github/erzk/PostcodesioR?branch=master)
+[![Travis-CI Build Status](https://travis-ci.org/erzk/PostcodesioR.svg?branch=master)](https://travis-ci.org/erzk/PostcodesioR) [![Coverage Status](https://img.shields.io/codecov/c/github/erzk/PostcodesioR/master.svg)](https://codecov.io/github/erzk/PostcodesioR?branch=master) [![Package-License](http://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html)
 
 PostcodesioR
 ============
@@ -267,22 +267,18 @@ Generates a data frame with a random UK postcode and corresponding geographic in
 random_postcode()
 ```
 
-    ##   postcode quality eastings northings country
-    ## 1  SA8 4QD       1   273501    205319   Wales
-    ##                                           nhs_ha longitude latitude
-    ## 1 Abertawe Bro Morgannwg University Health Board -3.833164 51.73227
-    ##   parliamentary_constituency european_electoral_region
-    ## 1                      Neath                     Wales
-    ##                  primary_care_trust region                   lsoa
-    ## 1 Abertawe Bro Morgannwg University     NA Neath Port Talbot 004B
-    ##                    msoa incode outcode    admin_district     parish
-    ## 1 Neath Port Talbot 004    4QD     SA8 Neath Port Talbot Pontardawe
-    ##   admin_county admin_ward                               ccg
-    ## 1           NA Pontardawe Abertawe Bro Morgannwg University
-    ##                             nuts admin_district admin_county admin_ward
-    ## 1 Bridgend and Neath Port Talbot      W06000012    W99999999  W05000582
-    ##      parish       ccg  nuts
-    ## 1 W04000621 W11000026 UKL17
+    ##   postcode quality eastings northings          country
+    ## 1 BT17 0BF       1   328825    369272 Northern Ireland
+    ##                       nhs_ha longitude latitude parliamentary_constituency
+    ## 1 Health & Social Care Board -6.009578 54.55536               Belfast West
+    ##   european_electoral_region primary_care_trust region       lsoa msoa
+    ## 1          Northern Ireland      South Eastern     NA Dunmurry 1   NA
+    ##   incode outcode admin_district parish admin_county admin_ward
+    ## 1    0BF    BT17        Belfast     NA           NA   Dunmurry
+    ##             ccg          nuts admin_district admin_county admin_ward
+    ## 1 South Eastern Outer Belfast      N09000003    N99999999  N08000323
+    ##      parish   ccg  nuts
+    ## 1 N99999999 ZC040 UKN02
 
 A randomly generated postcode can also belong to a particular outcode:
 
@@ -292,17 +288,17 @@ random_postcode("N1")
 ```
 
     ##   postcode quality eastings northings country nhs_ha  longitude latitude
-    ## 1   N1 8QN       1   531990    183876 England London -0.0982484 51.53836
+    ## 1   N1 0NG       1   530748    183780 England London -0.1161818 51.53779
     ##     parliamentary_constituency european_electoral_region
     ## 1 Islington South and Finsbury                    London
     ##   primary_care_trust region           lsoa          msoa incode outcode
-    ## 1          Islington London Islington 018D Islington 018    8QN      N1
+    ## 1          Islington London Islington 019D Islington 019    0NG      N1
     ##   admin_district                     parish admin_county admin_ward
-    ## 1      Islington Islington, unparished area           NA St Peter's
+    ## 1      Islington Islington, unparished area           NA Caledonian
     ##             ccg                   nuts admin_district admin_county
     ## 1 NHS Islington Haringey and Islington      E09000019    E99999999
     ##   admin_ward    parish       ccg  nuts
-    ## 1  E05000380 E43000209 E38000088 UKI43
+    ## 1  E05000368 E43000209 E38000088 UKI43
 
 #### Places
 
@@ -312,14 +308,14 @@ You can also generate a random place, specified by an OSGB code, with correspond
 random_place()
 ```
 
-    ##                   code       name_1 name_1_lang name_2 name_2_lang
-    ## 1 osgb4000000074550905 St Twynnells        NULL   NULL        NULL
-    ##   local_type outcode             county_unitary county_unitary_type
-    ## 1    Village    SA71 Sir Benfro - Pembrokeshire    UnitaryAuthority
-    ##   district_borough district_borough_type region country longitude latitude
-    ## 1             NULL                  NULL  Wales   Wales -4.965156 51.63993
-    ##   eastings northings min_eastings min_northings max_eastings max_northings
-    ## 1   194923    197623       194722        197363       195222        197863
+    ##                   code   name_1 name_1_lang name_2 name_2_lang local_type
+    ## 1 osgb4000000074343646 Edmonton        NULL   NULL        NULL       Town
+    ##   outcode county_unitary    county_unitary_type district_borough
+    ## 1      N9 Greater London GreaterLondonAuthority          Enfield
+    ##   district_borough_type region country   longitude latitude eastings
+    ## 1         LondonBorough London England -0.06063963  51.6245   534344
+    ##   northings min_eastings min_northings max_eastings max_northings
+    ## 1    193523       531844        191460       536407        195641
 
 ### Postcode validation
 
