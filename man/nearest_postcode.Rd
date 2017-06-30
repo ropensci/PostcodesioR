@@ -4,10 +4,14 @@
 \alias{nearest_postcode}
 \title{Nearest postcode}
 \usage{
-nearest_postcode(postcode)
+nearest_postcode(postcode, limit = 10, radius = 100)
 }
 \arguments{
-\item{postcode}{A string.}
+\item{postcode}{A string. Valid UK postcode.}
+
+\item{limit}{A string or integer. Limits number of postcodes matches to return. Defaults to 10. Needs to be lower than 100.}
+
+\item{radius}{Limits number of postcodes matches to return. Defaults to 100m. Needs to be less than 2,000m.}
 }
 \value{
 A list of geographic properties of the nearest postcode.
@@ -15,14 +19,9 @@ A list of geographic properties of the nearest postcode.
 \description{
 Returns nearest postcodes for a given postcode.
 }
-\details{
-Optional Query Parameters
-
-limit= (not required) Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.
-
-radius= (not required) Limits number of postcodes matches to return. Defaults to 100m. Needs to be less than 2,000m.
-}
 \examples{
 nearest_postcode("EC1Y 8LX")
+nearest_postcode("EC1Y 8LX", limit = 11)
+nearest_postcode("EC1Y 8LX", limit = 12, radius = 200)
 
 }

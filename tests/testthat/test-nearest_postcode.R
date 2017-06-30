@@ -8,5 +8,10 @@ test_that("nearest_postcode works as expected", {
 
   expect_error(nearest_postcode(incorrect_postcode1))
   expect_error(nearest_postcode(incorrect_postcode2))
+
+  expect_error(nearest_postcode("EC1Y 8LX", limit = 101))
+  expect_error(nearest_postcode("EC1Y 8LX", limit = 10, radius = 2001))
+  expect_error(nearest_postcode("EC1Y 8LX", limit = 10, radius = 99))
+
   expect_that(nearest_postcode_result, is_a("list"))
 })
