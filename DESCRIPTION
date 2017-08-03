@@ -19,3 +19,4 @@ Suggests: knitr,
     testthat,
     covr
 VignetteBuilder: knitr
+BugReports: https://github.com/erzk/PostcodesioR/issues
