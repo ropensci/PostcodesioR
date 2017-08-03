@@ -72,15 +72,13 @@
     </li>
   </ul>
 </li>
+<li>
+  <a href="../news/index.html">News</a>
+</li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="https://github.com/erzk/PostcodesioR">
-    <span class="fa fa-github fa-lg"></span>
-     
-  </a>
-</li>
+        
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -116,27 +114,29 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>random_postcode</span>()</div><div class='output co'>#&gt;   postcode quality eastings northings country     nhs_ha longitude latitude
-#&gt; 1  WA8 9HG       1   351113    387678 England North West -2.736438 53.38368
-#&gt;   parliamentary_constituency european_electoral_region   primary_care_trust
-#&gt; 1                     Halton                North West Halton and St Helens
-#&gt;       region        lsoa       msoa incode outcode admin_district
-#&gt; 1 North West Halton 002B Halton 002    9HG     WA8         Halton
-#&gt;                    parish admin_county admin_ward        ccg            nuts
-#&gt; 1 Halton, unparished area           NA Birchfield NHS Halton East Merseyside
-#&gt;   admin_district admin_county admin_ward    parish       ccg  nuts
-#&gt; 1      E06000006    E99999999  E05001579 E43000006 E38000068 UKD71</div><div class='input'><span class='fu'>random_postcode</span>(<span class='st'>"N1"</span>)</div><div class='output co'>#&gt;   postcode quality eastings northings country nhs_ha   longitude latitude
-#&gt; 1   N1 6JE       1   532919    183072 England London -0.08516454 51.53092
-#&gt;     parliamentary_constituency european_electoral_region
-#&gt; 1 Hackney South and Shoreditch                    London
-#&gt;          primary_care_trust region         lsoa        msoa incode outcode
-#&gt; 1 City and Hackney Teaching London Hackney 027H Hackney 027    6JE      N1
-#&gt;   admin_district                   parish admin_county  admin_ward
-#&gt; 1        Hackney Hackney, unparished area           NA Hoxton West
-#&gt;                    ccg               nuts admin_district admin_county
-#&gt; 1 NHS City and Hackney Hackney and Newham      E09000012    E99999999
+    <pre class="examples"><div class='input'><span class='fu'>random_postcode</span>()</div><div class='output co'>#&gt;   postcode quality eastings northings country                   nhs_ha
+#&gt; 1 BD22 9ES       1   404079    437715 England Yorkshire and the Humber
+#&gt;   longitude latitude parliamentary_constituency european_electoral_region
+#&gt; 1 -1.939501 53.83568                   Keighley  Yorkshire and The Humber
+#&gt;               primary_care_trust                   region          lsoa
+#&gt; 1 Bradford and Airedale Teaching Yorkshire and The Humber Bradford 023F
+#&gt;           msoa incode outcode admin_district   parish admin_county   admin_ward
+#&gt; 1 Bradford 023    9ES    BD22       Bradford "Haworth           NA Worth Valley
+#&gt;                                   ccg     nuts admin_district admin_county
+#&gt; 1 NHS Airedale, Wharfedale and Craven Bradford      E08000032    E99999999
 #&gt;   admin_ward    parish       ccg  nuts
-#&gt; 1  E05009378 E43000202 E38000035 UKI41</div><div class='input'>
+#&gt; 1  E05001369 E04000164 E38000001 UKE41</div><div class='input'><span class='fu'>random_postcode</span>(<span class='st'>"N1"</span>)</div><div class='output co'>#&gt;   postcode quality eastings northings country nhs_ha  longitude latitude
+#&gt; 1   N1 1NZ       1   531622    183898 England London -0.1035432 51.53865
+#&gt;     parliamentary_constituency european_electoral_region primary_care_trust
+#&gt; 1 Islington South and Finsbury                    London          Islington
+#&gt;   region           lsoa          msoa incode outcode admin_district
+#&gt; 1 London Islington 020B Islington 020    1NZ      N1      Islington
+#&gt;                       parish admin_county admin_ward           ccg
+#&gt; 1 Islington, unparished area           NA  St Mary's NHS Islington
+#&gt;                     nuts admin_district admin_county admin_ward    parish
+#&gt; 1 Haringey and Islington      E09000019    E99999999  E05000379 E43000209
+#&gt;         ccg  nuts
+#&gt; 1 E38000088 UKI43</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

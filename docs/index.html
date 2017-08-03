@@ -49,15 +49,11 @@
     </li>
   </ul>
 </li>
-      </ul>
-<ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/erzk/PostcodesioR">
-    <span class="fa fa-github fa-lg"></span>
-     
-  </a>
+  <a href="news/index.html">News</a>
 </li>
       </ul>
+<ul class="nav navbar-nav navbar-right"></ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -151,37 +147,37 @@ bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="refer
 <span class="kw">str</span>(bulk_lookup_result<span class="op">$</span>result[<span class="dv">1</span>])</code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 2
-##   ..$ query : chr "EX165BL"
+##   ..$ query : chr "PR3 0SG"
 ##   ..$ result:List of 23
-##   .. ..$ postcode                  : chr "EX16 5BL"
+##   .. ..$ postcode                  : chr "PR3 0SG"
 ##   .. ..$ quality                   : int 1
-##   .. ..$ eastings                  : int 294480
-##   .. ..$ northings                 : int 112251
+##   .. ..$ eastings                  : int 351012
+##   .. ..$ northings                 : int 440302
 ##   .. ..$ country                   : chr "England"
-##   .. ..$ nhs_ha                    : chr "South West"
-##   .. ..$ longitude                 : num -3.5
-##   .. ..$ latitude                  : num 50.9
-##   .. ..$ parliamentary_constituency: chr "Tiverton and Honiton"
-##   .. ..$ european_electoral_region : chr "South West"
-##   .. ..$ primary_care_trust        : chr "Devon"
-##   .. ..$ region                    : chr "South West"
-##   .. ..$ lsoa                      : chr "Mid Devon 005C"
-##   .. ..$ msoa                      : chr "Mid Devon 005"
-##   .. ..$ incode                    : chr "5BL"
-##   .. ..$ outcode                   : chr "EX16"
-##   .. ..$ admin_district            : chr "Mid Devon"
-##   .. ..$ parish                    : chr "Tiverton"
-##   .. ..$ admin_county              : chr "Devon"
-##   .. ..$ admin_ward                : chr "Westexe"
-##   .. ..$ ccg                       : chr "NHS North, East, West Devon"
-##   .. ..$ nuts                      : chr "Devon CC"
+##   .. ..$ nhs_ha                    : chr "North West"
+##   .. ..$ longitude                 : num -2.75
+##   .. ..$ latitude                  : num 53.9
+##   .. ..$ parliamentary_constituency: chr "Wyre and Preston North"
+##   .. ..$ european_electoral_region : chr "North West"
+##   .. ..$ primary_care_trust        : chr "North Lancashire Teaching"
+##   .. ..$ region                    : chr "North West"
+##   .. ..$ lsoa                      : chr "Wyre 006A"
+##   .. ..$ msoa                      : chr "Wyre 006"
+##   .. ..$ incode                    : chr "0SG"
+##   .. ..$ outcode                   : chr "PR3"
+##   .. ..$ admin_district            : chr "Wyre"
+##   .. ..$ parish                    : chr "Myerscough and Bilsborrow"
+##   .. ..$ admin_county              : chr "Lancashire"
+##   .. ..$ admin_ward                : chr "Brock with Catterall"
+##   .. ..$ ccg                       : chr "NHS Morecambe Bay CCG"
+##   .. ..$ nuts                      : chr "Lancaster and Wyre"
 ##   .. ..$ codes                     :List of 6
-##   .. .. ..$ admin_district: chr "E07000042"
-##   .. .. ..$ admin_county  : chr "E10000008"
-##   .. .. ..$ admin_ward    : chr "E05003531"
-##   .. .. ..$ parish        : chr "E04003055"
-##   .. .. ..$ ccg           : chr "E38000129"
-##   .. .. ..$ nuts          : chr "UKK43"</code></pre>
+##   .. .. ..$ admin_district: chr "E07000128"
+##   .. .. ..$ admin_county  : chr "E10000017"
+##   .. .. ..$ admin_ward    : chr "E05009934"
+##   .. .. ..$ parish        : chr "E04005340"
+##   .. .. ..$ ccg           : chr "E38000216"
+##   .. .. ..$ nuts          : chr "UKD44"</code></pre>
 </div>
 <div id="outward-code-lookup" class="section level4">
 <h4 class="hasAnchor">
@@ -204,23 +200,23 @@ bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="refer
 ##   .. ..$ : chr "Hackney"
 ##   .. ..$ : chr "Tower Hamlets"
 ##   ..$ parish        :List of 3
-##   .. ..$ : chr "City of London, unparished area"
 ##   .. ..$ : chr "Tower Hamlets, unparished area"
+##   .. ..$ : chr "City of London, unparished area"
 ##   .. ..$ : chr "Hackney, unparished area"
 ##   ..$ admin_county  : list()
 ##   ..$ admin_ward    :List of 13
 ##   .. ..$ : chr "Bethnal Green"
 ##   .. ..$ : chr "Shadwell"
+##   .. ..$ : chr "Portsoken"
+##   .. ..$ : chr "Whitechapel"
 ##   .. ..$ : chr "Aldgate"
 ##   .. ..$ : chr "Tower"
 ##   .. ..$ : chr "Stepney Green"
+##   .. ..$ : chr "Weavers"
 ##   .. ..$ : chr "Bishopsgate"
 ##   .. ..$ : chr "Hoxton East &amp; Shoreditch"
 ##   .. ..$ : chr "Spitalfields &amp; Banglatown"
 ##   .. ..$ : chr "St Peter's"
-##   .. ..$ : chr "Portsoken"
-##   .. ..$ : chr "Whitechapel"
-##   .. ..$ : chr "Weavers"
 ##   .. ..$ : chr "St Dunstan's"
 ##   ..$ country       :List of 1
 ##   .. ..$ : chr "England"</code></pre>
@@ -326,27 +322,27 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="reference/b
 <p>Generates a data frame with a random UK postcode and corresponding geographic information:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># without restrictions</span>
 <span class="kw"><a href="reference/random_postcode.html">random_postcode</a></span>()</code></pre></div>
-<pre><code>##   postcode quality eastings northings country          nhs_ha longitude
-## 1 CO16 7AP       1   615709    215447 England East of England  1.126805
+<pre><code>##   postcode quality eastings northings country        nhs_ha longitude
+## 1  WR4 4FZ       1   385268    255404 England West Midlands -2.216952
 ##   latitude parliamentary_constituency european_electoral_region
-## 1 51.79605                    Clacton                   Eastern
-##   primary_care_trust          region          lsoa         msoa incode
-## 1   North East Essex East of England Tendring 015D Tendring 015    7AP
-##   outcode admin_district                    parish admin_county admin_ward
-## 1    CO16       Tendring Tendring, unparished area        Essex Rush Green
-##                    ccg                nuts admin_district admin_county
-## 1 NHS North East Essex Essex Haven Gateway      E07000076    E10000012
-##   admin_ward    parish       ccg  nuts
-## 1  E05004252 E43000065 E38000117 UKH34</code></pre>
+## 1 52.19667                  Worcester             West Midlands
+##   primary_care_trust        region           lsoa          msoa incode
+## 1     Worcestershire West Midlands Worcester 011E Worcester 011    4FZ
+##   outcode admin_district                     parish   admin_county
+## 1     WR4      Worcester Worcester, unparished area Worcestershire
+##   admin_ward                      ccg           nuts admin_district
+## 1  Cathedral NHS South Worcestershire Worcestershire      E07000237
+##   admin_county admin_ward    parish       ccg  nuts
+## 1    E10000034  E05007883 E43000153 E38000166 UKG12</code></pre>
 <p>A randomly generated postcode can also belong to a particular outcode:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># restrict to an outcode</span>
 <span class="kw"><a href="reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</code></pre></div>
-<pre><code>##   postcode quality eastings northings country nhs_ha  longitude latitude
-## 1   N1 4JE       1   533077    184654 England London -0.0822906  51.5451
+<pre><code>##   postcode quality eastings northings country nhs_ha   longitude latitude
+## 1   N1 3JF       1   532886    184095 England London -0.08525423 51.54012
 ##     parliamentary_constituency european_electoral_region
 ## 1 Hackney South and Shoreditch                    London
 ##          primary_care_trust region         lsoa        msoa incode outcode
-## 1 City and Hackney Teaching London Hackney 021D Hackney 021    4JE      N1
+## 1 City and Hackney Teaching London Hackney 025A Hackney 025    3JF      N1
 ##   admin_district                   parish admin_county  admin_ward
 ## 1        Hackney Hackney, unparished area           NA De Beauvoir
 ##                    ccg               nuts admin_district admin_county
@@ -359,14 +355,14 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="reference/b
 <a href="#places" class="anchor"></a>Places</h4>
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/random_place.html">random_place</a></span>()</code></pre></div>
-<pre><code>##                   code   name_1 name_1_lang name_2 name_2_lang local_type
-## 1 osgb4000000074579886 Felindre        NULL   NULL        NULL    Village
-##   outcode county_unitary county_unitary_type district_borough
-## 1     LD3  Powys - Powys    UnitaryAuthority             NULL
-##   district_borough_type region country longitude latitude eastings
-## 1                  NULL  Wales   Wales -3.189263 52.02235   318493
+<pre><code>##                   code         name_1 name_1_lang name_2 name_2_lang
+## 1 osgb4000000074551322 Market Deeping        NULL   NULL        NULL
+##   local_type outcode county_unitary county_unitary_type district_borough
+## 1       Town     PE6   Lincolnshire              County   South Kesteven
+##   district_borough_type        region country longitude latitude eastings
+## 1              District East Midlands England -0.317623 52.67541   513846
 ##   northings min_eastings min_northings max_eastings max_northings
-## 1    236660       318356        236261       318856        236882</code></pre>
+## 1    309962       512887        309748       514587        311617</code></pre>
 </div>
 </div>
 <div id="postcode-validation" class="section level3">
@@ -457,27 +453,27 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="reference/b
 <span class="kw">str</span>(place_query_result<span class="op">$</span>result[<span class="dv">1</span>])</code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 21
-##   ..$ code                 : chr "osgb4000000074555020"
-##   ..$ name_1               : chr "Hillswick"
+##   ..$ code                 : chr "osgb4000000074559800"
+##   ..$ name_1               : chr "Hillside"
 ##   ..$ name_1_lang          : NULL
 ##   ..$ name_2               : NULL
 ##   ..$ name_2_lang          : NULL
-##   ..$ local_type           : chr "Village"
-##   ..$ outcode              : chr "ZE2"
-##   ..$ county_unitary       : chr "Shetland Islands"
+##   ..$ local_type           : chr "Suburban Area"
+##   ..$ outcode              : chr "EH7"
+##   ..$ county_unitary       : chr "City of Edinburgh"
 ##   ..$ county_unitary_type  : chr "UnitaryAuthority"
 ##   ..$ district_borough     : NULL
 ##   ..$ district_borough_type: NULL
 ##   ..$ region               : chr "Scotland"
 ##   ..$ country              : chr "Scotland"
-##   ..$ longitude            : num -1.49
-##   ..$ latitude             : num 60.5
-##   ..$ eastings             : int 428069
-##   ..$ northings            : int 1176687
-##   ..$ min_eastings         : int 427887
-##   ..$ min_northings        : int 1176558
-##   ..$ max_eastings         : int 429250
-##   ..$ max_northings        : int 1178072</code></pre>
+##   ..$ longitude            : num -3.18
+##   ..$ latitude             : num 56
+##   ..$ eastings             : int 326541
+##   ..$ northings            : int 674485
+##   ..$ min_eastings         : int 326145
+##   ..$ min_northings        : int 674302
+##   ..$ max_eastings         : int 326974
+##   ..$ max_northings        : int 674961</code></pre>
 <p>You can also find a place using an OSGB code:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">place_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="reference/place_lookup.html">place_lookup</a></span>(<span class="st">"osgb4000000074544700"</span>)
 
@@ -522,7 +518,9 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="reference/b
     <h2 class="hasAnchor">
 <a href="#sidebar" class="anchor"></a>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/erzk/PostcodesioR">https://​github.com/​erzk/​PostcodesioR</a>
+<li>Browse source code at <br><a href="https://erzk.github.io/PostcodesioR/">https://​erzk.github.io/​PostcodesioR/​</a>
+</li>
+<li>Report a bug at <br><a href="https://github.com/erzk/PostcodesioR/issues">https://​github.com/​erzk/​PostcodesioR/​issues</a>
 </li>
 </ul>
 <h2>License</h2>

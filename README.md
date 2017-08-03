@@ -148,23 +148,23 @@ str(ocl)
     ##   .. ..$ : chr "Hackney"
     ##   .. ..$ : chr "Tower Hamlets"
     ##   ..$ parish        :List of 3
-    ##   .. ..$ : chr "City of London, unparished area"
     ##   .. ..$ : chr "Tower Hamlets, unparished area"
+    ##   .. ..$ : chr "City of London, unparished area"
     ##   .. ..$ : chr "Hackney, unparished area"
     ##   ..$ admin_county  : list()
     ##   ..$ admin_ward    :List of 13
     ##   .. ..$ : chr "Bethnal Green"
     ##   .. ..$ : chr "Shadwell"
+    ##   .. ..$ : chr "Portsoken"
+    ##   .. ..$ : chr "Whitechapel"
     ##   .. ..$ : chr "Aldgate"
     ##   .. ..$ : chr "Tower"
     ##   .. ..$ : chr "Stepney Green"
+    ##   .. ..$ : chr "Weavers"
     ##   .. ..$ : chr "Bishopsgate"
     ##   .. ..$ : chr "Hoxton East & Shoreditch"
     ##   .. ..$ : chr "Spitalfields & Banglatown"
     ##   .. ..$ : chr "St Peter's"
-    ##   .. ..$ : chr "Portsoken"
-    ##   .. ..$ : chr "Whitechapel"
-    ##   .. ..$ : chr "Weavers"
     ##   .. ..$ : chr "St Dunstan's"
     ##   ..$ country       :List of 1
     ##   .. ..$ : chr "England"
@@ -275,18 +275,18 @@ Generates a data frame with a random UK postcode and corresponding geographic in
 random_postcode()
 ```
 
-    ##   postcode quality eastings northings country        nhs_ha longitude
-    ## 1 PO14 9ZZ       5   457310    105177 England South Central -1.187391
+    ##   postcode quality eastings northings country          nhs_ha longitude
+    ## 1  SS7 2EJ       1   581803    186816 England East of England 0.6208185
     ##   latitude parliamentary_constituency european_electoral_region
-    ## 1 50.84329                    Fareham                South East
-    ##   primary_care_trust     region         lsoa        msoa incode outcode
-    ## 1          Hampshire South East Fareham 011D Fareham 011    9ZZ    PO14
-    ##   admin_district                   parish admin_county    admin_ward
-    ## 1        Fareham Fareham, unparished area    Hampshire Fareham South
-    ##                       ccg            nuts admin_district admin_county
-    ## 1 NHS Fareham and Gosport South Hampshire      E07000087    E10000014
-    ##   admin_ward    parish       ccg  nuts
-    ## 1  E05004519 E43000070 E38000059 UKJ35
+    ## 1 51.55094               Castle Point                   Eastern
+    ##   primary_care_trust          region              lsoa             msoa
+    ## 1   South East Essex East of England Castle Point 006B Castle Point 006
+    ##   incode outcode admin_district                        parish admin_county
+    ## 1    2EJ     SS7   Castle Point Castle Point, unparished area        Essex
+    ##   admin_ward                                     ccg                 nuts
+    ## 1   St James NHS Castle Point, Rayleigh and Rochford Essex Thames Gateway
+    ##   admin_district admin_county admin_ward    parish       ccg  nuts
+    ## 1      E07000069    E10000012  E05004092 E43000061 E38000030 UKH37
 
 A randomly generated postcode can also belong to a particular outcode:
 
@@ -295,18 +295,18 @@ A randomly generated postcode can also belong to a particular outcode:
 random_postcode("N1")
 ```
 
-    ##   postcode quality eastings northings country nhs_ha  longitude latitude
-    ## 1   N1 0JJ       1   530953    183613 England London -0.1132897 51.53624
+    ##   postcode quality eastings northings country nhs_ha   longitude latitude
+    ## 1   N1 7PP       1   532670    183081 England London -0.08874871 51.53106
     ##     parliamentary_constituency european_electoral_region
-    ## 1 Islington South and Finsbury                    London
-    ##   primary_care_trust region           lsoa          msoa incode outcode
-    ## 1          Islington London Islington 019A Islington 019    0JJ      N1
-    ##   admin_district                     parish admin_county admin_ward
-    ## 1      Islington Islington, unparished area           NA  Barnsbury
-    ##             ccg                   nuts admin_district admin_county
-    ## 1 NHS Islington Haringey and Islington      E09000019    E99999999
+    ## 1 Hackney South and Shoreditch                    London
+    ##          primary_care_trust region         lsoa        msoa incode outcode
+    ## 1 City and Hackney Teaching London Hackney 026D Hackney 026    7PP      N1
+    ##   admin_district                   parish admin_county  admin_ward
+    ## 1        Hackney Hackney, unparished area           NA Hoxton West
+    ##                    ccg               nuts admin_district admin_county
+    ## 1 NHS City and Hackney Hackney and Newham      E09000012    E99999999
     ##   admin_ward    parish       ccg  nuts
-    ## 1  E05000366 E43000209 E38000088 UKI43
+    ## 1  E05009378 E43000202 E38000035 UKI41
 
 #### Places
 
@@ -316,16 +316,16 @@ You can also generate a random place, specified by an OSGB code, with correspond
 random_place()
 ```
 
-    ##                   code     name_1 name_1_lang name_2 name_2_lang
-    ## 1 osgb4000000074542145 Wilmington        NULL   NULL        NULL
-    ##      local_type outcode             county_unitary county_unitary_type
-    ## 1 Suburban Area     HU8 City of Kingston upon Hull    UnitaryAuthority
-    ##   district_borough district_borough_type                   region country
-    ## 1             NULL                  NULL Yorkshire and the Humber England
-    ##   longitude latitude eastings northings min_eastings min_northings
-    ## 1  -0.32305 53.75722   510658    430289       510262        430161
-    ##   max_eastings max_northings
-    ## 1       510762        430752
+    ##                   code    name_1 name_1_lang name_2 name_2_lang local_type
+    ## 1 osgb4000000074570317 Driffield        NULL   NULL        NULL       Town
+    ##   outcode           county_unitary county_unitary_type district_borough
+    ## 1    YO25 East Riding of Yorkshire    UnitaryAuthority             NULL
+    ##   district_borough_type                   region country longitude
+    ## 1                  NULL Yorkshire and the Humber England -0.440094
+    ##   latitude eastings northings min_eastings min_northings max_eastings
+    ## 1 54.00568   502334    457754       501396        456485       503757
+    ##   max_northings
+    ## 1        458894
 
 ### Postcode validation
 
@@ -433,27 +433,27 @@ str(place_query_result$result[1])
 
     ## List of 1
     ##  $ :List of 21
-    ##   ..$ code                 : chr "osgb4000000074560105"
+    ##   ..$ code                 : chr "osgb4000000074551849"
     ##   ..$ name_1               : chr "Hillside"
     ##   ..$ name_1_lang          : NULL
     ##   ..$ name_2               : NULL
     ##   ..$ name_2_lang          : NULL
     ##   ..$ local_type           : chr "Suburban Area"
-    ##   ..$ outcode              : chr "BS26"
-    ##   ..$ county_unitary       : chr "Somerset"
-    ##   ..$ county_unitary_type  : chr "County"
-    ##   ..$ district_borough     : chr "Sedgemoor"
-    ##   ..$ district_borough_type: chr "District"
-    ##   ..$ region               : chr "South West"
-    ##   ..$ country              : chr "England"
-    ##   ..$ longitude            : num -2.82
-    ##   ..$ latitude             : num 51.3
-    ##   ..$ eastings             : int 342987
-    ##   ..$ northings            : int 154729
-    ##   ..$ min_eastings         : int 342721
-    ##   ..$ min_northings        : int 154494
-    ##   ..$ max_eastings         : int 343234
-    ##   ..$ max_northings        : int 154994
+    ##   ..$ outcode              : chr "G78"
+    ##   ..$ county_unitary       : chr "East Renfrewshire"
+    ##   ..$ county_unitary_type  : chr "UnitaryAuthority"
+    ##   ..$ district_borough     : NULL
+    ##   ..$ district_borough_type: NULL
+    ##   ..$ region               : chr "Scotland"
+    ##   ..$ country              : chr "Scotland"
+    ##   ..$ longitude            : num -4.41
+    ##   ..$ latitude             : num 55.8
+    ##   ..$ eastings             : int 249096
+    ##   ..$ northings            : int 659053
+    ##   ..$ min_eastings         : int 248779
+    ##   ..$ min_northings        : int 658683
+    ##   ..$ max_eastings         : int 249466
+    ##   ..$ max_northings        : int 659282
 
 You can also find a place using an OSGB code:
 

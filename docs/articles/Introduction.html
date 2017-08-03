@@ -49,15 +49,11 @@
     </li>
   </ul>
 </li>
-      </ul>
-<ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/erzk/PostcodesioR">
-    <span class="fa fa-github fa-lg"></span>
-     
-  </a>
+  <a href="../news/index.html">News</a>
 </li>
       </ul>
+<ul class="nav navbar-nav navbar-right"></ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -146,37 +142,37 @@ bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../re
 <span class="kw">str</span>(bulk_lookup_result<span class="op">$</span>result[<span class="dv">1</span>])</code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 2
-##   ..$ query : chr "EX165BL"
+##   ..$ query : chr "M45 6GN"
 ##   ..$ result:List of 23
-##   .. ..$ postcode                  : chr "EX16 5BL"
+##   .. ..$ postcode                  : chr "M45 6GN"
 ##   .. ..$ quality                   : int 1
-##   .. ..$ eastings                  : int 294480
-##   .. ..$ northings                 : int 112251
+##   .. ..$ eastings                  : int 380416
+##   .. ..$ northings                 : int 406002
 ##   .. ..$ country                   : chr "England"
-##   .. ..$ nhs_ha                    : chr "South West"
-##   .. ..$ longitude                 : num -3.5
-##   .. ..$ latitude                  : num 50.9
-##   .. ..$ parliamentary_constituency: chr "Tiverton and Honiton"
-##   .. ..$ european_electoral_region : chr "South West"
-##   .. ..$ primary_care_trust        : chr "Devon"
-##   .. ..$ region                    : chr "South West"
-##   .. ..$ lsoa                      : chr "Mid Devon 005C"
-##   .. ..$ msoa                      : chr "Mid Devon 005"
-##   .. ..$ incode                    : chr "5BL"
-##   .. ..$ outcode                   : chr "EX16"
-##   .. ..$ admin_district            : chr "Mid Devon"
-##   .. ..$ parish                    : chr "Tiverton"
-##   .. ..$ admin_county              : chr "Devon"
-##   .. ..$ admin_ward                : chr "Westexe"
-##   .. ..$ ccg                       : chr "NHS North, East, West Devon"
-##   .. ..$ nuts                      : chr "Devon CC"
+##   .. ..$ nhs_ha                    : chr "North West"
+##   .. ..$ longitude                 : num -2.3
+##   .. ..$ latitude                  : num 53.6
+##   .. ..$ parliamentary_constituency: chr "Bury South"
+##   .. ..$ european_electoral_region : chr "North West"
+##   .. ..$ primary_care_trust        : chr "Bury"
+##   .. ..$ region                    : chr "North West"
+##   .. ..$ lsoa                      : chr "Bury 019C"
+##   .. ..$ msoa                      : chr "Bury 019"
+##   .. ..$ incode                    : chr "6GN"
+##   .. ..$ outcode                   : chr "M45"
+##   .. ..$ admin_district            : chr "Bury"
+##   .. ..$ parish                    : chr "Bury, unparished area"
+##   .. ..$ admin_county              : NULL
+##   .. ..$ admin_ward                : chr "Pilkington Park"
+##   .. ..$ ccg                       : chr "NHS Bury"
+##   .. ..$ nuts                      : chr "Greater Manchester North East"
 ##   .. ..$ codes                     :List of 6
-##   .. .. ..$ admin_district: chr "E07000042"
-##   .. .. ..$ admin_county  : chr "E10000008"
-##   .. .. ..$ admin_ward    : chr "E05003531"
-##   .. .. ..$ parish        : chr "E04003055"
-##   .. .. ..$ ccg           : chr "E38000129"
-##   .. .. ..$ nuts          : chr "UKK43"</code></pre>
+##   .. .. ..$ admin_district: chr "E08000002"
+##   .. .. ..$ admin_county  : chr "E99999999"
+##   .. .. ..$ admin_ward    : chr "E05000677"
+##   .. .. ..$ parish        : chr "E43000156"
+##   .. .. ..$ ccg           : chr "E38000024"
+##   .. .. ..$ nuts          : chr "UKD37"</code></pre>
 </div>
 <div id="outward-code-lookup" class="section level4">
 <h4 class="hasAnchor">
@@ -321,27 +317,31 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 <p>Generates a data frame with a random UK postcode and corresponding geographic information:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># without restrictions</span>
 <span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>()</code></pre></div>
-<pre><code>##   postcode quality eastings northings country           nhs_ha  longitude
-## 1 KT13 9TU       1   508364    164230 England South East Coast -0.4447699
-##   latitude parliamentary_constituency european_electoral_region
-## 1 51.36681    Runnymede and Weybridge                South East
-##   primary_care_trust     region           lsoa          msoa incode
-## 1             Surrey South East Elmbridge 012E Elmbridge 012    9TU
-##   outcode admin_district                     parish admin_county
-## 1    KT13      Elmbridge Elmbridge, unparished area       Surrey
-##                   admin_ward                   ccg        nuts
-## 1 Weybridge St George's Hill NHS North West Surrey West Surrey
-##   admin_district admin_county admin_ward    parish       ccg  nuts
-## 1      E07000207    E10000030  E05011089 E43000136 E38000128 UKJ25</code></pre>
+<pre><code>##   postcode quality eastings northings  country nhs_ha longitude latitude
+## 1  KY8 5BL       1   337468    701465 Scotland   Fife -3.009466 56.20166
+##   parliamentary_constituency european_electoral_region
+## 1                 Glenrothes                  Scotland
+##                                      primary_care_trust region        lsoa
+## 1 Kirkcaldy and Levenmouth Community Health Partnership     NA Broom South
+##          msoa incode outcode admin_district parish admin_county
+## 1 Leven North    5BL     KY8           Fife     NA           NA
+##                  admin_ward
+## 1 Leven, Kennoway and Largo
+##                                                     ccg
+## 1 Kirkcaldy and Levenmouth Community Health Partnership
+##                        nuts admin_district admin_county admin_ward
+## 1 Clackmannanshire and Fife      S12000015    S99999999  S13002965
+##      parish       ccg  nuts
+## 1 S99999999 S03000008 UKM22</code></pre>
 <p>A randomly generated postcode can also belong to a particular outcode:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># restrict to an outcode</span>
 <span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</code></pre></div>
 <pre><code>##   postcode quality eastings northings country nhs_ha  longitude latitude
-## 1   N1 0PS       1   531435    183414 England London -0.1064185 51.53434
+## 1   N1 1XG       1   531622    183898 England London -0.1035432 51.53865
 ##     parliamentary_constituency european_electoral_region
 ## 1 Islington South and Finsbury                    London
 ##   primary_care_trust region           lsoa          msoa incode outcode
-## 1          Islington London Islington 020B Islington 020    0PS      N1
+## 1          Islington London Islington 020B Islington 020    1XG      N1
 ##   admin_district                     parish admin_county admin_ward
 ## 1      Islington Islington, unparished area           NA  St Mary's
 ##             ccg                   nuts admin_district admin_county
@@ -354,16 +354,16 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 <a href="#places" class="anchor"></a>Places</h4>
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/random_place.html">random_place</a></span>()</code></pre></div>
-<pre><code>##                   code              name_1 name_1_lang name_2 name_2_lang
-## 1 osgb4000000074572473 Farleigh Hungerford        NULL   NULL        NULL
+<pre><code>##                   code    name_1 name_1_lang name_2 name_2_lang
+## 1 osgb4000000074559126 Wasbister        NULL   NULL        NULL
 ##         local_type outcode county_unitary county_unitary_type
-## 1 Other Settlement     BA2       Somerset              County
-##   district_borough district_borough_type     region country longitude
-## 1           Mendip              District South West England -2.288286
+## 1 Other Settlement    KW16 Orkney Islands    UnitaryAuthority
+##   district_borough district_borough_type   region  country longitude
+## 1             NULL                  NULL Scotland Scotland -3.257755
 ##   latitude eastings northings min_eastings min_northings max_eastings
-## 1 51.31419   380004    157270       379552        156721       380409
+## 1 59.01743   327876   1015164       327241       1014265       329081
 ##   max_northings
-## 1        157869</code></pre>
+## 1       1015686</code></pre>
 </div>
 </div>
 <div id="postcode-validation" class="section level3">
@@ -454,27 +454,27 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 <span class="kw">str</span>(place_query_result<span class="op">$</span>result[<span class="dv">1</span>])</code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 21
-##   ..$ code                 : chr "osgb4000000074559800"
+##   ..$ code                 : chr "osgb4000000074560105"
 ##   ..$ name_1               : chr "Hillside"
 ##   ..$ name_1_lang          : NULL
 ##   ..$ name_2               : NULL
 ##   ..$ name_2_lang          : NULL
 ##   ..$ local_type           : chr "Suburban Area"
-##   ..$ outcode              : chr "EH7"
-##   ..$ county_unitary       : chr "City of Edinburgh"
-##   ..$ county_unitary_type  : chr "UnitaryAuthority"
-##   ..$ district_borough     : NULL
-##   ..$ district_borough_type: NULL
-##   ..$ region               : chr "Scotland"
-##   ..$ country              : chr "Scotland"
-##   ..$ longitude            : num -3.18
-##   ..$ latitude             : num 56
-##   ..$ eastings             : int 326541
-##   ..$ northings            : int 674485
-##   ..$ min_eastings         : int 326145
-##   ..$ min_northings        : int 674302
-##   ..$ max_eastings         : int 326974
-##   ..$ max_northings        : int 674961</code></pre>
+##   ..$ outcode              : chr "BS26"
+##   ..$ county_unitary       : chr "Somerset"
+##   ..$ county_unitary_type  : chr "County"
+##   ..$ district_borough     : chr "Sedgemoor"
+##   ..$ district_borough_type: chr "District"
+##   ..$ region               : chr "South West"
+##   ..$ country              : chr "England"
+##   ..$ longitude            : num -2.82
+##   ..$ latitude             : num 51.3
+##   ..$ eastings             : int 342987
+##   ..$ northings            : int 154729
+##   ..$ min_eastings         : int 342721
+##   ..$ min_northings        : int 154494
+##   ..$ max_eastings         : int 343234
+##   ..$ max_northings        : int 154994</code></pre>
 <p>You can also find a place using an OSGB code:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">place_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/place_lookup.html">place_lookup</a></span>(<span class="st">"osgb4000000074544700"</span>)
 
