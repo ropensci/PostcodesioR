@@ -1,3 +1,7 @@
+README
+================
+Eryk Walczak
+
 [![Travis-CI Build Status](https://travis-ci.org/erzk/PostcodesioR.svg?branch=master)](https://travis-ci.org/erzk/PostcodesioR) [![Coverage Status](https://img.shields.io/codecov/c/github/erzk/PostcodesioR/master.svg)](https://codecov.io/github/erzk/PostcodesioR?branch=master) [![Package-License](http://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html)
 
 PostcodesioR
@@ -110,7 +114,7 @@ str(bulk_lookup_result$result[1])
     ##   .. ..$ parish                    : chr "Myerscough and Bilsborrow"
     ##   .. ..$ admin_county              : chr "Lancashire"
     ##   .. ..$ admin_ward                : chr "Brock with Catterall"
-    ##   .. ..$ ccg                       : NULL
+    ##   .. ..$ ccg                       : chr "NHS Morecambe Bay CCG"
     ##   .. ..$ nuts                      : chr "Lancaster and Wyre"
     ##   .. ..$ codes                     :List of 6
     ##   .. .. ..$ admin_district: chr "E07000128"
@@ -133,7 +137,7 @@ str(ocl)
 
     ## List of 2
     ##  $ status: int 200
-    ##  $ result:List of 9
+    ##  $ result:List of 10
     ##   ..$ outcode       : chr "E1"
     ##   ..$ longitude     : num -0.0593
     ##   ..$ latitude      : num 51.5
@@ -145,27 +149,29 @@ str(ocl)
     ##   .. ..$ : chr "Tower Hamlets"
     ##   ..$ parish        :List of 3
     ##   .. ..$ : chr "City of London, unparished area"
-    ##   .. ..$ : chr "Hackney, unparished area"
     ##   .. ..$ : chr "Tower Hamlets, unparished area"
+    ##   .. ..$ : chr "Hackney, unparished area"
     ##   ..$ admin_county  : list()
     ##   ..$ admin_ward    :List of 13
-    ##   .. ..$ : chr "Spitalfields & Banglatown"
-    ##   .. ..$ : chr "Portsoken"
-    ##   .. ..$ : chr "Tower"
-    ##   .. ..$ : chr "St Dunstan's"
-    ##   .. ..$ : chr "Aldgate"
-    ##   .. ..$ : chr "Bishopsgate"
-    ##   .. ..$ : chr "Hoxton East & Shoreditch"
-    ##   .. ..$ : chr "Whitechapel"
     ##   .. ..$ : chr "Bethnal Green"
     ##   .. ..$ : chr "Shadwell"
+    ##   .. ..$ : chr "Aldgate"
+    ##   .. ..$ : chr "Tower"
     ##   .. ..$ : chr "Stepney Green"
+    ##   .. ..$ : chr "Bishopsgate"
+    ##   .. ..$ : chr "Hoxton East & Shoreditch"
+    ##   .. ..$ : chr "Spitalfields & Banglatown"
     ##   .. ..$ : chr "St Peter's"
+    ##   .. ..$ : chr "Portsoken"
+    ##   .. ..$ : chr "Whitechapel"
     ##   .. ..$ : chr "Weavers"
+    ##   .. ..$ : chr "St Dunstan's"
+    ##   ..$ country       :List of 1
+    ##   .. ..$ : chr "England"
 
 ### Reverse geocoding
 
-Provide latitude and longitude to obtain geographic information. Different levels of aggregation are available, i.e. postcode or outcode.
+Provide latitude and longitude to obtain geographic information. Different levels of aggregation are available, i.e. postcode or outcode.
 
 #### Single postcode
 
@@ -241,7 +247,7 @@ str(out_rev_geocode$result[1])
 ```
 
     ## List of 1
-    ##  $ :List of 10
+    ##  $ :List of 11
     ##   ..$ outcode       : chr "CF99"
     ##   ..$ longitude     : num -3.16
     ##   ..$ latitude      : num 51.5
@@ -254,6 +260,8 @@ str(out_rev_geocode$result[1])
     ##   ..$ admin_county  : list()
     ##   ..$ admin_ward    :List of 1
     ##   .. ..$ : chr "Butetown"
+    ##   ..$ country       :List of 1
+    ##   .. ..$ : chr "Wales"
     ##   ..$ distance      : num 997
 
 ### Generate random entries
@@ -267,18 +275,18 @@ Generates a data frame with a random UK postcode and corresponding geographic in
 random_postcode()
 ```
 
-    ##   postcode quality eastings northings          country
-    ## 1 BT17 0BF       1   328825    369272 Northern Ireland
-    ##                       nhs_ha longitude latitude parliamentary_constituency
-    ## 1 Health & Social Care Board -6.009578 54.55536               Belfast West
-    ##   european_electoral_region primary_care_trust region       lsoa msoa
-    ## 1          Northern Ireland      South Eastern     NA Dunmurry 1   NA
-    ##   incode outcode admin_district parish admin_county admin_ward
-    ## 1    0BF    BT17        Belfast     NA           NA   Dunmurry
-    ##             ccg          nuts admin_district admin_county admin_ward
-    ## 1 South Eastern Outer Belfast      N09000003    N99999999  N08000323
-    ##      parish   ccg  nuts
-    ## 1 N99999999 ZC040 UKN02
+    ##   postcode quality eastings northings country        nhs_ha longitude
+    ## 1 PO14 9ZZ       5   457310    105177 England South Central -1.187391
+    ##   latitude parliamentary_constituency european_electoral_region
+    ## 1 50.84329                    Fareham                South East
+    ##   primary_care_trust     region         lsoa        msoa incode outcode
+    ## 1          Hampshire South East Fareham 011D Fareham 011    9ZZ    PO14
+    ##   admin_district                   parish admin_county    admin_ward
+    ## 1        Fareham Fareham, unparished area    Hampshire Fareham South
+    ##                       ccg            nuts admin_district admin_county
+    ## 1 NHS Fareham and Gosport South Hampshire      E07000087    E10000014
+    ##   admin_ward    parish       ccg  nuts
+    ## 1  E05004519 E43000070 E38000059 UKJ35
 
 A randomly generated postcode can also belong to a particular outcode:
 
@@ -288,17 +296,17 @@ random_postcode("N1")
 ```
 
     ##   postcode quality eastings northings country nhs_ha  longitude latitude
-    ## 1   N1 0NG       1   530748    183780 England London -0.1161818 51.53779
+    ## 1   N1 0JJ       1   530953    183613 England London -0.1132897 51.53624
     ##     parliamentary_constituency european_electoral_region
     ## 1 Islington South and Finsbury                    London
     ##   primary_care_trust region           lsoa          msoa incode outcode
-    ## 1          Islington London Islington 019D Islington 019    0NG      N1
+    ## 1          Islington London Islington 019A Islington 019    0JJ      N1
     ##   admin_district                     parish admin_county admin_ward
-    ## 1      Islington Islington, unparished area           NA Caledonian
+    ## 1      Islington Islington, unparished area           NA  Barnsbury
     ##             ccg                   nuts admin_district admin_county
     ## 1 NHS Islington Haringey and Islington      E09000019    E99999999
     ##   admin_ward    parish       ccg  nuts
-    ## 1  E05000368 E43000209 E38000088 UKI43
+    ## 1  E05000366 E43000209 E38000088 UKI43
 
 #### Places
 
@@ -308,14 +316,16 @@ You can also generate a random place, specified by an OSGB code, with correspond
 random_place()
 ```
 
-    ##                   code   name_1 name_1_lang name_2 name_2_lang local_type
-    ## 1 osgb4000000074343646 Edmonton        NULL   NULL        NULL       Town
-    ##   outcode county_unitary    county_unitary_type district_borough
-    ## 1      N9 Greater London GreaterLondonAuthority          Enfield
-    ##   district_borough_type region country   longitude latitude eastings
-    ## 1         LondonBorough London England -0.06063963  51.6245   534344
-    ##   northings min_eastings min_northings max_eastings max_northings
-    ## 1    193523       531844        191460       536407        195641
+    ##                   code     name_1 name_1_lang name_2 name_2_lang
+    ## 1 osgb4000000074542145 Wilmington        NULL   NULL        NULL
+    ##      local_type outcode             county_unitary county_unitary_type
+    ## 1 Suburban Area     HU8 City of Kingston upon Hull    UnitaryAuthority
+    ##   district_borough district_borough_type                   region country
+    ## 1             NULL                  NULL Yorkshire and the Humber England
+    ##   longitude latitude eastings northings min_eastings min_northings
+    ## 1  -0.32305 53.75722   510658    430289       510262        430161
+    ##   max_eastings max_northings
+    ## 1       510762        430752
 
 ### Postcode validation
 
@@ -386,7 +396,7 @@ str(near_outcode$result[2])
 ```
 
     ## List of 1
-    ##  $ :List of 10
+    ##  $ :List of 11
     ##   ..$ outcode       : chr "EC2Y"
     ##   ..$ longitude     : num -0.0939
     ##   ..$ latitude      : num 51.5
@@ -396,16 +406,18 @@ str(near_outcode$result[2])
     ##   .. ..$ : chr "City of London"
     ##   .. ..$ : chr "Islington"
     ##   ..$ parish        :List of 2
-    ##   .. ..$ : chr "Islington, unparished area"
     ##   .. ..$ : chr "City of London, unparished area"
+    ##   .. ..$ : chr "Islington, unparished area"
     ##   ..$ admin_county  : list()
     ##   ..$ admin_ward    :List of 6
+    ##   .. ..$ : chr "Bunhill"
     ##   .. ..$ : chr "Bassishaw"
     ##   .. ..$ : chr "Coleman Street"
-    ##   .. ..$ : chr "Clerkenwell"
-    ##   .. ..$ : chr "Bunhill"
-    ##   .. ..$ : chr "Cripplegate"
     ##   .. ..$ : chr "Aldersgate"
+    ##   .. ..$ : chr "Clerkenwell"
+    ##   .. ..$ : chr "Cripplegate"
+    ##   ..$ country       :List of 1
+    ##   .. ..$ : chr "England"
     ##   ..$ distance      : num 398
 
 ### Find places
@@ -421,27 +433,27 @@ str(place_query_result$result[1])
 
     ## List of 1
     ##  $ :List of 21
-    ##   ..$ code                 : chr "osgb4000000074556177"
+    ##   ..$ code                 : chr "osgb4000000074560105"
     ##   ..$ name_1               : chr "Hillside"
     ##   ..$ name_1_lang          : NULL
     ##   ..$ name_2               : NULL
     ##   ..$ name_2_lang          : NULL
     ##   ..$ local_type           : chr "Suburban Area"
-    ##   ..$ outcode              : chr "AB12"
-    ##   ..$ county_unitary       : chr "Aberdeenshire"
-    ##   ..$ county_unitary_type  : chr "UnitaryAuthority"
-    ##   ..$ district_borough     : NULL
-    ##   ..$ district_borough_type: NULL
-    ##   ..$ region               : chr "Scotland"
-    ##   ..$ country              : chr "Scotland"
-    ##   ..$ longitude            : num -2.13
-    ##   ..$ latitude             : num 57.1
-    ##   ..$ eastings             : int 392408
-    ##   ..$ northings            : int 797836
-    ##   ..$ min_eastings         : int 391968
-    ##   ..$ min_northings        : int 797475
-    ##   ..$ max_eastings         : int 392879
-    ##   ..$ max_northings        : int 798135
+    ##   ..$ outcode              : chr "BS26"
+    ##   ..$ county_unitary       : chr "Somerset"
+    ##   ..$ county_unitary_type  : chr "County"
+    ##   ..$ district_borough     : chr "Sedgemoor"
+    ##   ..$ district_borough_type: chr "District"
+    ##   ..$ region               : chr "South West"
+    ##   ..$ country              : chr "England"
+    ##   ..$ longitude            : num -2.82
+    ##   ..$ latitude             : num 51.3
+    ##   ..$ eastings             : int 342987
+    ##   ..$ northings            : int 154729
+    ##   ..$ min_eastings         : int 342721
+    ##   ..$ min_northings        : int 154494
+    ##   ..$ max_eastings         : int 343234
+    ##   ..$ max_northings        : int 154994
 
 You can also find a place using an OSGB code:
 
@@ -478,7 +490,7 @@ str(place_lookup_result$result)
 Notes
 -----
 
-Currently, there is a limit to the number of API calls. However, [postcodes.io](https://postcodes.io/) provides full list of geolocation data that can be used locally without limitations. The original data is sourced from [Office for National Statistics Data Portal](https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page). That [file](https://github.com/ideal-postcodes/postcodes.io/blob/master/latest) is rather large so I didn’t include it in the package.
+Currently, there is a limit to the number of API calls. However, [postcodes.io](https://postcodes.io/) provides full list of geolocation data that can be used locally without limitations. The original data is sourced from [Office for National Statistics Data Portal](https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page). That [file](https://github.com/ideal-postcodes/postcodes.io/blob/master/latest) is rather large so I didn't include it in the package.
 
 For more info see the original [documentation](https://postcodes.io/docs).
 

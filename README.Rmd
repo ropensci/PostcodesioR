@@ -1,9 +1,7 @@
 ---
 title: "README"
 author: Eryk Walczak
-output:
-  md_document:
-    variant: markdown_github
+output: github_document
 ---
 
 [![Travis-CI Build Status](https://travis-ci.org/erzk/PostcodesioR.svg?branch=master)](https://travis-ci.org/erzk/PostcodesioR)
