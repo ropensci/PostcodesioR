@@ -53,7 +53,14 @@
   <a href="news/index.html">News</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="https://github.com/erzk/PostcodesioR/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -70,10 +77,7 @@
     
 <div class="contents">
 
-<div id="postcodesior" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#postcodesior" class="anchor"></a>PostcodesioR</h1></div>
-<p>This package is an API wrapper around <a href="https://postcodes.io/">postcodes.io</a> which is a free UK postcode lookup and geocoder.</p>
+<p>An API wrapper around <a href="https://postcodes.io/">postcodes.io</a> - free UK postcode lookup and geocoder.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -147,37 +151,37 @@ bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="refer
 <span class="kw">str</span>(bulk_lookup_result<span class="op">$</span>result[<span class="dv">1</span>])</code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 2
-##   ..$ query : chr "PR3 0SG"
+##   ..$ query : chr "EX165BL"
 ##   ..$ result:List of 23
-##   .. ..$ postcode                  : chr "PR3 0SG"
+##   .. ..$ postcode                  : chr "EX16 5BL"
 ##   .. ..$ quality                   : int 1
-##   .. ..$ eastings                  : int 351012
-##   .. ..$ northings                 : int 440302
+##   .. ..$ eastings                  : int 294480
+##   .. ..$ northings                 : int 112251
 ##   .. ..$ country                   : chr "England"
-##   .. ..$ nhs_ha                    : chr "North West"
-##   .. ..$ longitude                 : num -2.75
-##   .. ..$ latitude                  : num 53.9
-##   .. ..$ parliamentary_constituency: chr "Wyre and Preston North"
-##   .. ..$ european_electoral_region : chr "North West"
-##   .. ..$ primary_care_trust        : chr "North Lancashire Teaching"
-##   .. ..$ region                    : chr "North West"
-##   .. ..$ lsoa                      : chr "Wyre 006A"
-##   .. ..$ msoa                      : chr "Wyre 006"
-##   .. ..$ incode                    : chr "0SG"
-##   .. ..$ outcode                   : chr "PR3"
-##   .. ..$ admin_district            : chr "Wyre"
-##   .. ..$ parish                    : chr "Myerscough and Bilsborrow"
-##   .. ..$ admin_county              : chr "Lancashire"
-##   .. ..$ admin_ward                : chr "Brock with Catterall"
-##   .. ..$ ccg                       : chr "NHS Morecambe Bay CCG"
-##   .. ..$ nuts                      : chr "Lancaster and Wyre"
+##   .. ..$ nhs_ha                    : chr "South West"
+##   .. ..$ longitude                 : num -3.5
+##   .. ..$ latitude                  : num 50.9
+##   .. ..$ parliamentary_constituency: chr "Tiverton and Honiton"
+##   .. ..$ european_electoral_region : chr "South West"
+##   .. ..$ primary_care_trust        : chr "Devon"
+##   .. ..$ region                    : chr "South West"
+##   .. ..$ lsoa                      : chr "Mid Devon 005C"
+##   .. ..$ msoa                      : chr "Mid Devon 005"
+##   .. ..$ incode                    : chr "5BL"
+##   .. ..$ outcode                   : chr "EX16"
+##   .. ..$ admin_district            : chr "Mid Devon"
+##   .. ..$ parish                    : chr "Tiverton"
+##   .. ..$ admin_county              : chr "Devon"
+##   .. ..$ admin_ward                : chr "Westexe"
+##   .. ..$ ccg                       : chr "NHS North, East, West Devon"
+##   .. ..$ nuts                      : chr "Devon CC"
 ##   .. ..$ codes                     :List of 6
-##   .. .. ..$ admin_district: chr "E07000128"
-##   .. .. ..$ admin_county  : chr "E10000017"
-##   .. .. ..$ admin_ward    : chr "E05009934"
-##   .. .. ..$ parish        : chr "E04005340"
-##   .. .. ..$ ccg           : chr "E38000216"
-##   .. .. ..$ nuts          : chr "UKD44"</code></pre>
+##   .. .. ..$ admin_district: chr "E07000042"
+##   .. .. ..$ admin_county  : chr "E10000008"
+##   .. .. ..$ admin_ward    : chr "E05003531"
+##   .. .. ..$ parish        : chr "E04003055"
+##   .. .. ..$ ccg           : chr "E38000129"
+##   .. .. ..$ nuts          : chr "UKK43"</code></pre>
 </div>
 <div id="outward-code-lookup" class="section level4">
 <h4 class="hasAnchor">
@@ -200,23 +204,23 @@ bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="refer
 ##   .. ..$ : chr "Hackney"
 ##   .. ..$ : chr "Tower Hamlets"
 ##   ..$ parish        :List of 3
-##   .. ..$ : chr "Tower Hamlets, unparished area"
 ##   .. ..$ : chr "City of London, unparished area"
+##   .. ..$ : chr "Tower Hamlets, unparished area"
 ##   .. ..$ : chr "Hackney, unparished area"
 ##   ..$ admin_county  : list()
 ##   ..$ admin_ward    :List of 13
 ##   .. ..$ : chr "Bethnal Green"
 ##   .. ..$ : chr "Shadwell"
-##   .. ..$ : chr "Portsoken"
-##   .. ..$ : chr "Whitechapel"
 ##   .. ..$ : chr "Aldgate"
 ##   .. ..$ : chr "Tower"
 ##   .. ..$ : chr "Stepney Green"
-##   .. ..$ : chr "Weavers"
 ##   .. ..$ : chr "Bishopsgate"
 ##   .. ..$ : chr "Hoxton East &amp; Shoreditch"
 ##   .. ..$ : chr "Spitalfields &amp; Banglatown"
 ##   .. ..$ : chr "St Peter's"
+##   .. ..$ : chr "Portsoken"
+##   .. ..$ : chr "Whitechapel"
+##   .. ..$ : chr "Weavers"
 ##   .. ..$ : chr "St Dunstan's"
 ##   ..$ country       :List of 1
 ##   .. ..$ : chr "England"</code></pre>
@@ -322,47 +326,49 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="reference/b
 <p>Generates a data frame with a random UK postcode and corresponding geographic information:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># without restrictions</span>
 <span class="kw"><a href="reference/random_postcode.html">random_postcode</a></span>()</code></pre></div>
-<pre><code>##   postcode quality eastings northings country        nhs_ha longitude
-## 1  WR4 4FZ       1   385268    255404 England West Midlands -2.216952
-##   latitude parliamentary_constituency european_electoral_region
-## 1 52.19667                  Worcester             West Midlands
-##   primary_care_trust        region           lsoa          msoa incode
-## 1     Worcestershire West Midlands Worcester 011E Worcester 011    4FZ
-##   outcode admin_district                     parish   admin_county
-## 1     WR4      Worcester Worcester, unparished area Worcestershire
-##   admin_ward                      ccg           nuts admin_district
-## 1  Cathedral NHS South Worcestershire Worcestershire      E07000237
+<pre><code>##   postcode quality eastings northings country                   nhs_ha
+## 1 DN15 6QZ       1   489664    411355 England Yorkshire and the Humber
+##    longitude latitude parliamentary_constituency european_electoral_region
+## 1 -0.6468343 53.59112                 Scunthorpe  Yorkshire and The Humber
+##   primary_care_trust                   region                    lsoa
+## 1 North Lincolnshire Yorkshire and The Humber North Lincolnshire 007D
+##                     msoa incode outcode     admin_district
+## 1 North Lincolnshire 007    6QZ    DN15 North Lincolnshire
+##                                parish admin_county admin_ward
+## 1 North Lincolnshire, unparished area           NA       Town
+##                      ccg                              nuts admin_district
+## 1 NHS North Lincolnshire North and North East Lincolnshire      E06000013
 ##   admin_county admin_ward    parish       ccg  nuts
-## 1    E10000034  E05007883 E43000153 E38000166 UKG12</code></pre>
+## 1    E99999999  E05001744 E43000012 E38000122 UKE13</code></pre>
 <p>A randomly generated postcode can also belong to a particular outcode:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># restrict to an outcode</span>
 <span class="kw"><a href="reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</code></pre></div>
-<pre><code>##   postcode quality eastings northings country nhs_ha   longitude latitude
-## 1   N1 3JF       1   532886    184095 England London -0.08525423 51.54012
+<pre><code>##   postcode quality eastings northings country nhs_ha  longitude latitude
+## 1   N1 0RU       1   530651    183494 England London -0.1176856 51.53524
 ##     parliamentary_constituency european_electoral_region
-## 1 Hackney South and Shoreditch                    London
-##          primary_care_trust region         lsoa        msoa incode outcode
-## 1 City and Hackney Teaching London Hackney 025A Hackney 025    3JF      N1
-##   admin_district                   parish admin_county  admin_ward
-## 1        Hackney Hackney, unparished area           NA De Beauvoir
-##                    ccg               nuts admin_district admin_county
-## 1 NHS City and Hackney Hackney and Newham      E09000012    E99999999
+## 1 Islington South and Finsbury                    London
+##   primary_care_trust region           lsoa          msoa incode outcode
+## 1          Islington London Islington 019D Islington 019    0RU      N1
+##   admin_district                     parish admin_county admin_ward
+## 1      Islington Islington, unparished area           NA Caledonian
+##             ccg                   nuts admin_district admin_county
+## 1 NHS Islington Haringey and Islington      E09000019    E99999999
 ##   admin_ward    parish       ccg  nuts
-## 1  E05009371 E43000202 E38000035 UKI41</code></pre>
+## 1  E05000368 E43000209 E38000088 UKI43</code></pre>
 </div>
 <div id="places" class="section level4">
 <h4 class="hasAnchor">
 <a href="#places" class="anchor"></a>Places</h4>
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/random_place.html">random_place</a></span>()</code></pre></div>
-<pre><code>##                   code         name_1 name_1_lang name_2 name_2_lang
-## 1 osgb4000000074551322 Market Deeping        NULL   NULL        NULL
-##   local_type outcode county_unitary county_unitary_type district_borough
-## 1       Town     PE6   Lincolnshire              County   South Kesteven
-##   district_borough_type        region country longitude latitude eastings
-## 1              District East Midlands England -0.317623 52.67541   513846
-##   northings min_eastings min_northings max_eastings max_northings
-## 1    309962       512887        309748       514587        311617</code></pre>
+<pre><code>##                   code      name_1 name_1_lang name_2 name_2_lang
+## 1 osgb4000000074566208 Waun Baglam        NULL   NULL        NULL
+##   local_type outcode                    county_unitary county_unitary_type
+## 1     Hamlet    SA17 Sir Gaerfyrddin - Carmarthenshire    UnitaryAuthority
+##   district_borough district_borough_type region country longitude latitude
+## 1             NULL                  NULL  Wales   Wales -4.256337 51.70859
+##   eastings northings min_eastings min_northings max_eastings max_northings
+## 1   244199    203505       243983        203413       244483        203913</code></pre>
 </div>
 </div>
 <div id="postcode-validation" class="section level3">
@@ -453,27 +459,27 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="reference/b
 <span class="kw">str</span>(place_query_result<span class="op">$</span>result[<span class="dv">1</span>])</code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 21
-##   ..$ code                 : chr "osgb4000000074559800"
+##   ..$ code                 : chr "osgb4000000074557270"
 ##   ..$ name_1               : chr "Hillside"
 ##   ..$ name_1_lang          : NULL
 ##   ..$ name_2               : NULL
 ##   ..$ name_2_lang          : NULL
-##   ..$ local_type           : chr "Suburban Area"
-##   ..$ outcode              : chr "EH7"
-##   ..$ county_unitary       : chr "City of Edinburgh"
+##   ..$ local_type           : chr "Village"
+##   ..$ outcode              : chr "DD10"
+##   ..$ county_unitary       : chr "Angus"
 ##   ..$ county_unitary_type  : chr "UnitaryAuthority"
 ##   ..$ district_borough     : NULL
 ##   ..$ district_borough_type: NULL
 ##   ..$ region               : chr "Scotland"
 ##   ..$ country              : chr "Scotland"
-##   ..$ longitude            : num -3.18
-##   ..$ latitude             : num 56
-##   ..$ eastings             : int 326541
-##   ..$ northings            : int 674485
-##   ..$ min_eastings         : int 326145
-##   ..$ min_northings        : int 674302
-##   ..$ max_eastings         : int 326974
-##   ..$ max_northings        : int 674961</code></pre>
+##   ..$ longitude            : num -2.48
+##   ..$ latitude             : num 56.7
+##   ..$ eastings             : int 370951
+##   ..$ northings            : int 761060
+##   ..$ min_eastings         : int 368761
+##   ..$ min_northings        : int 760516
+##   ..$ max_eastings         : int 371950
+##   ..$ max_northings        : int 762123</code></pre>
 <p>You can also find a place using an OSGB code:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">place_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="reference/place_lookup.html">place_lookup</a></span>(<span class="st">"osgb4000000074544700"</span>)
 
@@ -511,14 +517,13 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="reference/b
 <p>The reference manual can be accessed <a href="https://github.com/erzk/PostcodesioR/blob/master/PostcodesioR.pdf">here</a>. Go to my <a href="https://walczak.org/tag/postcodesior/">blog</a> for more examples.</p>
 </div>
 </div>
-</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2 class="hasAnchor">
 <a href="#sidebar" class="anchor"></a>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://erzk.github.io/PostcodesioR/">https://​erzk.github.io/​PostcodesioR/​</a>
+<li>Browse source code at <br><a href="https://github.com/erzk/PostcodesioR/">https://​github.com/​erzk/​PostcodesioR/​</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/erzk/PostcodesioR/issues">https://​github.com/​erzk/​PostcodesioR/​issues</a>
 </li>
@@ -534,6 +539,7 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="reference/b
 <li><a href="https://travis-ci.org/erzk/PostcodesioR"><img src="https://travis-ci.org/erzk/PostcodesioR.svg?branch=master" alt="Travis-CI Build Status"></a></li>
 <li><a href="https://codecov.io/github/erzk/PostcodesioR?branch=master"><img src="https://img.shields.io/codecov/c/github/erzk/PostcodesioR/master.svg" alt="Coverage Status"></a></li>
 <li><a href="http://www.gnu.org/licenses/gpl-3.0.html"><img src="http://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat" alt="Package-License"></a></li>
+<li><a href="https://cran.r-project.org/package=PostcodesioR"><img src="http://www.r-pkg.org/badges/version/PostcodesioR" alt="CRAN_Status_Badge"></a></li>
 </ul>
 </div>
 

@@ -53,7 +53,14 @@
   <a href="../news/index.html">News</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="https://github.com/erzk/PostcodesioR/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -68,7 +75,7 @@
       <h1>Introduction</h1>
                         <h4 class="author">Eryk Walczak</h4>
             
-            <h4 class="date">2017-08-03</h4>
+            <h4 class="date">2017-08-05</h4>
           </div>
 
     
@@ -142,37 +149,37 @@ bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../re
 <span class="kw">str</span>(bulk_lookup_result<span class="op">$</span>result[<span class="dv">1</span>])</code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 2
-##   ..$ query : chr "M45 6GN"
+##   ..$ query : chr "PR3 0SG"
 ##   ..$ result:List of 23
-##   .. ..$ postcode                  : chr "M45 6GN"
+##   .. ..$ postcode                  : chr "PR3 0SG"
 ##   .. ..$ quality                   : int 1
-##   .. ..$ eastings                  : int 380416
-##   .. ..$ northings                 : int 406002
+##   .. ..$ eastings                  : int 351012
+##   .. ..$ northings                 : int 440302
 ##   .. ..$ country                   : chr "England"
 ##   .. ..$ nhs_ha                    : chr "North West"
-##   .. ..$ longitude                 : num -2.3
-##   .. ..$ latitude                  : num 53.6
-##   .. ..$ parliamentary_constituency: chr "Bury South"
+##   .. ..$ longitude                 : num -2.75
+##   .. ..$ latitude                  : num 53.9
+##   .. ..$ parliamentary_constituency: chr "Wyre and Preston North"
 ##   .. ..$ european_electoral_region : chr "North West"
-##   .. ..$ primary_care_trust        : chr "Bury"
+##   .. ..$ primary_care_trust        : chr "North Lancashire Teaching"
 ##   .. ..$ region                    : chr "North West"
-##   .. ..$ lsoa                      : chr "Bury 019C"
-##   .. ..$ msoa                      : chr "Bury 019"
-##   .. ..$ incode                    : chr "6GN"
-##   .. ..$ outcode                   : chr "M45"
-##   .. ..$ admin_district            : chr "Bury"
-##   .. ..$ parish                    : chr "Bury, unparished area"
-##   .. ..$ admin_county              : NULL
-##   .. ..$ admin_ward                : chr "Pilkington Park"
-##   .. ..$ ccg                       : chr "NHS Bury"
-##   .. ..$ nuts                      : chr "Greater Manchester North East"
+##   .. ..$ lsoa                      : chr "Wyre 006A"
+##   .. ..$ msoa                      : chr "Wyre 006"
+##   .. ..$ incode                    : chr "0SG"
+##   .. ..$ outcode                   : chr "PR3"
+##   .. ..$ admin_district            : chr "Wyre"
+##   .. ..$ parish                    : chr "Myerscough and Bilsborrow"
+##   .. ..$ admin_county              : chr "Lancashire"
+##   .. ..$ admin_ward                : chr "Brock with Catterall"
+##   .. ..$ ccg                       : chr "NHS Morecambe Bay CCG"
+##   .. ..$ nuts                      : chr "Lancaster and Wyre"
 ##   .. ..$ codes                     :List of 6
-##   .. .. ..$ admin_district: chr "E08000002"
-##   .. .. ..$ admin_county  : chr "E99999999"
-##   .. .. ..$ admin_ward    : chr "E05000677"
-##   .. .. ..$ parish        : chr "E43000156"
-##   .. .. ..$ ccg           : chr "E38000024"
-##   .. .. ..$ nuts          : chr "UKD37"</code></pre>
+##   .. .. ..$ admin_district: chr "E07000128"
+##   .. .. ..$ admin_county  : chr "E10000017"
+##   .. .. ..$ admin_ward    : chr "E05009934"
+##   .. .. ..$ parish        : chr "E04005340"
+##   .. .. ..$ ccg           : chr "E38000216"
+##   .. .. ..$ nuts          : chr "UKD44"</code></pre>
 </div>
 <div id="outward-code-lookup" class="section level4">
 <h4 class="hasAnchor">
@@ -317,53 +324,47 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 <p>Generates a data frame with a random UK postcode and corresponding geographic information:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># without restrictions</span>
 <span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>()</code></pre></div>
-<pre><code>##   postcode quality eastings northings  country nhs_ha longitude latitude
-## 1  KY8 5BL       1   337468    701465 Scotland   Fife -3.009466 56.20166
-##   parliamentary_constituency european_electoral_region
-## 1                 Glenrothes                  Scotland
-##                                      primary_care_trust region        lsoa
-## 1 Kirkcaldy and Levenmouth Community Health Partnership     NA Broom South
-##          msoa incode outcode admin_district parish admin_county
-## 1 Leven North    5BL     KY8           Fife     NA           NA
-##                  admin_ward
-## 1 Leven, Kennoway and Largo
-##                                                     ccg
-## 1 Kirkcaldy and Levenmouth Community Health Partnership
-##                        nuts admin_district admin_county admin_ward
-## 1 Clackmannanshire and Fife      S12000015    S99999999  S13002965
-##      parish       ccg  nuts
-## 1 S99999999 S03000008 UKM22</code></pre>
+<pre><code>##   postcode quality eastings northings country     nhs_ha longitude
+## 1  CW1 6EW       1   372097    354655 England North West  -2.41807
+##   latitude parliamentary_constituency european_electoral_region
+## 1 53.08838         Crewe and Nantwich                North West
+##             primary_care_trust     region               lsoa
+## 1 Central and Eastern Cheshire North West Cheshire East 038D
+##                msoa incode outcode admin_district parish admin_county
+## 1 Cheshire East 038    6EW     CW1  Cheshire East  Crewe           NA
+##   admin_ward                ccg          nuts admin_district admin_county
+## 1 Crewe East NHS South Cheshire Cheshire East      E06000049    E99999999
+##   admin_ward    parish       ccg  nuts
+## 1  E05008621 E04012281 E38000151 UKD62</code></pre>
 <p>A randomly generated postcode can also belong to a particular outcode:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># restrict to an outcode</span>
 <span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</code></pre></div>
 <pre><code>##   postcode quality eastings northings country nhs_ha  longitude latitude
-## 1   N1 1XG       1   531622    183898 England London -0.1035432 51.53865
+## 1   N1 9NG       1   530612    183012 England London -0.1184262 51.53092
 ##     parliamentary_constituency european_electoral_region
 ## 1 Islington South and Finsbury                    London
 ##   primary_care_trust region           lsoa          msoa incode outcode
-## 1          Islington London Islington 020B Islington 020    1XG      N1
-##   admin_district                     parish admin_county admin_ward
-## 1      Islington Islington, unparished area           NA  St Mary's
+## 1          Islington London Islington 021D Islington 021    9NG      N1
+##   admin_district                     parish admin_county  admin_ward
+## 1      Islington Islington, unparished area           NA Clerkenwell
 ##             ccg                   nuts admin_district admin_county
 ## 1 NHS Islington Haringey and Islington      E09000019    E99999999
 ##   admin_ward    parish       ccg  nuts
-## 1  E05000379 E43000209 E38000088 UKI43</code></pre>
+## 1  E05000370 E43000209 E38000088 UKI43</code></pre>
 </div>
 <div id="places" class="section level4">
 <h4 class="hasAnchor">
 <a href="#places" class="anchor"></a>Places</h4>
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/random_place.html">random_place</a></span>()</code></pre></div>
-<pre><code>##                   code    name_1 name_1_lang name_2 name_2_lang
-## 1 osgb4000000074559126 Wasbister        NULL   NULL        NULL
-##         local_type outcode county_unitary county_unitary_type
-## 1 Other Settlement    KW16 Orkney Islands    UnitaryAuthority
-##   district_borough district_borough_type   region  country longitude
-## 1             NULL                  NULL Scotland Scotland -3.257755
-##   latitude eastings northings min_eastings min_northings max_eastings
-## 1 59.01743   327876   1015164       327241       1014265       329081
-##   max_northings
-## 1       1015686</code></pre>
+<pre><code>##                   code           name_1 name_1_lang name_2 name_2_lang
+## 1 osgb4000000074558193 Hurworth-on-Tees        NULL   NULL        NULL
+##   local_type outcode county_unitary county_unitary_type district_borough
+## 1    Village     DL2     Darlington    UnitaryAuthority             NULL
+##   district_borough_type     region country longitude latitude eastings
+## 1                  NULL North East England -1.532959 54.48635   430355
+##   northings min_eastings min_northings max_eastings max_northings
+## 1    510212       428940        509698       431290        510700</code></pre>
 </div>
 </div>
 <div id="postcode-validation" class="section level3">
@@ -454,27 +455,27 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 <span class="kw">str</span>(place_query_result<span class="op">$</span>result[<span class="dv">1</span>])</code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 21
-##   ..$ code                 : chr "osgb4000000074560105"
-##   ..$ name_1               : chr "Hillside"
+##   ..$ code                 : chr "osgb4000000074580249"
+##   ..$ name_1               : chr "Hillsdale"
 ##   ..$ name_1_lang          : NULL
 ##   ..$ name_2               : NULL
 ##   ..$ name_2_lang          : NULL
-##   ..$ local_type           : chr "Suburban Area"
-##   ..$ outcode              : chr "BS26"
-##   ..$ county_unitary       : chr "Somerset"
+##   ..$ local_type           : chr "Hamlet"
+##   ..$ outcode              : chr "ST13"
+##   ..$ county_unitary       : chr "Staffordshire"
 ##   ..$ county_unitary_type  : chr "County"
-##   ..$ district_borough     : chr "Sedgemoor"
+##   ..$ district_borough     : chr "Staffordshire Moorlands"
 ##   ..$ district_borough_type: chr "District"
-##   ..$ region               : chr "South West"
+##   ..$ region               : chr "West Midlands"
 ##   ..$ country              : chr "England"
-##   ..$ longitude            : num -2.82
-##   ..$ latitude             : num 51.3
-##   ..$ eastings             : int 342987
-##   ..$ northings            : int 154729
-##   ..$ min_eastings         : int 342721
-##   ..$ min_northings        : int 154494
-##   ..$ max_eastings         : int 343234
-##   ..$ max_northings        : int 154994</code></pre>
+##   ..$ longitude            : num -1.89
+##   ..$ latitude             : num 53.1
+##   ..$ eastings             : int 407661
+##   ..$ northings            : int 355209
+##   ..$ min_eastings         : int 407258
+##   ..$ min_northings        : int 354822
+##   ..$ max_eastings         : int 408138
+##   ..$ max_northings        : int 355500</code></pre>
 <p>You can also find a place using an OSGB code:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">place_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/place_lookup.html">place_lookup</a></span>(<span class="st">"osgb4000000074544700"</span>)
 
