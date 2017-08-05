@@ -1,13 +1,9 @@
-README
-================
-Eryk Walczak
-
-[![Travis-CI Build Status](https://travis-ci.org/erzk/PostcodesioR.svg?branch=master)](https://travis-ci.org/erzk/PostcodesioR) [![Coverage Status](https://img.shields.io/codecov/c/github/erzk/PostcodesioR/master.svg)](https://codecov.io/github/erzk/PostcodesioR?branch=master) [![Package-License](http://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html)
-
 PostcodesioR
-============
+================
 
-This package is an API wrapper around [postcodes.io](https://postcodes.io/) which is a free UK postcode lookup and geocoder.
+[![Travis-CI Build Status](https://travis-ci.org/erzk/PostcodesioR.svg?branch=master)](https://travis-ci.org/erzk/PostcodesioR) [![Coverage Status](https://img.shields.io/codecov/c/github/erzk/PostcodesioR/master.svg)](https://codecov.io/github/erzk/PostcodesioR?branch=master) [![Package-License](http://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/PostcodesioR)](https://cran.r-project.org/package=PostcodesioR)
+
+An API wrapper around [postcodes.io](https://postcodes.io/) - free UK postcode lookup and geocoder.
 
 Installation
 ------------
@@ -156,16 +152,16 @@ str(ocl)
     ##   .. ..$ : chr "Bethnal Green"
     ##   .. ..$ : chr "Shadwell"
     ##   .. ..$ : chr "Portsoken"
-    ##   .. ..$ : chr "Whitechapel"
-    ##   .. ..$ : chr "Aldgate"
     ##   .. ..$ : chr "Tower"
-    ##   .. ..$ : chr "Stepney Green"
-    ##   .. ..$ : chr "Weavers"
+    ##   .. ..$ : chr "Whitechapel"
     ##   .. ..$ : chr "Bishopsgate"
+    ##   .. ..$ : chr "Stepney Green"
+    ##   .. ..$ : chr "Aldgate"
+    ##   .. ..$ : chr "Weavers"
     ##   .. ..$ : chr "Hoxton East & Shoreditch"
+    ##   .. ..$ : chr "St Dunstan's"
     ##   .. ..$ : chr "Spitalfields & Banglatown"
     ##   .. ..$ : chr "St Peter's"
-    ##   .. ..$ : chr "St Dunstan's"
     ##   ..$ country       :List of 1
     ##   .. ..$ : chr "England"
 
@@ -275,18 +271,18 @@ Generates a data frame with a random UK postcode and corresponding geographic in
 random_postcode()
 ```
 
-    ##   postcode quality eastings northings country          nhs_ha longitude
-    ## 1  SS7 2EJ       1   581803    186816 England East of England 0.6208185
+    ##   postcode quality eastings northings country     nhs_ha longitude
+    ## 1  TR4 8FG       1   171752     47587 England South West -5.205313
     ##   latitude parliamentary_constituency european_electoral_region
-    ## 1 51.55094               Castle Point                   Eastern
-    ##   primary_care_trust          region              lsoa             msoa
-    ## 1   South East Essex East of England Castle Point 006B Castle Point 006
-    ##   incode outcode admin_district                        parish admin_county
-    ## 1    2EJ     SS7   Castle Point Castle Point, unparished area        Essex
-    ##   admin_ward                                     ccg                 nuts
-    ## 1   St James NHS Castle Point, Rayleigh and Rochford Essex Thames Gateway
+    ## 1 50.28401       Camborne and Redruth                South West
+    ##             primary_care_trust     region          lsoa         msoa
+    ## 1 Cornwall and Isles of Scilly South West Cornwall 040B Cornwall 040
+    ##   incode outcode admin_district    parish admin_county
+    ## 1    8FG     TR4       Cornwall St. Agnes           NA
+    ##                  admin_ward        ccg                         nuts
+    ## 1 Mount Hawke and Portreath NHS Kernow Cornwall and Isles of Scilly
     ##   admin_district admin_county admin_ward    parish       ccg  nuts
-    ## 1      E07000069    E10000012  E05004092 E43000061 E38000030 UKH37
+    ## 1      E06000052    E99999999  E05009214 E04011526 E38000089 UKK30
 
 A randomly generated postcode can also belong to a particular outcode:
 
@@ -295,18 +291,18 @@ A randomly generated postcode can also belong to a particular outcode:
 random_postcode("N1")
 ```
 
-    ##   postcode quality eastings northings country nhs_ha   longitude latitude
-    ## 1   N1 7PP       1   532670    183081 England London -0.08874871 51.53106
+    ##   postcode quality eastings northings country nhs_ha  longitude latitude
+    ## 1   N1 1RW       1   531607    184695 England London -0.1034616 51.54581
     ##     parliamentary_constituency european_electoral_region
-    ## 1 Hackney South and Shoreditch                    London
-    ##          primary_care_trust region         lsoa        msoa incode outcode
-    ## 1 City and Hackney Teaching London Hackney 026D Hackney 026    7PP      N1
-    ##   admin_district                   parish admin_county  admin_ward
-    ## 1        Hackney Hackney, unparished area           NA Hoxton West
-    ##                    ccg               nuts admin_district admin_county
-    ## 1 NHS City and Hackney Hackney and Newham      E09000012    E99999999
+    ## 1 Islington South and Finsbury                    London
+    ##   primary_care_trust region           lsoa          msoa incode outcode
+    ## 1          Islington London Islington 013D Islington 013    1RW      N1
+    ##   admin_district                     parish admin_county admin_ward
+    ## 1      Islington Islington, unparished area           NA  St Mary's
+    ##             ccg                   nuts admin_district admin_county
+    ## 1 NHS Islington Haringey and Islington      E09000019    E99999999
     ##   admin_ward    parish       ccg  nuts
-    ## 1  E05009378 E43000202 E38000035 UKI41
+    ## 1  E05000379 E43000209 E38000088 UKI43
 
 #### Places
 
@@ -316,16 +312,16 @@ You can also generate a random place, specified by an OSGB code, with correspond
 random_place()
 ```
 
-    ##                   code    name_1 name_1_lang name_2 name_2_lang local_type
-    ## 1 osgb4000000074570317 Driffield        NULL   NULL        NULL       Town
-    ##   outcode           county_unitary county_unitary_type district_borough
-    ## 1    YO25 East Riding of Yorkshire    UnitaryAuthority             NULL
-    ##   district_borough_type                   region country longitude
-    ## 1                  NULL Yorkshire and the Humber England -0.440094
+    ##                   code   name_1 name_1_lang name_2 name_2_lang
+    ## 1 osgb4000000074547169 Monkston        NULL   NULL        NULL
+    ##      local_type outcode county_unitary county_unitary_type
+    ## 1 Suburban Area    MK10  Milton Keynes    UnitaryAuthority
+    ##   district_borough district_borough_type     region country  longitude
+    ## 1             NULL                  NULL South East England -0.7015462
     ##   latitude eastings northings min_eastings min_northings max_eastings
-    ## 1 54.00568   502334    457754       501396        456485       503757
+    ## 1 52.03835   489161    238567       488623        237795       489859
     ##   max_northings
-    ## 1        458894
+    ## 1        238798
 
 ### Postcode validation
 
@@ -433,27 +429,27 @@ str(place_query_result$result[1])
 
     ## List of 1
     ##  $ :List of 21
-    ##   ..$ code                 : chr "osgb4000000074551849"
+    ##   ..$ code                 : chr "osgb4000000074578911"
     ##   ..$ name_1               : chr "Hillside"
     ##   ..$ name_1_lang          : NULL
     ##   ..$ name_2               : NULL
     ##   ..$ name_2_lang          : NULL
     ##   ..$ local_type           : chr "Suburban Area"
-    ##   ..$ outcode              : chr "G78"
-    ##   ..$ county_unitary       : chr "East Renfrewshire"
-    ##   ..$ county_unitary_type  : chr "UnitaryAuthority"
-    ##   ..$ district_borough     : NULL
-    ##   ..$ district_borough_type: NULL
-    ##   ..$ region               : chr "Scotland"
-    ##   ..$ country              : chr "Scotland"
-    ##   ..$ longitude            : num -4.41
-    ##   ..$ latitude             : num 55.8
-    ##   ..$ eastings             : int 249096
-    ##   ..$ northings            : int 659053
-    ##   ..$ min_eastings         : int 248779
-    ##   ..$ min_northings        : int 658683
-    ##   ..$ max_eastings         : int 249466
-    ##   ..$ max_northings        : int 659282
+    ##   ..$ outcode              : chr "PR8"
+    ##   ..$ county_unitary       : NULL
+    ##   ..$ county_unitary_type  : NULL
+    ##   ..$ district_borough     : chr "Sefton"
+    ##   ..$ district_borough_type: chr "MetropolitanDistrict"
+    ##   ..$ region               : chr "North West"
+    ##   ..$ country              : chr "England"
+    ##   ..$ longitude            : num -3.02
+    ##   ..$ latitude             : num 53.6
+    ##   ..$ eastings             : int 332449
+    ##   ..$ northings            : int 414198
+    ##   ..$ min_eastings         : int 331752
+    ##   ..$ min_northings        : int 414032
+    ##   ..$ max_eastings         : int 332879
+    ##   ..$ max_northings        : int 414801
 
 You can also find a place using an OSGB code:
 
