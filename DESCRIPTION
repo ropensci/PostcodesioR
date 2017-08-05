@@ -8,7 +8,7 @@ Description: Free UK geocoding using data from Office for National Statistics.
     codes, reverse geocoding, nearest post codes/outward codes, validation, or
     randomly generate a post code.
 License: GPL-3 + file LICENSE
-URL: https://erzk.github.io/PostcodesioR/
+URL: https://github.com/erzk/PostcodesioR/
 LazyData: TRUE
 Depends:
     R (>= 3.1),
