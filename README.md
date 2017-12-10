@@ -24,8 +24,6 @@ To start using the package use the standard command after you installed it.
 library(PostcodesioR)
 ```
 
-    ## Loading required package: httr
-
 Examples
 --------
 
@@ -36,9 +34,6 @@ Examples
 Provide a postcode to obtain all available information:
 
 ``` r
-# load the package
-library(PostcodesioR)
-
 lookup_result <- postcode_lookup("EC1Y8LX")
 
 #overview
@@ -241,95 +236,95 @@ bulk_rev_geo$result[[1]]$result[[1]]
 ```
 
     ## $postcode
-    ## [1] "PO33 1PS"
+    ## [1] "CF24 2BT"
     ## 
     ## $quality
     ## [1] 1
     ## 
     ## $eastings
-    ## [1] 461563
+    ## [1] 319675
     ## 
     ## $northings
-    ## [1] 91382
+    ## [1] 176305
     ## 
     ## $country
-    ## [1] "England"
+    ## [1] "Wales"
     ## 
     ## $nhs_ha
-    ## [1] "South Central"
+    ## [1] "Cardiff and Vale University Health Board"
     ## 
     ## $longitude
-    ## [1] -1.129298
+    ## [1] -3.158077
     ## 
     ## $latitude
-    ## [1] 50.71882
+    ## [1] 51.47998
     ## 
     ## $european_electoral_region
-    ## [1] "South East"
+    ## [1] "Wales"
     ## 
     ## $primary_care_trust
-    ## [1] "Isle of Wight National Health Service"
+    ## [1] "Cardiff and Vale University Health Board"
     ## 
     ## $region
-    ## [1] "South East"
+    ## NULL
     ## 
     ## $lsoa
-    ## [1] "Isle of Wight 010D"
+    ## [1] "Cardiff 038D"
     ## 
     ## $msoa
-    ## [1] "Isle of Wight 010"
+    ## [1] "Cardiff 038"
     ## 
     ## $incode
-    ## [1] "1PS"
+    ## [1] "2BT"
     ## 
     ## $outcode
-    ## [1] "PO33"
+    ## [1] "CF24"
     ## 
     ## $distance
-    ## [1] 24.989
+    ## [1] 2.639788
     ## 
     ## $parliamentary_constituency
-    ## [1] "Isle of Wight"
+    ## [1] "Cardiff South and Penarth"
     ## 
     ## $admin_district
-    ## [1] "Isle of Wight"
+    ## [1] "Cardiff"
     ## 
     ## $parish
-    ## [1] "Nettlestone and Seaview"
+    ## [1] "Splott"
     ## 
     ## $admin_county
     ## NULL
     ## 
     ## $admin_ward
-    ## [1] "Nettlestone and Seaview"
+    ## [1] "Splott"
     ## 
     ## $ccg
-    ## [1] "NHS Isle of Wight"
+    ## [1] "Cardiff and Vale University Health Board"
     ## 
     ## $nuts
-    ## [1] "Isle of Wight"
+    ## [1] "Cardiff and Vale of Glamorgan"
     ## 
     ## $codes
     ## $codes$admin_district
-    ## [1] "E06000046"
+    ## [1] "W06000015"
     ## 
     ## $codes$admin_county
-    ## [1] "E99999999"
+    ## [1] "W99999999"
     ## 
     ## $codes$admin_ward
-    ## [1] "E05008496"
+    ## [1] "W05000879"
     ## 
     ## $codes$parish
-    ## [1] "E04001306"
+    ## [1] "W04000863"
     ## 
     ## $codes$parliamentary_constituency
-    ## [1] "E14000762"
+    ## [1] "W07000080"
     ## 
     ## $codes$ccg
-    ## [1] "E38000087"
+    ## [1] "W11000029"
     ## 
     ## $codes$nuts
-    ## [1] "UKJ34"
+    ## [1] "UKL22"
 
 Common usage of this function might be extracting particular variables. You can extract one variable like this:
 
@@ -338,7 +333,7 @@ Common usage of this function might be extracting particular variables. You can 
 bulk_rev_geo$result[[1]]$result[[8]]$postcode
 ```
 
-    ## [1] "PO33 1QR"
+    ## [1] "CF24 2AL"
 
 But more likely you will want more than one result. After all, that's the point of using a bulk function:
 
@@ -358,27 +353,27 @@ data.frame(
 ```
 
     ##    postcode         latitude         longitude
-    ## 1  PO33 1PS 50.7188151075122 -1.12929804319882
-    ## 2  PO33 1PT 50.7185750818924 -1.12846672060095
-    ## 3  PO33 1QB 50.7170474559076 -1.12982656563728
-    ## 4  PO33 1PX 50.7178907506146 -1.12714786456114
-    ## 5  PO33 1QD 50.7172032703058 -1.12781222816285
-    ## 6  PO33 1PU 50.7184669311199  -1.1260322523645
-    ## 7  PO33 1PZ 50.7162328095008 -1.12791522396325
-    ## 8  PO33 1QR 50.7157418306917 -1.12599793035477
-    ## 9  PO33 1PB 50.7210243159623 -1.13371950415272
-    ## 10 PO33 1PR  50.721487986434  -1.1331867990148
-    ## 11 PO33 1PY 50.7151718843021 -1.12674508376803
-    ## 12 PO33 1QP 50.7155625975698 -1.12488225387235
-    ## 13 PO34 5AP 50.7214660528318 -1.12423400885574
-    ## 14 CF24 2BT 51.4799810730482 -3.15807708496285
-    ## 15 CF24 2ED 51.4796962780375 -3.15868908771903
-    ## 16 CF24 2AA  51.480214120738 -3.15906222875833
-    ## 17 CF24 5NW 51.4793656523229 -3.15847910268578
-    ## 18 CF24 2AJ  51.480686989214 -3.15852699155627
-    ## 19 CF24 2AH 51.4805572928224 -3.15891252296984
-    ## 20 CF24 2DZ 51.4801105864152 -3.15679871749552
-    ## 21 CF24 2AL 51.4808346636567 -3.15814191348464
+    ## 1  CF24 2BT 51.4799810730482 -3.15807708496285
+    ## 2  CF24 2ED 51.4796962780375 -3.15868908771903
+    ## 3  CF24 2AA  51.480214120738 -3.15906222875833
+    ## 4  CF24 5NW 51.4793656523229 -3.15847910268578
+    ## 5  CF24 2AJ  51.480686989214 -3.15852699155627
+    ## 6  CF24 2AH 51.4805572928224 -3.15891252296984
+    ## 7  CF24 2DZ 51.4801105864152 -3.15679871749552
+    ## 8  CF24 2AL 51.4808346636567 -3.15814191348464
+    ## 9  PO33 1PS 50.7188151075122 -1.12929804319882
+    ## 10 PO33 1PT 50.7185750818924 -1.12846672060095
+    ## 11 PO33 1QB 50.7170474559076 -1.12982656563728
+    ## 12 PO33 1PX 50.7178907506146 -1.12714786456114
+    ## 13 PO33 1QD 50.7172032703058 -1.12781222816285
+    ## 14 PO33 1PU 50.7184669311199  -1.1260322523645
+    ## 15 PO33 1PZ 50.7162328095008 -1.12791522396325
+    ## 16 PO33 1QR 50.7157418306917 -1.12599793035477
+    ## 17 PO33 1PB 50.7210243159623 -1.13371950415272
+    ## 18 PO33 1PR  50.721487986434  -1.1331867990148
+    ## 19 PO33 1PY 50.7151718843021 -1.12674508376803
+    ## 20 PO33 1QP 50.7155625975698 -1.12488225387235
+    ## 21 PO34 5AP 50.7214660528318 -1.12423400885574
 
 #### Single outcode
 
@@ -417,24 +412,20 @@ Generates a data frame with a random UK postcode and corresponding geographic in
 random_postcode()
 ```
 
-    ##   postcode quality eastings northings  country  nhs_ha longitude latitude
-    ## 1 EH49 6EJ       1   299253    676222 Scotland Lothian -3.615662  55.9684
-    ##   european_electoral_region
-    ## 1                  Scotland
-    ##                                   primary_care_trust region
-    ## 1 West Lothian Community Health and Care Partnership     NA
-    ##                    lsoa             msoa incode outcode
-    ## 1 Linlithgow South - 03 Linlithgow South    6EJ    EH49
-    ##    parliamentary_constituency admin_district            parish
-    ## 1 Linlithgow and East Falkirk   West Lothian (pseudo) Scotland
-    ##   admin_county admin_ward
-    ## 1           NA Linlithgow
-    ##                                                  ccg         nuts
-    ## 1 West Lothian Community Health and Care Partnership West Lothian
+    ##   postcode quality eastings northings country        nhs_ha longitude
+    ## 1 SY10 7SX       1   329047    335995 England West Midlands -3.056659
+    ##   latitude european_electoral_region primary_care_trust        region
+    ## 1 52.91667             West Midlands  Shropshire County West Midlands
+    ##              lsoa           msoa incode outcode parliamentary_constituency
+    ## 1 Shropshire 003F Shropshire 003    7SX    SY10           North Shropshire
+    ##   admin_district      parish admin_county
+    ## 1     Shropshire Weston Rhyn           NA
+    ##                          admin_ward            ccg          nuts
+    ## 1 Gobowen, Selattyn and Weston Rhyn NHS Shropshire Shropshire CC
     ##   admin_district admin_county admin_ward    parish
-    ## 1      S12000040    S99999999  S13002820 S99999999
+    ## 1      E06000051    E99999999  E05009281 E04011384
     ##   parliamentary_constituency       ccg  nuts
-    ## 1                  S14000043 S03000035 UKM28
+    ## 1                  E14000849 E38000147 UKG22
 
 A randomly generated postcode can also belong to a particular outcode:
 
@@ -444,11 +435,11 @@ random_postcode("N1")
 ```
 
     ##   postcode quality eastings northings country nhs_ha   longitude latitude
-    ## 1   N1 5BU       1   532989    184120 England London -0.08376049 51.54032
+    ## 1   N1 5TP       1   532924    183983 England London -0.08474888  51.5391
     ##   european_electoral_region        primary_care_trust region         lsoa
     ## 1                    London City and Hackney Teaching London Hackney 025A
     ##          msoa incode outcode   parliamentary_constituency admin_district
-    ## 1 Hackney 025    5BU      N1 Hackney South and Shoreditch        Hackney
+    ## 1 Hackney 025    5TP      N1 Hackney South and Shoreditch        Hackney
     ##                     parish admin_county  admin_ward                  ccg
     ## 1 Hackney, unparished area           NA De Beauvoir NHS City and Hackney
     ##                 nuts admin_district admin_county admin_ward    parish
@@ -464,14 +455,14 @@ You can also generate a random place, specified by an OSGB code, with correspond
 random_place()
 ```
 
-    ##                   code name_1 name_1_lang name_2 name_2_lang local_type
-    ## 1 osgb4000000074541561    Voe        NULL   NULL        NULL    Village
-    ##   outcode   county_unitary county_unitary_type district_borough
-    ## 1     ZE2 Shetland Islands    UnitaryAuthority             NULL
-    ##   district_borough_type   region  country longitude latitude eastings
-    ## 1                  NULL Scotland Scotland -1.266932 60.35012   440557
+    ##                   code    name_1 name_1_lang name_2 name_2_lang local_type
+    ## 1 osgb4000000074577216 Trefasser        NULL   NULL        NULL     Hamlet
+    ##   outcode             county_unitary county_unitary_type district_borough
+    ## 1    SA64 Sir Benfro - Pembrokeshire    UnitaryAuthority             NULL
+    ##   district_borough_type region country longitude latitude eastings
+    ## 1                  NULL  Wales   Wales -5.066743  51.9997   189580
     ##   northings min_eastings min_northings max_eastings max_northings
-    ## 1   1163125       439795       1162084       441178       1164979
+    ## 1    237914       189378        237807       189884        238307
 
 ### Postcode validation
 
@@ -580,27 +571,27 @@ str(place_query_result$result[1])
 
     ## List of 1
     ##  $ :List of 21
-    ##   ..$ code                 : chr "osgb4000000074557270"
-    ##   ..$ name_1               : chr "Hillside"
+    ##   ..$ code                 : chr "osgb4000000074551640"
+    ##   ..$ name_1               : chr "Hillstown"
     ##   ..$ name_1_lang          : NULL
     ##   ..$ name_2               : NULL
     ##   ..$ name_2_lang          : NULL
-    ##   ..$ local_type           : chr "Village"
-    ##   ..$ outcode              : chr "DD10"
-    ##   ..$ county_unitary       : chr "Angus"
-    ##   ..$ county_unitary_type  : chr "UnitaryAuthority"
-    ##   ..$ district_borough     : NULL
-    ##   ..$ district_borough_type: NULL
-    ##   ..$ region               : chr "Scotland"
-    ##   ..$ country              : chr "Scotland"
-    ##   ..$ longitude            : num -2.48
-    ##   ..$ latitude             : num 56.7
-    ##   ..$ eastings             : int 370951
-    ##   ..$ northings            : int 761060
-    ##   ..$ min_eastings         : int 368761
-    ##   ..$ min_northings        : int 760516
-    ##   ..$ max_eastings         : int 371950
-    ##   ..$ max_northings        : int 762123
+    ##   ..$ local_type           : chr "Suburban Area"
+    ##   ..$ outcode              : chr "S44"
+    ##   ..$ county_unitary       : chr "Derbyshire"
+    ##   ..$ county_unitary_type  : chr "County"
+    ##   ..$ district_borough     : chr "Bolsover"
+    ##   ..$ district_borough_type: chr "District"
+    ##   ..$ region               : chr "East Midlands"
+    ##   ..$ country              : chr "England"
+    ##   ..$ longitude            : num -1.28
+    ##   ..$ latitude             : num 53.2
+    ##   ..$ eastings             : int 447895
+    ##   ..$ northings            : int 369585
+    ##   ..$ min_eastings         : int 447611
+    ##   ..$ min_northings        : int 369329
+    ##   ..$ max_eastings         : int 448560
+    ##   ..$ max_northings        : int 369832
 
 You can also find a place using an OSGB code:
 

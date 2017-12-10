@@ -24,7 +24,7 @@ devtools::install_github("erzk/PostcodesioR")
 
 To start using the package use the standard command after you installed it.
 
-```{r, warning = FALSE}
+```{r, warning = FALSE, message = FALSE}
 library(PostcodesioR)
 ```
 
@@ -37,9 +37,6 @@ library(PostcodesioR)
 Provide a postcode to obtain all available information: 
 
 ```{r, message = FALSE, warning = FALSE}
-# load the package
-library(PostcodesioR)
-
 lookup_result <- postcode_lookup("EC1Y8LX")
 
 #overview
