@@ -24,7 +24,7 @@ devtools::install_github("erzk/PostcodesioR")
 
 To start using the package use the standard command after you installed it.
 
-```{r, eval=FALSE}
+```{r, warning = FALSE}
 library(PostcodesioR)
 ```
 
@@ -82,7 +82,9 @@ str(rev_geo$result[1])
 
 #### Multiple postcodes
 
-```{r, eval = FALSE}
+To reverse geocode multiple values use the function underneath. The result is a nested list, which might be a bit intimidating, but it allows storing unequal lengths of elements.
+
+```{r}
 # create a JSON object with the coordinates
 geolocations_list <- structure(
  list(
@@ -99,9 +101,33 @@ geolocations_list <- structure(
 
 bulk_rev_geo <- bulk_reverse_geocoding(geolocations_list)
 
-#overview
-str(bulk_rev_geo$result)
+bulk_rev_geo$result[[1]]$result[[1]]
 ```
+
+Common usage of this function might be extracting particular variables. You can extract one variable like this:
+
+```{r}
+# extract one postcode
+bulk_rev_geo$result[[1]]$result[[8]]$postcode
+```
+
+But more likely you will want more than one result. After all, that's the point of using a bulk function:
+
+```{r}
+# function to extract variables of interest
+extract_bulk_geo_variable <- function(x) {
+  bulk_results <- lapply(bulk_rev_geo$result, `[[`, "result")
+  sapply(unlist(bulk_results, recursive = FALSE), `[[`, x)
+}
+
+# define the variables you need
+variables_of_interest <- c("postcode", "latitude", "longitude")
+
+# return a data frame with the variables
+data.frame(
+  sapply(variables_of_interest, extract_bulk_geo_variable))
+```
+
 
 #### Single outcode
 
