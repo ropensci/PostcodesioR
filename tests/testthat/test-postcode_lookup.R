@@ -9,5 +9,5 @@ test_that("postcode_lookup works as expected", {
   expect_error(postcode_lookup(incorrect_postcode1))
   expect_error(postcode_lookup(incorrect_postcode2))
 
-  expect_that(postcode_lookup_result, is_a("list"))
+  expect_that(postcode_lookup_result, is_a("data.frame"))
 })

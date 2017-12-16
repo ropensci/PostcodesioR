@@ -8,7 +8,7 @@
 #'
 #' @export
 #'
-#' @return A list. Returns all available data if found. Returns 404 if postcode does not exist.
+#' @return A data frame. Returns all available data if found. Returns 404 if postcode does not exist.
 #'
 #' @examples
 #' postcode_lookup("EC1Y8LX")
@@ -20,5 +20,11 @@ postcode_lookup <- function(postcode) {
   }
   r <- GET(paste0("https://api.postcodes.io/postcodes/", postcode))
   warn_for_status(r)
-  content(r)
+  r <- content(r)
+  pc_result <- r[[2]]
+  take_names <- setdiff(names(pc_result), 'codes')
+  pc_result[sapply(pc_result, is.null)] = list(NA)
+  pc_df <- cbind(as.data.frame(pc_result[take_names], stringsAsFactors = FALSE),
+                 as.data.frame(pc_result$codes, stringsAsFactors = FALSE))
+  return(pc_df)
 }

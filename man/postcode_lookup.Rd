@@ -10,7 +10,7 @@ postcode_lookup(postcode)
 \item{postcode}{A string. Valid UK postcode.}
 }
 \value{
-A list. Returns all available data if found. Returns 404 if postcode does not exist.
+A data frame. Returns all available data if found. Returns 404 if postcode does not exist.
 }
 \description{
 Lookup a postcode.
