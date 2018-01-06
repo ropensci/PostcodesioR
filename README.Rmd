@@ -30,6 +30,8 @@ library(PostcodesioR)
 
 ## Examples
 
+Where possible, I tried to return a data frame. Unfortunately, a lot of API calls return more complex data and in those cases it is safer to use lists.
+
 ### Lookup postcodes and outcodes
 
 #### Single postcode
@@ -50,7 +52,7 @@ pc_list <- list(postcodes = c("PR3 0SG", "M45 6GN", "EX165BL"))
 bulk_lookup_result <- bulk_postcode_lookup(pc_list)
 
 #overview
-str(bulk_lookup_result$result[1])
+str(bulk_lookup_result[1])
 ```
 
 #### Outward code lookup
@@ -74,7 +76,7 @@ Provide latitude and longitude to obtain geographic information. Different level
 rev_geo <- reverse_geocoding(0.127, 51.507)
 
 # overview
-str(rev_geo$result[1])
+str(rev_geo[1])
 ```
 
 #### Multiple postcodes
@@ -98,14 +100,14 @@ geolocations_list <- structure(
 
 bulk_rev_geo <- bulk_reverse_geocoding(geolocations_list)
 
-bulk_rev_geo$result[[1]]$result[[1]]
+bulk_rev_geo[[1]]$result[[1]]
 ```
 
 Common usage of this function might be extracting particular variables. You can extract one variable like this:
 
 ```{r}
 # extract one postcode
-bulk_rev_geo$result[[1]]$result[[8]]$postcode
+bulk_rev_geo[[1]]$result[[8]]$postcode
 ```
 
 But more likely you will want more than one result. After all, that's the point of using a bulk function:
@@ -113,7 +115,7 @@ But more likely you will want more than one result. After all, that's the point 
 ```{r}
 # function to extract variables of interest
 extract_bulk_geo_variable <- function(x) {
-  bulk_results <- lapply(bulk_rev_geo$result, `[[`, "result")
+  bulk_results <- lapply(bulk_rev_geo, `[[`, "result")
   sapply(unlist(bulk_results, recursive = FALSE), `[[`, x)
 }
 
@@ -131,7 +133,7 @@ data.frame(
 ```{r}
 out_rev_geocode <- outcode_reverse_geocoding("-3.15", "51.47")
 # overview
-str(out_rev_geocode$result[1])
+str(out_rev_geocode[1])
 ```
 
 ### Generate random entries
@@ -203,7 +205,7 @@ Provide a name of a place of interest. You can specify the number of results (de
 place_query_result <- place_query("Hills", limit = 11)
 
 # overview
-str(place_query_result$result[1])
+str(place_query_result[1])
 ```
 
 You can also find a place using an OSGB code:
@@ -212,7 +214,7 @@ You can also find a place using an OSGB code:
 place_lookup_result <- place_lookup("osgb4000000074544700")
 
 # overview
-str(place_lookup_result$result)
+str(place_lookup_result)
 ```
 
 ### Terminated postcodes

@@ -19,5 +19,5 @@ test_that("postcode_query works as expected", {
   expect_that(postcode_query_result1, is_a("list"))
   expect_that(postcode_query_result2, is_a("list"))
 
-  expect_equal(length(postcode_query_result2$result), correct_limit)
+  expect_equal(length(postcode_query_result2), correct_limit)
 })

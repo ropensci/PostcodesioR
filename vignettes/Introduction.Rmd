@@ -48,7 +48,7 @@ pc_list <- list(postcodes = c("PR3 0SG", "M45 6GN", "EX165BL"))
 bulk_lookup_result <- bulk_postcode_lookup(pc_list)
 
 #overview
-str(bulk_lookup_result$result[1])
+str(bulk_lookup_result[1])
 ```
 
 #### Outward code lookup
@@ -72,7 +72,7 @@ Provide latitude and longitude to obtain geographic information. Different level
 rev_geo <- reverse_geocoding(0.127, 51.507)
 
 # overview
-str(rev_geo$result[1])
+str(rev_geo[1])
 ```
 
 #### Multiple postcodes
@@ -95,7 +95,7 @@ geolocations_list <- structure(
 bulk_rev_geo <- bulk_reverse_geocoding(geolocations_list)
 
 #overview
-str(bulk_rev_geo$result)
+str(bulk_rev_geo)
 ```
 
 #### Single outcode
@@ -103,7 +103,7 @@ str(bulk_rev_geo$result)
 ```{r}
 out_rev_geocode <- outcode_reverse_geocoding("-3.15", "51.47")
 # overview
-str(out_rev_geocode$result[1])
+str(out_rev_geocode[1])
 ```
 
 ### Generate random entries
@@ -152,7 +152,7 @@ Provide a postcode to get a list of the nearest postcodes:
 near_pc <- nearest_postcode("EC1Y 8LX")
 
 #overview
-str(near_pc$result[1])
+str(near_pc[1])
 ```
 
 You can also use outcodes:
@@ -160,7 +160,7 @@ You can also use outcodes:
 ```{r}
 near_outcode <- nearest_outcode("EC1Y")
 # overview
-str(near_outcode$result[2])
+str(near_outcode[2])
 ```
 
 ### Find places
@@ -171,7 +171,7 @@ Provide a name of a place of interest. You can specify the number of results (de
 place_query_result <- place_query("Hills", limit = 11)
 
 # overview
-str(place_query_result$result[1])
+str(place_query_result[1])
 ```
 
 You can also find a place using an OSGB code:
@@ -180,7 +180,7 @@ You can also find a place using an OSGB code:
 place_lookup_result <- place_lookup("osgb4000000074544700")
 
 # overview
-str(place_lookup_result$result)
+str(place_lookup_result)
 ```
 
 ## Notes

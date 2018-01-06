@@ -27,6 +27,8 @@ library(PostcodesioR)
 Examples
 --------
 
+Where possible, I tried to return a data frame. Unfortunately, a lot of API calls return more complex data and in those cases it is safer to use lists.
+
 ### Lookup postcodes and outcodes
 
 #### Single postcode
@@ -78,7 +80,7 @@ pc_list <- list(postcodes = c("PR3 0SG", "M45 6GN", "EX165BL"))
 bulk_lookup_result <- bulk_postcode_lookup(pc_list)
 
 #overview
-str(bulk_lookup_result$result[1])
+str(bulk_lookup_result[1])
 ```
 
     ## List of 1
@@ -127,39 +129,37 @@ ocl <- outward_code_lookup("E1")
 str(ocl)
 ```
 
-    ## List of 2
-    ##  $ status: int 200
-    ##  $ result:List of 10
-    ##   ..$ outcode       : chr "E1"
-    ##   ..$ longitude     : num -0.0594
-    ##   ..$ latitude      : num 51.5
-    ##   ..$ northings     : int 181622
-    ##   ..$ eastings      : int 534747
-    ##   ..$ admin_district:List of 3
-    ##   .. ..$ : chr "City of London"
-    ##   .. ..$ : chr "Hackney"
-    ##   .. ..$ : chr "Tower Hamlets"
-    ##   ..$ parish        :List of 3
-    ##   .. ..$ : chr "City of London, unparished area"
-    ##   .. ..$ : chr "Hackney, unparished area"
-    ##   .. ..$ : chr "Tower Hamlets, unparished area"
-    ##   ..$ admin_county  : list()
-    ##   ..$ admin_ward    :List of 13
-    ##   .. ..$ : chr "Spitalfields & Banglatown"
-    ##   .. ..$ : chr "Portsoken"
-    ##   .. ..$ : chr "Tower"
-    ##   .. ..$ : chr "St Dunstan's"
-    ##   .. ..$ : chr "Aldgate"
-    ##   .. ..$ : chr "Bishopsgate"
-    ##   .. ..$ : chr "Hoxton East & Shoreditch"
-    ##   .. ..$ : chr "Whitechapel"
-    ##   .. ..$ : chr "Bethnal Green"
-    ##   .. ..$ : chr "Shadwell"
-    ##   .. ..$ : chr "Stepney Green"
-    ##   .. ..$ : chr "St Peter's"
-    ##   .. ..$ : chr "Weavers"
-    ##   ..$ country       :List of 1
-    ##   .. ..$ : chr "England"
+    ## List of 10
+    ##  $ outcode       : chr "E1"
+    ##  $ longitude     : num -0.0594
+    ##  $ latitude      : num 51.5
+    ##  $ northings     : int 181622
+    ##  $ eastings      : int 534747
+    ##  $ admin_district:List of 3
+    ##   ..$ : chr "City of London"
+    ##   ..$ : chr "Hackney"
+    ##   ..$ : chr "Tower Hamlets"
+    ##  $ parish        :List of 3
+    ##   ..$ : chr "City of London, unparished area"
+    ##   ..$ : chr "Hackney, unparished area"
+    ##   ..$ : chr "Tower Hamlets, unparished area"
+    ##  $ admin_county  : list()
+    ##  $ admin_ward    :List of 13
+    ##   ..$ : chr "Spitalfields & Banglatown"
+    ##   ..$ : chr "Portsoken"
+    ##   ..$ : chr "Tower"
+    ##   ..$ : chr "St Dunstan's"
+    ##   ..$ : chr "Aldgate"
+    ##   ..$ : chr "Bishopsgate"
+    ##   ..$ : chr "Hoxton East & Shoreditch"
+    ##   ..$ : chr "Whitechapel"
+    ##   ..$ : chr "Bethnal Green"
+    ##   ..$ : chr "Shadwell"
+    ##   ..$ : chr "Stepney Green"
+    ##   ..$ : chr "St Peter's"
+    ##   ..$ : chr "Weavers"
+    ##  $ country       :List of 1
+    ##   ..$ : chr "England"
 
 ### Reverse geocoding
 
@@ -171,7 +171,7 @@ Provide latitude and longitude to obtain geographic information. Different level
 rev_geo <- reverse_geocoding(0.127, 51.507)
 
 # overview
-str(rev_geo$result[1])
+str(rev_geo[1])
 ```
 
     ## List of 1
@@ -229,7 +229,7 @@ geolocations_list <- structure(
 
 bulk_rev_geo <- bulk_reverse_geocoding(geolocations_list)
 
-bulk_rev_geo$result[[1]]$result[[1]]
+bulk_rev_geo[[1]]$result[[1]]
 ```
 
     ## $postcode
@@ -327,7 +327,7 @@ Common usage of this function might be extracting particular variables. You can 
 
 ``` r
 # extract one postcode
-bulk_rev_geo$result[[1]]$result[[8]]$postcode
+bulk_rev_geo[[1]]$result[[8]]$postcode
 ```
 
     ## [1] "CF24 2AL"
@@ -337,7 +337,7 @@ But more likely you will want more than one result. After all, that's the point 
 ``` r
 # function to extract variables of interest
 extract_bulk_geo_variable <- function(x) {
-  bulk_results <- lapply(bulk_rev_geo$result, `[[`, "result")
+  bulk_results <- lapply(bulk_rev_geo, `[[`, "result")
   sapply(unlist(bulk_results, recursive = FALSE), `[[`, x)
 }
 
@@ -377,7 +377,7 @@ data.frame(
 ``` r
 out_rev_geocode <- outcode_reverse_geocoding("-3.15", "51.47")
 # overview
-str(out_rev_geocode$result[1])
+str(out_rev_geocode[1])
 ```
 
     ## List of 1
@@ -410,92 +410,92 @@ random_postcode()
 ```
 
     ## $postcode
-    ## [1] "EN6 5LX"
+    ## [1] "L34 9EY"
     ## 
     ## $quality
     ## [1] 1
     ## 
     ## $eastings
-    ## [1] 526533
+    ## [1] 343716
     ## 
     ## $northings
-    ## [1] 201296
+    ## [1] 396737
     ## 
     ## $country
     ## [1] "England"
     ## 
     ## $nhs_ha
-    ## [1] "East of England"
+    ## [1] "North West"
     ## 
     ## $longitude
-    ## [1] -0.1706038
+    ## [1] -2.849254
     ## 
     ## $latitude
-    ## [1] 51.69616
+    ## [1] 53.46436
     ## 
     ## $european_electoral_region
-    ## [1] "Eastern"
+    ## [1] "North West"
     ## 
     ## $primary_care_trust
-    ## [1] "Hertfordshire"
+    ## [1] "Knowsley"
     ## 
     ## $region
-    ## [1] "East of England"
+    ## [1] "North West"
     ## 
     ## $lsoa
-    ## [1] "Hertsmere 003B"
+    ## [1] "Knowsley 005E"
     ## 
     ## $msoa
-    ## [1] "Hertsmere 003"
+    ## [1] "Knowsley 005"
     ## 
     ## $incode
-    ## [1] "5LX"
+    ## [1] "9EY"
     ## 
     ## $outcode
-    ## [1] "EN6"
+    ## [1] "L34"
     ## 
     ## $parliamentary_constituency
-    ## [1] "Hertsmere"
+    ## [1] "Knowsley"
     ## 
     ## $admin_district
-    ## [1] "Hertsmere"
+    ## [1] "Knowsley"
     ## 
     ## $parish
-    ## [1] "Hertsmere, unparished area"
+    ## [1] "Knowsley"
     ## 
     ## $admin_county
-    ## [1] "Hertfordshire"
+    ## NULL
     ## 
     ## $admin_ward
-    ## [1] "Potters Bar Oakmere"
+    ## [1] "Prescot North"
     ## 
     ## $ccg
-    ## [1] "NHS Herts Valleys"
+    ## [1] "NHS Knowsley"
     ## 
     ## $nuts
-    ## [1] "Hertfordshire"
+    ## [1] "East Merseyside"
     ## 
     ## $codes
     ## $codes$admin_district
-    ## [1] "E07000098"
+    ## [1] "E08000011"
     ## 
     ## $codes$admin_county
-    ## [1] "E10000015"
+    ## [1] "E99999999"
     ## 
     ## $codes$admin_ward
-    ## [1] "E05004758"
+    ## [1] "E05010940"
     ## 
     ## $codes$parish
-    ## [1] "E43000077"
+    ## [1] "E04000018"
     ## 
     ## $codes$parliamentary_constituency
-    ## [1] "E14000745"
+    ## [1] "E14000775"
     ## 
     ## $codes$ccg
-    ## [1] "E38000079"
+    ## [1] "E38000091"
     ## 
     ## $codes$nuts
-    ## [1] "UKH23"
+    ## [1] "UKD71"
 
 A randomly generated postcode can also belong to a particular outcode:
 
@@ -505,16 +505,16 @@ random_postcode("N1")
 ```
 
     ## $postcode
-    ## [1] "N1 6QJ"
+    ## [1] "N1 9DN"
     ## 
     ## $quality
     ## [1] 1
     ## 
     ## $eastings
-    ## [1] 533248
+    ## [1] 530558
     ## 
     ## $northings
-    ## [1] 182964
+    ## [1] 183237
     ## 
     ## $country
     ## [1] "England"
@@ -523,74 +523,74 @@ random_postcode("N1")
     ## [1] "London"
     ## 
     ## $longitude
-    ## [1] -0.08046519
+    ## [1] -0.1191209
     ## 
     ## $latitude
-    ## [1] 51.52987
+    ## [1] 51.53295
     ## 
     ## $european_electoral_region
     ## [1] "London"
     ## 
     ## $primary_care_trust
-    ## [1] "City and Hackney Teaching"
+    ## [1] "Islington"
     ## 
     ## $region
     ## [1] "London"
     ## 
     ## $lsoa
-    ## [1] "Hackney 027E"
+    ## [1] "Islington 021B"
     ## 
     ## $msoa
-    ## [1] "Hackney 027"
+    ## [1] "Islington 021"
     ## 
     ## $incode
-    ## [1] "6QJ"
+    ## [1] "9DN"
     ## 
     ## $outcode
     ## [1] "N1"
     ## 
     ## $parliamentary_constituency
-    ## [1] "Hackney South and Shoreditch"
+    ## [1] "Islington South and Finsbury"
     ## 
     ## $admin_district
-    ## [1] "Hackney"
+    ## [1] "Islington"
     ## 
     ## $parish
-    ## [1] "Hackney, unparished area"
+    ## [1] "Islington, unparished area"
     ## 
     ## $admin_county
     ## NULL
     ## 
     ## $admin_ward
-    ## [1] "Hoxton East & Shoreditch"
+    ## [1] "Caledonian"
     ## 
     ## $ccg
-    ## [1] "NHS City and Hackney"
+    ## [1] "NHS Islington"
     ## 
     ## $nuts
-    ## [1] "Hackney and Newham"
+    ## [1] "Haringey and Islington"
     ## 
     ## $codes
     ## $codes$admin_district
-    ## [1] "E09000012"
+    ## [1] "E09000019"
     ## 
     ## $codes$admin_county
     ## [1] "E99999999"
     ## 
     ## $codes$admin_ward
-    ## [1] "E05009377"
+    ## [1] "E05000368"
     ## 
     ## $codes$parish
-    ## [1] "E43000202"
+    ## [1] "E43000209"
     ## 
     ## $codes$parliamentary_constituency
-    ## [1] "E14000721"
+    ## [1] "E14000764"
     ## 
     ## $codes$ccg
-    ## [1] "E38000035"
+    ## [1] "E38000088"
     ## 
     ## $codes$nuts
-    ## [1] "UKI41"
+    ## [1] "UKI43"
 
 #### Places
 
@@ -600,14 +600,14 @@ You can also generate a random place, specified by an OSGB code, with correspond
 random_place()
 ```
 
-    ##                   code         name_1 name_1_lang name_2 name_2_lang
-    ## 1 osgb4000000074577575 Lower Lovacott        NULL   NULL        NULL
-    ##   local_type outcode county_unitary county_unitary_type district_borough
-    ## 1    Village    EX31          Devon              County      North Devon
+    ##                   code   name_1 name_1_lang name_2 name_2_lang local_type
+    ## 1 osgb4000000074561737 Swanmore        NULL   NULL        NULL    Village
+    ##   outcode county_unitary county_unitary_type district_borough
+    ## 1    SO32      Hampshire              County       Winchester
     ##   district_borough_type     region country longitude latitude eastings
-    ## 1              District South West England  -4.11107 51.02725   252053
+    ## 1              District South East England  -1.18024 50.94409   457689
     ##   northings min_eastings min_northings max_eastings max_northings
-    ## 1    127441       251799        127166       252299        127666
+    ## 1    116392       456472        115368       458433        117188
 
 ### Postcode validation
 
@@ -711,7 +711,7 @@ Provide a name of a place of interest. You can specify the number of results (de
 place_query_result <- place_query("Hills", limit = 11)
 
 # overview
-str(place_query_result$result[1])
+str(place_query_result[1])
 ```
 
     ## List of 1
@@ -744,7 +744,7 @@ You can also find a place using an OSGB code:
 place_lookup_result <- place_lookup("osgb4000000074544700")
 
 # overview
-str(place_lookup_result$result)
+str(place_lookup_result)
 ```
 
     ## List of 21
