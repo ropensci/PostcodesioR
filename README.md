@@ -83,38 +83,38 @@ str(bulk_lookup_result$result[1])
 
     ## List of 1
     ##  $ :List of 2
-    ##   ..$ query : chr "EX165BL"
+    ##   ..$ query : chr "PR3 0SG"
     ##   ..$ result:List of 23
-    ##   .. ..$ postcode                  : chr "EX16 5BL"
+    ##   .. ..$ postcode                  : chr "PR3 0SG"
     ##   .. ..$ quality                   : int 1
-    ##   .. ..$ eastings                  : int 294480
-    ##   .. ..$ northings                 : int 112251
+    ##   .. ..$ eastings                  : int 351012
+    ##   .. ..$ northings                 : int 440302
     ##   .. ..$ country                   : chr "England"
-    ##   .. ..$ nhs_ha                    : chr "South West"
-    ##   .. ..$ longitude                 : num -3.5
-    ##   .. ..$ latitude                  : num 50.9
-    ##   .. ..$ european_electoral_region : chr "South West"
-    ##   .. ..$ primary_care_trust        : chr "Devon"
-    ##   .. ..$ region                    : chr "South West"
-    ##   .. ..$ lsoa                      : chr "Mid Devon 005C"
-    ##   .. ..$ msoa                      : chr "Mid Devon 005"
-    ##   .. ..$ incode                    : chr "5BL"
-    ##   .. ..$ outcode                   : chr "EX16"
-    ##   .. ..$ parliamentary_constituency: chr "Tiverton and Honiton"
-    ##   .. ..$ admin_district            : chr "Mid Devon"
-    ##   .. ..$ parish                    : chr "Tiverton"
-    ##   .. ..$ admin_county              : chr "Devon"
-    ##   .. ..$ admin_ward                : chr "Westexe"
-    ##   .. ..$ ccg                       : chr "NHS Northern, Eastern and Western Devon"
-    ##   .. ..$ nuts                      : chr "Devon CC"
+    ##   .. ..$ nhs_ha                    : chr "North West"
+    ##   .. ..$ longitude                 : num -2.75
+    ##   .. ..$ latitude                  : num 53.9
+    ##   .. ..$ european_electoral_region : chr "North West"
+    ##   .. ..$ primary_care_trust        : chr "North Lancashire Teaching"
+    ##   .. ..$ region                    : chr "North West"
+    ##   .. ..$ lsoa                      : chr "Wyre 006A"
+    ##   .. ..$ msoa                      : chr "Wyre 006"
+    ##   .. ..$ incode                    : chr "0SG"
+    ##   .. ..$ outcode                   : chr "PR3"
+    ##   .. ..$ parliamentary_constituency: chr "Wyre and Preston North"
+    ##   .. ..$ admin_district            : chr "Wyre"
+    ##   .. ..$ parish                    : chr "Myerscough and Bilsborrow"
+    ##   .. ..$ admin_county              : chr "Lancashire"
+    ##   .. ..$ admin_ward                : chr "Brock with Catterall"
+    ##   .. ..$ ccg                       : chr "NHS Morecambe Bay"
+    ##   .. ..$ nuts                      : chr "Lancaster and Wyre"
     ##   .. ..$ codes                     :List of 7
-    ##   .. .. ..$ admin_district            : chr "E07000042"
-    ##   .. .. ..$ admin_county              : chr "E10000008"
-    ##   .. .. ..$ admin_ward                : chr "E05003531"
-    ##   .. .. ..$ parish                    : chr "E04003055"
-    ##   .. .. ..$ parliamentary_constituency: chr "E14000996"
-    ##   .. .. ..$ ccg                       : chr "E38000129"
-    ##   .. .. ..$ nuts                      : chr "UKK43"
+    ##   .. .. ..$ admin_district            : chr "E07000128"
+    ##   .. .. ..$ admin_county              : chr "E10000017"
+    ##   .. .. ..$ admin_ward                : chr "E05009934"
+    ##   .. .. ..$ parish                    : chr "E04005340"
+    ##   .. .. ..$ parliamentary_constituency: chr "E14001057"
+    ##   .. .. ..$ ccg                       : chr "E38000216"
+    ##   .. .. ..$ nuts                      : chr "UKD44"
 
 #### Outward code lookup
 
@@ -131,10 +131,10 @@ str(ocl)
     ##  $ status: int 200
     ##  $ result:List of 10
     ##   ..$ outcode       : chr "E1"
-    ##   ..$ longitude     : num -0.0593
+    ##   ..$ longitude     : num -0.0594
     ##   ..$ latitude      : num 51.5
-    ##   ..$ northings     : int 181623
-    ##   ..$ eastings      : int 534749
+    ##   ..$ northings     : int 181622
+    ##   ..$ eastings      : int 534747
     ##   ..$ admin_district:List of 3
     ##   .. ..$ : chr "City of London"
     ##   .. ..$ : chr "Hackney"
@@ -174,7 +174,39 @@ rev_geo <- reverse_geocoding(0.127, 51.507)
 str(rev_geo$result[1])
 ```
 
-    ##  NULL
+    ## List of 1
+    ##  $ :List of 24
+    ##   ..$ postcode                  : chr "SE28 8NH"
+    ##   ..$ quality                   : int 1
+    ##   ..$ eastings                  : int 547715
+    ##   ..$ northings                 : int 180780
+    ##   ..$ country                   : chr "England"
+    ##   ..$ nhs_ha                    : chr "London"
+    ##   ..$ longitude                 : num 0.127
+    ##   ..$ latitude                  : num 51.5
+    ##   ..$ european_electoral_region : chr "London"
+    ##   ..$ primary_care_trust        : chr "Bexley"
+    ##   ..$ region                    : chr "London"
+    ##   ..$ lsoa                      : chr "Bexley 001D"
+    ##   ..$ msoa                      : chr "Bexley 001"
+    ##   ..$ incode                    : chr "8NH"
+    ##   ..$ outcode                   : chr "SE28"
+    ##   ..$ distance                  : num 38.9
+    ##   ..$ parliamentary_constituency: chr "Erith and Thamesmead"
+    ##   ..$ admin_district            : chr "Bexley"
+    ##   ..$ parish                    : chr "Bexley, unparished area"
+    ##   ..$ admin_county              : NULL
+    ##   ..$ admin_ward                : chr "Thamesmead East"
+    ##   ..$ ccg                       : chr "NHS Bexley"
+    ##   ..$ nuts                      : chr "Bexley and Greenwich"
+    ##   ..$ codes                     :List of 7
+    ##   .. ..$ admin_district            : chr "E09000004"
+    ##   .. ..$ admin_county              : chr "E99999999"
+    ##   .. ..$ admin_ward                : chr "E05000084"
+    ##   .. ..$ parish                    : chr "E43000194"
+    ##   .. ..$ parliamentary_constituency: chr "E14000696"
+    ##   .. ..$ ccg                       : chr "E38000011"
+    ##   .. ..$ nuts                      : chr "UKI51"
 
 #### Multiple postcodes
 
@@ -333,7 +365,7 @@ data.frame(
     ## 13 PO33 1QD 50.7172032703058 -1.12781222816285
     ## 14 PO33 1PU 50.7184669311199  -1.1260322523645
     ## 15 PO33 1PZ 50.7162328095008 -1.12791522396325
-    ## 16 PO33 1QR 50.7157418306917 -1.12599793035477
+    ## 16 PO33 1QR 50.7157418306918 -1.12599793035477
     ## 17 PO33 1PB 50.7210243159623 -1.13371950415272
     ## 18 PO33 1PR  50.721487986434  -1.1331867990148
     ## 19 PO33 1PY 50.7151718843021 -1.12674508376803
@@ -377,20 +409,20 @@ Generates a data frame with a random UK postcode and corresponding geographic in
 random_postcode()
 ```
 
-    ##   postcode quality eastings northings country           nhs_ha  longitude
-    ## 1  RH5 6DU       1   517010    153370 England South East Coast -0.3241882
-    ##   latitude european_electoral_region primary_care_trust     region
-    ## 1 51.26748                South East             Surrey South East
+    ##   postcode quality eastings northings country          nhs_ha longitude
+    ## 1 IP14 3BW       1   600408    257797 England East of England 0.9299627
+    ##   latitude european_electoral_region primary_care_trust          region
+    ## 1   52.182                   Eastern            Suffolk East of England
     ##               lsoa            msoa incode outcode
-    ## 1 Mole Valley 009D Mole Valley 009    6DU     RH5
-    ##   parliamentary_constituency admin_district    parish admin_county
-    ## 1                Mole Valley    Mole Valley Mickleham       Surrey
-    ##                         admin_ward              ccg        nuts
-    ## 1 Mickleham, Westhumble and Pixham NHS Surrey Downs East Surrey
-    ##   admin_district admin_county admin_ward    parish
-    ## 1      E07000210    E10000030  E05007326 E04009573
-    ##   parliamentary_constituency       ccg  nuts
-    ## 1                  E14000824 E38000177 UKJ26
+    ## 1 Mid Suffolk 009A Mid Suffolk 009    3BW    IP14
+    ##   parliamentary_constituency admin_district  parish admin_county
+    ## 1            Bury St Edmunds    Mid Suffolk Buxhall      Suffolk
+    ##   admin_ward                          ccg    nuts admin_district
+    ## 1   Onehouse NHS Ipswich and East Suffolk Suffolk      E07000203
+    ##   admin_county admin_ward    parish parliamentary_constituency       ccg
+    ## 1    E10000029  E05007148 E04010548                  E14000613 E38000086
+    ##    nuts
+    ## 1 UKH14
 
 A randomly generated postcode can also belong to a particular outcode:
 
@@ -399,18 +431,18 @@ A randomly generated postcode can also belong to a particular outcode:
 random_postcode("N1")
 ```
 
-    ##   postcode quality eastings northings country nhs_ha   longitude latitude
-    ## 1   N1 4NU       1   533161    184928 England London -0.08097636 51.54754
+    ##   postcode quality eastings northings country nhs_ha  longitude latitude
+    ## 1   N1 9ET       1   531227    183280 England London -0.1094655 51.53318
     ##   european_electoral_region primary_care_trust region           lsoa
-    ## 1                    London          Islington London Islington 012B
-    ##            msoa incode outcode parliamentary_constituency admin_district
-    ## 1 Islington 012    4NU      N1            Islington North      Islington
+    ## 1                    London          Islington London Islington 020A
+    ##            msoa incode outcode   parliamentary_constituency admin_district
+    ## 1 Islington 020    9ET      N1 Islington South and Finsbury      Islington
     ##                       parish admin_county admin_ward           ccg
-    ## 1 Islington, unparished area           NA    Mildmay NHS Islington
+    ## 1 Islington, unparished area           NA  Barnsbury NHS Islington
     ##                     nuts admin_district admin_county admin_ward    parish
-    ## 1 Haringey and Islington      E09000019    E99999999  E05000377 E43000209
+    ## 1 Haringey and Islington      E09000019    E99999999  E05000366 E43000209
     ##   parliamentary_constituency       ccg  nuts
-    ## 1                  E14000763 E38000088 UKI43
+    ## 1                  E14000764 E38000088 UKI43
 
 #### Places
 
@@ -420,16 +452,14 @@ You can also generate a random place, specified by an OSGB code, with correspond
 random_place()
 ```
 
-    ##                   code       name_1 name_1_lang name_2 name_2_lang
-    ## 1 osgb4000000074564499 Seana Bhaile        NULL   NULL        NULL
-    ##   local_type outcode       county_unitary county_unitary_type
-    ## 1     Hamlet     HS6 Na h-Eileanan an Iar    UnitaryAuthority
-    ##   district_borough district_borough_type   region  country longitude
-    ## 1             NULL                  NULL Scotland Scotland -7.239658
-    ##   latitude eastings northings min_eastings min_northings max_eastings
-    ## 1 57.50338    86287    858024        86052        857790        86552
-    ##   max_northings
-    ## 1        858290
+    ##                   code   name_1 name_1_lang name_2 name_2_lang local_type
+    ## 1 osgb4000000074555668 Stichill        NULL   NULL        NULL    Village
+    ##   outcode   county_unitary county_unitary_type district_borough
+    ## 1     TD5 Scottish Borders    UnitaryAuthority             NULL
+    ##   district_borough_type   region  country longitude latitude eastings
+    ## 1                  NULL Scotland Scotland -2.457211 55.63886   371317
+    ##   northings min_eastings min_northings max_eastings max_northings
+    ## 1    638462       370926        638045       371760        638784
 
 ### Postcode validation
 
@@ -503,10 +533,10 @@ str(near_outcode$result[2])
     ## List of 1
     ##  $ :List of 11
     ##   ..$ outcode       : chr "EC2Y"
-    ##   ..$ longitude     : num -0.094
+    ##   ..$ longitude     : num -0.0938
     ##   ..$ latitude      : num 51.5
-    ##   ..$ northings     : int 181793
-    ##   ..$ eastings      : int 532337
+    ##   ..$ northings     : int 181787
+    ##   ..$ eastings      : int 532350
     ##   ..$ admin_district:List of 2
     ##   .. ..$ : chr "City of London"
     ##   .. ..$ : chr "Islington"
@@ -523,7 +553,7 @@ str(near_outcode$result[2])
     ##   .. ..$ : chr "Aldersgate"
     ##   ..$ country       :List of 1
     ##   .. ..$ : chr "England"
-    ##   ..$ distance      : num 396
+    ##   ..$ distance      : num 400
 
 ### Find places
 
@@ -538,27 +568,27 @@ str(place_query_result$result[1])
 
     ## List of 1
     ##  $ :List of 21
-    ##   ..$ code                 : chr "osgb4000000074300875"
-    ##   ..$ name_1               : chr "Hillside"
+    ##   ..$ code                 : chr "osgb4000000074574731"
+    ##   ..$ name_1               : chr "Berwick Hills"
     ##   ..$ name_1_lang          : NULL
     ##   ..$ name_2               : NULL
     ##   ..$ name_2_lang          : NULL
     ##   ..$ local_type           : chr "Suburban Area"
-    ##   ..$ outcode              : chr "BA2"
-    ##   ..$ county_unitary       : chr "Bath and North East Somerset"
+    ##   ..$ outcode              : chr "TS3"
+    ##   ..$ county_unitary       : chr "Middlesbrough"
     ##   ..$ county_unitary_type  : chr "UnitaryAuthority"
     ##   ..$ district_borough     : NULL
     ##   ..$ district_borough_type: NULL
-    ##   ..$ region               : chr "South West"
+    ##   ..$ region               : chr "North East"
     ##   ..$ country              : chr "England"
-    ##   ..$ longitude            : num -2.43
-    ##   ..$ latitude             : num 51.3
-    ##   ..$ eastings             : int 370229
-    ##   ..$ northings            : int 157825
-    ##   ..$ min_eastings         : int 369900
-    ##   ..$ min_northings        : int 157565
-    ##   ..$ max_eastings         : int 370400
-    ##   ..$ max_northings        : int 158065
+    ##   ..$ longitude            : num -1.21
+    ##   ..$ latitude             : num 54.6
+    ##   ..$ eastings             : int 451459
+    ##   ..$ northings            : int 518602
+    ##   ..$ min_eastings         : int 450839
+    ##   ..$ min_northings        : int 517640
+    ##   ..$ max_eastings         : int 451968
+    ##   ..$ max_northings        : int 519361
 
 You can also find a place using an OSGB code:
 
@@ -592,6 +622,17 @@ str(place_lookup_result$result)
     ##  $ max_eastings         : int 419039
     ##  $ max_northings        : int 432041
 
+### Terminated postcodes
+
+You might end up having terminated postcodes in your data set. If you need more information about when a particular postcode was terminated use:
+
+``` r
+terminated_postcode("E1W 1UU")
+```
+
+    ##   postcode year_terminated month_terminated
+    ## 1  E1W 1UU            2015                2
+
 Notes
 -----
 
@@ -599,4 +640,4 @@ Currently, there is a limit to the number of API calls. However, [postcodes.io](
 
 For more info see the original [documentation](https://postcodes.io/docs).
 
-The reference manual can be accessed [here](https://github.com/erzk/PostcodesioR/blob/master/PostcodesioR.pdf). Go to my [blog](https://walczak.org/tag/postcodesior/) for more examples.
+The reference manual can be accessed [here](https://github.com/erzk/PostcodesioR/blob/master/PostcodesioR.pdf). Go to my [blog](https://walczak.org/tag/postcodesior/) for more examples and check the package's [website](https://erzk.github.io/PostcodesioR/).
