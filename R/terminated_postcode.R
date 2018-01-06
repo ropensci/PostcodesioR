@@ -19,7 +19,7 @@ terminated_postcode <- function(postcode) {
     stop("Please provide a UK postcode.")
   }
 
-  r <- GET(paste0("https://api.postcodes.io/terminated_postcodes/", postcode), ua)
+  r <- GET(paste0("https://api.postcodes.io/terminated_postcodes/", postcode))
   warn_for_status(r)
 
   if (status_code(r) == 200) {
