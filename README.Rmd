@@ -1,6 +1,6 @@
 ---
 title: "PostcodesioR"
-output: github_document
+output: rmarkdown::github_document
 ---
 
 [![Travis-CI Build Status](https://travis-ci.org/erzk/PostcodesioR.svg?branch=master)](https://travis-ci.org/erzk/PostcodesioR)
@@ -215,6 +215,15 @@ place_lookup_result <- place_lookup("osgb4000000074544700")
 str(place_lookup_result$result)
 ```
 
+### Terminated postcodes
+
+You might end up having terminated postcodes in your data set. If you need more information about when a particular postcode was terminated use:
+
+```{r}
+terminated_postcode("E1W 1UU")
+```
+
+
 ## Notes
 
 Currently, there is a limit to the number of API calls. However, [postcodes.io](https://postcodes.io/) provides full list of geolocation data that can be used locally without limitations. The original data is sourced from [Office for National Statistics Data Portal](https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page).
@@ -223,4 +232,4 @@ That [file](https://github.com/ideal-postcodes/postcodes.io/blob/master/latest) 
 For more info see the original [documentation](https://postcodes.io/docs).
 
 The reference manual can be accessed [here](https://github.com/erzk/PostcodesioR/blob/master/PostcodesioR.pdf).
-Go to my [blog](https://walczak.org/tag/postcodesior/) for more examples.
+Go to my [blog](https://walczak.org/tag/postcodesior/) for more examples and check the package's [website](https://erzk.github.io/PostcodesioR/).
