@@ -6,7 +6,7 @@ Authors@R: person("Eryk", "Walczak", email = "eryk.j.walczak@gmail.com", role = 
 Description: Free UK geocoding using data from Office for National Statistics.
     It is using several functions to get information about post codes, outward
     codes, reverse geocoding, nearest post codes/outward codes, validation, or
-    randomly generate a post code.
+    randomly generate a post code. API wrapper around postcodes.io.
 License: GPL-3 + file LICENSE
 URL: https://github.com/erzk/PostcodesioR/
 LazyData: TRUE
