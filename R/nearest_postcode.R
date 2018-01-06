@@ -35,5 +35,8 @@ nearest_postcode <- function(postcode, limit = 10, radius = 100) {
                   "?radius=",
                   radius))
   warn_for_status(r)
-  content(r)
+
+  if (status_code(r) == 200) {
+    content(r)$result
+  }
 }

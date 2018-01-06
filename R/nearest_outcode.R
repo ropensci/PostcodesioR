@@ -35,5 +35,8 @@ nearest_outcode <- function(outcode, limit = 10, radius = 5000) {
                   "?radius=",
                   radius))
   warn_for_status(r)
-  content(r)
+
+  if (status_code(r) == 200) {
+    content(r)$result
+  }
 }
