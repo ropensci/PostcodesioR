@@ -402,27 +402,100 @@ str(out_rev_geocode$result[1])
 
 #### Postcodes
 
-Generates a data frame with a random UK postcode and corresponding geographic information:
+Generates a list with a random UK postcode and corresponding geographic information:
 
 ``` r
 # without restrictions
 random_postcode()
 ```
 
-    ##   postcode quality eastings northings country          nhs_ha longitude
-    ## 1 IP14 3BW       1   600408    257797 England East of England 0.9299627
-    ##   latitude european_electoral_region primary_care_trust          region
-    ## 1   52.182                   Eastern            Suffolk East of England
-    ##               lsoa            msoa incode outcode
-    ## 1 Mid Suffolk 009A Mid Suffolk 009    3BW    IP14
-    ##   parliamentary_constituency admin_district  parish admin_county
-    ## 1            Bury St Edmunds    Mid Suffolk Buxhall      Suffolk
-    ##   admin_ward                          ccg    nuts admin_district
-    ## 1   Onehouse NHS Ipswich and East Suffolk Suffolk      E07000203
-    ##   admin_county admin_ward    parish parliamentary_constituency       ccg
-    ## 1    E10000029  E05007148 E04010548                  E14000613 E38000086
-    ##    nuts
-    ## 1 UKH14
+    ## $postcode
+    ## [1] "EN6 5LX"
+    ## 
+    ## $quality
+    ## [1] 1
+    ## 
+    ## $eastings
+    ## [1] 526533
+    ## 
+    ## $northings
+    ## [1] 201296
+    ## 
+    ## $country
+    ## [1] "England"
+    ## 
+    ## $nhs_ha
+    ## [1] "East of England"
+    ## 
+    ## $longitude
+    ## [1] -0.1706038
+    ## 
+    ## $latitude
+    ## [1] 51.69616
+    ## 
+    ## $european_electoral_region
+    ## [1] "Eastern"
+    ## 
+    ## $primary_care_trust
+    ## [1] "Hertfordshire"
+    ## 
+    ## $region
+    ## [1] "East of England"
+    ## 
+    ## $lsoa
+    ## [1] "Hertsmere 003B"
+    ## 
+    ## $msoa
+    ## [1] "Hertsmere 003"
+    ## 
+    ## $incode
+    ## [1] "5LX"
+    ## 
+    ## $outcode
+    ## [1] "EN6"
+    ## 
+    ## $parliamentary_constituency
+    ## [1] "Hertsmere"
+    ## 
+    ## $admin_district
+    ## [1] "Hertsmere"
+    ## 
+    ## $parish
+    ## [1] "Hertsmere, unparished area"
+    ## 
+    ## $admin_county
+    ## [1] "Hertfordshire"
+    ## 
+    ## $admin_ward
+    ## [1] "Potters Bar Oakmere"
+    ## 
+    ## $ccg
+    ## [1] "NHS Herts Valleys"
+    ## 
+    ## $nuts
+    ## [1] "Hertfordshire"
+    ## 
+    ## $codes
+    ## $codes$admin_district
+    ## [1] "E07000098"
+    ## 
+    ## $codes$admin_county
+    ## [1] "E10000015"
+    ## 
+    ## $codes$admin_ward
+    ## [1] "E05004758"
+    ## 
+    ## $codes$parish
+    ## [1] "E43000077"
+    ## 
+    ## $codes$parliamentary_constituency
+    ## [1] "E14000745"
+    ## 
+    ## $codes$ccg
+    ## [1] "E38000079"
+    ## 
+    ## $codes$nuts
+    ## [1] "UKH23"
 
 A randomly generated postcode can also belong to a particular outcode:
 
@@ -431,18 +504,93 @@ A randomly generated postcode can also belong to a particular outcode:
 random_postcode("N1")
 ```
 
-    ##   postcode quality eastings northings country nhs_ha  longitude latitude
-    ## 1   N1 9ET       1   531227    183280 England London -0.1094655 51.53318
-    ##   european_electoral_region primary_care_trust region           lsoa
-    ## 1                    London          Islington London Islington 020A
-    ##            msoa incode outcode   parliamentary_constituency admin_district
-    ## 1 Islington 020    9ET      N1 Islington South and Finsbury      Islington
-    ##                       parish admin_county admin_ward           ccg
-    ## 1 Islington, unparished area           NA  Barnsbury NHS Islington
-    ##                     nuts admin_district admin_county admin_ward    parish
-    ## 1 Haringey and Islington      E09000019    E99999999  E05000366 E43000209
-    ##   parliamentary_constituency       ccg  nuts
-    ## 1                  E14000764 E38000088 UKI43
+    ## $postcode
+    ## [1] "N1 6QJ"
+    ## 
+    ## $quality
+    ## [1] 1
+    ## 
+    ## $eastings
+    ## [1] 533248
+    ## 
+    ## $northings
+    ## [1] 182964
+    ## 
+    ## $country
+    ## [1] "England"
+    ## 
+    ## $nhs_ha
+    ## [1] "London"
+    ## 
+    ## $longitude
+    ## [1] -0.08046519
+    ## 
+    ## $latitude
+    ## [1] 51.52987
+    ## 
+    ## $european_electoral_region
+    ## [1] "London"
+    ## 
+    ## $primary_care_trust
+    ## [1] "City and Hackney Teaching"
+    ## 
+    ## $region
+    ## [1] "London"
+    ## 
+    ## $lsoa
+    ## [1] "Hackney 027E"
+    ## 
+    ## $msoa
+    ## [1] "Hackney 027"
+    ## 
+    ## $incode
+    ## [1] "6QJ"
+    ## 
+    ## $outcode
+    ## [1] "N1"
+    ## 
+    ## $parliamentary_constituency
+    ## [1] "Hackney South and Shoreditch"
+    ## 
+    ## $admin_district
+    ## [1] "Hackney"
+    ## 
+    ## $parish
+    ## [1] "Hackney, unparished area"
+    ## 
+    ## $admin_county
+    ## NULL
+    ## 
+    ## $admin_ward
+    ## [1] "Hoxton East & Shoreditch"
+    ## 
+    ## $ccg
+    ## [1] "NHS City and Hackney"
+    ## 
+    ## $nuts
+    ## [1] "Hackney and Newham"
+    ## 
+    ## $codes
+    ## $codes$admin_district
+    ## [1] "E09000012"
+    ## 
+    ## $codes$admin_county
+    ## [1] "E99999999"
+    ## 
+    ## $codes$admin_ward
+    ## [1] "E05009377"
+    ## 
+    ## $codes$parish
+    ## [1] "E43000202"
+    ## 
+    ## $codes$parliamentary_constituency
+    ## [1] "E14000721"
+    ## 
+    ## $codes$ccg
+    ## [1] "E38000035"
+    ## 
+    ## $codes$nuts
+    ## [1] "UKI41"
 
 #### Places
 
@@ -452,14 +600,14 @@ You can also generate a random place, specified by an OSGB code, with correspond
 random_place()
 ```
 
-    ##                   code   name_1 name_1_lang name_2 name_2_lang local_type
-    ## 1 osgb4000000074555668 Stichill        NULL   NULL        NULL    Village
-    ##   outcode   county_unitary county_unitary_type district_borough
-    ## 1     TD5 Scottish Borders    UnitaryAuthority             NULL
-    ##   district_borough_type   region  country longitude latitude eastings
-    ## 1                  NULL Scotland Scotland -2.457211 55.63886   371317
+    ##                   code         name_1 name_1_lang name_2 name_2_lang
+    ## 1 osgb4000000074577575 Lower Lovacott        NULL   NULL        NULL
+    ##   local_type outcode county_unitary county_unitary_type district_borough
+    ## 1    Village    EX31          Devon              County      North Devon
+    ##   district_borough_type     region country longitude latitude eastings
+    ## 1              District South West England  -4.11107 51.02725   252053
     ##   northings min_eastings min_northings max_eastings max_northings
-    ## 1    638462       370926        638045       371760        638784
+    ## 1    127441       251799        127166       252299        127666
 
 ### Postcode validation
 
@@ -485,7 +633,7 @@ Provide a postcode to get a list of the nearest postcodes:
 near_pc <- nearest_postcode("EC1Y 8LX")
 
 #overview
-str(near_pc$result[1])
+str(near_pc[1])
 ```
 
     ## List of 1
@@ -527,7 +675,7 @@ You can also use outcodes:
 ``` r
 near_outcode <- nearest_outcode("EC1Y")
 # overview
-str(near_outcode$result[2])
+str(near_outcode[2])
 ```
 
     ## List of 1
@@ -636,7 +784,7 @@ terminated_postcode("E1W 1UU")
 Notes
 -----
 
-Currently, there is a limit to the number of API calls. However, [postcodes.io](https://postcodes.io/) provides full list of geolocation data that can be used locally without limitations. The original data is sourced from [Office for National Statistics Data Portal](https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page). That [file](https://github.com/ideal-postcodes/postcodes.io/blob/master/latest) is rather large so I didn't include it in the package.
+Currently, there is a limit to the number of API calls that can be made. However, [postcodes.io](https://postcodes.io/) provides full list of geolocation data that can be used locally without limitations. The original data is sourced from [Office for National Statistics Data Portal](https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page). That [file](https://github.com/ideal-postcodes/postcodes.io/blob/master/latest) is rather large so I didn't include it in the package.
 
 For more info see the original [documentation](https://postcodes.io/docs).
 

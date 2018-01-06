@@ -138,7 +138,7 @@ str(out_rev_geocode$result[1])
 
 #### Postcodes
 
-Generates a data frame with a random UK postcode and corresponding geographic information:
+Generates a list with a random UK postcode and corresponding geographic information:
 
 ```{r}
 # without restrictions
@@ -184,7 +184,7 @@ Provide a postcode to get a list of the nearest postcodes:
 near_pc <- nearest_postcode("EC1Y 8LX")
 
 #overview
-str(near_pc$result[1])
+str(near_pc[1])
 ```
 
 You can also use outcodes:
@@ -192,7 +192,7 @@ You can also use outcodes:
 ```{r}
 near_outcode <- nearest_outcode("EC1Y")
 # overview
-str(near_outcode$result[2])
+str(near_outcode[2])
 ```
 
 ### Find places
@@ -226,7 +226,7 @@ terminated_postcode("E1W 1UU")
 
 ## Notes
 
-Currently, there is a limit to the number of API calls. However, [postcodes.io](https://postcodes.io/) provides full list of geolocation data that can be used locally without limitations. The original data is sourced from [Office for National Statistics Data Portal](https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page).
+Currently, there is a limit to the number of API calls that can be made. However, [postcodes.io](https://postcodes.io/) provides full list of geolocation data that can be used locally without limitations. The original data is sourced from [Office for National Statistics Data Portal](https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page).
 That [file](https://github.com/ideal-postcodes/postcodes.io/blob/master/latest) is rather large so I didn't include it in the package.
 
 For more info see the original [documentation](https://postcodes.io/docs).
