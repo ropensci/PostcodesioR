@@ -4,7 +4,7 @@
 \alias{terminated_postcode}
 \title{Terminated postcode lookup}
 \usage{
-terminated_postcode(postcode = NULL)
+terminated_postcode(postcode)
 }
 \arguments{
 \item{postcode}{A string. Terminated UK postcode.}

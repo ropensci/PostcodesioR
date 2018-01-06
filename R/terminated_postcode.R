@@ -14,7 +14,7 @@
 #' terminated_postcode("EC1Y 8LX") # exisitng postcode - returns 404
 #' terminated_postcode("E1W 1UU") # terminated - from Wikipedia but returns 404
 #'
-terminated_postcode <- function(postcode = NULL) {
+terminated_postcode <- function(postcode) {
   if (!is.character(postcode) || nchar(postcode) < 3) {
     stop("Please provide a UK postcode.")
   }
