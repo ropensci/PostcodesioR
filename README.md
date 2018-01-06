@@ -410,92 +410,92 @@ random_postcode()
 ```
 
     ## $postcode
-    ## [1] "L34 9EY"
+    ## [1] "SE16 3TP"
     ## 
     ## $quality
     ## [1] 1
     ## 
     ## $eastings
-    ## [1] 343716
+    ## [1] 534677
     ## 
     ## $northings
-    ## [1] 396737
+    ## [1] 178823
     ## 
     ## $country
     ## [1] "England"
     ## 
     ## $nhs_ha
-    ## [1] "North West"
+    ## [1] "London"
     ## 
     ## $longitude
-    ## [1] -2.849254
+    ## [1] -0.06145744
     ## 
     ## $latitude
-    ## [1] 53.46436
+    ## [1] 51.49232
     ## 
     ## $european_electoral_region
-    ## [1] "North West"
+    ## [1] "London"
     ## 
     ## $primary_care_trust
-    ## [1] "Knowsley"
+    ## [1] "Southwark"
     ## 
     ## $region
-    ## [1] "North West"
+    ## [1] "London"
     ## 
     ## $lsoa
-    ## [1] "Knowsley 005E"
+    ## [1] "Southwark 010D"
     ## 
     ## $msoa
-    ## [1] "Knowsley 005"
+    ## [1] "Southwark 010"
     ## 
     ## $incode
-    ## [1] "9EY"
+    ## [1] "3TP"
     ## 
     ## $outcode
-    ## [1] "L34"
+    ## [1] "SE16"
     ## 
     ## $parliamentary_constituency
-    ## [1] "Knowsley"
+    ## [1] "Bermondsey and Old Southwark"
     ## 
     ## $admin_district
-    ## [1] "Knowsley"
+    ## [1] "Southwark"
     ## 
     ## $parish
-    ## [1] "Knowsley"
+    ## [1] "Southwark, unparished area"
     ## 
     ## $admin_county
     ## NULL
     ## 
     ## $admin_ward
-    ## [1] "Prescot North"
+    ## [1] "South Bermondsey"
     ## 
     ## $ccg
-    ## [1] "NHS Knowsley"
+    ## [1] "NHS Southwark"
     ## 
     ## $nuts
-    ## [1] "East Merseyside"
+    ## [1] "Lewisham and Southwark"
     ## 
     ## $codes
     ## $codes$admin_district
-    ## [1] "E08000011"
+    ## [1] "E09000028"
     ## 
     ## $codes$admin_county
     ## [1] "E99999999"
     ## 
     ## $codes$admin_ward
-    ## [1] "E05010940"
+    ## [1] "E05000550"
     ## 
     ## $codes$parish
-    ## [1] "E04000018"
+    ## [1] "E43000218"
     ## 
     ## $codes$parliamentary_constituency
-    ## [1] "E14000775"
+    ## [1] "E14000553"
     ## 
     ## $codes$ccg
-    ## [1] "E38000091"
+    ## [1] "E38000171"
     ## 
     ## $codes$nuts
-    ## [1] "UKD71"
+    ## [1] "UKI44"
 
 A randomly generated postcode can also belong to a particular outcode:
 
@@ -505,16 +505,16 @@ random_postcode("N1")
 ```
 
     ## $postcode
-    ## [1] "N1 9DN"
+    ## [1] "N1 1QB"
     ## 
     ## $quality
     ## [1] 1
     ## 
     ## $eastings
-    ## [1] 530558
+    ## [1] 531543
     ## 
     ## $northings
-    ## [1] 183237
+    ## [1] 184395
     ## 
     ## $country
     ## [1] "England"
@@ -523,10 +523,10 @@ random_postcode("N1")
     ## [1] "London"
     ## 
     ## $longitude
-    ## [1] -0.1191209
+    ## [1] -0.104496
     ## 
     ## $latitude
-    ## [1] 51.53295
+    ## [1] 51.54313
     ## 
     ## $european_electoral_region
     ## [1] "London"
@@ -538,13 +538,13 @@ random_postcode("N1")
     ## [1] "London"
     ## 
     ## $lsoa
-    ## [1] "Islington 021B"
+    ## [1] "Islington 016D"
     ## 
     ## $msoa
-    ## [1] "Islington 021"
+    ## [1] "Islington 016"
     ## 
     ## $incode
-    ## [1] "9DN"
+    ## [1] "1QB"
     ## 
     ## $outcode
     ## [1] "N1"
@@ -562,7 +562,7 @@ random_postcode("N1")
     ## NULL
     ## 
     ## $admin_ward
-    ## [1] "Caledonian"
+    ## [1] "St Mary's"
     ## 
     ## $ccg
     ## [1] "NHS Islington"
@@ -578,7 +578,7 @@ random_postcode("N1")
     ## [1] "E99999999"
     ## 
     ## $codes$admin_ward
-    ## [1] "E05000368"
+    ## [1] "E05000379"
     ## 
     ## $codes$parish
     ## [1] "E43000209"
@@ -600,14 +600,14 @@ You can also generate a random place, specified by an OSGB code, with correspond
 random_place()
 ```
 
-    ##                   code   name_1 name_1_lang name_2 name_2_lang local_type
-    ## 1 osgb4000000074561737 Swanmore        NULL   NULL        NULL    Village
-    ##   outcode county_unitary county_unitary_type district_borough
-    ## 1    SO32      Hampshire              County       Winchester
-    ##   district_borough_type     region country longitude latitude eastings
-    ## 1              District South East England  -1.18024 50.94409   457689
+    ##                   code  name_1 name_1_lang name_2 name_2_lang local_type
+    ## 1 osgb4000000074579205 Fordham        NULL   NULL        NULL     Hamlet
+    ##   outcode county_unitary county_unitary_type             district_borough
+    ## 1    PE38        Norfolk              County King's Lynn and West Norfolk
+    ##   district_borough_type  region country longitude latitude eastings
+    ## 1              District Eastern England 0.3830241 52.57099   561596
     ##   northings min_eastings min_northings max_eastings max_northings
-    ## 1    116392       456472        115368       458433        117188
+    ## 1    299686       561323        299472       561823        299972
 
 ### Postcode validation
 
@@ -674,6 +674,7 @@ You can also use outcodes:
 
 ``` r
 near_outcode <- nearest_outcode("EC1Y")
+
 # overview
 str(near_outcode[2])
 ```
@@ -702,6 +703,38 @@ str(near_outcode[2])
     ##   ..$ country       :List of 1
     ##   .. ..$ : chr "England"
     ##   ..$ distance      : num 400
+
+Or longitude and latitude
+
+``` r
+near_ll <- nearest_outcode_lonlat(0.127, 51.507)
+
+#overview
+str(near_ll[1])
+```
+
+    ## List of 1
+    ##  $ :List of 11
+    ##   ..$ outcode       : chr "SE28"
+    ##   ..$ longitude     : num 0.105
+    ##   ..$ latitude      : num 51.5
+    ##   ..$ northings     : int 180253
+    ##   ..$ eastings      : int 546165
+    ##   ..$ admin_district:List of 2
+    ##   .. ..$ : chr "Bexley"
+    ##   .. ..$ : chr "Greenwich"
+    ##   ..$ parish        :List of 2
+    ##   .. ..$ : chr "Greenwich, unparished area"
+    ##   .. ..$ : chr "Bexley, unparished area"
+    ##   ..$ admin_county  : list()
+    ##   ..$ admin_ward    :List of 4
+    ##   .. ..$ : chr "Thamesmead Moorings"
+    ##   .. ..$ : chr "Glyndon"
+    ##   .. ..$ : chr "Thamesmead East"
+    ##   .. ..$ : chr "Plumstead"
+    ##   ..$ country       :List of 1
+    ##   .. ..$ : chr "England"
+    ##   ..$ distance      : num 1646
 
 ### Find places
 

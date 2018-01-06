@@ -193,9 +193,20 @@ You can also use outcodes:
 
 ```{r}
 near_outcode <- nearest_outcode("EC1Y")
+
 # overview
 str(near_outcode[2])
 ```
+
+Or longitude and latitude
+
+```{r}
+near_ll <- nearest_outcode_lonlat(0.127, 51.507)
+
+#overview
+str(near_ll[1])
+```
+
 
 ### Find places
 

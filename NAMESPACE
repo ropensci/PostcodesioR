@@ -3,6 +3,7 @@
 export(bulk_postcode_lookup)
 export(bulk_reverse_geocoding)
 export(nearest_outcode)
+export(nearest_outcode_lonlat)
 export(nearest_postcode)
 export(outcode_reverse_geocoding)
 export(outward_code_lookup)
