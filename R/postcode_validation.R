@@ -16,8 +16,5 @@
 #'
 postcode_validation <- function(postcode) {
   r <- GET(paste0("https://api.postcodes.io/postcodes/", postcode, "/validate"))
-  warn_for_status(r)
-  r <- content(r)
-  r <- r[[2]]
-  return(r)
+  extract_results(r)
 }

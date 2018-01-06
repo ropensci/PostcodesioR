@@ -23,6 +23,5 @@ reverse_geocoding <- function(longitude, latitude, limit = 10, radius = 100, wid
   r <- GET("https://api.postcodes.io/postcodes",
            query = list(lon = longitude, lat = latitude,
                         limit = limit, radius = radius, wideSearch = wideSearch))
-  warn_for_status(r)
-  content(r)
+  extract_results(r)
 }

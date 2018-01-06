@@ -40,6 +40,5 @@ outcode_reverse_geocoding <- function(longitude, latitude, limit = 10, radius = 
                   limit,
                   "&radius=",
                   radius))
-  warn_for_status(r)
-  content(r)
+  extract_results(r)
 }

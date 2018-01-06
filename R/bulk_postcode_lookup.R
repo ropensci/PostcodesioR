@@ -20,7 +20,5 @@ bulk_postcode_lookup <- function(postcodes) {
   r <- POST("https://api.postcodes.io/postcodes",
             body = postcodes,
             encode = "json")
-  warn_for_status(r)
-  pc_content <- content(r)
-  return(pc_content)
+  extract_results(r)
 }

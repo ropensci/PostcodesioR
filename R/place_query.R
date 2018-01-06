@@ -23,6 +23,5 @@ place_query <- function(place, limit = 10) {
     stop("Please provide an integer lower than 100.")
   }
   r <- GET(paste0("https://api.postcodes.io/places?q=", place, "&limit=", limit))
-  warn_for_status(r)
-  content(r)
+  extract_results(r)
 }

@@ -17,9 +17,5 @@
 random_postcode <- function(outcode = NULL) {
   r <- GET("https://api.postcodes.io/random/postcodes",
            query = list(outcode = outcode))
-  warn_for_status(r)
-
-  if (status_code(r) == 200) {
-    content(r)$result
-  }
+  extract_results(r)
 }

@@ -18,6 +18,5 @@ place_lookup <- function(code) {
     stop("Please provide a valid Ordnance Survey code.")
   }
   r <- GET(paste0("https://api.postcodes.io/places/", code))
-  warn_for_status(r)
-  content(r)
+  extract_results(r)
 }

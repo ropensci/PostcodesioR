@@ -37,7 +37,5 @@ bulk_reverse_geocoding <- function(geolocations) {
   r <- POST("https://api.postcodes.io/postcodes",
             body = geolocations,
             encode = "json")
-  warn_for_status(r)
-  pc_content <- content(r)
-  return(pc_content)
+  extract_results(r)
 }

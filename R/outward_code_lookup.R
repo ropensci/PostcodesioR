@@ -18,6 +18,5 @@ outward_code_lookup <- function(outcode) {
     stop("Please provide a valid UK outcode.")
   }
   r <- GET(paste0("https://api.postcodes.io/outcodes/", outcode))
-  warn_for_status(r)
-  content(r)
+  extract_results(r)
 }
