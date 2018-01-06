@@ -4,8 +4,8 @@
 #'
 #' @import httr
 #'
-#' @param longitude A string. Needs to have at least three decimal points.
-#' @param latitude A string. Needs to have at least three decimal points.
+#' @param longitude A string or numeric. Needs to have at least three decimal points.
+#' @param latitude A string or numeric. Needs to have at least three decimal points.
 #' @param limit An integer. Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.
 #' @param radius An integer. Limits number of postcodes matches to return. Defaults to 100m. Needs to be less than 2,000m.
 #' @param wideSearch TRUE or FALSE. Search up to 20km radius, but subject to a maximum of 10 results. Since lookups over a wide area can be very expensive, we've created this method to allow you choose to make the trade off between search radius and number of results. Defaults to false. When enabled, radius and limits over 10 are ignored.

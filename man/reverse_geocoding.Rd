@@ -8,9 +8,9 @@ reverse_geocoding(longitude, latitude, limit = 10, radius = 100,
   wideSearch = NULL)
 }
 \arguments{
-\item{longitude}{A string. Needs to have at least three decimal points.}
+\item{longitude}{A string or numeric. Needs to have at least three decimal points.}
 
-\item{latitude}{A string. Needs to have at least three decimal points.}
+\item{latitude}{A string or numeric. Needs to have at least three decimal points.}
 
 \item{limit}{An integer. Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.}
 
