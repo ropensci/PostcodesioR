@@ -410,92 +410,92 @@ random_postcode()
 ```
 
     ## $postcode
-    ## [1] "SE16 3TP"
+    ## [1] "PO19 7HW"
     ## 
     ## $quality
     ## [1] 1
     ## 
     ## $eastings
-    ## [1] 534677
+    ## [1] 487352
     ## 
     ## $northings
-    ## [1] 178823
+    ## [1] 105472
     ## 
     ## $country
     ## [1] "England"
     ## 
     ## $nhs_ha
-    ## [1] "London"
+    ## [1] "South East Coast"
     ## 
     ## $longitude
-    ## [1] -0.06145744
+    ## [1] -0.7607198
     ## 
     ## $latitude
-    ## [1] 51.49232
+    ## [1] 50.84219
     ## 
     ## $european_electoral_region
-    ## [1] "London"
+    ## [1] "South East"
     ## 
     ## $primary_care_trust
-    ## [1] "Southwark"
+    ## [1] "West Sussex"
     ## 
     ## $region
-    ## [1] "London"
+    ## [1] "South East"
     ## 
     ## $lsoa
-    ## [1] "Southwark 010D"
+    ## [1] "Chichester 008A"
     ## 
     ## $msoa
-    ## [1] "Southwark 010"
+    ## [1] "Chichester 008"
     ## 
     ## $incode
-    ## [1] "3TP"
+    ## [1] "7HW"
     ## 
     ## $outcode
-    ## [1] "SE16"
+    ## [1] "PO19"
     ## 
     ## $parliamentary_constituency
-    ## [1] "Bermondsey and Old Southwark"
+    ## [1] "Chichester"
     ## 
     ## $admin_district
-    ## [1] "Southwark"
+    ## [1] "Chichester"
     ## 
     ## $parish
-    ## [1] "Southwark, unparished area"
+    ## [1] "Chichester"
     ## 
     ## $admin_county
-    ## NULL
+    ## [1] "West Sussex"
     ## 
     ## $admin_ward
-    ## [1] "South Bermondsey"
+    ## [1] "Chichester East"
     ## 
     ## $ccg
-    ## [1] "NHS Southwark"
+    ## [1] "NHS Coastal West Sussex"
     ## 
     ## $nuts
-    ## [1] "Lewisham and Southwark"
+    ## [1] "West Sussex (South West)"
     ## 
     ## $codes
     ## $codes$admin_district
-    ## [1] "E09000028"
+    ## [1] "E07000225"
     ## 
     ## $codes$admin_county
-    ## [1] "E99999999"
+    ## [1] "E10000032"
     ## 
     ## $codes$admin_ward
-    ## [1] "E05000550"
+    ## [1] "E05007605"
     ## 
     ## $codes$parish
-    ## [1] "E43000218"
+    ## [1] "E04009888"
     ## 
     ## $codes$parliamentary_constituency
-    ## [1] "E14000553"
+    ## [1] "E14000633"
     ## 
     ## $codes$ccg
-    ## [1] "E38000171"
+    ## [1] "E38000213"
     ## 
     ## $codes$nuts
-    ## [1] "UKI44"
+    ## [1] "UKJ27"
 
 A randomly generated postcode can also belong to a particular outcode:
 
@@ -505,16 +505,16 @@ random_postcode("N1")
 ```
 
     ## $postcode
-    ## [1] "N1 1QB"
+    ## [1] "N1 2XL"
     ## 
     ## $quality
     ## [1] 1
     ## 
     ## $eastings
-    ## [1] 531543
+    ## [1] 531734
     ## 
     ## $northings
-    ## [1] 184395
+    ## [1] 184490
     ## 
     ## $country
     ## [1] "England"
@@ -523,10 +523,10 @@ random_postcode("N1")
     ## [1] "London"
     ## 
     ## $longitude
-    ## [1] -0.104496
+    ## [1] -0.1017078
     ## 
     ## $latitude
-    ## [1] 51.54313
+    ## [1] 51.54394
     ## 
     ## $european_electoral_region
     ## [1] "London"
@@ -538,13 +538,13 @@ random_postcode("N1")
     ## [1] "London"
     ## 
     ## $lsoa
-    ## [1] "Islington 016D"
+    ## [1] "Islington 016E"
     ## 
     ## $msoa
     ## [1] "Islington 016"
     ## 
     ## $incode
-    ## [1] "1QB"
+    ## [1] "2XL"
     ## 
     ## $outcode
     ## [1] "N1"
@@ -600,14 +600,14 @@ You can also generate a random place, specified by an OSGB code, with correspond
 random_place()
 ```
 
-    ##                   code  name_1 name_1_lang name_2 name_2_lang local_type
-    ## 1 osgb4000000074579205 Fordham        NULL   NULL        NULL     Hamlet
-    ##   outcode county_unitary county_unitary_type             district_borough
-    ## 1    PE38        Norfolk              County King's Lynn and West Norfolk
-    ##   district_borough_type  region country longitude latitude eastings
-    ## 1              District Eastern England 0.3830241 52.57099   561596
+    ##                   code name_1 name_1_lang name_2 name_2_lang local_type
+    ## 1 osgb4000000074324750   Ford        NULL   NULL        NULL    Village
+    ##   outcode county_unitary county_unitary_type district_borough
+    ## 1     SY5     Shropshire    UnitaryAuthority             NULL
+    ##   district_borough_type        region country longitude latitude eastings
+    ## 1                  NULL West Midlands England -2.869018 52.71753   341396
     ##   northings min_eastings min_northings max_eastings max_northings
-    ## 1    299686       561323        299472       561823        299972
+    ## 1    313673       340495        312885       342068        314137
 
 ### Postcode validation
 
@@ -821,4 +821,4 @@ Currently, there is a limit to the number of API calls that can be made. However
 
 For more info see the original [documentation](https://postcodes.io/docs).
 
-The reference manual can be accessed [here](https://github.com/erzk/PostcodesioR/blob/master/PostcodesioR.pdf). Go to my [blog](https://walczak.org/tag/postcodesior/) for more examples and check the package's [website](https://erzk.github.io/PostcodesioR/).
+Go to the package's [website](https://erzk.github.io/PostcodesioR/) or to my [blog](https://walczak.org/tag/postcodesior/) for more examples.

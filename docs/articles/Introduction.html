@@ -29,7 +29,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="..//index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -75,7 +75,7 @@
       <h1>Introduction</h1>
                         <h4 class="author">Eryk Walczak</h4>
             
-            <h4 class="date">2017-08-05</h4>
+            <h4 class="date">2018-01-08</h4>
           </div>
 
     
@@ -106,38 +106,36 @@ lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../referen
 
 <span class="co">#overview</span>
 <span class="kw">str</span>(lookup_result)</code></pre></div>
-<pre><code>## List of 2
-##  $ status: int 200
-##  $ result:List of 23
-##   ..$ postcode                  : chr "EC1Y 8LX"
-##   ..$ quality                   : int 1
-##   ..$ eastings                  : int 532544
-##   ..$ northings                 : int 182128
-##   ..$ country                   : chr "England"
-##   ..$ nhs_ha                    : chr "London"
-##   ..$ longitude                 : num -0.0909
-##   ..$ latitude                  : num 51.5
-##   ..$ parliamentary_constituency: chr "Islington South and Finsbury"
-##   ..$ european_electoral_region : chr "London"
-##   ..$ primary_care_trust        : chr "Islington"
-##   ..$ region                    : chr "London"
-##   ..$ lsoa                      : chr "Islington 023D"
-##   ..$ msoa                      : chr "Islington 023"
-##   ..$ incode                    : chr "8LX"
-##   ..$ outcode                   : chr "EC1Y"
-##   ..$ admin_district            : chr "Islington"
-##   ..$ parish                    : chr "Islington, unparished area"
-##   ..$ admin_county              : NULL
-##   ..$ admin_ward                : chr "Bunhill"
-##   ..$ ccg                       : chr "NHS Islington"
-##   ..$ nuts                      : chr "Haringey and Islington"
-##   ..$ codes                     :List of 6
-##   .. ..$ admin_district: chr "E09000019"
-##   .. ..$ admin_county  : chr "E99999999"
-##   .. ..$ admin_ward    : chr "E05000367"
-##   .. ..$ parish        : chr "E43000209"
-##   .. ..$ ccg           : chr "E38000088"
-##   .. ..$ nuts          : chr "UKI43"</code></pre>
+<pre><code>## 'data.frame':    1 obs. of  29 variables:
+##  $ postcode                  : chr "EC1Y 8LX"
+##  $ quality                   : int 1
+##  $ eastings                  : int 532544
+##  $ northings                 : int 182128
+##  $ country                   : chr "England"
+##  $ nhs_ha                    : chr "London"
+##  $ longitude                 : num -0.0909
+##  $ latitude                  : num 51.5
+##  $ european_electoral_region : chr "London"
+##  $ primary_care_trust        : chr "Islington"
+##  $ region                    : chr "London"
+##  $ lsoa                      : chr "Islington 023D"
+##  $ msoa                      : chr "Islington 023"
+##  $ incode                    : chr "8LX"
+##  $ outcode                   : chr "EC1Y"
+##  $ parliamentary_constituency: chr "Islington South and Finsbury"
+##  $ admin_district            : chr "Islington"
+##  $ parish                    : chr "Islington, unparished area"
+##  $ admin_county              : logi NA
+##  $ admin_ward                : chr "Bunhill"
+##  $ ccg                       : chr "NHS Islington"
+##  $ nuts                      : chr "Haringey and Islington"
+##  $ admin_district            : chr "E09000019"
+##  $ admin_county              : chr "E99999999"
+##  $ admin_ward                : chr "E05000367"
+##  $ parish                    : chr "E43000209"
+##  $ parliamentary_constituency: chr "E14000764"
+##  $ ccg                       : chr "E38000088"
+##  $ nuts                      : chr "UKI43"</code></pre>
 </div>
 <div id="multiple-postcodes" class="section level4">
 <h4 class="hasAnchor">
@@ -146,7 +144,7 @@ lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../referen
 bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/bulk_postcode_lookup.html">bulk_postcode_lookup</a></span>(pc_list)
 
 <span class="co">#overview</span>
-<span class="kw">str</span>(bulk_lookup_result<span class="op">$</span>result[<span class="dv">1</span>])</code></pre></div>
+<span class="kw">str</span>(bulk_lookup_result[<span class="dv">1</span>])</code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 2
 ##   ..$ query : chr "PR3 0SG"
@@ -159,7 +157,6 @@ bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../re
 ##   .. ..$ nhs_ha                    : chr "North West"
 ##   .. ..$ longitude                 : num -2.75
 ##   .. ..$ latitude                  : num 53.9
-##   .. ..$ parliamentary_constituency: chr "Wyre and Preston North"
 ##   .. ..$ european_electoral_region : chr "North West"
 ##   .. ..$ primary_care_trust        : chr "North Lancashire Teaching"
 ##   .. ..$ region                    : chr "North West"
@@ -167,19 +164,21 @@ bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../re
 ##   .. ..$ msoa                      : chr "Wyre 006"
 ##   .. ..$ incode                    : chr "0SG"
 ##   .. ..$ outcode                   : chr "PR3"
+##   .. ..$ parliamentary_constituency: chr "Wyre and Preston North"
 ##   .. ..$ admin_district            : chr "Wyre"
 ##   .. ..$ parish                    : chr "Myerscough and Bilsborrow"
 ##   .. ..$ admin_county              : chr "Lancashire"
 ##   .. ..$ admin_ward                : chr "Brock with Catterall"
-##   .. ..$ ccg                       : chr "NHS Morecambe Bay CCG"
+##   .. ..$ ccg                       : chr "NHS Morecambe Bay"
 ##   .. ..$ nuts                      : chr "Lancaster and Wyre"
-##   .. ..$ codes                     :List of 6
-##   .. .. ..$ admin_district: chr "E07000128"
-##   .. .. ..$ admin_county  : chr "E10000017"
-##   .. .. ..$ admin_ward    : chr "E05009934"
-##   .. .. ..$ parish        : chr "E04005340"
-##   .. .. ..$ ccg           : chr "E38000216"
-##   .. .. ..$ nuts          : chr "UKD44"</code></pre>
+##   .. ..$ codes                     :List of 7
+##   .. .. ..$ admin_district            : chr "E07000128"
+##   .. .. ..$ admin_county              : chr "E10000017"
+##   .. .. ..$ admin_ward                : chr "E05009934"
+##   .. .. ..$ parish                    : chr "E04005340"
+##   .. .. ..$ parliamentary_constituency: chr "E14001057"
+##   .. .. ..$ ccg                       : chr "E38000216"
+##   .. .. ..$ nuts                      : chr "UKD44"</code></pre>
 </div>
 <div id="outward-code-lookup" class="section level4">
 <h4 class="hasAnchor">
@@ -189,39 +188,37 @@ bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../re
 
 <span class="co">#overview</span>
 <span class="kw">str</span>(ocl)</code></pre></div>
-<pre><code>## List of 2
-##  $ status: int 200
-##  $ result:List of 10
-##   ..$ outcode       : chr "E1"
-##   ..$ longitude     : num -0.0593
-##   ..$ latitude      : num 51.5
-##   ..$ northings     : int 181624
-##   ..$ eastings      : int 534750
-##   ..$ admin_district:List of 3
-##   .. ..$ : chr "City of London"
-##   .. ..$ : chr "Hackney"
-##   .. ..$ : chr "Tower Hamlets"
-##   ..$ parish        :List of 3
-##   .. ..$ : chr "Tower Hamlets, unparished area"
-##   .. ..$ : chr "City of London, unparished area"
-##   .. ..$ : chr "Hackney, unparished area"
-##   ..$ admin_county  : list()
-##   ..$ admin_ward    :List of 13
-##   .. ..$ : chr "Bethnal Green"
-##   .. ..$ : chr "Shadwell"
-##   .. ..$ : chr "Portsoken"
-##   .. ..$ : chr "Whitechapel"
-##   .. ..$ : chr "Aldgate"
-##   .. ..$ : chr "Tower"
-##   .. ..$ : chr "Stepney Green"
-##   .. ..$ : chr "Weavers"
-##   .. ..$ : chr "Bishopsgate"
-##   .. ..$ : chr "Hoxton East &amp; Shoreditch"
-##   .. ..$ : chr "Spitalfields &amp; Banglatown"
-##   .. ..$ : chr "St Peter's"
-##   .. ..$ : chr "St Dunstan's"
-##   ..$ country       :List of 1
-##   .. ..$ : chr "England"</code></pre>
+<pre><code>## List of 10
+##  $ outcode       : chr "E1"
+##  $ longitude     : num -0.0594
+##  $ latitude      : num 51.5
+##  $ northings     : int 181622
+##  $ eastings      : int 534747
+##  $ admin_district:List of 3
+##   ..$ : chr "City of London"
+##   ..$ : chr "Hackney"
+##   ..$ : chr "Tower Hamlets"
+##  $ parish        :List of 3
+##   ..$ : chr "City of London, unparished area"
+##   ..$ : chr "Hackney, unparished area"
+##   ..$ : chr "Tower Hamlets, unparished area"
+##  $ admin_county  : list()
+##  $ admin_ward    :List of 13
+##   ..$ : chr "Spitalfields &amp; Banglatown"
+##   ..$ : chr "Portsoken"
+##   ..$ : chr "Tower"
+##   ..$ : chr "St Dunstan's"
+##   ..$ : chr "Aldgate"
+##   ..$ : chr "Bishopsgate"
+##   ..$ : chr "Hoxton East &amp; Shoreditch"
+##   ..$ : chr "Whitechapel"
+##   ..$ : chr "Bethnal Green"
+##   ..$ : chr "Shadwell"
+##   ..$ : chr "Stepney Green"
+##   ..$ : chr "St Peter's"
+##   ..$ : chr "Weavers"
+##  $ country       :List of 1
+##   ..$ : chr "England"</code></pre>
 </div>
 </div>
 <div id="reverse-geocoding" class="section level3">
@@ -234,7 +231,7 @@ bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../re
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../reference/reverse_geocoding.html">reverse_geocoding</a></span>(<span class="fl">0.127</span>, <span class="fl">51.507</span>)
 
 <span class="co"># overview</span>
-<span class="kw">str</span>(rev_geo<span class="op">$</span>result[<span class="dv">1</span>])</code></pre></div>
+<span class="kw">str</span>(rev_geo[<span class="dv">1</span>])</code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 24
 ##   ..$ postcode                  : chr "SE28 8NH"
@@ -245,7 +242,6 @@ bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../re
 ##   ..$ nhs_ha                    : chr "London"
 ##   ..$ longitude                 : num 0.127
 ##   ..$ latitude                  : num 51.5
-##   ..$ parliamentary_constituency: chr "Erith and Thamesmead"
 ##   ..$ european_electoral_region : chr "London"
 ##   ..$ primary_care_trust        : chr "Bexley"
 ##   ..$ region                    : chr "London"
@@ -254,19 +250,21 @@ bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../re
 ##   ..$ incode                    : chr "8NH"
 ##   ..$ outcode                   : chr "SE28"
 ##   ..$ distance                  : num 38.9
+##   ..$ parliamentary_constituency: chr "Erith and Thamesmead"
 ##   ..$ admin_district            : chr "Bexley"
 ##   ..$ parish                    : chr "Bexley, unparished area"
 ##   ..$ admin_county              : NULL
 ##   ..$ admin_ward                : chr "Thamesmead East"
 ##   ..$ ccg                       : chr "NHS Bexley"
 ##   ..$ nuts                      : chr "Bexley and Greenwich"
-##   ..$ codes                     :List of 6
-##   .. ..$ admin_district: chr "E09000004"
-##   .. ..$ admin_county  : chr "E99999999"
-##   .. ..$ admin_ward    : chr "E05000084"
-##   .. ..$ parish        : chr "E43000194"
-##   .. ..$ ccg           : chr "E38000011"
-##   .. ..$ nuts          : chr "UKI51"</code></pre>
+##   ..$ codes                     :List of 7
+##   .. ..$ admin_district            : chr "E09000004"
+##   .. ..$ admin_county              : chr "E99999999"
+##   .. ..$ admin_ward                : chr "E05000084"
+##   .. ..$ parish                    : chr "E43000194"
+##   .. ..$ parliamentary_constituency: chr "E14000696"
+##   .. ..$ ccg                       : chr "E38000011"
+##   .. ..$ nuts                      : chr "UKI51"</code></pre>
 </div>
 <div id="multiple-postcodes-1" class="section level4">
 <h4 class="hasAnchor">
@@ -288,14 +286,14 @@ geolocations_list &lt;-<span class="st"> </span><span class="kw">structure</span
 bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../reference/bulk_reverse_geocoding.html">bulk_reverse_geocoding</a></span>(geolocations_list)
 
 <span class="co">#overview</span>
-<span class="kw">str</span>(bulk_rev_geo<span class="op">$</span>result)</code></pre></div>
+<span class="kw">str</span>(bulk_rev_geo)</code></pre></div>
 </div>
 <div id="single-outcode" class="section level4">
 <h4 class="hasAnchor">
 <a href="#single-outcode" class="anchor"></a>Single outcode</h4>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">out_rev_geocode &lt;-<span class="st"> </span><span class="kw"><a href="../reference/outcode_reverse_geocoding.html">outcode_reverse_geocoding</a></span>(<span class="st">"-3.15"</span>, <span class="st">"51.47"</span>)
 <span class="co"># overview</span>
-<span class="kw">str</span>(out_rev_geocode<span class="op">$</span>result[<span class="dv">1</span>])</code></pre></div>
+<span class="kw">str</span>(out_rev_geocode[<span class="dv">1</span>])</code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 11
 ##   ..$ outcode       : chr "CF99"
@@ -324,47 +322,197 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 <p>Generates a data frame with a random UK postcode and corresponding geographic information:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># without restrictions</span>
 <span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>()</code></pre></div>
-<pre><code>##   postcode quality eastings northings country     nhs_ha longitude
-## 1  CW1 6EW       1   372097    354655 England North West  -2.41807
-##   latitude parliamentary_constituency european_electoral_region
-## 1 53.08838         Crewe and Nantwich                North West
-##             primary_care_trust     region               lsoa
-## 1 Central and Eastern Cheshire North West Cheshire East 038D
-##                msoa incode outcode admin_district parish admin_county
-## 1 Cheshire East 038    6EW     CW1  Cheshire East  Crewe           NA
-##   admin_ward                ccg          nuts admin_district admin_county
-## 1 Crewe East NHS South Cheshire Cheshire East      E06000049    E99999999
-##   admin_ward    parish       ccg  nuts
-## 1  E05008621 E04012281 E38000151 UKD62</code></pre>
+<pre><code>## $postcode
+## [1] "SS12 9ED"
+## 
+## $quality
+## [1] 1
+## 
+## $eastings
+## [1] 574345
+## 
+## $northings
+## [1] 192355
+## 
+## $country
+## [1] "England"
+## 
+## $nhs_ha
+## [1] "East of England"
+## 
+## $longitude
+## [1] 0.5161101
+## 
+## $latitude
+## [1] 51.60304
+## 
+## $european_electoral_region
+## [1] "Eastern"
+## 
+## $primary_care_trust
+## [1] "South West Essex"
+## 
+## $region
+## [1] "East of England"
+## 
+## $lsoa
+## [1] "Basildon 008B"
+## 
+## $msoa
+## [1] "Basildon 008"
+## 
+## $incode
+## [1] "9ED"
+## 
+## $outcode
+## [1] "SS12"
+## 
+## $parliamentary_constituency
+## [1] "Rayleigh and Wickford"
+## 
+## $admin_district
+## [1] "Basildon"
+## 
+## $parish
+## [1] "Basildon, unparished area"
+## 
+## $admin_county
+## [1] "Essex"
+## 
+## $admin_ward
+## [1] "Wickford Park"
+## 
+## $ccg
+## [1] "NHS Basildon and Brentwood"
+## 
+## $nuts
+## [1] "Essex Thames Gateway"
+## 
+## $codes
+## $codes$admin_district
+## [1] "E07000066"
+## 
+## $codes$admin_county
+## [1] "E10000012"
+## 
+## $codes$admin_ward
+## [1] "E05004036"
+## 
+## $codes$parish
+## [1] "E43000058"
+## 
+## $codes$parliamentary_constituency
+## [1] "E14000888"
+## 
+## $codes$ccg
+## [1] "E38000007"
+## 
+## $codes$nuts
+## [1] "UKH37"</code></pre>
 <p>A randomly generated postcode can also belong to a particular outcode:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># restrict to an outcode</span>
 <span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</code></pre></div>
-<pre><code>##   postcode quality eastings northings country nhs_ha  longitude latitude
-## 1   N1 9NG       1   530612    183012 England London -0.1184262 51.53092
-##     parliamentary_constituency european_electoral_region
-## 1 Islington South and Finsbury                    London
-##   primary_care_trust region           lsoa          msoa incode outcode
-## 1          Islington London Islington 021D Islington 021    9NG      N1
-##   admin_district                     parish admin_county  admin_ward
-## 1      Islington Islington, unparished area           NA Clerkenwell
-##             ccg                   nuts admin_district admin_county
-## 1 NHS Islington Haringey and Islington      E09000019    E99999999
-##   admin_ward    parish       ccg  nuts
-## 1  E05000370 E43000209 E38000088 UKI43</code></pre>
+<pre><code>## $postcode
+## [1] "N1 1QF"
+## 
+## $quality
+## [1] 1
+## 
+## $eastings
+## [1] 531630
+## 
+## $northings
+## [1] 183943
+## 
+## $country
+## [1] "England"
+## 
+## $nhs_ha
+## [1] "London"
+## 
+## $longitude
+## [1] -0.1034111
+## 
+## $latitude
+## [1] 51.53905
+## 
+## $european_electoral_region
+## [1] "London"
+## 
+## $primary_care_trust
+## [1] "Islington"
+## 
+## $region
+## [1] "London"
+## 
+## $lsoa
+## [1] "Islington 020B"
+## 
+## $msoa
+## [1] "Islington 020"
+## 
+## $incode
+## [1] "1QF"
+## 
+## $outcode
+## [1] "N1"
+## 
+## $parliamentary_constituency
+## [1] "Islington South and Finsbury"
+## 
+## $admin_district
+## [1] "Islington"
+## 
+## $parish
+## [1] "Islington, unparished area"
+## 
+## $admin_county
+## NULL
+## 
+## $admin_ward
+## [1] "St Mary's"
+## 
+## $ccg
+## [1] "NHS Islington"
+## 
+## $nuts
+## [1] "Haringey and Islington"
+## 
+## $codes
+## $codes$admin_district
+## [1] "E09000019"
+## 
+## $codes$admin_county
+## [1] "E99999999"
+## 
+## $codes$admin_ward
+## [1] "E05000379"
+## 
+## $codes$parish
+## [1] "E43000209"
+## 
+## $codes$parliamentary_constituency
+## [1] "E14000764"
+## 
+## $codes$ccg
+## [1] "E38000088"
+## 
+## $codes$nuts
+## [1] "UKI43"</code></pre>
 </div>
 <div id="places" class="section level4">
 <h4 class="hasAnchor">
 <a href="#places" class="anchor"></a>Places</h4>
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/random_place.html">random_place</a></span>()</code></pre></div>
-<pre><code>##                   code           name_1 name_1_lang name_2 name_2_lang
-## 1 osgb4000000074558193 Hurworth-on-Tees        NULL   NULL        NULL
-##   local_type outcode county_unitary county_unitary_type district_borough
-## 1    Village     DL2     Darlington    UnitaryAuthority             NULL
+<pre><code>##                   code    name_1 name_1_lang name_2 name_2_lang local_type
+## 1 osgb4000000074546777 Tidebrook        NULL   NULL        NULL    Village
+##   outcode county_unitary county_unitary_type district_borough
+## 1     TN5    East Sussex              County          Wealden
 ##   district_borough_type     region country longitude latitude eastings
-## 1                  NULL North East England -1.532959 54.48635   430355
+## 1              District South East England 0.2998168 51.04477   561314
 ##   northings min_eastings min_northings max_eastings max_northings
-## 1    510212       428940        509698       431290        510700</code></pre>
+## 1    129785       560758        129052       561846        130428</code></pre>
 </div>
 </div>
 <div id="postcode-validation" class="section level3">
@@ -383,7 +531,7 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">near_pc &lt;-<span class="st"> </span><span class="kw"><a href="../reference/nearest_postcode.html">nearest_postcode</a></span>(<span class="st">"EC1Y 8LX"</span>)
 
 <span class="co">#overview</span>
-<span class="kw">str</span>(near_pc<span class="op">$</span>result[<span class="dv">1</span>])</code></pre></div>
+<span class="kw">str</span>(near_pc[<span class="dv">1</span>])</code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 24
 ##   ..$ postcode                  : chr "EC1Y 8LX"
@@ -394,7 +542,6 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 ##   ..$ nhs_ha                    : chr "London"
 ##   ..$ longitude                 : num -0.0909
 ##   ..$ latitude                  : num 51.5
-##   ..$ parliamentary_constituency: chr "Islington South and Finsbury"
 ##   ..$ european_electoral_region : chr "London"
 ##   ..$ primary_care_trust        : chr "Islington"
 ##   ..$ region                    : chr "London"
@@ -403,47 +550,49 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 ##   ..$ incode                    : chr "8LX"
 ##   ..$ outcode                   : chr "EC1Y"
 ##   ..$ distance                  : int 0
+##   ..$ parliamentary_constituency: chr "Islington South and Finsbury"
 ##   ..$ admin_district            : chr "Islington"
 ##   ..$ parish                    : chr "Islington, unparished area"
 ##   ..$ admin_county              : NULL
 ##   ..$ admin_ward                : chr "Bunhill"
 ##   ..$ ccg                       : chr "NHS Islington"
 ##   ..$ nuts                      : chr "Haringey and Islington"
-##   ..$ codes                     :List of 6
-##   .. ..$ admin_district: chr "E09000019"
-##   .. ..$ admin_county  : chr "E99999999"
-##   .. ..$ admin_ward    : chr "E05000367"
-##   .. ..$ parish        : chr "E43000209"
-##   .. ..$ ccg           : chr "E38000088"
-##   .. ..$ nuts          : chr "UKI43"</code></pre>
+##   ..$ codes                     :List of 7
+##   .. ..$ admin_district            : chr "E09000019"
+##   .. ..$ admin_county              : chr "E99999999"
+##   .. ..$ admin_ward                : chr "E05000367"
+##   .. ..$ parish                    : chr "E43000209"
+##   .. ..$ parliamentary_constituency: chr "E14000764"
+##   .. ..$ ccg                       : chr "E38000088"
+##   .. ..$ nuts                      : chr "UKI43"</code></pre>
 <p>You can also use outcodes:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">near_outcode &lt;-<span class="st"> </span><span class="kw"><a href="../reference/nearest_outcode.html">nearest_outcode</a></span>(<span class="st">"EC1Y"</span>)
 <span class="co"># overview</span>
-<span class="kw">str</span>(near_outcode<span class="op">$</span>result[<span class="dv">2</span>])</code></pre></div>
+<span class="kw">str</span>(near_outcode[<span class="dv">2</span>])</code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 11
 ##   ..$ outcode       : chr "EC2Y"
-##   ..$ longitude     : num -0.0939
+##   ..$ longitude     : num -0.0938
 ##   ..$ latitude      : num 51.5
-##   ..$ northings     : int 181789
-##   ..$ eastings      : int 532343
+##   ..$ northings     : int 181787
+##   ..$ eastings      : int 532350
 ##   ..$ admin_district:List of 2
 ##   .. ..$ : chr "City of London"
 ##   .. ..$ : chr "Islington"
 ##   ..$ parish        :List of 2
-##   .. ..$ : chr "City of London, unparished area"
 ##   .. ..$ : chr "Islington, unparished area"
+##   .. ..$ : chr "City of London, unparished area"
 ##   ..$ admin_county  : list()
 ##   ..$ admin_ward    :List of 6
-##   .. ..$ : chr "Bunhill"
 ##   .. ..$ : chr "Bassishaw"
 ##   .. ..$ : chr "Coleman Street"
-##   .. ..$ : chr "Aldersgate"
 ##   .. ..$ : chr "Clerkenwell"
+##   .. ..$ : chr "Bunhill"
 ##   .. ..$ : chr "Cripplegate"
+##   .. ..$ : chr "Aldersgate"
 ##   ..$ country       :List of 1
 ##   .. ..$ : chr "England"
-##   ..$ distance      : num 398</code></pre>
+##   ..$ distance      : num 400</code></pre>
 </div>
 <div id="find-places" class="section level3">
 <h3 class="hasAnchor">
@@ -452,35 +601,35 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">place_query_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/place_query.html">place_query</a></span>(<span class="st">"Hills"</span>, <span class="dt">limit =</span> <span class="dv">11</span>)
 
 <span class="co"># overview</span>
-<span class="kw">str</span>(place_query_result<span class="op">$</span>result[<span class="dv">1</span>])</code></pre></div>
+<span class="kw">str</span>(place_query_result[<span class="dv">1</span>])</code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 21
-##   ..$ code                 : chr "osgb4000000074580249"
-##   ..$ name_1               : chr "Hillsdale"
+##   ..$ code                 : chr "osgb4000000074574731"
+##   ..$ name_1               : chr "Berwick Hills"
 ##   ..$ name_1_lang          : NULL
 ##   ..$ name_2               : NULL
 ##   ..$ name_2_lang          : NULL
-##   ..$ local_type           : chr "Hamlet"
-##   ..$ outcode              : chr "ST13"
-##   ..$ county_unitary       : chr "Staffordshire"
-##   ..$ county_unitary_type  : chr "County"
-##   ..$ district_borough     : chr "Staffordshire Moorlands"
-##   ..$ district_borough_type: chr "District"
-##   ..$ region               : chr "West Midlands"
+##   ..$ local_type           : chr "Suburban Area"
+##   ..$ outcode              : chr "TS3"
+##   ..$ county_unitary       : chr "Middlesbrough"
+##   ..$ county_unitary_type  : chr "UnitaryAuthority"
+##   ..$ district_borough     : NULL
+##   ..$ district_borough_type: NULL
+##   ..$ region               : chr "North East"
 ##   ..$ country              : chr "England"
-##   ..$ longitude            : num -1.89
-##   ..$ latitude             : num 53.1
-##   ..$ eastings             : int 407661
-##   ..$ northings            : int 355209
-##   ..$ min_eastings         : int 407258
-##   ..$ min_northings        : int 354822
-##   ..$ max_eastings         : int 408138
-##   ..$ max_northings        : int 355500</code></pre>
+##   ..$ longitude            : num -1.21
+##   ..$ latitude             : num 54.6
+##   ..$ eastings             : int 451459
+##   ..$ northings            : int 518602
+##   ..$ min_eastings         : int 450839
+##   ..$ min_northings        : int 517640
+##   ..$ max_eastings         : int 451968
+##   ..$ max_northings        : int 519361</code></pre>
 <p>You can also find a place using an OSGB code:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">place_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/place_lookup.html">place_lookup</a></span>(<span class="st">"osgb4000000074544700"</span>)
 
 <span class="co"># overview</span>
-<span class="kw">str</span>(place_lookup_result<span class="op">$</span>result)</code></pre></div>
+<span class="kw">str</span>(place_lookup_result)</code></pre></div>
 <pre><code>## List of 21
 ##  $ code                 : chr "osgb4000000074544700"
 ##  $ name_1               : chr "Cutler Heights"

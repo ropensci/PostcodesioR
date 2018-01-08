@@ -52,7 +52,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="..//index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -115,191 +115,33 @@
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A list. Returns all available data if found. Returns 404 if postcode does not exist.</p>
+    <p>A data frame. Returns all available data if found. Returns 404 if postcode does not exist.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>postcode_lookup</span>(<span class='st'>"EC1Y8LX"</span>)</div><div class='output co'>#&gt; $status
-#&gt; [1] 200
-#&gt; 
-#&gt; $result
-#&gt; $result$postcode
-#&gt; [1] "EC1Y 8LX"
-#&gt; 
-#&gt; $result$quality
-#&gt; [1] 1
-#&gt; 
-#&gt; $result$eastings
-#&gt; [1] 532544
-#&gt; 
-#&gt; $result$northings
-#&gt; [1] 182128
-#&gt; 
-#&gt; $result$country
-#&gt; [1] "England"
-#&gt; 
-#&gt; $result$nhs_ha
-#&gt; [1] "London"
-#&gt; 
-#&gt; $result$longitude
-#&gt; [1] -0.09092237
-#&gt; 
-#&gt; $result$latitude
-#&gt; [1] 51.52252
-#&gt; 
-#&gt; $result$parliamentary_constituency
-#&gt; [1] "Islington South and Finsbury"
-#&gt; 
-#&gt; $result$european_electoral_region
-#&gt; [1] "London"
-#&gt; 
-#&gt; $result$primary_care_trust
-#&gt; [1] "Islington"
-#&gt; 
-#&gt; $result$region
-#&gt; [1] "London"
-#&gt; 
-#&gt; $result$lsoa
-#&gt; [1] "Islington 023D"
-#&gt; 
-#&gt; $result$msoa
-#&gt; [1] "Islington 023"
-#&gt; 
-#&gt; $result$incode
-#&gt; [1] "8LX"
-#&gt; 
-#&gt; $result$outcode
-#&gt; [1] "EC1Y"
-#&gt; 
-#&gt; $result$admin_district
-#&gt; [1] "Islington"
-#&gt; 
-#&gt; $result$parish
-#&gt; [1] "Islington, unparished area"
-#&gt; 
-#&gt; $result$admin_county
-#&gt; NULL
-#&gt; 
-#&gt; $result$admin_ward
-#&gt; [1] "Bunhill"
-#&gt; 
-#&gt; $result$ccg
-#&gt; [1] "NHS Islington"
-#&gt; 
-#&gt; $result$nuts
-#&gt; [1] "Haringey and Islington"
-#&gt; 
-#&gt; $result$codes
-#&gt; $result$codes$admin_district
-#&gt; [1] "E09000019"
-#&gt; 
-#&gt; $result$codes$admin_county
-#&gt; [1] "E99999999"
-#&gt; 
-#&gt; $result$codes$admin_ward
-#&gt; [1] "E05000367"
-#&gt; 
-#&gt; $result$codes$parish
-#&gt; [1] "E43000209"
-#&gt; 
-#&gt; $result$codes$ccg
-#&gt; [1] "E38000088"
-#&gt; 
-#&gt; $result$codes$nuts
-#&gt; [1] "UKI43"
-#&gt; 
-#&gt; 
-#&gt; </div><div class='input'><span class='fu'>postcode_lookup</span>(<span class='st'>"EC1Y 8LX"</span>)</div><div class='output co'>#&gt; $status
-#&gt; [1] 200
-#&gt; 
-#&gt; $result
-#&gt; $result$postcode
-#&gt; [1] "EC1Y 8LX"
-#&gt; 
-#&gt; $result$quality
-#&gt; [1] 1
-#&gt; 
-#&gt; $result$eastings
-#&gt; [1] 532544
-#&gt; 
-#&gt; $result$northings
-#&gt; [1] 182128
-#&gt; 
-#&gt; $result$country
-#&gt; [1] "England"
-#&gt; 
-#&gt; $result$nhs_ha
-#&gt; [1] "London"
-#&gt; 
-#&gt; $result$longitude
-#&gt; [1] -0.09092237
-#&gt; 
-#&gt; $result$latitude
-#&gt; [1] 51.52252
-#&gt; 
-#&gt; $result$parliamentary_constituency
-#&gt; [1] "Islington South and Finsbury"
-#&gt; 
-#&gt; $result$european_electoral_region
-#&gt; [1] "London"
-#&gt; 
-#&gt; $result$primary_care_trust
-#&gt; [1] "Islington"
-#&gt; 
-#&gt; $result$region
-#&gt; [1] "London"
-#&gt; 
-#&gt; $result$lsoa
-#&gt; [1] "Islington 023D"
-#&gt; 
-#&gt; $result$msoa
-#&gt; [1] "Islington 023"
-#&gt; 
-#&gt; $result$incode
-#&gt; [1] "8LX"
-#&gt; 
-#&gt; $result$outcode
-#&gt; [1] "EC1Y"
-#&gt; 
-#&gt; $result$admin_district
-#&gt; [1] "Islington"
-#&gt; 
-#&gt; $result$parish
-#&gt; [1] "Islington, unparished area"
-#&gt; 
-#&gt; $result$admin_county
-#&gt; NULL
-#&gt; 
-#&gt; $result$admin_ward
-#&gt; [1] "Bunhill"
-#&gt; 
-#&gt; $result$ccg
-#&gt; [1] "NHS Islington"
-#&gt; 
-#&gt; $result$nuts
-#&gt; [1] "Haringey and Islington"
-#&gt; 
-#&gt; $result$codes
-#&gt; $result$codes$admin_district
-#&gt; [1] "E09000019"
-#&gt; 
-#&gt; $result$codes$admin_county
-#&gt; [1] "E99999999"
-#&gt; 
-#&gt; $result$codes$admin_ward
-#&gt; [1] "E05000367"
-#&gt; 
-#&gt; $result$codes$parish
-#&gt; [1] "E43000209"
-#&gt; 
-#&gt; $result$codes$ccg
-#&gt; [1] "E38000088"
-#&gt; 
-#&gt; $result$codes$nuts
-#&gt; [1] "UKI43"
-#&gt; 
-#&gt; 
-#&gt; </div><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>postcode_lookup</span>(<span class='st'>"EC1Y8LX"</span>)</div><div class='output co'>#&gt;   postcode quality eastings northings country nhs_ha   longitude latitude
+#&gt; 1 EC1Y 8LX       1   532544    182128 England London -0.09092237 51.52252
+#&gt;   european_electoral_region primary_care_trust region           lsoa
+#&gt; 1                    London          Islington London Islington 023D
+#&gt;            msoa incode outcode   parliamentary_constituency admin_district
+#&gt; 1 Islington 023    8LX    EC1Y Islington South and Finsbury      Islington
+#&gt;                       parish admin_county admin_ward           ccg
+#&gt; 1 Islington, unparished area           NA    Bunhill NHS Islington
+#&gt;                     nuts admin_district admin_county admin_ward    parish
+#&gt; 1 Haringey and Islington      E09000019    E99999999  E05000367 E43000209
+#&gt;   parliamentary_constituency       ccg  nuts
+#&gt; 1                  E14000764 E38000088 UKI43</div><div class='input'><span class='fu'>postcode_lookup</span>(<span class='st'>"EC1Y 8LX"</span>)</div><div class='output co'>#&gt;   postcode quality eastings northings country nhs_ha   longitude latitude
+#&gt; 1 EC1Y 8LX       1   532544    182128 England London -0.09092237 51.52252
+#&gt;   european_electoral_region primary_care_trust region           lsoa
+#&gt; 1                    London          Islington London Islington 023D
+#&gt;            msoa incode outcode   parliamentary_constituency admin_district
+#&gt; 1 Islington 023    8LX    EC1Y Islington South and Finsbury      Islington
+#&gt;                       parish admin_county admin_ward           ccg
+#&gt; 1 Islington, unparished area           NA    Bunhill NHS Islington
+#&gt;                     nuts admin_district admin_county admin_ward    parish
+#&gt; 1 Haringey and Islington      E09000019    E99999999  E05000367 E43000209
+#&gt;   parliamentary_constituency       ccg  nuts
+#&gt; 1                  E14000764 E38000088 UKI43</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

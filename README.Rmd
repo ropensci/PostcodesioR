@@ -244,5 +244,4 @@ That [file](https://github.com/ideal-postcodes/postcodes.io/blob/master/latest) 
 
 For more info see the original [documentation](https://postcodes.io/docs).
 
-The reference manual can be accessed [here](https://github.com/erzk/PostcodesioR/blob/master/PostcodesioR.pdf).
-Go to my [blog](https://walczak.org/tag/postcodesior/) for more examples and check the package's [website](https://erzk.github.io/PostcodesioR/).
+Go to the package's [website](https://erzk.github.io/PostcodesioR/) or to my [blog](https://walczak.org/tag/postcodesior/) for more examples.

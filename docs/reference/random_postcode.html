@@ -52,7 +52,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="..//index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -115,33 +115,187 @@
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A data frame with a random post code with corresponding characteristics.</p>
+    <p>A list with a random post code with corresponding characteristics.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>random_postcode</span>()</div><div class='output co'>#&gt;   postcode quality eastings northings country        nhs_ha longitude latitude
-#&gt; 1 PO40 9BE       1   433478     87450 England South Central -1.527469 50.68575
-#&gt;   parliamentary_constituency european_electoral_region
-#&gt; 1              Isle of Wight                South East
-#&gt;                      primary_care_trust     region               lsoa
-#&gt; 1 Isle of Wight National Health Service South East Isle of Wight 012A
-#&gt;                msoa incode outcode admin_district     parish admin_county
-#&gt; 1 Isle of Wight 012    9BE    PO40  Isle of Wight Freshwater           NA
-#&gt;         admin_ward               ccg          nuts admin_district admin_county
-#&gt; 1 Freshwater South NHS Isle of Wight Isle of Wight      E06000046    E99999999
-#&gt;   admin_ward    parish       ccg  nuts
-#&gt; 1  E05008491 E04001301 E38000087 UKJ34</div><div class='input'><span class='fu'>random_postcode</span>(<span class='st'>"N1"</span>)</div><div class='output co'>#&gt;   postcode quality eastings northings country nhs_ha   longitude latitude
-#&gt; 1   N1 8DL       1   531960    183042 England London -0.09899299 51.53087
-#&gt;     parliamentary_constituency european_electoral_region primary_care_trust
-#&gt; 1 Islington South and Finsbury                    London          Islington
-#&gt;   region           lsoa          msoa incode outcode admin_district
-#&gt; 1 London Islington 020E Islington 020    8DL      N1      Islington
-#&gt;                       parish admin_county admin_ward           ccg
-#&gt; 1 Islington, unparished area           NA St Peter's NHS Islington
-#&gt;                     nuts admin_district admin_county admin_ward    parish
-#&gt; 1 Haringey and Islington      E09000019    E99999999  E05000380 E43000209
-#&gt;         ccg  nuts
-#&gt; 1 E38000088 UKI43</div><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>random_postcode</span>()</div><div class='output co'>#&gt; $postcode
+#&gt; [1] "BT26 6EU"
+#&gt; 
+#&gt; $quality
+#&gt; [1] 1
+#&gt; 
+#&gt; $eastings
+#&gt; [1] 324143
+#&gt; 
+#&gt; $northings
+#&gt; [1] 359389
+#&gt; 
+#&gt; $country
+#&gt; [1] "Northern Ireland"
+#&gt; 
+#&gt; $nhs_ha
+#&gt; [1] "ZB001"
+#&gt; 
+#&gt; $longitude
+#&gt; [1] -6.086053
+#&gt; 
+#&gt; $latitude
+#&gt; [1] 54.4678
+#&gt; 
+#&gt; $european_electoral_region
+#&gt; [1] "Northern Ireland"
+#&gt; 
+#&gt; $primary_care_trust
+#&gt; [1] "South Eastern"
+#&gt; 
+#&gt; $region
+#&gt; NULL
+#&gt; 
+#&gt; $lsoa
+#&gt; [1] "Maze 1"
+#&gt; 
+#&gt; $msoa
+#&gt; NULL
+#&gt; 
+#&gt; $incode
+#&gt; [1] "6EU"
+#&gt; 
+#&gt; $outcode
+#&gt; [1] "BT26"
+#&gt; 
+#&gt; $parliamentary_constituency
+#&gt; [1] "Lagan Valley"
+#&gt; 
+#&gt; $admin_district
+#&gt; [1] "Lisburn and Castlereagh"
+#&gt; 
+#&gt; $parish
+#&gt; [1] "(pseudo) Northern Ireland"
+#&gt; 
+#&gt; $admin_county
+#&gt; NULL
+#&gt; 
+#&gt; $admin_ward
+#&gt; [1] "Hillsborough"
+#&gt; 
+#&gt; $ccg
+#&gt; [1] "South Eastern"
+#&gt; 
+#&gt; $nuts
+#&gt; [1] "Outer Belfast"
+#&gt; 
+#&gt; $codes
+#&gt; $codes$admin_district
+#&gt; [1] "N09000007"
+#&gt; 
+#&gt; $codes$admin_county
+#&gt; [1] "N99999999"
+#&gt; 
+#&gt; $codes$admin_ward
+#&gt; [1] "N08000723"
+#&gt; 
+#&gt; $codes$parish
+#&gt; [1] "N99999999"
+#&gt; 
+#&gt; $codes$parliamentary_constituency
+#&gt; [1] "N06000009"
+#&gt; 
+#&gt; $codes$ccg
+#&gt; [1] "ZC040"
+#&gt; 
+#&gt; $codes$nuts
+#&gt; [1] "UKN02"
+#&gt; 
+#&gt; </div><div class='input'><span class='fu'>random_postcode</span>(<span class='st'>"N1"</span>)</div><div class='output co'>#&gt; $postcode
+#&gt; [1] "N1 7EY"
+#&gt; 
+#&gt; $quality
+#&gt; [1] 1
+#&gt; 
+#&gt; $eastings
+#&gt; [1] 532618
+#&gt; 
+#&gt; $northings
+#&gt; [1] 183538
+#&gt; 
+#&gt; $country
+#&gt; [1] "England"
+#&gt; 
+#&gt; $nhs_ha
+#&gt; [1] "London"
+#&gt; 
+#&gt; $longitude
+#&gt; [1] -0.08932596
+#&gt; 
+#&gt; $latitude
+#&gt; [1] 51.53518
+#&gt; 
+#&gt; $european_electoral_region
+#&gt; [1] "London"
+#&gt; 
+#&gt; $primary_care_trust
+#&gt; [1] "City and Hackney Teaching"
+#&gt; 
+#&gt; $region
+#&gt; [1] "London"
+#&gt; 
+#&gt; $lsoa
+#&gt; [1] "Hackney 026C"
+#&gt; 
+#&gt; $msoa
+#&gt; [1] "Hackney 026"
+#&gt; 
+#&gt; $incode
+#&gt; [1] "7EY"
+#&gt; 
+#&gt; $outcode
+#&gt; [1] "N1"
+#&gt; 
+#&gt; $parliamentary_constituency
+#&gt; [1] "Hackney South and Shoreditch"
+#&gt; 
+#&gt; $admin_district
+#&gt; [1] "Hackney"
+#&gt; 
+#&gt; $parish
+#&gt; [1] "Hackney, unparished area"
+#&gt; 
+#&gt; $admin_county
+#&gt; NULL
+#&gt; 
+#&gt; $admin_ward
+#&gt; [1] "Hoxton West"
+#&gt; 
+#&gt; $ccg
+#&gt; [1] "NHS City and Hackney"
+#&gt; 
+#&gt; $nuts
+#&gt; [1] "Hackney and Newham"
+#&gt; 
+#&gt; $codes
+#&gt; $codes$admin_district
+#&gt; [1] "E09000012"
+#&gt; 
+#&gt; $codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; $codes$admin_ward
+#&gt; [1] "E05009378"
+#&gt; 
+#&gt; $codes$parish
+#&gt; [1] "E43000202"
+#&gt; 
+#&gt; $codes$parliamentary_constituency
+#&gt; [1] "E14000721"
+#&gt; 
+#&gt; $codes$ccg
+#&gt; [1] "E38000035"
+#&gt; 
+#&gt; $codes$nuts
+#&gt; [1] "UKI41"
+#&gt; 
+#&gt; </div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
