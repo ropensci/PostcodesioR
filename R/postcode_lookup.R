@@ -20,11 +20,15 @@ postcode_lookup <- function(postcode) {
   }
   r <- GET(paste0("https://api.postcodes.io/postcodes/", postcode))
   warn_for_status(r)
-  r <- content(r)
-  pc_result <- r[[2]]
-  take_names <- setdiff(names(pc_result), 'codes')
-  pc_result[sapply(pc_result, is.null)] = list(NA)
-  pc_df <- cbind(as.data.frame(pc_result[take_names], stringsAsFactors = FALSE),
-                 as.data.frame(pc_result$codes, stringsAsFactors = FALSE))
-  return(pc_df)
+  if (status_code(r) == 200) {
+    r <- content(r)
+    pc_result <- r[["result"]]
+    take_names <- setdiff(names(pc_result), "codes")
+    pc_result[sapply(pc_result, is.null)] <- list(NA)
+    pc_df <- cbind(as.data.frame(pc_result[take_names],
+                                 stringsAsFactors = FALSE),
+                   as.data.frame(pc_result$codes,
+                                 stringsAsFactors = FALSE))
+    return(pc_df)
+  }
 }

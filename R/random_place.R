@@ -14,9 +14,11 @@
 random_place <- function() {
   r <- GET("https://api.postcodes.io/random/places")
   warn_for_status(r)
-  r <- content(r)
-  r <- r[[2]]
-  r <- data.frame(t(sapply(r, `[`)))
-  return(r)
+  if (status_code(r) == 200) {
+    r <- content(r)
+    r <- r[["result"]]
+    r <- data.frame(t(sapply(r, `[`)))
+    return(r)
+  }
 }
 
