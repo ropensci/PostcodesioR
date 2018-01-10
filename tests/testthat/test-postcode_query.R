@@ -5,7 +5,7 @@ test_that("postcode_query works as expected", {
   incorrect_postcode2 <- "E"
   incorrect_limit1 <- 101
   incorrect_limit2 <- "11"
-  correct_limit = 11
+  correct_limit <- 11
 
   postcode_query_result1 <- postcode_query("EC1Y8LX")
   postcode_query_result2 <- postcode_query("EC1", limit = correct_limit)
