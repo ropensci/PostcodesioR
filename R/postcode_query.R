@@ -22,6 +22,7 @@ postcode_query <- function(postcode, limit = 10) {
   if (limit > 100) {
     stop("Please provide an integer lower than 100.")
   }
-  r <- GET(paste0("https://api.postcodes.io/postcodes?q=", postcode, "&limit=", limit))
+  r <- GET(paste0("https://api.postcodes.io/postcodes?q=",
+                  postcode, "&limit=", limit))
   extract_results(r)
 }
