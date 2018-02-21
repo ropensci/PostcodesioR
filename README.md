@@ -11,7 +11,9 @@ Installation
 This package is still in a development version and is available only on GitHub. Not sure if it will ever make it to CRAN. In order to install it use the following commands:
 
 ``` r
-if (!require("devtools")) install.packages("devtools")
+if(!require("devtools")) {
+  install.packages("devtools")
+}
 devtools::install_github("erzk/PostcodesioR")
 ```
 
@@ -410,16 +412,16 @@ random_postcode()
 ```
 
     ## $postcode
-    ## [1] "PO19 7HW"
+    ## [1] "BN2 5RF"
     ## 
     ## $quality
     ## [1] 1
     ## 
     ## $eastings
-    ## [1] 487352
+    ## [1] 533928
     ## 
     ## $northings
-    ## [1] 105472
+    ## [1] 103529
     ## 
     ## $country
     ## [1] "England"
@@ -428,74 +430,74 @@ random_postcode()
     ## [1] "South East Coast"
     ## 
     ## $longitude
-    ## [1] -0.7607198
+    ## [1] -0.1002369
     ## 
     ## $latitude
-    ## [1] 50.84219
+    ## [1] 50.81583
     ## 
     ## $european_electoral_region
     ## [1] "South East"
     ## 
     ## $primary_care_trust
-    ## [1] "West Sussex"
+    ## [1] "Brighton and Hove City"
     ## 
     ## $region
     ## [1] "South East"
     ## 
     ## $lsoa
-    ## [1] "Chichester 008A"
+    ## [1] "Brighton and Hove 032D"
     ## 
     ## $msoa
-    ## [1] "Chichester 008"
+    ## [1] "Brighton and Hove 032"
     ## 
     ## $incode
-    ## [1] "7HW"
+    ## [1] "5RF"
     ## 
     ## $outcode
-    ## [1] "PO19"
+    ## [1] "BN2"
     ## 
     ## $parliamentary_constituency
-    ## [1] "Chichester"
+    ## [1] "Brighton, Kemptown"
     ## 
     ## $admin_district
-    ## [1] "Chichester"
+    ## [1] "Brighton and Hove"
     ## 
     ## $parish
-    ## [1] "Chichester"
+    ## [1] "Brighton and Hove, unparished area"
     ## 
     ## $admin_county
-    ## [1] "West Sussex"
+    ## NULL
     ## 
     ## $admin_ward
-    ## [1] "Chichester East"
+    ## [1] "Rottingdean Coastal"
     ## 
     ## $ccg
-    ## [1] "NHS Coastal West Sussex"
+    ## [1] "NHS Brighton and Hove"
     ## 
     ## $nuts
-    ## [1] "West Sussex (South West)"
+    ## [1] "Brighton and Hove"
     ## 
     ## $codes
     ## $codes$admin_district
-    ## [1] "E07000225"
+    ## [1] "E06000043"
     ## 
     ## $codes$admin_county
-    ## [1] "E10000032"
+    ## [1] "E99999999"
     ## 
     ## $codes$admin_ward
-    ## [1] "E05007605"
+    ## [1] "E05002433"
     ## 
     ## $codes$parish
-    ## [1] "E04009888"
+    ## [1] "E43000034"
     ## 
     ## $codes$parliamentary_constituency
-    ## [1] "E14000633"
+    ## [1] "E14000597"
     ## 
     ## $codes$ccg
-    ## [1] "E38000213"
+    ## [1] "E38000021"
     ## 
     ## $codes$nuts
-    ## [1] "UKJ27"
+    ## [1] "UKJ21"
 
 A randomly generated postcode can also belong to a particular outcode:
 
@@ -505,16 +507,16 @@ random_postcode("N1")
 ```
 
     ## $postcode
-    ## [1] "N1 2XL"
+    ## [1] "N1 3EA"
     ## 
     ## $quality
     ## [1] 1
     ## 
     ## $eastings
-    ## [1] 531734
+    ## [1] 532544
     ## 
     ## $northings
-    ## [1] 184490
+    ## [1] 183964
     ## 
     ## $country
     ## [1] "England"
@@ -523,10 +525,10 @@ random_postcode("N1")
     ## [1] "London"
     ## 
     ## $longitude
-    ## [1] -0.1017078
+    ## [1] -0.09023201
     ## 
     ## $latitude
-    ## [1] 51.54394
+    ## [1] 51.53902
     ## 
     ## $european_electoral_region
     ## [1] "London"
@@ -538,13 +540,13 @@ random_postcode("N1")
     ## [1] "London"
     ## 
     ## $lsoa
-    ## [1] "Islington 016E"
+    ## [1] "Islington 018A"
     ## 
     ## $msoa
-    ## [1] "Islington 016"
+    ## [1] "Islington 018"
     ## 
     ## $incode
-    ## [1] "2XL"
+    ## [1] "3EA"
     ## 
     ## $outcode
     ## [1] "N1"
@@ -562,7 +564,7 @@ random_postcode("N1")
     ## NULL
     ## 
     ## $admin_ward
-    ## [1] "St Mary's"
+    ## [1] "Canonbury"
     ## 
     ## $ccg
     ## [1] "NHS Islington"
@@ -578,7 +580,7 @@ random_postcode("N1")
     ## [1] "E99999999"
     ## 
     ## $codes$admin_ward
-    ## [1] "E05000379"
+    ## [1] "E05000369"
     ## 
     ## $codes$parish
     ## [1] "E43000209"
@@ -600,14 +602,16 @@ You can also generate a random place, specified by an OSGB code, with correspond
 random_place()
 ```
 
-    ##                   code name_1 name_1_lang name_2 name_2_lang local_type
-    ## 1 osgb4000000074324750   Ford        NULL   NULL        NULL    Village
-    ##   outcode county_unitary county_unitary_type district_borough
-    ## 1     SY5     Shropshire    UnitaryAuthority             NULL
-    ##   district_borough_type        region country longitude latitude eastings
-    ## 1                  NULL West Midlands England -2.869018 52.71753   341396
-    ##   northings min_eastings min_northings max_eastings max_northings
-    ## 1    313673       340495        312885       342068        314137
+    ##                   code name_1 name_1_lang name_2 name_2_lang
+    ## 1 osgb4000000074573758  Achow        NULL   NULL        NULL
+    ##         local_type outcode county_unitary county_unitary_type
+    ## 1 Other Settlement     KW3       Highland    UnitaryAuthority
+    ##   district_borough district_borough_type   region  country longitude
+    ## 1             NULL                  NULL Scotland Scotland -3.315512
+    ##   latitude eastings northings min_eastings min_northings max_eastings
+    ## 1 58.31298   323021    936798       322699        936328       323303
+    ##   max_northings
+    ## 1        937318
 
 ### Postcode validation
 

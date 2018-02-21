@@ -16,7 +16,9 @@ This package is still in a development version and is available only on GitHub. 
 In order to install it use the  following commands:
 
 ```{r, eval=FALSE}
-if (!require("devtools")) install.packages("devtools")
+if(!require("devtools")) {
+  install.packages("devtools")
+}
 devtools::install_github("erzk/PostcodesioR")
 ```
 
