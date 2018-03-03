@@ -15,7 +15,7 @@ postcode_autocomplete(postcode, limit = 10)
 A list of suggested postcodes.
 }
 \description{
-Convenience method to return an list of matching postcodes.
+Returns a data frame of matching postcodes.
 }
 \examples{
 postcode_autocomplete("E1")

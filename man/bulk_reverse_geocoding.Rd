@@ -2,12 +2,12 @@
 % Please edit documentation in R/bulk_reverse_geocoding.R
 \name{bulk_reverse_geocoding}
 \alias{bulk_reverse_geocoding}
-\title{Reverse geocoding}
+\title{Bulk reverse geocoding}
 \usage{
 bulk_reverse_geocoding(geolocations)
 }
 \arguments{
-\item{geolocations}{A list containing an array of geolocation objects.}
+\item{geolocations}{A list containing an array of geolocation objects. At least two elements needed.}
 }
 \value{
 A list with the geocoded data.

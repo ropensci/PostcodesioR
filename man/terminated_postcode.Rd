@@ -10,13 +10,13 @@ terminated_postcode(postcode)
 \item{postcode}{A string. Terminated UK postcode.}
 }
 \value{
-A data frame with data about terminated postcode.
+A data frame with data about terminated postcode. NULL if postcode is active.
 }
 \description{
-Returns nearest postcodes for a given longitude and latitude.
+Returns month and year if a postcode was terminated or is no longer active.
 }
 \examples{
-terminated_postcode("EC1Y 8LX") # exisitng postcode - returns 404
-terminated_postcode("E1W 1UU") # terminated - from Wikipedia but returns 404
+terminated_postcode("EC1Y 8LX") # exisitng postcode
+terminated_postcode("E1W 1UU") # terminated
 
 }
