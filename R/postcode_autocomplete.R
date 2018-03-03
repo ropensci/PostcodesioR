@@ -1,6 +1,6 @@
 #' Postcode autocomplete
 #'
-#' Convenience method to return a list of matching postcodes.
+#' Returns a data frame of matching postcodes.
 #'
 #' @import httr
 #'
