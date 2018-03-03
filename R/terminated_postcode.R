@@ -6,12 +6,12 @@
 #'
 #' @param postcode A string. Terminated UK postcode.
 #'
-#' @return A data frame with data about terminated postcode. NA if active.
+#' @return A data frame with data about terminated postcode. NULL if postcode is active.
 #'
 #' @export
 #'
 #' @examples
-#' terminated_postcode("EC1Y 8LX") # exisitng postcode - returns 404
+#' terminated_postcode("EC1Y 8LX") # exisitng postcode
 #' terminated_postcode("E1W 1UU") # terminated
 #'
 terminated_postcode <- function(postcode) {
