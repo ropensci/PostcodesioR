@@ -19,7 +19,8 @@
 #' reverse_geocoding("0.1275", "51.5073", limit = 3)
 #' reverse_geocoding("0.1275", "51.5073", limit = 11, radius = 200)
 #'
-reverse_geocoding <- function(longitude, latitude, limit = 10, radius = 100, wideSearch = NULL) {
+reverse_geocoding <- function(longitude, latitude,
+                              limit = 10, radius = 100, wideSearch = NULL) {
   r <- GET("https://api.postcodes.io/postcodes",
            query = list(lon = longitude, lat = latitude,
                         limit = limit, radius = radius,
