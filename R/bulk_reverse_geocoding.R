@@ -1,4 +1,4 @@
-#' Reverse geocoding
+#' Bulk reverse geocoding
 #'
 #' Returns nearest postcodes for a given longitude and latitude. Accepts up to 100 geolocations.
 #'
@@ -8,7 +8,7 @@
 #'
 #' @import httr
 #'
-#' @param geolocations A list containing an array of geolocation objects.
+#' @param geolocations A list containing an array of geolocation objects. At least two elements needed.
 #'
 #' @return A list with the geocoded data.
 #'
