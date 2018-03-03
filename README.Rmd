@@ -55,3 +55,7 @@ Currently, there is a limit to the number of API calls that can be made. However
 That [file](https://github.com/ideal-postcodes/postcodes.io/blob/master/latest) is rather large so I didn't include it in the package.
 
 Go to the package's [website](https://erzk.github.io/PostcodesioR/) or to my [blog](https://walczak.org/tag/postcodesior/) for more examples.
+
+## Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.

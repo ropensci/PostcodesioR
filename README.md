@@ -83,3 +83,8 @@ Notes
 Currently, there is a limit to the number of API calls that can be made. However, [postcodes.io](https://postcodes.io/) provides full list of geolocation data that can be used locally without limitations. The original data is sourced from [Office for National Statistics Data Portal](https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page). That [file](https://github.com/ideal-postcodes/postcodes.io/blob/master/latest) is rather large so I didn't include it in the package.
 
 Go to the package's [website](https://erzk.github.io/PostcodesioR/) or to my [blog](https://walczak.org/tag/postcodesior/) for more examples.
+
+Code of Conduct
+---------------
+
+Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
