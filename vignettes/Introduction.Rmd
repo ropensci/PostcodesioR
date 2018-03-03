@@ -21,18 +21,14 @@ if (!require("devtools")) install.packages("devtools")
 devtools::install_github("erzk/PostcodesioR")
 ```
 
-## Examples
-
-Where possible, the functions return data frames. In many cases, the object being returned are rather complex so I left them as the lists.
 
 ### Lookup postcodes and outcodes
 
 #### Single postcode
 
-Provide a postcode to obtain all available information: 
+Provide a postcode to obtain all available information 
 
 ```{r, message = FALSE, warning = FALSE}
-# load the package
 library(PostcodesioR)
 
 lookup_result <- postcode_lookup("EC1Y8LX")
@@ -41,7 +37,20 @@ lookup_result <- postcode_lookup("EC1Y8LX")
 str(lookup_result)
 ```
 
+There is another function that returns the same data points but returns a list and allows optional parameters
+
+```{r}
+query_result <- postcode_query("EC1Y8LX")
+
+#overview
+str(query_result)
+```
+
+This function creates a nested list with the codes for administrative district, county, ward, parish, parliamentary constituency, CCG, and NUTS.
+
 #### Multiple postcodes
+
+To query two or more postcodes, use `bulk_` functions.
 
 ```{r}
 pc_list <- list(postcodes = c("PR3 0SG", "M45 6GN", "EX165BL"))
@@ -77,7 +86,9 @@ str(rev_geo[1])
 
 #### Multiple postcodes
 
-```{r, eval = FALSE}
+To reverse geocode multiple values use the function underneath. The result is a nested list, which might be a bit intimidating, but it allows storing unequal lengths of elements.
+
+```{r}
 # create a JSON object with the coordinates
 geolocations_list <- structure(
  list(
@@ -94,9 +105,33 @@ geolocations_list <- structure(
 
 bulk_rev_geo <- bulk_reverse_geocoding(geolocations_list)
 
-#overview
-str(bulk_rev_geo)
+bulk_rev_geo[[1]]$result[[1]]
 ```
+
+Common usage of this function might be extracting particular variables. You can extract one variable like this:
+
+```{r}
+# extract one postcode
+bulk_rev_geo[[1]]$result[[8]]$postcode
+```
+
+But more likely you will want more than one result. After all, that's the point of using a bulk function:
+
+```{r}
+# function to extract variables of interest
+extract_bulk_geo_variable <- function(x) {
+  bulk_results <- lapply(bulk_rev_geo, `[[`, "result")
+  sapply(unlist(bulk_results, recursive = FALSE), `[[`, x)
+}
+
+# define the variables you need
+variables_of_interest <- c("postcode", "latitude", "longitude")
+
+# return a data frame with the variables
+data.frame(
+  sapply(variables_of_interest, extract_bulk_geo_variable))
+```
+
 
 #### Single outcode
 
@@ -110,7 +145,7 @@ str(out_rev_geocode[1])
 
 #### Postcodes
 
-Generates a data frame with a random UK postcode and corresponding geographic information:
+Generates a list with a random UK postcode and corresponding geographic information:
 
 ```{r}
 # without restrictions
@@ -124,6 +159,7 @@ A randomly generated postcode can also belong to a particular outcode:
 random_postcode("N1")
 ```
 
+
 #### Places
 
 You can also generate a random place, specified by an OSGB code, with corresponding geographic information:
@@ -131,6 +167,7 @@ You can also generate a random place, specified by an OSGB code, with correspond
 ```{r}
 random_place()
 ```
+
 
 ### Postcode validation
 
@@ -140,9 +177,21 @@ This function can validate a UK postcode:
 postcode_validation("EC1Y 8LX") # actual UK postcode
 ```
 
+
 ```{r}
 postcode_validation("XYZ") # incorrect UK postcode
 ```
+
+
+### Autocomplete postcodes
+
+Find the potential candidates for a postcode if you only know the beginning characters
+
+```{r}
+postcode_autocomplete("EC1")
+```
+
+It defaults to 10 candidates, but can be changed by specifying the `limit` argument. 
 
 ### Find nearest postcodes or outcodes
 
@@ -159,9 +208,20 @@ You can also use outcodes:
 
 ```{r}
 near_outcode <- nearest_outcode("EC1Y")
+
 # overview
 str(near_outcode[2])
 ```
+
+Or longitude and latitude
+
+```{r}
+near_ll <- nearest_outcode_lonlat(0.127, 51.507)
+
+#overview
+str(near_ll[1])
+```
+
 
 ### Find places
 
@@ -183,6 +243,10 @@ place_lookup_result <- place_lookup("osgb4000000074544700")
 str(place_lookup_result)
 ```
 
-## Notes
+### Terminated postcodes
 
-For more information about the API calls and returned data, consult the official [documentation](https://postcodes.io/docs).
+You might end up having terminated postcodes in your data set. These are postcodes that are no longer active. UK postcodes can change so it's worth checking whether used postcodes are still active. If you need more information about when a particular postcode was terminated use:
+
+```{r}
+terminated_postcode("E1W 1UU")
+```
