@@ -1,6 +1,6 @@
 #' Postcode autocomplete
 #'
-#' Convenience method to return an list of matching postcodes.
+#' Convenience method to return a list of matching postcodes.
 #'
 #' @import httr
 #'
@@ -24,5 +24,9 @@ postcode_autocomplete <- function(postcode, limit = 10) {
   }
   r <- GET(paste0("https://api.postcodes.io/postcodes/",
                   postcode, "/autocomplete", "?limit=", limit))
-  extract_results(r)
+  r <- extract_results(r)
+  r <- data.frame(sapply(r, "[", 1),
+                  stringsAsFactors = FALSE)
+  colnames(r) <- "postcode"
+  return(r)
 }
