@@ -12,7 +12,7 @@
 #'
 #' @examples
 #' postcode_lookup("EC1Y8LX")
-#' postcode_lookup("EC1Y 8LX")
+#' postcode_lookup("EC1Y 8LX") # spaces are ignored
 #'
 postcode_lookup <- function(postcode) {
   if (!is.character(postcode) || nchar(postcode) < 2) {
