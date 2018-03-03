@@ -11,7 +11,8 @@
 #' @export
 #'
 #' @examples
-#' pc_list <- list(postcodes = c("PR3 0SG", "M45 6GN", "EX165BL"))
+#' pc_list <- list(
+#' postcodes = c("PR3 0SG", "M45 6GN", "EX165BL")) # spaces are ignored
 #' bulk_postcode_lookup(pc_list)
 #'
 bulk_postcode_lookup <- function(postcodes) {
