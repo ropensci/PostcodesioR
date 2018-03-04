@@ -86,10 +86,10 @@ str(rev_geo[1])
 
 #### Multiple postcodes
 
-To reverse geocode multiple values use the function underneath. The result is a nested list, which might be a bit intimidating, but it allows storing unequal lengths of elements.
+To reverse geocode multiple values use the function underneath. The result is a nested list, which might be a bit intimidating, but it allows storing unequal number of elements.
 
 ```{r}
-# create a JSON object with the coordinates
+# create a list with the coordinates
 geolocations_list <- structure(
  list(
  geolocations = structure(
@@ -107,6 +107,32 @@ bulk_rev_geo <- bulk_reverse_geocoding(geolocations_list)
 
 bulk_rev_geo[[1]]$result[[1]]
 ```
+
+The list above is not the most common way of storing files. It's more likely that a data frame will be used to store the geodata. In that case, it has to be turned into a list of a specific format required by the API:
+
+```{r}
+geolocations_df <- structure(
+  list(
+    longitude = c(-3.15807731271522, -1.12935802905177),
+    latitude = c(51.4799900627036, 50.7186356978817),
+    limit = c(NA, 100L),
+    radius = c(NA, 500L)),
+  .Names = c("longitude", "latitude", "limit", "radius"),
+  row.names = 1:2,
+  class = "data.frame")
+
+geolocations_df
+
+# turn a data frame into a list
+geolocations_df2list <- list(geolocations_df)
+
+# add a list name
+names(geolocations_df2list) <- "geolocations"
+
+# display correct input for the function
+geolocations_df2list
+```
+
 
 Common usage of this function might be extracting particular variables. You can extract one variable like this:
 
