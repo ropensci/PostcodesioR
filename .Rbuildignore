@@ -4,3 +4,4 @@
 ^codecov\.yml$
 ^docs$
 ^README\.Rmd$
+^CONDUCT\.md$
