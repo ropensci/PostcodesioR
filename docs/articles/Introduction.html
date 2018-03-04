@@ -75,7 +75,7 @@
       <h1>Introduction</h1>
                         <h4 class="author">Eryk Walczak</h4>
             
-            <h4 class="date">2018-01-08</h4>
+            <h4 class="date">2018-03-04</h4>
           </div>
 
     
@@ -87,20 +87,14 @@
 <a href="#installation" class="anchor"></a>Installation</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw">require</span>(<span class="st">"devtools"</span>)) <span class="kw">install.packages</span>(<span class="st">"devtools"</span>)
 devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"erzk/PostcodesioR"</span>)</code></pre></div>
-</div>
-<div id="examples" class="section level2">
-<h2 class="hasAnchor">
-<a href="#examples" class="anchor"></a>Examples</h2>
-<p>Where possible, the functions return data frames. In many cases, the object being returned are rather complex so I left them as the lists.</p>
 <div id="lookup-postcodes-and-outcodes" class="section level3">
 <h3 class="hasAnchor">
 <a href="#lookup-postcodes-and-outcodes" class="anchor"></a>Lookup postcodes and outcodes</h3>
 <div id="single-postcode" class="section level4">
 <h4 class="hasAnchor">
 <a href="#single-postcode" class="anchor"></a>Single postcode</h4>
-<p>Provide a postcode to obtain all available information:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># load the package</span>
-<span class="kw">library</span>(PostcodesioR)
+<p>Provide a postcode to obtain all available information</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(PostcodesioR)
 
 lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/postcode_lookup.html">postcode_lookup</a></span>(<span class="st">"EC1Y8LX"</span>)
 
@@ -136,10 +130,49 @@ lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../referen
 ##  $ parliamentary_constituency: chr "E14000764"
 ##  $ ccg                       : chr "E38000088"
 ##  $ nuts                      : chr "UKI43"</code></pre>
+<p>There is another function that returns the same data points but returns a list and allows optional parameters</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">query_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/postcode_query.html">postcode_query</a></span>(<span class="st">"EC1Y8LX"</span>)
+
+<span class="co">#overview</span>
+<span class="kw">str</span>(query_result)</code></pre></div>
+<pre><code>## List of 1
+##  $ :List of 23
+##   ..$ postcode                  : chr "EC1Y 8LX"
+##   ..$ quality                   : int 1
+##   ..$ eastings                  : int 532544
+##   ..$ northings                 : int 182128
+##   ..$ country                   : chr "England"
+##   ..$ nhs_ha                    : chr "London"
+##   ..$ longitude                 : num -0.0909
+##   ..$ latitude                  : num 51.5
+##   ..$ european_electoral_region : chr "London"
+##   ..$ primary_care_trust        : chr "Islington"
+##   ..$ region                    : chr "London"
+##   ..$ lsoa                      : chr "Islington 023D"
+##   ..$ msoa                      : chr "Islington 023"
+##   ..$ incode                    : chr "8LX"
+##   ..$ outcode                   : chr "EC1Y"
+##   ..$ parliamentary_constituency: chr "Islington South and Finsbury"
+##   ..$ admin_district            : chr "Islington"
+##   ..$ parish                    : chr "Islington, unparished area"
+##   ..$ admin_county              : NULL
+##   ..$ admin_ward                : chr "Bunhill"
+##   ..$ ccg                       : chr "NHS Islington"
+##   ..$ nuts                      : chr "Haringey and Islington"
+##   ..$ codes                     :List of 7
+##   .. ..$ admin_district            : chr "E09000019"
+##   .. ..$ admin_county              : chr "E99999999"
+##   .. ..$ admin_ward                : chr "E05000367"
+##   .. ..$ parish                    : chr "E43000209"
+##   .. ..$ parliamentary_constituency: chr "E14000764"
+##   .. ..$ ccg                       : chr "E38000088"
+##   .. ..$ nuts                      : chr "UKI43"</code></pre>
+<p>This function creates a nested list with the codes for administrative district, county, ward, parish, parliamentary constituency, CCG, and NUTS.</p>
 </div>
 <div id="multiple-postcodes" class="section level4">
 <h4 class="hasAnchor">
 <a href="#multiple-postcodes" class="anchor"></a>Multiple postcodes</h4>
+<p>To query two or more postcodes, use <code>bulk_</code> functions.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pc_list &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">postcodes =</span> <span class="kw">c</span>(<span class="st">"PR3 0SG"</span>, <span class="st">"M45 6GN"</span>, <span class="st">"EX165BL"</span>))
 bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/bulk_postcode_lookup.html">bulk_postcode_lookup</a></span>(pc_list)
 
@@ -269,7 +302,8 @@ bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../re
 <div id="multiple-postcodes-1" class="section level4">
 <h4 class="hasAnchor">
 <a href="#multiple-postcodes-1" class="anchor"></a>Multiple postcodes</h4>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># create a JSON object with the coordinates</span>
+<p>To reverse geocode multiple values use the function underneath. The result is a nested list, which might be a bit intimidating, but it allows storing unequal number of elements.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># create a list with the coordinates</span>
 geolocations_list &lt;-<span class="st"> </span><span class="kw">structure</span>(
  <span class="kw">list</span>(
  <span class="dt">geolocations =</span> <span class="kw">structure</span>(
@@ -285,8 +319,163 @@ geolocations_list &lt;-<span class="st"> </span><span class="kw">structure</span
 
 bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../reference/bulk_reverse_geocoding.html">bulk_reverse_geocoding</a></span>(geolocations_list)
 
-<span class="co">#overview</span>
-<span class="kw">str</span>(bulk_rev_geo)</code></pre></div>
+bulk_rev_geo[[<span class="dv">1</span>]]<span class="op">$</span>result[[<span class="dv">1</span>]]</code></pre></div>
+<pre><code>## $postcode
+## [1] "CF24 2BT"
+## 
+## $quality
+## [1] 1
+## 
+## $eastings
+## [1] 319675
+## 
+## $northings
+## [1] 176305
+## 
+## $country
+## [1] "Wales"
+## 
+## $nhs_ha
+## [1] "Cardiff and Vale University Health Board"
+## 
+## $longitude
+## [1] -3.158077
+## 
+## $latitude
+## [1] 51.47998
+## 
+## $european_electoral_region
+## [1] "Wales"
+## 
+## $primary_care_trust
+## [1] "Cardiff and Vale University Health Board"
+## 
+## $region
+## NULL
+## 
+## $lsoa
+## [1] "Cardiff 038D"
+## 
+## $msoa
+## [1] "Cardiff 038"
+## 
+## $incode
+## [1] "2BT"
+## 
+## $outcode
+## [1] "CF24"
+## 
+## $distance
+## [1] 2.639788
+## 
+## $parliamentary_constituency
+## [1] "Cardiff South and Penarth"
+## 
+## $admin_district
+## [1] "Cardiff"
+## 
+## $parish
+## [1] "Splott"
+## 
+## $admin_county
+## NULL
+## 
+## $admin_ward
+## [1] "Splott"
+## 
+## $ccg
+## [1] "Cardiff and Vale University Health Board"
+## 
+## $nuts
+## [1] "Cardiff and Vale of Glamorgan"
+## 
+## $codes
+## $codes$admin_district
+## [1] "W06000015"
+## 
+## $codes$admin_county
+## [1] "W99999999"
+## 
+## $codes$admin_ward
+## [1] "W05000879"
+## 
+## $codes$parish
+## [1] "W04000863"
+## 
+## $codes$parliamentary_constituency
+## [1] "W07000080"
+## 
+## $codes$ccg
+## [1] "W11000029"
+## 
+## $codes$nuts
+## [1] "UKL22"</code></pre>
+<p>The list above is not the most common way of storing files. It’s more likely that a data frame will be used to store the geodata. In that case, it has to be turned into a list of a specific format required by the API:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">geolocations_df &lt;-<span class="st"> </span><span class="kw">structure</span>(
+  <span class="kw">list</span>(
+    <span class="dt">longitude =</span> <span class="kw">c</span>(<span class="op">-</span><span class="fl">3.15807731271522</span>, <span class="op">-</span><span class="fl">1.12935802905177</span>),
+    <span class="dt">latitude =</span> <span class="kw">c</span>(<span class="fl">51.4799900627036</span>, <span class="fl">50.7186356978817</span>),
+    <span class="dt">limit =</span> <span class="kw">c</span>(<span class="ot">NA</span>, 100L),
+    <span class="dt">radius =</span> <span class="kw">c</span>(<span class="ot">NA</span>, 500L)),
+  <span class="dt">.Names =</span> <span class="kw">c</span>(<span class="st">"longitude"</span>, <span class="st">"latitude"</span>, <span class="st">"limit"</span>, <span class="st">"radius"</span>),
+  <span class="dt">row.names =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,
+  <span class="dt">class =</span> <span class="st">"data.frame"</span>)
+
+geolocations_df</code></pre></div>
+<pre><code>##   longitude latitude limit radius
+## 1 -3.158077 51.47999    NA     NA
+## 2 -1.129358 50.71864   100    500</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># turn a data frame into a list</span>
+geolocations_df2list &lt;-<span class="st"> </span><span class="kw">list</span>(geolocations_df)
+
+<span class="co"># add a list name</span>
+<span class="kw">names</span>(geolocations_df2list) &lt;-<span class="st"> "geolocations"</span>
+
+<span class="co"># display correct input for the function</span>
+geolocations_df2list</code></pre></div>
+<pre><code>## $geolocations
+##   longitude latitude limit radius
+## 1 -3.158077 51.47999    NA     NA
+## 2 -1.129358 50.71864   100    500</code></pre>
+<p>Common usage of this function might be extracting particular variables. You can extract one variable like this:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># extract one postcode</span>
+bulk_rev_geo[[<span class="dv">1</span>]]<span class="op">$</span>result[[<span class="dv">8</span>]]<span class="op">$</span>postcode</code></pre></div>
+<pre><code>## [1] "CF24 2AL"</code></pre>
+<p>But more likely you will want more than one result. After all, that’s the point of using a bulk function:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># function to extract variables of interest</span>
+extract_bulk_geo_variable &lt;-<span class="st"> </span><span class="cf">function</span>(x) {
+  bulk_results &lt;-<span class="st"> </span><span class="kw">lapply</span>(bulk_rev_geo, <span class="st">`</span><span class="dt">[[</span><span class="st">`</span>, <span class="st">"result"</span>)
+  <span class="kw">sapply</span>(<span class="kw">unlist</span>(bulk_results, <span class="dt">recursive =</span> <span class="ot">FALSE</span>), <span class="st">`</span><span class="dt">[[</span><span class="st">`</span>, x)
+}
+
+<span class="co"># define the variables you need</span>
+variables_of_interest &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">"postcode"</span>, <span class="st">"latitude"</span>, <span class="st">"longitude"</span>)
+
+<span class="co"># return a data frame with the variables</span>
+<span class="kw">data.frame</span>(
+  <span class="kw">sapply</span>(variables_of_interest, extract_bulk_geo_variable))</code></pre></div>
+<pre><code>##    postcode         latitude         longitude
+## 1  CF24 2BT 51.4799810730482 -3.15807708496285
+## 2  CF24 2ED 51.4796962780375 -3.15868908771903
+## 3  CF24 2AA  51.480214120738 -3.15906222875833
+## 4  CF24 5NW 51.4793656523229 -3.15847910268578
+## 5  CF24 2AJ  51.480686989214 -3.15852699155627
+## 6  CF24 2AH 51.4805572928224 -3.15891252296984
+## 7  CF24 2DZ 51.4801105864152 -3.15679871749552
+## 8  CF24 2AL 51.4808346636567 -3.15814191348464
+## 9  PO33 1PS 50.7188151075122 -1.12929804319882
+## 10 PO33 1PT 50.7185750818924 -1.12846672060095
+## 11 PO33 1QB 50.7170474559076 -1.12982656563728
+## 12 PO33 1PX 50.7178907506146 -1.12714786456114
+## 13 PO33 1QD 50.7172032703058 -1.12781222816285
+## 14 PO33 1PU 50.7184669311199  -1.1260322523645
+## 15 PO33 1PZ 50.7162328095008 -1.12791522396325
+## 16 PO33 1QR 50.7157418306918 -1.12599793035477
+## 17 PO33 1PB 50.7210243159623 -1.13371950415272
+## 18 PO33 1PR  50.721487986434  -1.1331867990148
+## 19 PO33 1PY 50.7151718843021 -1.12674508376803
+## 20 PO33 1QP 50.7155625975698 -1.12488225387235
+## 21 PO34 5AP 50.7214660528318 -1.12423400885574</code></pre>
 </div>
 <div id="single-outcode" class="section level4">
 <h4 class="hasAnchor">
@@ -319,110 +508,110 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 <div id="postcodes" class="section level4">
 <h4 class="hasAnchor">
 <a href="#postcodes" class="anchor"></a>Postcodes</h4>
-<p>Generates a data frame with a random UK postcode and corresponding geographic information:</p>
+<p>Generates a list with a random UK postcode and corresponding geographic information:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># without restrictions</span>
 <span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>()</code></pre></div>
 <pre><code>## $postcode
-## [1] "SS12 9ED"
+## [1] "HR2 7JP"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 574345
+## [1] 350559
 ## 
 ## $northings
-## [1] 192355
+## [1] 238955
 ## 
 ## $country
 ## [1] "England"
 ## 
 ## $nhs_ha
-## [1] "East of England"
+## [1] "West Midlands"
 ## 
 ## $longitude
-## [1] 0.5161101
+## [1] -2.722331
 ## 
 ## $latitude
-## [1] 51.60304
+## [1] 52.04677
 ## 
 ## $european_electoral_region
-## [1] "Eastern"
+## [1] "West Midlands"
 ## 
 ## $primary_care_trust
-## [1] "South West Essex"
+## [1] "Herefordshire"
 ## 
 ## $region
-## [1] "East of England"
+## [1] "West Midlands"
 ## 
 ## $lsoa
-## [1] "Basildon 008B"
+## [1] "Herefordshire 015E"
 ## 
 ## $msoa
-## [1] "Basildon 008"
+## [1] "Herefordshire 015"
 ## 
 ## $incode
-## [1] "9ED"
+## [1] "7JP"
 ## 
 ## $outcode
-## [1] "SS12"
+## [1] "HR2"
 ## 
 ## $parliamentary_constituency
-## [1] "Rayleigh and Wickford"
+## [1] "Hereford and South Herefordshire"
 ## 
 ## $admin_district
-## [1] "Basildon"
+## [1] "Herefordshire, County of"
 ## 
 ## $parish
-## [1] "Basildon, unparished area"
+## [1] "Hereford"
 ## 
 ## $admin_county
-## [1] "Essex"
+## NULL
 ## 
 ## $admin_ward
-## [1] "Wickford Park"
+## [1] "Red Hill"
 ## 
 ## $ccg
-## [1] "NHS Basildon and Brentwood"
+## [1] "NHS Herefordshire"
 ## 
 ## $nuts
-## [1] "Essex Thames Gateway"
+## [1] "Herefordshire, County of"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "E07000066"
+## [1] "E06000019"
 ## 
 ## $codes$admin_county
-## [1] "E10000012"
+## [1] "E99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05004036"
+## [1] "E05009478"
 ## 
 ## $codes$parish
-## [1] "E43000058"
+## [1] "E04000921"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "E14000888"
+## [1] "E14000743"
 ## 
 ## $codes$ccg
-## [1] "E38000007"
+## [1] "E38000078"
 ## 
 ## $codes$nuts
-## [1] "UKH37"</code></pre>
+## [1] "UKG11"</code></pre>
 <p>A randomly generated postcode can also belong to a particular outcode:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># restrict to an outcode</span>
 <span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</code></pre></div>
 <pre><code>## $postcode
-## [1] "N1 1QF"
+## [1] "N1 7AB"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 531630
+## [1] 532378
 ## 
 ## $northings
-## [1] 183943
+## [1] 183782
 ## 
 ## $country
 ## [1] "England"
@@ -431,10 +620,10 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 ## [1] "London"
 ## 
 ## $longitude
-## [1] -0.1034111
+## [1] -0.09269252
 ## 
 ## $latitude
-## [1] 51.53905
+## [1] 51.53743
 ## 
 ## $european_electoral_region
 ## [1] "London"
@@ -446,13 +635,13 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 ## [1] "London"
 ## 
 ## $lsoa
-## [1] "Islington 020B"
+## [1] "Islington 018C"
 ## 
 ## $msoa
-## [1] "Islington 020"
+## [1] "Islington 018"
 ## 
 ## $incode
-## [1] "1QF"
+## [1] "7AB"
 ## 
 ## $outcode
 ## [1] "N1"
@@ -470,7 +659,7 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 ## NULL
 ## 
 ## $admin_ward
-## [1] "St Mary's"
+## [1] "St Peter's"
 ## 
 ## $ccg
 ## [1] "NHS Islington"
@@ -486,7 +675,7 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 ## [1] "E99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05000379"
+## [1] "E05000380"
 ## 
 ## $codes$parish
 ## [1] "E43000209"
@@ -505,14 +694,16 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 <a href="#places" class="anchor"></a>Places</h4>
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/random_place.html">random_place</a></span>()</code></pre></div>
-<pre><code>##                   code    name_1 name_1_lang name_2 name_2_lang local_type
-## 1 osgb4000000074546777 Tidebrook        NULL   NULL        NULL    Village
-##   outcode county_unitary county_unitary_type district_borough
-## 1     TN5    East Sussex              County          Wealden
-##   district_borough_type     region country longitude latitude eastings
-## 1              District South East England 0.2998168 51.04477   561314
-##   northings min_eastings min_northings max_eastings max_northings
-## 1    129785       560758        129052       561846        130428</code></pre>
+<pre><code>##                   code  name_1 name_1_lang name_2 name_2_lang
+## 1 osgb4000000074569733 Onthank        NULL   NULL        NULL
+##      local_type outcode county_unitary county_unitary_type
+## 1 Suburban Area     KA3  East Ayrshire    UnitaryAuthority
+##   district_borough district_borough_type   region  country longitude
+## 1             NULL                  NULL Scotland Scotland -4.492667
+##   latitude eastings northings min_eastings min_northings max_eastings
+## 1 55.62562   243150    639712       242154        639521       243581
+##   max_northings
+## 1        640502</code></pre>
 </div>
 </div>
 <div id="postcode-validation" class="section level3">
@@ -523,6 +714,24 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 <pre><code>## [1] TRUE</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/postcode_validation.html">postcode_validation</a></span>(<span class="st">"XYZ"</span>) <span class="co"># incorrect UK postcode</span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
+</div>
+<div id="autocomplete-postcodes" class="section level3">
+<h3 class="hasAnchor">
+<a href="#autocomplete-postcodes" class="anchor"></a>Autocomplete postcodes</h3>
+<p>Find the potential candidates for a postcode if you only know the beginning characters</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/postcode_autocomplete.html">postcode_autocomplete</a></span>(<span class="st">"EC1"</span>)</code></pre></div>
+<pre><code>##    postcode
+## 1  EC1A 1AA
+## 2  EC1A 1AH
+## 3  EC1A 1AZ
+## 4  EC1A 1BB
+## 5  EC1A 1DH
+## 6  EC1A 1DJ
+## 7  EC1A 1DL
+## 8  EC1A 1DN
+## 9  EC1A 1DP
+## 10 EC1A 1DR</code></pre>
+<p>It defaults to 10 candidates, but can be changed by specifying the <code>limit</code> argument.</p>
 </div>
 <div id="find-nearest-postcodes-or-outcodes" class="section level3">
 <h3 class="hasAnchor">
@@ -567,6 +776,7 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 ##   .. ..$ nuts                      : chr "UKI43"</code></pre>
 <p>You can also use outcodes:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">near_outcode &lt;-<span class="st"> </span><span class="kw"><a href="../reference/nearest_outcode.html">nearest_outcode</a></span>(<span class="st">"EC1Y"</span>)
+
 <span class="co"># overview</span>
 <span class="kw">str</span>(near_outcode[<span class="dv">2</span>])</code></pre></div>
 <pre><code>## List of 1
@@ -593,6 +803,33 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 ##   ..$ country       :List of 1
 ##   .. ..$ : chr "England"
 ##   ..$ distance      : num 400</code></pre>
+<p>Or longitude and latitude</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">near_ll &lt;-<span class="st"> </span><span class="kw"><a href="../reference/nearest_outcode_lonlat.html">nearest_outcode_lonlat</a></span>(<span class="fl">0.127</span>, <span class="fl">51.507</span>)
+
+<span class="co">#overview</span>
+<span class="kw">str</span>(near_ll[<span class="dv">1</span>])</code></pre></div>
+<pre><code>## List of 1
+##  $ :List of 11
+##   ..$ outcode       : chr "SE28"
+##   ..$ longitude     : num 0.105
+##   ..$ latitude      : num 51.5
+##   ..$ northings     : int 180253
+##   ..$ eastings      : int 546165
+##   ..$ admin_district:List of 2
+##   .. ..$ : chr "Bexley"
+##   .. ..$ : chr "Greenwich"
+##   ..$ parish        :List of 2
+##   .. ..$ : chr "Greenwich, unparished area"
+##   .. ..$ : chr "Bexley, unparished area"
+##   ..$ admin_county  : list()
+##   ..$ admin_ward    :List of 4
+##   .. ..$ : chr "Thamesmead Moorings"
+##   .. ..$ : chr "Glyndon"
+##   .. ..$ : chr "Thamesmead East"
+##   .. ..$ : chr "Plumstead"
+##   ..$ country       :List of 1
+##   .. ..$ : chr "England"
+##   ..$ distance      : num 1646</code></pre>
 </div>
 <div id="find-places" class="section level3">
 <h3 class="hasAnchor">
@@ -653,11 +890,14 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 ##  $ max_eastings         : int 419039
 ##  $ max_northings        : int 432041</code></pre>
 </div>
+<div id="terminated-postcodes" class="section level3">
+<h3 class="hasAnchor">
+<a href="#terminated-postcodes" class="anchor"></a>Terminated postcodes</h3>
+<p>You might end up having terminated postcodes in your data set. These are postcodes that are no longer active. UK postcodes can change so it’s worth checking whether used postcodes are still active. If you need more information about when a particular postcode was terminated use:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/terminated_postcode.html">terminated_postcode</a></span>(<span class="st">"E1W 1UU"</span>)</code></pre></div>
+<pre><code>##   postcode year_terminated month_terminated
+## 1  E1W 1UU            2015                2</code></pre>
 </div>
-<div id="notes" class="section level2">
-<h2 class="hasAnchor">
-<a href="#notes" class="anchor"></a>Notes</h2>
-<p>For more information about the API calls and returned data, consult the official <a href="https://postcodes.io/docs">documentation</a>.</p>
 </div>
 </div>
   </div>
@@ -668,8 +908,6 @@ bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../referenc
 <a href="#tocnav" class="anchor"></a>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
 <li><a href="#installation">Installation</a></li>
-      <li><a href="#examples">Examples</a></li>
-      <li><a href="#notes">Notes</a></li>
       </ul>
 </div>
       </div>
