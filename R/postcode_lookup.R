@@ -2,7 +2,8 @@
 #'
 #' Lookup a postcode.
 #'
-#' @import httr
+#' @importFrom httr GET
+#' @importFrom httr warn_for_status
 #'
 #' @param postcode A string. Valid UK postcode.
 #'

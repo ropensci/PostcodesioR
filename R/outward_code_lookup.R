@@ -2,7 +2,7 @@
 #'
 #' Geolocation data for the centroid of the outward code specified.
 #'
-#' @import httr
+#' @importFrom httr GET
 #'
 #' @param outcode A string. The outward code representing the first half of any postcode (separated by a space).
 #'

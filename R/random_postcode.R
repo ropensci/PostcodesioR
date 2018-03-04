@@ -2,7 +2,7 @@
 #'
 #' Returns a random postcode and all available data for that postcode.
 #'
-#' @import httr
+#' @importFrom httr GET
 #'
 #' @param outcode A string. Filters random postcodes by outcode. Returns null if invalid outcode. Optional.
 #'

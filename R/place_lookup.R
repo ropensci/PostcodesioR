@@ -2,7 +2,7 @@
 #'
 #' Lookup a place by code. Returns all available data if found. Returns 404 if place does not exist.
 #'
-#' @import httr
+#' @importFrom httr GET
 #'
 #' @param code A string. The unique identifier for places - Ordnance Survey (OSGB) code.
 #'

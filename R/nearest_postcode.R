@@ -2,7 +2,7 @@
 #'
 #' Returns nearest postcodes for a given postcode.
 #'
-#' @import httr
+#' @importFrom httr GET
 #'
 #' @param postcode A string. Valid UK postcode.
 #' @param limit A string or integer. Limits number of postcodes matches to return. Defaults to 10. Needs to be lower than 100.

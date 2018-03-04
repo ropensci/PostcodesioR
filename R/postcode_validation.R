@@ -2,7 +2,7 @@
 #'
 #' Convenience method to validate a postcode.
 #'
-#' @import httr
+#' @importFrom httr GET
 #'
 #' @param postcode A string. Valid UK postcode.
 #'

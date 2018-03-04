@@ -2,7 +2,7 @@
 #'
 #' Submit a place query and receive a complete list of places matches and associated data.
 #'
-#' @import httr
+#' @importFrom httr GET
 #'
 #' @param place A string. Name of a place to search for.
 #' @param limit An integer. Limits the number of matches to return. Defaults to 10. Needs to be less than 100.

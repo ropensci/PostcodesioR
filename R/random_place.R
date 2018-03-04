@@ -2,7 +2,10 @@
 #'
 #' Returns a random place and all associated data
 #'
-#' @import httr
+#' @importFrom httr GET
+#' @importFrom httr warn_for_status
+#' @importFrom httr status_code
+#' @importFrom httr content
 #'
 #' @return A data frame describing a random place and all associated data.
 #'

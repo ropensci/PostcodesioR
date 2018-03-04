@@ -2,7 +2,7 @@
 #'
 #' Returns a data frame of matching postcodes.
 #'
-#' @import httr
+#' @importFrom httr GET
 #'
 #' @param postcode A string. Valid UK postcode.
 #' @param limit An integer. Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.

@@ -2,7 +2,7 @@
 #'
 #' Returns a list of matching postcodes and respective available data.
 #'
-#' @import httr
+#' @importFrom httr POST
 #'
 #' @param postcodes Accepts a list of postcodes. Accepts up to 100 postcodes.
 #'

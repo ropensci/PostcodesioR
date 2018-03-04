@@ -2,7 +2,9 @@
 #'
 #' Returns month and year if a postcode was terminated or is no longer active.
 #'
-#' @import httr
+#' @importFrom httr GET
+#' @importFrom httr warn_for_status
+#' @importFrom httr status_code
 #'
 #' @param postcode A string. Terminated UK postcode.
 #'

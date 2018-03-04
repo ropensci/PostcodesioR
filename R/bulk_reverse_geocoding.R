@@ -6,7 +6,7 @@
 #' Each geolocation object accepts an optional radius (meters) and limit argument.
 #' Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #'
-#' @import httr
+#' @importFrom httr POST
 #'
 #' @param geolocations A list containing an array of geolocation objects. At least two elements needed.
 #'

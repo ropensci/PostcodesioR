@@ -2,7 +2,7 @@
 #'
 #' Returns nearest outcodes for a given longitude and latitude.
 #'
-#' @import httr
+#' @importFrom httr GET
 #'
 #' @param longitude A string, integer or float. Needs to have at least two decimal points.
 #' @param latitude A string, integer or float. Needs to have at least two decimal points.

@@ -2,7 +2,7 @@
 #'
 #' Returns nearest outcodes for a given outcode.
 #'
-#' @import httr
+#' @importFrom httr GET
 #'
 #' @param outcode A string with a UK postcode.
 #' @param limit An integer. Optional parameter. Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.

@@ -2,7 +2,7 @@
 #'
 #' Returns nearest postcodes for a given longitude and latitude.
 #'
-#' @import httr
+#' @importFrom httr GET
 #'
 #' @param longitude A string or numeric. Needs to have at least three decimal points.
 #' @param latitude A string or numeric. Needs to have at least three decimal points.

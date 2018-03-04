@@ -2,7 +2,7 @@
 #'
 #' Submit a postcode query and receive a complete list of postcode matches and all associated postcode data.
 #'
-#' @import httr
+#' @importFrom httr GET
 #'
 #' @param postcode A string. Valid UK postcode.
 #' @param limit An integer. Limits the number of matches to return. Defaults to 10. Needs to be less than 100.
