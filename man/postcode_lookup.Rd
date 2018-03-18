@@ -7,7 +7,7 @@
 postcode_lookup(postcode)
 }
 \arguments{
-\item{postcode}{A string. Valid UK postcode.}
+\item{postcode}{A string. One valid UK postcode.}
 }
 \value{
 A data frame. Returns all available data if found. Returns 404 if postcode does not exist.

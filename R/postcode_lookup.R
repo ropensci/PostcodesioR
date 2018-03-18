@@ -5,7 +5,7 @@
 #' @importFrom httr GET
 #' @importFrom httr warn_for_status
 #'
-#' @param postcode A string. Valid UK postcode.
+#' @param postcode A string. One valid UK postcode.
 #'
 #' @export
 #'
@@ -18,6 +18,9 @@
 postcode_lookup <- function(postcode) {
   if (!is.character(postcode) || nchar(postcode) < 2) {
     stop("Please provide a valid UK outcode.")
+  }
+  if (length(nchar(postcode)) > 1) {
+    stop("This function accepts only one postcode, for multiple requests please use bulk_postcode_lookup().")
   }
   r <- GET(paste0("https://api.postcodes.io/postcodes/", postcode))
   warn_for_status(r)
