@@ -45,35 +45,35 @@ str(lookup_result)
 ```
 
     ## 'data.frame':    1 obs. of  29 variables:
-    ##  $ postcode                  : chr "EC1Y 8LX"
-    ##  $ quality                   : int 1
-    ##  $ eastings                  : int 532544
-    ##  $ northings                 : int 182128
-    ##  $ country                   : chr "England"
-    ##  $ nhs_ha                    : chr "London"
-    ##  $ longitude                 : num -0.0909
-    ##  $ latitude                  : num 51.5
-    ##  $ european_electoral_region : chr "London"
-    ##  $ primary_care_trust        : chr "Islington"
-    ##  $ region                    : chr "London"
-    ##  $ lsoa                      : chr "Islington 023D"
-    ##  $ msoa                      : chr "Islington 023"
-    ##  $ incode                    : chr "8LX"
-    ##  $ outcode                   : chr "EC1Y"
-    ##  $ parliamentary_constituency: chr "Islington South and Finsbury"
-    ##  $ admin_district            : chr "Islington"
-    ##  $ parish                    : chr "Islington, unparished area"
-    ##  $ admin_county              : logi NA
-    ##  $ admin_ward                : chr "Bunhill"
-    ##  $ ccg                       : chr "NHS Islington"
-    ##  $ nuts                      : chr "Haringey and Islington"
-    ##  $ admin_district            : chr "E09000019"
-    ##  $ admin_county              : chr "E99999999"
-    ##  $ admin_ward                : chr "E05000367"
-    ##  $ parish                    : chr "E43000209"
-    ##  $ parliamentary_constituency: chr "E14000764"
-    ##  $ ccg                       : chr "E38000088"
-    ##  $ nuts                      : chr "UKI43"
+    ##  $ postcode                       : chr "EC1Y 8LX"
+    ##  $ quality                        : int 1
+    ##  $ eastings                       : int 532544
+    ##  $ northings                      : int 182128
+    ##  $ country                        : chr "England"
+    ##  $ nhs_ha                         : chr "London"
+    ##  $ longitude                      : num -0.0909
+    ##  $ latitude                       : num 51.5
+    ##  $ european_electoral_region      : chr "London"
+    ##  $ primary_care_trust             : chr "Islington"
+    ##  $ region                         : chr "London"
+    ##  $ lsoa                           : chr "Islington 023D"
+    ##  $ msoa                           : chr "Islington 023"
+    ##  $ incode                         : chr "8LX"
+    ##  $ outcode                        : chr "EC1Y"
+    ##  $ parliamentary_constituency     : chr "Islington South and Finsbury"
+    ##  $ admin_district                 : chr "Islington"
+    ##  $ parish                         : chr "Islington, unparished area"
+    ##  $ admin_county                   : logi NA
+    ##  $ admin_ward                     : chr "Bunhill"
+    ##  $ ccg                            : chr "NHS Islington"
+    ##  $ nuts                           : chr "Haringey and Islington"
+    ##  $ admin_district_code            : chr "E09000019"
+    ##  $ admin_county_code              : chr "E99999999"
+    ##  $ admin_ward_code                : chr "E05000367"
+    ##  $ parish_code                    : chr "E43000209"
+    ##  $ parliamentary_constituency_code: chr "E14000764"
+    ##  $ ccg_code                       : chr "E38000088"
+    ##  $ nuts_code                      : chr "UKI43"
 
 Check the vignette to see all functions in action.
 
