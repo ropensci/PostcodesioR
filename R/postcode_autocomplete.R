@@ -9,7 +9,7 @@
 #'
 #' @export
 #'
-#' @return A list of suggested postcodes.
+#' @return A data frame with suggested postcodes.
 #'
 #' @examples
 #' postcode_autocomplete("E1")

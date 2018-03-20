@@ -12,7 +12,7 @@ postcode_autocomplete(postcode, limit = 10)
 \item{limit}{An integer. Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.}
 }
 \value{
-A list of suggested postcodes.
+A data frame with suggested postcodes.
 }
 \description{
 Returns a data frame of matching postcodes.
