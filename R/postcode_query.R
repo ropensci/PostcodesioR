@@ -10,6 +10,7 @@
 #' @export
 #'
 #' @return A list of geographic properties.
+#' To return a data frame use \link[PostcodesioR]{postcode_lookup}.
 #'
 #' @examples
 #' postcode_query("EC1Y8LX")

@@ -13,6 +13,7 @@ postcode_query(postcode, limit = 10)
 }
 \value{
 A list of geographic properties.
+To return a data frame use \link[PostcodesioR]{postcode_lookup}.
 }
 \description{
 Submit a postcode query and receive a complete list of postcode matches and all associated postcode data.
