@@ -7,7 +7,7 @@
 postcode_lookup(postcode)
 }
 \arguments{
-\item{postcode}{A string. One valid UK postcode.
+\item{postcode}{A string. One valid UK postcode. This function is case- and space-insensitive.
 For more than one postcode use \link[PostcodesioR]{bulk_postcode_lookup}.}
 }
 \value{
