@@ -5,7 +5,7 @@
 #' @importFrom httr GET
 #' @importFrom httr warn_for_status
 #'
-#' @param postcode A string. One valid UK postcode.
+#' @param postcode A string. One valid UK postcode. This function is case- and space-insensitive.
 #' For more than one postcode use \link[PostcodesioR]{bulk_postcode_lookup}.
 #'
 #' @export
