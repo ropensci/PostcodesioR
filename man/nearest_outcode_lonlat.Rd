@@ -16,6 +16,7 @@ A list with available data.
 }
 \description{
 Returns nearest outward codes for a given longitude and latitude.
+The search is based on the relative distance of the outcode centroid.
 }
 \examples{
 nearest_outcode_lonlat(0.127, 51.507)

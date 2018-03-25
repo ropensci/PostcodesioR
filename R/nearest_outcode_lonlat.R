@@ -1,6 +1,7 @@
 #' Nearest outcodes given longitude and latitude
 #'
 #' Returns nearest outward codes for a given longitude and latitude.
+#' The search is based on the relative distance of the outcode centroid.
 #'
 #' @importFrom httr GET
 #'

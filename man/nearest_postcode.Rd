@@ -18,6 +18,7 @@ A list of geographic properties of the nearest postcode.
 }
 \description{
 Returns nearest postcodes for a given postcode.
+The search is based on the relative distance of the postcode centroid.
 }
 \examples{
 nearest_postcode("EC1Y 8LX")

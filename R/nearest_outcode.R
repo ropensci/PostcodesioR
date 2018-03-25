@@ -1,12 +1,15 @@
 #' Nearest outcode
 #'
 #' Returns nearest outcodes for a given outcode.
+#' The search is based on the relative distance of the outcode centroid.
 #'
 #' @importFrom httr GET
 #'
 #' @param outcode A string with a UK postcode.
-#' @param limit An integer. Optional parameter. Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.
-#' @param radius An integer. Optional parameter. Limits number of postcodes matches to return. Defaults to 5,000m. Needs to be less than 25,000m.
+#' @param limit An integer. Optional parameter. Limits number of postcodes matches to return.
+#' Defaults to 10. Needs to be less than 100.
+#' @param radius An integer. Optional parameter. Limits number of postcodes matches to return.
+#' Defaults to 5,000m. Needs to be less than 25,000m.
 #'
 #' @export
 #'

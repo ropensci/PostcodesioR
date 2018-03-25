@@ -9,15 +9,18 @@ nearest_outcode(outcode, limit = 10, radius = 5000)
 \arguments{
 \item{outcode}{A string with a UK postcode.}
 
-\item{limit}{An integer. Optional parameter. Limits number of postcodes matches to return. Defaults to 10. Needs to be less than 100.}
+\item{limit}{An integer. Optional parameter. Limits number of postcodes matches to return.
+Defaults to 10. Needs to be less than 100.}
 
-\item{radius}{An integer. Optional parameter. Limits number of postcodes matches to return. Defaults to 5,000m. Needs to be less than 25,000m.}
+\item{radius}{An integer. Optional parameter. Limits number of postcodes matches to return.
+Defaults to 5,000m. Needs to be less than 25,000m.}
 }
 \value{
 A list of geographical properties.
 }
 \description{
 Returns nearest outcodes for a given outcode.
+The search is based on the relative distance of the outcode centroid.
 }
 \examples{
 nearest_outcode("EC1Y")

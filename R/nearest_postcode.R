@@ -1,6 +1,7 @@
 #' Nearest postcode
 #'
 #' Returns nearest postcodes for a given postcode.
+#' The search is based on the relative distance of the postcode centroid.
 #'
 #' @importFrom httr GET
 #'
