@@ -28,3 +28,6 @@ nearest_outcode("EC1Y", limit = 11)
 nearest_outcode("EC1Y", limit = 11, radius = 6000)
 
 }
+\seealso{
+\code{\link{postcode_lookup}} for documentation.
+}

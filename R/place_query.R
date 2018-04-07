@@ -1,13 +1,17 @@
 #' Place Query
 #'
 #' Submit a place query and receive a complete list of places matches and associated data.
+#' This function is similar to \code{\link{place_lookup}} but it returns a list
+#' and allows limiting the results.
 #'
 #' @importFrom httr GET
 #'
 #' @param place A string. Name of a place to search for.
-#' @param limit An integer. Limits the number of matches to return. Defaults to 10. Needs to be less than 100.
+#' @param limit An integer. Limits the number of matches to return.
+#' Defaults to 10. Needs to be less than 100.
 #'
 #' @return A list with available places.
+#' @seealso \code{\link{place_lookup}} for documentation.
 #'
 #' @export
 #'

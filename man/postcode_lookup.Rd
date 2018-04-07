@@ -8,10 +8,96 @@ postcode_lookup(postcode)
 }
 \arguments{
 \item{postcode}{A string. One valid UK postcode. This function is case- and space-insensitive.
-For more than one postcode use \link[PostcodesioR]{bulk_postcode_lookup}.}
+For more than one postcode use \code{\link{bulk_postcode_lookup}}.}
 }
 \value{
 A data frame. Returns all available data if found. Returns 404 if postcode does not exist.
+\itemize{
+\item \code{postcode} Postcode. All current ('live') postcodes within the United Kingdom,
+the Channel Islands and the Isle of Man, received monthly from Royal Mail.
+2, 3 or 4-character outward code, single space and 3-character inward code.
+\item \code{quality} Positional Quality. Shows the status of the assigned grid reference.
+\itemize{
+\item 1 - within the building of the matched address closest to the postcode mean
+\item 2 - as for status value 1, except by visual inspection of Landline maps (Scotland only)
+\item 3 - approximate to within 50m
+\item 4 - postcode unit mean (mean of matched addresses with the same postcode, but not snapped to a building)
+\item 5 - imputed by ONS, by reference to surrounding postcode grid references
+\item 6 - postcode sector mean, (mainly PO Boxes)
+\item 8 - postcode terminated prior to Gridlink(R) initiative, last known ONS postcode grid reference1
+\item 9 - no grid reference available
+}
+\item \code{eastings} Eastings. The Ordnance Survey postcode grid reference
+Easting to 1 metre resolution; blank for postcodes in the
+Channel Islands and the Isle of Man.
+Grid references for postcodes in Northern Ireland relate to the Irish Grid system.
+\item \code{northings} Northings. The Ordnance Survey postcode grid reference
+Easting to 1 metre resolution; blank for postcodes in the
+Channel Islands and the Isle of Man.
+Grid references for postcodes in Northern Ireland relate to the Irish Grid system.
+\item \code{country} Country. The country (i.e. one of the four constituent
+countries of the United Kingdom or the Channel Islands or the Isle of Man)
+to which each postcode is assigned.
+\item \code{nhs_ha} Strategic Health Authority. The health area code for the postcode.
+\item \code{longitude} Longitude.
+The WGS84 longitude given the Postcode's national grid reference.
+\item \code{latitude} Latitude.
+The WGS84 latitude given the Postcode's national grid reference.
+\item \code{european_electoral_region} European Electoral Region (EER).
+The European Electoral Region code for each postcode.
+\item \code{primary_care_trust} Primary Care Trust (PCT).
+The code for the Primary Care areas in England, LHBs in Wales, CHPs in Scotland,
+LCG in Northern Ireland and PHD in the Isle of Man;
+there are no equivalent areas in the Channel Islands.
+Care Trust/ Care Trust Plus (CT) / local health board (LHB) /
+community health partnership (CHP) / local commissioning group (LCG) /
+primary healthcare directorate (PHD).
+\item \code{region} Region (formerly GOR). The Region code for each postcode.
+The nine GORs were abolished on 1 April 2011 and are now known as 'Regions'.
+They were the primary statistical subdivisions of England and
+also the areas in which the Government Offices for the Regions fulfilled their role.
+Each GOR covered a number of local authorities.
+\item \code{lsoa} 2011 Census lower layer super output area (LSOA).
+The 2011 Census lower layer SOA code for England and Wales,
+SOA code for Northern Ireland and data zone code for Scotland.
+\item \code{msoa} 2011 Census middle layer super output area (MSOA).
+The 2011 Census middle layer SOA (MSOA) code for England and
+Wales and intermediate zone for Scotland.
+\item \code{incode} Incode. 3-character inward code that
+is following the space in the full postcode.
+\item \code{outcode} Outcode. 2, 3 or 4-character outward code.
+The part of postcode before the space.
+\item \code{parliamentary_constituency} Westminster Parliamentary Constituency.
+The Westminster Parliamentary Constituency code for each postcode.
+\item \code{admin_district} District.
+The current district/unitary authority to which the postcode has been assigned.
+\item \code{parish} Parish (England)/ community (Wales).
+The smallest type of administrative area in England is the parish
+(also known as 'civil parish'); the equivalent units in Wales are communities.
+\item \code{admin_county} County. The current county to which the postcode has been assigned.
+\item \code{admin_ward} Ward.
+The current administrative/electoral area to which the postcode has been assigned.
+\item \code{ccg} Clinical Commissioning Group. Clinical commissioning groups (CCGs)
+are NHS organisations set up by the Health and Social Care Act 2012
+to organise the delivery of NHS services in England.
+\item \code{nuts} Nomenclature of Units for Territorial Statistics (NUTS) /
+Local Administrative Units (LAU) areas.
+The LAU2 code for each postcode. NUTS is a hierarchical classification of
+spatial units that provides a breakdown of the European Union's
+territory for producing regional statistics which are comparable across
+the Union. The NUTS area classification in the United Kingdom
+comprises current national administrative and electoral areas,
+except in Scotland where some NUTS areas comprise whole and/or part
+Local Enterprise Regions. NUTS levels 1-3 are frozen for a minimum of
+three years and NUTS levels 4 and 5 are now
+Local Administrative Units (LAU) levels 1 and 2 respectively.
+\item \code{_code} Returns an ID or Code associated with the postcode.
+Typically these are a 9 character code known as an ONS Code or GSS Code.
+This is currently only available for districts, parishes, counties, CCGs, NUTS and wards.
+}
+
+See
+\url{https://postcodes.io/docs} for more details.
 }
 \description{
 Lookup a postcode.

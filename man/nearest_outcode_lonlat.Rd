@@ -22,3 +22,6 @@ The search is based on the relative distance of the outcode centroid.
 nearest_outcode_lonlat(0.127, 51.507)
 
 }
+\seealso{
+\code{\link{postcode_lookup}} for documentation.
+}

@@ -9,6 +9,7 @@
 #' @export
 #'
 #' @return The list of geographical properties.
+#' @seealso \code{\link{postcode_lookup}} for documentation.
 #'
 #' @examples
 #' outward_code_lookup("E1")

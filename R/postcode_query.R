@@ -26,4 +26,5 @@ postcode_query <- function(postcode, limit = 10) {
   r <- GET(paste0("https://api.postcodes.io/postcodes?q=",
                   postcode, "&limit=", limit))
   extract_results(r)
+  # TODO turn multiple lists into a data frame
 }

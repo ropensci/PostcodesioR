@@ -7,7 +7,8 @@
 bulk_reverse_geocoding(geolocations)
 }
 \arguments{
-\item{geolocations}{A list containing an array of geolocation objects. At least two elements needed.}
+\item{geolocations}{A list containing an array of objects to geolocate.
+At least two elements needed.}
 }
 \value{
 A list with the geocoded data.
@@ -37,4 +38,7 @@ row.names = 1:2)),
 
 bulk_reverse_geocoding(geolocations_list)
 
+}
+\seealso{
+\code{\link{postcode_lookup}} for documentation.
 }

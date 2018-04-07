@@ -9,16 +9,22 @@ place_query(place, limit = 10)
 \arguments{
 \item{place}{A string. Name of a place to search for.}
 
-\item{limit}{An integer. Limits the number of matches to return. Defaults to 10. Needs to be less than 100.}
+\item{limit}{An integer. Limits the number of matches to return.
+Defaults to 10. Needs to be less than 100.}
 }
 \value{
 A list with available places.
 }
 \description{
 Submit a place query and receive a complete list of places matches and associated data.
+This function is similar to \code{\link{place_lookup}} but it returns a list
+and allows limiting the results.
 }
 \examples{
 place_query("Hills")
 place_query("Hills", limit = 12)
 
+}
+\seealso{
+\code{\link{place_lookup}} for documentation.
 }

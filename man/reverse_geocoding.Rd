@@ -30,3 +30,6 @@ reverse_geocoding("0.1275", "51.5073", limit = 3)
 reverse_geocoding("0.1275", "51.5073", limit = 11, radius = 200)
 
 }
+\seealso{
+\code{\link{postcode_lookup}} for documentation.
+}

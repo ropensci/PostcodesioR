@@ -11,9 +11,53 @@ place_lookup(code)
 }
 \value{
 A list with available places.
+\itemize{
+\item \code{code} A unique identifier that enables records to be identified easily.
+The identifier will be persistent for all LocalTypes
+except Section of Named Road and Section of Numbered Road.
+\item \code{name_1} Name. The proper noun that applies to the real world entity.
+Names that are prefixed by the definite article are not formatted
+for alphabetical sorting, that is, 'The Pennines' not 'Pennines, The'.
+\item \code{name_1_lang} Language of Name. The language type is only set
+where more than one name exists
+E.g. cym (Welsh), eng (English), gla (Scottish Gaelic).
+\item \code{name_2} Name (in case of multiple languages).
+The proper noun that applies to the real world entity.
+Names that are prefixed by the definite article are not formatted for
+alphabetical sorting, that is, 'The Pennines' not 'Pennines, The'.
+\item \code{name_2_lang} Language of Name. The language type is only set where more than one name exists
+E.g. cym (Welsh), eng (English), gla (Scottish Gaelic).
+\item \code{local_type} The Ordnance Survey classification for the named place being represented
+by the specific feature. E.g. City, Town, Village, Hamlet, Other Settlement, Suburban Area
+\item \code{outcode} The postcode district, for example, SO15.
+\item \code{county_unitary} Administrative Area. The name of the County (non-metropolitan or Metropolitan),
+Unitary Authority or Greater London Authority administrative area that the point geometry
+for feature is within or nearest to.
+\item \code{county_unitary_type} Administrative Area Type. Classifies the type of administrative unit.
+\item \code{district_borough} District or Borough. The name of the District, Metropolitan District or
+London Borough administrative unit that the point geometry for the feature is within.
+\item \code{district_borough_type} Borough Type. Classifies the type of administrative unit.
+\item \code{region} The name of the European Region (was Government O ice Region)
+that the point geometry for the feature is within or nearest to.
+\item \code{country} The country (i.e. one of the four constituent countries of the United Kingdom
+or the Channel Islands or the Isle of Man) to which each place is assigned.
+\item \code{longitude} The WGS84 longitude given the Place's national grid reference.
+\item \code{latitude} The WGS84 latitude given the Place's national grid reference.
+\item \code{eastings} The Ordnance Survey postcode grid reference Easting to 1 metre resolution;
+blank for postcodes in the Channel Islands and the Isle of Man.
+\item \code{northings} The Ordnance Survey postcode grid reference Northing to 1 metre resolution;
+blank for postcodes in the Channel Islands and the Isle of Man.
+\item \code{min/max northings/eastings} Minimum and Maximum, Northings and Eastings.
+Bounding box or Minimum Bounding Rectangle (MBR) for roads and settlements.
+For Settlements and Sections of Named and Numbered Roads,
+the MBR gives a representation of the extent of these features and
+is not snapped to the real world extent.
+}
+
+See \url{https://postcodes.io/docs} for more details.
 }
 \description{
-Lookup a place by code. Returns all available data if found. Returns 404 if place does not exist.
+Lookup a place by code. Returns all available data if found. Returns 404 if a place does not exist.
 }
 \examples{
 place_lookup("osgb4000000074544700")

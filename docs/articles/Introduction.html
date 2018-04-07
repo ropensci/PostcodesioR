@@ -75,7 +75,7 @@
       <h1>Introduction</h1>
                         <h4 class="author">Eryk Walczak</h4>
             
-            <h4 class="date">2018-03-20</h4>
+            <h4 class="date">2018-04-07</h4>
           </div>
 
     
@@ -87,12 +87,13 @@
 <a href="#installation" class="anchor"></a>Installation</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (<span class="op">!</span><span class="kw">require</span>(<span class="st">"devtools"</span>)) <span class="kw">install.packages</span>(<span class="st">"devtools"</span>)
 devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"erzk/PostcodesioR"</span>)</code></pre></div>
-<div id="lookup-postcodes-and-outcodes" class="section level3">
+</div>
+<div id="lookup-postcodes-and-outcodes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#lookup-postcodes-and-outcodes" class="anchor"></a>Lookup postcodes and outcodes</h2>
+<div id="single-postcode" class="section level3">
 <h3 class="hasAnchor">
-<a href="#lookup-postcodes-and-outcodes" class="anchor"></a>Lookup postcodes and outcodes</h3>
-<div id="single-postcode" class="section level4">
-<h4 class="hasAnchor">
-<a href="#single-postcode" class="anchor"></a>Single postcode</h4>
+<a href="#single-postcode" class="anchor"></a>Single postcode</h3>
 <p>Provide a postcode to obtain all available information</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(PostcodesioR)
 
@@ -169,9 +170,9 @@ lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../referen
 ##   .. ..$ nuts                      : chr "UKI43"</code></pre>
 <p>This function creates a nested list with the codes for administrative district, county, ward, parish, parliamentary constituency, CCG, and NUTS.</p>
 </div>
-<div id="multiple-postcodes" class="section level4">
-<h4 class="hasAnchor">
-<a href="#multiple-postcodes" class="anchor"></a>Multiple postcodes</h4>
+<div id="multiple-postcodes" class="section level3">
+<h3 class="hasAnchor">
+<a href="#multiple-postcodes" class="anchor"></a>Multiple postcodes</h3>
 <p>To query two or more postcodes, use <code>bulk_</code> functions.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pc_list &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">postcodes =</span> <span class="kw">c</span>(<span class="st">"PR3 0SG"</span>, <span class="st">"M45 6GN"</span>, <span class="st">"EX165BL"</span>))
 bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/bulk_postcode_lookup.html">bulk_postcode_lookup</a></span>(pc_list)
@@ -213,9 +214,9 @@ bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../re
 ##   .. .. ..$ ccg                       : chr "E38000216"
 ##   .. .. ..$ nuts                      : chr "UKD44"</code></pre>
 </div>
-<div id="outward-code-lookup" class="section level4">
-<h4 class="hasAnchor">
-<a href="#outward-code-lookup" class="anchor"></a>Outward code lookup</h4>
+<div id="outward-code-lookup" class="section level3">
+<h3 class="hasAnchor">
+<a href="#outward-code-lookup" class="anchor"></a>Outward code lookup</h3>
 <p>Provide an outcode to obtain geolocation data for the centroid of the specifid outcode:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ocl &lt;-<span class="st"> </span><span class="kw"><a href="../reference/outward_code_lookup.html">outward_code_lookup</a></span>(<span class="st">"E1"</span>)
 
@@ -254,13 +255,13 @@ bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../re
 ##   ..$ : chr "England"</code></pre>
 </div>
 </div>
-<div id="reverse-geocoding" class="section level3">
-<h3 class="hasAnchor">
-<a href="#reverse-geocoding" class="anchor"></a>Reverse geocoding</h3>
+<div id="reverse-geocoding" class="section level2">
+<h2 class="hasAnchor">
+<a href="#reverse-geocoding" class="anchor"></a>Reverse geocoding</h2>
 <p>Provide latitude and longitude to obtain geographic information. Different levels of aggregation are available, i.e. postcode or outcode.</p>
-<div id="single-postcode-1" class="section level4">
-<h4 class="hasAnchor">
-<a href="#single-postcode-1" class="anchor"></a>Single postcode</h4>
+<div id="single-postcode-1" class="section level3">
+<h3 class="hasAnchor">
+<a href="#single-postcode-1" class="anchor"></a>Single postcode</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../reference/reverse_geocoding.html">reverse_geocoding</a></span>(<span class="fl">0.127</span>, <span class="fl">51.507</span>)
 
 <span class="co"># overview</span>
@@ -299,9 +300,9 @@ bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../re
 ##   .. ..$ ccg                       : chr "E38000011"
 ##   .. ..$ nuts                      : chr "UKI51"</code></pre>
 </div>
-<div id="multiple-postcodes-1" class="section level4">
-<h4 class="hasAnchor">
-<a href="#multiple-postcodes-1" class="anchor"></a>Multiple postcodes</h4>
+<div id="multiple-postcodes-1" class="section level3">
+<h3 class="hasAnchor">
+<a href="#multiple-postcodes-1" class="anchor"></a>Multiple postcodes</h3>
 <p>To reverse geocode multiple values use the function underneath. The result is a nested list, which might be a bit intimidating, but it allows storing unequal number of elements.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># create a list with the coordinates</span>
 geolocations_list &lt;-<span class="st"> </span><span class="kw">structure</span>(
@@ -477,9 +478,9 @@ variables_of_interest &lt;-<span class="st"> </span><span class="kw">c</span>(<s
 ## 20 PO33 1QP 50.7155625975698 -1.12488225387235
 ## 21 PO34 5AP 50.7214660528318 -1.12423400885574</code></pre>
 </div>
-<div id="single-outcode" class="section level4">
-<h4 class="hasAnchor">
-<a href="#single-outcode" class="anchor"></a>Single outcode</h4>
+<div id="single-outcode" class="section level3">
+<h3 class="hasAnchor">
+<a href="#single-outcode" class="anchor"></a>Single outcode</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">out_rev_geocode &lt;-<span class="st"> </span><span class="kw"><a href="../reference/outcode_reverse_geocoding.html">outcode_reverse_geocoding</a></span>(<span class="st">"-3.15"</span>, <span class="st">"51.47"</span>)
 <span class="co"># overview</span>
 <span class="kw">str</span>(out_rev_geocode[<span class="dv">1</span>])</code></pre></div>
@@ -502,116 +503,116 @@ variables_of_interest &lt;-<span class="st"> </span><span class="kw">c</span>(<s
 ##   ..$ distance      : num 997</code></pre>
 </div>
 </div>
-<div id="generate-random-entries" class="section level3">
+<div id="generate-random-entries" class="section level2">
+<h2 class="hasAnchor">
+<a href="#generate-random-entries" class="anchor"></a>Generate random entries</h2>
+<div id="postcodes" class="section level3">
 <h3 class="hasAnchor">
-<a href="#generate-random-entries" class="anchor"></a>Generate random entries</h3>
-<div id="postcodes" class="section level4">
-<h4 class="hasAnchor">
-<a href="#postcodes" class="anchor"></a>Postcodes</h4>
+<a href="#postcodes" class="anchor"></a>Postcodes</h3>
 <p>Generates a list with a random UK postcode and corresponding geographic information:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># without restrictions</span>
 <span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>()</code></pre></div>
 <pre><code>## $postcode
-## [1] "BT93 3GA"
+## [1] "S44 6BN"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 193902
+## [1] 446319
 ## 
 ## $northings
-## [1] 358125
+## [1] 370790
 ## 
 ## $country
-## [1] "Northern Ireland"
+## [1] "England"
 ## 
 ## $nhs_ha
-## [1] "ZB001"
+## [1] "East Midlands"
 ## 
 ## $longitude
-## [1] -8.094823
+## [1] -1.307555
 ## 
 ## $latitude
-## [1] 54.47156
+## [1] 53.23214
 ## 
 ## $european_electoral_region
-## [1] "Northern Ireland"
+## [1] "East Midlands"
 ## 
 ## $primary_care_trust
-## [1] "Western"
+## [1] "Derbyshire County"
 ## 
 ## $region
-## NULL
+## [1] "East Midlands"
 ## 
 ## $lsoa
-## [1] "Belleek and Boa"
+## [1] "Bolsover 004D"
 ## 
 ## $msoa
-## NULL
+## [1] "Bolsover 004"
 ## 
 ## $incode
-## [1] "3GA"
+## [1] "6BN"
 ## 
 ## $outcode
-## [1] "BT93"
+## [1] "S44"
 ## 
 ## $parliamentary_constituency
-## [1] "Fermanagh and South Tyrone"
+## [1] "Bolsover"
 ## 
 ## $admin_district
-## [1] "Fermanagh and Omagh"
+## [1] "Bolsover"
 ## 
 ## $parish
-## NULL
+## [1] "Old Bolsover"
 ## 
 ## $admin_county
-## NULL
+## [1] "Derbyshire"
 ## 
 ## $admin_ward
-## [1] "Belleek and Boa"
+## [1] "Bolsover West"
 ## 
 ## $ccg
-## [1] "Western"
+## [1] "NHS Hardwick"
 ## 
 ## $nuts
-## [1] "West and South of Northern Ireland"
+## [1] "East Derbyshire"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "N09000006"
+## [1] "E07000033"
 ## 
 ## $codes$admin_county
-## [1] "N99999999"
+## [1] "E10000007"
 ## 
 ## $codes$admin_ward
-## [1] "N08000603"
+## [1] "E05003307"
 ## 
 ## $codes$parish
-## [1] "N99999999"
+## [1] "E04002704"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "N06000007"
+## [1] "E14000577"
 ## 
 ## $codes$ccg
-## [1] "ZC050"
+## [1] "E38000071"
 ## 
 ## $codes$nuts
-## [1] "UKN05"</code></pre>
+## [1] "UKF12"</code></pre>
 <p>A randomly generated postcode can also belong to a particular outcode:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># restrict to an outcode</span>
 <span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</code></pre></div>
 <pre><code>## $postcode
-## [1] "N1 1SS"
+## [1] "N1 4XN"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 531348
+## [1] 531630
 ## 
 ## $northings
-## [1] 184570
+## [1] 183943
 ## 
 ## $country
 ## [1] "England"
@@ -620,10 +621,10 @@ variables_of_interest &lt;-<span class="st"> </span><span class="kw">c</span>(<s
 ## [1] "London"
 ## 
 ## $longitude
-## [1] -0.1072411
+## [1] -0.1034111
 ## 
 ## $latitude
-## [1] 51.54475
+## [1] 51.53905
 ## 
 ## $european_electoral_region
 ## [1] "London"
@@ -635,13 +636,13 @@ variables_of_interest &lt;-<span class="st"> </span><span class="kw">c</span>(<s
 ## [1] "London"
 ## 
 ## $lsoa
-## [1] "Islington 016D"
+## [1] "Islington 020B"
 ## 
 ## $msoa
-## [1] "Islington 016"
+## [1] "Islington 020"
 ## 
 ## $incode
-## [1] "1SS"
+## [1] "4XN"
 ## 
 ## $outcode
 ## [1] "N1"
@@ -689,33 +690,33 @@ variables_of_interest &lt;-<span class="st"> </span><span class="kw">c</span>(<s
 ## $codes$nuts
 ## [1] "UKI43"</code></pre>
 </div>
-<div id="places" class="section level4">
-<h4 class="hasAnchor">
-<a href="#places" class="anchor"></a>Places</h4>
+</div>
+<div id="places" class="section level2">
+<h2 class="hasAnchor">
+<a href="#places" class="anchor"></a>Places</h2>
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/random_place.html">random_place</a></span>()</code></pre></div>
 <pre><code>##                   code name_1 name_1_lang name_2 name_2_lang local_type
-## 1 osgb4000000074572260 Hexton        NULL   NULL        NULL    Village
-##   outcode county_unitary county_unitary_type    district_borough
-## 1     SG5  Hertfordshire              County North Hertfordshire
-##   district_borough_type  region country  longitude latitude eastings
-## 1              District Eastern England -0.3905675 51.96425   510673
+## 1 osgb4000000074566002  Elrig        NULL   NULL        NULL     Hamlet
+##   outcode        county_unitary county_unitary_type district_borough
+## 1     DG8 Dumfries and Galloway    UnitaryAuthority             NULL
+##   district_borough_type   region  country longitude latitude eastings
+## 1                  NULL Scotland Scotland -4.610594 54.79275   232257
 ##   northings min_eastings min_northings max_eastings max_northings
-## 1    230753       510299        230267       510845        231009</code></pre>
+## 1    547332       231976        547207       232476        547925</code></pre>
 </div>
-</div>
-<div id="postcode-validation" class="section level3">
-<h3 class="hasAnchor">
-<a href="#postcode-validation" class="anchor"></a>Postcode validation</h3>
+<div id="postcode-validation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#postcode-validation" class="anchor"></a>Postcode validation</h2>
 <p>This function can validate a UK postcode:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/postcode_validation.html">postcode_validation</a></span>(<span class="st">"EC1Y 8LX"</span>) <span class="co"># actual UK postcode</span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/postcode_validation.html">postcode_validation</a></span>(<span class="st">"XYZ"</span>) <span class="co"># incorrect UK postcode</span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
 </div>
-<div id="autocomplete-postcodes" class="section level3">
-<h3 class="hasAnchor">
-<a href="#autocomplete-postcodes" class="anchor"></a>Autocomplete postcodes</h3>
+<div id="autocomplete-postcodes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#autocomplete-postcodes" class="anchor"></a>Autocomplete postcodes</h2>
 <p>Find the potential candidates for a postcode if you only know the beginning characters</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/postcode_autocomplete.html">postcode_autocomplete</a></span>(<span class="st">"EC1"</span>)</code></pre></div>
 <pre><code>##    postcode
@@ -731,9 +732,9 @@ variables_of_interest &lt;-<span class="st"> </span><span class="kw">c</span>(<s
 ## 10 EC1A 1DR</code></pre>
 <p>It defaults to 10 candidates, but can be changed by specifying the <code>limit</code> argument.</p>
 </div>
-<div id="find-nearest-postcodes-or-outcodes" class="section level3">
-<h3 class="hasAnchor">
-<a href="#find-nearest-postcodes-or-outcodes" class="anchor"></a>Find nearest postcodes or outcodes</h3>
+<div id="find-nearest-postcodes-or-outcodes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#find-nearest-postcodes-or-outcodes" class="anchor"></a>Find nearest postcodes or outcodes</h2>
 <p>Provide a postcode to get a list of the nearest postcodes:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">near_pc &lt;-<span class="st"> </span><span class="kw"><a href="../reference/nearest_postcode.html">nearest_postcode</a></span>(<span class="st">"EC1Y 8LX"</span>)
 
@@ -829,9 +830,9 @@ variables_of_interest &lt;-<span class="st"> </span><span class="kw">c</span>(<s
 ##   .. ..$ : chr "England"
 ##   ..$ distance      : num 1646</code></pre>
 </div>
-<div id="find-places" class="section level3">
-<h3 class="hasAnchor">
-<a href="#find-places" class="anchor"></a>Find places</h3>
+<div id="find-places" class="section level2">
+<h2 class="hasAnchor">
+<a href="#find-places" class="anchor"></a>Find places</h2>
 <p>Provide a name of a place of interest. You can specify the number of results (default is 10):</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">place_query_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/place_query.html">place_query</a></span>(<span class="st">"Hills"</span>, <span class="dt">limit =</span> <span class="dv">11</span>)
 
@@ -839,27 +840,27 @@ variables_of_interest &lt;-<span class="st"> </span><span class="kw">c</span>(<s
 <span class="kw">str</span>(place_query_result[<span class="dv">1</span>])</code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 21
-##   ..$ code                 : chr "osgb4000000074547803"
-##   ..$ name_1               : chr "Red Hills"
+##   ..$ code                 : chr "osgb4000000074555222"
+##   ..$ name_1               : chr "Tan Hills"
 ##   ..$ name_1_lang          : NULL
 ##   ..$ name_2               : NULL
 ##   ..$ name_2_lang          : NULL
-##   ..$ local_type           : chr "Hamlet"
-##   ..$ outcode              : chr "CA11"
-##   ..$ county_unitary       : chr "Cumbria"
-##   ..$ county_unitary_type  : chr "County"
-##   ..$ district_borough     : chr "Eden"
-##   ..$ district_borough_type: chr "District"
-##   ..$ region               : chr "North West"
+##   ..$ local_type           : chr "Village"
+##   ..$ outcode              : chr "DH2"
+##   ..$ county_unitary       : chr "County Durham"
+##   ..$ county_unitary_type  : chr "UnitaryAuthority"
+##   ..$ district_borough     : NULL
+##   ..$ district_borough_type: NULL
+##   ..$ region               : chr "North East"
 ##   ..$ country              : chr "England"
-##   ..$ longitude            : num -2.77
-##   ..$ latitude             : num 54.7
-##   ..$ eastings             : int 350463
-##   ..$ northings            : int 528604
-##   ..$ min_eastings         : int 349915
-##   ..$ min_northings        : int 528349
-##   ..$ max_eastings         : int 350584
-##   ..$ max_northings        : int 528849</code></pre>
+##   ..$ longitude            : num -1.6
+##   ..$ latitude             : num 54.8
+##   ..$ eastings             : int 425935
+##   ..$ northings            : int 547579
+##   ..$ min_eastings         : int 425720
+##   ..$ min_northings        : int 547374
+##   ..$ max_eastings         : int 426220
+##   ..$ max_northings        : int 547874</code></pre>
 <p>You can also find a place using an OSGB code:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">place_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/place_lookup.html">place_lookup</a></span>(<span class="st">"osgb4000000074544700"</span>)
 
@@ -888,14 +889,13 @@ variables_of_interest &lt;-<span class="st"> </span><span class="kw">c</span>(<s
 ##  $ max_eastings         : int 419039
 ##  $ max_northings        : int 432041</code></pre>
 </div>
-<div id="terminated-postcodes" class="section level3">
-<h3 class="hasAnchor">
-<a href="#terminated-postcodes" class="anchor"></a>Terminated postcodes</h3>
+<div id="terminated-postcodes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#terminated-postcodes" class="anchor"></a>Terminated postcodes</h2>
 <p>You might end up having terminated postcodes in your data set. These are postcodes that are no longer active. UK postcodes can change so it’s worth checking whether used postcodes are still active. If you need more information about when a particular postcode was terminated use:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/terminated_postcode.html">terminated_postcode</a></span>(<span class="st">"E1W 1UU"</span>)</code></pre></div>
 <pre><code>##   postcode year_terminated month_terminated   longitude latitude
 ## 1  E1W 1UU            2015                2 -0.07373227 51.50801</code></pre>
-</div>
 </div>
 </div>
   </div>
@@ -906,6 +906,15 @@ variables_of_interest &lt;-<span class="st"> </span><span class="kw">c</span>(<s
 <a href="#tocnav" class="anchor"></a>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
 <li><a href="#installation">Installation</a></li>
+      <li><a href="#lookup-postcodes-and-outcodes">Lookup postcodes and outcodes</a></li>
+      <li><a href="#reverse-geocoding">Reverse geocoding</a></li>
+      <li><a href="#generate-random-entries">Generate random entries</a></li>
+      <li><a href="#places">Places</a></li>
+      <li><a href="#postcode-validation">Postcode validation</a></li>
+      <li><a href="#autocomplete-postcodes">Autocomplete postcodes</a></li>
+      <li><a href="#find-nearest-postcodes-or-outcodes">Find nearest postcodes or outcodes</a></li>
+      <li><a href="#find-places">Find places</a></li>
+      <li><a href="#terminated-postcodes">Terminated postcodes</a></li>
       </ul>
 </div>
       </div>

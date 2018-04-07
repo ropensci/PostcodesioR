@@ -12,6 +12,7 @@
 #' @export
 #'
 #' @return A list of geographical properties.
+#' @seealso \code{\link{postcode_lookup}} for documentation.
 #'
 #' @examples
 #' outcode_reverse_geocoding("-3.15", "51.47")

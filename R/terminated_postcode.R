@@ -9,6 +9,22 @@
 #' @param postcode A string. Terminated UK postcode.
 #'
 #' @return A data frame with data about terminated postcode. NULL if postcode is active.
+#'  * \code{postcode} Postcode. All currently terminated postcodes within
+#'  the United Kingdom, the Channel Islands and the Isle of Man,
+#'  received every 3 months from Royal Mail. 2, 3 or 4-character outward code,
+#'  single space and 3-character inward code.
+#'  * \code{year_terminated} Termination year.
+#'  Year of termination of a postcode.
+#'  * \code{month_terminated} Termination month.
+#'  Month of termination of a postcode. 1-January, 2-February, ..., 12-December.
+#'  * \code{longitude} Longitude.
+#'  The WGS84 longitude given the Postcode's national grid reference.
+#'  * \code{latitude} Latitude.
+#'  The WGS84 latitude given the Postcode's national grid reference.
+#'
+#' See
+#'   \url{https://postcodes.io/docs} for more details.
+#' @md
 #'
 #' @export
 #'

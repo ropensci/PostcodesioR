@@ -4,9 +4,11 @@
 #'
 #' @importFrom httr GET
 #'
-#' @param outcode A string. Filters random postcodes by outcode. Returns null if invalid outcode. Optional.
+#' @param outcode A string. Filters random postcodes by outcode.
+#' Returns null if invalid outcode. Optional.
 #'
-#' @return A list with a random post code with corresponding characteristics.
+#' @return A list with a random postcode with corresponding characteristics.
+#' @seealso \code{\link{postcode_lookup}} for documentation.
 #'
 #' @export
 #'

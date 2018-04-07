@@ -22,9 +22,9 @@ devtools::install_github("erzk/PostcodesioR")
 ```
 
 
-### Lookup postcodes and outcodes
+## Lookup postcodes and outcodes
 
-#### Single postcode
+### Single postcode
 
 Provide a postcode to obtain all available information 
 
@@ -48,7 +48,7 @@ str(query_result)
 
 This function creates a nested list with the codes for administrative district, county, ward, parish, parliamentary constituency, CCG, and NUTS.
 
-#### Multiple postcodes
+### Multiple postcodes
 
 To query two or more postcodes, use `bulk_` functions.
 
@@ -60,7 +60,7 @@ bulk_lookup_result <- bulk_postcode_lookup(pc_list)
 str(bulk_lookup_result[1])
 ```
 
-#### Outward code lookup
+### Outward code lookup
 
 Provide an outcode to obtain geolocation data for the centroid of the specifid outcode:
 
@@ -71,11 +71,11 @@ ocl <- outward_code_lookup("E1")
 str(ocl)
 ```
 
-### Reverse geocoding
+## Reverse geocoding
 
 Provide latitude and longitude to obtain geographic information. Different levels of aggregation are available, i.e. postcode or outcode.
 
-#### Single postcode
+### Single postcode
 
 ```{r}
 rev_geo <- reverse_geocoding(0.127, 51.507)
@@ -84,7 +84,7 @@ rev_geo <- reverse_geocoding(0.127, 51.507)
 str(rev_geo[1])
 ```
 
-#### Multiple postcodes
+### Multiple postcodes
 
 To reverse geocode multiple values use the function underneath. The result is a nested list, which might be a bit intimidating, but it allows storing unequal number of elements.
 
@@ -159,7 +159,7 @@ data.frame(
 ```
 
 
-#### Single outcode
+### Single outcode
 
 ```{r}
 out_rev_geocode <- outcode_reverse_geocoding("-3.15", "51.47")
@@ -167,9 +167,9 @@ out_rev_geocode <- outcode_reverse_geocoding("-3.15", "51.47")
 str(out_rev_geocode[1])
 ```
 
-### Generate random entries
+## Generate random entries
 
-#### Postcodes
+### Postcodes
 
 Generates a list with a random UK postcode and corresponding geographic information:
 
@@ -185,8 +185,7 @@ A randomly generated postcode can also belong to a particular outcode:
 random_postcode("N1")
 ```
 
-
-#### Places
+## Places
 
 You can also generate a random place, specified by an OSGB code, with corresponding geographic information:
 
@@ -195,7 +194,7 @@ random_place()
 ```
 
 
-### Postcode validation
+## Postcode validation
 
 This function can validate a UK postcode:
 
@@ -209,7 +208,7 @@ postcode_validation("XYZ") # incorrect UK postcode
 ```
 
 
-### Autocomplete postcodes
+## Autocomplete postcodes
 
 Find the potential candidates for a postcode if you only know the beginning characters
 
@@ -219,7 +218,7 @@ postcode_autocomplete("EC1")
 
 It defaults to 10 candidates, but can be changed by specifying the `limit` argument. 
 
-### Find nearest postcodes or outcodes
+## Find nearest postcodes or outcodes
 
 Provide a postcode to get a list of the nearest postcodes:
 
@@ -249,7 +248,7 @@ str(near_ll[1])
 ```
 
 
-### Find places
+## Find places
 
 Provide a name of a place of interest. You can specify the number of results (default is 10):
 
@@ -269,7 +268,7 @@ place_lookup_result <- place_lookup("osgb4000000074544700")
 str(place_lookup_result)
 ```
 
-### Terminated postcodes
+## Terminated postcodes
 
 You might end up having terminated postcodes in your data set. These are postcodes that are no longer active. UK postcodes can change so it's worth checking whether used postcodes are still active. If you need more information about when a particular postcode was terminated use:
 

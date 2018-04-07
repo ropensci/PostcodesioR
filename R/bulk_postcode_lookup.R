@@ -5,9 +5,10 @@
 #' @importFrom httr POST
 #'
 #' @param postcodes Accepts a list of postcodes. Accepts up to 100 postcodes.
-#' For only one postcode use \link[PostcodesioR]{postcode_lookup}.
+#' For only one postcode use \code{\link{postcode_lookup}}.
 #'
 #' @return A list.
+#' @seealso \code{\link{postcode_lookup}} for documentation.
 #'
 #' @export
 #'

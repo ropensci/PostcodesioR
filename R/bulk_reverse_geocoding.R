@@ -8,9 +8,11 @@
 #'
 #' @importFrom httr POST
 #'
-#' @param geolocations A list containing an array of geolocation objects. At least two elements needed.
+#' @param geolocations A list containing an array of objects to geolocate.
+#' At least two elements needed.
 #'
 #' @return A list with the geocoded data.
+#' @seealso \code{\link{postcode_lookup}} for documentation.
 #'
 #' @export
 #'

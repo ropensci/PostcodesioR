@@ -11,6 +11,7 @@
 #' @param wideSearch TRUE or FALSE. Search up to 20km radius, but subject to a maximum of 10 results. Since lookups over a wide area can be very expensive, we've created this method to allow you choose to make the trade off between search radius and number of results. Defaults to false. When enabled, radius and limits over 10 are ignored.
 #'
 #' @return A list with available data.
+#' @seealso \code{\link{postcode_lookup}} for documentation.
 #'
 #' @export
 #'

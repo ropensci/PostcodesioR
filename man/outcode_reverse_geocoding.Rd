@@ -28,3 +28,6 @@ outcode_reverse_geocoding("-3.15807731271522", "51.4799900627036")
 outcode_reverse_geocoding(-3.15, 51.47, limit = 11, radius = 20000)
 
 }
+\seealso{
+\code{\link{postcode_lookup}} for documentation.
+}

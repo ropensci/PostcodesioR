@@ -7,10 +7,11 @@
 random_postcode(outcode = NULL)
 }
 \arguments{
-\item{outcode}{A string. Filters random postcodes by outcode. Returns null if invalid outcode. Optional.}
+\item{outcode}{A string. Filters random postcodes by outcode.
+Returns null if invalid outcode. Optional.}
 }
 \value{
-A list with a random post code with corresponding characteristics.
+A list with a random postcode with corresponding characteristics.
 }
 \description{
 Returns a random postcode and all available data for that postcode.
@@ -19,4 +20,7 @@ Returns a random postcode and all available data for that postcode.
 random_postcode()
 random_postcode("N1")
 
+}
+\seealso{
+\code{\link{postcode_lookup}} for documentation.
 }

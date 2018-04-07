@@ -14,6 +14,7 @@
 #' @export
 #'
 #' @return A list of geographical properties.
+#' @seealso \code{\link{postcode_lookup}} for documentation.
 #'
 #' @examples
 #' nearest_outcode("EC1Y")

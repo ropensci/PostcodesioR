@@ -16,3 +16,6 @@ Returns a random place and all associated data
 random_place()
 
 }
+\seealso{
+\code{\link{place_lookup}} for documentation.
+}

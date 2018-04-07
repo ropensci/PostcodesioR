@@ -19,3 +19,6 @@ Geolocation data for the centroid of the outward code specified.
 outward_code_lookup("E1")
 
 }
+\seealso{
+\code{\link{postcode_lookup}} for documentation.
+}

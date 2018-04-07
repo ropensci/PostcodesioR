@@ -8,7 +8,7 @@ bulk_postcode_lookup(postcodes)
 }
 \arguments{
 \item{postcodes}{Accepts a list of postcodes. Accepts up to 100 postcodes.
-For only one postcode use \link[PostcodesioR]{postcode_lookup}.}
+For only one postcode use \code{\link{postcode_lookup}}.}
 }
 \value{
 A list.
@@ -21,4 +21,7 @@ pc_list <- list(
 postcodes = c("PR3 0SG", "M45 6GN", "EX165BL")) # spaces are ignored
 bulk_postcode_lookup(pc_list)
 
+}
+\seealso{
+\code{\link{postcode_lookup}} for documentation.
 }

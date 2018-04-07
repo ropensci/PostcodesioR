@@ -8,6 +8,7 @@
 #' @importFrom httr content
 #'
 #' @return A data frame describing a random place and all associated data.
+#' @seealso \code{\link{place_lookup}} for documentation.
 #'
 #' @export
 #'

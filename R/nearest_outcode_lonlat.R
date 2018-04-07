@@ -9,6 +9,7 @@
 #' @param latitude A string or numeric. Needs to have at least three decimal points.
 #'
 #' @return A list with available data.
+#' @seealso \code{\link{postcode_lookup}} for documentation.
 #'
 #' @export
 #'
