@@ -2,15 +2,23 @@ Package: PostcodesioR
 Type: Package
 Title: API wrapper around postcodes.io (free UK postcode lookup and geocoder)
 Version: 0.1.1
-Authors@R: person("Eryk", "Walczak", email = "eryk.j.walczak@gmail.com", role = c("aut", "cre"),
-    comment = c(ORCID = "0000-0001-8724-462X"))
+Authors@R: c(person("Eryk", "Walczak", 
+                  email = "eryk.j.walczak@gmail.com", 
+                  role = c("aut", "cre"),
+                  comment = c(ORCID = "0000-0001-8724-462X")),
+             person("Claudia", "Vitolo", 
+                  role = "rev",
+                  comment = c(ORCID = "0000-0002-4252-1176")),
+             person("Robin", "Lovelace",
+                  role = "rev",
+                  comment = c(ORCID = "0000-0001-5679-6536")))
 Maintainer: Eryk Walczak <eryk.j.walczak@gmail.com>
 Description: Free UK geocoding using data from Office for National Statistics.
     It is using several functions to get information about post codes, outward
     codes, reverse geocoding, nearest post codes/outward codes, validation, or
     randomly generate a post code. API wrapper around postcodes.io.
 License: GPL-3 + file LICENSE
-URL: https://github.com/erzk/PostcodesioR/
+URL: https://github.com/ropensci/PostcodesioR/
 LazyData: TRUE
 Depends:
     R (>= 3.1)
@@ -22,4 +30,4 @@ Suggests: knitr,
     testthat,
     covr
 VignetteBuilder: knitr
-BugReports: https://github.com/erzk/PostcodesioR/issues
+BugReports: https://github.com/ropensci/PostcodesioR/issues
