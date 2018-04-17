@@ -55,7 +55,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/erzk/PostcodesioR/">
+  <a href="https://github.com/ropensci/PostcodesioR/">
     <span class="fa fa-github fa-lg"></span>
      
   </a>
@@ -75,7 +75,7 @@
       <h1>Introduction</h1>
                         <h4 class="author">Eryk Walczak</h4>
             
-            <h4 class="date">2018-04-07</h4>
+            <h4 class="date">2018-04-17</h4>
           </div>
 
     
@@ -513,106 +513,16 @@ variables_of_interest &lt;-<span class="st"> </span><span class="kw">c</span>(<s
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># without restrictions</span>
 <span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>()</code></pre></div>
 <pre><code>## $postcode
-## [1] "S44 6BN"
+## [1] "UB8 9UR"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 446319
+## [1] 505008
 ## 
 ## $northings
-## [1] 370790
-## 
-## $country
-## [1] "England"
-## 
-## $nhs_ha
-## [1] "East Midlands"
-## 
-## $longitude
-## [1] -1.307555
-## 
-## $latitude
-## [1] 53.23214
-## 
-## $european_electoral_region
-## [1] "East Midlands"
-## 
-## $primary_care_trust
-## [1] "Derbyshire County"
-## 
-## $region
-## [1] "East Midlands"
-## 
-## $lsoa
-## [1] "Bolsover 004D"
-## 
-## $msoa
-## [1] "Bolsover 004"
-## 
-## $incode
-## [1] "6BN"
-## 
-## $outcode
-## [1] "S44"
-## 
-## $parliamentary_constituency
-## [1] "Bolsover"
-## 
-## $admin_district
-## [1] "Bolsover"
-## 
-## $parish
-## [1] "Old Bolsover"
-## 
-## $admin_county
-## [1] "Derbyshire"
-## 
-## $admin_ward
-## [1] "Bolsover West"
-## 
-## $ccg
-## [1] "NHS Hardwick"
-## 
-## $nuts
-## [1] "East Derbyshire"
-## 
-## $codes
-## $codes$admin_district
-## [1] "E07000033"
-## 
-## $codes$admin_county
-## [1] "E10000007"
-## 
-## $codes$admin_ward
-## [1] "E05003307"
-## 
-## $codes$parish
-## [1] "E04002704"
-## 
-## $codes$parliamentary_constituency
-## [1] "E14000577"
-## 
-## $codes$ccg
-## [1] "E38000071"
-## 
-## $codes$nuts
-## [1] "UKF12"</code></pre>
-<p>A randomly generated postcode can also belong to a particular outcode:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># restrict to an outcode</span>
-<span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</code></pre></div>
-<pre><code>## $postcode
-## [1] "N1 4XN"
-## 
-## $quality
-## [1] 1
-## 
-## $eastings
-## [1] 531630
-## 
-## $northings
-## [1] 183943
+## [1] 183131
 ## 
 ## $country
 ## [1] "England"
@@ -621,74 +531,164 @@ variables_of_interest &lt;-<span class="st"> </span><span class="kw">c</span>(<s
 ## [1] "London"
 ## 
 ## $longitude
-## [1] -0.1034111
+## [1] -0.4873554
 ## 
 ## $latitude
-## [1] 51.53905
+## [1] 51.53733
 ## 
 ## $european_electoral_region
 ## [1] "London"
 ## 
 ## $primary_care_trust
-## [1] "Islington"
+## [1] "Hillingdon"
 ## 
 ## $region
 ## [1] "London"
 ## 
 ## $lsoa
-## [1] "Islington 020B"
+## [1] "Hillingdon 016B"
 ## 
 ## $msoa
-## [1] "Islington 020"
+## [1] "Hillingdon 016"
 ## 
 ## $incode
-## [1] "4XN"
+## [1] "9UR"
 ## 
 ## $outcode
-## [1] "N1"
+## [1] "UB8"
 ## 
 ## $parliamentary_constituency
-## [1] "Islington South and Finsbury"
+## [1] "Uxbridge and South Ruislip"
 ## 
 ## $admin_district
-## [1] "Islington"
+## [1] "Hillingdon"
 ## 
 ## $parish
-## [1] "Islington, unparished area"
+## [1] "Hillingdon, unparished area"
 ## 
 ## $admin_county
 ## NULL
 ## 
 ## $admin_ward
-## [1] "St Mary's"
+## [1] "Uxbridge South"
 ## 
 ## $ccg
-## [1] "NHS Islington"
+## [1] "NHS Hillingdon"
 ## 
 ## $nuts
-## [1] "Haringey and Islington"
+## [1] "Harrow and Hillingdon"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "E09000019"
+## [1] "E09000017"
 ## 
 ## $codes$admin_county
 ## [1] "E99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05000379"
+## [1] "E05000341"
 ## 
 ## $codes$parish
-## [1] "E43000209"
+## [1] "E43000207"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "E14000764"
+## [1] "E14001007"
 ## 
 ## $codes$ccg
-## [1] "E38000088"
+## [1] "E38000082"
 ## 
 ## $codes$nuts
-## [1] "UKI43"</code></pre>
+## [1] "UKI74"</code></pre>
+<p>A randomly generated postcode can also belong to a particular outcode:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># restrict to an outcode</span>
+<span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</code></pre></div>
+<pre><code>## $postcode
+## [1] "N1 6ED"
+## 
+## $quality
+## [1] 1
+## 
+## $eastings
+## [1] 532867
+## 
+## $northings
+## [1] 182893
+## 
+## $country
+## [1] "England"
+## 
+## $nhs_ha
+## [1] "London"
+## 
+## $longitude
+## [1] -0.08598121
+## 
+## $latitude
+## [1] 51.52932
+## 
+## $european_electoral_region
+## [1] "London"
+## 
+## $primary_care_trust
+## [1] "City and Hackney Teaching"
+## 
+## $region
+## [1] "London"
+## 
+## $lsoa
+## [1] "Hackney 027I"
+## 
+## $msoa
+## [1] "Hackney 027"
+## 
+## $incode
+## [1] "6ED"
+## 
+## $outcode
+## [1] "N1"
+## 
+## $parliamentary_constituency
+## [1] "Hackney South and Shoreditch"
+## 
+## $admin_district
+## [1] "Hackney"
+## 
+## $parish
+## [1] "Hackney, unparished area"
+## 
+## $admin_county
+## NULL
+## 
+## $admin_ward
+## [1] "Hoxton West"
+## 
+## $ccg
+## [1] "NHS City and Hackney"
+## 
+## $nuts
+## [1] "Hackney and Newham"
+## 
+## $codes
+## $codes$admin_district
+## [1] "E09000012"
+## 
+## $codes$admin_county
+## [1] "E99999999"
+## 
+## $codes$admin_ward
+## [1] "E05009378"
+## 
+## $codes$parish
+## [1] "E43000202"
+## 
+## $codes$parliamentary_constituency
+## [1] "E14000721"
+## 
+## $codes$ccg
+## [1] "E38000035"
+## 
+## $codes$nuts
+## [1] "UKI41"</code></pre>
 </div>
 </div>
 <div id="places" class="section level2">
@@ -696,14 +696,14 @@ variables_of_interest &lt;-<span class="st"> </span><span class="kw">c</span>(<s
 <a href="#places" class="anchor"></a>Places</h2>
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/random_place.html">random_place</a></span>()</code></pre></div>
-<pre><code>##                   code name_1 name_1_lang name_2 name_2_lang local_type
-## 1 osgb4000000074566002  Elrig        NULL   NULL        NULL     Hamlet
-##   outcode        county_unitary county_unitary_type district_borough
-## 1     DG8 Dumfries and Galloway    UnitaryAuthority             NULL
-##   district_borough_type   region  country longitude latitude eastings
-## 1                  NULL Scotland Scotland -4.610594 54.79275   232257
+<pre><code>##                   code  name_1 name_1_lang name_2 name_2_lang local_type
+## 1 osgb4000000074570183 Bromdon        NULL   NULL        NULL    Village
+##   outcode county_unitary county_unitary_type district_borough
+## 1    WV16     Shropshire    UnitaryAuthority             NULL
+##   district_borough_type        region country longitude latitude eastings
+## 1                  NULL West Midlands England -2.587931 52.42102   360114
 ##   northings min_eastings min_northings max_eastings max_northings
-## 1    547332       231976        547207       232476        547925</code></pre>
+## 1    280499       359984        280249       360582        280749</code></pre>
 </div>
 <div id="postcode-validation" class="section level2">
 <h2 class="hasAnchor">
@@ -840,27 +840,27 @@ variables_of_interest &lt;-<span class="st"> </span><span class="kw">c</span>(<s
 <span class="kw">str</span>(place_query_result[<span class="dv">1</span>])</code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 21
-##   ..$ code                 : chr "osgb4000000074555222"
-##   ..$ name_1               : chr "Tan Hills"
+##   ..$ code                 : chr "osgb4000000074547803"
+##   ..$ name_1               : chr "Red Hills"
 ##   ..$ name_1_lang          : NULL
 ##   ..$ name_2               : NULL
 ##   ..$ name_2_lang          : NULL
-##   ..$ local_type           : chr "Village"
-##   ..$ outcode              : chr "DH2"
-##   ..$ county_unitary       : chr "County Durham"
-##   ..$ county_unitary_type  : chr "UnitaryAuthority"
-##   ..$ district_borough     : NULL
-##   ..$ district_borough_type: NULL
-##   ..$ region               : chr "North East"
+##   ..$ local_type           : chr "Hamlet"
+##   ..$ outcode              : chr "CA11"
+##   ..$ county_unitary       : chr "Cumbria"
+##   ..$ county_unitary_type  : chr "County"
+##   ..$ district_borough     : chr "Eden"
+##   ..$ district_borough_type: chr "District"
+##   ..$ region               : chr "North West"
 ##   ..$ country              : chr "England"
-##   ..$ longitude            : num -1.6
-##   ..$ latitude             : num 54.8
-##   ..$ eastings             : int 425935
-##   ..$ northings            : int 547579
-##   ..$ min_eastings         : int 425720
-##   ..$ min_northings        : int 547374
-##   ..$ max_eastings         : int 426220
-##   ..$ max_northings        : int 547874</code></pre>
+##   ..$ longitude            : num -2.77
+##   ..$ latitude             : num 54.7
+##   ..$ eastings             : int 350463
+##   ..$ northings            : int 528604
+##   ..$ min_eastings         : int 349915
+##   ..$ min_northings        : int 528349
+##   ..$ max_eastings         : int 350584
+##   ..$ max_northings        : int 528849</code></pre>
 <p>You can also find a place using an OSGB code:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">place_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/place_lookup.html">place_lookup</a></span>(<span class="st">"osgb4000000074544700"</span>)
 
