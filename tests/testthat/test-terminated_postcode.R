@@ -10,5 +10,5 @@ test_that("terminated_postcode works as expected", {
   expect_error(terminated_postcode(incorrect_postcode2))
 
   expect_that(terminated_postcode_result1, is_a("data.frame"))
-  expect_null(terminated_postcode("EC1Y 8LX"))
+  expect_warning(terminated_postcode("EC1Y 8LX"))
 })
