@@ -100,8 +100,12 @@
 #' postcode_lookup("EC1Y 8LX") # spaces are ignored
 #'
 postcode_lookup <- function(postcode) {
-  if (!is.character(postcode) || nchar(postcode) < 2) {
-    stop("Please provide a valid UK outcode.")
+  postcode_error <- "Please provide a valid UK postcode."
+  if (!is.character(postcode)) {
+    stop(postcode_error)
+  }
+  if (nchar(postcode) < 2) {
+    stop(postcode_error)
   }
   if (length(nchar(postcode)) > 1) {
     stop("This function accepts only one postcode. For multiple requests please use bulk_postcode_lookup().")
