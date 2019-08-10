@@ -539,112 +539,112 @@
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="co"># without restrictions</span></a>
 <a class="sourceLine" id="cb24-2" data-line-number="2"><span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>()</a></code></pre></div>
 <pre><code>## $postcode
-## [1] "G83 0QA"
+## [1] "CM2 9AT"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 238647
+## [1] 569876
 ## 
 ## $northings
-## [1] 680938
+## [1] 205255
 ## 
 ## $country
-## [1] "Scotland"
+## [1] "England"
 ## 
 ## $nhs_ha
-## [1] "Greater Glasgow and Clyde"
+## [1] "East of England"
 ## 
 ## $longitude
-## [1] -4.588562
+## [1] 0.457908
 ## 
 ## $latitude
-## [1] 55.99418
+## [1] 51.72029
 ## 
 ## $european_electoral_region
-## [1] "Scotland"
+## [1] "Eastern"
 ## 
 ## $primary_care_trust
-## [1] "West Dunbartonshire Community Health and Care Partnership"
+## [1] "Mid Essex"
 ## 
 ## $region
-## NULL
+## [1] "East of England"
 ## 
 ## $lsoa
-## [1] "IZ17 - 03"
+## [1] "Chelmsford 012A"
 ## 
 ## $msoa
-## [1] "IZ17"
+## [1] "Chelmsford 012"
 ## 
 ## $incode
-## [1] "0QA"
+## [1] "9AT"
 ## 
 ## $outcode
-## [1] "G83"
+## [1] "CM2"
 ## 
 ## $parliamentary_constituency
-## [1] "West Dunbartonshire"
+## [1] "Chelmsford"
 ## 
 ## $admin_district
-## [1] "West Dunbartonshire"
+## [1] "Chelmsford"
 ## 
 ## $parish
-## NULL
+## [1] "Chelmsford, unparished area"
 ## 
 ## $admin_county
-## NULL
+## [1] "Essex"
 ## 
 ## $admin_ward
-## [1] "Lomond"
+## [1] "Goat Hall"
 ## 
 ## $ced
-## NULL
+## [1] "Chelmsford West"
 ## 
 ## $ccg
-## [1] "West Dunbartonshire Community Health and Care Partnership"
+## [1] "NHS Mid Essex"
 ## 
 ## $nuts
-## [1] "East Dunbartonshire, West Dunbartonshire and Helensburgh &amp; Lomond"
+## [1] "Heart of Essex"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "S12000039"
+## [1] "E07000070"
 ## 
 ## $codes$admin_county
-## [1] "S99999999"
+## [1] "E10000012"
 ## 
 ## $codes$admin_ward
-## [1] "S13003122"
+## [1] "E05004102"
 ## 
 ## $codes$parish
-## [1] "S99999999"
+## [1] "E43000062"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "S14000059"
+## [1] "E14000628"
 ## 
 ## $codes$ccg
-## [1] "S03000023"
+## [1] "E38000106"
 ## 
 ## $codes$ced
-## [1] "S99999999"
+## [1] "E58000422"
 ## 
 ## $codes$nuts
-## [1] "UKM81"</code></pre>
+## [1] "UKH36"</code></pre>
 <p>A randomly generated postcode can also belong to a particular outcode:</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1"><span class="co"># restrict to an outcode</span></a>
 <a class="sourceLine" id="cb26-2" data-line-number="2"><span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</a></code></pre></div>
 <pre><code>## $postcode
-## [1] "N1 0LB"
+## [1] "N1 8DH"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 530855
+## [1] 531891
 ## 
 ## $northings
-## [1] 183827
+## [1] 183036
 ## 
 ## $country
 ## [1] "England"
@@ -653,10 +653,10 @@
 ## [1] "London"
 ## 
 ## $longitude
-## [1] -0.114622
+## [1] -0.099989
 ## 
 ## $latitude
-## [1] 51.53818
+## [1] 51.53084
 ## 
 ## $european_electoral_region
 ## [1] "London"
@@ -668,13 +668,13 @@
 ## [1] "London"
 ## 
 ## $lsoa
-## [1] "Islington 017D"
+## [1] "Islington 020E"
 ## 
 ## $msoa
-## [1] "Islington 017"
+## [1] "Islington 020"
 ## 
 ## $incode
-## [1] "0LB"
+## [1] "8DH"
 ## 
 ## $outcode
 ## [1] "N1"
@@ -692,7 +692,7 @@
 ## NULL
 ## 
 ## $admin_ward
-## [1] "Caledonian"
+## [1] "St Peter's"
 ## 
 ## $ced
 ## NULL
@@ -711,7 +711,7 @@
 ## [1] "E99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05000368"
+## [1] "E05000380"
 ## 
 ## $codes$parish
 ## [1] "E43000209"
@@ -734,16 +734,14 @@
 <a href="#places" class="anchor"></a>Places</h2>
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="kw"><a href="../reference/random_place.html">random_place</a></span>()</a></code></pre></div>
-<pre><code>##                   code     name_1 name_1_lang name_2 name_2_lang
-## 1 osgb4000000074552745 Boley Park        NULL   NULL        NULL
-##      local_type outcode county_unitary county_unitary_type
-## 1 Suburban Area    WS14  Staffordshire              County
-##   district_borough district_borough_type        region country longitude
-## 1        Lichfield              District West Midlands England -1.806256
-##   latitude eastings northings min_eastings min_northings max_eastings
-## 1 52.67889   413196    309038       412363        308359       414112
-##   max_northings
-## 1        309896</code></pre>
+<pre><code>##                   code      name_1 name_1_lang name_2 name_2_lang
+## 1 osgb4000000074559756 Llanhennock        NULL   NULL        NULL
+##   local_type outcode            county_unitary county_unitary_type
+## 1     Hamlet    NP18 Sir Fynwy - Monmouthshire    UnitaryAuthority
+##   district_borough district_borough_type region country longitude latitude
+## 1             NULL                  NULL  Wales   Wales -2.936256  51.6297
+##   eastings northings min_eastings min_northings max_eastings max_northings
+## 1   335292    192736       334973        192388       335473        193019</code></pre>
 </div>
 <div id="postcode-validation" class="section level2">
 <h2 class="hasAnchor">
