@@ -15,10 +15,12 @@
 #' @seealso \code{\link{postcode_lookup}} for documentation.
 #'
 #' @examples
+#' \dontrun{
 #' outcode_reverse_geocoding("-3.15", "51.47")
 #' outcode_reverse_geocoding(-3.15, 51.47)
 #' outcode_reverse_geocoding("-3.15807731271522", "51.4799900627036")
 #' outcode_reverse_geocoding(-3.15, 51.47, limit = 11, radius = 20000)
+#' }
 #'
 outcode_reverse_geocoding <- function(longitude, latitude,
                                       limit = 10, radius = 5000) {

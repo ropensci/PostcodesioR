@@ -18,6 +18,7 @@
 #'
 #' @examples
 #'
+#' \dontrun{
 #' geolocations_list <- structure(
 #' list(
 #' geolocations = structure(
@@ -32,6 +33,7 @@
 #' .Names = "geolocations")
 #'
 #' bulk_reverse_geocoding(geolocations_list)
+#' }
 #'
 bulk_reverse_geocoding <- function(geolocations) {
   if (!is.list(geolocations))

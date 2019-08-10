@@ -23,6 +23,7 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 }
 \examples{
 
+\dontrun{
 geolocations_list <- structure(
 list(
 geolocations = structure(
@@ -37,6 +38,7 @@ row.names = 1:2)),
 .Names = "geolocations")
 
 bulk_reverse_geocoding(geolocations_list)
+}
 
 }
 \seealso{

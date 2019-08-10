@@ -17,9 +17,11 @@
 #' @seealso \code{\link{postcode_lookup}} for documentation.
 #'
 #' @examples
+#' \dontrun{
 #' nearest_outcode("EC1Y")
 #' nearest_outcode("EC1Y", limit = 11)
 #' nearest_outcode("EC1Y", limit = 11, radius = 6000)
+#' }
 #'
 nearest_outcode <- function(outcode, limit = 10, radius = 5000) {
   if (!is.character(outcode) || nchar(outcode) < 2) {

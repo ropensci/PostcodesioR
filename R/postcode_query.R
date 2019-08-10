@@ -13,8 +13,10 @@
 #' To return a data frame use \link[PostcodesioR]{postcode_lookup}.
 #'
 #' @examples
+#' \dontrun{
 #' postcode_query("EC1Y8LX")
 #' postcode_query("EC1", limit = 11)
+#' }
 #'
 postcode_query <- function(postcode, limit = 10) {
   if (!is.character(postcode) || nchar(postcode) < 2) {

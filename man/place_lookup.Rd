@@ -60,6 +60,8 @@ See \url{https://postcodes.io/docs} for more details.
 Lookup a place by code. Returns all available data if found. Returns 404 if a place does not exist.
 }
 \examples{
+\dontrun{
 place_lookup("osgb4000000074544700")
+}
 
 }

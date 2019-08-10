@@ -13,8 +13,10 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' random_postcode()
 #' random_postcode("N1")
+#' }
 #'
 random_postcode <- function(outcode = NULL) {
   r <- GET("https://api.postcodes.io/random/postcodes",

@@ -14,9 +14,11 @@
 #' @return A list of geographic properties of the nearest postcode.
 #'
 #' @examples
+#' \dontrun{
 #' nearest_postcode("EC1Y 8LX")
 #' nearest_postcode("EC1Y 8LX", limit = 11)
 #' nearest_postcode("EC1Y 8LX", limit = 12, radius = 200)
+#' }
 #'
 nearest_postcode <- function(postcode, limit = 10, radius = 100) {
   if (!is.character(postcode) || nchar(postcode) < 2) {

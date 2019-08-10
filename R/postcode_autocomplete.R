@@ -12,8 +12,10 @@
 #' @return A data frame with suggested postcodes.
 #'
 #' @examples
+#' \dontrun{
 #' postcode_autocomplete("E1")
 #' postcode_autocomplete("E1", limit = 11)
+#' }
 #'
 postcode_autocomplete <- function(postcode, limit = 10) {
   if (!is.character(postcode)) {

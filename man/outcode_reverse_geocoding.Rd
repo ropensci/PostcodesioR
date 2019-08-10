@@ -23,10 +23,12 @@ A list of geographical properties.
 Returns nearest outcodes for a given longitude and latitude.
 }
 \examples{
+\dontrun{
 outcode_reverse_geocoding("-3.15", "51.47")
 outcode_reverse_geocoding(-3.15, 51.47)
 outcode_reverse_geocoding("-3.15807731271522", "51.4799900627036")
 outcode_reverse_geocoding(-3.15, 51.47, limit = 11, radius = 20000)
+}
 
 }
 \seealso{

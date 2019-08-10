@@ -12,7 +12,9 @@
 #' @seealso \code{\link{postcode_lookup}} for documentation.
 #'
 #' @examples
+#' \dontrun{
 #' outward_code_lookup("E1")
+#' }
 #'
 outward_code_lookup <- function(outcode) {
   if (!is.character(outcode) || nchar(outcode) < 2) {

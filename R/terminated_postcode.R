@@ -29,8 +29,10 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' terminated_postcode("EC1Y 8LX") # exisitng postcode
 #' terminated_postcode("E1W 1UU") # terminated
+#' }
 #'
 terminated_postcode <- function(postcode) {
   if (!is.character(postcode) || nchar(postcode) < 3) {

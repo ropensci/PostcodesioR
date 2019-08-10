@@ -13,7 +13,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' random_place()
+#' }
 #'
 random_place <- function() {
   r <- GET("https://api.postcodes.io/random/places")

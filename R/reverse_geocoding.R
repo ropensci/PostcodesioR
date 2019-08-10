@@ -16,9 +16,11 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' reverse_geocoding(0.127, 51.507)
 #' reverse_geocoding("0.1275", "51.5073", limit = 3)
 #' reverse_geocoding("0.1275", "51.5073", limit = 11, radius = 200)
+#' }
 #'
 reverse_geocoding <- function(longitude, latitude,
                               limit = 10, radius = 100, wideSearch = NULL) {

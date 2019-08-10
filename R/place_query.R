@@ -16,8 +16,10 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' place_query("Hills")
 #' place_query("Hills", limit = 12)
+#' }
 #'
 place_query <- function(place, limit = 10) {
   if (!is.character(place) || nchar(place) < 2) {

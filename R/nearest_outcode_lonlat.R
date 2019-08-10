@@ -14,7 +14,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' nearest_outcode_lonlat(0.127, 51.507)
+#' }
 #'
 nearest_outcode_lonlat <- function(longitude, latitude) {
   r <- GET("https://api.postcodes.io/outcodes",

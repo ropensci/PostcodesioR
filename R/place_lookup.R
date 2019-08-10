@@ -54,7 +54,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' place_lookup("osgb4000000074544700")
+#' }
 #'
 place_lookup <- function(code) {
   if (!is.character(code) || nchar(code) < 2) {

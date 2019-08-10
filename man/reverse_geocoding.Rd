@@ -25,9 +25,11 @@ A list with available data.
 Returns nearest postcodes for a given longitude and latitude.
 }
 \examples{
+\dontrun{
 reverse_geocoding(0.127, 51.507)
 reverse_geocoding("0.1275", "51.5073", limit = 3)
 reverse_geocoding("0.1275", "51.5073", limit = 11, radius = 200)
+}
 
 }
 \seealso{
