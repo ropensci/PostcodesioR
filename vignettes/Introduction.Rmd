@@ -62,7 +62,7 @@ str(bulk_lookup_result[1])
 
 ### Outward code lookup
 
-Provide an outcode to obtain geolocation data for the centroid of the specifid outcode:
+Provide an outcode to obtain geolocation data for the centroid of the specified outcode:
 
 ```{r}
 ocl <- outward_code_lookup("E1")
