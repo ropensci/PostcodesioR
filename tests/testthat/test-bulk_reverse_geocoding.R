@@ -1,6 +1,9 @@
 context("bulk_reverse_geocoding")
 
 test_that("bulk_reverse_geocoding works as expected", {
+  # Don't run these tests on the CRAN build servers
+  skip_on_cran()
+
   single_coordinate <- 3.15807
   geolocations_list <- structure(
     list(

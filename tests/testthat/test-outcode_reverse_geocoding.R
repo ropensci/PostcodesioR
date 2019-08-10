@@ -1,6 +1,9 @@
 context("outcode_reverse_geocoding")
 
 test_that("outcode_reverse_geocoding works as expected", {
+  # Don't run these tests on the CRAN build servers
+  skip_on_cran()
+
   incorrect_geocode1 <- 3.1
   incorrect_geocode2 <- "4"
 

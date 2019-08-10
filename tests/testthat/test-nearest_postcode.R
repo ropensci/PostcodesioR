@@ -1,6 +1,9 @@
 context("nearest_postcode")
 
 test_that("nearest_postcode works as expected", {
+  # Don't run these tests on the CRAN build servers
+  skip_on_cran()
+
   incorrect_postcode1 <- 3.15807
   incorrect_postcode2 <- "E"
 

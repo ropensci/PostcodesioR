@@ -1,6 +1,8 @@
 context("reverse_geocoding")
 
 test_that("reverse_geocoding works as expected", {
+  # Don't run these tests on the CRAN build servers
+  skip_on_cran()
 
   reverse_geocoding_result1 <- reverse_geocoding(0.1, 51.5)
   reverse_geocoding_result2 <- reverse_geocoding(0.127, 51.507)

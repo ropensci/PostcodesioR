@@ -1,6 +1,9 @@
 context("random_postcode")
 
 test_that("random_postcode works as expected", {
+  # Don't run these tests on the CRAN build servers
+  skip_on_cran()
+
   test_outcode <- "N1"
 
   random_postcode_result1 <- random_postcode()

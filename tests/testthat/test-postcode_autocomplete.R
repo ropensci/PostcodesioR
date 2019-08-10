@@ -1,6 +1,9 @@
 context("postcode_autocomplete")
 
 test_that("postcode_autocomplete works as expected", {
+  # Don't run these tests on the CRAN build servers
+  skip_on_cran()
+
   incorrect_postcode <- 1
   incorrect_limit1 <- 101
   incorrect_limit2 <- "11"

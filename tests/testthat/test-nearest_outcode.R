@@ -1,6 +1,9 @@
 context("nearest_outcode")
 
 test_that("nearest_outcode works as expected", {
+  # Don't run these tests on the CRAN build servers
+  skip_on_cran()
+
   incorrect_outcode1 <- 3.15807
   incorrect_outcode2 <- "E"
 

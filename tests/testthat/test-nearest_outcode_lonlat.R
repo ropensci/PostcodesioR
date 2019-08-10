@@ -1,6 +1,8 @@
 context("nearest_outcode_lonlat")
 
 test_that("nearest_outcode_lonlat works as expected", {
+  # Don't run these tests on the CRAN build servers
+  skip_on_cran()
 
   nearest_outcode_lonlat_result <- nearest_outcode_lonlat(0.127, 51.507)
 

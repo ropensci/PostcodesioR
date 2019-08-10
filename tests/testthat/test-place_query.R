@@ -1,6 +1,9 @@
 context("place_query")
 
 test_that("place_query works as expected", {
+  # Don't run these tests on the CRAN build servers
+  skip_on_cran()
+
   incorrect_limit1 <- 101
   incorrect_limit2 <- "11"
   correct_limit <- 11

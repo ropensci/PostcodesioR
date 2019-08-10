@@ -1,6 +1,9 @@
 context("postcode_lookup")
 
 test_that("postcode_lookup works as expected", {
+  # Don't run these tests on the CRAN build servers
+  skip_on_cran()
+
   incorrect_postcode1 <- 1
   incorrect_postcode2 <- "E"
   incorrect_postcode3 <- c("EC1Y8LX", "EX165BL")

@@ -1,6 +1,9 @@
 context("postcode_query")
 
 test_that("postcode_query works as expected", {
+  # Don't run these tests on the CRAN build servers
+  skip_on_cran()
+
   incorrect_postcode1 <- 1
   incorrect_postcode2 <- "E"
   incorrect_limit1 <- 101
