@@ -83,7 +83,7 @@
       <h1>Introduction</h1>
                         <h4 class="author">Eryk Walczak</h4>
             
-            <h4 class="date">2019-08-11</h4>
+            <h4 class="date">2019-08-19</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/ropensci/PostcodesioR/blob/master/vignettes/Introduction.Rmd"><code>vignettes/Introduction.Rmd</code></a></small>
       <div class="hidden name"><code>Introduction.Rmd</code></div>
@@ -539,112 +539,112 @@
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="co"># without restrictions</span></a>
 <a class="sourceLine" id="cb24-2" data-line-number="2"><span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>()</a></code></pre></div>
 <pre><code>## $postcode
-## [1] "CM2 9AT"
+## [1] "S64 0LN"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 569876
+## [1] 448184
 ## 
 ## $northings
-## [1] 205255
+## [1] 399967
 ## 
 ## $country
 ## [1] "England"
 ## 
 ## $nhs_ha
-## [1] "East of England"
+## [1] "Yorkshire and the Humber"
 ## 
 ## $longitude
-## [1] 0.457908
+## [1] -1.275183
 ## 
 ## $latitude
-## [1] 51.72029
+## [1] 53.49421
 ## 
 ## $european_electoral_region
-## [1] "Eastern"
+## [1] "Yorkshire and The Humber"
 ## 
 ## $primary_care_trust
-## [1] "Mid Essex"
+## [1] "Doncaster"
 ## 
 ## $region
-## [1] "East of England"
+## [1] "Yorkshire and The Humber"
 ## 
 ## $lsoa
-## [1] "Chelmsford 012A"
+## [1] "Doncaster 030C"
 ## 
 ## $msoa
-## [1] "Chelmsford 012"
+## [1] "Doncaster 030"
 ## 
 ## $incode
-## [1] "9AT"
+## [1] "0LN"
 ## 
 ## $outcode
-## [1] "CM2"
+## [1] "S64"
 ## 
 ## $parliamentary_constituency
-## [1] "Chelmsford"
+## [1] "Doncaster North"
 ## 
 ## $admin_district
-## [1] "Chelmsford"
+## [1] "Doncaster"
 ## 
 ## $parish
-## [1] "Chelmsford, unparished area"
+## [1] "Doncaster, unparished area"
 ## 
 ## $admin_county
-## [1] "Essex"
+## NULL
 ## 
 ## $admin_ward
-## [1] "Goat Hall"
+## [1] "Mexborough"
 ## 
 ## $ced
-## [1] "Chelmsford West"
+## NULL
 ## 
 ## $ccg
-## [1] "NHS Mid Essex"
+## [1] "NHS Doncaster"
 ## 
 ## $nuts
-## [1] "Heart of Essex"
+## [1] "Barnsley, Doncaster and Rotherham"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "E07000070"
+## [1] "E08000017"
 ## 
 ## $codes$admin_county
-## [1] "E10000012"
+## [1] "E99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05004102"
+## [1] "E05010739"
 ## 
 ## $codes$parish
-## [1] "E43000062"
+## [1] "E43000171"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "E14000628"
+## [1] "E14000669"
 ## 
 ## $codes$ccg
-## [1] "E38000106"
+## [1] "E38000044"
 ## 
 ## $codes$ced
-## [1] "E58000422"
+## [1] "E99999999"
 ## 
 ## $codes$nuts
-## [1] "UKH36"</code></pre>
+## [1] "UKE31"</code></pre>
 <p>A randomly generated postcode can also belong to a particular outcode:</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1"><span class="co"># restrict to an outcode</span></a>
 <a class="sourceLine" id="cb26-2" data-line-number="2"><span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</a></code></pre></div>
 <pre><code>## $postcode
-## [1] "N1 8DH"
+## [1] "N1 6FW"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 531891
+## [1] 532751
 ## 
 ## $northings
-## [1] 183036
+## [1] 182700
 ## 
 ## $country
 ## [1] "England"
@@ -653,80 +653,80 @@
 ## [1] "London"
 ## 
 ## $longitude
-## [1] -0.099989
+## [1] -0.087725
 ## 
 ## $latitude
-## [1] 51.53084
+## [1] 51.52761
 ## 
 ## $european_electoral_region
 ## [1] "London"
 ## 
 ## $primary_care_trust
-## [1] "Islington"
+## [1] "City and Hackney Teaching"
 ## 
 ## $region
 ## [1] "London"
 ## 
 ## $lsoa
-## [1] "Islington 020E"
+## [1] "Hackney 027I"
 ## 
 ## $msoa
-## [1] "Islington 020"
+## [1] "Hackney 027"
 ## 
 ## $incode
-## [1] "8DH"
+## [1] "6FW"
 ## 
 ## $outcode
 ## [1] "N1"
 ## 
 ## $parliamentary_constituency
-## [1] "Islington South and Finsbury"
+## [1] "Hackney South and Shoreditch"
 ## 
 ## $admin_district
-## [1] "Islington"
+## [1] "Hackney"
 ## 
 ## $parish
-## [1] "Islington, unparished area"
+## [1] "Hackney, unparished area"
 ## 
 ## $admin_county
 ## NULL
 ## 
 ## $admin_ward
-## [1] "St Peter's"
+## [1] "Hoxton West"
 ## 
 ## $ced
 ## NULL
 ## 
 ## $ccg
-## [1] "NHS Islington"
+## [1] "NHS City and Hackney"
 ## 
 ## $nuts
-## [1] "Haringey and Islington"
+## [1] "Hackney and Newham"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "E09000019"
+## [1] "E09000012"
 ## 
 ## $codes$admin_county
 ## [1] "E99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05000380"
+## [1] "E05009378"
 ## 
 ## $codes$parish
-## [1] "E43000209"
+## [1] "E43000202"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "E14000764"
+## [1] "E14000721"
 ## 
 ## $codes$ccg
-## [1] "E38000088"
+## [1] "E38000035"
 ## 
 ## $codes$ced
 ## [1] "E99999999"
 ## 
 ## $codes$nuts
-## [1] "UKI43"</code></pre>
+## [1] "UKI41"</code></pre>
 </div>
 </div>
 <div id="places" class="section level2">
@@ -734,14 +734,14 @@
 <a href="#places" class="anchor"></a>Places</h2>
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="kw"><a href="../reference/random_place.html">random_place</a></span>()</a></code></pre></div>
-<pre><code>##                   code      name_1 name_1_lang name_2 name_2_lang
-## 1 osgb4000000074559756 Llanhennock        NULL   NULL        NULL
-##   local_type outcode            county_unitary county_unitary_type
-## 1     Hamlet    NP18 Sir Fynwy - Monmouthshire    UnitaryAuthority
-##   district_borough district_borough_type region country longitude latitude
-## 1             NULL                  NULL  Wales   Wales -2.936256  51.6297
-##   eastings northings min_eastings min_northings max_eastings max_northings
-## 1   335292    192736       334973        192388       335473        193019</code></pre>
+<pre><code>##                   code            name_1 name_1_lang name_2 name_2_lang
+## 1 osgb4000000074575855 Clyst St Lawrence        NULL   NULL        NULL
+##   local_type outcode county_unitary county_unitary_type district_borough
+## 1    Village    EX15          Devon              County       East Devon
+##   district_borough_type     region country longitude latitude eastings
+## 1              District South West England  -3.37576 50.79252   303129
+##   northings min_eastings min_northings max_eastings max_northings
+## 1    100119       302589         99861       303199        100361</code></pre>
 </div>
 <div id="postcode-validation" class="section level2">
 <h2 class="hasAnchor">
