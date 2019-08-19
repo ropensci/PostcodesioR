@@ -1,3 +1,10 @@
+## Resubmission
+This is a resubmission. In this version I have:
+
+* Removed the LICENSE file as recommended.
+
+* Updated the link to CONDUCT.md.
+
 ## Test environments
 * local OS X install, R 3.6.0
 * ubuntu 14.04 (on travis-ci), R 3.6.0
