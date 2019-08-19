@@ -19,7 +19,7 @@ The package is based exclusively on open data provided by postcodes.io. Postcode
 This package is a developmental version and is available only on GitHub. Hopefully, it will eventually make it to CRAN.
 In order to install PostcodesioR use the following commands:
 
-```{r, eval=FALSE}
+```{r, eval = FALSE}
 if(!require("devtools")) {
   install.packages("devtools")
 }
@@ -60,6 +60,6 @@ Go to the package's [website](https://docs.ropensci.org/PostcodesioR/) or to my 
 
 ## Code of Conduct
 
-Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of Conduct](https://github.com/ropensci/PostcodesioR/blob/master/CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 [![ropensci_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)

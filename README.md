@@ -121,8 +121,8 @@ examples.
 ## Code of Conduct
 
 Please note that this project is released with a [Contributor Code of
-Conduct](CONDUCT.md). By participating in this project you agree to
-abide by its
+Conduct](https://github.com/ropensci/PostcodesioR/blob/master/CONDUCT.md).
+By participating in this project you agree to abide by its
 terms.
 
 [![ropensci\_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)
