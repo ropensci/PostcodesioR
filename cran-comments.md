@@ -1,9 +1,9 @@
 ## Resubmission
 This is a resubmission. In this version I have:
 
-* Removed the LICENSE file as recommended.
+* Shortened the title
 
-* Updated the link to CONDUCT.md.
+* Replaced dontrun with donttest in examples
 
 ## Test environments
 * local OS X install, R 3.6.0
