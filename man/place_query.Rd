@@ -21,7 +21,7 @@ This function is similar to \code{\link{place_lookup}} but it returns a list
 and allows limiting the results.
 }
 \examples{
-\dontrun{
+\donttest{
 place_query("Hills")
 place_query("Hills", limit = 12)
 }

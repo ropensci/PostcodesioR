@@ -16,7 +16,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' reverse_geocoding(0.127, 51.507)
 #' reverse_geocoding("0.1275", "51.5073", limit = 3)
 #' reverse_geocoding("0.1275", "51.5073", limit = 11, radius = 200)

@@ -13,7 +13,7 @@ A data frame describing a random place and all associated data.
 Returns a random place and all associated data
 }
 \examples{
-\dontrun{
+\donttest{
 random_place()
 }
 

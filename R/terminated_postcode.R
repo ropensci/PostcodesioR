@@ -29,7 +29,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' terminated_postcode("EC1Y 8LX") # exisitng postcode
 #' terminated_postcode("E1W 1UU") # terminated
 #' }

@@ -154,8 +154,7 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-</div><span class='co'># NOT RUN {</span>
-<span class='no'>geolocations_list</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/structure'>structure</a></span>(
+</div><div class='input'><span class='no'>geolocations_list</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/structure'>structure</a></span>(
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(
 <span class='kw'>geolocations</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/structure'>structure</a></span>(
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(
@@ -168,8 +167,2236 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 <span class='kw'>row.names</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>2</span>)),
 <span class='kw'>.Names</span> <span class='kw'>=</span> <span class='st'>"geolocations"</span>)
 
-<span class='fu'>bulk_reverse_geocoding</span>(<span class='no'>geolocations_list</span>)
-<span class='co'># }</span><div class='input'>
+<span class='fu'>bulk_reverse_geocoding</span>(<span class='no'>geolocations_list</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; [[1]]$query
+#&gt; [[1]]$query$longitude
+#&gt; [1] -3.158077
+#&gt; 
+#&gt; [[1]]$query$latitude
+#&gt; [1] 51.47999
+#&gt; 
+#&gt; 
+#&gt; [[1]]$result
+#&gt; [[1]]$result[[1]]
+#&gt; [[1]]$result[[1]]$postcode
+#&gt; [1] "CF24 2BT"
+#&gt; 
+#&gt; [[1]]$result[[1]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[1]]$result[[1]]$eastings
+#&gt; [1] 319675
+#&gt; 
+#&gt; [[1]]$result[[1]]$northings
+#&gt; [1] 176305
+#&gt; 
+#&gt; [[1]]$result[[1]]$country
+#&gt; [1] "Wales"
+#&gt; 
+#&gt; [[1]]$result[[1]]$nhs_ha
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[1]]$longitude
+#&gt; [1] -3.158076
+#&gt; 
+#&gt; [[1]]$result[[1]]$latitude
+#&gt; [1] 51.47998
+#&gt; 
+#&gt; [[1]]$result[[1]]$european_electoral_region
+#&gt; [1] "Wales"
+#&gt; 
+#&gt; [[1]]$result[[1]]$primary_care_trust
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[1]]$region
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[1]]$lsoa
+#&gt; [1] "Cardiff 038D"
+#&gt; 
+#&gt; [[1]]$result[[1]]$msoa
+#&gt; [1] "Cardiff 038"
+#&gt; 
+#&gt; [[1]]$result[[1]]$incode
+#&gt; [1] "2BT"
+#&gt; 
+#&gt; [[1]]$result[[1]]$outcode
+#&gt; [1] "CF24"
+#&gt; 
+#&gt; [[1]]$result[[1]]$distance
+#&gt; [1] 1.567236
+#&gt; 
+#&gt; [[1]]$result[[1]]$parliamentary_constituency
+#&gt; [1] "Cardiff South and Penarth"
+#&gt; 
+#&gt; [[1]]$result[[1]]$admin_district
+#&gt; [1] "Cardiff"
+#&gt; 
+#&gt; [[1]]$result[[1]]$parish
+#&gt; [1] "Splott"
+#&gt; 
+#&gt; [[1]]$result[[1]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[1]]$admin_ward
+#&gt; [1] "Splott"
+#&gt; 
+#&gt; [[1]]$result[[1]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[1]]$ccg
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[1]]$nuts
+#&gt; [1] "Cardiff and Vale of Glamorgan"
+#&gt; 
+#&gt; [[1]]$result[[1]]$codes
+#&gt; [[1]]$result[[1]]$codes$admin_district
+#&gt; [1] "W06000015"
+#&gt; 
+#&gt; [[1]]$result[[1]]$codes$admin_county
+#&gt; [1] "W99999999"
+#&gt; 
+#&gt; [[1]]$result[[1]]$codes$admin_ward
+#&gt; [1] "W05000879"
+#&gt; 
+#&gt; [[1]]$result[[1]]$codes$parish
+#&gt; [1] "W04001005"
+#&gt; 
+#&gt; [[1]]$result[[1]]$codes$parliamentary_constituency
+#&gt; [1] "W07000080"
+#&gt; 
+#&gt; [[1]]$result[[1]]$codes$ccg
+#&gt; [1] "W11000029"
+#&gt; 
+#&gt; [[1]]$result[[1]]$codes$ced
+#&gt; [1] "W99999999"
+#&gt; 
+#&gt; [[1]]$result[[1]]$codes$nuts
+#&gt; [1] "UKL22"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[1]]$result[[2]]
+#&gt; [[1]]$result[[2]]$postcode
+#&gt; [1] "CF24 2ED"
+#&gt; 
+#&gt; [[1]]$result[[2]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[1]]$result[[2]]$eastings
+#&gt; [1] 319632
+#&gt; 
+#&gt; [[1]]$result[[2]]$northings
+#&gt; [1] 176274
+#&gt; 
+#&gt; [[1]]$result[[2]]$country
+#&gt; [1] "Wales"
+#&gt; 
+#&gt; [[1]]$result[[2]]$nhs_ha
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[2]]$longitude
+#&gt; [1] -3.158688
+#&gt; 
+#&gt; [[1]]$result[[2]]$latitude
+#&gt; [1] 51.47969
+#&gt; 
+#&gt; [[1]]$result[[2]]$european_electoral_region
+#&gt; [1] "Wales"
+#&gt; 
+#&gt; [[1]]$result[[2]]$primary_care_trust
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[2]]$region
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[2]]$lsoa
+#&gt; [1] "Cardiff 038D"
+#&gt; 
+#&gt; [[1]]$result[[2]]$msoa
+#&gt; [1] "Cardiff 038"
+#&gt; 
+#&gt; [[1]]$result[[2]]$incode
+#&gt; [1] "2ED"
+#&gt; 
+#&gt; [[1]]$result[[2]]$outcode
+#&gt; [1] "CF24"
+#&gt; 
+#&gt; [[1]]$result[[2]]$distance
+#&gt; [1] 53.91644
+#&gt; 
+#&gt; [[1]]$result[[2]]$parliamentary_constituency
+#&gt; [1] "Cardiff South and Penarth"
+#&gt; 
+#&gt; [[1]]$result[[2]]$admin_district
+#&gt; [1] "Cardiff"
+#&gt; 
+#&gt; [[1]]$result[[2]]$parish
+#&gt; [1] "Splott"
+#&gt; 
+#&gt; [[1]]$result[[2]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[2]]$admin_ward
+#&gt; [1] "Splott"
+#&gt; 
+#&gt; [[1]]$result[[2]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[2]]$ccg
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[2]]$nuts
+#&gt; [1] "Cardiff and Vale of Glamorgan"
+#&gt; 
+#&gt; [[1]]$result[[2]]$codes
+#&gt; [[1]]$result[[2]]$codes$admin_district
+#&gt; [1] "W06000015"
+#&gt; 
+#&gt; [[1]]$result[[2]]$codes$admin_county
+#&gt; [1] "W99999999"
+#&gt; 
+#&gt; [[1]]$result[[2]]$codes$admin_ward
+#&gt; [1] "W05000879"
+#&gt; 
+#&gt; [[1]]$result[[2]]$codes$parish
+#&gt; [1] "W04001005"
+#&gt; 
+#&gt; [[1]]$result[[2]]$codes$parliamentary_constituency
+#&gt; [1] "W07000080"
+#&gt; 
+#&gt; [[1]]$result[[2]]$codes$ccg
+#&gt; [1] "W11000029"
+#&gt; 
+#&gt; [[1]]$result[[2]]$codes$ced
+#&gt; [1] "W99999999"
+#&gt; 
+#&gt; [[1]]$result[[2]]$codes$nuts
+#&gt; [1] "UKL22"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[1]]$result[[3]]
+#&gt; [[1]]$result[[3]]$postcode
+#&gt; [1] "CF24 2AA"
+#&gt; 
+#&gt; [[1]]$result[[3]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[1]]$result[[3]]$eastings
+#&gt; [1] 319607
+#&gt; 
+#&gt; [[1]]$result[[3]]$northings
+#&gt; [1] 176332
+#&gt; 
+#&gt; [[1]]$result[[3]]$country
+#&gt; [1] "Wales"
+#&gt; 
+#&gt; [[1]]$result[[3]]$nhs_ha
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[3]]$longitude
+#&gt; [1] -3.159062
+#&gt; 
+#&gt; [[1]]$result[[3]]$latitude
+#&gt; [1] 51.48021
+#&gt; 
+#&gt; [[1]]$result[[3]]$european_electoral_region
+#&gt; [1] "Wales"
+#&gt; 
+#&gt; [[1]]$result[[3]]$primary_care_trust
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[3]]$region
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[3]]$lsoa
+#&gt; [1] "Cardiff 038D"
+#&gt; 
+#&gt; [[1]]$result[[3]]$msoa
+#&gt; [1] "Cardiff 038"
+#&gt; 
+#&gt; [[1]]$result[[3]]$incode
+#&gt; [1] "2AA"
+#&gt; 
+#&gt; [[1]]$result[[3]]$outcode
+#&gt; [1] "CF24"
+#&gt; 
+#&gt; [[1]]$result[[3]]$distance
+#&gt; [1] 72.61436
+#&gt; 
+#&gt; [[1]]$result[[3]]$parliamentary_constituency
+#&gt; [1] "Cardiff South and Penarth"
+#&gt; 
+#&gt; [[1]]$result[[3]]$admin_district
+#&gt; [1] "Cardiff"
+#&gt; 
+#&gt; [[1]]$result[[3]]$parish
+#&gt; [1] "Splott"
+#&gt; 
+#&gt; [[1]]$result[[3]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[3]]$admin_ward
+#&gt; [1] "Splott"
+#&gt; 
+#&gt; [[1]]$result[[3]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[3]]$ccg
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[3]]$nuts
+#&gt; [1] "Cardiff and Vale of Glamorgan"
+#&gt; 
+#&gt; [[1]]$result[[3]]$codes
+#&gt; [[1]]$result[[3]]$codes$admin_district
+#&gt; [1] "W06000015"
+#&gt; 
+#&gt; [[1]]$result[[3]]$codes$admin_county
+#&gt; [1] "W99999999"
+#&gt; 
+#&gt; [[1]]$result[[3]]$codes$admin_ward
+#&gt; [1] "W05000879"
+#&gt; 
+#&gt; [[1]]$result[[3]]$codes$parish
+#&gt; [1] "W04001005"
+#&gt; 
+#&gt; [[1]]$result[[3]]$codes$parliamentary_constituency
+#&gt; [1] "W07000080"
+#&gt; 
+#&gt; [[1]]$result[[3]]$codes$ccg
+#&gt; [1] "W11000029"
+#&gt; 
+#&gt; [[1]]$result[[3]]$codes$ced
+#&gt; [1] "W99999999"
+#&gt; 
+#&gt; [[1]]$result[[3]]$codes$nuts
+#&gt; [1] "UKL22"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[1]]$result[[4]]
+#&gt; [[1]]$result[[4]]$postcode
+#&gt; [1] "CF24 5NW"
+#&gt; 
+#&gt; [[1]]$result[[4]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[1]]$result[[4]]$eastings
+#&gt; [1] 319646
+#&gt; 
+#&gt; [[1]]$result[[4]]$northings
+#&gt; [1] 176237
+#&gt; 
+#&gt; [[1]]$result[[4]]$country
+#&gt; [1] "Wales"
+#&gt; 
+#&gt; [[1]]$result[[4]]$nhs_ha
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[4]]$longitude
+#&gt; [1] -3.158478
+#&gt; 
+#&gt; [[1]]$result[[4]]$latitude
+#&gt; [1] 51.47936
+#&gt; 
+#&gt; [[1]]$result[[4]]$european_electoral_region
+#&gt; [1] "Wales"
+#&gt; 
+#&gt; [[1]]$result[[4]]$primary_care_trust
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[4]]$region
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[4]]$lsoa
+#&gt; [1] "Cardiff 038D"
+#&gt; 
+#&gt; [[1]]$result[[4]]$msoa
+#&gt; [1] "Cardiff 038"
+#&gt; 
+#&gt; [[1]]$result[[4]]$incode
+#&gt; [1] "5NW"
+#&gt; 
+#&gt; [[1]]$result[[4]]$outcode
+#&gt; [1] "CF24"
+#&gt; 
+#&gt; [[1]]$result[[4]]$distance
+#&gt; [1] 75.42382
+#&gt; 
+#&gt; [[1]]$result[[4]]$parliamentary_constituency
+#&gt; [1] "Cardiff South and Penarth"
+#&gt; 
+#&gt; [[1]]$result[[4]]$admin_district
+#&gt; [1] "Cardiff"
+#&gt; 
+#&gt; [[1]]$result[[4]]$parish
+#&gt; [1] "Splott"
+#&gt; 
+#&gt; [[1]]$result[[4]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[4]]$admin_ward
+#&gt; [1] "Splott"
+#&gt; 
+#&gt; [[1]]$result[[4]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[4]]$ccg
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[4]]$nuts
+#&gt; [1] "Cardiff and Vale of Glamorgan"
+#&gt; 
+#&gt; [[1]]$result[[4]]$codes
+#&gt; [[1]]$result[[4]]$codes$admin_district
+#&gt; [1] "W06000015"
+#&gt; 
+#&gt; [[1]]$result[[4]]$codes$admin_county
+#&gt; [1] "W99999999"
+#&gt; 
+#&gt; [[1]]$result[[4]]$codes$admin_ward
+#&gt; [1] "W05000879"
+#&gt; 
+#&gt; [[1]]$result[[4]]$codes$parish
+#&gt; [1] "W04001005"
+#&gt; 
+#&gt; [[1]]$result[[4]]$codes$parliamentary_constituency
+#&gt; [1] "W07000080"
+#&gt; 
+#&gt; [[1]]$result[[4]]$codes$ccg
+#&gt; [1] "W11000029"
+#&gt; 
+#&gt; [[1]]$result[[4]]$codes$ced
+#&gt; [1] "W99999999"
+#&gt; 
+#&gt; [[1]]$result[[4]]$codes$nuts
+#&gt; [1] "UKL22"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[1]]$result[[5]]
+#&gt; [[1]]$result[[5]]$postcode
+#&gt; [1] "CF24 2AJ"
+#&gt; 
+#&gt; [[1]]$result[[5]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[1]]$result[[5]]$eastings
+#&gt; [1] 319645
+#&gt; 
+#&gt; [[1]]$result[[5]]$northings
+#&gt; [1] 176384
+#&gt; 
+#&gt; [[1]]$result[[5]]$country
+#&gt; [1] "Wales"
+#&gt; 
+#&gt; [[1]]$result[[5]]$nhs_ha
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[5]]$longitude
+#&gt; [1] -3.158526
+#&gt; 
+#&gt; [[1]]$result[[5]]$latitude
+#&gt; [1] 51.48068
+#&gt; 
+#&gt; [[1]]$result[[5]]$european_electoral_region
+#&gt; [1] "Wales"
+#&gt; 
+#&gt; [[1]]$result[[5]]$primary_care_trust
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[5]]$region
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[5]]$lsoa
+#&gt; [1] "Cardiff 038D"
+#&gt; 
+#&gt; [[1]]$result[[5]]$msoa
+#&gt; [1] "Cardiff 038"
+#&gt; 
+#&gt; [[1]]$result[[5]]$incode
+#&gt; [1] "2AJ"
+#&gt; 
+#&gt; [[1]]$result[[5]]$outcode
+#&gt; [1] "CF24"
+#&gt; 
+#&gt; [[1]]$result[[5]]$distance
+#&gt; [1] 83.05426
+#&gt; 
+#&gt; [[1]]$result[[5]]$parliamentary_constituency
+#&gt; [1] "Cardiff South and Penarth"
+#&gt; 
+#&gt; [[1]]$result[[5]]$admin_district
+#&gt; [1] "Cardiff"
+#&gt; 
+#&gt; [[1]]$result[[5]]$parish
+#&gt; [1] "Splott"
+#&gt; 
+#&gt; [[1]]$result[[5]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[5]]$admin_ward
+#&gt; [1] "Splott"
+#&gt; 
+#&gt; [[1]]$result[[5]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[5]]$ccg
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[5]]$nuts
+#&gt; [1] "Cardiff and Vale of Glamorgan"
+#&gt; 
+#&gt; [[1]]$result[[5]]$codes
+#&gt; [[1]]$result[[5]]$codes$admin_district
+#&gt; [1] "W06000015"
+#&gt; 
+#&gt; [[1]]$result[[5]]$codes$admin_county
+#&gt; [1] "W99999999"
+#&gt; 
+#&gt; [[1]]$result[[5]]$codes$admin_ward
+#&gt; [1] "W05000879"
+#&gt; 
+#&gt; [[1]]$result[[5]]$codes$parish
+#&gt; [1] "W04001005"
+#&gt; 
+#&gt; [[1]]$result[[5]]$codes$parliamentary_constituency
+#&gt; [1] "W07000080"
+#&gt; 
+#&gt; [[1]]$result[[5]]$codes$ccg
+#&gt; [1] "W11000029"
+#&gt; 
+#&gt; [[1]]$result[[5]]$codes$ced
+#&gt; [1] "W99999999"
+#&gt; 
+#&gt; [[1]]$result[[5]]$codes$nuts
+#&gt; [1] "UKL22"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[1]]$result[[6]]
+#&gt; [[1]]$result[[6]]$postcode
+#&gt; [1] "CF24 2AH"
+#&gt; 
+#&gt; [[1]]$result[[6]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[1]]$result[[6]]$eastings
+#&gt; [1] 319618
+#&gt; 
+#&gt; [[1]]$result[[6]]$northings
+#&gt; [1] 176370
+#&gt; 
+#&gt; [[1]]$result[[6]]$country
+#&gt; [1] "Wales"
+#&gt; 
+#&gt; [[1]]$result[[6]]$nhs_ha
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[6]]$longitude
+#&gt; [1] -3.158912
+#&gt; 
+#&gt; [[1]]$result[[6]]$latitude
+#&gt; [1] 51.48055
+#&gt; 
+#&gt; [[1]]$result[[6]]$european_electoral_region
+#&gt; [1] "Wales"
+#&gt; 
+#&gt; [[1]]$result[[6]]$primary_care_trust
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[6]]$region
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[6]]$lsoa
+#&gt; [1] "Cardiff 038D"
+#&gt; 
+#&gt; [[1]]$result[[6]]$msoa
+#&gt; [1] "Cardiff 038"
+#&gt; 
+#&gt; [[1]]$result[[6]]$incode
+#&gt; [1] "2AH"
+#&gt; 
+#&gt; [[1]]$result[[6]]$outcode
+#&gt; [1] "CF24"
+#&gt; 
+#&gt; [[1]]$result[[6]]$distance
+#&gt; [1] 85.27079
+#&gt; 
+#&gt; [[1]]$result[[6]]$parliamentary_constituency
+#&gt; [1] "Cardiff South and Penarth"
+#&gt; 
+#&gt; [[1]]$result[[6]]$admin_district
+#&gt; [1] "Cardiff"
+#&gt; 
+#&gt; [[1]]$result[[6]]$parish
+#&gt; [1] "Splott"
+#&gt; 
+#&gt; [[1]]$result[[6]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[6]]$admin_ward
+#&gt; [1] "Splott"
+#&gt; 
+#&gt; [[1]]$result[[6]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[6]]$ccg
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[6]]$nuts
+#&gt; [1] "Cardiff and Vale of Glamorgan"
+#&gt; 
+#&gt; [[1]]$result[[6]]$codes
+#&gt; [[1]]$result[[6]]$codes$admin_district
+#&gt; [1] "W06000015"
+#&gt; 
+#&gt; [[1]]$result[[6]]$codes$admin_county
+#&gt; [1] "W99999999"
+#&gt; 
+#&gt; [[1]]$result[[6]]$codes$admin_ward
+#&gt; [1] "W05000879"
+#&gt; 
+#&gt; [[1]]$result[[6]]$codes$parish
+#&gt; [1] "W04001005"
+#&gt; 
+#&gt; [[1]]$result[[6]]$codes$parliamentary_constituency
+#&gt; [1] "W07000080"
+#&gt; 
+#&gt; [[1]]$result[[6]]$codes$ccg
+#&gt; [1] "W11000029"
+#&gt; 
+#&gt; [[1]]$result[[6]]$codes$ced
+#&gt; [1] "W99999999"
+#&gt; 
+#&gt; [[1]]$result[[6]]$codes$nuts
+#&gt; [1] "UKL22"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[1]]$result[[7]]
+#&gt; [[1]]$result[[7]]$postcode
+#&gt; [1] "CF24 2DZ"
+#&gt; 
+#&gt; [[1]]$result[[7]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[1]]$result[[7]]$eastings
+#&gt; [1] 319764
+#&gt; 
+#&gt; [[1]]$result[[7]]$northings
+#&gt; [1] 176318
+#&gt; 
+#&gt; [[1]]$result[[7]]$country
+#&gt; [1] "Wales"
+#&gt; 
+#&gt; [[1]]$result[[7]]$nhs_ha
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[7]]$longitude
+#&gt; [1] -3.156798
+#&gt; 
+#&gt; [[1]]$result[[7]]$latitude
+#&gt; [1] 51.48011
+#&gt; 
+#&gt; [[1]]$result[[7]]$european_electoral_region
+#&gt; [1] "Wales"
+#&gt; 
+#&gt; [[1]]$result[[7]]$primary_care_trust
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[7]]$region
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[7]]$lsoa
+#&gt; [1] "Cardiff 038D"
+#&gt; 
+#&gt; [[1]]$result[[7]]$msoa
+#&gt; [1] "Cardiff 038"
+#&gt; 
+#&gt; [[1]]$result[[7]]$incode
+#&gt; [1] "2DZ"
+#&gt; 
+#&gt; [[1]]$result[[7]]$outcode
+#&gt; [1] "CF24"
+#&gt; 
+#&gt; [[1]]$result[[7]]$distance
+#&gt; [1] 89.79017
+#&gt; 
+#&gt; [[1]]$result[[7]]$parliamentary_constituency
+#&gt; [1] "Cardiff South and Penarth"
+#&gt; 
+#&gt; [[1]]$result[[7]]$admin_district
+#&gt; [1] "Cardiff"
+#&gt; 
+#&gt; [[1]]$result[[7]]$parish
+#&gt; [1] "Splott"
+#&gt; 
+#&gt; [[1]]$result[[7]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[7]]$admin_ward
+#&gt; [1] "Splott"
+#&gt; 
+#&gt; [[1]]$result[[7]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[7]]$ccg
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[7]]$nuts
+#&gt; [1] "Cardiff and Vale of Glamorgan"
+#&gt; 
+#&gt; [[1]]$result[[7]]$codes
+#&gt; [[1]]$result[[7]]$codes$admin_district
+#&gt; [1] "W06000015"
+#&gt; 
+#&gt; [[1]]$result[[7]]$codes$admin_county
+#&gt; [1] "W99999999"
+#&gt; 
+#&gt; [[1]]$result[[7]]$codes$admin_ward
+#&gt; [1] "W05000879"
+#&gt; 
+#&gt; [[1]]$result[[7]]$codes$parish
+#&gt; [1] "W04001005"
+#&gt; 
+#&gt; [[1]]$result[[7]]$codes$parliamentary_constituency
+#&gt; [1] "W07000080"
+#&gt; 
+#&gt; [[1]]$result[[7]]$codes$ccg
+#&gt; [1] "W11000029"
+#&gt; 
+#&gt; [[1]]$result[[7]]$codes$ced
+#&gt; [1] "W99999999"
+#&gt; 
+#&gt; [[1]]$result[[7]]$codes$nuts
+#&gt; [1] "UKL22"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[1]]$result[[8]]
+#&gt; [[1]]$result[[8]]$postcode
+#&gt; [1] "CF24 2AL"
+#&gt; 
+#&gt; [[1]]$result[[8]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[1]]$result[[8]]$eastings
+#&gt; [1] 319672
+#&gt; 
+#&gt; [[1]]$result[[8]]$northings
+#&gt; [1] 176400
+#&gt; 
+#&gt; [[1]]$result[[8]]$country
+#&gt; [1] "Wales"
+#&gt; 
+#&gt; [[1]]$result[[8]]$nhs_ha
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[8]]$longitude
+#&gt; [1] -3.158141
+#&gt; 
+#&gt; [[1]]$result[[8]]$latitude
+#&gt; [1] 51.48083
+#&gt; 
+#&gt; [[1]]$result[[8]]$european_electoral_region
+#&gt; [1] "Wales"
+#&gt; 
+#&gt; [[1]]$result[[8]]$primary_care_trust
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[8]]$region
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[8]]$lsoa
+#&gt; [1] "Cardiff 038D"
+#&gt; 
+#&gt; [[1]]$result[[8]]$msoa
+#&gt; [1] "Cardiff 038"
+#&gt; 
+#&gt; [[1]]$result[[8]]$incode
+#&gt; [1] "2AL"
+#&gt; 
+#&gt; [[1]]$result[[8]]$outcode
+#&gt; [1] "CF24"
+#&gt; 
+#&gt; [[1]]$result[[8]]$distance
+#&gt; [1] 93.55397
+#&gt; 
+#&gt; [[1]]$result[[8]]$parliamentary_constituency
+#&gt; [1] "Cardiff South and Penarth"
+#&gt; 
+#&gt; [[1]]$result[[8]]$admin_district
+#&gt; [1] "Cardiff"
+#&gt; 
+#&gt; [[1]]$result[[8]]$parish
+#&gt; [1] "Splott"
+#&gt; 
+#&gt; [[1]]$result[[8]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[8]]$admin_ward
+#&gt; [1] "Splott"
+#&gt; 
+#&gt; [[1]]$result[[8]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$result[[8]]$ccg
+#&gt; [1] "Cardiff and Vale University Health Board"
+#&gt; 
+#&gt; [[1]]$result[[8]]$nuts
+#&gt; [1] "Cardiff and Vale of Glamorgan"
+#&gt; 
+#&gt; [[1]]$result[[8]]$codes
+#&gt; [[1]]$result[[8]]$codes$admin_district
+#&gt; [1] "W06000015"
+#&gt; 
+#&gt; [[1]]$result[[8]]$codes$admin_county
+#&gt; [1] "W99999999"
+#&gt; 
+#&gt; [[1]]$result[[8]]$codes$admin_ward
+#&gt; [1] "W05000879"
+#&gt; 
+#&gt; [[1]]$result[[8]]$codes$parish
+#&gt; [1] "W04001005"
+#&gt; 
+#&gt; [[1]]$result[[8]]$codes$parliamentary_constituency
+#&gt; [1] "W07000080"
+#&gt; 
+#&gt; [[1]]$result[[8]]$codes$ccg
+#&gt; [1] "W11000029"
+#&gt; 
+#&gt; [[1]]$result[[8]]$codes$ced
+#&gt; [1] "W99999999"
+#&gt; 
+#&gt; [[1]]$result[[8]]$codes$nuts
+#&gt; [1] "UKL22"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[2]]
+#&gt; [[2]]$query
+#&gt; [[2]]$query$longitude
+#&gt; [1] -1.129358
+#&gt; 
+#&gt; [[2]]$query$latitude
+#&gt; [1] 50.71864
+#&gt; 
+#&gt; [[2]]$query$limit
+#&gt; [1] 100
+#&gt; 
+#&gt; [[2]]$query$radius
+#&gt; [1] 500
+#&gt; 
+#&gt; 
+#&gt; [[2]]$result
+#&gt; [[2]]$result[[1]]
+#&gt; [[2]]$result[[1]]$postcode
+#&gt; [1] "PO33 1PS"
+#&gt; 
+#&gt; [[2]]$result[[1]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]$result[[1]]$eastings
+#&gt; [1] 461563
+#&gt; 
+#&gt; [[2]]$result[[1]]$northings
+#&gt; [1] 91382
+#&gt; 
+#&gt; [[2]]$result[[1]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$result[[1]]$nhs_ha
+#&gt; [1] "South Central"
+#&gt; 
+#&gt; [[2]]$result[[1]]$longitude
+#&gt; [1] -1.129298
+#&gt; 
+#&gt; [[2]]$result[[1]]$latitude
+#&gt; [1] 50.71881
+#&gt; 
+#&gt; [[2]]$result[[1]]$european_electoral_region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[1]]$primary_care_trust
+#&gt; [1] "Isle of Wight National Health Service"
+#&gt; 
+#&gt; [[2]]$result[[1]]$region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[1]]$lsoa
+#&gt; [1] "Isle of Wight 010D"
+#&gt; 
+#&gt; [[2]]$result[[1]]$msoa
+#&gt; [1] "Isle of Wight 010"
+#&gt; 
+#&gt; [[2]]$result[[1]]$incode
+#&gt; [1] "1PS"
+#&gt; 
+#&gt; [[2]]$result[[1]]$outcode
+#&gt; [1] "PO33"
+#&gt; 
+#&gt; [[2]]$result[[1]]$distance
+#&gt; [1] 20.17405
+#&gt; 
+#&gt; [[2]]$result[[1]]$parliamentary_constituency
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[1]]$admin_district
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[1]]$parish
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[1]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[1]]$admin_ward
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[1]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[1]]$ccg
+#&gt; [1] "NHS Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[1]]$nuts
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[1]]$codes
+#&gt; [[2]]$result[[1]]$codes$admin_district
+#&gt; [1] "E06000046"
+#&gt; 
+#&gt; [[2]]$result[[1]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[1]]$codes$admin_ward
+#&gt; [1] "E05008496"
+#&gt; 
+#&gt; [[2]]$result[[1]]$codes$parish
+#&gt; [1] "E04001306"
+#&gt; 
+#&gt; [[2]]$result[[1]]$codes$parliamentary_constituency
+#&gt; [1] "E14000762"
+#&gt; 
+#&gt; [[2]]$result[[1]]$codes$ccg
+#&gt; [1] "E38000087"
+#&gt; 
+#&gt; [[2]]$result[[1]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[1]]$codes$nuts
+#&gt; [1] "UKJ34"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[2]]$result[[2]]
+#&gt; [[2]]$result[[2]]$postcode
+#&gt; [1] "PO33 1PT"
+#&gt; 
+#&gt; [[2]]$result[[2]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]$result[[2]]$eastings
+#&gt; [1] 461622
+#&gt; 
+#&gt; [[2]]$result[[2]]$northings
+#&gt; [1] 91356
+#&gt; 
+#&gt; [[2]]$result[[2]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$result[[2]]$nhs_ha
+#&gt; [1] "South Central"
+#&gt; 
+#&gt; [[2]]$result[[2]]$longitude
+#&gt; [1] -1.128467
+#&gt; 
+#&gt; [[2]]$result[[2]]$latitude
+#&gt; [1] 50.71857
+#&gt; 
+#&gt; [[2]]$result[[2]]$european_electoral_region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[2]]$primary_care_trust
+#&gt; [1] "Isle of Wight National Health Service"
+#&gt; 
+#&gt; [[2]]$result[[2]]$region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[2]]$lsoa
+#&gt; [1] "Isle of Wight 010D"
+#&gt; 
+#&gt; [[2]]$result[[2]]$msoa
+#&gt; [1] "Isle of Wight 010"
+#&gt; 
+#&gt; [[2]]$result[[2]]$incode
+#&gt; [1] "1PT"
+#&gt; 
+#&gt; [[2]]$result[[2]]$outcode
+#&gt; [1] "PO33"
+#&gt; 
+#&gt; [[2]]$result[[2]]$distance
+#&gt; [1] 63.31111
+#&gt; 
+#&gt; [[2]]$result[[2]]$parliamentary_constituency
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[2]]$admin_district
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[2]]$parish
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[2]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[2]]$admin_ward
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[2]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[2]]$ccg
+#&gt; [1] "NHS Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[2]]$nuts
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[2]]$codes
+#&gt; [[2]]$result[[2]]$codes$admin_district
+#&gt; [1] "E06000046"
+#&gt; 
+#&gt; [[2]]$result[[2]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[2]]$codes$admin_ward
+#&gt; [1] "E05008496"
+#&gt; 
+#&gt; [[2]]$result[[2]]$codes$parish
+#&gt; [1] "E04001306"
+#&gt; 
+#&gt; [[2]]$result[[2]]$codes$parliamentary_constituency
+#&gt; [1] "E14000762"
+#&gt; 
+#&gt; [[2]]$result[[2]]$codes$ccg
+#&gt; [1] "E38000087"
+#&gt; 
+#&gt; [[2]]$result[[2]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[2]]$codes$nuts
+#&gt; [1] "UKJ34"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[2]]$result[[3]]
+#&gt; [[2]]$result[[3]]$postcode
+#&gt; [1] "PO33 1PX"
+#&gt; 
+#&gt; [[2]]$result[[3]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]$result[[3]]$eastings
+#&gt; [1] 461716
+#&gt; 
+#&gt; [[2]]$result[[3]]$northings
+#&gt; [1] 91281
+#&gt; 
+#&gt; [[2]]$result[[3]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$result[[3]]$nhs_ha
+#&gt; [1] "South Central"
+#&gt; 
+#&gt; [[2]]$result[[3]]$longitude
+#&gt; [1] -1.127136
+#&gt; 
+#&gt; [[2]]$result[[3]]$latitude
+#&gt; [1] 50.71788
+#&gt; 
+#&gt; [[2]]$result[[3]]$european_electoral_region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[3]]$primary_care_trust
+#&gt; [1] "Isle of Wight National Health Service"
+#&gt; 
+#&gt; [[2]]$result[[3]]$region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[3]]$lsoa
+#&gt; [1] "Isle of Wight 010D"
+#&gt; 
+#&gt; [[2]]$result[[3]]$msoa
+#&gt; [1] "Isle of Wight 010"
+#&gt; 
+#&gt; [[2]]$result[[3]]$incode
+#&gt; [1] "1PX"
+#&gt; 
+#&gt; [[2]]$result[[3]]$outcode
+#&gt; [1] "PO33"
+#&gt; 
+#&gt; [[2]]$result[[3]]$distance
+#&gt; [1] 178.1283
+#&gt; 
+#&gt; [[2]]$result[[3]]$parliamentary_constituency
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[3]]$admin_district
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[3]]$parish
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[3]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[3]]$admin_ward
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[3]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[3]]$ccg
+#&gt; [1] "NHS Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[3]]$nuts
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[3]]$codes
+#&gt; [[2]]$result[[3]]$codes$admin_district
+#&gt; [1] "E06000046"
+#&gt; 
+#&gt; [[2]]$result[[3]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[3]]$codes$admin_ward
+#&gt; [1] "E05008496"
+#&gt; 
+#&gt; [[2]]$result[[3]]$codes$parish
+#&gt; [1] "E04001306"
+#&gt; 
+#&gt; [[2]]$result[[3]]$codes$parliamentary_constituency
+#&gt; [1] "E14000762"
+#&gt; 
+#&gt; [[2]]$result[[3]]$codes$ccg
+#&gt; [1] "E38000087"
+#&gt; 
+#&gt; [[2]]$result[[3]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[3]]$codes$nuts
+#&gt; [1] "UKJ34"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[2]]$result[[4]]
+#&gt; [[2]]$result[[4]]$postcode
+#&gt; [1] "PO33 1QB"
+#&gt; 
+#&gt; [[2]]$result[[4]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]$result[[4]]$eastings
+#&gt; [1] 461528
+#&gt; 
+#&gt; [[2]]$result[[4]]$northings
+#&gt; [1] 91185
+#&gt; 
+#&gt; [[2]]$result[[4]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$result[[4]]$nhs_ha
+#&gt; [1] "South Central"
+#&gt; 
+#&gt; [[2]]$result[[4]]$longitude
+#&gt; [1] -1.129826
+#&gt; 
+#&gt; [[2]]$result[[4]]$latitude
+#&gt; [1] 50.71705
+#&gt; 
+#&gt; [[2]]$result[[4]]$european_electoral_region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[4]]$primary_care_trust
+#&gt; [1] "Isle of Wight National Health Service"
+#&gt; 
+#&gt; [[2]]$result[[4]]$region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[4]]$lsoa
+#&gt; [1] "Isle of Wight 010D"
+#&gt; 
+#&gt; [[2]]$result[[4]]$msoa
+#&gt; [1] "Isle of Wight 010"
+#&gt; 
+#&gt; [[2]]$result[[4]]$incode
+#&gt; [1] "1QB"
+#&gt; 
+#&gt; [[2]]$result[[4]]$outcode
+#&gt; [1] "PO33"
+#&gt; 
+#&gt; [[2]]$result[[4]]$distance
+#&gt; [1] 179.9043
+#&gt; 
+#&gt; [[2]]$result[[4]]$parliamentary_constituency
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[4]]$admin_district
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[4]]$parish
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[4]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[4]]$admin_ward
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[4]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[4]]$ccg
+#&gt; [1] "NHS Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[4]]$nuts
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[4]]$codes
+#&gt; [[2]]$result[[4]]$codes$admin_district
+#&gt; [1] "E06000046"
+#&gt; 
+#&gt; [[2]]$result[[4]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[4]]$codes$admin_ward
+#&gt; [1] "E05008496"
+#&gt; 
+#&gt; [[2]]$result[[4]]$codes$parish
+#&gt; [1] "E04001306"
+#&gt; 
+#&gt; [[2]]$result[[4]]$codes$parliamentary_constituency
+#&gt; [1] "E14000762"
+#&gt; 
+#&gt; [[2]]$result[[4]]$codes$ccg
+#&gt; [1] "E38000087"
+#&gt; 
+#&gt; [[2]]$result[[4]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[4]]$codes$nuts
+#&gt; [1] "UKJ34"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[2]]$result[[5]]
+#&gt; [[2]]$result[[5]]$postcode
+#&gt; [1] "PO33 1QD"
+#&gt; 
+#&gt; [[2]]$result[[5]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]$result[[5]]$eastings
+#&gt; [1] 461667
+#&gt; 
+#&gt; [[2]]$result[[5]]$northings
+#&gt; [1] 91204
+#&gt; 
+#&gt; [[2]]$result[[5]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$result[[5]]$nhs_ha
+#&gt; [1] "South Central"
+#&gt; 
+#&gt; [[2]]$result[[5]]$longitude
+#&gt; [1] -1.127843
+#&gt; 
+#&gt; [[2]]$result[[5]]$latitude
+#&gt; [1] 50.71719
+#&gt; 
+#&gt; [[2]]$result[[5]]$european_electoral_region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[5]]$primary_care_trust
+#&gt; [1] "Isle of Wight National Health Service"
+#&gt; 
+#&gt; [[2]]$result[[5]]$region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[5]]$lsoa
+#&gt; [1] "Isle of Wight 010D"
+#&gt; 
+#&gt; [[2]]$result[[5]]$msoa
+#&gt; [1] "Isle of Wight 010"
+#&gt; 
+#&gt; [[2]]$result[[5]]$incode
+#&gt; [1] "1QD"
+#&gt; 
+#&gt; [[2]]$result[[5]]$outcode
+#&gt; [1] "PO33"
+#&gt; 
+#&gt; [[2]]$result[[5]]$distance
+#&gt; [1] 193.071
+#&gt; 
+#&gt; [[2]]$result[[5]]$parliamentary_constituency
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[5]]$admin_district
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[5]]$parish
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[5]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[5]]$admin_ward
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[5]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[5]]$ccg
+#&gt; [1] "NHS Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[5]]$nuts
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[5]]$codes
+#&gt; [[2]]$result[[5]]$codes$admin_district
+#&gt; [1] "E06000046"
+#&gt; 
+#&gt; [[2]]$result[[5]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[5]]$codes$admin_ward
+#&gt; [1] "E05008496"
+#&gt; 
+#&gt; [[2]]$result[[5]]$codes$parish
+#&gt; [1] "E04001306"
+#&gt; 
+#&gt; [[2]]$result[[5]]$codes$parliamentary_constituency
+#&gt; [1] "E14000762"
+#&gt; 
+#&gt; [[2]]$result[[5]]$codes$ccg
+#&gt; [1] "E38000087"
+#&gt; 
+#&gt; [[2]]$result[[5]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[5]]$codes$nuts
+#&gt; [1] "UKJ34"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[2]]$result[[6]]
+#&gt; [[2]]$result[[6]]$postcode
+#&gt; [1] "PO33 1PU"
+#&gt; 
+#&gt; [[2]]$result[[6]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]$result[[6]]$eastings
+#&gt; [1] 461794
+#&gt; 
+#&gt; [[2]]$result[[6]]$northings
+#&gt; [1] 91346
+#&gt; 
+#&gt; [[2]]$result[[6]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$result[[6]]$nhs_ha
+#&gt; [1] "South Central"
+#&gt; 
+#&gt; [[2]]$result[[6]]$longitude
+#&gt; [1] -1.126032
+#&gt; 
+#&gt; [[2]]$result[[6]]$latitude
+#&gt; [1] 50.71847
+#&gt; 
+#&gt; [[2]]$result[[6]]$european_electoral_region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[6]]$primary_care_trust
+#&gt; [1] "Isle of Wight National Health Service"
+#&gt; 
+#&gt; [[2]]$result[[6]]$region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[6]]$lsoa
+#&gt; [1] "Isle of Wight 010D"
+#&gt; 
+#&gt; [[2]]$result[[6]]$msoa
+#&gt; [1] "Isle of Wight 010"
+#&gt; 
+#&gt; [[2]]$result[[6]]$incode
+#&gt; [1] "1PU"
+#&gt; 
+#&gt; [[2]]$result[[6]]$outcode
+#&gt; [1] "PO33"
+#&gt; 
+#&gt; [[2]]$result[[6]]$distance
+#&gt; [1] 235.6555
+#&gt; 
+#&gt; [[2]]$result[[6]]$parliamentary_constituency
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[6]]$admin_district
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[6]]$parish
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[6]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[6]]$admin_ward
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[6]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[6]]$ccg
+#&gt; [1] "NHS Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[6]]$nuts
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[6]]$codes
+#&gt; [[2]]$result[[6]]$codes$admin_district
+#&gt; [1] "E06000046"
+#&gt; 
+#&gt; [[2]]$result[[6]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[6]]$codes$admin_ward
+#&gt; [1] "E05008496"
+#&gt; 
+#&gt; [[2]]$result[[6]]$codes$parish
+#&gt; [1] "E04001306"
+#&gt; 
+#&gt; [[2]]$result[[6]]$codes$parliamentary_constituency
+#&gt; [1] "E14000762"
+#&gt; 
+#&gt; [[2]]$result[[6]]$codes$ccg
+#&gt; [1] "E38000087"
+#&gt; 
+#&gt; [[2]]$result[[6]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[6]]$codes$nuts
+#&gt; [1] "UKJ34"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[2]]$result[[7]]
+#&gt; [[2]]$result[[7]]$postcode
+#&gt; [1] "PO33 1PZ"
+#&gt; 
+#&gt; [[2]]$result[[7]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]$result[[7]]$eastings
+#&gt; [1] 461662
+#&gt; 
+#&gt; [[2]]$result[[7]]$northings
+#&gt; [1] 91099
+#&gt; 
+#&gt; [[2]]$result[[7]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$result[[7]]$nhs_ha
+#&gt; [1] "South Central"
+#&gt; 
+#&gt; [[2]]$result[[7]]$longitude
+#&gt; [1] -1.127932
+#&gt; 
+#&gt; [[2]]$result[[7]]$latitude
+#&gt; [1] 50.71625
+#&gt; 
+#&gt; [[2]]$result[[7]]$european_electoral_region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[7]]$primary_care_trust
+#&gt; [1] "Isle of Wight National Health Service"
+#&gt; 
+#&gt; [[2]]$result[[7]]$region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[7]]$lsoa
+#&gt; [1] "Isle of Wight 010D"
+#&gt; 
+#&gt; [[2]]$result[[7]]$msoa
+#&gt; [1] "Isle of Wight 010"
+#&gt; 
+#&gt; [[2]]$result[[7]]$incode
+#&gt; [1] "1PZ"
+#&gt; 
+#&gt; [[2]]$result[[7]]$outcode
+#&gt; [1] "PO33"
+#&gt; 
+#&gt; [[2]]$result[[7]]$distance
+#&gt; [1] 284.1703
+#&gt; 
+#&gt; [[2]]$result[[7]]$parliamentary_constituency
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[7]]$admin_district
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[7]]$parish
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[7]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[7]]$admin_ward
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[7]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[7]]$ccg
+#&gt; [1] "NHS Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[7]]$nuts
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[7]]$codes
+#&gt; [[2]]$result[[7]]$codes$admin_district
+#&gt; [1] "E06000046"
+#&gt; 
+#&gt; [[2]]$result[[7]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[7]]$codes$admin_ward
+#&gt; [1] "E05008496"
+#&gt; 
+#&gt; [[2]]$result[[7]]$codes$parish
+#&gt; [1] "E04001306"
+#&gt; 
+#&gt; [[2]]$result[[7]]$codes$parliamentary_constituency
+#&gt; [1] "E14000762"
+#&gt; 
+#&gt; [[2]]$result[[7]]$codes$ccg
+#&gt; [1] "E38000087"
+#&gt; 
+#&gt; [[2]]$result[[7]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[7]]$codes$nuts
+#&gt; [1] "UKJ34"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[2]]$result[[8]]
+#&gt; [[2]]$result[[8]]$postcode
+#&gt; [1] "PO33 1QR"
+#&gt; 
+#&gt; [[2]]$result[[8]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]$result[[8]]$eastings
+#&gt; [1] 461800
+#&gt; 
+#&gt; [[2]]$result[[8]]$northings
+#&gt; [1] 91043
+#&gt; 
+#&gt; [[2]]$result[[8]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$result[[8]]$nhs_ha
+#&gt; [1] "South Central"
+#&gt; 
+#&gt; [[2]]$result[[8]]$longitude
+#&gt; [1] -1.125998
+#&gt; 
+#&gt; [[2]]$result[[8]]$latitude
+#&gt; [1] 50.71574
+#&gt; 
+#&gt; [[2]]$result[[8]]$european_electoral_region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[8]]$primary_care_trust
+#&gt; [1] "Isle of Wight National Health Service"
+#&gt; 
+#&gt; [[2]]$result[[8]]$region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[8]]$lsoa
+#&gt; [1] "Isle of Wight 010D"
+#&gt; 
+#&gt; [[2]]$result[[8]]$msoa
+#&gt; [1] "Isle of Wight 010"
+#&gt; 
+#&gt; [[2]]$result[[8]]$incode
+#&gt; [1] "1QR"
+#&gt; 
+#&gt; [[2]]$result[[8]]$outcode
+#&gt; [1] "PO33"
+#&gt; 
+#&gt; [[2]]$result[[8]]$distance
+#&gt; [1] 400.0937
+#&gt; 
+#&gt; [[2]]$result[[8]]$parliamentary_constituency
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[8]]$admin_district
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[8]]$parish
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[8]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[8]]$admin_ward
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[8]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[8]]$ccg
+#&gt; [1] "NHS Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[8]]$nuts
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[8]]$codes
+#&gt; [[2]]$result[[8]]$codes$admin_district
+#&gt; [1] "E06000046"
+#&gt; 
+#&gt; [[2]]$result[[8]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[8]]$codes$admin_ward
+#&gt; [1] "E05008496"
+#&gt; 
+#&gt; [[2]]$result[[8]]$codes$parish
+#&gt; [1] "E04001306"
+#&gt; 
+#&gt; [[2]]$result[[8]]$codes$parliamentary_constituency
+#&gt; [1] "E14000762"
+#&gt; 
+#&gt; [[2]]$result[[8]]$codes$ccg
+#&gt; [1] "E38000087"
+#&gt; 
+#&gt; [[2]]$result[[8]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[8]]$codes$nuts
+#&gt; [1] "UKJ34"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[2]]$result[[9]]
+#&gt; [[2]]$result[[9]]$postcode
+#&gt; [1] "PO33 1PB"
+#&gt; 
+#&gt; [[2]]$result[[9]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]$result[[9]]$eastings
+#&gt; [1] 461248
+#&gt; 
+#&gt; [[2]]$result[[9]]$northings
+#&gt; [1] 91624
+#&gt; 
+#&gt; [[2]]$result[[9]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$result[[9]]$nhs_ha
+#&gt; [1] "South Central"
+#&gt; 
+#&gt; [[2]]$result[[9]]$longitude
+#&gt; [1] -1.133719
+#&gt; 
+#&gt; [[2]]$result[[9]]$latitude
+#&gt; [1] 50.72102
+#&gt; 
+#&gt; [[2]]$result[[9]]$european_electoral_region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[9]]$primary_care_trust
+#&gt; [1] "Isle of Wight National Health Service"
+#&gt; 
+#&gt; [[2]]$result[[9]]$region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[9]]$lsoa
+#&gt; [1] "Isle of Wight 010D"
+#&gt; 
+#&gt; [[2]]$result[[9]]$msoa
+#&gt; [1] "Isle of Wight 010"
+#&gt; 
+#&gt; [[2]]$result[[9]]$incode
+#&gt; [1] "1PB"
+#&gt; 
+#&gt; [[2]]$result[[9]]$outcode
+#&gt; [1] "PO33"
+#&gt; 
+#&gt; [[2]]$result[[9]]$distance
+#&gt; [1] 406.5884
+#&gt; 
+#&gt; [[2]]$result[[9]]$parliamentary_constituency
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[9]]$admin_district
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[9]]$parish
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[9]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[9]]$admin_ward
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[9]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[9]]$ccg
+#&gt; [1] "NHS Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[9]]$nuts
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[9]]$codes
+#&gt; [[2]]$result[[9]]$codes$admin_district
+#&gt; [1] "E06000046"
+#&gt; 
+#&gt; [[2]]$result[[9]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[9]]$codes$admin_ward
+#&gt; [1] "E05008496"
+#&gt; 
+#&gt; [[2]]$result[[9]]$codes$parish
+#&gt; [1] "E04001306"
+#&gt; 
+#&gt; [[2]]$result[[9]]$codes$parliamentary_constituency
+#&gt; [1] "E14000762"
+#&gt; 
+#&gt; [[2]]$result[[9]]$codes$ccg
+#&gt; [1] "E38000087"
+#&gt; 
+#&gt; [[2]]$result[[9]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[9]]$codes$nuts
+#&gt; [1] "UKJ34"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[2]]$result[[10]]
+#&gt; [[2]]$result[[10]]$postcode
+#&gt; [1] "PO33 1PR"
+#&gt; 
+#&gt; [[2]]$result[[10]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]$result[[10]]$eastings
+#&gt; [1] 461285
+#&gt; 
+#&gt; [[2]]$result[[10]]$northings
+#&gt; [1] 91676
+#&gt; 
+#&gt; [[2]]$result[[10]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$result[[10]]$nhs_ha
+#&gt; [1] "South Central"
+#&gt; 
+#&gt; [[2]]$result[[10]]$longitude
+#&gt; [1] -1.133187
+#&gt; 
+#&gt; [[2]]$result[[10]]$latitude
+#&gt; [1] 50.72149
+#&gt; 
+#&gt; [[2]]$result[[10]]$european_electoral_region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[10]]$primary_care_trust
+#&gt; [1] "Isle of Wight National Health Service"
+#&gt; 
+#&gt; [[2]]$result[[10]]$region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[10]]$lsoa
+#&gt; [1] "Isle of Wight 010D"
+#&gt; 
+#&gt; [[2]]$result[[10]]$msoa
+#&gt; [1] "Isle of Wight 010"
+#&gt; 
+#&gt; [[2]]$result[[10]]$incode
+#&gt; [1] "1PR"
+#&gt; 
+#&gt; [[2]]$result[[10]]$outcode
+#&gt; [1] "PO33"
+#&gt; 
+#&gt; [[2]]$result[[10]]$distance
+#&gt; [1] 416.7166
+#&gt; 
+#&gt; [[2]]$result[[10]]$parliamentary_constituency
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[10]]$admin_district
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[10]]$parish
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[10]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[10]]$admin_ward
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[10]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[10]]$ccg
+#&gt; [1] "NHS Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[10]]$nuts
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[10]]$codes
+#&gt; [[2]]$result[[10]]$codes$admin_district
+#&gt; [1] "E06000046"
+#&gt; 
+#&gt; [[2]]$result[[10]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[10]]$codes$admin_ward
+#&gt; [1] "E05008496"
+#&gt; 
+#&gt; [[2]]$result[[10]]$codes$parish
+#&gt; [1] "E04001306"
+#&gt; 
+#&gt; [[2]]$result[[10]]$codes$parliamentary_constituency
+#&gt; [1] "E14000762"
+#&gt; 
+#&gt; [[2]]$result[[10]]$codes$ccg
+#&gt; [1] "E38000087"
+#&gt; 
+#&gt; [[2]]$result[[10]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[10]]$codes$nuts
+#&gt; [1] "UKJ34"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[2]]$result[[11]]
+#&gt; [[2]]$result[[11]]$postcode
+#&gt; [1] "PO33 1FS"
+#&gt; 
+#&gt; [[2]]$result[[11]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]$result[[11]]$eastings
+#&gt; [1] 461957
+#&gt; 
+#&gt; [[2]]$result[[11]]$northings
+#&gt; [1] 91209
+#&gt; 
+#&gt; [[2]]$result[[11]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$result[[11]]$nhs_ha
+#&gt; [1] "South Central"
+#&gt; 
+#&gt; [[2]]$result[[11]]$longitude
+#&gt; [1] -1.123735
+#&gt; 
+#&gt; [[2]]$result[[11]]$latitude
+#&gt; [1] 50.7172
+#&gt; 
+#&gt; [[2]]$result[[11]]$european_electoral_region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[11]]$primary_care_trust
+#&gt; [1] "Isle of Wight National Health Service"
+#&gt; 
+#&gt; [[2]]$result[[11]]$region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[11]]$lsoa
+#&gt; [1] "Isle of Wight 010D"
+#&gt; 
+#&gt; [[2]]$result[[11]]$msoa
+#&gt; [1] "Isle of Wight 010"
+#&gt; 
+#&gt; [[2]]$result[[11]]$incode
+#&gt; [1] "1FS"
+#&gt; 
+#&gt; [[2]]$result[[11]]$outcode
+#&gt; [1] "PO33"
+#&gt; 
+#&gt; [[2]]$result[[11]]$distance
+#&gt; [1] 427.8181
+#&gt; 
+#&gt; [[2]]$result[[11]]$parliamentary_constituency
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[11]]$admin_district
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[11]]$parish
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[11]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[11]]$admin_ward
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[11]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[11]]$ccg
+#&gt; [1] "NHS Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[11]]$nuts
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[11]]$codes
+#&gt; [[2]]$result[[11]]$codes$admin_district
+#&gt; [1] "E06000046"
+#&gt; 
+#&gt; [[2]]$result[[11]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[11]]$codes$admin_ward
+#&gt; [1] "E05008496"
+#&gt; 
+#&gt; [[2]]$result[[11]]$codes$parish
+#&gt; [1] "E04001306"
+#&gt; 
+#&gt; [[2]]$result[[11]]$codes$parliamentary_constituency
+#&gt; [1] "E14000762"
+#&gt; 
+#&gt; [[2]]$result[[11]]$codes$ccg
+#&gt; [1] "E38000087"
+#&gt; 
+#&gt; [[2]]$result[[11]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[11]]$codes$nuts
+#&gt; [1] "UKJ34"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[2]]$result[[12]]
+#&gt; [[2]]$result[[12]]$postcode
+#&gt; [1] "PO33 1PY"
+#&gt; 
+#&gt; [[2]]$result[[12]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]$result[[12]]$eastings
+#&gt; [1] 461748
+#&gt; 
+#&gt; [[2]]$result[[12]]$northings
+#&gt; [1] 90979
+#&gt; 
+#&gt; [[2]]$result[[12]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$result[[12]]$nhs_ha
+#&gt; [1] "South Central"
+#&gt; 
+#&gt; [[2]]$result[[12]]$longitude
+#&gt; [1] -1.126734
+#&gt; 
+#&gt; [[2]]$result[[12]]$latitude
+#&gt; [1] 50.71516
+#&gt; 
+#&gt; [[2]]$result[[12]]$european_electoral_region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[12]]$primary_care_trust
+#&gt; [1] "Isle of Wight National Health Service"
+#&gt; 
+#&gt; [[2]]$result[[12]]$region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[12]]$lsoa
+#&gt; [1] "Isle of Wight 010D"
+#&gt; 
+#&gt; [[2]]$result[[12]]$msoa
+#&gt; [1] "Isle of Wight 010"
+#&gt; 
+#&gt; [[2]]$result[[12]]$incode
+#&gt; [1] "1PY"
+#&gt; 
+#&gt; [[2]]$result[[12]]$outcode
+#&gt; [1] "PO33"
+#&gt; 
+#&gt; [[2]]$result[[12]]$distance
+#&gt; [1] 428.8646
+#&gt; 
+#&gt; [[2]]$result[[12]]$parliamentary_constituency
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[12]]$admin_district
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[12]]$parish
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[12]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[12]]$admin_ward
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[12]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[12]]$ccg
+#&gt; [1] "NHS Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[12]]$nuts
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[12]]$codes
+#&gt; [[2]]$result[[12]]$codes$admin_district
+#&gt; [1] "E06000046"
+#&gt; 
+#&gt; [[2]]$result[[12]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[12]]$codes$admin_ward
+#&gt; [1] "E05008496"
+#&gt; 
+#&gt; [[2]]$result[[12]]$codes$parish
+#&gt; [1] "E04001306"
+#&gt; 
+#&gt; [[2]]$result[[12]]$codes$parliamentary_constituency
+#&gt; [1] "E14000762"
+#&gt; 
+#&gt; [[2]]$result[[12]]$codes$ccg
+#&gt; [1] "E38000087"
+#&gt; 
+#&gt; [[2]]$result[[12]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[12]]$codes$nuts
+#&gt; [1] "UKJ34"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[2]]$result[[13]]
+#&gt; [[2]]$result[[13]]$postcode
+#&gt; [1] "PO33 1QP"
+#&gt; 
+#&gt; [[2]]$result[[13]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]$result[[13]]$eastings
+#&gt; [1] 461876
+#&gt; 
+#&gt; [[2]]$result[[13]]$northings
+#&gt; [1] 91040
+#&gt; 
+#&gt; [[2]]$result[[13]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$result[[13]]$nhs_ha
+#&gt; [1] "South Central"
+#&gt; 
+#&gt; [[2]]$result[[13]]$longitude
+#&gt; [1] -1.124911
+#&gt; 
+#&gt; [[2]]$result[[13]]$latitude
+#&gt; [1] 50.71569
+#&gt; 
+#&gt; [[2]]$result[[13]]$european_electoral_region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[13]]$primary_care_trust
+#&gt; [1] "Isle of Wight National Health Service"
+#&gt; 
+#&gt; [[2]]$result[[13]]$region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[13]]$lsoa
+#&gt; [1] "Isle of Wight 010D"
+#&gt; 
+#&gt; [[2]]$result[[13]]$msoa
+#&gt; [1] "Isle of Wight 010"
+#&gt; 
+#&gt; [[2]]$result[[13]]$incode
+#&gt; [1] "1QP"
+#&gt; 
+#&gt; [[2]]$result[[13]]$outcode
+#&gt; [1] "PO33"
+#&gt; 
+#&gt; [[2]]$result[[13]]$distance
+#&gt; [1] 453.569
+#&gt; 
+#&gt; [[2]]$result[[13]]$parliamentary_constituency
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[13]]$admin_district
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[13]]$parish
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[13]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[13]]$admin_ward
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[13]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[13]]$ccg
+#&gt; [1] "NHS Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[13]]$nuts
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[13]]$codes
+#&gt; [[2]]$result[[13]]$codes$admin_district
+#&gt; [1] "E06000046"
+#&gt; 
+#&gt; [[2]]$result[[13]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[13]]$codes$admin_ward
+#&gt; [1] "E05008496"
+#&gt; 
+#&gt; [[2]]$result[[13]]$codes$parish
+#&gt; [1] "E04001306"
+#&gt; 
+#&gt; [[2]]$result[[13]]$codes$parliamentary_constituency
+#&gt; [1] "E14000762"
+#&gt; 
+#&gt; [[2]]$result[[13]]$codes$ccg
+#&gt; [1] "E38000087"
+#&gt; 
+#&gt; [[2]]$result[[13]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[13]]$codes$nuts
+#&gt; [1] "UKJ34"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[2]]$result[[14]]
+#&gt; [[2]]$result[[14]]$postcode
+#&gt; [1] "PO34 5AP"
+#&gt; 
+#&gt; [[2]]$result[[14]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]$result[[14]]$eastings
+#&gt; [1] 461917
+#&gt; 
+#&gt; [[2]]$result[[14]]$northings
+#&gt; [1] 91681
+#&gt; 
+#&gt; [[2]]$result[[14]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$result[[14]]$nhs_ha
+#&gt; [1] "South Central"
+#&gt; 
+#&gt; [[2]]$result[[14]]$longitude
+#&gt; [1] -1.124234
+#&gt; 
+#&gt; [[2]]$result[[14]]$latitude
+#&gt; [1] 50.72146
+#&gt; 
+#&gt; [[2]]$result[[14]]$european_electoral_region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[14]]$primary_care_trust
+#&gt; [1] "Isle of Wight National Health Service"
+#&gt; 
+#&gt; [[2]]$result[[14]]$region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[2]]$result[[14]]$lsoa
+#&gt; [1] "Isle of Wight 010D"
+#&gt; 
+#&gt; [[2]]$result[[14]]$msoa
+#&gt; [1] "Isle of Wight 010"
+#&gt; 
+#&gt; [[2]]$result[[14]]$incode
+#&gt; [1] "5AP"
+#&gt; 
+#&gt; [[2]]$result[[14]]$outcode
+#&gt; [1] "PO34"
+#&gt; 
+#&gt; [[2]]$result[[14]]$distance
+#&gt; [1] 479.5104
+#&gt; 
+#&gt; [[2]]$result[[14]]$parliamentary_constituency
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[14]]$admin_district
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[14]]$parish
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[14]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[14]]$admin_ward
+#&gt; [1] "Nettlestone and Seaview"
+#&gt; 
+#&gt; [[2]]$result[[14]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$result[[14]]$ccg
+#&gt; [1] "NHS Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[14]]$nuts
+#&gt; [1] "Isle of Wight"
+#&gt; 
+#&gt; [[2]]$result[[14]]$codes
+#&gt; [[2]]$result[[14]]$codes$admin_district
+#&gt; [1] "E06000046"
+#&gt; 
+#&gt; [[2]]$result[[14]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[14]]$codes$admin_ward
+#&gt; [1] "E05008496"
+#&gt; 
+#&gt; [[2]]$result[[14]]$codes$parish
+#&gt; [1] "E04001306"
+#&gt; 
+#&gt; [[2]]$result[[14]]$codes$parliamentary_constituency
+#&gt; [1] "E14000762"
+#&gt; 
+#&gt; [[2]]$result[[14]]$codes$ccg
+#&gt; [1] "E38000087"
+#&gt; 
+#&gt; [[2]]$result[[14]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$result[[14]]$codes$nuts
+#&gt; [1] "UKJ34"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; </div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

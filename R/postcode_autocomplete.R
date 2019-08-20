@@ -12,7 +12,7 @@
 #' @return A data frame with suggested postcodes.
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' postcode_autocomplete("E1")
 #' postcode_autocomplete("E1", limit = 11)
 #' }

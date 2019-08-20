@@ -158,11 +158,2133 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>nearest_outcode</span>(<span class='st'>"EC1Y"</span>)
-<span class='fu'>nearest_outcode</span>(<span class='st'>"EC1Y"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>11</span>)
-<span class='fu'>nearest_outcode</span>(<span class='st'>"EC1Y"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>11</span>, <span class='kw'>radius</span> <span class='kw'>=</span> <span class='fl'>6000</span>)
-<span class='co'># }</span><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>nearest_outcode</span>(<span class='st'>"EC1Y"</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; [[1]]$outcode
+#&gt; [1] "EC1Y"
+#&gt; 
+#&gt; [[1]]$longitude
+#&gt; [1] -0.09238994
+#&gt; 
+#&gt; [[1]]$latitude
+#&gt; [1] 51.52302
+#&gt; 
+#&gt; [[1]]$northings
+#&gt; [1] 182181
+#&gt; 
+#&gt; [[1]]$eastings
+#&gt; [1] 532440
+#&gt; 
+#&gt; [[1]]$admin_district
+#&gt; [[1]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[1]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[1]]$parish
+#&gt; [[1]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[1]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[1]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[1]]$admin_ward
+#&gt; [[1]]$admin_ward[[1]]
+#&gt; [1] "Coleman Street"
+#&gt; 
+#&gt; [[1]]$admin_ward[[2]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[1]]$admin_ward[[3]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[1]]$admin_ward[[4]]
+#&gt; [1] "Cripplegate"
+#&gt; 
+#&gt; 
+#&gt; [[1]]$country
+#&gt; [[1]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[1]]$distance
+#&gt; [1] 0
+#&gt; 
+#&gt; 
+#&gt; [[2]]
+#&gt; [[2]]$outcode
+#&gt; [1] "EC2Y"
+#&gt; 
+#&gt; [[2]]$longitude
+#&gt; [1] -0.09368171
+#&gt; 
+#&gt; [[2]]$latitude
+#&gt; [1] 51.51948
+#&gt; 
+#&gt; [[2]]$northings
+#&gt; [1] 181784
+#&gt; 
+#&gt; [[2]]$eastings
+#&gt; [1] 532361
+#&gt; 
+#&gt; [[2]]$admin_district
+#&gt; [[2]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[2]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[2]]$parish
+#&gt; [[2]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[2]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[2]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[2]]$admin_ward
+#&gt; [[2]]$admin_ward[[1]]
+#&gt; [1] "Coleman Street"
+#&gt; 
+#&gt; [[2]]$admin_ward[[2]]
+#&gt; [1] "Aldersgate"
+#&gt; 
+#&gt; [[2]]$admin_ward[[3]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[2]]$admin_ward[[4]]
+#&gt; [1] "Bassishaw"
+#&gt; 
+#&gt; [[2]]$admin_ward[[5]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[2]]$admin_ward[[6]]
+#&gt; [1] "Cripplegate"
+#&gt; 
+#&gt; 
+#&gt; [[2]]$country
+#&gt; [[2]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[2]]$distance
+#&gt; [1] 404.7615
+#&gt; 
+#&gt; 
+#&gt; [[3]]
+#&gt; [[3]]$outcode
+#&gt; [1] "EC2A"
+#&gt; 
+#&gt; [[3]]$longitude
+#&gt; [1] -0.08571922
+#&gt; 
+#&gt; [[3]]$latitude
+#&gt; [1] 51.5237
+#&gt; 
+#&gt; [[3]]$northings
+#&gt; [1] 182268
+#&gt; 
+#&gt; [[3]]$eastings
+#&gt; [1] 532901
+#&gt; 
+#&gt; [[3]]$admin_district
+#&gt; [[3]]$admin_district[[1]]
+#&gt; [1] "Hackney"
+#&gt; 
+#&gt; [[3]]$admin_district[[2]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[3]]$admin_district[[3]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[3]]$parish
+#&gt; [[3]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[3]]$parish[[2]]
+#&gt; [1] "Hackney, unparished area"
+#&gt; 
+#&gt; [[3]]$parish[[3]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[3]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[3]]$admin_ward
+#&gt; [[3]]$admin_ward[[1]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[3]]$admin_ward[[2]]
+#&gt; [1] "Bishopsgate"
+#&gt; 
+#&gt; [[3]]$admin_ward[[3]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[3]]$admin_ward[[4]]
+#&gt; [1] "Hoxton East &amp; Shoreditch"
+#&gt; 
+#&gt; 
+#&gt; [[3]]$country
+#&gt; [[3]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[3]]$distance
+#&gt; [1] 469.083
+#&gt; 
+#&gt; 
+#&gt; [[4]]
+#&gt; [[4]]$outcode
+#&gt; [1] "EC1V"
+#&gt; 
+#&gt; [[4]]$longitude
+#&gt; [1] -0.09793513
+#&gt; 
+#&gt; [[4]]$latitude
+#&gt; [1] 51.52676
+#&gt; 
+#&gt; [[4]]$northings
+#&gt; [1] 182586
+#&gt; 
+#&gt; [[4]]$eastings
+#&gt; [1] 532044
+#&gt; 
+#&gt; [[4]]$admin_district
+#&gt; [[4]]$admin_district[[1]]
+#&gt; [1] "Hackney"
+#&gt; 
+#&gt; [[4]]$admin_district[[2]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$parish
+#&gt; [[4]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[4]]$parish[[2]]
+#&gt; [1] "Hackney, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[4]]$admin_ward
+#&gt; [[4]]$admin_ward[[1]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[4]]$admin_ward[[2]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[4]]$admin_ward[[3]]
+#&gt; [1] "Hoxton West"
+#&gt; 
+#&gt; [[4]]$admin_ward[[4]]
+#&gt; [1] "Hoxton East &amp; Shoreditch"
+#&gt; 
+#&gt; [[4]]$admin_ward[[5]]
+#&gt; [1] "St Peter's"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$country
+#&gt; [[4]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$distance
+#&gt; [1] 566.4977
+#&gt; 
+#&gt; 
+#&gt; [[5]]
+#&gt; [[5]]$outcode
+#&gt; [1] "EC2M"
+#&gt; 
+#&gt; [[5]]$longitude
+#&gt; [1] -0.08637105
+#&gt; 
+#&gt; [[5]]$latitude
+#&gt; [1] 51.5186
+#&gt; 
+#&gt; [[5]]$northings
+#&gt; [1] 181699
+#&gt; 
+#&gt; [[5]]$eastings
+#&gt; [1] 532870
+#&gt; 
+#&gt; [[5]]$admin_district
+#&gt; [[5]]$admin_district[[1]]
+#&gt; [1] "Hackney"
+#&gt; 
+#&gt; [[5]]$admin_district[[2]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[5]]$admin_district[[3]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; [[5]]$admin_district[[4]]
+#&gt; [1] "Tower Hamlets"
+#&gt; 
+#&gt; 
+#&gt; [[5]]$parish
+#&gt; [[5]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[5]]$parish[[2]]
+#&gt; [1] "Hackney, unparished area"
+#&gt; 
+#&gt; [[5]]$parish[[3]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; [[5]]$parish[[4]]
+#&gt; [1] "Tower Hamlets, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[5]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[5]]$admin_ward
+#&gt; [[5]]$admin_ward[[1]]
+#&gt; [1] "Coleman Street"
+#&gt; 
+#&gt; [[5]]$admin_ward[[2]]
+#&gt; [1] "Spitalfields &amp; Banglatown"
+#&gt; 
+#&gt; [[5]]$admin_ward[[3]]
+#&gt; [1] "Broad Street"
+#&gt; 
+#&gt; [[5]]$admin_ward[[4]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[5]]$admin_ward[[5]]
+#&gt; [1] "Cornhill"
+#&gt; 
+#&gt; [[5]]$admin_ward[[6]]
+#&gt; [1] "Bishopsgate"
+#&gt; 
+#&gt; [[5]]$admin_ward[[7]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[5]]$admin_ward[[8]]
+#&gt; [1] "Hoxton East &amp; Shoreditch"
+#&gt; 
+#&gt; 
+#&gt; [[5]]$country
+#&gt; [[5]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[5]]$distance
+#&gt; [1] 646.0287
+#&gt; 
+#&gt; 
+#&gt; [[6]]
+#&gt; [[6]]$outcode
+#&gt; [1] "EC1M"
+#&gt; 
+#&gt; [[6]]$longitude
+#&gt; [1] -0.102292
+#&gt; 
+#&gt; [[6]]$latitude
+#&gt; [1] 51.52135
+#&gt; 
+#&gt; [[6]]$northings
+#&gt; [1] 181976
+#&gt; 
+#&gt; [[6]]$eastings
+#&gt; [1] 531758
+#&gt; 
+#&gt; [[6]]$admin_district
+#&gt; [[6]]$admin_district[[1]]
+#&gt; [1] "Camden"
+#&gt; 
+#&gt; [[6]]$admin_district[[2]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[6]]$admin_district[[3]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[6]]$parish
+#&gt; [[6]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[6]]$parish[[2]]
+#&gt; [1] "Camden, unparished area"
+#&gt; 
+#&gt; [[6]]$parish[[3]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[6]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[6]]$admin_ward
+#&gt; [[6]]$admin_ward[[1]]
+#&gt; [1] "Farringdon Within"
+#&gt; 
+#&gt; [[6]]$admin_ward[[2]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[6]]$admin_ward[[3]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[6]]$admin_ward[[4]]
+#&gt; [1] "Holborn and Covent Garden"
+#&gt; 
+#&gt; [[6]]$admin_ward[[5]]
+#&gt; [1] "Cripplegate"
+#&gt; 
+#&gt; 
+#&gt; [[6]]$country
+#&gt; [[6]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[6]]$distance
+#&gt; [1] 712.0841
+#&gt; 
+#&gt; 
+#&gt; [[7]]
+#&gt; [[7]]$outcode
+#&gt; [1] "EC2R"
+#&gt; 
+#&gt; [[7]]$longitude
+#&gt; [1] -0.09066084
+#&gt; 
+#&gt; [[7]]$latitude
+#&gt; [1] 51.51593
+#&gt; 
+#&gt; [[7]]$northings
+#&gt; [1] 181395
+#&gt; 
+#&gt; [[7]]$eastings
+#&gt; [1] 532580
+#&gt; 
+#&gt; [[7]]$admin_district
+#&gt; [[7]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[7]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[7]]$parish
+#&gt; [[7]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[7]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[7]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[7]]$admin_ward
+#&gt; [[7]]$admin_ward[[1]]
+#&gt; [1] "Coleman Street"
+#&gt; 
+#&gt; [[7]]$admin_ward[[2]]
+#&gt; [1] "Cordwainer"
+#&gt; 
+#&gt; [[7]]$admin_ward[[3]]
+#&gt; [1] "Broad Street"
+#&gt; 
+#&gt; [[7]]$admin_ward[[4]]
+#&gt; [1] "Bassishaw"
+#&gt; 
+#&gt; [[7]]$admin_ward[[5]]
+#&gt; [1] "Walbrook"
+#&gt; 
+#&gt; [[7]]$admin_ward[[6]]
+#&gt; [1] "Cheap"
+#&gt; 
+#&gt; [[7]]$admin_ward[[7]]
+#&gt; [1] "Cornhill"
+#&gt; 
+#&gt; [[7]]$admin_ward[[8]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; 
+#&gt; [[7]]$country
+#&gt; [[7]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[7]]$distance
+#&gt; [1] 797.9023
+#&gt; 
+#&gt; 
+#&gt; [[8]]
+#&gt; [[8]]$outcode
+#&gt; [1] "EC2V"
+#&gt; 
+#&gt; [[8]]$longitude
+#&gt; [1] -0.09397254
+#&gt; 
+#&gt; [[8]]$latitude
+#&gt; [1] 51.51563
+#&gt; 
+#&gt; [[8]]$northings
+#&gt; [1] 181355
+#&gt; 
+#&gt; [[8]]$eastings
+#&gt; [1] 532351
+#&gt; 
+#&gt; [[8]]$admin_district
+#&gt; [[8]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[8]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[8]]$parish
+#&gt; [[8]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[8]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[8]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[8]]$admin_ward
+#&gt; [[8]]$admin_ward[[1]]
+#&gt; [1] "Coleman Street"
+#&gt; 
+#&gt; [[8]]$admin_ward[[2]]
+#&gt; [1] "Cordwainer"
+#&gt; 
+#&gt; [[8]]$admin_ward[[3]]
+#&gt; [1] "Aldersgate"
+#&gt; 
+#&gt; [[8]]$admin_ward[[4]]
+#&gt; [1] "Bassishaw"
+#&gt; 
+#&gt; [[8]]$admin_ward[[5]]
+#&gt; [1] "Walbrook"
+#&gt; 
+#&gt; [[8]]$admin_ward[[6]]
+#&gt; [1] "Cheap"
+#&gt; 
+#&gt; [[8]]$admin_ward[[7]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[8]]$admin_ward[[8]]
+#&gt; [1] "Bread Street"
+#&gt; 
+#&gt; 
+#&gt; [[8]]$country
+#&gt; [[8]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[8]]$distance
+#&gt; [1] 830.4732
+#&gt; 
+#&gt; 
+#&gt; [[9]]
+#&gt; [[9]]$outcode
+#&gt; [1] "EC1A"
+#&gt; 
+#&gt; [[9]]$longitude
+#&gt; [1] -0.1038349
+#&gt; 
+#&gt; [[9]]$latitude
+#&gt; [1] 51.52027
+#&gt; 
+#&gt; [[9]]$northings
+#&gt; [1] 181854
+#&gt; 
+#&gt; [[9]]$eastings
+#&gt; [1] 531654
+#&gt; 
+#&gt; [[9]]$admin_district
+#&gt; [[9]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[9]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[9]]$parish
+#&gt; [[9]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[9]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[9]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[9]]$admin_ward
+#&gt; [[9]]$admin_ward[[1]]
+#&gt; [1] "Farringdon Within"
+#&gt; 
+#&gt; [[9]]$admin_ward[[2]]
+#&gt; [1] "Aldersgate"
+#&gt; 
+#&gt; [[9]]$admin_ward[[3]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[9]]$admin_ward[[4]]
+#&gt; [1] "Cheap"
+#&gt; 
+#&gt; [[9]]$admin_ward[[5]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[9]]$admin_ward[[6]]
+#&gt; [1] "Bread Street"
+#&gt; 
+#&gt; [[9]]$admin_ward[[7]]
+#&gt; [1] "Farringdon Without"
+#&gt; 
+#&gt; 
+#&gt; [[9]]$country
+#&gt; [[9]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[9]]$distance
+#&gt; [1] 851.4385
+#&gt; 
+#&gt; 
+#&gt; [[10]]
+#&gt; [[10]]$outcode
+#&gt; [1] "EC2N"
+#&gt; 
+#&gt; [[10]]$longitude
+#&gt; [1] -0.0856444
+#&gt; 
+#&gt; [[10]]$latitude
+#&gt; [1] 51.51574
+#&gt; 
+#&gt; [[10]]$northings
+#&gt; [1] 181382
+#&gt; 
+#&gt; [[10]]$eastings
+#&gt; [1] 532929
+#&gt; 
+#&gt; [[10]]$admin_district
+#&gt; [[10]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[10]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[10]]$parish
+#&gt; [[10]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[10]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[10]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[10]]$admin_ward
+#&gt; [[10]]$admin_ward[[1]]
+#&gt; [1] "Broad Street"
+#&gt; 
+#&gt; [[10]]$admin_ward[[2]]
+#&gt; [1] "Lime Street"
+#&gt; 
+#&gt; [[10]]$admin_ward[[3]]
+#&gt; [1] "Walbrook"
+#&gt; 
+#&gt; [[10]]$admin_ward[[4]]
+#&gt; [1] "Cornhill"
+#&gt; 
+#&gt; [[10]]$admin_ward[[5]]
+#&gt; [1] "Bishopsgate"
+#&gt; 
+#&gt; [[10]]$admin_ward[[6]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; 
+#&gt; [[10]]$country
+#&gt; [[10]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[10]]$distance
+#&gt; [1] 936.4094
+#&gt; 
+#&gt; </div><div class='input'><span class='fu'>nearest_outcode</span>(<span class='st'>"EC1Y"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>11</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; [[1]]$outcode
+#&gt; [1] "EC1Y"
+#&gt; 
+#&gt; [[1]]$longitude
+#&gt; [1] -0.09238994
+#&gt; 
+#&gt; [[1]]$latitude
+#&gt; [1] 51.52302
+#&gt; 
+#&gt; [[1]]$northings
+#&gt; [1] 182181
+#&gt; 
+#&gt; [[1]]$eastings
+#&gt; [1] 532440
+#&gt; 
+#&gt; [[1]]$admin_district
+#&gt; [[1]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[1]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[1]]$parish
+#&gt; [[1]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[1]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[1]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[1]]$admin_ward
+#&gt; [[1]]$admin_ward[[1]]
+#&gt; [1] "Coleman Street"
+#&gt; 
+#&gt; [[1]]$admin_ward[[2]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[1]]$admin_ward[[3]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[1]]$admin_ward[[4]]
+#&gt; [1] "Cripplegate"
+#&gt; 
+#&gt; 
+#&gt; [[1]]$country
+#&gt; [[1]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[1]]$distance
+#&gt; [1] 0
+#&gt; 
+#&gt; 
+#&gt; [[2]]
+#&gt; [[2]]$outcode
+#&gt; [1] "EC2Y"
+#&gt; 
+#&gt; [[2]]$longitude
+#&gt; [1] -0.09368171
+#&gt; 
+#&gt; [[2]]$latitude
+#&gt; [1] 51.51948
+#&gt; 
+#&gt; [[2]]$northings
+#&gt; [1] 181784
+#&gt; 
+#&gt; [[2]]$eastings
+#&gt; [1] 532361
+#&gt; 
+#&gt; [[2]]$admin_district
+#&gt; [[2]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[2]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[2]]$parish
+#&gt; [[2]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[2]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[2]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[2]]$admin_ward
+#&gt; [[2]]$admin_ward[[1]]
+#&gt; [1] "Coleman Street"
+#&gt; 
+#&gt; [[2]]$admin_ward[[2]]
+#&gt; [1] "Aldersgate"
+#&gt; 
+#&gt; [[2]]$admin_ward[[3]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[2]]$admin_ward[[4]]
+#&gt; [1] "Bassishaw"
+#&gt; 
+#&gt; [[2]]$admin_ward[[5]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[2]]$admin_ward[[6]]
+#&gt; [1] "Cripplegate"
+#&gt; 
+#&gt; 
+#&gt; [[2]]$country
+#&gt; [[2]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[2]]$distance
+#&gt; [1] 404.7615
+#&gt; 
+#&gt; 
+#&gt; [[3]]
+#&gt; [[3]]$outcode
+#&gt; [1] "EC2A"
+#&gt; 
+#&gt; [[3]]$longitude
+#&gt; [1] -0.08571922
+#&gt; 
+#&gt; [[3]]$latitude
+#&gt; [1] 51.5237
+#&gt; 
+#&gt; [[3]]$northings
+#&gt; [1] 182268
+#&gt; 
+#&gt; [[3]]$eastings
+#&gt; [1] 532901
+#&gt; 
+#&gt; [[3]]$admin_district
+#&gt; [[3]]$admin_district[[1]]
+#&gt; [1] "Hackney"
+#&gt; 
+#&gt; [[3]]$admin_district[[2]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[3]]$admin_district[[3]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[3]]$parish
+#&gt; [[3]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[3]]$parish[[2]]
+#&gt; [1] "Hackney, unparished area"
+#&gt; 
+#&gt; [[3]]$parish[[3]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[3]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[3]]$admin_ward
+#&gt; [[3]]$admin_ward[[1]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[3]]$admin_ward[[2]]
+#&gt; [1] "Bishopsgate"
+#&gt; 
+#&gt; [[3]]$admin_ward[[3]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[3]]$admin_ward[[4]]
+#&gt; [1] "Hoxton East &amp; Shoreditch"
+#&gt; 
+#&gt; 
+#&gt; [[3]]$country
+#&gt; [[3]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[3]]$distance
+#&gt; [1] 469.083
+#&gt; 
+#&gt; 
+#&gt; [[4]]
+#&gt; [[4]]$outcode
+#&gt; [1] "EC1V"
+#&gt; 
+#&gt; [[4]]$longitude
+#&gt; [1] -0.09793513
+#&gt; 
+#&gt; [[4]]$latitude
+#&gt; [1] 51.52676
+#&gt; 
+#&gt; [[4]]$northings
+#&gt; [1] 182586
+#&gt; 
+#&gt; [[4]]$eastings
+#&gt; [1] 532044
+#&gt; 
+#&gt; [[4]]$admin_district
+#&gt; [[4]]$admin_district[[1]]
+#&gt; [1] "Hackney"
+#&gt; 
+#&gt; [[4]]$admin_district[[2]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$parish
+#&gt; [[4]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[4]]$parish[[2]]
+#&gt; [1] "Hackney, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[4]]$admin_ward
+#&gt; [[4]]$admin_ward[[1]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[4]]$admin_ward[[2]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[4]]$admin_ward[[3]]
+#&gt; [1] "Hoxton West"
+#&gt; 
+#&gt; [[4]]$admin_ward[[4]]
+#&gt; [1] "Hoxton East &amp; Shoreditch"
+#&gt; 
+#&gt; [[4]]$admin_ward[[5]]
+#&gt; [1] "St Peter's"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$country
+#&gt; [[4]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$distance
+#&gt; [1] 566.4977
+#&gt; 
+#&gt; 
+#&gt; [[5]]
+#&gt; [[5]]$outcode
+#&gt; [1] "EC2M"
+#&gt; 
+#&gt; [[5]]$longitude
+#&gt; [1] -0.08637105
+#&gt; 
+#&gt; [[5]]$latitude
+#&gt; [1] 51.5186
+#&gt; 
+#&gt; [[5]]$northings
+#&gt; [1] 181699
+#&gt; 
+#&gt; [[5]]$eastings
+#&gt; [1] 532870
+#&gt; 
+#&gt; [[5]]$admin_district
+#&gt; [[5]]$admin_district[[1]]
+#&gt; [1] "Hackney"
+#&gt; 
+#&gt; [[5]]$admin_district[[2]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[5]]$admin_district[[3]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; [[5]]$admin_district[[4]]
+#&gt; [1] "Tower Hamlets"
+#&gt; 
+#&gt; 
+#&gt; [[5]]$parish
+#&gt; [[5]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[5]]$parish[[2]]
+#&gt; [1] "Hackney, unparished area"
+#&gt; 
+#&gt; [[5]]$parish[[3]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; [[5]]$parish[[4]]
+#&gt; [1] "Tower Hamlets, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[5]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[5]]$admin_ward
+#&gt; [[5]]$admin_ward[[1]]
+#&gt; [1] "Coleman Street"
+#&gt; 
+#&gt; [[5]]$admin_ward[[2]]
+#&gt; [1] "Spitalfields &amp; Banglatown"
+#&gt; 
+#&gt; [[5]]$admin_ward[[3]]
+#&gt; [1] "Broad Street"
+#&gt; 
+#&gt; [[5]]$admin_ward[[4]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[5]]$admin_ward[[5]]
+#&gt; [1] "Cornhill"
+#&gt; 
+#&gt; [[5]]$admin_ward[[6]]
+#&gt; [1] "Bishopsgate"
+#&gt; 
+#&gt; [[5]]$admin_ward[[7]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[5]]$admin_ward[[8]]
+#&gt; [1] "Hoxton East &amp; Shoreditch"
+#&gt; 
+#&gt; 
+#&gt; [[5]]$country
+#&gt; [[5]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[5]]$distance
+#&gt; [1] 646.0287
+#&gt; 
+#&gt; 
+#&gt; [[6]]
+#&gt; [[6]]$outcode
+#&gt; [1] "EC1M"
+#&gt; 
+#&gt; [[6]]$longitude
+#&gt; [1] -0.102292
+#&gt; 
+#&gt; [[6]]$latitude
+#&gt; [1] 51.52135
+#&gt; 
+#&gt; [[6]]$northings
+#&gt; [1] 181976
+#&gt; 
+#&gt; [[6]]$eastings
+#&gt; [1] 531758
+#&gt; 
+#&gt; [[6]]$admin_district
+#&gt; [[6]]$admin_district[[1]]
+#&gt; [1] "Camden"
+#&gt; 
+#&gt; [[6]]$admin_district[[2]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[6]]$admin_district[[3]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[6]]$parish
+#&gt; [[6]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[6]]$parish[[2]]
+#&gt; [1] "Camden, unparished area"
+#&gt; 
+#&gt; [[6]]$parish[[3]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[6]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[6]]$admin_ward
+#&gt; [[6]]$admin_ward[[1]]
+#&gt; [1] "Farringdon Within"
+#&gt; 
+#&gt; [[6]]$admin_ward[[2]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[6]]$admin_ward[[3]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[6]]$admin_ward[[4]]
+#&gt; [1] "Holborn and Covent Garden"
+#&gt; 
+#&gt; [[6]]$admin_ward[[5]]
+#&gt; [1] "Cripplegate"
+#&gt; 
+#&gt; 
+#&gt; [[6]]$country
+#&gt; [[6]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[6]]$distance
+#&gt; [1] 712.0841
+#&gt; 
+#&gt; 
+#&gt; [[7]]
+#&gt; [[7]]$outcode
+#&gt; [1] "EC2R"
+#&gt; 
+#&gt; [[7]]$longitude
+#&gt; [1] -0.09066084
+#&gt; 
+#&gt; [[7]]$latitude
+#&gt; [1] 51.51593
+#&gt; 
+#&gt; [[7]]$northings
+#&gt; [1] 181395
+#&gt; 
+#&gt; [[7]]$eastings
+#&gt; [1] 532580
+#&gt; 
+#&gt; [[7]]$admin_district
+#&gt; [[7]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[7]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[7]]$parish
+#&gt; [[7]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[7]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[7]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[7]]$admin_ward
+#&gt; [[7]]$admin_ward[[1]]
+#&gt; [1] "Coleman Street"
+#&gt; 
+#&gt; [[7]]$admin_ward[[2]]
+#&gt; [1] "Cordwainer"
+#&gt; 
+#&gt; [[7]]$admin_ward[[3]]
+#&gt; [1] "Broad Street"
+#&gt; 
+#&gt; [[7]]$admin_ward[[4]]
+#&gt; [1] "Bassishaw"
+#&gt; 
+#&gt; [[7]]$admin_ward[[5]]
+#&gt; [1] "Walbrook"
+#&gt; 
+#&gt; [[7]]$admin_ward[[6]]
+#&gt; [1] "Cheap"
+#&gt; 
+#&gt; [[7]]$admin_ward[[7]]
+#&gt; [1] "Cornhill"
+#&gt; 
+#&gt; [[7]]$admin_ward[[8]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; 
+#&gt; [[7]]$country
+#&gt; [[7]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[7]]$distance
+#&gt; [1] 797.9023
+#&gt; 
+#&gt; 
+#&gt; [[8]]
+#&gt; [[8]]$outcode
+#&gt; [1] "EC2V"
+#&gt; 
+#&gt; [[8]]$longitude
+#&gt; [1] -0.09397254
+#&gt; 
+#&gt; [[8]]$latitude
+#&gt; [1] 51.51563
+#&gt; 
+#&gt; [[8]]$northings
+#&gt; [1] 181355
+#&gt; 
+#&gt; [[8]]$eastings
+#&gt; [1] 532351
+#&gt; 
+#&gt; [[8]]$admin_district
+#&gt; [[8]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[8]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[8]]$parish
+#&gt; [[8]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[8]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[8]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[8]]$admin_ward
+#&gt; [[8]]$admin_ward[[1]]
+#&gt; [1] "Coleman Street"
+#&gt; 
+#&gt; [[8]]$admin_ward[[2]]
+#&gt; [1] "Cordwainer"
+#&gt; 
+#&gt; [[8]]$admin_ward[[3]]
+#&gt; [1] "Aldersgate"
+#&gt; 
+#&gt; [[8]]$admin_ward[[4]]
+#&gt; [1] "Bassishaw"
+#&gt; 
+#&gt; [[8]]$admin_ward[[5]]
+#&gt; [1] "Walbrook"
+#&gt; 
+#&gt; [[8]]$admin_ward[[6]]
+#&gt; [1] "Cheap"
+#&gt; 
+#&gt; [[8]]$admin_ward[[7]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[8]]$admin_ward[[8]]
+#&gt; [1] "Bread Street"
+#&gt; 
+#&gt; 
+#&gt; [[8]]$country
+#&gt; [[8]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[8]]$distance
+#&gt; [1] 830.4732
+#&gt; 
+#&gt; 
+#&gt; [[9]]
+#&gt; [[9]]$outcode
+#&gt; [1] "EC1A"
+#&gt; 
+#&gt; [[9]]$longitude
+#&gt; [1] -0.1038349
+#&gt; 
+#&gt; [[9]]$latitude
+#&gt; [1] 51.52027
+#&gt; 
+#&gt; [[9]]$northings
+#&gt; [1] 181854
+#&gt; 
+#&gt; [[9]]$eastings
+#&gt; [1] 531654
+#&gt; 
+#&gt; [[9]]$admin_district
+#&gt; [[9]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[9]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[9]]$parish
+#&gt; [[9]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[9]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[9]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[9]]$admin_ward
+#&gt; [[9]]$admin_ward[[1]]
+#&gt; [1] "Farringdon Within"
+#&gt; 
+#&gt; [[9]]$admin_ward[[2]]
+#&gt; [1] "Aldersgate"
+#&gt; 
+#&gt; [[9]]$admin_ward[[3]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[9]]$admin_ward[[4]]
+#&gt; [1] "Cheap"
+#&gt; 
+#&gt; [[9]]$admin_ward[[5]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[9]]$admin_ward[[6]]
+#&gt; [1] "Bread Street"
+#&gt; 
+#&gt; [[9]]$admin_ward[[7]]
+#&gt; [1] "Farringdon Without"
+#&gt; 
+#&gt; 
+#&gt; [[9]]$country
+#&gt; [[9]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[9]]$distance
+#&gt; [1] 851.4385
+#&gt; 
+#&gt; 
+#&gt; [[10]]
+#&gt; [[10]]$outcode
+#&gt; [1] "EC2N"
+#&gt; 
+#&gt; [[10]]$longitude
+#&gt; [1] -0.0856444
+#&gt; 
+#&gt; [[10]]$latitude
+#&gt; [1] 51.51574
+#&gt; 
+#&gt; [[10]]$northings
+#&gt; [1] 181382
+#&gt; 
+#&gt; [[10]]$eastings
+#&gt; [1] 532929
+#&gt; 
+#&gt; [[10]]$admin_district
+#&gt; [[10]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[10]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[10]]$parish
+#&gt; [[10]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[10]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[10]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[10]]$admin_ward
+#&gt; [[10]]$admin_ward[[1]]
+#&gt; [1] "Broad Street"
+#&gt; 
+#&gt; [[10]]$admin_ward[[2]]
+#&gt; [1] "Lime Street"
+#&gt; 
+#&gt; [[10]]$admin_ward[[3]]
+#&gt; [1] "Walbrook"
+#&gt; 
+#&gt; [[10]]$admin_ward[[4]]
+#&gt; [1] "Cornhill"
+#&gt; 
+#&gt; [[10]]$admin_ward[[5]]
+#&gt; [1] "Bishopsgate"
+#&gt; 
+#&gt; [[10]]$admin_ward[[6]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; 
+#&gt; [[10]]$country
+#&gt; [[10]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[10]]$distance
+#&gt; [1] 936.4094
+#&gt; 
+#&gt; 
+#&gt; [[11]]
+#&gt; [[11]]$outcode
+#&gt; [1] "EC4M"
+#&gt; 
+#&gt; [[11]]$longitude
+#&gt; [1] -0.09928449
+#&gt; 
+#&gt; [[11]]$latitude
+#&gt; [1] 51.51421
+#&gt; 
+#&gt; [[11]]$northings
+#&gt; [1] 181188
+#&gt; 
+#&gt; [[11]]$eastings
+#&gt; [1] 531987
+#&gt; 
+#&gt; [[11]]$admin_district
+#&gt; [[11]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[11]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[11]]$parish
+#&gt; [[11]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[11]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[11]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[11]]$admin_ward
+#&gt; [[11]]$admin_ward[[1]]
+#&gt; [1] "Cordwainer"
+#&gt; 
+#&gt; [[11]]$admin_ward[[2]]
+#&gt; [1] "Farringdon Within"
+#&gt; 
+#&gt; [[11]]$admin_ward[[3]]
+#&gt; [1] "Castle Baynard"
+#&gt; 
+#&gt; [[11]]$admin_ward[[4]]
+#&gt; [1] "Vintry"
+#&gt; 
+#&gt; [[11]]$admin_ward[[5]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[11]]$admin_ward[[6]]
+#&gt; [1] "Bread Street"
+#&gt; 
+#&gt; 
+#&gt; [[11]]$country
+#&gt; [[11]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[11]]$distance
+#&gt; [1] 1091.185
+#&gt; 
+#&gt; </div><div class='input'><span class='fu'>nearest_outcode</span>(<span class='st'>"EC1Y"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>11</span>, <span class='kw'>radius</span> <span class='kw'>=</span> <span class='fl'>6000</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; [[1]]$outcode
+#&gt; [1] "EC1Y"
+#&gt; 
+#&gt; [[1]]$longitude
+#&gt; [1] -0.09238994
+#&gt; 
+#&gt; [[1]]$latitude
+#&gt; [1] 51.52302
+#&gt; 
+#&gt; [[1]]$northings
+#&gt; [1] 182181
+#&gt; 
+#&gt; [[1]]$eastings
+#&gt; [1] 532440
+#&gt; 
+#&gt; [[1]]$admin_district
+#&gt; [[1]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[1]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[1]]$parish
+#&gt; [[1]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[1]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[1]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[1]]$admin_ward
+#&gt; [[1]]$admin_ward[[1]]
+#&gt; [1] "Coleman Street"
+#&gt; 
+#&gt; [[1]]$admin_ward[[2]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[1]]$admin_ward[[3]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[1]]$admin_ward[[4]]
+#&gt; [1] "Cripplegate"
+#&gt; 
+#&gt; 
+#&gt; [[1]]$country
+#&gt; [[1]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[1]]$distance
+#&gt; [1] 0
+#&gt; 
+#&gt; 
+#&gt; [[2]]
+#&gt; [[2]]$outcode
+#&gt; [1] "EC2Y"
+#&gt; 
+#&gt; [[2]]$longitude
+#&gt; [1] -0.09368171
+#&gt; 
+#&gt; [[2]]$latitude
+#&gt; [1] 51.51948
+#&gt; 
+#&gt; [[2]]$northings
+#&gt; [1] 181784
+#&gt; 
+#&gt; [[2]]$eastings
+#&gt; [1] 532361
+#&gt; 
+#&gt; [[2]]$admin_district
+#&gt; [[2]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[2]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[2]]$parish
+#&gt; [[2]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[2]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[2]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[2]]$admin_ward
+#&gt; [[2]]$admin_ward[[1]]
+#&gt; [1] "Coleman Street"
+#&gt; 
+#&gt; [[2]]$admin_ward[[2]]
+#&gt; [1] "Aldersgate"
+#&gt; 
+#&gt; [[2]]$admin_ward[[3]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[2]]$admin_ward[[4]]
+#&gt; [1] "Bassishaw"
+#&gt; 
+#&gt; [[2]]$admin_ward[[5]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[2]]$admin_ward[[6]]
+#&gt; [1] "Cripplegate"
+#&gt; 
+#&gt; 
+#&gt; [[2]]$country
+#&gt; [[2]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[2]]$distance
+#&gt; [1] 404.7615
+#&gt; 
+#&gt; 
+#&gt; [[3]]
+#&gt; [[3]]$outcode
+#&gt; [1] "EC2A"
+#&gt; 
+#&gt; [[3]]$longitude
+#&gt; [1] -0.08571922
+#&gt; 
+#&gt; [[3]]$latitude
+#&gt; [1] 51.5237
+#&gt; 
+#&gt; [[3]]$northings
+#&gt; [1] 182268
+#&gt; 
+#&gt; [[3]]$eastings
+#&gt; [1] 532901
+#&gt; 
+#&gt; [[3]]$admin_district
+#&gt; [[3]]$admin_district[[1]]
+#&gt; [1] "Hackney"
+#&gt; 
+#&gt; [[3]]$admin_district[[2]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[3]]$admin_district[[3]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[3]]$parish
+#&gt; [[3]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[3]]$parish[[2]]
+#&gt; [1] "Hackney, unparished area"
+#&gt; 
+#&gt; [[3]]$parish[[3]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[3]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[3]]$admin_ward
+#&gt; [[3]]$admin_ward[[1]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[3]]$admin_ward[[2]]
+#&gt; [1] "Bishopsgate"
+#&gt; 
+#&gt; [[3]]$admin_ward[[3]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[3]]$admin_ward[[4]]
+#&gt; [1] "Hoxton East &amp; Shoreditch"
+#&gt; 
+#&gt; 
+#&gt; [[3]]$country
+#&gt; [[3]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[3]]$distance
+#&gt; [1] 469.083
+#&gt; 
+#&gt; 
+#&gt; [[4]]
+#&gt; [[4]]$outcode
+#&gt; [1] "EC1V"
+#&gt; 
+#&gt; [[4]]$longitude
+#&gt; [1] -0.09793513
+#&gt; 
+#&gt; [[4]]$latitude
+#&gt; [1] 51.52676
+#&gt; 
+#&gt; [[4]]$northings
+#&gt; [1] 182586
+#&gt; 
+#&gt; [[4]]$eastings
+#&gt; [1] 532044
+#&gt; 
+#&gt; [[4]]$admin_district
+#&gt; [[4]]$admin_district[[1]]
+#&gt; [1] "Hackney"
+#&gt; 
+#&gt; [[4]]$admin_district[[2]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$parish
+#&gt; [[4]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[4]]$parish[[2]]
+#&gt; [1] "Hackney, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[4]]$admin_ward
+#&gt; [[4]]$admin_ward[[1]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[4]]$admin_ward[[2]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[4]]$admin_ward[[3]]
+#&gt; [1] "Hoxton West"
+#&gt; 
+#&gt; [[4]]$admin_ward[[4]]
+#&gt; [1] "Hoxton East &amp; Shoreditch"
+#&gt; 
+#&gt; [[4]]$admin_ward[[5]]
+#&gt; [1] "St Peter's"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$country
+#&gt; [[4]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$distance
+#&gt; [1] 566.4977
+#&gt; 
+#&gt; 
+#&gt; [[5]]
+#&gt; [[5]]$outcode
+#&gt; [1] "EC2M"
+#&gt; 
+#&gt; [[5]]$longitude
+#&gt; [1] -0.08637105
+#&gt; 
+#&gt; [[5]]$latitude
+#&gt; [1] 51.5186
+#&gt; 
+#&gt; [[5]]$northings
+#&gt; [1] 181699
+#&gt; 
+#&gt; [[5]]$eastings
+#&gt; [1] 532870
+#&gt; 
+#&gt; [[5]]$admin_district
+#&gt; [[5]]$admin_district[[1]]
+#&gt; [1] "Hackney"
+#&gt; 
+#&gt; [[5]]$admin_district[[2]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[5]]$admin_district[[3]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; [[5]]$admin_district[[4]]
+#&gt; [1] "Tower Hamlets"
+#&gt; 
+#&gt; 
+#&gt; [[5]]$parish
+#&gt; [[5]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[5]]$parish[[2]]
+#&gt; [1] "Hackney, unparished area"
+#&gt; 
+#&gt; [[5]]$parish[[3]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; [[5]]$parish[[4]]
+#&gt; [1] "Tower Hamlets, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[5]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[5]]$admin_ward
+#&gt; [[5]]$admin_ward[[1]]
+#&gt; [1] "Coleman Street"
+#&gt; 
+#&gt; [[5]]$admin_ward[[2]]
+#&gt; [1] "Spitalfields &amp; Banglatown"
+#&gt; 
+#&gt; [[5]]$admin_ward[[3]]
+#&gt; [1] "Broad Street"
+#&gt; 
+#&gt; [[5]]$admin_ward[[4]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[5]]$admin_ward[[5]]
+#&gt; [1] "Cornhill"
+#&gt; 
+#&gt; [[5]]$admin_ward[[6]]
+#&gt; [1] "Bishopsgate"
+#&gt; 
+#&gt; [[5]]$admin_ward[[7]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[5]]$admin_ward[[8]]
+#&gt; [1] "Hoxton East &amp; Shoreditch"
+#&gt; 
+#&gt; 
+#&gt; [[5]]$country
+#&gt; [[5]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[5]]$distance
+#&gt; [1] 646.0287
+#&gt; 
+#&gt; 
+#&gt; [[6]]
+#&gt; [[6]]$outcode
+#&gt; [1] "EC1M"
+#&gt; 
+#&gt; [[6]]$longitude
+#&gt; [1] -0.102292
+#&gt; 
+#&gt; [[6]]$latitude
+#&gt; [1] 51.52135
+#&gt; 
+#&gt; [[6]]$northings
+#&gt; [1] 181976
+#&gt; 
+#&gt; [[6]]$eastings
+#&gt; [1] 531758
+#&gt; 
+#&gt; [[6]]$admin_district
+#&gt; [[6]]$admin_district[[1]]
+#&gt; [1] "Camden"
+#&gt; 
+#&gt; [[6]]$admin_district[[2]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[6]]$admin_district[[3]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[6]]$parish
+#&gt; [[6]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[6]]$parish[[2]]
+#&gt; [1] "Camden, unparished area"
+#&gt; 
+#&gt; [[6]]$parish[[3]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[6]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[6]]$admin_ward
+#&gt; [[6]]$admin_ward[[1]]
+#&gt; [1] "Farringdon Within"
+#&gt; 
+#&gt; [[6]]$admin_ward[[2]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[6]]$admin_ward[[3]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[6]]$admin_ward[[4]]
+#&gt; [1] "Holborn and Covent Garden"
+#&gt; 
+#&gt; [[6]]$admin_ward[[5]]
+#&gt; [1] "Cripplegate"
+#&gt; 
+#&gt; 
+#&gt; [[6]]$country
+#&gt; [[6]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[6]]$distance
+#&gt; [1] 712.0841
+#&gt; 
+#&gt; 
+#&gt; [[7]]
+#&gt; [[7]]$outcode
+#&gt; [1] "EC2R"
+#&gt; 
+#&gt; [[7]]$longitude
+#&gt; [1] -0.09066084
+#&gt; 
+#&gt; [[7]]$latitude
+#&gt; [1] 51.51593
+#&gt; 
+#&gt; [[7]]$northings
+#&gt; [1] 181395
+#&gt; 
+#&gt; [[7]]$eastings
+#&gt; [1] 532580
+#&gt; 
+#&gt; [[7]]$admin_district
+#&gt; [[7]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[7]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[7]]$parish
+#&gt; [[7]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[7]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[7]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[7]]$admin_ward
+#&gt; [[7]]$admin_ward[[1]]
+#&gt; [1] "Coleman Street"
+#&gt; 
+#&gt; [[7]]$admin_ward[[2]]
+#&gt; [1] "Cordwainer"
+#&gt; 
+#&gt; [[7]]$admin_ward[[3]]
+#&gt; [1] "Broad Street"
+#&gt; 
+#&gt; [[7]]$admin_ward[[4]]
+#&gt; [1] "Bassishaw"
+#&gt; 
+#&gt; [[7]]$admin_ward[[5]]
+#&gt; [1] "Walbrook"
+#&gt; 
+#&gt; [[7]]$admin_ward[[6]]
+#&gt; [1] "Cheap"
+#&gt; 
+#&gt; [[7]]$admin_ward[[7]]
+#&gt; [1] "Cornhill"
+#&gt; 
+#&gt; [[7]]$admin_ward[[8]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; 
+#&gt; [[7]]$country
+#&gt; [[7]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[7]]$distance
+#&gt; [1] 797.9023
+#&gt; 
+#&gt; 
+#&gt; [[8]]
+#&gt; [[8]]$outcode
+#&gt; [1] "EC2V"
+#&gt; 
+#&gt; [[8]]$longitude
+#&gt; [1] -0.09397254
+#&gt; 
+#&gt; [[8]]$latitude
+#&gt; [1] 51.51563
+#&gt; 
+#&gt; [[8]]$northings
+#&gt; [1] 181355
+#&gt; 
+#&gt; [[8]]$eastings
+#&gt; [1] 532351
+#&gt; 
+#&gt; [[8]]$admin_district
+#&gt; [[8]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[8]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[8]]$parish
+#&gt; [[8]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[8]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[8]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[8]]$admin_ward
+#&gt; [[8]]$admin_ward[[1]]
+#&gt; [1] "Coleman Street"
+#&gt; 
+#&gt; [[8]]$admin_ward[[2]]
+#&gt; [1] "Cordwainer"
+#&gt; 
+#&gt; [[8]]$admin_ward[[3]]
+#&gt; [1] "Aldersgate"
+#&gt; 
+#&gt; [[8]]$admin_ward[[4]]
+#&gt; [1] "Bassishaw"
+#&gt; 
+#&gt; [[8]]$admin_ward[[5]]
+#&gt; [1] "Walbrook"
+#&gt; 
+#&gt; [[8]]$admin_ward[[6]]
+#&gt; [1] "Cheap"
+#&gt; 
+#&gt; [[8]]$admin_ward[[7]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[8]]$admin_ward[[8]]
+#&gt; [1] "Bread Street"
+#&gt; 
+#&gt; 
+#&gt; [[8]]$country
+#&gt; [[8]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[8]]$distance
+#&gt; [1] 830.4732
+#&gt; 
+#&gt; 
+#&gt; [[9]]
+#&gt; [[9]]$outcode
+#&gt; [1] "EC1A"
+#&gt; 
+#&gt; [[9]]$longitude
+#&gt; [1] -0.1038349
+#&gt; 
+#&gt; [[9]]$latitude
+#&gt; [1] 51.52027
+#&gt; 
+#&gt; [[9]]$northings
+#&gt; [1] 181854
+#&gt; 
+#&gt; [[9]]$eastings
+#&gt; [1] 531654
+#&gt; 
+#&gt; [[9]]$admin_district
+#&gt; [[9]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[9]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[9]]$parish
+#&gt; [[9]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[9]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[9]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[9]]$admin_ward
+#&gt; [[9]]$admin_ward[[1]]
+#&gt; [1] "Farringdon Within"
+#&gt; 
+#&gt; [[9]]$admin_ward[[2]]
+#&gt; [1] "Aldersgate"
+#&gt; 
+#&gt; [[9]]$admin_ward[[3]]
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[9]]$admin_ward[[4]]
+#&gt; [1] "Cheap"
+#&gt; 
+#&gt; [[9]]$admin_ward[[5]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[9]]$admin_ward[[6]]
+#&gt; [1] "Bread Street"
+#&gt; 
+#&gt; [[9]]$admin_ward[[7]]
+#&gt; [1] "Farringdon Without"
+#&gt; 
+#&gt; 
+#&gt; [[9]]$country
+#&gt; [[9]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[9]]$distance
+#&gt; [1] 851.4385
+#&gt; 
+#&gt; 
+#&gt; [[10]]
+#&gt; [[10]]$outcode
+#&gt; [1] "EC2N"
+#&gt; 
+#&gt; [[10]]$longitude
+#&gt; [1] -0.0856444
+#&gt; 
+#&gt; [[10]]$latitude
+#&gt; [1] 51.51574
+#&gt; 
+#&gt; [[10]]$northings
+#&gt; [1] 181382
+#&gt; 
+#&gt; [[10]]$eastings
+#&gt; [1] 532929
+#&gt; 
+#&gt; [[10]]$admin_district
+#&gt; [[10]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[10]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[10]]$parish
+#&gt; [[10]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[10]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[10]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[10]]$admin_ward
+#&gt; [[10]]$admin_ward[[1]]
+#&gt; [1] "Broad Street"
+#&gt; 
+#&gt; [[10]]$admin_ward[[2]]
+#&gt; [1] "Lime Street"
+#&gt; 
+#&gt; [[10]]$admin_ward[[3]]
+#&gt; [1] "Walbrook"
+#&gt; 
+#&gt; [[10]]$admin_ward[[4]]
+#&gt; [1] "Cornhill"
+#&gt; 
+#&gt; [[10]]$admin_ward[[5]]
+#&gt; [1] "Bishopsgate"
+#&gt; 
+#&gt; [[10]]$admin_ward[[6]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; 
+#&gt; [[10]]$country
+#&gt; [[10]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[10]]$distance
+#&gt; [1] 936.4094
+#&gt; 
+#&gt; 
+#&gt; [[11]]
+#&gt; [[11]]$outcode
+#&gt; [1] "EC4M"
+#&gt; 
+#&gt; [[11]]$longitude
+#&gt; [1] -0.09928449
+#&gt; 
+#&gt; [[11]]$latitude
+#&gt; [1] 51.51421
+#&gt; 
+#&gt; [[11]]$northings
+#&gt; [1] 181188
+#&gt; 
+#&gt; [[11]]$eastings
+#&gt; [1] 531987
+#&gt; 
+#&gt; [[11]]$admin_district
+#&gt; [[11]]$admin_district[[1]]
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[11]]$admin_district[[2]]
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; 
+#&gt; [[11]]$parish
+#&gt; [[11]]$parish[[1]]
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[11]]$parish[[2]]
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[11]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[11]]$admin_ward
+#&gt; [[11]]$admin_ward[[1]]
+#&gt; [1] "Cordwainer"
+#&gt; 
+#&gt; [[11]]$admin_ward[[2]]
+#&gt; [1] "Farringdon Within"
+#&gt; 
+#&gt; [[11]]$admin_ward[[3]]
+#&gt; [1] "Castle Baynard"
+#&gt; 
+#&gt; [[11]]$admin_ward[[4]]
+#&gt; [1] "Vintry"
+#&gt; 
+#&gt; [[11]]$admin_ward[[5]]
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[11]]$admin_ward[[6]]
+#&gt; [1] "Bread Street"
+#&gt; 
+#&gt; 
+#&gt; [[11]]$country
+#&gt; [[11]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[11]]$distance
+#&gt; [1] 1091.185
+#&gt; 
+#&gt; </div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

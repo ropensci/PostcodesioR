@@ -23,7 +23,7 @@ Returns nearest outcodes for a given outcode.
 The search is based on the relative distance of the outcode centroid.
 }
 \examples{
-\dontrun{
+\donttest{
 nearest_outcode("EC1Y")
 nearest_outcode("EC1Y", limit = 11)
 nearest_outcode("EC1Y", limit = 11, radius = 6000)

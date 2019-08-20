@@ -13,7 +13,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' random_postcode()
 #' random_postcode("N1")
 #' }

@@ -16,7 +16,7 @@ The list of geographical properties.
 Geolocation data for the centroid of the outward code specified.
 }
 \examples{
-\dontrun{
+\donttest{
 outward_code_lookup("E1")
 }
 

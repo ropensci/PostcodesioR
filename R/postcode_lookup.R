@@ -96,7 +96,7 @@
 #' @md
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' postcode_lookup("EC1Y8LX")
 #' postcode_lookup("EC1Y 8LX") # spaces are ignored
 #' }

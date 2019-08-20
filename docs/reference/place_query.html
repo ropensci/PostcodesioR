@@ -155,10 +155,1435 @@ Defaults to 10. Needs to be less than 100.</p></td>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>place_query</span>(<span class='st'>"Hills"</span>)
-<span class='fu'>place_query</span>(<span class='st'>"Hills"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>12</span>)
-<span class='co'># }</span><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>place_query</span>(<span class='st'>"Hills"</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; [[1]]$code
+#&gt; [1] "osgb4000000074547803"
+#&gt; 
+#&gt; [[1]]$name_1
+#&gt; [1] "Red Hills"
+#&gt; 
+#&gt; [[1]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$local_type
+#&gt; [1] "Hamlet"
+#&gt; 
+#&gt; [[1]]$outcode
+#&gt; [1] "CA11"
+#&gt; 
+#&gt; [[1]]$county_unitary
+#&gt; [1] "Cumbria"
+#&gt; 
+#&gt; [[1]]$county_unitary_type
+#&gt; [1] "County"
+#&gt; 
+#&gt; [[1]]$district_borough
+#&gt; [1] "Eden"
+#&gt; 
+#&gt; [[1]]$district_borough_type
+#&gt; [1] "District"
+#&gt; 
+#&gt; [[1]]$region
+#&gt; [1] "North West"
+#&gt; 
+#&gt; [[1]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[1]]$longitude
+#&gt; [1] -2.769233
+#&gt; 
+#&gt; [[1]]$latitude
+#&gt; [1] 54.6501
+#&gt; 
+#&gt; [[1]]$eastings
+#&gt; [1] 350463
+#&gt; 
+#&gt; [[1]]$northings
+#&gt; [1] 528605
+#&gt; 
+#&gt; [[1]]$min_eastings
+#&gt; [1] 349916
+#&gt; 
+#&gt; [[1]]$min_northings
+#&gt; [1] 528349
+#&gt; 
+#&gt; [[1]]$max_eastings
+#&gt; [1] 350584
+#&gt; 
+#&gt; [[1]]$max_northings
+#&gt; [1] 528849
+#&gt; 
+#&gt; 
+#&gt; [[2]]
+#&gt; [[2]]$code
+#&gt; [1] "osgb4000000074555222"
+#&gt; 
+#&gt; [[2]]$name_1
+#&gt; [1] "Tan Hills"
+#&gt; 
+#&gt; [[2]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$local_type
+#&gt; [1] "Village"
+#&gt; 
+#&gt; [[2]]$outcode
+#&gt; [1] "DH2"
+#&gt; 
+#&gt; [[2]]$county_unitary
+#&gt; [1] "County Durham"
+#&gt; 
+#&gt; [[2]]$county_unitary_type
+#&gt; [1] "UnitaryAuthority"
+#&gt; 
+#&gt; [[2]]$district_borough
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$district_borough_type
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$region
+#&gt; [1] "North East"
+#&gt; 
+#&gt; [[2]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$longitude
+#&gt; [1] -1.597868
+#&gt; 
+#&gt; [[2]]$latitude
+#&gt; [1] 54.82239
+#&gt; 
+#&gt; [[2]]$eastings
+#&gt; [1] 425936
+#&gt; 
+#&gt; [[2]]$northings
+#&gt; [1] 547579
+#&gt; 
+#&gt; [[2]]$min_eastings
+#&gt; [1] 425721
+#&gt; 
+#&gt; [[2]]$min_northings
+#&gt; [1] 547375
+#&gt; 
+#&gt; [[2]]$max_eastings
+#&gt; [1] 426221
+#&gt; 
+#&gt; [[2]]$max_northings
+#&gt; [1] 547875
+#&gt; 
+#&gt; 
+#&gt; [[3]]
+#&gt; [[3]]$code
+#&gt; [1] "osgb4000000074574731"
+#&gt; 
+#&gt; [[3]]$name_1
+#&gt; [1] "Berwick Hills"
+#&gt; 
+#&gt; [[3]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[3]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[3]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[3]]$local_type
+#&gt; [1] "Suburban Area"
+#&gt; 
+#&gt; [[3]]$outcode
+#&gt; [1] "TS3"
+#&gt; 
+#&gt; [[3]]$county_unitary
+#&gt; [1] "Middlesbrough"
+#&gt; 
+#&gt; [[3]]$county_unitary_type
+#&gt; [1] "UnitaryAuthority"
+#&gt; 
+#&gt; [[3]]$district_borough
+#&gt; NULL
+#&gt; 
+#&gt; [[3]]$district_borough_type
+#&gt; NULL
+#&gt; 
+#&gt; [[3]]$region
+#&gt; [1] "North East"
+#&gt; 
+#&gt; [[3]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[3]]$longitude
+#&gt; [1] -1.20577
+#&gt; 
+#&gt; [[3]]$latitude
+#&gt; [1] 54.56005
+#&gt; 
+#&gt; [[3]]$eastings
+#&gt; [1] 451459
+#&gt; 
+#&gt; [[3]]$northings
+#&gt; [1] 518602
+#&gt; 
+#&gt; [[3]]$min_eastings
+#&gt; [1] 450839
+#&gt; 
+#&gt; [[3]]$min_northings
+#&gt; [1] 517640
+#&gt; 
+#&gt; [[3]]$max_eastings
+#&gt; [1] 451969
+#&gt; 
+#&gt; [[3]]$max_northings
+#&gt; [1] 519361
+#&gt; 
+#&gt; 
+#&gt; [[4]]
+#&gt; [[4]]$code
+#&gt; [1] "osgb4000000074568110"
+#&gt; 
+#&gt; [[4]]$name_1
+#&gt; [1] "Nun Hills"
+#&gt; 
+#&gt; [[4]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[4]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[4]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[4]]$local_type
+#&gt; [1] "Suburban Area"
+#&gt; 
+#&gt; [[4]]$outcode
+#&gt; [1] "OL13"
+#&gt; 
+#&gt; [[4]]$county_unitary
+#&gt; [1] "Lancashire"
+#&gt; 
+#&gt; [[4]]$county_unitary_type
+#&gt; [1] "County"
+#&gt; 
+#&gt; [[4]]$district_borough
+#&gt; [1] "Rossendale"
+#&gt; 
+#&gt; [[4]]$district_borough_type
+#&gt; [1] "District"
+#&gt; 
+#&gt; [[4]]$region
+#&gt; [1] "North West"
+#&gt; 
+#&gt; [[4]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[4]]$longitude
+#&gt; [1] -2.224568
+#&gt; 
+#&gt; [[4]]$latitude
+#&gt; [1] 53.69105
+#&gt; 
+#&gt; [[4]]$eastings
+#&gt; [1] 385268
+#&gt; 
+#&gt; [[4]]$northings
+#&gt; [1] 421645
+#&gt; 
+#&gt; [[4]]$min_eastings
+#&gt; [1] 384958
+#&gt; 
+#&gt; [[4]]$min_northings
+#&gt; [1] 421437
+#&gt; 
+#&gt; [[4]]$max_eastings
+#&gt; [1] 385465
+#&gt; 
+#&gt; [[4]]$max_northings
+#&gt; [1] 421937
+#&gt; 
+#&gt; 
+#&gt; [[5]]
+#&gt; [[5]]$code
+#&gt; [1] "osgb4000000074571332"
+#&gt; 
+#&gt; [[5]]$name_1
+#&gt; [1] "Bailey Hills"
+#&gt; 
+#&gt; [[5]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[5]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[5]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[5]]$local_type
+#&gt; [1] "Suburban Area"
+#&gt; 
+#&gt; [[5]]$outcode
+#&gt; [1] "BD16"
+#&gt; 
+#&gt; [[5]]$county_unitary
+#&gt; NULL
+#&gt; 
+#&gt; [[5]]$county_unitary_type
+#&gt; NULL
+#&gt; 
+#&gt; [[5]]$district_borough
+#&gt; [1] "Bradford"
+#&gt; 
+#&gt; [[5]]$district_borough_type
+#&gt; [1] "MetropolitanDistrict"
+#&gt; 
+#&gt; [[5]]$region
+#&gt; [1] "Yorkshire and the Humber"
+#&gt; 
+#&gt; [[5]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[5]]$longitude
+#&gt; [1] -1.841124
+#&gt; 
+#&gt; [[5]]$latitude
+#&gt; [1] 53.85213
+#&gt; 
+#&gt; [[5]]$eastings
+#&gt; [1] 410549
+#&gt; 
+#&gt; [[5]]$northings
+#&gt; [1] 439555
+#&gt; 
+#&gt; [[5]]$min_eastings
+#&gt; [1] 410241
+#&gt; 
+#&gt; [[5]]$min_northings
+#&gt; [1] 439253
+#&gt; 
+#&gt; [[5]]$max_eastings
+#&gt; [1] 410741
+#&gt; 
+#&gt; [[5]]$max_northings
+#&gt; [1] 439803
+#&gt; 
+#&gt; 
+#&gt; [[6]]
+#&gt; [[6]]$code
+#&gt; [1] "osgb4000000074569230"
+#&gt; 
+#&gt; [[6]]$name_1
+#&gt; [1] "Cross Hills"
+#&gt; 
+#&gt; [[6]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[6]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[6]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[6]]$local_type
+#&gt; [1] "Village"
+#&gt; 
+#&gt; [[6]]$outcode
+#&gt; [1] "BD20"
+#&gt; 
+#&gt; [[6]]$county_unitary
+#&gt; [1] "North Yorkshire"
+#&gt; 
+#&gt; [[6]]$county_unitary_type
+#&gt; [1] "County"
+#&gt; 
+#&gt; [[6]]$district_borough
+#&gt; [1] "Craven"
+#&gt; 
+#&gt; [[6]]$district_borough_type
+#&gt; [1] "District"
+#&gt; 
+#&gt; [[6]]$region
+#&gt; [1] "Yorkshire and the Humber"
+#&gt; 
+#&gt; [[6]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[6]]$longitude
+#&gt; [1] -1.989919
+#&gt; 
+#&gt; [[6]]$latitude
+#&gt; [1] 53.90184
+#&gt; 
+#&gt; [[6]]$eastings
+#&gt; [1] 400760
+#&gt; 
+#&gt; [[6]]$northings
+#&gt; [1] 445075
+#&gt; 
+#&gt; [[6]]$min_eastings
+#&gt; [1] 399213
+#&gt; 
+#&gt; [[6]]$min_northings
+#&gt; [1] 444398
+#&gt; 
+#&gt; [[6]]$max_eastings
+#&gt; [1] 401797
+#&gt; 
+#&gt; [[6]]$max_northings
+#&gt; [1] 445644
+#&gt; 
+#&gt; 
+#&gt; [[7]]
+#&gt; [[7]]$code
+#&gt; [1] "osgb4000000074572024"
+#&gt; 
+#&gt; [[7]]$name_1
+#&gt; [1] "Lister Hills"
+#&gt; 
+#&gt; [[7]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[7]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[7]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[7]]$local_type
+#&gt; [1] "Suburban Area"
+#&gt; 
+#&gt; [[7]]$outcode
+#&gt; [1] "BD7"
+#&gt; 
+#&gt; [[7]]$county_unitary
+#&gt; NULL
+#&gt; 
+#&gt; [[7]]$county_unitary_type
+#&gt; NULL
+#&gt; 
+#&gt; [[7]]$district_borough
+#&gt; [1] "Bradford"
+#&gt; 
+#&gt; [[7]]$district_borough_type
+#&gt; [1] "MetropolitanDistrict"
+#&gt; 
+#&gt; [[7]]$region
+#&gt; [1] "Yorkshire and the Humber"
+#&gt; 
+#&gt; [[7]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[7]]$longitude
+#&gt; [1] -1.770226
+#&gt; 
+#&gt; [[7]]$latitude
+#&gt; [1] 53.79351
+#&gt; 
+#&gt; [[7]]$eastings
+#&gt; [1] 415234
+#&gt; 
+#&gt; [[7]]$northings
+#&gt; [1] 433046
+#&gt; 
+#&gt; [[7]]$min_eastings
+#&gt; [1] 414935
+#&gt; 
+#&gt; [[7]]$min_northings
+#&gt; [1] 432878
+#&gt; 
+#&gt; [[7]]$max_eastings
+#&gt; [1] 415497
+#&gt; 
+#&gt; [[7]]$max_northings
+#&gt; [1] 433534
+#&gt; 
+#&gt; 
+#&gt; [[8]]
+#&gt; [[8]]$code
+#&gt; [1] "osgb4000000074570252"
+#&gt; 
+#&gt; [[8]]$name_1
+#&gt; [1] "Old Hills"
+#&gt; 
+#&gt; [[8]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[8]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[8]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[8]]$local_type
+#&gt; [1] "Suburban Area"
+#&gt; 
+#&gt; [[8]]$outcode
+#&gt; [1] "BD16"
+#&gt; 
+#&gt; [[8]]$county_unitary
+#&gt; NULL
+#&gt; 
+#&gt; [[8]]$county_unitary_type
+#&gt; NULL
+#&gt; 
+#&gt; [[8]]$district_borough
+#&gt; [1] "Bradford"
+#&gt; 
+#&gt; [[8]]$district_borough_type
+#&gt; [1] "MetropolitanDistrict"
+#&gt; 
+#&gt; [[8]]$region
+#&gt; [1] "Yorkshire and the Humber"
+#&gt; 
+#&gt; [[8]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[8]]$longitude
+#&gt; [1] -1.830166
+#&gt; 
+#&gt; [[8]]$latitude
+#&gt; [1] 53.84417
+#&gt; 
+#&gt; [[8]]$eastings
+#&gt; [1] 411272
+#&gt; 
+#&gt; [[8]]$northings
+#&gt; [1] 438671
+#&gt; 
+#&gt; [[8]]$min_eastings
+#&gt; [1] 411081
+#&gt; 
+#&gt; [[8]]$min_northings
+#&gt; [1] 438457
+#&gt; 
+#&gt; [[8]]$max_eastings
+#&gt; [1] 411581
+#&gt; 
+#&gt; [[8]]$max_northings
+#&gt; [1] 438957
+#&gt; 
+#&gt; 
+#&gt; [[9]]
+#&gt; [[9]]$code
+#&gt; [1] "osgb4000000074544460"
+#&gt; 
+#&gt; [[9]]$name_1
+#&gt; [1] "Wheatley Hills"
+#&gt; 
+#&gt; [[9]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[9]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[9]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[9]]$local_type
+#&gt; [1] "Suburban Area"
+#&gt; 
+#&gt; [[9]]$outcode
+#&gt; [1] "DN2"
+#&gt; 
+#&gt; [[9]]$county_unitary
+#&gt; NULL
+#&gt; 
+#&gt; [[9]]$county_unitary_type
+#&gt; NULL
+#&gt; 
+#&gt; [[9]]$district_borough
+#&gt; [1] "Doncaster"
+#&gt; 
+#&gt; [[9]]$district_borough_type
+#&gt; [1] "MetropolitanDistrict"
+#&gt; 
+#&gt; [[9]]$region
+#&gt; [1] "Yorkshire and the Humber"
+#&gt; 
+#&gt; [[9]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[9]]$longitude
+#&gt; [1] -1.100679
+#&gt; 
+#&gt; [[9]]$latitude
+#&gt; [1] 53.53897
+#&gt; 
+#&gt; [[9]]$eastings
+#&gt; [1] 459698
+#&gt; 
+#&gt; [[9]]$northings
+#&gt; [1] 405078
+#&gt; 
+#&gt; [[9]]$min_eastings
+#&gt; [1] 458941
+#&gt; 
+#&gt; [[9]]$min_northings
+#&gt; [1] 404220
+#&gt; 
+#&gt; [[9]]$max_eastings
+#&gt; [1] 460614
+#&gt; 
+#&gt; [[9]]$max_northings
+#&gt; [1] 405620
+#&gt; 
+#&gt; 
+#&gt; [[10]]
+#&gt; [[10]]$code
+#&gt; [1] "osgb4000000074567076"
+#&gt; 
+#&gt; [[10]]$name_1
+#&gt; [1] "Scotland Hills"
+#&gt; 
+#&gt; [[10]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[10]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[10]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[10]]$local_type
+#&gt; [1] "Suburban Area"
+#&gt; 
+#&gt; [[10]]$outcode
+#&gt; [1] "CT3"
+#&gt; 
+#&gt; [[10]]$county_unitary
+#&gt; [1] "Kent"
+#&gt; 
+#&gt; [[10]]$county_unitary_type
+#&gt; [1] "County"
+#&gt; 
+#&gt; [[10]]$district_borough
+#&gt; [1] "Canterbury"
+#&gt; 
+#&gt; [[10]]$district_borough_type
+#&gt; [1] "District"
+#&gt; 
+#&gt; [[10]]$region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[10]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[10]]$longitude
+#&gt; [1] 1.121609
+#&gt; 
+#&gt; [[10]]$latitude
+#&gt; [1] 51.28224
+#&gt; 
+#&gt; [[10]]$eastings
+#&gt; [1] 617790
+#&gt; 
+#&gt; [[10]]$northings
+#&gt; [1] 158306
+#&gt; 
+#&gt; [[10]]$min_eastings
+#&gt; [1] 617361
+#&gt; 
+#&gt; [[10]]$min_northings
+#&gt; [1] 157908
+#&gt; 
+#&gt; [[10]]$max_eastings
+#&gt; [1] 618249
+#&gt; 
+#&gt; [[10]]$max_northings
+#&gt; [1] 158788
+#&gt; 
+#&gt; </div><div class='input'><span class='fu'>place_query</span>(<span class='st'>"Hills"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; [[1]]$code
+#&gt; [1] "osgb4000000074547803"
+#&gt; 
+#&gt; [[1]]$name_1
+#&gt; [1] "Red Hills"
+#&gt; 
+#&gt; [[1]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$local_type
+#&gt; [1] "Hamlet"
+#&gt; 
+#&gt; [[1]]$outcode
+#&gt; [1] "CA11"
+#&gt; 
+#&gt; [[1]]$county_unitary
+#&gt; [1] "Cumbria"
+#&gt; 
+#&gt; [[1]]$county_unitary_type
+#&gt; [1] "County"
+#&gt; 
+#&gt; [[1]]$district_borough
+#&gt; [1] "Eden"
+#&gt; 
+#&gt; [[1]]$district_borough_type
+#&gt; [1] "District"
+#&gt; 
+#&gt; [[1]]$region
+#&gt; [1] "North West"
+#&gt; 
+#&gt; [[1]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[1]]$longitude
+#&gt; [1] -2.769233
+#&gt; 
+#&gt; [[1]]$latitude
+#&gt; [1] 54.6501
+#&gt; 
+#&gt; [[1]]$eastings
+#&gt; [1] 350463
+#&gt; 
+#&gt; [[1]]$northings
+#&gt; [1] 528605
+#&gt; 
+#&gt; [[1]]$min_eastings
+#&gt; [1] 349916
+#&gt; 
+#&gt; [[1]]$min_northings
+#&gt; [1] 528349
+#&gt; 
+#&gt; [[1]]$max_eastings
+#&gt; [1] 350584
+#&gt; 
+#&gt; [[1]]$max_northings
+#&gt; [1] 528849
+#&gt; 
+#&gt; 
+#&gt; [[2]]
+#&gt; [[2]]$code
+#&gt; [1] "osgb4000000074555222"
+#&gt; 
+#&gt; [[2]]$name_1
+#&gt; [1] "Tan Hills"
+#&gt; 
+#&gt; [[2]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$local_type
+#&gt; [1] "Village"
+#&gt; 
+#&gt; [[2]]$outcode
+#&gt; [1] "DH2"
+#&gt; 
+#&gt; [[2]]$county_unitary
+#&gt; [1] "County Durham"
+#&gt; 
+#&gt; [[2]]$county_unitary_type
+#&gt; [1] "UnitaryAuthority"
+#&gt; 
+#&gt; [[2]]$district_borough
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$district_borough_type
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$region
+#&gt; [1] "North East"
+#&gt; 
+#&gt; [[2]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$longitude
+#&gt; [1] -1.597868
+#&gt; 
+#&gt; [[2]]$latitude
+#&gt; [1] 54.82239
+#&gt; 
+#&gt; [[2]]$eastings
+#&gt; [1] 425936
+#&gt; 
+#&gt; [[2]]$northings
+#&gt; [1] 547579
+#&gt; 
+#&gt; [[2]]$min_eastings
+#&gt; [1] 425721
+#&gt; 
+#&gt; [[2]]$min_northings
+#&gt; [1] 547375
+#&gt; 
+#&gt; [[2]]$max_eastings
+#&gt; [1] 426221
+#&gt; 
+#&gt; [[2]]$max_northings
+#&gt; [1] 547875
+#&gt; 
+#&gt; 
+#&gt; [[3]]
+#&gt; [[3]]$code
+#&gt; [1] "osgb4000000074574731"
+#&gt; 
+#&gt; [[3]]$name_1
+#&gt; [1] "Berwick Hills"
+#&gt; 
+#&gt; [[3]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[3]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[3]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[3]]$local_type
+#&gt; [1] "Suburban Area"
+#&gt; 
+#&gt; [[3]]$outcode
+#&gt; [1] "TS3"
+#&gt; 
+#&gt; [[3]]$county_unitary
+#&gt; [1] "Middlesbrough"
+#&gt; 
+#&gt; [[3]]$county_unitary_type
+#&gt; [1] "UnitaryAuthority"
+#&gt; 
+#&gt; [[3]]$district_borough
+#&gt; NULL
+#&gt; 
+#&gt; [[3]]$district_borough_type
+#&gt; NULL
+#&gt; 
+#&gt; [[3]]$region
+#&gt; [1] "North East"
+#&gt; 
+#&gt; [[3]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[3]]$longitude
+#&gt; [1] -1.20577
+#&gt; 
+#&gt; [[3]]$latitude
+#&gt; [1] 54.56005
+#&gt; 
+#&gt; [[3]]$eastings
+#&gt; [1] 451459
+#&gt; 
+#&gt; [[3]]$northings
+#&gt; [1] 518602
+#&gt; 
+#&gt; [[3]]$min_eastings
+#&gt; [1] 450839
+#&gt; 
+#&gt; [[3]]$min_northings
+#&gt; [1] 517640
+#&gt; 
+#&gt; [[3]]$max_eastings
+#&gt; [1] 451969
+#&gt; 
+#&gt; [[3]]$max_northings
+#&gt; [1] 519361
+#&gt; 
+#&gt; 
+#&gt; [[4]]
+#&gt; [[4]]$code
+#&gt; [1] "osgb4000000074568110"
+#&gt; 
+#&gt; [[4]]$name_1
+#&gt; [1] "Nun Hills"
+#&gt; 
+#&gt; [[4]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[4]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[4]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[4]]$local_type
+#&gt; [1] "Suburban Area"
+#&gt; 
+#&gt; [[4]]$outcode
+#&gt; [1] "OL13"
+#&gt; 
+#&gt; [[4]]$county_unitary
+#&gt; [1] "Lancashire"
+#&gt; 
+#&gt; [[4]]$county_unitary_type
+#&gt; [1] "County"
+#&gt; 
+#&gt; [[4]]$district_borough
+#&gt; [1] "Rossendale"
+#&gt; 
+#&gt; [[4]]$district_borough_type
+#&gt; [1] "District"
+#&gt; 
+#&gt; [[4]]$region
+#&gt; [1] "North West"
+#&gt; 
+#&gt; [[4]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[4]]$longitude
+#&gt; [1] -2.224568
+#&gt; 
+#&gt; [[4]]$latitude
+#&gt; [1] 53.69105
+#&gt; 
+#&gt; [[4]]$eastings
+#&gt; [1] 385268
+#&gt; 
+#&gt; [[4]]$northings
+#&gt; [1] 421645
+#&gt; 
+#&gt; [[4]]$min_eastings
+#&gt; [1] 384958
+#&gt; 
+#&gt; [[4]]$min_northings
+#&gt; [1] 421437
+#&gt; 
+#&gt; [[4]]$max_eastings
+#&gt; [1] 385465
+#&gt; 
+#&gt; [[4]]$max_northings
+#&gt; [1] 421937
+#&gt; 
+#&gt; 
+#&gt; [[5]]
+#&gt; [[5]]$code
+#&gt; [1] "osgb4000000074571332"
+#&gt; 
+#&gt; [[5]]$name_1
+#&gt; [1] "Bailey Hills"
+#&gt; 
+#&gt; [[5]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[5]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[5]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[5]]$local_type
+#&gt; [1] "Suburban Area"
+#&gt; 
+#&gt; [[5]]$outcode
+#&gt; [1] "BD16"
+#&gt; 
+#&gt; [[5]]$county_unitary
+#&gt; NULL
+#&gt; 
+#&gt; [[5]]$county_unitary_type
+#&gt; NULL
+#&gt; 
+#&gt; [[5]]$district_borough
+#&gt; [1] "Bradford"
+#&gt; 
+#&gt; [[5]]$district_borough_type
+#&gt; [1] "MetropolitanDistrict"
+#&gt; 
+#&gt; [[5]]$region
+#&gt; [1] "Yorkshire and the Humber"
+#&gt; 
+#&gt; [[5]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[5]]$longitude
+#&gt; [1] -1.841124
+#&gt; 
+#&gt; [[5]]$latitude
+#&gt; [1] 53.85213
+#&gt; 
+#&gt; [[5]]$eastings
+#&gt; [1] 410549
+#&gt; 
+#&gt; [[5]]$northings
+#&gt; [1] 439555
+#&gt; 
+#&gt; [[5]]$min_eastings
+#&gt; [1] 410241
+#&gt; 
+#&gt; [[5]]$min_northings
+#&gt; [1] 439253
+#&gt; 
+#&gt; [[5]]$max_eastings
+#&gt; [1] 410741
+#&gt; 
+#&gt; [[5]]$max_northings
+#&gt; [1] 439803
+#&gt; 
+#&gt; 
+#&gt; [[6]]
+#&gt; [[6]]$code
+#&gt; [1] "osgb4000000074569230"
+#&gt; 
+#&gt; [[6]]$name_1
+#&gt; [1] "Cross Hills"
+#&gt; 
+#&gt; [[6]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[6]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[6]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[6]]$local_type
+#&gt; [1] "Village"
+#&gt; 
+#&gt; [[6]]$outcode
+#&gt; [1] "BD20"
+#&gt; 
+#&gt; [[6]]$county_unitary
+#&gt; [1] "North Yorkshire"
+#&gt; 
+#&gt; [[6]]$county_unitary_type
+#&gt; [1] "County"
+#&gt; 
+#&gt; [[6]]$district_borough
+#&gt; [1] "Craven"
+#&gt; 
+#&gt; [[6]]$district_borough_type
+#&gt; [1] "District"
+#&gt; 
+#&gt; [[6]]$region
+#&gt; [1] "Yorkshire and the Humber"
+#&gt; 
+#&gt; [[6]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[6]]$longitude
+#&gt; [1] -1.989919
+#&gt; 
+#&gt; [[6]]$latitude
+#&gt; [1] 53.90184
+#&gt; 
+#&gt; [[6]]$eastings
+#&gt; [1] 400760
+#&gt; 
+#&gt; [[6]]$northings
+#&gt; [1] 445075
+#&gt; 
+#&gt; [[6]]$min_eastings
+#&gt; [1] 399213
+#&gt; 
+#&gt; [[6]]$min_northings
+#&gt; [1] 444398
+#&gt; 
+#&gt; [[6]]$max_eastings
+#&gt; [1] 401797
+#&gt; 
+#&gt; [[6]]$max_northings
+#&gt; [1] 445644
+#&gt; 
+#&gt; 
+#&gt; [[7]]
+#&gt; [[7]]$code
+#&gt; [1] "osgb4000000074572024"
+#&gt; 
+#&gt; [[7]]$name_1
+#&gt; [1] "Lister Hills"
+#&gt; 
+#&gt; [[7]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[7]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[7]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[7]]$local_type
+#&gt; [1] "Suburban Area"
+#&gt; 
+#&gt; [[7]]$outcode
+#&gt; [1] "BD7"
+#&gt; 
+#&gt; [[7]]$county_unitary
+#&gt; NULL
+#&gt; 
+#&gt; [[7]]$county_unitary_type
+#&gt; NULL
+#&gt; 
+#&gt; [[7]]$district_borough
+#&gt; [1] "Bradford"
+#&gt; 
+#&gt; [[7]]$district_borough_type
+#&gt; [1] "MetropolitanDistrict"
+#&gt; 
+#&gt; [[7]]$region
+#&gt; [1] "Yorkshire and the Humber"
+#&gt; 
+#&gt; [[7]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[7]]$longitude
+#&gt; [1] -1.770226
+#&gt; 
+#&gt; [[7]]$latitude
+#&gt; [1] 53.79351
+#&gt; 
+#&gt; [[7]]$eastings
+#&gt; [1] 415234
+#&gt; 
+#&gt; [[7]]$northings
+#&gt; [1] 433046
+#&gt; 
+#&gt; [[7]]$min_eastings
+#&gt; [1] 414935
+#&gt; 
+#&gt; [[7]]$min_northings
+#&gt; [1] 432878
+#&gt; 
+#&gt; [[7]]$max_eastings
+#&gt; [1] 415497
+#&gt; 
+#&gt; [[7]]$max_northings
+#&gt; [1] 433534
+#&gt; 
+#&gt; 
+#&gt; [[8]]
+#&gt; [[8]]$code
+#&gt; [1] "osgb4000000074570252"
+#&gt; 
+#&gt; [[8]]$name_1
+#&gt; [1] "Old Hills"
+#&gt; 
+#&gt; [[8]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[8]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[8]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[8]]$local_type
+#&gt; [1] "Suburban Area"
+#&gt; 
+#&gt; [[8]]$outcode
+#&gt; [1] "BD16"
+#&gt; 
+#&gt; [[8]]$county_unitary
+#&gt; NULL
+#&gt; 
+#&gt; [[8]]$county_unitary_type
+#&gt; NULL
+#&gt; 
+#&gt; [[8]]$district_borough
+#&gt; [1] "Bradford"
+#&gt; 
+#&gt; [[8]]$district_borough_type
+#&gt; [1] "MetropolitanDistrict"
+#&gt; 
+#&gt; [[8]]$region
+#&gt; [1] "Yorkshire and the Humber"
+#&gt; 
+#&gt; [[8]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[8]]$longitude
+#&gt; [1] -1.830166
+#&gt; 
+#&gt; [[8]]$latitude
+#&gt; [1] 53.84417
+#&gt; 
+#&gt; [[8]]$eastings
+#&gt; [1] 411272
+#&gt; 
+#&gt; [[8]]$northings
+#&gt; [1] 438671
+#&gt; 
+#&gt; [[8]]$min_eastings
+#&gt; [1] 411081
+#&gt; 
+#&gt; [[8]]$min_northings
+#&gt; [1] 438457
+#&gt; 
+#&gt; [[8]]$max_eastings
+#&gt; [1] 411581
+#&gt; 
+#&gt; [[8]]$max_northings
+#&gt; [1] 438957
+#&gt; 
+#&gt; 
+#&gt; [[9]]
+#&gt; [[9]]$code
+#&gt; [1] "osgb4000000074544460"
+#&gt; 
+#&gt; [[9]]$name_1
+#&gt; [1] "Wheatley Hills"
+#&gt; 
+#&gt; [[9]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[9]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[9]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[9]]$local_type
+#&gt; [1] "Suburban Area"
+#&gt; 
+#&gt; [[9]]$outcode
+#&gt; [1] "DN2"
+#&gt; 
+#&gt; [[9]]$county_unitary
+#&gt; NULL
+#&gt; 
+#&gt; [[9]]$county_unitary_type
+#&gt; NULL
+#&gt; 
+#&gt; [[9]]$district_borough
+#&gt; [1] "Doncaster"
+#&gt; 
+#&gt; [[9]]$district_borough_type
+#&gt; [1] "MetropolitanDistrict"
+#&gt; 
+#&gt; [[9]]$region
+#&gt; [1] "Yorkshire and the Humber"
+#&gt; 
+#&gt; [[9]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[9]]$longitude
+#&gt; [1] -1.100679
+#&gt; 
+#&gt; [[9]]$latitude
+#&gt; [1] 53.53897
+#&gt; 
+#&gt; [[9]]$eastings
+#&gt; [1] 459698
+#&gt; 
+#&gt; [[9]]$northings
+#&gt; [1] 405078
+#&gt; 
+#&gt; [[9]]$min_eastings
+#&gt; [1] 458941
+#&gt; 
+#&gt; [[9]]$min_northings
+#&gt; [1] 404220
+#&gt; 
+#&gt; [[9]]$max_eastings
+#&gt; [1] 460614
+#&gt; 
+#&gt; [[9]]$max_northings
+#&gt; [1] 405620
+#&gt; 
+#&gt; 
+#&gt; [[10]]
+#&gt; [[10]]$code
+#&gt; [1] "osgb4000000074561319"
+#&gt; 
+#&gt; [[10]]$name_1
+#&gt; [1] "Stanford Hills"
+#&gt; 
+#&gt; [[10]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[10]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[10]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[10]]$local_type
+#&gt; [1] "Hamlet"
+#&gt; 
+#&gt; [[10]]$outcode
+#&gt; [1] "LE12"
+#&gt; 
+#&gt; [[10]]$county_unitary
+#&gt; [1] "Nottinghamshire"
+#&gt; 
+#&gt; [[10]]$county_unitary_type
+#&gt; [1] "County"
+#&gt; 
+#&gt; [[10]]$district_borough
+#&gt; [1] "Rushcliffe"
+#&gt; 
+#&gt; [[10]]$district_borough_type
+#&gt; [1] "District"
+#&gt; 
+#&gt; [[10]]$region
+#&gt; [1] "East Midlands"
+#&gt; 
+#&gt; [[10]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[10]]$longitude
+#&gt; [1] -1.186273
+#&gt; 
+#&gt; [[10]]$latitude
+#&gt; [1] 52.80939
+#&gt; 
+#&gt; [[10]]$eastings
+#&gt; [1] 454948
+#&gt; 
+#&gt; [[10]]$northings
+#&gt; [1] 323848
+#&gt; 
+#&gt; [[10]]$min_eastings
+#&gt; [1] 454696
+#&gt; 
+#&gt; [[10]]$min_northings
+#&gt; [1] 323502
+#&gt; 
+#&gt; [[10]]$max_eastings
+#&gt; [1] 455196
+#&gt; 
+#&gt; [[10]]$max_northings
+#&gt; [1] 324002
+#&gt; 
+#&gt; 
+#&gt; [[11]]
+#&gt; [[11]]$code
+#&gt; [1] "osgb4000000074561106"
+#&gt; 
+#&gt; [[11]]$name_1
+#&gt; [1] "Hoton Hills"
+#&gt; 
+#&gt; [[11]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[11]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[11]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[11]]$local_type
+#&gt; [1] "Hamlet"
+#&gt; 
+#&gt; [[11]]$outcode
+#&gt; [1] "LE12"
+#&gt; 
+#&gt; [[11]]$county_unitary
+#&gt; [1] "Leicestershire"
+#&gt; 
+#&gt; [[11]]$county_unitary_type
+#&gt; [1] "County"
+#&gt; 
+#&gt; [[11]]$district_borough
+#&gt; [1] "Charnwood"
+#&gt; 
+#&gt; [[11]]$district_borough_type
+#&gt; [1] "District"
+#&gt; 
+#&gt; [[11]]$region
+#&gt; [1] "East Midlands"
+#&gt; 
+#&gt; [[11]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[11]]$longitude
+#&gt; [1] -1.171086
+#&gt; 
+#&gt; [[11]]$latitude
+#&gt; [1] 52.79511
+#&gt; 
+#&gt; [[11]]$eastings
+#&gt; [1] 455990
+#&gt; 
+#&gt; [[11]]$northings
+#&gt; [1] 322271
+#&gt; 
+#&gt; [[11]]$min_eastings
+#&gt; [1] 455722
+#&gt; 
+#&gt; [[11]]$min_northings
+#&gt; [1] 322037
+#&gt; 
+#&gt; [[11]]$max_eastings
+#&gt; [1] 456222
+#&gt; 
+#&gt; [[11]]$max_northings
+#&gt; [1] 322537
+#&gt; 
+#&gt; 
+#&gt; [[12]]
+#&gt; [[12]]$code
+#&gt; [1] "osgb4000000074567076"
+#&gt; 
+#&gt; [[12]]$name_1
+#&gt; [1] "Scotland Hills"
+#&gt; 
+#&gt; [[12]]$name_1_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[12]]$name_2
+#&gt; NULL
+#&gt; 
+#&gt; [[12]]$name_2_lang
+#&gt; NULL
+#&gt; 
+#&gt; [[12]]$local_type
+#&gt; [1] "Suburban Area"
+#&gt; 
+#&gt; [[12]]$outcode
+#&gt; [1] "CT3"
+#&gt; 
+#&gt; [[12]]$county_unitary
+#&gt; [1] "Kent"
+#&gt; 
+#&gt; [[12]]$county_unitary_type
+#&gt; [1] "County"
+#&gt; 
+#&gt; [[12]]$district_borough
+#&gt; [1] "Canterbury"
+#&gt; 
+#&gt; [[12]]$district_borough_type
+#&gt; [1] "District"
+#&gt; 
+#&gt; [[12]]$region
+#&gt; [1] "South East"
+#&gt; 
+#&gt; [[12]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[12]]$longitude
+#&gt; [1] 1.121609
+#&gt; 
+#&gt; [[12]]$latitude
+#&gt; [1] 51.28224
+#&gt; 
+#&gt; [[12]]$eastings
+#&gt; [1] 617790
+#&gt; 
+#&gt; [[12]]$northings
+#&gt; [1] 158306
+#&gt; 
+#&gt; [[12]]$min_eastings
+#&gt; [1] 617361
+#&gt; 
+#&gt; [[12]]$min_northings
+#&gt; [1] 157908
+#&gt; 
+#&gt; [[12]]$max_eastings
+#&gt; [1] 618249
+#&gt; 
+#&gt; [[12]]$max_northings
+#&gt; [1] 158788
+#&gt; 
+#&gt; </div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

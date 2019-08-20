@@ -16,7 +16,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' place_query("Hills")
 #' place_query("Hills", limit = 12)
 #' }

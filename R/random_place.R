@@ -13,7 +13,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' random_place()
 #' }
 #'
@@ -27,4 +27,3 @@ random_place <- function() {
     return(r)
   }
 }
-

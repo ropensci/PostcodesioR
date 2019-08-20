@@ -17,7 +17,7 @@
 #' @seealso \code{\link{postcode_lookup}} for documentation.
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' nearest_outcode("EC1Y")
 #' nearest_outcode("EC1Y", limit = 11)
 #' nearest_outcode("EC1Y", limit = 11, radius = 6000)

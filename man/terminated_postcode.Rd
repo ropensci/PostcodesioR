@@ -33,7 +33,7 @@ See
 Returns month and year if a postcode was terminated or is no longer active.
 }
 \examples{
-\dontrun{
+\donttest{
 terminated_postcode("EC1Y 8LX") # exisitng postcode
 terminated_postcode("E1W 1UU") # terminated
 }

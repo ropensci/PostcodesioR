@@ -158,10 +158,8 @@ The WGS84 latitude given the Postcode's national grid reference.</p></li>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>terminated_postcode</span>(<span class='st'>"EC1Y 8LX"</span>) <span class='co'># exisitng postcode</span>
-<span class='fu'>terminated_postcode</span>(<span class='st'>"E1W 1UU"</span>) <span class='co'># terminated</span>
-<span class='co'># }</span><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>terminated_postcode</span>(<span class='st'>"EC1Y 8LX"</span>) <span class='co'># exisitng postcode</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Not Found (HTTP 404).</span></div><div class='input'><span class='fu'>terminated_postcode</span>(<span class='st'>"E1W 1UU"</span>) <span class='co'># terminated</span></div><div class='output co'>#&gt;   postcode year_terminated month_terminated longitude latitude
+#&gt; 1  E1W 1UU            2015                2 -0.073732 51.50801</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

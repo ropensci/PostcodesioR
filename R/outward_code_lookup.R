@@ -12,7 +12,7 @@
 #' @seealso \code{\link{postcode_lookup}} for documentation.
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' outward_code_lookup("E1")
 #' }
 #'

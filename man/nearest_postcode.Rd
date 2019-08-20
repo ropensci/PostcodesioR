@@ -21,7 +21,7 @@ Returns nearest postcodes for a given postcode.
 The search is based on the relative distance of the postcode centroid.
 }
 \examples{
-\dontrun{
+\donttest{
 nearest_postcode("EC1Y 8LX")
 nearest_postcode("EC1Y 8LX", limit = 11)
 nearest_postcode("EC1Y 8LX", limit = 12, radius = 200)

@@ -54,7 +54,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' place_lookup("osgb4000000074544700")
 #' }
 #'

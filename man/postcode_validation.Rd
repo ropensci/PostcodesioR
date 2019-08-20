@@ -16,7 +16,7 @@ A logical vector: True or False (meaning respectively valid or invalid postcode)
 Convenience method to validate a postcode.
 }
 \examples{
-\dontrun{
+\donttest{
 postcode_validation("EC1Y 8LX") # returns TRUE
 postcode_validation("XYZ") # returns FALSE
 }

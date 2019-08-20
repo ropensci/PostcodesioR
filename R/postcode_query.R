@@ -13,7 +13,7 @@
 #' To return a data frame use \link[PostcodesioR]{postcode_lookup}.
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' postcode_query("EC1Y8LX")
 #' postcode_query("EC1", limit = 11)
 #' }
@@ -28,5 +28,4 @@ postcode_query <- function(postcode, limit = 10) {
   r <- GET(paste0("https://api.postcodes.io/postcodes?q=",
                   postcode, "&limit=", limit))
   extract_results(r)
-  # TODO turn multiple lists into a data frame
 }

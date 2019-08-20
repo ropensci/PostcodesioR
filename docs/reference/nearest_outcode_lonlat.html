@@ -152,9 +152,615 @@ The search is based on the relative distance of the outcode centroid.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>nearest_outcode_lonlat</span>(<span class='fl'>0.127</span>, <span class='fl'>51.507</span>)
-<span class='co'># }</span><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>nearest_outcode_lonlat</span>(<span class='fl'>0.127</span>, <span class='fl'>51.507</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; [[1]]$outcode
+#&gt; [1] "DA18"
+#&gt; 
+#&gt; [[1]]$longitude
+#&gt; [1] 0.1363768
+#&gt; 
+#&gt; [[1]]$latitude
+#&gt; [1] 51.4943
+#&gt; 
+#&gt; [[1]]$northings
+#&gt; [1] 179425
+#&gt; 
+#&gt; [[1]]$eastings
+#&gt; [1] 548403
+#&gt; 
+#&gt; [[1]]$admin_district
+#&gt; [[1]]$admin_district[[1]]
+#&gt; [1] "Bexley"
+#&gt; 
+#&gt; 
+#&gt; [[1]]$parish
+#&gt; [[1]]$parish[[1]]
+#&gt; [1] "Bexley, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[1]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[1]]$admin_ward
+#&gt; [[1]]$admin_ward[[1]]
+#&gt; [1] "Slade Green &amp; Northend"
+#&gt; 
+#&gt; [[1]]$admin_ward[[2]]
+#&gt; [1] "Thamesmead East"
+#&gt; 
+#&gt; 
+#&gt; [[1]]$country
+#&gt; [[1]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[1]]$distance
+#&gt; [1] 1555.686
+#&gt; 
+#&gt; 
+#&gt; [[2]]
+#&gt; [[2]]$outcode
+#&gt; [1] "SE28"
+#&gt; 
+#&gt; [[2]]$longitude
+#&gt; [1] 0.1044789
+#&gt; 
+#&gt; [[2]]$latitude
+#&gt; [1] 51.50237
+#&gt; 
+#&gt; [[2]]$northings
+#&gt; [1] 180258
+#&gt; 
+#&gt; [[2]]$eastings
+#&gt; [1] 546163
+#&gt; 
+#&gt; [[2]]$admin_district
+#&gt; [[2]]$admin_district[[1]]
+#&gt; [1] "Greenwich"
+#&gt; 
+#&gt; [[2]]$admin_district[[2]]
+#&gt; [1] "Bexley"
+#&gt; 
+#&gt; 
+#&gt; [[2]]$parish
+#&gt; [[2]]$parish[[1]]
+#&gt; [1] "Greenwich, unparished area"
+#&gt; 
+#&gt; [[2]]$parish[[2]]
+#&gt; [1] "Bexley, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[2]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[2]]$admin_ward
+#&gt; [[2]]$admin_ward[[1]]
+#&gt; [1] "Plumstead"
+#&gt; 
+#&gt; [[2]]$admin_ward[[2]]
+#&gt; [1] "Glyndon"
+#&gt; 
+#&gt; [[2]]$admin_ward[[3]]
+#&gt; [1] "Thamesmead Moorings"
+#&gt; 
+#&gt; [[2]]$admin_ward[[4]]
+#&gt; [1] "Thamesmead East"
+#&gt; 
+#&gt; 
+#&gt; [[2]]$country
+#&gt; [[2]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[2]]$distance
+#&gt; [1] 1646.539
+#&gt; 
+#&gt; 
+#&gt; [[3]]
+#&gt; [[3]]$outcode
+#&gt; [1] "SE2"
+#&gt; 
+#&gt; [[3]]$longitude
+#&gt; [1] 0.1160585
+#&gt; 
+#&gt; [[3]]$latitude
+#&gt; [1] 51.48968
+#&gt; 
+#&gt; [[3]]$northings
+#&gt; [1] 178870
+#&gt; 
+#&gt; [[3]]$eastings
+#&gt; [1] 547007
+#&gt; 
+#&gt; [[3]]$admin_district
+#&gt; [[3]]$admin_district[[1]]
+#&gt; [1] "Greenwich"
+#&gt; 
+#&gt; [[3]]$admin_district[[2]]
+#&gt; [1] "Bexley"
+#&gt; 
+#&gt; 
+#&gt; [[3]]$parish
+#&gt; [[3]]$parish[[1]]
+#&gt; [1] "Greenwich, unparished area"
+#&gt; 
+#&gt; [[3]]$parish[[2]]
+#&gt; [1] "Bexley, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[3]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[3]]$admin_ward
+#&gt; [[3]]$admin_ward[[1]]
+#&gt; [1] "Plumstead"
+#&gt; 
+#&gt; [[3]]$admin_ward[[2]]
+#&gt; [1] "West Heath"
+#&gt; 
+#&gt; [[3]]$admin_ward[[3]]
+#&gt; [1] "Belvedere"
+#&gt; 
+#&gt; [[3]]$admin_ward[[4]]
+#&gt; [1] "Thamesmead Moorings"
+#&gt; 
+#&gt; [[3]]$admin_ward[[5]]
+#&gt; [1] "Abbey Wood"
+#&gt; 
+#&gt; [[3]]$admin_ward[[6]]
+#&gt; [1] "Thamesmead East"
+#&gt; 
+#&gt; 
+#&gt; [[3]]$country
+#&gt; [[3]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[3]]$distance
+#&gt; [1] 2071.364
+#&gt; 
+#&gt; 
+#&gt; [[4]]
+#&gt; [[4]]$outcode
+#&gt; [1] "DA17"
+#&gt; 
+#&gt; [[4]]$longitude
+#&gt; [1] 0.1489642
+#&gt; 
+#&gt; [[4]]$latitude
+#&gt; [1] 51.48632
+#&gt; 
+#&gt; [[4]]$northings
+#&gt; [1] 178563
+#&gt; 
+#&gt; [[4]]$eastings
+#&gt; [1] 549303
+#&gt; 
+#&gt; [[4]]$admin_district
+#&gt; [[4]]$admin_district[[1]]
+#&gt; [1] "Bexley"
+#&gt; 
+#&gt; [[4]]$admin_district[[2]]
+#&gt; [1] "Dartford"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$parish
+#&gt; [[4]]$parish[[1]]
+#&gt; [1] "Dartford, unparished area"
+#&gt; 
+#&gt; [[4]]$parish[[2]]
+#&gt; [1] "Bexley, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$admin_county
+#&gt; [[4]]$admin_county[[1]]
+#&gt; [1] "Kent"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$admin_ward
+#&gt; [[4]]$admin_ward[[1]]
+#&gt; [1] "West Heath"
+#&gt; 
+#&gt; [[4]]$admin_ward[[2]]
+#&gt; [1] "Belvedere"
+#&gt; 
+#&gt; [[4]]$admin_ward[[3]]
+#&gt; [1] "Erith"
+#&gt; 
+#&gt; [[4]]$admin_ward[[4]]
+#&gt; [1] "Northumberland Heath"
+#&gt; 
+#&gt; [[4]]$admin_ward[[5]]
+#&gt; [1] "West Hill"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$country
+#&gt; [[4]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[4]]$distance
+#&gt; [1] 2760.532
+#&gt; 
+#&gt; 
+#&gt; [[5]]
+#&gt; [[5]]$outcode
+#&gt; [1] "RM9"
+#&gt; 
+#&gt; [[5]]$longitude
+#&gt; [1] 0.1337787
+#&gt; 
+#&gt; [[5]]$latitude
+#&gt; [1] 51.54087
+#&gt; 
+#&gt; [[5]]$northings
+#&gt; [1] 184598
+#&gt; 
+#&gt; [[5]]$eastings
+#&gt; [1] 548072
+#&gt; 
+#&gt; [[5]]$admin_district
+#&gt; [[5]]$admin_district[[1]]
+#&gt; [1] "Havering"
+#&gt; 
+#&gt; [[5]]$admin_district[[2]]
+#&gt; [1] "Barking and Dagenham"
+#&gt; 
+#&gt; 
+#&gt; [[5]]$parish
+#&gt; [[5]]$parish[[1]]
+#&gt; [1] "Barking and Dagenham, unparished area"
+#&gt; 
+#&gt; [[5]]$parish[[2]]
+#&gt; [1] "Havering, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[5]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[5]]$admin_ward
+#&gt; [[5]]$admin_ward[[1]]
+#&gt; [1] "Mayesbrook"
+#&gt; 
+#&gt; [[5]]$admin_ward[[2]]
+#&gt; [1] "Parsloes"
+#&gt; 
+#&gt; [[5]]$admin_ward[[3]]
+#&gt; [1] "Thames"
+#&gt; 
+#&gt; [[5]]$admin_ward[[4]]
+#&gt; [1] "Heath"
+#&gt; 
+#&gt; [[5]]$admin_ward[[5]]
+#&gt; [1] "Goresbrook"
+#&gt; 
+#&gt; [[5]]$admin_ward[[6]]
+#&gt; [1] "South Hornchurch"
+#&gt; 
+#&gt; [[5]]$admin_ward[[7]]
+#&gt; [1] "Eastbury"
+#&gt; 
+#&gt; [[5]]$admin_ward[[8]]
+#&gt; [1] "Alibon"
+#&gt; 
+#&gt; [[5]]$admin_ward[[9]]
+#&gt; [1] "River"
+#&gt; 
+#&gt; 
+#&gt; [[5]]$country
+#&gt; [[5]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[5]]$distance
+#&gt; [1] 3797.428
+#&gt; 
+#&gt; 
+#&gt; [[6]]
+#&gt; [[6]]$outcode
+#&gt; [1] "IG11"
+#&gt; 
+#&gt; [[6]]$longitude
+#&gt; [1] 0.09314936
+#&gt; 
+#&gt; [[6]]$latitude
+#&gt; [1] 51.5351
+#&gt; 
+#&gt; [[6]]$northings
+#&gt; [1] 183875
+#&gt; 
+#&gt; [[6]]$eastings
+#&gt; [1] 545272
+#&gt; 
+#&gt; [[6]]$admin_district
+#&gt; [[6]]$admin_district[[1]]
+#&gt; [1] "Barking and Dagenham"
+#&gt; 
+#&gt; [[6]]$admin_district[[2]]
+#&gt; [1] "Newham"
+#&gt; 
+#&gt; [[6]]$admin_district[[3]]
+#&gt; [1] "Redbridge"
+#&gt; 
+#&gt; 
+#&gt; [[6]]$parish
+#&gt; [[6]]$parish[[1]]
+#&gt; [1] "Barking and Dagenham, unparished area"
+#&gt; 
+#&gt; [[6]]$parish[[2]]
+#&gt; [1] "Redbridge, unparished area"
+#&gt; 
+#&gt; [[6]]$parish[[3]]
+#&gt; [1] "Newham, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[6]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[6]]$admin_ward
+#&gt; [[6]]$admin_ward[[1]]
+#&gt; [1] "Longbridge"
+#&gt; 
+#&gt; [[6]]$admin_ward[[2]]
+#&gt; [1] "Becontree"
+#&gt; 
+#&gt; [[6]]$admin_ward[[3]]
+#&gt; [1] "Thames"
+#&gt; 
+#&gt; [[6]]$admin_ward[[4]]
+#&gt; [1] "East Ham South"
+#&gt; 
+#&gt; [[6]]$admin_ward[[5]]
+#&gt; [1] "Beckton"
+#&gt; 
+#&gt; [[6]]$admin_ward[[6]]
+#&gt; [1] "Mayfield"
+#&gt; 
+#&gt; [[6]]$admin_ward[[7]]
+#&gt; [1] "Eastbury"
+#&gt; 
+#&gt; [[6]]$admin_ward[[8]]
+#&gt; [1] "Abbey"
+#&gt; 
+#&gt; [[6]]$admin_ward[[9]]
+#&gt; [1] "Gascoigne"
+#&gt; 
+#&gt; 
+#&gt; [[6]]$country
+#&gt; [[6]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[6]]$distance
+#&gt; [1] 3910.714
+#&gt; 
+#&gt; 
+#&gt; [[7]]
+#&gt; [[7]]$outcode
+#&gt; [1] "SE18"
+#&gt; 
+#&gt; [[7]]$longitude
+#&gt; [1] 0.07258457
+#&gt; 
+#&gt; [[7]]$latitude
+#&gt; [1] 51.48428
+#&gt; 
+#&gt; [[7]]$northings
+#&gt; [1] 178184
+#&gt; 
+#&gt; [[7]]$eastings
+#&gt; [1] 544006
+#&gt; 
+#&gt; [[7]]$admin_district
+#&gt; [[7]]$admin_district[[1]]
+#&gt; [1] "Greenwich"
+#&gt; 
+#&gt; 
+#&gt; [[7]]$parish
+#&gt; [[7]]$parish[[1]]
+#&gt; [1] "Greenwich, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[7]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[7]]$admin_ward
+#&gt; [[7]]$admin_ward[[1]]
+#&gt; [1] "Plumstead"
+#&gt; 
+#&gt; [[7]]$admin_ward[[2]]
+#&gt; [1] "Glyndon"
+#&gt; 
+#&gt; [[7]]$admin_ward[[3]]
+#&gt; [1] "Woolwich Riverside"
+#&gt; 
+#&gt; [[7]]$admin_ward[[4]]
+#&gt; [1] "Shooters Hill"
+#&gt; 
+#&gt; [[7]]$admin_ward[[5]]
+#&gt; [1] "Kidbrooke with Hornfair"
+#&gt; 
+#&gt; [[7]]$admin_ward[[6]]
+#&gt; [1] "Woolwich Common"
+#&gt; 
+#&gt; 
+#&gt; [[7]]$country
+#&gt; [[7]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[7]]$distance
+#&gt; [1] 4546.301
+#&gt; 
+#&gt; 
+#&gt; [[8]]
+#&gt; [[8]]$outcode
+#&gt; [1] "RM10"
+#&gt; 
+#&gt; [[8]]$longitude
+#&gt; [1] 0.1578726
+#&gt; 
+#&gt; [[8]]$latitude
+#&gt; [1] 51.54481
+#&gt; 
+#&gt; [[8]]$northings
+#&gt; [1] 185086
+#&gt; 
+#&gt; [[8]]$eastings
+#&gt; [1] 549729
+#&gt; 
+#&gt; [[8]]$admin_district
+#&gt; [[8]]$admin_district[[1]]
+#&gt; [1] "Barking and Dagenham"
+#&gt; 
+#&gt; 
+#&gt; [[8]]$parish
+#&gt; [[8]]$parish[[1]]
+#&gt; [1] "Barking and Dagenham, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[8]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[8]]$admin_ward
+#&gt; [[8]]$admin_ward[[1]]
+#&gt; [1] "Heath"
+#&gt; 
+#&gt; [[8]]$admin_ward[[2]]
+#&gt; [1] "Village"
+#&gt; 
+#&gt; [[8]]$admin_ward[[3]]
+#&gt; [1] "Alibon"
+#&gt; 
+#&gt; [[8]]$admin_ward[[4]]
+#&gt; [1] "River"
+#&gt; 
+#&gt; [[8]]$admin_ward[[5]]
+#&gt; [1] "Eastbrook"
+#&gt; 
+#&gt; 
+#&gt; [[8]]$country
+#&gt; [[8]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[8]]$distance
+#&gt; [1] 4721.372
+#&gt; 
+#&gt; 
+#&gt; [[9]]
+#&gt; [[9]]$outcode
+#&gt; [1] "DA7"
+#&gt; 
+#&gt; [[9]]$longitude
+#&gt; [1] 0.1460264
+#&gt; 
+#&gt; [[9]]$latitude
+#&gt; [1] 51.46562
+#&gt; 
+#&gt; [[9]]$northings
+#&gt; [1] 176255
+#&gt; 
+#&gt; [[9]]$eastings
+#&gt; [1] 549166
+#&gt; 
+#&gt; [[9]]$admin_district
+#&gt; [[9]]$admin_district[[1]]
+#&gt; [1] "Bexley"
+#&gt; 
+#&gt; 
+#&gt; [[9]]$parish
+#&gt; [[9]]$parish[[1]]
+#&gt; [1] "Bexley, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[9]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[9]]$admin_ward
+#&gt; [[9]]$admin_ward[[1]]
+#&gt; [1] "Bexleyheath"
+#&gt; 
+#&gt; [[9]]$admin_ward[[2]]
+#&gt; [1] "Crook Log"
+#&gt; 
+#&gt; [[9]]$admin_ward[[3]]
+#&gt; [1] "West Heath"
+#&gt; 
+#&gt; [[9]]$admin_ward[[4]]
+#&gt; [1] "Northumberland Heath"
+#&gt; 
+#&gt; [[9]]$admin_ward[[5]]
+#&gt; [1] "Crayford"
+#&gt; 
+#&gt; [[9]]$admin_ward[[6]]
+#&gt; [1] "Barnehurst"
+#&gt; 
+#&gt; 
+#&gt; [[9]]$country
+#&gt; [[9]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[9]]$distance
+#&gt; [1] 4790.057
+#&gt; 
+#&gt; 
+#&gt; [[10]]
+#&gt; [[10]]$outcode
+#&gt; [1] "DA8"
+#&gt; 
+#&gt; [[10]]$longitude
+#&gt; [1] 0.1760294
+#&gt; 
+#&gt; [[10]]$latitude
+#&gt; [1] 51.4757
+#&gt; 
+#&gt; [[10]]$northings
+#&gt; [1] 177438
+#&gt; 
+#&gt; [[10]]$eastings
+#&gt; [1] 551217
+#&gt; 
+#&gt; [[10]]$admin_district
+#&gt; [[10]]$admin_district[[1]]
+#&gt; [1] "Bexley"
+#&gt; 
+#&gt; 
+#&gt; [[10]]$parish
+#&gt; [[10]]$parish[[1]]
+#&gt; [1] "Bexley, unparished area"
+#&gt; 
+#&gt; 
+#&gt; [[10]]$admin_county
+#&gt; list()
+#&gt; 
+#&gt; [[10]]$admin_ward
+#&gt; [[10]]$admin_ward[[1]]
+#&gt; [1] "Belvedere"
+#&gt; 
+#&gt; [[10]]$admin_ward[[2]]
+#&gt; [1] "Erith"
+#&gt; 
+#&gt; [[10]]$admin_ward[[3]]
+#&gt; [1] "Northumberland Heath"
+#&gt; 
+#&gt; [[10]]$admin_ward[[4]]
+#&gt; [1] "Slade Green &amp; Northend"
+#&gt; 
+#&gt; [[10]]$admin_ward[[5]]
+#&gt; [1] "Barnehurst"
+#&gt; 
+#&gt; 
+#&gt; [[10]]$country
+#&gt; [[10]]$country[[1]]
+#&gt; [1] "England"
+#&gt; 
+#&gt; 
+#&gt; [[10]]$distance
+#&gt; [1] 4870.544
+#&gt; 
+#&gt; </div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

@@ -18,7 +18,7 @@
 #'
 #' @examples
 #'
-#' \dontrun{
+#' \donttest{
 #' geolocations_list <- structure(
 #' list(
 #' geolocations = structure(

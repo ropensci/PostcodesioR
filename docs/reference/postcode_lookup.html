@@ -227,10 +227,29 @@ This is currently only available for districts, parishes, counties, CCGs, NUTS a
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>postcode_lookup</span>(<span class='st'>"EC1Y8LX"</span>)
-<span class='fu'>postcode_lookup</span>(<span class='st'>"EC1Y 8LX"</span>) <span class='co'># spaces are ignored</span>
-<span class='co'># }</span><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>postcode_lookup</span>(<span class='st'>"EC1Y8LX"</span>)</div><div class='output co'>#&gt;   postcode quality eastings northings country nhs_ha longitude latitude
+#&gt; 1 EC1Y 8LX       1   532544    182128 England London -0.090922 51.52252
+#&gt;   european_electoral_region primary_care_trust region           lsoa
+#&gt; 1                    London          Islington London Islington 023D
+#&gt;            msoa incode outcode   parliamentary_constituency admin_district
+#&gt; 1 Islington 023    8LX    EC1Y Islington South and Finsbury      Islington
+#&gt;                       parish admin_county admin_ward ced           ccg
+#&gt; 1 Islington, unparished area           NA    Bunhill  NA NHS Islington
+#&gt;                     nuts admin_district_code admin_county_code admin_ward_code
+#&gt; 1 Haringey and Islington           E09000019         E99999999       E05000367
+#&gt;   parish_code parliamentary_constituency_code  ccg_code  ced_code nuts_code
+#&gt; 1   E43000209                       E14000764 E38000088 E99999999     UKI43</div><div class='input'><span class='fu'>postcode_lookup</span>(<span class='st'>"EC1Y 8LX"</span>) <span class='co'># spaces are ignored</span></div><div class='output co'>#&gt;   postcode quality eastings northings country nhs_ha longitude latitude
+#&gt; 1 EC1Y 8LX       1   532544    182128 England London -0.090922 51.52252
+#&gt;   european_electoral_region primary_care_trust region           lsoa
+#&gt; 1                    London          Islington London Islington 023D
+#&gt;            msoa incode outcode   parliamentary_constituency admin_district
+#&gt; 1 Islington 023    8LX    EC1Y Islington South and Finsbury      Islington
+#&gt;                       parish admin_county admin_ward ced           ccg
+#&gt; 1 Islington, unparished area           NA    Bunhill  NA NHS Islington
+#&gt;                     nuts admin_district_code admin_county_code admin_ward_code
+#&gt; 1 Haringey and Islington           E09000019         E99999999       E05000367
+#&gt;   parish_code parliamentary_constituency_code  ccg_code  ced_code nuts_code
+#&gt; 1   E43000209                       E14000764 E38000088 E99999999     UKI43</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

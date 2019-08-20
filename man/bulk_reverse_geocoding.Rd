@@ -23,7 +23,7 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 }
 \examples{
 
-\dontrun{
+\donttest{
 geolocations_list <- structure(
 list(
 geolocations = structure(

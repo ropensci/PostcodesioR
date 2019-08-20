@@ -18,7 +18,7 @@ A data frame with suggested postcodes.
 Returns a data frame of matching postcodes.
 }
 \examples{
-\dontrun{
+\donttest{
 postcode_autocomplete("E1")
 postcode_autocomplete("E1", limit = 11)
 }

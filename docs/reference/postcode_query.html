@@ -147,10 +147,1169 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>postcode_query</span>(<span class='st'>"EC1Y8LX"</span>)
-<span class='fu'>postcode_query</span>(<span class='st'>"EC1"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>11</span>)
-<span class='co'># }</span><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>postcode_query</span>(<span class='st'>"EC1Y8LX"</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; [[1]]$postcode
+#&gt; [1] "EC1Y 8LX"
+#&gt; 
+#&gt; [[1]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[1]]$eastings
+#&gt; [1] 532544
+#&gt; 
+#&gt; [[1]]$northings
+#&gt; [1] 182128
+#&gt; 
+#&gt; [[1]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[1]]$nhs_ha
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[1]]$longitude
+#&gt; [1] -0.090922
+#&gt; 
+#&gt; [[1]]$latitude
+#&gt; [1] 51.52252
+#&gt; 
+#&gt; [[1]]$european_electoral_region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[1]]$primary_care_trust
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[1]]$region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[1]]$lsoa
+#&gt; [1] "Islington 023D"
+#&gt; 
+#&gt; [[1]]$msoa
+#&gt; [1] "Islington 023"
+#&gt; 
+#&gt; [[1]]$incode
+#&gt; [1] "8LX"
+#&gt; 
+#&gt; [[1]]$outcode
+#&gt; [1] "EC1Y"
+#&gt; 
+#&gt; [[1]]$parliamentary_constituency
+#&gt; [1] "Islington South and Finsbury"
+#&gt; 
+#&gt; [[1]]$admin_district
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[1]]$parish
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[1]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$admin_ward
+#&gt; [1] "Bunhill"
+#&gt; 
+#&gt; [[1]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$ccg
+#&gt; [1] "NHS Islington"
+#&gt; 
+#&gt; [[1]]$nuts
+#&gt; [1] "Haringey and Islington"
+#&gt; 
+#&gt; [[1]]$codes
+#&gt; [[1]]$codes$admin_district
+#&gt; [1] "E09000019"
+#&gt; 
+#&gt; [[1]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[1]]$codes$admin_ward
+#&gt; [1] "E05000367"
+#&gt; 
+#&gt; [[1]]$codes$parish
+#&gt; [1] "E43000209"
+#&gt; 
+#&gt; [[1]]$codes$parliamentary_constituency
+#&gt; [1] "E14000764"
+#&gt; 
+#&gt; [[1]]$codes$ccg
+#&gt; [1] "E38000088"
+#&gt; 
+#&gt; [[1]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[1]]$codes$nuts
+#&gt; [1] "UKI43"
+#&gt; 
+#&gt; 
+#&gt; </div><div class='input'><span class='fu'>postcode_query</span>(<span class='st'>"EC1"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>11</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; [[1]]$postcode
+#&gt; [1] "EC1A 1AA"
+#&gt; 
+#&gt; [[1]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[1]]$eastings
+#&gt; [1] 531131
+#&gt; 
+#&gt; [[1]]$northings
+#&gt; [1] 182382
+#&gt; 
+#&gt; [[1]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[1]]$nhs_ha
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[1]]$longitude
+#&gt; [1] -0.111183
+#&gt; 
+#&gt; [[1]]$latitude
+#&gt; [1] 51.52514
+#&gt; 
+#&gt; [[1]]$european_electoral_region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[1]]$primary_care_trust
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[1]]$region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[1]]$lsoa
+#&gt; [1] "Islington 022F"
+#&gt; 
+#&gt; [[1]]$msoa
+#&gt; [1] "Islington 022"
+#&gt; 
+#&gt; [[1]]$incode
+#&gt; [1] "1AA"
+#&gt; 
+#&gt; [[1]]$outcode
+#&gt; [1] "EC1A"
+#&gt; 
+#&gt; [[1]]$parliamentary_constituency
+#&gt; [1] "Islington South and Finsbury"
+#&gt; 
+#&gt; [[1]]$admin_district
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[1]]$parish
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[1]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$admin_ward
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[1]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[1]]$ccg
+#&gt; [1] "NHS Islington"
+#&gt; 
+#&gt; [[1]]$nuts
+#&gt; [1] "Haringey and Islington"
+#&gt; 
+#&gt; [[1]]$codes
+#&gt; [[1]]$codes$admin_district
+#&gt; [1] "E09000019"
+#&gt; 
+#&gt; [[1]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[1]]$codes$admin_ward
+#&gt; [1] "E05000370"
+#&gt; 
+#&gt; [[1]]$codes$parish
+#&gt; [1] "E43000209"
+#&gt; 
+#&gt; [[1]]$codes$parliamentary_constituency
+#&gt; [1] "E14000764"
+#&gt; 
+#&gt; [[1]]$codes$ccg
+#&gt; [1] "E38000088"
+#&gt; 
+#&gt; [[1]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[1]]$codes$nuts
+#&gt; [1] "UKI43"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[2]]
+#&gt; [[2]]$postcode
+#&gt; [1] "EC1A 1AH"
+#&gt; 
+#&gt; [[2]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[2]]$eastings
+#&gt; [1] 531073
+#&gt; 
+#&gt; [[2]]$northings
+#&gt; [1] 182317
+#&gt; 
+#&gt; [[2]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[2]]$nhs_ha
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[2]]$longitude
+#&gt; [1] -0.112042
+#&gt; 
+#&gt; [[2]]$latitude
+#&gt; [1] 51.52457
+#&gt; 
+#&gt; [[2]]$european_electoral_region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[2]]$primary_care_trust
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[2]]$region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[2]]$lsoa
+#&gt; [1] "Islington 022F"
+#&gt; 
+#&gt; [[2]]$msoa
+#&gt; [1] "Islington 022"
+#&gt; 
+#&gt; [[2]]$incode
+#&gt; [1] "1AH"
+#&gt; 
+#&gt; [[2]]$outcode
+#&gt; [1] "EC1A"
+#&gt; 
+#&gt; [[2]]$parliamentary_constituency
+#&gt; [1] "Islington South and Finsbury"
+#&gt; 
+#&gt; [[2]]$admin_district
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[2]]$parish
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[2]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$admin_ward
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[2]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[2]]$ccg
+#&gt; [1] "NHS Islington"
+#&gt; 
+#&gt; [[2]]$nuts
+#&gt; [1] "Haringey and Islington"
+#&gt; 
+#&gt; [[2]]$codes
+#&gt; [[2]]$codes$admin_district
+#&gt; [1] "E09000019"
+#&gt; 
+#&gt; [[2]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$codes$admin_ward
+#&gt; [1] "E05000370"
+#&gt; 
+#&gt; [[2]]$codes$parish
+#&gt; [1] "E43000209"
+#&gt; 
+#&gt; [[2]]$codes$parliamentary_constituency
+#&gt; [1] "E14000764"
+#&gt; 
+#&gt; [[2]]$codes$ccg
+#&gt; [1] "E38000088"
+#&gt; 
+#&gt; [[2]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[2]]$codes$nuts
+#&gt; [1] "UKI43"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[3]]
+#&gt; [[3]]$postcode
+#&gt; [1] "EC1A 1AZ"
+#&gt; 
+#&gt; [[3]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[3]]$eastings
+#&gt; [1] 531070
+#&gt; 
+#&gt; [[3]]$northings
+#&gt; [1] 182310
+#&gt; 
+#&gt; [[3]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[3]]$nhs_ha
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[3]]$longitude
+#&gt; [1] -0.112088
+#&gt; 
+#&gt; [[3]]$latitude
+#&gt; [1] 51.5245
+#&gt; 
+#&gt; [[3]]$european_electoral_region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[3]]$primary_care_trust
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[3]]$region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[3]]$lsoa
+#&gt; [1] "Islington 022F"
+#&gt; 
+#&gt; [[3]]$msoa
+#&gt; [1] "Islington 022"
+#&gt; 
+#&gt; [[3]]$incode
+#&gt; [1] "1AZ"
+#&gt; 
+#&gt; [[3]]$outcode
+#&gt; [1] "EC1A"
+#&gt; 
+#&gt; [[3]]$parliamentary_constituency
+#&gt; [1] "Islington South and Finsbury"
+#&gt; 
+#&gt; [[3]]$admin_district
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[3]]$parish
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[3]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[3]]$admin_ward
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[3]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[3]]$ccg
+#&gt; [1] "NHS Islington"
+#&gt; 
+#&gt; [[3]]$nuts
+#&gt; [1] "Haringey and Islington"
+#&gt; 
+#&gt; [[3]]$codes
+#&gt; [[3]]$codes$admin_district
+#&gt; [1] "E09000019"
+#&gt; 
+#&gt; [[3]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[3]]$codes$admin_ward
+#&gt; [1] "E05000370"
+#&gt; 
+#&gt; [[3]]$codes$parish
+#&gt; [1] "E43000209"
+#&gt; 
+#&gt; [[3]]$codes$parliamentary_constituency
+#&gt; [1] "E14000764"
+#&gt; 
+#&gt; [[3]]$codes$ccg
+#&gt; [1] "E38000088"
+#&gt; 
+#&gt; [[3]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[3]]$codes$nuts
+#&gt; [1] "UKI43"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[4]]
+#&gt; [[4]]$postcode
+#&gt; [1] "EC1A 1BB"
+#&gt; 
+#&gt; [[4]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[4]]$eastings
+#&gt; [1] 531073
+#&gt; 
+#&gt; [[4]]$northings
+#&gt; [1] 182317
+#&gt; 
+#&gt; [[4]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[4]]$nhs_ha
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[4]]$longitude
+#&gt; [1] -0.112042
+#&gt; 
+#&gt; [[4]]$latitude
+#&gt; [1] 51.52457
+#&gt; 
+#&gt; [[4]]$european_electoral_region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[4]]$primary_care_trust
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[4]]$region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[4]]$lsoa
+#&gt; [1] "Islington 022F"
+#&gt; 
+#&gt; [[4]]$msoa
+#&gt; [1] "Islington 022"
+#&gt; 
+#&gt; [[4]]$incode
+#&gt; [1] "1BB"
+#&gt; 
+#&gt; [[4]]$outcode
+#&gt; [1] "EC1A"
+#&gt; 
+#&gt; [[4]]$parliamentary_constituency
+#&gt; [1] "Islington South and Finsbury"
+#&gt; 
+#&gt; [[4]]$admin_district
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[4]]$parish
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[4]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[4]]$admin_ward
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[4]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[4]]$ccg
+#&gt; [1] "NHS Islington"
+#&gt; 
+#&gt; [[4]]$nuts
+#&gt; [1] "Haringey and Islington"
+#&gt; 
+#&gt; [[4]]$codes
+#&gt; [[4]]$codes$admin_district
+#&gt; [1] "E09000019"
+#&gt; 
+#&gt; [[4]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[4]]$codes$admin_ward
+#&gt; [1] "E05000370"
+#&gt; 
+#&gt; [[4]]$codes$parish
+#&gt; [1] "E43000209"
+#&gt; 
+#&gt; [[4]]$codes$parliamentary_constituency
+#&gt; [1] "E14000764"
+#&gt; 
+#&gt; [[4]]$codes$ccg
+#&gt; [1] "E38000088"
+#&gt; 
+#&gt; [[4]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[4]]$codes$nuts
+#&gt; [1] "UKI43"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[5]]
+#&gt; [[5]]$postcode
+#&gt; [1] "EC1A 1DN"
+#&gt; 
+#&gt; [[5]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[5]]$eastings
+#&gt; [1] 531073
+#&gt; 
+#&gt; [[5]]$northings
+#&gt; [1] 182317
+#&gt; 
+#&gt; [[5]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[5]]$nhs_ha
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[5]]$longitude
+#&gt; [1] -0.112042
+#&gt; 
+#&gt; [[5]]$latitude
+#&gt; [1] 51.52457
+#&gt; 
+#&gt; [[5]]$european_electoral_region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[5]]$primary_care_trust
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[5]]$region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[5]]$lsoa
+#&gt; [1] "Islington 022F"
+#&gt; 
+#&gt; [[5]]$msoa
+#&gt; [1] "Islington 022"
+#&gt; 
+#&gt; [[5]]$incode
+#&gt; [1] "1DN"
+#&gt; 
+#&gt; [[5]]$outcode
+#&gt; [1] "EC1A"
+#&gt; 
+#&gt; [[5]]$parliamentary_constituency
+#&gt; [1] "Islington South and Finsbury"
+#&gt; 
+#&gt; [[5]]$admin_district
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[5]]$parish
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[5]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[5]]$admin_ward
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[5]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[5]]$ccg
+#&gt; [1] "NHS Islington"
+#&gt; 
+#&gt; [[5]]$nuts
+#&gt; [1] "Haringey and Islington"
+#&gt; 
+#&gt; [[5]]$codes
+#&gt; [[5]]$codes$admin_district
+#&gt; [1] "E09000019"
+#&gt; 
+#&gt; [[5]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[5]]$codes$admin_ward
+#&gt; [1] "E05000370"
+#&gt; 
+#&gt; [[5]]$codes$parish
+#&gt; [1] "E43000209"
+#&gt; 
+#&gt; [[5]]$codes$parliamentary_constituency
+#&gt; [1] "E14000764"
+#&gt; 
+#&gt; [[5]]$codes$ccg
+#&gt; [1] "E38000088"
+#&gt; 
+#&gt; [[5]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[5]]$codes$nuts
+#&gt; [1] "UKI43"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[6]]
+#&gt; [[6]]$postcode
+#&gt; [1] "EC1A 1DU"
+#&gt; 
+#&gt; [[6]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[6]]$eastings
+#&gt; [1] 531073
+#&gt; 
+#&gt; [[6]]$northings
+#&gt; [1] 182317
+#&gt; 
+#&gt; [[6]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[6]]$nhs_ha
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[6]]$longitude
+#&gt; [1] -0.112042
+#&gt; 
+#&gt; [[6]]$latitude
+#&gt; [1] 51.52457
+#&gt; 
+#&gt; [[6]]$european_electoral_region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[6]]$primary_care_trust
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[6]]$region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[6]]$lsoa
+#&gt; [1] "Islington 022F"
+#&gt; 
+#&gt; [[6]]$msoa
+#&gt; [1] "Islington 022"
+#&gt; 
+#&gt; [[6]]$incode
+#&gt; [1] "1DU"
+#&gt; 
+#&gt; [[6]]$outcode
+#&gt; [1] "EC1A"
+#&gt; 
+#&gt; [[6]]$parliamentary_constituency
+#&gt; [1] "Islington South and Finsbury"
+#&gt; 
+#&gt; [[6]]$admin_district
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[6]]$parish
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[6]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[6]]$admin_ward
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[6]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[6]]$ccg
+#&gt; [1] "NHS Islington"
+#&gt; 
+#&gt; [[6]]$nuts
+#&gt; [1] "Haringey and Islington"
+#&gt; 
+#&gt; [[6]]$codes
+#&gt; [[6]]$codes$admin_district
+#&gt; [1] "E09000019"
+#&gt; 
+#&gt; [[6]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[6]]$codes$admin_ward
+#&gt; [1] "E05000370"
+#&gt; 
+#&gt; [[6]]$codes$parish
+#&gt; [1] "E43000209"
+#&gt; 
+#&gt; [[6]]$codes$parliamentary_constituency
+#&gt; [1] "E14000764"
+#&gt; 
+#&gt; [[6]]$codes$ccg
+#&gt; [1] "E38000088"
+#&gt; 
+#&gt; [[6]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[6]]$codes$nuts
+#&gt; [1] "UKI43"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[7]]
+#&gt; [[7]]$postcode
+#&gt; [1] "EC1A 1HQ"
+#&gt; 
+#&gt; [[7]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[7]]$eastings
+#&gt; [1] 532008
+#&gt; 
+#&gt; [[7]]$northings
+#&gt; [1] 181428
+#&gt; 
+#&gt; [[7]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[7]]$nhs_ha
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[7]]$longitude
+#&gt; [1] -0.098906
+#&gt; 
+#&gt; [[7]]$latitude
+#&gt; [1] 51.51636
+#&gt; 
+#&gt; [[7]]$european_electoral_region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[7]]$primary_care_trust
+#&gt; [1] "City and Hackney Teaching"
+#&gt; 
+#&gt; [[7]]$region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[7]]$lsoa
+#&gt; [1] "City of London 001F"
+#&gt; 
+#&gt; [[7]]$msoa
+#&gt; [1] "City of London 001"
+#&gt; 
+#&gt; [[7]]$incode
+#&gt; [1] "1HQ"
+#&gt; 
+#&gt; [[7]]$outcode
+#&gt; [1] "EC1A"
+#&gt; 
+#&gt; [[7]]$parliamentary_constituency
+#&gt; [1] "Cities of London and Westminster"
+#&gt; 
+#&gt; [[7]]$admin_district
+#&gt; [1] "City of London"
+#&gt; 
+#&gt; [[7]]$parish
+#&gt; [1] "City of London, unparished area"
+#&gt; 
+#&gt; [[7]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[7]]$admin_ward
+#&gt; [1] "Farringdon Within"
+#&gt; 
+#&gt; [[7]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[7]]$ccg
+#&gt; [1] "NHS City and Hackney"
+#&gt; 
+#&gt; [[7]]$nuts
+#&gt; [1] "Camden and City of London"
+#&gt; 
+#&gt; [[7]]$codes
+#&gt; [[7]]$codes$admin_district
+#&gt; [1] "E09000001"
+#&gt; 
+#&gt; [[7]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[7]]$codes$admin_ward
+#&gt; [1] "E05009304"
+#&gt; 
+#&gt; [[7]]$codes$parish
+#&gt; [1] "E43000191"
+#&gt; 
+#&gt; [[7]]$codes$parliamentary_constituency
+#&gt; [1] "E14000639"
+#&gt; 
+#&gt; [[7]]$codes$ccg
+#&gt; [1] "E38000035"
+#&gt; 
+#&gt; [[7]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[7]]$codes$nuts
+#&gt; [1] "UKI31"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[8]]
+#&gt; [[8]]$postcode
+#&gt; [1] "EC1A 1TA"
+#&gt; 
+#&gt; [[8]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[8]]$eastings
+#&gt; [1] 531073
+#&gt; 
+#&gt; [[8]]$northings
+#&gt; [1] 182317
+#&gt; 
+#&gt; [[8]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[8]]$nhs_ha
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[8]]$longitude
+#&gt; [1] -0.112042
+#&gt; 
+#&gt; [[8]]$latitude
+#&gt; [1] 51.52457
+#&gt; 
+#&gt; [[8]]$european_electoral_region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[8]]$primary_care_trust
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[8]]$region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[8]]$lsoa
+#&gt; [1] "Islington 022F"
+#&gt; 
+#&gt; [[8]]$msoa
+#&gt; [1] "Islington 022"
+#&gt; 
+#&gt; [[8]]$incode
+#&gt; [1] "1TA"
+#&gt; 
+#&gt; [[8]]$outcode
+#&gt; [1] "EC1A"
+#&gt; 
+#&gt; [[8]]$parliamentary_constituency
+#&gt; [1] "Islington South and Finsbury"
+#&gt; 
+#&gt; [[8]]$admin_district
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[8]]$parish
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[8]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[8]]$admin_ward
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[8]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[8]]$ccg
+#&gt; [1] "NHS Islington"
+#&gt; 
+#&gt; [[8]]$nuts
+#&gt; [1] "Haringey and Islington"
+#&gt; 
+#&gt; [[8]]$codes
+#&gt; [[8]]$codes$admin_district
+#&gt; [1] "E09000019"
+#&gt; 
+#&gt; [[8]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[8]]$codes$admin_ward
+#&gt; [1] "E05000370"
+#&gt; 
+#&gt; [[8]]$codes$parish
+#&gt; [1] "E43000209"
+#&gt; 
+#&gt; [[8]]$codes$parliamentary_constituency
+#&gt; [1] "E14000764"
+#&gt; 
+#&gt; [[8]]$codes$ccg
+#&gt; [1] "E38000088"
+#&gt; 
+#&gt; [[8]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[8]]$codes$nuts
+#&gt; [1] "UKI43"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[9]]
+#&gt; [[9]]$postcode
+#&gt; [1] "EC1A 1TB"
+#&gt; 
+#&gt; [[9]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[9]]$eastings
+#&gt; [1] 531073
+#&gt; 
+#&gt; [[9]]$northings
+#&gt; [1] 182317
+#&gt; 
+#&gt; [[9]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[9]]$nhs_ha
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[9]]$longitude
+#&gt; [1] -0.112042
+#&gt; 
+#&gt; [[9]]$latitude
+#&gt; [1] 51.52457
+#&gt; 
+#&gt; [[9]]$european_electoral_region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[9]]$primary_care_trust
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[9]]$region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[9]]$lsoa
+#&gt; [1] "Islington 022F"
+#&gt; 
+#&gt; [[9]]$msoa
+#&gt; [1] "Islington 022"
+#&gt; 
+#&gt; [[9]]$incode
+#&gt; [1] "1TB"
+#&gt; 
+#&gt; [[9]]$outcode
+#&gt; [1] "EC1A"
+#&gt; 
+#&gt; [[9]]$parliamentary_constituency
+#&gt; [1] "Islington South and Finsbury"
+#&gt; 
+#&gt; [[9]]$admin_district
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[9]]$parish
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[9]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[9]]$admin_ward
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[9]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[9]]$ccg
+#&gt; [1] "NHS Islington"
+#&gt; 
+#&gt; [[9]]$nuts
+#&gt; [1] "Haringey and Islington"
+#&gt; 
+#&gt; [[9]]$codes
+#&gt; [[9]]$codes$admin_district
+#&gt; [1] "E09000019"
+#&gt; 
+#&gt; [[9]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[9]]$codes$admin_ward
+#&gt; [1] "E05000370"
+#&gt; 
+#&gt; [[9]]$codes$parish
+#&gt; [1] "E43000209"
+#&gt; 
+#&gt; [[9]]$codes$parliamentary_constituency
+#&gt; [1] "E14000764"
+#&gt; 
+#&gt; [[9]]$codes$ccg
+#&gt; [1] "E38000088"
+#&gt; 
+#&gt; [[9]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[9]]$codes$nuts
+#&gt; [1] "UKI43"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[10]]
+#&gt; [[10]]$postcode
+#&gt; [1] "EC1A 1TF"
+#&gt; 
+#&gt; [[10]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[10]]$eastings
+#&gt; [1] 531073
+#&gt; 
+#&gt; [[10]]$northings
+#&gt; [1] 182317
+#&gt; 
+#&gt; [[10]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[10]]$nhs_ha
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[10]]$longitude
+#&gt; [1] -0.112042
+#&gt; 
+#&gt; [[10]]$latitude
+#&gt; [1] 51.52457
+#&gt; 
+#&gt; [[10]]$european_electoral_region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[10]]$primary_care_trust
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[10]]$region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[10]]$lsoa
+#&gt; [1] "Islington 022F"
+#&gt; 
+#&gt; [[10]]$msoa
+#&gt; [1] "Islington 022"
+#&gt; 
+#&gt; [[10]]$incode
+#&gt; [1] "1TF"
+#&gt; 
+#&gt; [[10]]$outcode
+#&gt; [1] "EC1A"
+#&gt; 
+#&gt; [[10]]$parliamentary_constituency
+#&gt; [1] "Islington South and Finsbury"
+#&gt; 
+#&gt; [[10]]$admin_district
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[10]]$parish
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[10]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[10]]$admin_ward
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[10]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[10]]$ccg
+#&gt; [1] "NHS Islington"
+#&gt; 
+#&gt; [[10]]$nuts
+#&gt; [1] "Haringey and Islington"
+#&gt; 
+#&gt; [[10]]$codes
+#&gt; [[10]]$codes$admin_district
+#&gt; [1] "E09000019"
+#&gt; 
+#&gt; [[10]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[10]]$codes$admin_ward
+#&gt; [1] "E05000370"
+#&gt; 
+#&gt; [[10]]$codes$parish
+#&gt; [1] "E43000209"
+#&gt; 
+#&gt; [[10]]$codes$parliamentary_constituency
+#&gt; [1] "E14000764"
+#&gt; 
+#&gt; [[10]]$codes$ccg
+#&gt; [1] "E38000088"
+#&gt; 
+#&gt; [[10]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[10]]$codes$nuts
+#&gt; [1] "UKI43"
+#&gt; 
+#&gt; 
+#&gt; 
+#&gt; [[11]]
+#&gt; [[11]]$postcode
+#&gt; [1] "EC1A 1TG"
+#&gt; 
+#&gt; [[11]]$quality
+#&gt; [1] 1
+#&gt; 
+#&gt; [[11]]$eastings
+#&gt; [1] 531073
+#&gt; 
+#&gt; [[11]]$northings
+#&gt; [1] 182317
+#&gt; 
+#&gt; [[11]]$country
+#&gt; [1] "England"
+#&gt; 
+#&gt; [[11]]$nhs_ha
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[11]]$longitude
+#&gt; [1] -0.112042
+#&gt; 
+#&gt; [[11]]$latitude
+#&gt; [1] 51.52457
+#&gt; 
+#&gt; [[11]]$european_electoral_region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[11]]$primary_care_trust
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[11]]$region
+#&gt; [1] "London"
+#&gt; 
+#&gt; [[11]]$lsoa
+#&gt; [1] "Islington 022F"
+#&gt; 
+#&gt; [[11]]$msoa
+#&gt; [1] "Islington 022"
+#&gt; 
+#&gt; [[11]]$incode
+#&gt; [1] "1TG"
+#&gt; 
+#&gt; [[11]]$outcode
+#&gt; [1] "EC1A"
+#&gt; 
+#&gt; [[11]]$parliamentary_constituency
+#&gt; [1] "Islington South and Finsbury"
+#&gt; 
+#&gt; [[11]]$admin_district
+#&gt; [1] "Islington"
+#&gt; 
+#&gt; [[11]]$parish
+#&gt; [1] "Islington, unparished area"
+#&gt; 
+#&gt; [[11]]$admin_county
+#&gt; NULL
+#&gt; 
+#&gt; [[11]]$admin_ward
+#&gt; [1] "Clerkenwell"
+#&gt; 
+#&gt; [[11]]$ced
+#&gt; NULL
+#&gt; 
+#&gt; [[11]]$ccg
+#&gt; [1] "NHS Islington"
+#&gt; 
+#&gt; [[11]]$nuts
+#&gt; [1] "Haringey and Islington"
+#&gt; 
+#&gt; [[11]]$codes
+#&gt; [[11]]$codes$admin_district
+#&gt; [1] "E09000019"
+#&gt; 
+#&gt; [[11]]$codes$admin_county
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[11]]$codes$admin_ward
+#&gt; [1] "E05000370"
+#&gt; 
+#&gt; [[11]]$codes$parish
+#&gt; [1] "E43000209"
+#&gt; 
+#&gt; [[11]]$codes$parliamentary_constituency
+#&gt; [1] "E14000764"
+#&gt; 
+#&gt; [[11]]$codes$ccg
+#&gt; [1] "E38000088"
+#&gt; 
+#&gt; [[11]]$codes$ced
+#&gt; [1] "E99999999"
+#&gt; 
+#&gt; [[11]]$codes$nuts
+#&gt; [1] "UKI43"
+#&gt; 
+#&gt; 
+#&gt; </div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

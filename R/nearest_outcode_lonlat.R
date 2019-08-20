@@ -14,7 +14,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' nearest_outcode_lonlat(0.127, 51.507)
 #' }
 #'

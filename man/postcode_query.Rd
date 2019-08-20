@@ -19,7 +19,7 @@ To return a data frame use \link[PostcodesioR]{postcode_lookup}.
 Submit a postcode query and receive a complete list of postcode matches and all associated postcode data.
 }
 \examples{
-\dontrun{
+\donttest{
 postcode_query("EC1Y8LX")
 postcode_query("EC1", limit = 11)
 }

@@ -17,7 +17,7 @@ A list with a random postcode with corresponding characteristics.
 Returns a random postcode and all available data for that postcode.
 }
 \examples{
-\dontrun{
+\donttest{
 random_postcode()
 random_postcode("N1")
 }
