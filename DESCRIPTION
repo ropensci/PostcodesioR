@@ -1,6 +1,6 @@
 Package: PostcodesioR
 Type: Package
-Title: API Wrapper Around Postcodes.io (Free UK Postcode Lookup and Geocoder)
+Title: API Wrapper Around Postcodes.io
 Version: 0.1.1
 Authors@R: c(person("Eryk", "Walczak", 
                   email = "eryk.j.walczak@gmail.com", 
