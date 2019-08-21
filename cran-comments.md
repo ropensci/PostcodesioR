@@ -1,9 +1,10 @@
 ## Resubmission
+
 This is a resubmission. In this version I have:
 
 * Shortened the title
 
-* Replaced dontrun with donttest in examples
+* Replaced `dontrun` with `donttest` in examples
 
 ## Test environments
 * local ubuntu 16.04, R 3.6.1
