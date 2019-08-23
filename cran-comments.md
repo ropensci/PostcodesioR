@@ -2,6 +2,8 @@
 
 This is a resubmission. In this version I have:
 
+* Wrapped Postcodes.io in DESCRIPTION Title in quotation marks
+
 * Shortened the title
 
 * Replaced `dontrun` with `donttest` in examples
