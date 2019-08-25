@@ -92,17 +92,22 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>This package is a developmental version and is available only on GitHub. Hopefully, it will eventually make it to CRAN. In order to install PostcodesioR use the following commands:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="cf">if</span>(<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">require</a></span>(<span class="st">"devtools"</span>)) {</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">  <span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"devtools"</span>)</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">}</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"erzk/PostcodesioR"</span>)</a></code></pre></div>
+<p>This package can be installed from GitHub (developmental version) or CRAN (stable).</p>
+<p>In order to install PostcodesioR use one of the following commands:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># stable version</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"PostcodesioR"</span>)</a></code></pre></div>
+<p>or</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># developmental version</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="cf">if</span>(<span class="op">!</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">require</a></span>(<span class="st">"devtools"</span>)) {</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">  <span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"devtools"</span>)</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">}</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"erzk/PostcodesioR"</span>)</a></code></pre></div>
 </div>
 <div id="loading" class="section level2">
 <h2 class="hasAnchor">
 <a href="#loading" class="anchor"></a>Loading</h2>
-<p>To start using the package use the standard command after you installed it.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(PostcodesioR)</a></code></pre></div>
+<p>Load the package by typing</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(PostcodesioR)</a></code></pre></div>
 </div>
 <div id="examples" class="section level2">
 <h2 class="hasAnchor">
@@ -110,10 +115,10 @@
 <p>Where possible, I tried to return a data frame. Unfortunately, a lot of API calls return more complex data and in those cases it is safer to use lists. The API uses defaults to limit the number of returned calls. Check functions’ documentation for more details.</p>
 <p>For additional information about the returned data and the function calls see the original <a href="https://postcodes.io/docs">documentation</a>.</p>
 <p>The main function of this package provides information related to a given postcode</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="reference/postcode_lookup.html">postcode_lookup</a></span>(<span class="st">"EC1Y8LX"</span>)</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#overview</span></a>
-<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(lookup_result)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="reference/postcode_lookup.html">postcode_lookup</a></span>(<span class="st">"EC1Y8LX"</span>)</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#overview</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(lookup_result)</a></code></pre></div>
 <pre><code>## 'data.frame':    1 obs. of  31 variables:
 ##  $ postcode                       : chr "EC1Y 8LX"
 ##  $ quality                        : int 1
@@ -166,6 +171,8 @@
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
+<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=PostcodesioR">https://​cloud.r-project.org/​package=PostcodesioR</a>
+</li>
 <li>Browse source code at <br><a href="https://github.com/ropensci/PostcodesioR">https://​github.com/​ropensci/​PostcodesioR</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/ropensci/PostcodesioR/issues">https://​github.com/​ropensci/​PostcodesioR/​issues</a>
