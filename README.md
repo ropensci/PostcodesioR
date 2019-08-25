@@ -26,11 +26,20 @@ is achieving this and in many other cases.
 
 ## Installation
 
-This package is a developmental version and is available only on GitHub.
-Hopefully, it will eventually make it to CRAN. In order to install
-PostcodesioR use the following commands:
+This package can be installed from GitHub (developmental version) or
+CRAN (stable).
+
+In order to install PostcodesioR use one of the following commands:
 
 ``` r
+# stable version
+install.packages("PostcodesioR")
+```
+
+or
+
+``` r
+# developmental version
 if(!require("devtools")) {
   install.packages("devtools")
 }
@@ -39,8 +48,7 @@ devtools::install_github("erzk/PostcodesioR")
 
 ## Loading
 
-To start using the package use the standard command after you installed
-it.
+Load the package by typing
 
 ``` r
 library(PostcodesioR)
