@@ -61,14 +61,7 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="https://github.com/ropensci/PostcodesioR">
-    <span class="fa fa-github fa-lg"></span>
-     
-  </a>
-</li>
-      </ul>
+<ul class="nav navbar-nav navbar-right"></ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -85,7 +78,7 @@
             
             <h4 class="date">2019-08-25</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/ropensci/PostcodesioR/blob/master/vignettes/Introduction.Rmd"><code>vignettes/Introduction.Rmd</code></a></small>
+      
       <div class="hidden name"><code>Introduction.Rmd</code></div>
 
     </div>
@@ -539,112 +532,112 @@
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="co"># without restrictions</span></a>
 <a class="sourceLine" id="cb24-2" data-line-number="2"><span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>()</a></code></pre></div>
 <pre><code>## $postcode
-## [1] "ME9 8NE"
+## [1] "GL56 0QY"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 587153
+## [1] 417420
 ## 
 ## $northings
-## [1] 164487
+## [1] 229212
 ## 
 ## $country
 ## [1] "England"
 ## 
 ## $nhs_ha
-## [1] "South East Coast"
+## [1] "South West"
 ## 
 ## $longitude
-## [1] 0.686092
+## [1] -1.747887
 ## 
 ## $latitude
-## [1] 51.34864
+## [1] 51.96112
 ## 
 ## $european_electoral_region
-## [1] "South East"
+## [1] "South West"
 ## 
 ## $primary_care_trust
-## [1] "Eastern and Coastal Kent"
+## [1] "Gloucestershire"
 ## 
 ## $region
-## [1] "South East"
+## [1] "South West"
 ## 
 ## $lsoa
-## [1] "Swale 008B"
+## [1] "Cotswold 002C"
 ## 
 ## $msoa
-## [1] "Swale 008"
+## [1] "Cotswold 002"
 ## 
 ## $incode
-## [1] "8NE"
+## [1] "0QY"
 ## 
 ## $outcode
-## [1] "ME9"
+## [1] "GL56"
 ## 
 ## $parliamentary_constituency
-## [1] "Sittingbourne and Sheppey"
+## [1] "The Cotswolds"
 ## 
 ## $admin_district
-## [1] "Swale"
+## [1] "Cotswold"
 ## 
 ## $parish
-## [1] "Newington"
+## [1] "Longborough"
 ## 
 ## $admin_county
-## [1] "Kent"
+## [1] "Gloucestershire"
 ## 
 ## $admin_ward
-## [1] "Hartlip, Newington and Upchurch"
+## [1] "Fosseridge"
 ## 
 ## $ced
-## [1] "Swale West"
+## [1] "Campden-Vale"
 ## 
 ## $ccg
-## [1] "NHS Swale"
+## [1] "NHS Gloucestershire"
 ## 
 ## $nuts
-## [1] "Kent Thames Gateway"
+## [1] "Gloucestershire"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "E07000113"
+## [1] "E07000079"
 ## 
 ## $codes$admin_county
-## [1] "E10000016"
+## [1] "E10000013"
 ## 
 ## $codes$admin_ward
-## [1] "E05009550"
+## [1] "E05010706"
 ## 
 ## $codes$parish
-## [1] "E04005063"
+## [1] "E04004243"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "E14000927"
+## [1] "E14000991"
 ## 
 ## $codes$ccg
-## [1] "E38000180"
+## [1] "E38000062"
 ## 
 ## $codes$ced
-## [1] "E58000738"
+## [1] "E58000484"
 ## 
 ## $codes$nuts
-## [1] "UKJ43"</code></pre>
+## [1] "UKK13"</code></pre>
 <p>A randomly generated postcode can also belong to a particular outcode:</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1"><span class="co"># restrict to an outcode</span></a>
 <a class="sourceLine" id="cb26-2" data-line-number="2"><span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</a></code></pre></div>
 <pre><code>## $postcode
-## [1] "N1 0NE"
+## [1] "N1 4BB"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 530774
+## [1] 533392
 ## 
 ## $northings
-## [1] 183900
+## [1] 184833
 ## 
 ## $country
 ## [1] "England"
@@ -653,10 +646,10 @@
 ## [1] "London"
 ## 
 ## $longitude
-## [1] -0.115763
+## [1] -0.077683
 ## 
 ## $latitude
-## [1] 51.53886
+## [1] 51.54663
 ## 
 ## $european_electoral_region
 ## [1] "London"
@@ -668,19 +661,19 @@
 ## [1] "London"
 ## 
 ## $lsoa
-## [1] "Islington 017D"
+## [1] "Islington 012B"
 ## 
 ## $msoa
-## [1] "Islington 017"
+## [1] "Islington 012"
 ## 
 ## $incode
-## [1] "0NE"
+## [1] "4BB"
 ## 
 ## $outcode
 ## [1] "N1"
 ## 
 ## $parliamentary_constituency
-## [1] "Islington South and Finsbury"
+## [1] "Islington North"
 ## 
 ## $admin_district
 ## [1] "Islington"
@@ -692,7 +685,7 @@
 ## NULL
 ## 
 ## $admin_ward
-## [1] "Caledonian"
+## [1] "Mildmay"
 ## 
 ## $ced
 ## NULL
@@ -711,13 +704,13 @@
 ## [1] "E99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05000368"
+## [1] "E05000377"
 ## 
 ## $codes$parish
 ## [1] "E43000209"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "E14000764"
+## [1] "E14000763"
 ## 
 ## $codes$ccg
 ## [1] "E38000088"
@@ -734,16 +727,14 @@
 <a href="#places" class="anchor"></a>Places</h2>
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="kw"><a href="../reference/random_place.html">random_place</a></span>()</a></code></pre></div>
-<pre><code>##                   code     name_1 name_1_lang name_2 name_2_lang
-## 1 osgb4000000074308192 Chickenley        NULL   NULL        NULL
-##      local_type outcode county_unitary county_unitary_type
-## 1 Suburban Area    WF12           NULL                NULL
-##   district_borough district_borough_type                   region country
-## 1         Kirklees  MetropolitanDistrict Yorkshire and the Humber England
-##   longitude latitude eastings northings min_eastings min_northings
-## 1 -1.600073 53.68787   426509    421343       425861        420855
-##   max_eastings max_northings
-## 1       426961        421945</code></pre>
+<pre><code>##                   code   name_1 name_1_lang name_2 name_2_lang local_type
+## 1 osgb4000000074577837 Wain Lee        NULL   NULL        NULL     Hamlet
+##   outcode county_unitary county_unitary_type     district_borough
+## 1     ST7  Staffordshire              County Newcastle-under-Lyme
+##   district_borough_type        region country longitude latitude eastings
+## 1              District West Midlands England -2.199134 53.10043   386764
+##   northings min_eastings min_northings max_eastings max_northings
+## 1    355933       386552        355602       387052        356102</code></pre>
 </div>
 <div id="postcode-validation" class="section level2">
 <h2 class="hasAnchor">
