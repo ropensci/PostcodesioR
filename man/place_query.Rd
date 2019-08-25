@@ -2,7 +2,7 @@
 % Please edit documentation in R/place_query.R
 \name{place_query}
 \alias{place_query}
-\title{Place Query}
+\title{Place query}
 \usage{
 place_query(place, limit = 10)
 }

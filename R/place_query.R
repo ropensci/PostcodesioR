@@ -1,4 +1,4 @@
-#' Place Query
+#' Place query
 #'
 #' Submit a place query and receive a complete list of places matches and associated data.
 #' This function is similar to \code{\link{place_lookup}} but it returns a list

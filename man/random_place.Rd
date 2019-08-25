@@ -2,7 +2,7 @@
 % Please edit documentation in R/random_place.R
 \name{random_place}
 \alias{random_place}
-\title{Random Place}
+\title{Random place}
 \usage{
 random_place()
 }

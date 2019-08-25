@@ -2,7 +2,7 @@
 % Please edit documentation in R/place_lookup.R
 \name{place_lookup}
 \alias{place_lookup}
-\title{Place Lookup}
+\title{Place lookup}
 \usage{
 place_lookup(code)
 }

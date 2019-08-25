@@ -1,4 +1,4 @@
-#' Place Lookup
+#' Place lookup
 #'
 #' Lookup a place by code. Returns all available data if found. Returns 404 if a place does not exist.
 #'

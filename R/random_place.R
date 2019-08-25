@@ -1,4 +1,4 @@
-#' Random Place
+#' Random place
 #'
 #' Returns a random place and all associated data
 #'
