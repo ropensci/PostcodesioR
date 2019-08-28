@@ -76,7 +76,7 @@
       <h1>Introduction</h1>
                         <h4 class="author">Eryk Walczak</h4>
             
-            <h4 class="date">2019-08-25</h4>
+            <h4 class="date">2019-08-28</h4>
       
       
       <div class="hidden name"><code>Introduction.Rmd</code></div>
@@ -532,112 +532,112 @@
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="co"># without restrictions</span></a>
 <a class="sourceLine" id="cb24-2" data-line-number="2"><span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>()</a></code></pre></div>
 <pre><code>## $postcode
-## [1] "GL56 0QY"
+## [1] "DD10 0ET"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 417420
+## [1] 379906
 ## 
 ## $northings
-## [1] 229212
+## [1] 767176
 ## 
 ## $country
-## [1] "England"
+## [1] "Scotland"
 ## 
 ## $nhs_ha
-## [1] "South West"
+## [1] "Grampian"
 ## 
 ## $longitude
-## [1] -1.747887
+## [1] -2.330585
 ## 
 ## $latitude
-## [1] 51.96112
+## [1] 56.79569
 ## 
 ## $european_electoral_region
-## [1] "South West"
+## [1] "Scotland"
 ## 
 ## $primary_care_trust
-## [1] "Gloucestershire"
+## [1] "Aberdeenshire Community Health Partnership"
 ## 
 ## $region
-## [1] "South West"
+## NULL
 ## 
 ## $lsoa
-## [1] "Cotswold 002C"
+## [1] "Mearns South and Benholm - 05"
 ## 
 ## $msoa
-## [1] "Cotswold 002"
+## [1] "Mearns South and Benholm"
 ## 
 ## $incode
-## [1] "0QY"
+## [1] "0ET"
 ## 
 ## $outcode
-## [1] "GL56"
+## [1] "DD10"
 ## 
 ## $parliamentary_constituency
-## [1] "The Cotswolds"
+## [1] "West Aberdeenshire and Kincardine"
 ## 
 ## $admin_district
-## [1] "Cotswold"
+## [1] "Aberdeenshire"
 ## 
 ## $parish
-## [1] "Longborough"
+## NULL
 ## 
 ## $admin_county
-## [1] "Gloucestershire"
+## NULL
 ## 
 ## $admin_ward
-## [1] "Fosseridge"
+## [1] "Mearns"
 ## 
 ## $ced
-## [1] "Campden-Vale"
+## NULL
 ## 
 ## $ccg
-## [1] "NHS Gloucestershire"
+## [1] "Aberdeenshire Community Health Partnership"
 ## 
 ## $nuts
-## [1] "Gloucestershire"
+## [1] "Aberdeen City and Aberdeenshire"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "E07000079"
+## [1] "S12000034"
 ## 
 ## $codes$admin_county
-## [1] "E10000013"
+## [1] "S99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05010706"
+## [1] "S13002866"
 ## 
 ## $codes$parish
-## [1] "E04004243"
+## [1] "S99999999"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "E14000991"
+## [1] "S14000058"
 ## 
 ## $codes$ccg
-## [1] "E38000062"
+## [1] "S03000013"
 ## 
 ## $codes$ced
-## [1] "E58000484"
+## [1] "S99999999"
 ## 
 ## $codes$nuts
-## [1] "UKK13"</code></pre>
+## [1] "UKM50"</code></pre>
 <p>A randomly generated postcode can also belong to a particular outcode:</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1"><span class="co"># restrict to an outcode</span></a>
 <a class="sourceLine" id="cb26-2" data-line-number="2"><span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</a></code></pre></div>
 <pre><code>## $postcode
-## [1] "N1 4BB"
+## [1] "N1 5PP"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 533392
+## [1] 533100
 ## 
 ## $northings
-## [1] 184833
+## [1] 183758
 ## 
 ## $country
 ## [1] "England"
@@ -646,80 +646,80 @@
 ## [1] "London"
 ## 
 ## $longitude
-## [1] -0.077683
+## [1] -0.082298
 ## 
 ## $latitude
-## [1] 51.54663
+## [1] 51.53704
 ## 
 ## $european_electoral_region
 ## [1] "London"
 ## 
 ## $primary_care_trust
-## [1] "Islington"
+## [1] "City and Hackney Teaching"
 ## 
 ## $region
 ## [1] "London"
 ## 
 ## $lsoa
-## [1] "Islington 012B"
+## [1] "Hackney 025B"
 ## 
 ## $msoa
-## [1] "Islington 012"
+## [1] "Hackney 025"
 ## 
 ## $incode
-## [1] "4BB"
+## [1] "5PP"
 ## 
 ## $outcode
 ## [1] "N1"
 ## 
 ## $parliamentary_constituency
-## [1] "Islington North"
+## [1] "Hackney South and Shoreditch"
 ## 
 ## $admin_district
-## [1] "Islington"
+## [1] "Hackney"
 ## 
 ## $parish
-## [1] "Islington, unparished area"
+## [1] "Hackney, unparished area"
 ## 
 ## $admin_county
 ## NULL
 ## 
 ## $admin_ward
-## [1] "Mildmay"
+## [1] "Hoxton East &amp; Shoreditch"
 ## 
 ## $ced
 ## NULL
 ## 
 ## $ccg
-## [1] "NHS Islington"
+## [1] "NHS City and Hackney"
 ## 
 ## $nuts
-## [1] "Haringey and Islington"
+## [1] "Hackney and Newham"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "E09000019"
+## [1] "E09000012"
 ## 
 ## $codes$admin_county
 ## [1] "E99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05000377"
+## [1] "E05009377"
 ## 
 ## $codes$parish
-## [1] "E43000209"
+## [1] "E43000202"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "E14000763"
+## [1] "E14000721"
 ## 
 ## $codes$ccg
-## [1] "E38000088"
+## [1] "E38000035"
 ## 
 ## $codes$ced
 ## [1] "E99999999"
 ## 
 ## $codes$nuts
-## [1] "UKI43"</code></pre>
+## [1] "UKI41"</code></pre>
 </div>
 </div>
 <div id="places" class="section level2">
@@ -727,14 +727,16 @@
 <a href="#places" class="anchor"></a>Places</h2>
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="kw"><a href="../reference/random_place.html">random_place</a></span>()</a></code></pre></div>
-<pre><code>##                   code   name_1 name_1_lang name_2 name_2_lang local_type
-## 1 osgb4000000074577837 Wain Lee        NULL   NULL        NULL     Hamlet
-##   outcode county_unitary county_unitary_type     district_borough
-## 1     ST7  Staffordshire              County Newcastle-under-Lyme
-##   district_borough_type        region country longitude latitude eastings
-## 1              District West Midlands England -2.199134 53.10043   386764
-##   northings min_eastings min_northings max_eastings max_northings
-## 1    355933       386552        355602       387052        356102</code></pre>
+<pre><code>##                   code       name_1 name_1_lang name_2 name_2_lang
+## 1 osgb4000000074549339 South Hylton        NULL   NULL        NULL
+##      local_type outcode county_unitary county_unitary_type
+## 1 Suburban Area     SR4           NULL                NULL
+##   district_borough district_borough_type     region country longitude
+## 1       Sunderland  MetropolitanDistrict North East England   -1.4495
+##   latitude eastings northings min_eastings min_northings max_eastings
+## 1 54.90471   435397    556804       434851        556147       436024
+##   max_northings
+## 1        557472</code></pre>
 </div>
 <div id="postcode-validation" class="section level2">
 <h2 class="hasAnchor">

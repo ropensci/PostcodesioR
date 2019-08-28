@@ -81,7 +81,7 @@
     
 
 <p>An API wrapper around <a href="https://postcodes.io/">postcodes.io</a> - free UK postcode lookup and geocoder. This package helps to find and transform information about UK administrative geography like postcodes, LSOA, MSOA, constituencies, counties, wards, districts, CCG or NUTS.</p>
-<p>The package is based exclusively on open data provided by postcodes.io. PostcodesioR can be used by data scientists or social scientists working with geocoded UK data. A common task when working with such data is aggregating geocoded data on different administrative levels, e.g. turning postcode-level data into counties. This package can help is achieving this and in many other cases.</p>
+<p>The package is based exclusively on open data provided by postcodes.io. PostcodesioR can be used by data scientists or social scientists working with geocoded UK data. A common task when working with such data is aggregating geocoded data on different administrative levels, e.g. turning postcode-level data into counties or regions. This package can help in achieving this and in many other cases when changing the aggregation of geographic data is required.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -105,7 +105,7 @@
 <div id="examples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h2>
-<p>Where possible, I tried to return a data frame. Unfortunately, a lot of API calls return more complex data and in those cases it is safer to use lists. The API uses defaults to limit the number of returned calls. Check functions’ documentation for more details.</p>
+<p>Where possible, I tried to return a data frame. Unfortunately, a lot of API calls return more complex data and in those cases it is safer to use lists. The API limits the number of returned calls. Check functions’ documentation for more details.</p>
 <p>For additional information about the returned data and the function calls see the original <a href="https://postcodes.io/docs">documentation</a>.</p>
 <p>The main function of this package provides information related to a given postcode</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="reference/postcode_lookup.html">postcode_lookup</a></span>(<span class="st">"EC1Y8LX"</span>)</a>
