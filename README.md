@@ -21,8 +21,9 @@ The package is based exclusively on open data provided by postcodes.io.
 PostcodesioR can be used by data scientists or social scientists working
 with geocoded UK data. A common task when working with such data is
 aggregating geocoded data on different administrative levels,
-e.g. turning postcode-level data into counties. This package can help
-is achieving this and in many other cases.
+e.g. turning postcode-level data into counties or regions. This package
+can help in achieving this and in many other cases when changing the
+aggregation of geographic data is required.
 
 ## Installation
 
@@ -58,8 +59,8 @@ library(PostcodesioR)
 
 Where possible, I tried to return a data frame. Unfortunately, a lot of
 API calls return more complex data and in those cases it is safer to use
-lists. The API uses defaults to limit the number of returned calls.
-Check functions’ documentation for more details.
+lists. The API limits the number of returned calls. Check functions’
+documentation for more details.
 
 For additional information about the returned data and the function
 calls see the original [documentation](https://postcodes.io/docs).
