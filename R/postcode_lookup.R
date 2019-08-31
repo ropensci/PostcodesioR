@@ -99,6 +99,7 @@
 #' \donttest{
 #' postcode_lookup("EC1Y8LX")
 #' postcode_lookup("EC1Y 8LX") # spaces are ignored
+#' postcode_lookup("DE3 5LF") # terminated postcode returns NAs
 #' }
 #'
 postcode_lookup <- function(postcode) {
@@ -124,6 +125,25 @@ postcode_lookup <- function(postcode) {
     pc_df <- cbind(as.data.frame(pc_result[take_names],
                                  stringsAsFactors = FALSE),
                    pc_codes)
+    return(pc_df)
+  }
+  # if error (404) return NAs
+  if (status_code(r) == 404) {
+    print(paste("Postcode", postcode, "is incorrect or expired."))
+    pc_df <-
+      structure(list(postcode = postcode, quality = NA, eastings = NA,
+                     northings = NA, country = NA, nhs_ha = NA,
+                     longitude = NA, latitude = NA, european_electoral_region = NA,
+                     primary_care_trust = NA, region = NA, lsoa = NA,
+                     msoa = NA, incode = NA, outcode = NA,
+                     parliamentary_constituency = NA,
+                     admin_district = NA, parish = NA,
+                     admin_county = NA, admin_ward = NA, ced = NA, ccg = NA,
+                     nuts = NA, admin_district_code = NA,
+                     admin_county_code = NA, admin_ward_code = NA,
+                     parish_code = NA, parliamentary_constituency_code = NA,
+                     ccg_code = NA, ced_code = NA, nuts_code = NA),
+                class = "data.frame", row.names = c(NA, -1L))
     return(pc_df)
   }
 }

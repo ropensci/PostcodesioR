@@ -106,6 +106,7 @@ Lookup a postcode.
 \donttest{
 postcode_lookup("EC1Y8LX")
 postcode_lookup("EC1Y 8LX") # spaces are ignored
+postcode_lookup("DE3 5LF") # terminated postcode returns NAs
 }
 
 }
