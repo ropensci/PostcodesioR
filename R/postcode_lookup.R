@@ -119,7 +119,7 @@ postcode_lookup <- function(postcode) {
     r <- content(r)
     pc_result <- r[["result"]]
     take_names <- setdiff(names(pc_result), "codes")
-    pc_codes <- as.data.frame(pc_result$codes, stringsAsFactors = FALSE)
+    pc_codes <- as.data.frame(do.call(cbind, pc_result$codes), stringsAsFactors = FALSE)
     colnames(pc_codes) <- paste0(names(pc_codes), "_code")
     pc_result[sapply(pc_result, is.null)] <- list(NA)
     pc_df <- cbind(as.data.frame(pc_result[take_names],
