@@ -76,7 +76,7 @@
       <h1>Introduction</h1>
                         <h4 class="author">Eryk Walczak</h4>
             
-            <h4 class="date">2019-08-28</h4>
+            <h4 class="date">2019-11-07</h4>
       
       
       <div class="hidden name"><code>Introduction.Rmd</code></div>
@@ -223,21 +223,30 @@
 ##   .. .. ..$ ccg                       : chr "E38000226"
 ##   .. .. ..$ ced                       : chr "E58000832"
 ##   .. .. ..$ nuts                      : chr "UKD44"</code></pre>
+<p>If you want to work with data frame then the nested list created above can be turned into a data frame</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(purrr)</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3">bulk_list &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">lapply</a></span>(bulk_lookup_result, <span class="st">"[["</span>, <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb8-5" data-line-number="5">bulk_df &lt;-</a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span>(bulk_list,</a>
+<a class="sourceLine" id="cb8-7" data-line-number="7">          <span class="st">`</span><span class="dt">[</span><span class="st">`</span>,</a>
+<a class="sourceLine" id="cb8-8" data-line-number="8">          <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"postcode"</span>, <span class="st">"longitude"</span>, <span class="st">"latitude"</span>))</a></code></pre></div>
 </div>
 <div id="outward-code-lookup" class="section level3">
 <h3 class="hasAnchor">
 <a href="#outward-code-lookup" class="anchor"></a>Outward code lookup</h3>
 <p>Provide an outcode to obtain geolocation data for the centroid of the specified outcode:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">ocl &lt;-<span class="st"> </span><span class="kw"><a href="../reference/outward_code_lookup.html">outward_code_lookup</a></span>(<span class="st">"E1"</span>)</a>
-<a class="sourceLine" id="cb8-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="co">#overview</span></a>
-<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(ocl)</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">ocl &lt;-<span class="st"> </span><span class="kw"><a href="../reference/outward_code_lookup.html">outward_code_lookup</a></span>(<span class="st">"E1"</span>)</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="co">#overview</span></a>
+<a class="sourceLine" id="cb9-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(ocl)</a></code></pre></div>
 <pre><code>## List of 10
 ##  $ outcode       : chr "E1"
 ##  $ longitude     : num -0.0595
 ##  $ latitude      : num 51.5
-##  $ northings     : int 181614
-##  $ eastings      : int 534738
+##  $ northings     : int 181613
+##  $ eastings      : int 534737
 ##  $ admin_district:List of 3
 ##   ..$ : chr "Hackney"
 ##   ..$ : chr "City of London"
@@ -272,10 +281,10 @@
 <div id="single-postcode-1" class="section level3">
 <h3 class="hasAnchor">
 <a href="#single-postcode-1" class="anchor"></a>Single postcode</h3>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../reference/reverse_geocoding.html">reverse_geocoding</a></span>(<span class="fl">0.127</span>, <span class="fl">51.507</span>)</a>
-<a class="sourceLine" id="cb10-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="co"># overview</span></a>
-<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(rev_geo[<span class="dv">1</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../reference/reverse_geocoding.html">reverse_geocoding</a></span>(<span class="fl">0.127</span>, <span class="fl">51.507</span>)</a>
+<a class="sourceLine" id="cb11-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb11-3" data-line-number="3"><span class="co"># overview</span></a>
+<a class="sourceLine" id="cb11-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(rev_geo[<span class="dv">1</span>])</a></code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 25
 ##   ..$ postcode                  : chr "SE28 8NH"
@@ -316,23 +325,23 @@
 <h3 class="hasAnchor">
 <a href="#multiple-postcodes-1" class="anchor"></a>Multiple postcodes</h3>
 <p>To reverse geocode multiple values use the function underneath. The result is a nested list, which might be a bit intimidating, but it allows storing unequal number of elements.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="co"># create a list with the coordinates</span></a>
-<a class="sourceLine" id="cb12-2" data-line-number="2">geolocations_list &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/structure">structure</a></span>(</a>
-<a class="sourceLine" id="cb12-3" data-line-number="3"> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(</a>
-<a class="sourceLine" id="cb12-4" data-line-number="4"> <span class="dt">geolocations =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/structure">structure</a></span>(</a>
-<a class="sourceLine" id="cb12-5" data-line-number="5"> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(</a>
-<a class="sourceLine" id="cb12-6" data-line-number="6"> <span class="dt">longitude =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="op">-</span><span class="fl">3.15807731271522</span>, <span class="fl">-1.12935802905177</span>),</a>
-<a class="sourceLine" id="cb12-7" data-line-number="7"> <span class="dt">latitude =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="fl">51.4799900627036</span>, <span class="fl">50.7186356978817</span>),</a>
-<a class="sourceLine" id="cb12-8" data-line-number="8"> <span class="dt">limit =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="ot">NA</span>, 100L),</a>
-<a class="sourceLine" id="cb12-9" data-line-number="9"> <span class="dt">radius =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="ot">NA</span>, 500L)),</a>
-<a class="sourceLine" id="cb12-10" data-line-number="10"> <span class="dt">.Names =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"longitude"</span>, <span class="st">"latitude"</span>, <span class="st">"limit"</span>, <span class="st">"radius"</span>),</a>
-<a class="sourceLine" id="cb12-11" data-line-number="11"> <span class="dt">class =</span> <span class="st">"data.frame"</span>,</a>
-<a class="sourceLine" id="cb12-12" data-line-number="12"> <span class="dt">row.names =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>)),</a>
-<a class="sourceLine" id="cb12-13" data-line-number="13"> <span class="dt">.Names =</span> <span class="st">"geolocations"</span>)</a>
-<a class="sourceLine" id="cb12-14" data-line-number="14"></a>
-<a class="sourceLine" id="cb12-15" data-line-number="15">bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../reference/bulk_reverse_geocoding.html">bulk_reverse_geocoding</a></span>(geolocations_list)</a>
-<a class="sourceLine" id="cb12-16" data-line-number="16"></a>
-<a class="sourceLine" id="cb12-17" data-line-number="17">bulk_rev_geo[[<span class="dv">1</span>]]<span class="op">$</span>result[[<span class="dv">1</span>]]</a></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="co"># create a list with the coordinates</span></a>
+<a class="sourceLine" id="cb13-2" data-line-number="2">geolocations_list &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/structure">structure</a></span>(</a>
+<a class="sourceLine" id="cb13-3" data-line-number="3"> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(</a>
+<a class="sourceLine" id="cb13-4" data-line-number="4"> <span class="dt">geolocations =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/structure">structure</a></span>(</a>
+<a class="sourceLine" id="cb13-5" data-line-number="5"> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(</a>
+<a class="sourceLine" id="cb13-6" data-line-number="6"> <span class="dt">longitude =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="op">-</span><span class="fl">3.15807731271522</span>, <span class="fl">-1.12935802905177</span>),</a>
+<a class="sourceLine" id="cb13-7" data-line-number="7"> <span class="dt">latitude =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="fl">51.4799900627036</span>, <span class="fl">50.7186356978817</span>),</a>
+<a class="sourceLine" id="cb13-8" data-line-number="8"> <span class="dt">limit =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="ot">NA</span>, 100L),</a>
+<a class="sourceLine" id="cb13-9" data-line-number="9"> <span class="dt">radius =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="ot">NA</span>, 500L)),</a>
+<a class="sourceLine" id="cb13-10" data-line-number="10"> <span class="dt">.Names =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"longitude"</span>, <span class="st">"latitude"</span>, <span class="st">"limit"</span>, <span class="st">"radius"</span>),</a>
+<a class="sourceLine" id="cb13-11" data-line-number="11"> <span class="dt">class =</span> <span class="st">"data.frame"</span>,</a>
+<a class="sourceLine" id="cb13-12" data-line-number="12"> <span class="dt">row.names =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>)),</a>
+<a class="sourceLine" id="cb13-13" data-line-number="13"> <span class="dt">.Names =</span> <span class="st">"geolocations"</span>)</a>
+<a class="sourceLine" id="cb13-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb13-15" data-line-number="15">bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../reference/bulk_reverse_geocoding.html">bulk_reverse_geocoding</a></span>(geolocations_list)</a>
+<a class="sourceLine" id="cb13-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb13-17" data-line-number="17">bulk_rev_geo[[<span class="dv">1</span>]]<span class="op">$</span>result[[<span class="dv">1</span>]]</a></code></pre></div>
 <pre><code>## $postcode
 ## [1] "CF24 2BT"
 ## 
@@ -430,49 +439,49 @@
 ## $codes$nuts
 ## [1] "UKL22"</code></pre>
 <p>The list above is not the most common way of storing files. It’s more likely that a data frame will be used to store the geodata. In that case, it has to be turned into a list of a specific format required by the API:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">geolocations_df &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/structure">structure</a></span>(</a>
-<a class="sourceLine" id="cb14-2" data-line-number="2">  <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(</a>
-<a class="sourceLine" id="cb14-3" data-line-number="3">    <span class="dt">longitude =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="op">-</span><span class="fl">3.15807731271522</span>, <span class="fl">-1.12935802905177</span>),</a>
-<a class="sourceLine" id="cb14-4" data-line-number="4">    <span class="dt">latitude =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="fl">51.4799900627036</span>, <span class="fl">50.7186356978817</span>),</a>
-<a class="sourceLine" id="cb14-5" data-line-number="5">    <span class="dt">limit =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="ot">NA</span>, 100L),</a>
-<a class="sourceLine" id="cb14-6" data-line-number="6">    <span class="dt">radius =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="ot">NA</span>, 500L)),</a>
-<a class="sourceLine" id="cb14-7" data-line-number="7">  <span class="dt">.Names =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"longitude"</span>, <span class="st">"latitude"</span>, <span class="st">"limit"</span>, <span class="st">"radius"</span>),</a>
-<a class="sourceLine" id="cb14-8" data-line-number="8">  <span class="dt">row.names =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,</a>
-<a class="sourceLine" id="cb14-9" data-line-number="9">  <span class="dt">class =</span> <span class="st">"data.frame"</span>)</a>
-<a class="sourceLine" id="cb14-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb14-11" data-line-number="11">geolocations_df</a></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1">geolocations_df &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/structure">structure</a></span>(</a>
+<a class="sourceLine" id="cb15-2" data-line-number="2">  <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(</a>
+<a class="sourceLine" id="cb15-3" data-line-number="3">    <span class="dt">longitude =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="op">-</span><span class="fl">3.15807731271522</span>, <span class="fl">-1.12935802905177</span>),</a>
+<a class="sourceLine" id="cb15-4" data-line-number="4">    <span class="dt">latitude =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="fl">51.4799900627036</span>, <span class="fl">50.7186356978817</span>),</a>
+<a class="sourceLine" id="cb15-5" data-line-number="5">    <span class="dt">limit =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="ot">NA</span>, 100L),</a>
+<a class="sourceLine" id="cb15-6" data-line-number="6">    <span class="dt">radius =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="ot">NA</span>, 500L)),</a>
+<a class="sourceLine" id="cb15-7" data-line-number="7">  <span class="dt">.Names =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"longitude"</span>, <span class="st">"latitude"</span>, <span class="st">"limit"</span>, <span class="st">"radius"</span>),</a>
+<a class="sourceLine" id="cb15-8" data-line-number="8">  <span class="dt">row.names =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb15-9" data-line-number="9">  <span class="dt">class =</span> <span class="st">"data.frame"</span>)</a>
+<a class="sourceLine" id="cb15-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb15-11" data-line-number="11">geolocations_df</a></code></pre></div>
 <pre><code>##   longitude latitude limit radius
 ## 1 -3.158077 51.47999    NA     NA
 ## 2 -1.129358 50.71864   100    500</code></pre>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="co"># turn a data frame into a list</span></a>
-<a class="sourceLine" id="cb16-2" data-line-number="2">geolocations_df2list &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(geolocations_df)</a>
-<a class="sourceLine" id="cb16-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb16-4" data-line-number="4"><span class="co"># add a list name</span></a>
-<a class="sourceLine" id="cb16-5" data-line-number="5"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/names">names</a></span>(geolocations_df2list) &lt;-<span class="st"> "geolocations"</span></a>
-<a class="sourceLine" id="cb16-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb16-7" data-line-number="7"><span class="co"># display correct input for the function</span></a>
-<a class="sourceLine" id="cb16-8" data-line-number="8">geolocations_df2list</a></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="co"># turn a data frame into a list</span></a>
+<a class="sourceLine" id="cb17-2" data-line-number="2">geolocations_df2list &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(geolocations_df)</a>
+<a class="sourceLine" id="cb17-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb17-4" data-line-number="4"><span class="co"># add a list name</span></a>
+<a class="sourceLine" id="cb17-5" data-line-number="5"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/names">names</a></span>(geolocations_df2list) &lt;-<span class="st"> "geolocations"</span></a>
+<a class="sourceLine" id="cb17-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb17-7" data-line-number="7"><span class="co"># display correct input for the function</span></a>
+<a class="sourceLine" id="cb17-8" data-line-number="8">geolocations_df2list</a></code></pre></div>
 <pre><code>## $geolocations
 ##   longitude latitude limit radius
 ## 1 -3.158077 51.47999    NA     NA
 ## 2 -1.129358 50.71864   100    500</code></pre>
 <p>Common usage of this function might be extracting particular variables. You can extract one variable like this:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="co"># extract one postcode</span></a>
-<a class="sourceLine" id="cb18-2" data-line-number="2">bulk_rev_geo[[<span class="dv">1</span>]]<span class="op">$</span>result[[<span class="dv">8</span>]]<span class="op">$</span>postcode</a></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="co"># extract one postcode</span></a>
+<a class="sourceLine" id="cb19-2" data-line-number="2">bulk_rev_geo[[<span class="dv">1</span>]]<span class="op">$</span>result[[<span class="dv">8</span>]]<span class="op">$</span>postcode</a></code></pre></div>
 <pre><code>## [1] "CF24 2AL"</code></pre>
 <p>But more likely you will want more than one result. After all, that’s the point of using a bulk function:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="co"># function to extract variables of interest</span></a>
-<a class="sourceLine" id="cb20-2" data-line-number="2">extract_bulk_geo_variable &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</a>
-<a class="sourceLine" id="cb20-3" data-line-number="3">  bulk_results &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">lapply</a></span>(bulk_rev_geo, <span class="st">`</span><span class="dt">[[</span><span class="st">`</span>, <span class="st">"result"</span>)</a>
-<a class="sourceLine" id="cb20-4" data-line-number="4">  <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">sapply</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unlist">unlist</a></span>(bulk_results, <span class="dt">recursive =</span> <span class="ot">FALSE</span>), <span class="st">`</span><span class="dt">[[</span><span class="st">`</span>, x)</a>
-<a class="sourceLine" id="cb20-5" data-line-number="5">}</a>
-<a class="sourceLine" id="cb20-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb20-7" data-line-number="7"><span class="co"># define the variables you need</span></a>
-<a class="sourceLine" id="cb20-8" data-line-number="8">variables_of_interest &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"postcode"</span>, <span class="st">"latitude"</span>, <span class="st">"longitude"</span>)</a>
-<a class="sourceLine" id="cb20-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb20-10" data-line-number="10"><span class="co"># return a data frame with the variables</span></a>
-<a class="sourceLine" id="cb20-11" data-line-number="11"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/data.frame">data.frame</a></span>(</a>
-<a class="sourceLine" id="cb20-12" data-line-number="12">  <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">sapply</a></span>(variables_of_interest, extract_bulk_geo_variable))</a></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" data-line-number="1"><span class="co"># function to extract variables of interest</span></a>
+<a class="sourceLine" id="cb21-2" data-line-number="2">extract_bulk_geo_variable &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</a>
+<a class="sourceLine" id="cb21-3" data-line-number="3">  bulk_results &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">lapply</a></span>(bulk_rev_geo, <span class="st">`</span><span class="dt">[[</span><span class="st">`</span>, <span class="st">"result"</span>)</a>
+<a class="sourceLine" id="cb21-4" data-line-number="4">  <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">sapply</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/unlist">unlist</a></span>(bulk_results, <span class="dt">recursive =</span> <span class="ot">FALSE</span>), <span class="st">`</span><span class="dt">[[</span><span class="st">`</span>, x)</a>
+<a class="sourceLine" id="cb21-5" data-line-number="5">}</a>
+<a class="sourceLine" id="cb21-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb21-7" data-line-number="7"><span class="co"># define the variables you need</span></a>
+<a class="sourceLine" id="cb21-8" data-line-number="8">variables_of_interest &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"postcode"</span>, <span class="st">"latitude"</span>, <span class="st">"longitude"</span>)</a>
+<a class="sourceLine" id="cb21-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb21-10" data-line-number="10"><span class="co"># return a data frame with the variables</span></a>
+<a class="sourceLine" id="cb21-11" data-line-number="11"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/data.frame">data.frame</a></span>(</a>
+<a class="sourceLine" id="cb21-12" data-line-number="12">  <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">sapply</a></span>(variables_of_interest, extract_bulk_geo_variable))</a></code></pre></div>
 <pre><code>##    postcode  latitude longitude
 ## 1  CF24 2BT 51.479976 -3.158076
 ## 2  CF24 2ED 51.479691 -3.158688
@@ -493,16 +502,16 @@
 ## 17 PO33 1PB 50.721022 -1.133719
 ## 18 PO33 1PR 50.721486 -1.133187
 ## 19 PO33 1FS 50.717205 -1.123735
-## 20 PO33 1PY 50.715159 -1.126734
-## 21 PO33 1QP 50.715694 -1.124911
-## 22 PO34 5AP 50.721464 -1.124234</code></pre>
+## 20 PO33 1QP 50.715694 -1.124911
+## 21 PO34 5AP 50.721536 -1.124476
+## 22 PO33 1PY 50.715218 -1.125104</code></pre>
 </div>
 <div id="single-outcode" class="section level3">
 <h3 class="hasAnchor">
 <a href="#single-outcode" class="anchor"></a>Single outcode</h3>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">out_rev_geocode &lt;-<span class="st"> </span><span class="kw"><a href="../reference/outcode_reverse_geocoding.html">outcode_reverse_geocoding</a></span>(<span class="st">"-3.15"</span>, <span class="st">"51.47"</span>)</a>
-<a class="sourceLine" id="cb22-2" data-line-number="2"><span class="co"># overview</span></a>
-<a class="sourceLine" id="cb22-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(out_rev_geocode[<span class="dv">1</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1">out_rev_geocode &lt;-<span class="st"> </span><span class="kw"><a href="../reference/outcode_reverse_geocoding.html">outcode_reverse_geocoding</a></span>(<span class="st">"-3.15"</span>, <span class="st">"51.47"</span>)</a>
+<a class="sourceLine" id="cb23-2" data-line-number="2"><span class="co"># overview</span></a>
+<a class="sourceLine" id="cb23-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(out_rev_geocode[<span class="dv">1</span>])</a></code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 11
 ##   ..$ outcode       : chr "CF99"
@@ -529,115 +538,115 @@
 <h3 class="hasAnchor">
 <a href="#postcodes" class="anchor"></a>Postcodes</h3>
 <p>Generates a list with a random UK postcode and corresponding geographic information:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="co"># without restrictions</span></a>
-<a class="sourceLine" id="cb24-2" data-line-number="2"><span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>()</a></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1"><span class="co"># without restrictions</span></a>
+<a class="sourceLine" id="cb25-2" data-line-number="2"><span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>()</a></code></pre></div>
 <pre><code>## $postcode
-## [1] "DD10 0ET"
+## [1] "SR2 9QW"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 379906
+## [1] 440773
 ## 
 ## $northings
-## [1] 767176
+## [1] 554797
 ## 
 ## $country
-## [1] "Scotland"
+## [1] "England"
 ## 
 ## $nhs_ha
-## [1] "Grampian"
+## [1] "North East"
 ## 
 ## $longitude
-## [1] -2.330585
+## [1] -1.365947
 ## 
 ## $latitude
-## [1] 56.79569
+## [1] 54.88627
 ## 
 ## $european_electoral_region
-## [1] "Scotland"
+## [1] "North East"
 ## 
 ## $primary_care_trust
-## [1] "Aberdeenshire Community Health Partnership"
+## [1] "Sunderland Teaching"
 ## 
 ## $region
-## NULL
+## [1] "North East"
 ## 
 ## $lsoa
-## [1] "Mearns South and Benholm - 05"
+## [1] "Sunderland 024B"
 ## 
 ## $msoa
-## [1] "Mearns South and Benholm"
+## [1] "Sunderland 024"
 ## 
 ## $incode
-## [1] "0ET"
+## [1] "9QW"
 ## 
 ## $outcode
-## [1] "DD10"
+## [1] "SR2"
 ## 
 ## $parliamentary_constituency
-## [1] "West Aberdeenshire and Kincardine"
+## [1] "Sunderland Central"
 ## 
 ## $admin_district
-## [1] "Aberdeenshire"
+## [1] "Sunderland"
 ## 
 ## $parish
-## NULL
+## [1] "Sunderland, unparished area"
 ## 
 ## $admin_county
 ## NULL
 ## 
 ## $admin_ward
-## [1] "Mearns"
+## [1] "Hendon"
 ## 
 ## $ced
 ## NULL
 ## 
 ## $ccg
-## [1] "Aberdeenshire Community Health Partnership"
+## [1] "NHS Sunderland"
 ## 
 ## $nuts
-## [1] "Aberdeen City and Aberdeenshire"
+## [1] "Sunderland"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "S12000034"
+## [1] "E08000024"
 ## 
 ## $codes$admin_county
-## [1] "S99999999"
+## [1] "E99999999"
 ## 
 ## $codes$admin_ward
-## [1] "S13002866"
+## [1] "E05001158"
 ## 
 ## $codes$parish
-## [1] "S99999999"
+## [1] "E43000178"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "S14000058"
+## [1] "E14000982"
 ## 
 ## $codes$ccg
-## [1] "S03000013"
+## [1] "E38000176"
 ## 
 ## $codes$ced
-## [1] "S99999999"
+## [1] "E99999999"
 ## 
 ## $codes$nuts
-## [1] "UKM50"</code></pre>
+## [1] "UKC23"</code></pre>
 <p>A randomly generated postcode can also belong to a particular outcode:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1"><span class="co"># restrict to an outcode</span></a>
-<a class="sourceLine" id="cb26-2" data-line-number="2"><span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1"><span class="co"># restrict to an outcode</span></a>
+<a class="sourceLine" id="cb27-2" data-line-number="2"><span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</a></code></pre></div>
 <pre><code>## $postcode
-## [1] "N1 5PP"
+## [1] "N1 8RW"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 533100
+## [1] 532103
 ## 
 ## $northings
-## [1] 183758
+## [1] 183923
 ## 
 ## $country
 ## [1] "England"
@@ -646,112 +655,112 @@
 ## [1] "London"
 ## 
 ## $longitude
-## [1] -0.082298
+## [1] -0.096602
 ## 
 ## $latitude
-## [1] 51.53704
+## [1] 51.53876
 ## 
 ## $european_electoral_region
 ## [1] "London"
 ## 
 ## $primary_care_trust
-## [1] "City and Hackney Teaching"
+## [1] "Islington"
 ## 
 ## $region
 ## [1] "London"
 ## 
 ## $lsoa
-## [1] "Hackney 025B"
+## [1] "Islington 018D"
 ## 
 ## $msoa
-## [1] "Hackney 025"
+## [1] "Islington 018"
 ## 
 ## $incode
-## [1] "5PP"
+## [1] "8RW"
 ## 
 ## $outcode
 ## [1] "N1"
 ## 
 ## $parliamentary_constituency
-## [1] "Hackney South and Shoreditch"
+## [1] "Islington South and Finsbury"
 ## 
 ## $admin_district
-## [1] "Hackney"
+## [1] "Islington"
 ## 
 ## $parish
-## [1] "Hackney, unparished area"
+## [1] "Islington, unparished area"
 ## 
 ## $admin_county
 ## NULL
 ## 
 ## $admin_ward
-## [1] "Hoxton East &amp; Shoreditch"
+## [1] "St Peter's"
 ## 
 ## $ced
 ## NULL
 ## 
 ## $ccg
-## [1] "NHS City and Hackney"
+## [1] "NHS Islington"
 ## 
 ## $nuts
-## [1] "Hackney and Newham"
+## [1] "Haringey and Islington"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "E09000012"
+## [1] "E09000019"
 ## 
 ## $codes$admin_county
 ## [1] "E99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05009377"
+## [1] "E05000380"
 ## 
 ## $codes$parish
-## [1] "E43000202"
+## [1] "E43000209"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "E14000721"
+## [1] "E14000764"
 ## 
 ## $codes$ccg
-## [1] "E38000035"
+## [1] "E38000088"
 ## 
 ## $codes$ced
 ## [1] "E99999999"
 ## 
 ## $codes$nuts
-## [1] "UKI41"</code></pre>
+## [1] "UKI43"</code></pre>
 </div>
 </div>
 <div id="places" class="section level2">
 <h2 class="hasAnchor">
 <a href="#places" class="anchor"></a>Places</h2>
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="kw"><a href="../reference/random_place.html">random_place</a></span>()</a></code></pre></div>
-<pre><code>##                   code       name_1 name_1_lang name_2 name_2_lang
-## 1 osgb4000000074549339 South Hylton        NULL   NULL        NULL
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1"><span class="kw"><a href="../reference/random_place.html">random_place</a></span>()</a></code></pre></div>
+<pre><code>##                   code    name_1 name_1_lang name_2 name_2_lang
+## 1 osgb4000000074551307 North End        NULL   NULL        NULL
 ##      local_type outcode county_unitary county_unitary_type
-## 1 Suburban Area     SR4           NULL                NULL
-##   district_borough district_borough_type     region country longitude
-## 1       Sunderland  MetropolitanDistrict North East England   -1.4495
-##   latitude eastings northings min_eastings min_northings max_eastings
-## 1 54.90471   435397    556804       434851        556147       436024
-##   max_northings
-## 1        557472</code></pre>
+## 1 Suburban Area    PE30        Norfolk              County
+##               district_borough district_borough_type  region country
+## 1 King's Lynn and West Norfolk              District Eastern England
+##   longitude latitude eastings northings min_eastings min_northings
+## 1  0.398985 52.75957   561979    320694       561760        320271
+##   max_eastings max_northings
+## 1       562431        320771</code></pre>
 </div>
 <div id="postcode-validation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#postcode-validation" class="anchor"></a>Postcode validation</h2>
 <p>This function can validate a UK postcode:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1"><span class="kw"><a href="../reference/postcode_validation.html">postcode_validation</a></span>(<span class="st">"EC1Y 8LX"</span>) <span class="co"># actual UK postcode</span></a></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1"><span class="kw"><a href="../reference/postcode_validation.html">postcode_validation</a></span>(<span class="st">"EC1Y 8LX"</span>) <span class="co"># actual UK postcode</span></a></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1"><span class="kw"><a href="../reference/postcode_validation.html">postcode_validation</a></span>(<span class="st">"XYZ"</span>) <span class="co"># incorrect UK postcode</span></a></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="kw"><a href="../reference/postcode_validation.html">postcode_validation</a></span>(<span class="st">"XYZ"</span>) <span class="co"># incorrect UK postcode</span></a></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
 </div>
 <div id="autocomplete-postcodes" class="section level2">
 <h2 class="hasAnchor">
 <a href="#autocomplete-postcodes" class="anchor"></a>Autocomplete postcodes</h2>
 <p>Find the potential candidates for a postcode if you only know the beginning characters</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1"><span class="kw"><a href="../reference/postcode_autocomplete.html">postcode_autocomplete</a></span>(<span class="st">"EC1"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1"><span class="kw"><a href="../reference/postcode_autocomplete.html">postcode_autocomplete</a></span>(<span class="st">"EC1"</span>)</a></code></pre></div>
 <pre><code>##    postcode
 ## 1  EC1A 1AA
 ## 2  EC1A 1AH
@@ -769,10 +778,10 @@
 <h2 class="hasAnchor">
 <a href="#find-nearest-postcodes-or-outcodes" class="anchor"></a>Find nearest postcodes or outcodes</h2>
 <p>Provide a postcode to get a list of the nearest postcodes:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" data-line-number="1">near_pc &lt;-<span class="st"> </span><span class="kw"><a href="../reference/nearest_postcode.html">nearest_postcode</a></span>(<span class="st">"EC1Y 8LX"</span>)</a>
-<a class="sourceLine" id="cb36-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb36-3" data-line-number="3"><span class="co">#overview</span></a>
-<a class="sourceLine" id="cb36-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(near_pc[<span class="dv">1</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" data-line-number="1">near_pc &lt;-<span class="st"> </span><span class="kw"><a href="../reference/nearest_postcode.html">nearest_postcode</a></span>(<span class="st">"EC1Y 8LX"</span>)</a>
+<a class="sourceLine" id="cb37-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb37-3" data-line-number="3"><span class="co">#overview</span></a>
+<a class="sourceLine" id="cb37-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(near_pc[<span class="dv">1</span>])</a></code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 25
 ##   ..$ postcode                  : chr "EC1Y 8LX"
@@ -809,10 +818,10 @@
 ##   .. ..$ ced                       : chr "E99999999"
 ##   .. ..$ nuts                      : chr "UKI43"</code></pre>
 <p>You can also use outcodes:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" data-line-number="1">near_outcode &lt;-<span class="st"> </span><span class="kw"><a href="../reference/nearest_outcode.html">nearest_outcode</a></span>(<span class="st">"EC1Y"</span>)</a>
-<a class="sourceLine" id="cb38-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb38-3" data-line-number="3"><span class="co"># overview</span></a>
-<a class="sourceLine" id="cb38-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(near_outcode[<span class="dv">2</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" data-line-number="1">near_outcode &lt;-<span class="st"> </span><span class="kw"><a href="../reference/nearest_outcode.html">nearest_outcode</a></span>(<span class="st">"EC1Y"</span>)</a>
+<a class="sourceLine" id="cb39-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb39-3" data-line-number="3"><span class="co"># overview</span></a>
+<a class="sourceLine" id="cb39-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(near_outcode[<span class="dv">2</span>])</a></code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 11
 ##   ..$ outcode       : chr "EC2Y"
@@ -838,10 +847,10 @@
 ##   .. ..$ : chr "England"
 ##   ..$ distance      : num 405</code></pre>
 <p>Or longitude and latitude</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" data-line-number="1">near_ll &lt;-<span class="st"> </span><span class="kw"><a href="../reference/nearest_outcode_lonlat.html">nearest_outcode_lonlat</a></span>(<span class="fl">0.127</span>, <span class="fl">51.507</span>)</a>
-<a class="sourceLine" id="cb40-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb40-3" data-line-number="3"><span class="co">#overview</span></a>
-<a class="sourceLine" id="cb40-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(near_ll[<span class="dv">1</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" data-line-number="1">near_ll &lt;-<span class="st"> </span><span class="kw"><a href="../reference/nearest_outcode_lonlat.html">nearest_outcode_lonlat</a></span>(<span class="fl">0.127</span>, <span class="fl">51.507</span>)</a>
+<a class="sourceLine" id="cb41-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb41-3" data-line-number="3"><span class="co">#overview</span></a>
+<a class="sourceLine" id="cb41-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(near_ll[<span class="dv">1</span>])</a></code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 11
 ##   ..$ outcode       : chr "DA18"
@@ -865,38 +874,38 @@
 <h2 class="hasAnchor">
 <a href="#find-places" class="anchor"></a>Find places</h2>
 <p>Provide a name of a place of interest. You can specify the number of results (default is 10):</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1">place_query_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/place_query.html">place_query</a></span>(<span class="st">"Hills"</span>, <span class="dt">limit =</span> <span class="dv">11</span>)</a>
-<a class="sourceLine" id="cb42-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb42-3" data-line-number="3"><span class="co"># overview</span></a>
-<a class="sourceLine" id="cb42-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(place_query_result[<span class="dv">1</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" data-line-number="1">place_query_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/place_query.html">place_query</a></span>(<span class="st">"Hills"</span>, <span class="dt">limit =</span> <span class="dv">11</span>)</a>
+<a class="sourceLine" id="cb43-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb43-3" data-line-number="3"><span class="co"># overview</span></a>
+<a class="sourceLine" id="cb43-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(place_query_result[<span class="dv">1</span>])</a></code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 21
-##   ..$ code                 : chr "osgb4000000074547803"
-##   ..$ name_1               : chr "Red Hills"
+##   ..$ code                 : chr "osgb4000000074555222"
+##   ..$ name_1               : chr "Tan Hills"
 ##   ..$ name_1_lang          : NULL
 ##   ..$ name_2               : NULL
 ##   ..$ name_2_lang          : NULL
-##   ..$ local_type           : chr "Hamlet"
-##   ..$ outcode              : chr "CA11"
-##   ..$ county_unitary       : chr "Cumbria"
-##   ..$ county_unitary_type  : chr "County"
-##   ..$ district_borough     : chr "Eden"
-##   ..$ district_borough_type: chr "District"
-##   ..$ region               : chr "North West"
+##   ..$ local_type           : chr "Village"
+##   ..$ outcode              : chr "DH2"
+##   ..$ county_unitary       : chr "County Durham"
+##   ..$ county_unitary_type  : chr "UnitaryAuthority"
+##   ..$ district_borough     : NULL
+##   ..$ district_borough_type: NULL
+##   ..$ region               : chr "North East"
 ##   ..$ country              : chr "England"
-##   ..$ longitude            : num -2.77
-##   ..$ latitude             : num 54.7
-##   ..$ eastings             : int 350463
-##   ..$ northings            : int 528605
-##   ..$ min_eastings         : int 349916
-##   ..$ min_northings        : int 528349
-##   ..$ max_eastings         : int 350584
-##   ..$ max_northings        : int 528849</code></pre>
+##   ..$ longitude            : num -1.6
+##   ..$ latitude             : num 54.8
+##   ..$ eastings             : int 425936
+##   ..$ northings            : int 547579
+##   ..$ min_eastings         : int 425721
+##   ..$ min_northings        : int 547375
+##   ..$ max_eastings         : int 426221
+##   ..$ max_northings        : int 547875</code></pre>
 <p>You can also find a place using an OSGB code:</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" data-line-number="1">place_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/place_lookup.html">place_lookup</a></span>(<span class="st">"osgb4000000074544700"</span>)</a>
-<a class="sourceLine" id="cb44-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb44-3" data-line-number="3"><span class="co"># overview</span></a>
-<a class="sourceLine" id="cb44-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(place_lookup_result)</a></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb45-1" data-line-number="1">place_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/place_lookup.html">place_lookup</a></span>(<span class="st">"osgb4000000074544700"</span>)</a>
+<a class="sourceLine" id="cb45-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb45-3" data-line-number="3"><span class="co"># overview</span></a>
+<a class="sourceLine" id="cb45-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(place_lookup_result)</a></code></pre></div>
 <pre><code>## List of 21
 ##  $ code                 : chr "osgb4000000074544700"
 ##  $ name_1               : chr "Cutler Heights"
@@ -924,7 +933,7 @@
 <h2 class="hasAnchor">
 <a href="#terminated-postcodes" class="anchor"></a>Terminated postcodes</h2>
 <p>You might end up having terminated postcodes in your data set. These are postcodes that are no longer active. UK postcodes can change so it’s worth checking whether used postcodes are still active. If you need more information about when a particular postcode was terminated use:</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" data-line-number="1"><span class="kw"><a href="../reference/terminated_postcode.html">terminated_postcode</a></span>(<span class="st">"E1W 1UU"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb47-1" data-line-number="1"><span class="kw"><a href="../reference/terminated_postcode.html">terminated_postcode</a></span>(<span class="st">"E1W 1UU"</span>)</a></code></pre></div>
 <pre><code>##   postcode year_terminated month_terminated longitude latitude
 ## 1  E1W 1UU            2015                2 -0.073732 51.50801</code></pre>
 </div>
