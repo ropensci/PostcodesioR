@@ -23,7 +23,9 @@ LazyData: TRUE
 Depends:
     R (>= 3.1)
 Imports:
-    httr
+    httr,
+    purrr,
+    dplyr
 RoxygenNote: 6.1.1
 Suggests: knitr,
     rmarkdown,
