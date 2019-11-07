@@ -244,7 +244,16 @@ This is currently only available for districts, parishes, counties, CCGs, NUTS a
 #&gt;                     nuts admin_district_code admin_county_code admin_ward_code
 #&gt; 1 Haringey and Islington           E09000019         E99999999       E05000367
 #&gt;   parish_code parliamentary_constituency_code  ccg_code  ced_code nuts_code
-#&gt; 1   E43000209                       E14000764 E38000088 E99999999     UKI43</div><div class='input'>
+#&gt; 1   E43000209                       E14000764 E38000088 E99999999     UKI43</div><div class='input'><span class='fu'>postcode_lookup</span>(<span class='st'>"DE3 5LF"</span>) <span class='co'># terminated postcode returns NAs</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Not Found (HTTP 404).</span></div><div class='output co'>#&gt; [1] "Postcode DE3 5LF is incorrect or expired."</div><div class='output co'>#&gt;   postcode quality eastings northings country nhs_ha longitude latitude
+#&gt; 1  DE3 5LF      NA       NA        NA      NA     NA        NA       NA
+#&gt;   european_electoral_region primary_care_trust region lsoa msoa incode outcode
+#&gt; 1                        NA                 NA     NA   NA   NA     NA      NA
+#&gt;   parliamentary_constituency admin_district parish admin_county admin_ward ced
+#&gt; 1                         NA             NA     NA           NA         NA  NA
+#&gt;   ccg nuts admin_district_code admin_county_code admin_ward_code parish_code
+#&gt; 1  NA   NA                  NA                NA              NA          NA
+#&gt;   parliamentary_constituency_code ccg_code ced_code nuts_code
+#&gt; 1                              NA       NA       NA        NA</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

@@ -229,7 +229,7 @@
 <a class="sourceLine" id="cb8-3" data-line-number="3">bulk_list &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/lapply">lapply</a></span>(bulk_lookup_result, <span class="st">"[["</span>, <span class="dv">2</span>)</a>
 <a class="sourceLine" id="cb8-4" data-line-number="4"></a>
 <a class="sourceLine" id="cb8-5" data-line-number="5">bulk_df &lt;-</a>
-<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span>(bulk_list,</a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/purrr/topics/map">map_dfr</a></span>(bulk_list,</a>
 <a class="sourceLine" id="cb8-7" data-line-number="7">          <span class="st">`</span><span class="dt">[</span><span class="st">`</span>,</a>
 <a class="sourceLine" id="cb8-8" data-line-number="8">          <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"postcode"</span>, <span class="st">"longitude"</span>, <span class="st">"latitude"</span>))</a></code></pre></div>
 </div>
@@ -541,112 +541,112 @@
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1"><span class="co"># without restrictions</span></a>
 <a class="sourceLine" id="cb25-2" data-line-number="2"><span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>()</a></code></pre></div>
 <pre><code>## $postcode
-## [1] "SR2 9QW"
+## [1] "CF3 1PZ"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 440773
+## [1] 322749
 ## 
 ## $northings
-## [1] 554797
+## [1] 180022
 ## 
 ## $country
-## [1] "England"
+## [1] "Wales"
 ## 
 ## $nhs_ha
-## [1] "North East"
+## [1] "Cardiff and Vale University Health Board"
 ## 
 ## $longitude
-## [1] -1.365947
+## [1] -3.114635
 ## 
 ## $latitude
-## [1] 54.88627
+## [1] 51.51382
 ## 
 ## $european_electoral_region
-## [1] "North East"
+## [1] "Wales"
 ## 
 ## $primary_care_trust
-## [1] "Sunderland Teaching"
+## [1] "Cardiff and Vale University Health Board"
 ## 
 ## $region
-## [1] "North East"
+## NULL
 ## 
 ## $lsoa
-## [1] "Sunderland 024B"
+## [1] "Cardiff 016A"
 ## 
 ## $msoa
-## [1] "Sunderland 024"
+## [1] "Cardiff 016"
 ## 
 ## $incode
-## [1] "9QW"
+## [1] "1PZ"
 ## 
 ## $outcode
-## [1] "SR2"
+## [1] "CF3"
 ## 
 ## $parliamentary_constituency
-## [1] "Sunderland Central"
+## [1] "Cardiff South and Penarth"
 ## 
 ## $admin_district
-## [1] "Sunderland"
+## [1] "Cardiff"
 ## 
 ## $parish
-## [1] "Sunderland, unparished area"
+## [1] "Rumney"
 ## 
 ## $admin_county
 ## NULL
 ## 
 ## $admin_ward
-## [1] "Hendon"
+## [1] "Rumney"
 ## 
 ## $ced
 ## NULL
 ## 
 ## $ccg
-## [1] "NHS Sunderland"
+## [1] "Cardiff and Vale University Health Board"
 ## 
 ## $nuts
-## [1] "Sunderland"
+## [1] "Cardiff and Vale of Glamorgan"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "E08000024"
+## [1] "W06000015"
 ## 
 ## $codes$admin_county
-## [1] "E99999999"
+## [1] "W99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05001158"
+## [1] "W05001015"
 ## 
 ## $codes$parish
-## [1] "E43000178"
+## [1] "W04001004"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "E14000982"
+## [1] "W07000080"
 ## 
 ## $codes$ccg
-## [1] "E38000176"
+## [1] "W11000029"
 ## 
 ## $codes$ced
-## [1] "E99999999"
+## [1] "W99999999"
 ## 
 ## $codes$nuts
-## [1] "UKC23"</code></pre>
+## [1] "UKL22"</code></pre>
 <p>A randomly generated postcode can also belong to a particular outcode:</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1"><span class="co"># restrict to an outcode</span></a>
 <a class="sourceLine" id="cb27-2" data-line-number="2"><span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</a></code></pre></div>
 <pre><code>## $postcode
-## [1] "N1 8RW"
+## [1] "N1 5QJ"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 532103
+## [1] 533251
 ## 
 ## $northings
-## [1] 183923
+## [1] 183699
 ## 
 ## $country
 ## [1] "England"
@@ -655,80 +655,80 @@
 ## [1] "London"
 ## 
 ## $longitude
-## [1] -0.096602
+## [1] -0.080144
 ## 
 ## $latitude
-## [1] 51.53876
+## [1] 51.53648
 ## 
 ## $european_electoral_region
 ## [1] "London"
 ## 
 ## $primary_care_trust
-## [1] "Islington"
+## [1] "City and Hackney Teaching"
 ## 
 ## $region
 ## [1] "London"
 ## 
 ## $lsoa
-## [1] "Islington 018D"
+## [1] "Hackney 025C"
 ## 
 ## $msoa
-## [1] "Islington 018"
+## [1] "Hackney 025"
 ## 
 ## $incode
-## [1] "8RW"
+## [1] "5QJ"
 ## 
 ## $outcode
 ## [1] "N1"
 ## 
 ## $parliamentary_constituency
-## [1] "Islington South and Finsbury"
+## [1] "Hackney South and Shoreditch"
 ## 
 ## $admin_district
-## [1] "Islington"
+## [1] "Hackney"
 ## 
 ## $parish
-## [1] "Islington, unparished area"
+## [1] "Hackney, unparished area"
 ## 
 ## $admin_county
 ## NULL
 ## 
 ## $admin_ward
-## [1] "St Peter's"
+## [1] "Hoxton East &amp; Shoreditch"
 ## 
 ## $ced
 ## NULL
 ## 
 ## $ccg
-## [1] "NHS Islington"
+## [1] "NHS City and Hackney"
 ## 
 ## $nuts
-## [1] "Haringey and Islington"
+## [1] "Hackney and Newham"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "E09000019"
+## [1] "E09000012"
 ## 
 ## $codes$admin_county
 ## [1] "E99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05000380"
+## [1] "E05009377"
 ## 
 ## $codes$parish
-## [1] "E43000209"
+## [1] "E43000202"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "E14000764"
+## [1] "E14000721"
 ## 
 ## $codes$ccg
-## [1] "E38000088"
+## [1] "E38000035"
 ## 
 ## $codes$ced
 ## [1] "E99999999"
 ## 
 ## $codes$nuts
-## [1] "UKI43"</code></pre>
+## [1] "UKI41"</code></pre>
 </div>
 </div>
 <div id="places" class="section level2">
@@ -736,16 +736,16 @@
 <a href="#places" class="anchor"></a>Places</h2>
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1"><span class="kw"><a href="../reference/random_place.html">random_place</a></span>()</a></code></pre></div>
-<pre><code>##                   code    name_1 name_1_lang name_2 name_2_lang
-## 1 osgb4000000074551307 North End        NULL   NULL        NULL
-##      local_type outcode county_unitary county_unitary_type
-## 1 Suburban Area    PE30        Norfolk              County
-##               district_borough district_borough_type  region country
-## 1 King's Lynn and West Norfolk              District Eastern England
+<pre><code>##                   code      name_1 name_1_lang name_2 name_2_lang
+## 1 osgb4000000074563021 Water Eaton        NULL   NULL        NULL
+##   local_type outcode county_unitary county_unitary_type
+## 1     Hamlet    ST19  Staffordshire              County
+##      district_borough district_borough_type        region country
+## 1 South Staffordshire              District West Midlands England
 ##   longitude latitude eastings northings min_eastings min_northings
-## 1  0.398985 52.75957   561979    320694       561760        320271
+## 1 -2.145529 52.69668   390262    311010       389983        310787
 ##   max_eastings max_northings
-## 1       562431        320771</code></pre>
+## 1       390483        311287</code></pre>
 </div>
 <div id="postcode-validation" class="section level2">
 <h2 class="hasAnchor">
