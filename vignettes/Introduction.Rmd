@@ -60,6 +60,20 @@ bulk_lookup_result <- bulk_postcode_lookup(pc_list)
 str(bulk_lookup_result[1])
 ```
 
+If you want to work with data frame then the nested list created above can be turned into a data frame
+
+```{r}
+library(purrr)
+
+bulk_list <- lapply(bulk_lookup_result, "[[", 2)
+
+bulk_df <-
+  map_dfr(bulk_list,
+          `[`,
+          c("postcode", "longitude", "latitude"))
+```
+
+
 ### Outward code lookup
 
 Provide an outcode to obtain geolocation data for the centroid of the specified outcode:
