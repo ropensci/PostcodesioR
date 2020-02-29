@@ -1,6 +1,6 @@
 # PostcodesioR 0.2.0
 
-* `bulk_postcode_lookup` bug fixed
+* `bulk_postcode_lookup` bug fixed.
 
 # PostcodesioR 0.1.1
 
