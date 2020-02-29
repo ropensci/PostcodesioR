@@ -1,8 +1,7 @@
 # PostcodesioR 0.2.0
 
+* `bulk_postcode_lookup` bug fixed
+
 # PostcodesioR 0.1.1
 
 * Added a `NEWS.md` file to track changes to the package.
-
-
-
