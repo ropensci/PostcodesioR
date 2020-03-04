@@ -32,11 +32,7 @@ check_list_limit <- function(x) {
     stop("Please provide a list with postcodes.")
   if (length(x) == 0)
     stop("Please provide a list with more than one postcode")
-  # assuming httr::body_config which relies on jsonlite::toJSON
-  # which parses all list values
-  # https://github.com/jeroen/jsonlite/blob/
-  # 71e2b3ab96dd8b12260b22d9a256865e59bf8351/R/asJSON.list.R
   count <- sum(sapply(x, length))
   if (count > 100)
-    stop("Please prrovide a list with less than 100 postcodes.")
+    stop("Please provide a list with less than 100 postcodes.")
 }
