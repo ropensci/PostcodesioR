@@ -16,13 +16,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -49,6 +51,7 @@ and allows limiting the results." />
 <![endif]-->
 
 
+
   </head>
 
   <body>
@@ -65,7 +68,7 @@ and allows limiting the results." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">PostcodesioR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -73,7 +76,7 @@ and allows limiting the results." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -106,6 +109,7 @@ and allows limiting the results." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -150,7 +154,8 @@ Defaults to 10. Needs to be less than 100.</p></td>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>place_query</span>(<span class='st'>"Hills"</span>)</div><div class='output co'>#&gt; [[1]]
+    <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
+<span class='fu'>place_query</span>(<span class='st'>"Hills"</span>)</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$code
 #&gt; [1] "osgb4000000074555222"
 #&gt; 
@@ -282,10 +287,10 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; 
 #&gt; [[3]]
 #&gt; [[3]]$code
-#&gt; [1] "osgb4000000074568110"
+#&gt; [1] "osgb4000000074571332"
 #&gt; 
 #&gt; [[3]]$name_1
-#&gt; [1] "Nun Hills"
+#&gt; [1] "Bailey Hills"
 #&gt; 
 #&gt; [[3]]$name_1_lang
 #&gt; NULL
@@ -300,57 +305,57 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; [1] "Suburban Area"
 #&gt; 
 #&gt; [[3]]$outcode
-#&gt; [1] "OL13"
+#&gt; [1] "BD16"
 #&gt; 
 #&gt; [[3]]$county_unitary
-#&gt; [1] "Lancashire"
+#&gt; NULL
 #&gt; 
 #&gt; [[3]]$county_unitary_type
-#&gt; [1] "County"
+#&gt; NULL
 #&gt; 
 #&gt; [[3]]$district_borough
-#&gt; [1] "Rossendale"
+#&gt; [1] "Bradford"
 #&gt; 
 #&gt; [[3]]$district_borough_type
-#&gt; [1] "District"
+#&gt; [1] "MetropolitanDistrict"
 #&gt; 
 #&gt; [[3]]$region
-#&gt; [1] "North West"
+#&gt; [1] "Yorkshire and the Humber"
 #&gt; 
 #&gt; [[3]]$country
 #&gt; [1] "England"
 #&gt; 
 #&gt; [[3]]$longitude
-#&gt; [1] -2.224568
+#&gt; [1] -1.841124
 #&gt; 
 #&gt; [[3]]$latitude
-#&gt; [1] 53.69105
+#&gt; [1] 53.85213
 #&gt; 
 #&gt; [[3]]$eastings
-#&gt; [1] 385268
+#&gt; [1] 410549
 #&gt; 
 #&gt; [[3]]$northings
-#&gt; [1] 421645
+#&gt; [1] 439555
 #&gt; 
 #&gt; [[3]]$min_eastings
-#&gt; [1] 384958
+#&gt; [1] 410241
 #&gt; 
 #&gt; [[3]]$min_northings
-#&gt; [1] 421437
+#&gt; [1] 439253
 #&gt; 
 #&gt; [[3]]$max_eastings
-#&gt; [1] 385465
+#&gt; [1] 410741
 #&gt; 
 #&gt; [[3]]$max_northings
-#&gt; [1] 421937
+#&gt; [1] 439803
 #&gt; 
 #&gt; 
 #&gt; [[4]]
 #&gt; [[4]]$code
-#&gt; [1] "osgb4000000074569230"
+#&gt; [1] "osgb4000000074568110"
 #&gt; 
 #&gt; [[4]]$name_1
-#&gt; [1] "Cross Hills"
+#&gt; [1] "Nun Hills"
 #&gt; 
 #&gt; [[4]]$name_1_lang
 #&gt; NULL
@@ -362,60 +367,60 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; NULL
 #&gt; 
 #&gt; [[4]]$local_type
-#&gt; [1] "Village"
+#&gt; [1] "Suburban Area"
 #&gt; 
 #&gt; [[4]]$outcode
-#&gt; [1] "BD20"
+#&gt; [1] "OL13"
 #&gt; 
 #&gt; [[4]]$county_unitary
-#&gt; [1] "North Yorkshire"
+#&gt; [1] "Lancashire"
 #&gt; 
 #&gt; [[4]]$county_unitary_type
 #&gt; [1] "County"
 #&gt; 
 #&gt; [[4]]$district_borough
-#&gt; [1] "Craven"
+#&gt; [1] "Rossendale"
 #&gt; 
 #&gt; [[4]]$district_borough_type
 #&gt; [1] "District"
 #&gt; 
 #&gt; [[4]]$region
-#&gt; [1] "Yorkshire and the Humber"
+#&gt; [1] "North West"
 #&gt; 
 #&gt; [[4]]$country
 #&gt; [1] "England"
 #&gt; 
 #&gt; [[4]]$longitude
-#&gt; [1] -1.989919
+#&gt; [1] -2.224568
 #&gt; 
 #&gt; [[4]]$latitude
-#&gt; [1] 53.90184
+#&gt; [1] 53.69105
 #&gt; 
 #&gt; [[4]]$eastings
-#&gt; [1] 400760
+#&gt; [1] 385268
 #&gt; 
 #&gt; [[4]]$northings
-#&gt; [1] 445075
+#&gt; [1] 421645
 #&gt; 
 #&gt; [[4]]$min_eastings
-#&gt; [1] 399213
+#&gt; [1] 384958
 #&gt; 
 #&gt; [[4]]$min_northings
-#&gt; [1] 444398
+#&gt; [1] 421437
 #&gt; 
 #&gt; [[4]]$max_eastings
-#&gt; [1] 401797
+#&gt; [1] 385465
 #&gt; 
 #&gt; [[4]]$max_northings
-#&gt; [1] 445644
+#&gt; [1] 421937
 #&gt; 
 #&gt; 
 #&gt; [[5]]
 #&gt; [[5]]$code
-#&gt; [1] "osgb4000000074571332"
+#&gt; [1] "osgb4000000074569230"
 #&gt; 
 #&gt; [[5]]$name_1
-#&gt; [1] "Bailey Hills"
+#&gt; [1] "Cross Hills"
 #&gt; 
 #&gt; [[5]]$name_1_lang
 #&gt; NULL
@@ -427,22 +432,22 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; NULL
 #&gt; 
 #&gt; [[5]]$local_type
-#&gt; [1] "Suburban Area"
+#&gt; [1] "Village"
 #&gt; 
 #&gt; [[5]]$outcode
-#&gt; [1] "BD16"
+#&gt; [1] "BD20"
 #&gt; 
 #&gt; [[5]]$county_unitary
-#&gt; NULL
+#&gt; [1] "North Yorkshire"
 #&gt; 
 #&gt; [[5]]$county_unitary_type
-#&gt; NULL
+#&gt; [1] "County"
 #&gt; 
 #&gt; [[5]]$district_borough
-#&gt; [1] "Bradford"
+#&gt; [1] "Craven"
 #&gt; 
 #&gt; [[5]]$district_borough_type
-#&gt; [1] "MetropolitanDistrict"
+#&gt; [1] "District"
 #&gt; 
 #&gt; [[5]]$region
 #&gt; [1] "Yorkshire and the Humber"
@@ -451,28 +456,28 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; [[5]]$longitude
-#&gt; [1] -1.841124
+#&gt; [1] -1.989919
 #&gt; 
 #&gt; [[5]]$latitude
-#&gt; [1] 53.85213
+#&gt; [1] 53.90184
 #&gt; 
 #&gt; [[5]]$eastings
-#&gt; [1] 410549
+#&gt; [1] 400760
 #&gt; 
 #&gt; [[5]]$northings
-#&gt; [1] 439555
+#&gt; [1] 445075
 #&gt; 
 #&gt; [[5]]$min_eastings
-#&gt; [1] 410241
+#&gt; [1] 399213
 #&gt; 
 #&gt; [[5]]$min_northings
-#&gt; [1] 439253
+#&gt; [1] 444398
 #&gt; 
 #&gt; [[5]]$max_eastings
-#&gt; [1] 410741
+#&gt; [1] 401797
 #&gt; 
 #&gt; [[5]]$max_northings
-#&gt; [1] 439803
+#&gt; [1] 445644
 #&gt; 
 #&gt; 
 #&gt; [[6]]
@@ -672,10 +677,10 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; 
 #&gt; [[9]]
 #&gt; [[9]]$code
-#&gt; [1] "osgb4000000074561319"
+#&gt; [1] "osgb4000000074560483"
 #&gt; 
 #&gt; [[9]]$name_1
-#&gt; [1] "Stanford Hills"
+#&gt; [1] "Six Hills"
 #&gt; 
 #&gt; [[9]]$name_1_lang
 #&gt; NULL
@@ -690,16 +695,16 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; [1] "Hamlet"
 #&gt; 
 #&gt; [[9]]$outcode
-#&gt; [1] "LE12"
+#&gt; [1] "LE14"
 #&gt; 
 #&gt; [[9]]$county_unitary
-#&gt; [1] "Nottinghamshire"
+#&gt; [1] "Leicestershire"
 #&gt; 
 #&gt; [[9]]$county_unitary_type
 #&gt; [1] "County"
 #&gt; 
 #&gt; [[9]]$district_borough
-#&gt; [1] "Rushcliffe"
+#&gt; [1] "Charnwood"
 #&gt; 
 #&gt; [[9]]$district_borough_type
 #&gt; [1] "District"
@@ -711,28 +716,28 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; [[9]]$longitude
-#&gt; [1] -1.186273
+#&gt; [1] -1.047886
 #&gt; 
 #&gt; [[9]]$latitude
-#&gt; [1] 52.80939
+#&gt; [1] 52.78155
 #&gt; 
 #&gt; [[9]]$eastings
-#&gt; [1] 454948
+#&gt; [1] 464317
 #&gt; 
 #&gt; [[9]]$northings
-#&gt; [1] 323848
+#&gt; [1] 320865
 #&gt; 
 #&gt; [[9]]$min_eastings
-#&gt; [1] 454696
+#&gt; [1] 464113
 #&gt; 
 #&gt; [[9]]$min_northings
-#&gt; [1] 323502
+#&gt; [1] 320481
 #&gt; 
 #&gt; [[9]]$max_eastings
-#&gt; [1] 455196
+#&gt; [1] 464613
 #&gt; 
 #&gt; [[9]]$max_northings
-#&gt; [1] 324002
+#&gt; [1] 321055
 #&gt; 
 #&gt; 
 #&gt; [[10]]
@@ -931,10 +936,10 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; 
 #&gt; [[3]]
 #&gt; [[3]]$code
-#&gt; [1] "osgb4000000074568110"
+#&gt; [1] "osgb4000000074571332"
 #&gt; 
 #&gt; [[3]]$name_1
-#&gt; [1] "Nun Hills"
+#&gt; [1] "Bailey Hills"
 #&gt; 
 #&gt; [[3]]$name_1_lang
 #&gt; NULL
@@ -949,57 +954,57 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; [1] "Suburban Area"
 #&gt; 
 #&gt; [[3]]$outcode
-#&gt; [1] "OL13"
+#&gt; [1] "BD16"
 #&gt; 
 #&gt; [[3]]$county_unitary
-#&gt; [1] "Lancashire"
+#&gt; NULL
 #&gt; 
 #&gt; [[3]]$county_unitary_type
-#&gt; [1] "County"
+#&gt; NULL
 #&gt; 
 #&gt; [[3]]$district_borough
-#&gt; [1] "Rossendale"
+#&gt; [1] "Bradford"
 #&gt; 
 #&gt; [[3]]$district_borough_type
-#&gt; [1] "District"
+#&gt; [1] "MetropolitanDistrict"
 #&gt; 
 #&gt; [[3]]$region
-#&gt; [1] "North West"
+#&gt; [1] "Yorkshire and the Humber"
 #&gt; 
 #&gt; [[3]]$country
 #&gt; [1] "England"
 #&gt; 
 #&gt; [[3]]$longitude
-#&gt; [1] -2.224568
+#&gt; [1] -1.841124
 #&gt; 
 #&gt; [[3]]$latitude
-#&gt; [1] 53.69105
+#&gt; [1] 53.85213
 #&gt; 
 #&gt; [[3]]$eastings
-#&gt; [1] 385268
+#&gt; [1] 410549
 #&gt; 
 #&gt; [[3]]$northings
-#&gt; [1] 421645
+#&gt; [1] 439555
 #&gt; 
 #&gt; [[3]]$min_eastings
-#&gt; [1] 384958
+#&gt; [1] 410241
 #&gt; 
 #&gt; [[3]]$min_northings
-#&gt; [1] 421437
+#&gt; [1] 439253
 #&gt; 
 #&gt; [[3]]$max_eastings
-#&gt; [1] 385465
+#&gt; [1] 410741
 #&gt; 
 #&gt; [[3]]$max_northings
-#&gt; [1] 421937
+#&gt; [1] 439803
 #&gt; 
 #&gt; 
 #&gt; [[4]]
 #&gt; [[4]]$code
-#&gt; [1] "osgb4000000074569230"
+#&gt; [1] "osgb4000000074568110"
 #&gt; 
 #&gt; [[4]]$name_1
-#&gt; [1] "Cross Hills"
+#&gt; [1] "Nun Hills"
 #&gt; 
 #&gt; [[4]]$name_1_lang
 #&gt; NULL
@@ -1011,60 +1016,60 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; NULL
 #&gt; 
 #&gt; [[4]]$local_type
-#&gt; [1] "Village"
+#&gt; [1] "Suburban Area"
 #&gt; 
 #&gt; [[4]]$outcode
-#&gt; [1] "BD20"
+#&gt; [1] "OL13"
 #&gt; 
 #&gt; [[4]]$county_unitary
-#&gt; [1] "North Yorkshire"
+#&gt; [1] "Lancashire"
 #&gt; 
 #&gt; [[4]]$county_unitary_type
 #&gt; [1] "County"
 #&gt; 
 #&gt; [[4]]$district_borough
-#&gt; [1] "Craven"
+#&gt; [1] "Rossendale"
 #&gt; 
 #&gt; [[4]]$district_borough_type
 #&gt; [1] "District"
 #&gt; 
 #&gt; [[4]]$region
-#&gt; [1] "Yorkshire and the Humber"
+#&gt; [1] "North West"
 #&gt; 
 #&gt; [[4]]$country
 #&gt; [1] "England"
 #&gt; 
 #&gt; [[4]]$longitude
-#&gt; [1] -1.989919
+#&gt; [1] -2.224568
 #&gt; 
 #&gt; [[4]]$latitude
-#&gt; [1] 53.90184
+#&gt; [1] 53.69105
 #&gt; 
 #&gt; [[4]]$eastings
-#&gt; [1] 400760
+#&gt; [1] 385268
 #&gt; 
 #&gt; [[4]]$northings
-#&gt; [1] 445075
+#&gt; [1] 421645
 #&gt; 
 #&gt; [[4]]$min_eastings
-#&gt; [1] 399213
+#&gt; [1] 384958
 #&gt; 
 #&gt; [[4]]$min_northings
-#&gt; [1] 444398
+#&gt; [1] 421437
 #&gt; 
 #&gt; [[4]]$max_eastings
-#&gt; [1] 401797
+#&gt; [1] 385465
 #&gt; 
 #&gt; [[4]]$max_northings
-#&gt; [1] 445644
+#&gt; [1] 421937
 #&gt; 
 #&gt; 
 #&gt; [[5]]
 #&gt; [[5]]$code
-#&gt; [1] "osgb4000000074571332"
+#&gt; [1] "osgb4000000074569230"
 #&gt; 
 #&gt; [[5]]$name_1
-#&gt; [1] "Bailey Hills"
+#&gt; [1] "Cross Hills"
 #&gt; 
 #&gt; [[5]]$name_1_lang
 #&gt; NULL
@@ -1076,22 +1081,22 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; NULL
 #&gt; 
 #&gt; [[5]]$local_type
-#&gt; [1] "Suburban Area"
+#&gt; [1] "Village"
 #&gt; 
 #&gt; [[5]]$outcode
-#&gt; [1] "BD16"
+#&gt; [1] "BD20"
 #&gt; 
 #&gt; [[5]]$county_unitary
-#&gt; NULL
+#&gt; [1] "North Yorkshire"
 #&gt; 
 #&gt; [[5]]$county_unitary_type
-#&gt; NULL
+#&gt; [1] "County"
 #&gt; 
 #&gt; [[5]]$district_borough
-#&gt; [1] "Bradford"
+#&gt; [1] "Craven"
 #&gt; 
 #&gt; [[5]]$district_borough_type
-#&gt; [1] "MetropolitanDistrict"
+#&gt; [1] "District"
 #&gt; 
 #&gt; [[5]]$region
 #&gt; [1] "Yorkshire and the Humber"
@@ -1100,28 +1105,28 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; [[5]]$longitude
-#&gt; [1] -1.841124
+#&gt; [1] -1.989919
 #&gt; 
 #&gt; [[5]]$latitude
-#&gt; [1] 53.85213
+#&gt; [1] 53.90184
 #&gt; 
 #&gt; [[5]]$eastings
-#&gt; [1] 410549
+#&gt; [1] 400760
 #&gt; 
 #&gt; [[5]]$northings
-#&gt; [1] 439555
+#&gt; [1] 445075
 #&gt; 
 #&gt; [[5]]$min_eastings
-#&gt; [1] 410241
+#&gt; [1] 399213
 #&gt; 
 #&gt; [[5]]$min_northings
-#&gt; [1] 439253
+#&gt; [1] 444398
 #&gt; 
 #&gt; [[5]]$max_eastings
-#&gt; [1] 410741
+#&gt; [1] 401797
 #&gt; 
 #&gt; [[5]]$max_northings
-#&gt; [1] 439803
+#&gt; [1] 445644
 #&gt; 
 #&gt; 
 #&gt; [[6]]
@@ -1321,10 +1326,10 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; 
 #&gt; [[9]]
 #&gt; [[9]]$code
-#&gt; [1] "osgb4000000074561319"
+#&gt; [1] "osgb4000000074560483"
 #&gt; 
 #&gt; [[9]]$name_1
-#&gt; [1] "Stanford Hills"
+#&gt; [1] "Six Hills"
 #&gt; 
 #&gt; [[9]]$name_1_lang
 #&gt; NULL
@@ -1339,16 +1344,16 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; [1] "Hamlet"
 #&gt; 
 #&gt; [[9]]$outcode
-#&gt; [1] "LE12"
+#&gt; [1] "LE14"
 #&gt; 
 #&gt; [[9]]$county_unitary
-#&gt; [1] "Nottinghamshire"
+#&gt; [1] "Leicestershire"
 #&gt; 
 #&gt; [[9]]$county_unitary_type
 #&gt; [1] "County"
 #&gt; 
 #&gt; [[9]]$district_borough
-#&gt; [1] "Rushcliffe"
+#&gt; [1] "Charnwood"
 #&gt; 
 #&gt; [[9]]$district_borough_type
 #&gt; [1] "District"
@@ -1360,36 +1365,36 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; [[9]]$longitude
-#&gt; [1] -1.186273
+#&gt; [1] -1.047886
 #&gt; 
 #&gt; [[9]]$latitude
-#&gt; [1] 52.80939
+#&gt; [1] 52.78155
 #&gt; 
 #&gt; [[9]]$eastings
-#&gt; [1] 454948
+#&gt; [1] 464317
 #&gt; 
 #&gt; [[9]]$northings
-#&gt; [1] 323848
+#&gt; [1] 320865
 #&gt; 
 #&gt; [[9]]$min_eastings
-#&gt; [1] 454696
+#&gt; [1] 464113
 #&gt; 
 #&gt; [[9]]$min_northings
-#&gt; [1] 323502
+#&gt; [1] 320481
 #&gt; 
 #&gt; [[9]]$max_eastings
-#&gt; [1] 455196
+#&gt; [1] 464613
 #&gt; 
 #&gt; [[9]]$max_northings
-#&gt; [1] 324002
+#&gt; [1] 321055
 #&gt; 
 #&gt; 
 #&gt; [[10]]
 #&gt; [[10]]$code
-#&gt; [1] "osgb4000000074561106"
+#&gt; [1] "osgb4000000074561319"
 #&gt; 
 #&gt; [[10]]$name_1
-#&gt; [1] "Hoton Hills"
+#&gt; [1] "Stanford Hills"
 #&gt; 
 #&gt; [[10]]$name_1_lang
 #&gt; NULL
@@ -1407,13 +1412,13 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; [1] "LE12"
 #&gt; 
 #&gt; [[10]]$county_unitary
-#&gt; [1] "Leicestershire"
+#&gt; [1] "Nottinghamshire"
 #&gt; 
 #&gt; [[10]]$county_unitary_type
 #&gt; [1] "County"
 #&gt; 
 #&gt; [[10]]$district_borough
-#&gt; [1] "Charnwood"
+#&gt; [1] "Rushcliffe"
 #&gt; 
 #&gt; [[10]]$district_borough_type
 #&gt; [1] "District"
@@ -1425,36 +1430,36 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; [[10]]$longitude
-#&gt; [1] -1.171086
+#&gt; [1] -1.186273
 #&gt; 
 #&gt; [[10]]$latitude
-#&gt; [1] 52.79511
+#&gt; [1] 52.80939
 #&gt; 
 #&gt; [[10]]$eastings
-#&gt; [1] 455990
+#&gt; [1] 454948
 #&gt; 
 #&gt; [[10]]$northings
-#&gt; [1] 322271
+#&gt; [1] 323848
 #&gt; 
 #&gt; [[10]]$min_eastings
-#&gt; [1] 455722
+#&gt; [1] 454696
 #&gt; 
 #&gt; [[10]]$min_northings
-#&gt; [1] 322037
+#&gt; [1] 323502
 #&gt; 
 #&gt; [[10]]$max_eastings
-#&gt; [1] 456222
+#&gt; [1] 455196
 #&gt; 
 #&gt; [[10]]$max_northings
-#&gt; [1] 322537
+#&gt; [1] 324002
 #&gt; 
 #&gt; 
 #&gt; [[11]]
 #&gt; [[11]]$code
-#&gt; [1] "osgb4000000074560483"
+#&gt; [1] "osgb4000000074560697"
 #&gt; 
 #&gt; [[11]]$name_1
-#&gt; [1] "Six Hills"
+#&gt; [1] "Crown Hills"
 #&gt; 
 #&gt; [[11]]$name_1_lang
 #&gt; NULL
@@ -1466,22 +1471,22 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; NULL
 #&gt; 
 #&gt; [[11]]$local_type
-#&gt; [1] "Hamlet"
+#&gt; [1] "Suburban Area"
 #&gt; 
 #&gt; [[11]]$outcode
-#&gt; [1] "LE14"
+#&gt; [1] "LE5"
 #&gt; 
 #&gt; [[11]]$county_unitary
-#&gt; [1] "Leicestershire"
+#&gt; [1] "City of Leicester"
 #&gt; 
 #&gt; [[11]]$county_unitary_type
-#&gt; [1] "County"
+#&gt; [1] "UnitaryAuthority"
 #&gt; 
 #&gt; [[11]]$district_borough
-#&gt; [1] "Charnwood"
+#&gt; NULL
 #&gt; 
 #&gt; [[11]]$district_borough_type
-#&gt; [1] "District"
+#&gt; NULL
 #&gt; 
 #&gt; [[11]]$region
 #&gt; [1] "East Midlands"
@@ -1490,28 +1495,28 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; [[11]]$longitude
-#&gt; [1] -1.047886
+#&gt; [1] -1.083014
 #&gt; 
 #&gt; [[11]]$latitude
-#&gt; [1] 52.78155
+#&gt; [1] 52.63303
 #&gt; 
 #&gt; [[11]]$eastings
-#&gt; [1] 464317
+#&gt; [1] 462158
 #&gt; 
 #&gt; [[11]]$northings
-#&gt; [1] 320865
+#&gt; [1] 304314
 #&gt; 
 #&gt; [[11]]$min_eastings
-#&gt; [1] 464113
+#&gt; [1] 461758
 #&gt; 
 #&gt; [[11]]$min_northings
-#&gt; [1] 320481
+#&gt; [1] 303918
 #&gt; 
 #&gt; [[11]]$max_eastings
-#&gt; [1] 464613
+#&gt; [1] 462730
 #&gt; 
 #&gt; [[11]]$max_northings
-#&gt; [1] 321055
+#&gt; [1] 304875
 #&gt; 
 #&gt; 
 #&gt; [[12]]
@@ -1578,7 +1583,8 @@ Defaults to 10. Needs to be less than 100.</p></td>
 #&gt; [[12]]$max_northings
 #&gt; [1] 528849
 #&gt; 
-#&gt; </div><div class='input'>
+#&gt; </div><div class='input'># }
+
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -1596,19 +1602,23 @@ Defaults to 10. Needs to be less than 100.</p></td>
   </div>
 </div>
 
+
       <footer>
       <div class="copyright">
   <p>Developed by Eryk Walczak.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 

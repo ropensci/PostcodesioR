@@ -16,13 +16,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -48,6 +50,7 @@ The search is based on the relative distance of the outcode centroid." />
 <![endif]-->
 
 
+
   </head>
 
   <body>
@@ -64,7 +67,7 @@ The search is based on the relative distance of the outcode centroid." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">PostcodesioR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -72,7 +75,7 @@ The search is based on the relative distance of the outcode centroid." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -105,6 +108,7 @@ The search is based on the relative distance of the outcode centroid." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -153,21 +157,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>nearest_outcode</span>(<span class='st'>"EC1Y"</span>)</div><div class='output co'>#&gt; [[1]]
+    <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
+<span class='fu'>nearest_outcode</span>(<span class='st'>"EC1Y"</span>)</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$outcode
 #&gt; [1] "EC1Y"
 #&gt; 
 #&gt; [[1]]$longitude
-#&gt; [1] -0.09239269
+#&gt; [1] -0.09240626
 #&gt; 
 #&gt; [[1]]$latitude
-#&gt; [1] 51.52303
+#&gt; [1] 51.52305
 #&gt; 
 #&gt; [[1]]$northings
-#&gt; [1] 182181
+#&gt; [1] 182184
 #&gt; 
 #&gt; [[1]]$eastings
-#&gt; [1] 532440
+#&gt; [1] 532439
 #&gt; 
 #&gt; [[1]]$admin_district
 #&gt; [[1]]$admin_district[[1]]
@@ -216,16 +221,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2Y"
 #&gt; 
 #&gt; [[2]]$longitude
-#&gt; [1] -0.09367956
+#&gt; [1] -0.09351891
 #&gt; 
 #&gt; [[2]]$latitude
-#&gt; [1] 51.51948
+#&gt; [1] 51.51943
 #&gt; 
 #&gt; [[2]]$northings
-#&gt; [1] 181784
+#&gt; [1] 181778
 #&gt; 
 #&gt; [[2]]$eastings
-#&gt; [1] 532361
+#&gt; [1] 532372
 #&gt; 
 #&gt; [[2]]$admin_district
 #&gt; [[2]]$admin_district[[1]]
@@ -272,7 +277,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[2]]$distance
-#&gt; [1] 405.0327
+#&gt; [1] 410.5594
 #&gt; 
 #&gt; 
 #&gt; [[3]]
@@ -280,16 +285,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2A"
 #&gt; 
 #&gt; [[3]]$longitude
-#&gt; [1] -0.08564764
+#&gt; [1] -0.08560013
 #&gt; 
 #&gt; [[3]]$latitude
 #&gt; [1] 51.5237
 #&gt; 
 #&gt; [[3]]$northings
-#&gt; [1] 182268
+#&gt; [1] 182267
 #&gt; 
 #&gt; [[3]]$eastings
-#&gt; [1] 532906
+#&gt; [1] 532909
 #&gt; 
 #&gt; [[3]]$admin_district
 #&gt; [[3]]$admin_district[[1]]
@@ -336,7 +341,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[3]]$distance
-#&gt; [1] 474.0922
+#&gt; [1] 477.7771
 #&gt; 
 #&gt; 
 #&gt; [[4]]
@@ -344,13 +349,13 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC1V"
 #&gt; 
 #&gt; [[4]]$longitude
-#&gt; [1] -0.09789332
+#&gt; [1] -0.09789149
 #&gt; 
 #&gt; [[4]]$latitude
-#&gt; [1] 51.52677
+#&gt; [1] 51.52679
 #&gt; 
 #&gt; [[4]]$northings
-#&gt; [1] 182587
+#&gt; [1] 182590
 #&gt; 
 #&gt; [[4]]$eastings
 #&gt; [1] 532047
@@ -397,7 +402,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[4]]$distance
-#&gt; [1] 564.5064
+#&gt; [1] 564.1671
 #&gt; 
 #&gt; 
 #&gt; [[5]]
@@ -405,16 +410,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2M"
 #&gt; 
 #&gt; [[5]]$longitude
-#&gt; [1] -0.08631917
+#&gt; [1] -0.08650574
 #&gt; 
 #&gt; [[5]]$latitude
-#&gt; [1] 51.51859
+#&gt; [1] 51.51865
 #&gt; 
 #&gt; [[5]]$northings
-#&gt; [1] 181698
+#&gt; [1] 181705
 #&gt; 
 #&gt; [[5]]$eastings
-#&gt; [1] 532874
+#&gt; [1] 532861
 #&gt; 
 #&gt; [[5]]$admin_district
 #&gt; [[5]]$admin_district[[1]]
@@ -479,7 +484,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[5]]$distance
-#&gt; [1] 649.5466
+#&gt; [1] 638.5113
 #&gt; 
 #&gt; 
 #&gt; [[6]]
@@ -487,13 +492,13 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC1M"
 #&gt; 
 #&gt; [[6]]$longitude
-#&gt; [1] -0.1022982
+#&gt; [1] -0.1022952
 #&gt; 
 #&gt; [[6]]$latitude
-#&gt; [1] 51.52135
+#&gt; [1] 51.52136
 #&gt; 
 #&gt; [[6]]$northings
-#&gt; [1] 181976
+#&gt; [1] 181977
 #&gt; 
 #&gt; [[6]]$eastings
 #&gt; [1] 531757
@@ -546,7 +551,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[6]]$distance
-#&gt; [1] 712.4735
+#&gt; [1] 711.7464
 #&gt; 
 #&gt; 
 #&gt; [[7]]
@@ -554,16 +559,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2R"
 #&gt; 
 #&gt; [[7]]$longitude
-#&gt; [1] -0.09065046
+#&gt; [1] -0.0909229
 #&gt; 
 #&gt; [[7]]$latitude
-#&gt; [1] 51.51594
+#&gt; [1] 51.51607
 #&gt; 
 #&gt; [[7]]$northings
-#&gt; [1] 181396
+#&gt; [1] 181410
 #&gt; 
 #&gt; [[7]]$eastings
-#&gt; [1] 532581
+#&gt; [1] 532562
 #&gt; 
 #&gt; [[7]]$admin_district
 #&gt; [[7]]$admin_district[[1]]
@@ -616,7 +621,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[7]]$distance
-#&gt; [1] 798.1329
+#&gt; [1] 783.8447
 #&gt; 
 #&gt; 
 #&gt; [[8]]
@@ -624,16 +629,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2V"
 #&gt; 
 #&gt; [[8]]$longitude
-#&gt; [1] -0.09396452
+#&gt; [1] -0.09393065
 #&gt; 
 #&gt; [[8]]$latitude
-#&gt; [1] 51.51563
+#&gt; [1] 51.51565
 #&gt; 
 #&gt; [[8]]$northings
-#&gt; [1] 181355
+#&gt; [1] 181357
 #&gt; 
 #&gt; [[8]]$eastings
-#&gt; [1] 532352
+#&gt; [1] 532354
 #&gt; 
 #&gt; [[8]]$admin_district
 #&gt; [[8]]$admin_district[[1]]
@@ -686,7 +691,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[8]]$distance
-#&gt; [1] 830.8772
+#&gt; [1] 830.6345
 #&gt; 
 #&gt; 
 #&gt; [[9]]
@@ -694,16 +699,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC1A"
 #&gt; 
 #&gt; [[9]]$longitude
-#&gt; [1] -0.1038367
+#&gt; [1] -0.1039063
 #&gt; 
 #&gt; [[9]]$latitude
-#&gt; [1] 51.52027
+#&gt; [1] 51.5203
 #&gt; 
 #&gt; [[9]]$northings
-#&gt; [1] 181854
+#&gt; [1] 181857
 #&gt; 
 #&gt; [[9]]$eastings
-#&gt; [1] 531654
+#&gt; [1] 531649
 #&gt; 
 #&gt; [[9]]$admin_district
 #&gt; [[9]]$admin_district[[1]]
@@ -753,7 +758,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[9]]$distance
-#&gt; [1] 851.562
+#&gt; [1] 854.7138
 #&gt; 
 #&gt; 
 #&gt; [[10]]
@@ -761,16 +766,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2N"
 #&gt; 
 #&gt; [[10]]$longitude
-#&gt; [1] -0.08563925
+#&gt; [1] -0.08554044
 #&gt; 
 #&gt; [[10]]$latitude
-#&gt; [1] 51.51574
+#&gt; [1] 51.51576
 #&gt; 
 #&gt; [[10]]$northings
-#&gt; [1] 181383
+#&gt; [1] 181385
 #&gt; 
 #&gt; [[10]]$eastings
-#&gt; [1] 532929
+#&gt; [1] 532936
 #&gt; 
 #&gt; [[10]]$admin_district
 #&gt; [[10]]$admin_district[[1]]
@@ -817,23 +822,23 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[10]]$distance
-#&gt; [1] 936.236
+#&gt; [1] 940.6419
 #&gt; 
 #&gt; </div><div class='input'><span class='fu'>nearest_outcode</span>(<span class='st'>"EC1Y"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>11</span>)</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$outcode
 #&gt; [1] "EC1Y"
 #&gt; 
 #&gt; [[1]]$longitude
-#&gt; [1] -0.09239269
+#&gt; [1] -0.09240626
 #&gt; 
 #&gt; [[1]]$latitude
-#&gt; [1] 51.52303
+#&gt; [1] 51.52305
 #&gt; 
 #&gt; [[1]]$northings
-#&gt; [1] 182181
+#&gt; [1] 182184
 #&gt; 
 #&gt; [[1]]$eastings
-#&gt; [1] 532440
+#&gt; [1] 532439
 #&gt; 
 #&gt; [[1]]$admin_district
 #&gt; [[1]]$admin_district[[1]]
@@ -882,16 +887,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2Y"
 #&gt; 
 #&gt; [[2]]$longitude
-#&gt; [1] -0.09367956
+#&gt; [1] -0.09351891
 #&gt; 
 #&gt; [[2]]$latitude
-#&gt; [1] 51.51948
+#&gt; [1] 51.51943
 #&gt; 
 #&gt; [[2]]$northings
-#&gt; [1] 181784
+#&gt; [1] 181778
 #&gt; 
 #&gt; [[2]]$eastings
-#&gt; [1] 532361
+#&gt; [1] 532372
 #&gt; 
 #&gt; [[2]]$admin_district
 #&gt; [[2]]$admin_district[[1]]
@@ -938,7 +943,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[2]]$distance
-#&gt; [1] 405.0327
+#&gt; [1] 410.5594
 #&gt; 
 #&gt; 
 #&gt; [[3]]
@@ -946,16 +951,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2A"
 #&gt; 
 #&gt; [[3]]$longitude
-#&gt; [1] -0.08564764
+#&gt; [1] -0.08560013
 #&gt; 
 #&gt; [[3]]$latitude
 #&gt; [1] 51.5237
 #&gt; 
 #&gt; [[3]]$northings
-#&gt; [1] 182268
+#&gt; [1] 182267
 #&gt; 
 #&gt; [[3]]$eastings
-#&gt; [1] 532906
+#&gt; [1] 532909
 #&gt; 
 #&gt; [[3]]$admin_district
 #&gt; [[3]]$admin_district[[1]]
@@ -1002,7 +1007,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[3]]$distance
-#&gt; [1] 474.0922
+#&gt; [1] 477.7771
 #&gt; 
 #&gt; 
 #&gt; [[4]]
@@ -1010,13 +1015,13 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC1V"
 #&gt; 
 #&gt; [[4]]$longitude
-#&gt; [1] -0.09789332
+#&gt; [1] -0.09789149
 #&gt; 
 #&gt; [[4]]$latitude
-#&gt; [1] 51.52677
+#&gt; [1] 51.52679
 #&gt; 
 #&gt; [[4]]$northings
-#&gt; [1] 182587
+#&gt; [1] 182590
 #&gt; 
 #&gt; [[4]]$eastings
 #&gt; [1] 532047
@@ -1063,7 +1068,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[4]]$distance
-#&gt; [1] 564.5064
+#&gt; [1] 564.1671
 #&gt; 
 #&gt; 
 #&gt; [[5]]
@@ -1071,16 +1076,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2M"
 #&gt; 
 #&gt; [[5]]$longitude
-#&gt; [1] -0.08631917
+#&gt; [1] -0.08650574
 #&gt; 
 #&gt; [[5]]$latitude
-#&gt; [1] 51.51859
+#&gt; [1] 51.51865
 #&gt; 
 #&gt; [[5]]$northings
-#&gt; [1] 181698
+#&gt; [1] 181705
 #&gt; 
 #&gt; [[5]]$eastings
-#&gt; [1] 532874
+#&gt; [1] 532861
 #&gt; 
 #&gt; [[5]]$admin_district
 #&gt; [[5]]$admin_district[[1]]
@@ -1145,7 +1150,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[5]]$distance
-#&gt; [1] 649.5466
+#&gt; [1] 638.5113
 #&gt; 
 #&gt; 
 #&gt; [[6]]
@@ -1153,13 +1158,13 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC1M"
 #&gt; 
 #&gt; [[6]]$longitude
-#&gt; [1] -0.1022982
+#&gt; [1] -0.1022952
 #&gt; 
 #&gt; [[6]]$latitude
-#&gt; [1] 51.52135
+#&gt; [1] 51.52136
 #&gt; 
 #&gt; [[6]]$northings
-#&gt; [1] 181976
+#&gt; [1] 181977
 #&gt; 
 #&gt; [[6]]$eastings
 #&gt; [1] 531757
@@ -1212,7 +1217,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[6]]$distance
-#&gt; [1] 712.4735
+#&gt; [1] 711.7464
 #&gt; 
 #&gt; 
 #&gt; [[7]]
@@ -1220,16 +1225,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2R"
 #&gt; 
 #&gt; [[7]]$longitude
-#&gt; [1] -0.09065046
+#&gt; [1] -0.0909229
 #&gt; 
 #&gt; [[7]]$latitude
-#&gt; [1] 51.51594
+#&gt; [1] 51.51607
 #&gt; 
 #&gt; [[7]]$northings
-#&gt; [1] 181396
+#&gt; [1] 181410
 #&gt; 
 #&gt; [[7]]$eastings
-#&gt; [1] 532581
+#&gt; [1] 532562
 #&gt; 
 #&gt; [[7]]$admin_district
 #&gt; [[7]]$admin_district[[1]]
@@ -1282,7 +1287,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[7]]$distance
-#&gt; [1] 798.1329
+#&gt; [1] 783.8447
 #&gt; 
 #&gt; 
 #&gt; [[8]]
@@ -1290,16 +1295,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2V"
 #&gt; 
 #&gt; [[8]]$longitude
-#&gt; [1] -0.09396452
+#&gt; [1] -0.09393065
 #&gt; 
 #&gt; [[8]]$latitude
-#&gt; [1] 51.51563
+#&gt; [1] 51.51565
 #&gt; 
 #&gt; [[8]]$northings
-#&gt; [1] 181355
+#&gt; [1] 181357
 #&gt; 
 #&gt; [[8]]$eastings
-#&gt; [1] 532352
+#&gt; [1] 532354
 #&gt; 
 #&gt; [[8]]$admin_district
 #&gt; [[8]]$admin_district[[1]]
@@ -1352,7 +1357,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[8]]$distance
-#&gt; [1] 830.8772
+#&gt; [1] 830.6345
 #&gt; 
 #&gt; 
 #&gt; [[9]]
@@ -1360,16 +1365,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC1A"
 #&gt; 
 #&gt; [[9]]$longitude
-#&gt; [1] -0.1038367
+#&gt; [1] -0.1039063
 #&gt; 
 #&gt; [[9]]$latitude
-#&gt; [1] 51.52027
+#&gt; [1] 51.5203
 #&gt; 
 #&gt; [[9]]$northings
-#&gt; [1] 181854
+#&gt; [1] 181857
 #&gt; 
 #&gt; [[9]]$eastings
-#&gt; [1] 531654
+#&gt; [1] 531649
 #&gt; 
 #&gt; [[9]]$admin_district
 #&gt; [[9]]$admin_district[[1]]
@@ -1419,7 +1424,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[9]]$distance
-#&gt; [1] 851.562
+#&gt; [1] 854.7138
 #&gt; 
 #&gt; 
 #&gt; [[10]]
@@ -1427,16 +1432,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2N"
 #&gt; 
 #&gt; [[10]]$longitude
-#&gt; [1] -0.08563925
+#&gt; [1] -0.08554044
 #&gt; 
 #&gt; [[10]]$latitude
-#&gt; [1] 51.51574
+#&gt; [1] 51.51576
 #&gt; 
 #&gt; [[10]]$northings
-#&gt; [1] 181383
+#&gt; [1] 181385
 #&gt; 
 #&gt; [[10]]$eastings
-#&gt; [1] 532929
+#&gt; [1] 532936
 #&gt; 
 #&gt; [[10]]$admin_district
 #&gt; [[10]]$admin_district[[1]]
@@ -1483,7 +1488,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[10]]$distance
-#&gt; [1] 936.236
+#&gt; [1] 940.6419
 #&gt; 
 #&gt; 
 #&gt; [[11]]
@@ -1491,16 +1496,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC4M"
 #&gt; 
 #&gt; [[11]]$longitude
-#&gt; [1] -0.09923863
+#&gt; [1] -0.09941032
 #&gt; 
 #&gt; [[11]]$latitude
-#&gt; [1] 51.51417
+#&gt; [1] 51.51429
 #&gt; 
 #&gt; [[11]]$northings
-#&gt; [1] 181183
+#&gt; [1] 181196
 #&gt; 
 #&gt; [[11]]$eastings
-#&gt; [1] 531990
+#&gt; [1] 531978
 #&gt; 
 #&gt; [[11]]$admin_district
 #&gt; [[11]]$admin_district[[1]]
@@ -1547,23 +1552,23 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[11]]$distance
-#&gt; [1] 1094.221
+#&gt; [1] 1089.608
 #&gt; 
 #&gt; </div><div class='input'><span class='fu'>nearest_outcode</span>(<span class='st'>"EC1Y"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>11</span>, <span class='kw'>radius</span> <span class='kw'>=</span> <span class='fl'>6000</span>)</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$outcode
 #&gt; [1] "EC1Y"
 #&gt; 
 #&gt; [[1]]$longitude
-#&gt; [1] -0.09239269
+#&gt; [1] -0.09240626
 #&gt; 
 #&gt; [[1]]$latitude
-#&gt; [1] 51.52303
+#&gt; [1] 51.52305
 #&gt; 
 #&gt; [[1]]$northings
-#&gt; [1] 182181
+#&gt; [1] 182184
 #&gt; 
 #&gt; [[1]]$eastings
-#&gt; [1] 532440
+#&gt; [1] 532439
 #&gt; 
 #&gt; [[1]]$admin_district
 #&gt; [[1]]$admin_district[[1]]
@@ -1612,16 +1617,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2Y"
 #&gt; 
 #&gt; [[2]]$longitude
-#&gt; [1] -0.09367956
+#&gt; [1] -0.09351891
 #&gt; 
 #&gt; [[2]]$latitude
-#&gt; [1] 51.51948
+#&gt; [1] 51.51943
 #&gt; 
 #&gt; [[2]]$northings
-#&gt; [1] 181784
+#&gt; [1] 181778
 #&gt; 
 #&gt; [[2]]$eastings
-#&gt; [1] 532361
+#&gt; [1] 532372
 #&gt; 
 #&gt; [[2]]$admin_district
 #&gt; [[2]]$admin_district[[1]]
@@ -1668,7 +1673,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[2]]$distance
-#&gt; [1] 405.0327
+#&gt; [1] 410.5594
 #&gt; 
 #&gt; 
 #&gt; [[3]]
@@ -1676,16 +1681,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2A"
 #&gt; 
 #&gt; [[3]]$longitude
-#&gt; [1] -0.08564764
+#&gt; [1] -0.08560013
 #&gt; 
 #&gt; [[3]]$latitude
 #&gt; [1] 51.5237
 #&gt; 
 #&gt; [[3]]$northings
-#&gt; [1] 182268
+#&gt; [1] 182267
 #&gt; 
 #&gt; [[3]]$eastings
-#&gt; [1] 532906
+#&gt; [1] 532909
 #&gt; 
 #&gt; [[3]]$admin_district
 #&gt; [[3]]$admin_district[[1]]
@@ -1732,7 +1737,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[3]]$distance
-#&gt; [1] 474.0922
+#&gt; [1] 477.7771
 #&gt; 
 #&gt; 
 #&gt; [[4]]
@@ -1740,13 +1745,13 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC1V"
 #&gt; 
 #&gt; [[4]]$longitude
-#&gt; [1] -0.09789332
+#&gt; [1] -0.09789149
 #&gt; 
 #&gt; [[4]]$latitude
-#&gt; [1] 51.52677
+#&gt; [1] 51.52679
 #&gt; 
 #&gt; [[4]]$northings
-#&gt; [1] 182587
+#&gt; [1] 182590
 #&gt; 
 #&gt; [[4]]$eastings
 #&gt; [1] 532047
@@ -1793,7 +1798,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[4]]$distance
-#&gt; [1] 564.5064
+#&gt; [1] 564.1671
 #&gt; 
 #&gt; 
 #&gt; [[5]]
@@ -1801,16 +1806,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2M"
 #&gt; 
 #&gt; [[5]]$longitude
-#&gt; [1] -0.08631917
+#&gt; [1] -0.08650574
 #&gt; 
 #&gt; [[5]]$latitude
-#&gt; [1] 51.51859
+#&gt; [1] 51.51865
 #&gt; 
 #&gt; [[5]]$northings
-#&gt; [1] 181698
+#&gt; [1] 181705
 #&gt; 
 #&gt; [[5]]$eastings
-#&gt; [1] 532874
+#&gt; [1] 532861
 #&gt; 
 #&gt; [[5]]$admin_district
 #&gt; [[5]]$admin_district[[1]]
@@ -1875,7 +1880,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[5]]$distance
-#&gt; [1] 649.5466
+#&gt; [1] 638.5113
 #&gt; 
 #&gt; 
 #&gt; [[6]]
@@ -1883,13 +1888,13 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC1M"
 #&gt; 
 #&gt; [[6]]$longitude
-#&gt; [1] -0.1022982
+#&gt; [1] -0.1022952
 #&gt; 
 #&gt; [[6]]$latitude
-#&gt; [1] 51.52135
+#&gt; [1] 51.52136
 #&gt; 
 #&gt; [[6]]$northings
-#&gt; [1] 181976
+#&gt; [1] 181977
 #&gt; 
 #&gt; [[6]]$eastings
 #&gt; [1] 531757
@@ -1942,7 +1947,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[6]]$distance
-#&gt; [1] 712.4735
+#&gt; [1] 711.7464
 #&gt; 
 #&gt; 
 #&gt; [[7]]
@@ -1950,16 +1955,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2R"
 #&gt; 
 #&gt; [[7]]$longitude
-#&gt; [1] -0.09065046
+#&gt; [1] -0.0909229
 #&gt; 
 #&gt; [[7]]$latitude
-#&gt; [1] 51.51594
+#&gt; [1] 51.51607
 #&gt; 
 #&gt; [[7]]$northings
-#&gt; [1] 181396
+#&gt; [1] 181410
 #&gt; 
 #&gt; [[7]]$eastings
-#&gt; [1] 532581
+#&gt; [1] 532562
 #&gt; 
 #&gt; [[7]]$admin_district
 #&gt; [[7]]$admin_district[[1]]
@@ -2012,7 +2017,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[7]]$distance
-#&gt; [1] 798.1329
+#&gt; [1] 783.8447
 #&gt; 
 #&gt; 
 #&gt; [[8]]
@@ -2020,16 +2025,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2V"
 #&gt; 
 #&gt; [[8]]$longitude
-#&gt; [1] -0.09396452
+#&gt; [1] -0.09393065
 #&gt; 
 #&gt; [[8]]$latitude
-#&gt; [1] 51.51563
+#&gt; [1] 51.51565
 #&gt; 
 #&gt; [[8]]$northings
-#&gt; [1] 181355
+#&gt; [1] 181357
 #&gt; 
 #&gt; [[8]]$eastings
-#&gt; [1] 532352
+#&gt; [1] 532354
 #&gt; 
 #&gt; [[8]]$admin_district
 #&gt; [[8]]$admin_district[[1]]
@@ -2082,7 +2087,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[8]]$distance
-#&gt; [1] 830.8772
+#&gt; [1] 830.6345
 #&gt; 
 #&gt; 
 #&gt; [[9]]
@@ -2090,16 +2095,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC1A"
 #&gt; 
 #&gt; [[9]]$longitude
-#&gt; [1] -0.1038367
+#&gt; [1] -0.1039063
 #&gt; 
 #&gt; [[9]]$latitude
-#&gt; [1] 51.52027
+#&gt; [1] 51.5203
 #&gt; 
 #&gt; [[9]]$northings
-#&gt; [1] 181854
+#&gt; [1] 181857
 #&gt; 
 #&gt; [[9]]$eastings
-#&gt; [1] 531654
+#&gt; [1] 531649
 #&gt; 
 #&gt; [[9]]$admin_district
 #&gt; [[9]]$admin_district[[1]]
@@ -2149,7 +2154,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[9]]$distance
-#&gt; [1] 851.562
+#&gt; [1] 854.7138
 #&gt; 
 #&gt; 
 #&gt; [[10]]
@@ -2157,16 +2162,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC2N"
 #&gt; 
 #&gt; [[10]]$longitude
-#&gt; [1] -0.08563925
+#&gt; [1] -0.08554044
 #&gt; 
 #&gt; [[10]]$latitude
-#&gt; [1] 51.51574
+#&gt; [1] 51.51576
 #&gt; 
 #&gt; [[10]]$northings
-#&gt; [1] 181383
+#&gt; [1] 181385
 #&gt; 
 #&gt; [[10]]$eastings
-#&gt; [1] 532929
+#&gt; [1] 532936
 #&gt; 
 #&gt; [[10]]$admin_district
 #&gt; [[10]]$admin_district[[1]]
@@ -2213,7 +2218,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[10]]$distance
-#&gt; [1] 936.236
+#&gt; [1] 940.6419
 #&gt; 
 #&gt; 
 #&gt; [[11]]
@@ -2221,16 +2226,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC4M"
 #&gt; 
 #&gt; [[11]]$longitude
-#&gt; [1] -0.09923863
+#&gt; [1] -0.09941032
 #&gt; 
 #&gt; [[11]]$latitude
-#&gt; [1] 51.51417
+#&gt; [1] 51.51429
 #&gt; 
 #&gt; [[11]]$northings
-#&gt; [1] 181183
+#&gt; [1] 181196
 #&gt; 
 #&gt; [[11]]$eastings
-#&gt; [1] 531990
+#&gt; [1] 531978
 #&gt; 
 #&gt; [[11]]$admin_district
 #&gt; [[11]]$admin_district[[1]]
@@ -2277,9 +2282,10 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; 
 #&gt; 
 #&gt; [[11]]$distance
-#&gt; [1] 1094.221
+#&gt; [1] 1089.608
 #&gt; 
-#&gt; </div><div class='input'>
+#&gt; </div><div class='input'># }
+
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -2297,19 +2303,23 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
   </div>
 </div>
 
+
       <footer>
       <div class="copyright">
   <p>Developed by Eryk Walczak.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 

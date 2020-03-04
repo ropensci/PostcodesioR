@@ -16,13 +16,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -47,6 +49,7 @@
 <![endif]-->
 
 
+
   </head>
 
   <body>
@@ -63,7 +66,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">PostcodesioR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -71,7 +74,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -104,6 +107,7 @@
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -149,15 +153,16 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-</div><div class='input'><span class='no'>geolocations_list</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/structure'>structure</a></span>(
-<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(
-<span class='kw'>geolocations</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/structure'>structure</a></span>(
-<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list'>list</a></span>(
-<span class='kw'>longitude</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(-<span class='fl'>3.15807731271522</span>, -<span class='fl'>1.12935802905177</span>),
-<span class='kw'>latitude</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>51.4799900627036</span>, <span class='fl'>50.7186356978817</span>),
-<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>NA</span>, <span class='fl'>100L</span>),
-<span class='kw'>radius</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>NA</span>, <span class='fl'>500L</span>)),
-<span class='kw'>.Names</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"longitude"</span>, <span class='st'>"latitude"</span>, <span class='st'>"limit"</span>, <span class='st'>"radius"</span>),
+<span class='co'># \donttest{</span>
+<span class='no'>geolocations_list</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/structure.html'>structure</a></span>(
+<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
+<span class='kw'>geolocations</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/structure.html'>structure</a></span>(
+<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
+<span class='kw'>longitude</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>3.15807731271522</span>, -<span class='fl'>1.12935802905177</span>),
+<span class='kw'>latitude</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>51.4799900627036</span>, <span class='fl'>50.7186356978817</span>),
+<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>NA</span>, <span class='fl'>100L</span>),
+<span class='kw'>radius</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>NA</span>, <span class='fl'>500L</span>)),
+<span class='kw'>.Names</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"longitude"</span>, <span class='st'>"latitude"</span>, <span class='st'>"limit"</span>, <span class='st'>"radius"</span>),
 <span class='kw'>class</span> <span class='kw'>=</span> <span class='st'>"data.frame"</span>,
 <span class='kw'>row.names</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>2</span>)),
 <span class='kw'>.Names</span> <span class='kw'>=</span> <span class='st'>"geolocations"</span>)
@@ -218,9 +223,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[1]]$result[[1]]$outcode
 #&gt; [1] "CF24"
 #&gt; 
-#&gt; [[1]]$result[[1]]$distance
-#&gt; [1] 1.567236
-#&gt; 
 #&gt; [[1]]$result[[1]]$parliamentary_constituency
 #&gt; [1] "Cardiff South and Penarth"
 #&gt; 
@@ -264,12 +266,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[1]]$result[[1]]$codes$ccg
 #&gt; [1] "W11000029"
 #&gt; 
+#&gt; [[1]]$result[[1]]$codes$ccg_id
+#&gt; [1] "7A4"
+#&gt; 
 #&gt; [[1]]$result[[1]]$codes$ced
 #&gt; [1] "W99999999"
 #&gt; 
 #&gt; [[1]]$result[[1]]$codes$nuts
 #&gt; [1] "UKL22"
 #&gt; 
+#&gt; 
+#&gt; [[1]]$result[[1]]$distance
+#&gt; [1] 1.567236
 #&gt; 
 #&gt; 
 #&gt; [[1]]$result[[2]]
@@ -318,9 +326,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[1]]$result[[2]]$outcode
 #&gt; [1] "CF24"
 #&gt; 
-#&gt; [[1]]$result[[2]]$distance
-#&gt; [1] 53.91644
-#&gt; 
 #&gt; [[1]]$result[[2]]$parliamentary_constituency
 #&gt; [1] "Cardiff South and Penarth"
 #&gt; 
@@ -364,12 +369,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[1]]$result[[2]]$codes$ccg
 #&gt; [1] "W11000029"
 #&gt; 
+#&gt; [[1]]$result[[2]]$codes$ccg_id
+#&gt; [1] "7A4"
+#&gt; 
 #&gt; [[1]]$result[[2]]$codes$ced
 #&gt; [1] "W99999999"
 #&gt; 
 #&gt; [[1]]$result[[2]]$codes$nuts
 #&gt; [1] "UKL22"
 #&gt; 
+#&gt; 
+#&gt; [[1]]$result[[2]]$distance
+#&gt; [1] 53.91644
 #&gt; 
 #&gt; 
 #&gt; [[1]]$result[[3]]
@@ -418,9 +429,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[1]]$result[[3]]$outcode
 #&gt; [1] "CF24"
 #&gt; 
-#&gt; [[1]]$result[[3]]$distance
-#&gt; [1] 72.61436
-#&gt; 
 #&gt; [[1]]$result[[3]]$parliamentary_constituency
 #&gt; [1] "Cardiff South and Penarth"
 #&gt; 
@@ -464,12 +472,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[1]]$result[[3]]$codes$ccg
 #&gt; [1] "W11000029"
 #&gt; 
+#&gt; [[1]]$result[[3]]$codes$ccg_id
+#&gt; [1] "7A4"
+#&gt; 
 #&gt; [[1]]$result[[3]]$codes$ced
 #&gt; [1] "W99999999"
 #&gt; 
 #&gt; [[1]]$result[[3]]$codes$nuts
 #&gt; [1] "UKL22"
 #&gt; 
+#&gt; 
+#&gt; [[1]]$result[[3]]$distance
+#&gt; [1] 72.61436
 #&gt; 
 #&gt; 
 #&gt; [[1]]$result[[4]]
@@ -518,9 +532,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[1]]$result[[4]]$outcode
 #&gt; [1] "CF24"
 #&gt; 
-#&gt; [[1]]$result[[4]]$distance
-#&gt; [1] 75.42382
-#&gt; 
 #&gt; [[1]]$result[[4]]$parliamentary_constituency
 #&gt; [1] "Cardiff South and Penarth"
 #&gt; 
@@ -564,12 +575,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[1]]$result[[4]]$codes$ccg
 #&gt; [1] "W11000029"
 #&gt; 
+#&gt; [[1]]$result[[4]]$codes$ccg_id
+#&gt; [1] "7A4"
+#&gt; 
 #&gt; [[1]]$result[[4]]$codes$ced
 #&gt; [1] "W99999999"
 #&gt; 
 #&gt; [[1]]$result[[4]]$codes$nuts
 #&gt; [1] "UKL22"
 #&gt; 
+#&gt; 
+#&gt; [[1]]$result[[4]]$distance
+#&gt; [1] 75.42382
 #&gt; 
 #&gt; 
 #&gt; [[1]]$result[[5]]
@@ -618,9 +635,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[1]]$result[[5]]$outcode
 #&gt; [1] "CF24"
 #&gt; 
-#&gt; [[1]]$result[[5]]$distance
-#&gt; [1] 83.05426
-#&gt; 
 #&gt; [[1]]$result[[5]]$parliamentary_constituency
 #&gt; [1] "Cardiff South and Penarth"
 #&gt; 
@@ -664,12 +678,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[1]]$result[[5]]$codes$ccg
 #&gt; [1] "W11000029"
 #&gt; 
+#&gt; [[1]]$result[[5]]$codes$ccg_id
+#&gt; [1] "7A4"
+#&gt; 
 #&gt; [[1]]$result[[5]]$codes$ced
 #&gt; [1] "W99999999"
 #&gt; 
 #&gt; [[1]]$result[[5]]$codes$nuts
 #&gt; [1] "UKL22"
 #&gt; 
+#&gt; 
+#&gt; [[1]]$result[[5]]$distance
+#&gt; [1] 83.05426
 #&gt; 
 #&gt; 
 #&gt; [[1]]$result[[6]]
@@ -718,9 +738,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[1]]$result[[6]]$outcode
 #&gt; [1] "CF24"
 #&gt; 
-#&gt; [[1]]$result[[6]]$distance
-#&gt; [1] 85.27079
-#&gt; 
 #&gt; [[1]]$result[[6]]$parliamentary_constituency
 #&gt; [1] "Cardiff South and Penarth"
 #&gt; 
@@ -764,12 +781,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[1]]$result[[6]]$codes$ccg
 #&gt; [1] "W11000029"
 #&gt; 
+#&gt; [[1]]$result[[6]]$codes$ccg_id
+#&gt; [1] "7A4"
+#&gt; 
 #&gt; [[1]]$result[[6]]$codes$ced
 #&gt; [1] "W99999999"
 #&gt; 
 #&gt; [[1]]$result[[6]]$codes$nuts
 #&gt; [1] "UKL22"
 #&gt; 
+#&gt; 
+#&gt; [[1]]$result[[6]]$distance
+#&gt; [1] 85.27079
 #&gt; 
 #&gt; 
 #&gt; [[1]]$result[[7]]
@@ -818,9 +841,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[1]]$result[[7]]$outcode
 #&gt; [1] "CF24"
 #&gt; 
-#&gt; [[1]]$result[[7]]$distance
-#&gt; [1] 89.79017
-#&gt; 
 #&gt; [[1]]$result[[7]]$parliamentary_constituency
 #&gt; [1] "Cardiff South and Penarth"
 #&gt; 
@@ -864,12 +884,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[1]]$result[[7]]$codes$ccg
 #&gt; [1] "W11000029"
 #&gt; 
+#&gt; [[1]]$result[[7]]$codes$ccg_id
+#&gt; [1] "7A4"
+#&gt; 
 #&gt; [[1]]$result[[7]]$codes$ced
 #&gt; [1] "W99999999"
 #&gt; 
 #&gt; [[1]]$result[[7]]$codes$nuts
 #&gt; [1] "UKL22"
 #&gt; 
+#&gt; 
+#&gt; [[1]]$result[[7]]$distance
+#&gt; [1] 89.79017
 #&gt; 
 #&gt; 
 #&gt; [[1]]$result[[8]]
@@ -918,9 +944,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[1]]$result[[8]]$outcode
 #&gt; [1] "CF24"
 #&gt; 
-#&gt; [[1]]$result[[8]]$distance
-#&gt; [1] 93.55397
-#&gt; 
 #&gt; [[1]]$result[[8]]$parliamentary_constituency
 #&gt; [1] "Cardiff South and Penarth"
 #&gt; 
@@ -964,12 +987,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[1]]$result[[8]]$codes$ccg
 #&gt; [1] "W11000029"
 #&gt; 
+#&gt; [[1]]$result[[8]]$codes$ccg_id
+#&gt; [1] "7A4"
+#&gt; 
 #&gt; [[1]]$result[[8]]$codes$ced
 #&gt; [1] "W99999999"
 #&gt; 
 #&gt; [[1]]$result[[8]]$codes$nuts
 #&gt; [1] "UKL22"
 #&gt; 
+#&gt; 
+#&gt; [[1]]$result[[8]]$distance
+#&gt; [1] 93.55397
 #&gt; 
 #&gt; 
 #&gt; 
@@ -998,10 +1027,10 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [1] 1
 #&gt; 
 #&gt; [[2]]$result[[1]]$eastings
-#&gt; [1] 461563
+#&gt; [1] 461564
 #&gt; 
 #&gt; [[2]]$result[[1]]$northings
-#&gt; [1] 91382
+#&gt; [1] 91388
 #&gt; 
 #&gt; [[2]]$result[[1]]$country
 #&gt; [1] "England"
@@ -1010,10 +1039,10 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [1] "South Central"
 #&gt; 
 #&gt; [[2]]$result[[1]]$longitude
-#&gt; [1] -1.129298
+#&gt; [1] -1.129271
 #&gt; 
 #&gt; [[2]]$result[[1]]$latitude
-#&gt; [1] 50.71881
+#&gt; [1] 50.71886
 #&gt; 
 #&gt; [[2]]$result[[1]]$european_electoral_region
 #&gt; [1] "South East"
@@ -1035,9 +1064,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; 
 #&gt; [[2]]$result[[1]]$outcode
 #&gt; [1] "PO33"
-#&gt; 
-#&gt; [[2]]$result[[1]]$distance
-#&gt; [1] 20.17405
 #&gt; 
 #&gt; [[2]]$result[[1]]$parliamentary_constituency
 #&gt; [1] "Isle of Wight"
@@ -1082,12 +1108,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[1]]$codes$ccg
 #&gt; [1] "E38000087"
 #&gt; 
+#&gt; [[2]]$result[[1]]$codes$ccg_id
+#&gt; [1] "10L"
+#&gt; 
 #&gt; [[2]]$result[[1]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$result[[1]]$codes$nuts
 #&gt; [1] "UKJ34"
 #&gt; 
+#&gt; 
+#&gt; [[2]]$result[[1]]$distance
+#&gt; [1] 25.26598
 #&gt; 
 #&gt; 
 #&gt; [[2]]$result[[2]]
@@ -1136,9 +1168,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[2]]$outcode
 #&gt; [1] "PO33"
 #&gt; 
-#&gt; [[2]]$result[[2]]$distance
-#&gt; [1] 63.31111
-#&gt; 
 #&gt; [[2]]$result[[2]]$parliamentary_constituency
 #&gt; [1] "Isle of Wight"
 #&gt; 
@@ -1182,12 +1211,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[2]]$codes$ccg
 #&gt; [1] "E38000087"
 #&gt; 
+#&gt; [[2]]$result[[2]]$codes$ccg_id
+#&gt; [1] "10L"
+#&gt; 
 #&gt; [[2]]$result[[2]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$result[[2]]$codes$nuts
 #&gt; [1] "UKJ34"
 #&gt; 
+#&gt; 
+#&gt; [[2]]$result[[2]]$distance
+#&gt; [1] 63.31111
 #&gt; 
 #&gt; 
 #&gt; [[2]]$result[[3]]
@@ -1236,9 +1271,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[3]]$outcode
 #&gt; [1] "PO33"
 #&gt; 
-#&gt; [[2]]$result[[3]]$distance
-#&gt; [1] 178.1283
-#&gt; 
 #&gt; [[2]]$result[[3]]$parliamentary_constituency
 #&gt; [1] "Isle of Wight"
 #&gt; 
@@ -1282,12 +1314,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[3]]$codes$ccg
 #&gt; [1] "E38000087"
 #&gt; 
+#&gt; [[2]]$result[[3]]$codes$ccg_id
+#&gt; [1] "10L"
+#&gt; 
 #&gt; [[2]]$result[[3]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$result[[3]]$codes$nuts
 #&gt; [1] "UKJ34"
 #&gt; 
+#&gt; 
+#&gt; [[2]]$result[[3]]$distance
+#&gt; [1] 178.1283
 #&gt; 
 #&gt; 
 #&gt; [[2]]$result[[4]]
@@ -1336,9 +1374,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[4]]$outcode
 #&gt; [1] "PO33"
 #&gt; 
-#&gt; [[2]]$result[[4]]$distance
-#&gt; [1] 179.9043
-#&gt; 
 #&gt; [[2]]$result[[4]]$parliamentary_constituency
 #&gt; [1] "Isle of Wight"
 #&gt; 
@@ -1382,12 +1417,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[4]]$codes$ccg
 #&gt; [1] "E38000087"
 #&gt; 
+#&gt; [[2]]$result[[4]]$codes$ccg_id
+#&gt; [1] "10L"
+#&gt; 
 #&gt; [[2]]$result[[4]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$result[[4]]$codes$nuts
 #&gt; [1] "UKJ34"
 #&gt; 
+#&gt; 
+#&gt; [[2]]$result[[4]]$distance
+#&gt; [1] 179.9043
 #&gt; 
 #&gt; 
 #&gt; [[2]]$result[[5]]
@@ -1436,9 +1477,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[5]]$outcode
 #&gt; [1] "PO33"
 #&gt; 
-#&gt; [[2]]$result[[5]]$distance
-#&gt; [1] 193.071
-#&gt; 
 #&gt; [[2]]$result[[5]]$parliamentary_constituency
 #&gt; [1] "Isle of Wight"
 #&gt; 
@@ -1482,12 +1520,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[5]]$codes$ccg
 #&gt; [1] "E38000087"
 #&gt; 
+#&gt; [[2]]$result[[5]]$codes$ccg_id
+#&gt; [1] "10L"
+#&gt; 
 #&gt; [[2]]$result[[5]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$result[[5]]$codes$nuts
 #&gt; [1] "UKJ34"
 #&gt; 
+#&gt; 
+#&gt; [[2]]$result[[5]]$distance
+#&gt; [1] 193.071
 #&gt; 
 #&gt; 
 #&gt; [[2]]$result[[6]]
@@ -1536,9 +1580,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[6]]$outcode
 #&gt; [1] "PO33"
 #&gt; 
-#&gt; [[2]]$result[[6]]$distance
-#&gt; [1] 235.6555
-#&gt; 
 #&gt; [[2]]$result[[6]]$parliamentary_constituency
 #&gt; [1] "Isle of Wight"
 #&gt; 
@@ -1582,12 +1623,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[6]]$codes$ccg
 #&gt; [1] "E38000087"
 #&gt; 
+#&gt; [[2]]$result[[6]]$codes$ccg_id
+#&gt; [1] "10L"
+#&gt; 
 #&gt; [[2]]$result[[6]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$result[[6]]$codes$nuts
 #&gt; [1] "UKJ34"
 #&gt; 
+#&gt; 
+#&gt; [[2]]$result[[6]]$distance
+#&gt; [1] 235.6555
 #&gt; 
 #&gt; 
 #&gt; [[2]]$result[[7]]
@@ -1636,9 +1683,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[7]]$outcode
 #&gt; [1] "PO33"
 #&gt; 
-#&gt; [[2]]$result[[7]]$distance
-#&gt; [1] 284.1703
-#&gt; 
 #&gt; [[2]]$result[[7]]$parliamentary_constituency
 #&gt; [1] "Isle of Wight"
 #&gt; 
@@ -1682,12 +1726,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[7]]$codes$ccg
 #&gt; [1] "E38000087"
 #&gt; 
+#&gt; [[2]]$result[[7]]$codes$ccg_id
+#&gt; [1] "10L"
+#&gt; 
 #&gt; [[2]]$result[[7]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$result[[7]]$codes$nuts
 #&gt; [1] "UKJ34"
 #&gt; 
+#&gt; 
+#&gt; [[2]]$result[[7]]$distance
+#&gt; [1] 284.1703
 #&gt; 
 #&gt; 
 #&gt; [[2]]$result[[8]]
@@ -1736,9 +1786,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[8]]$outcode
 #&gt; [1] "PO33"
 #&gt; 
-#&gt; [[2]]$result[[8]]$distance
-#&gt; [1] 400.0937
-#&gt; 
 #&gt; [[2]]$result[[8]]$parliamentary_constituency
 #&gt; [1] "Isle of Wight"
 #&gt; 
@@ -1782,12 +1829,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[8]]$codes$ccg
 #&gt; [1] "E38000087"
 #&gt; 
+#&gt; [[2]]$result[[8]]$codes$ccg_id
+#&gt; [1] "10L"
+#&gt; 
 #&gt; [[2]]$result[[8]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$result[[8]]$codes$nuts
 #&gt; [1] "UKJ34"
 #&gt; 
+#&gt; 
+#&gt; [[2]]$result[[8]]$distance
+#&gt; [1] 400.0937
 #&gt; 
 #&gt; 
 #&gt; [[2]]$result[[9]]
@@ -1836,9 +1889,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[9]]$outcode
 #&gt; [1] "PO33"
 #&gt; 
-#&gt; [[2]]$result[[9]]$distance
-#&gt; [1] 406.5884
-#&gt; 
 #&gt; [[2]]$result[[9]]$parliamentary_constituency
 #&gt; [1] "Isle of Wight"
 #&gt; 
@@ -1882,12 +1932,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[9]]$codes$ccg
 #&gt; [1] "E38000087"
 #&gt; 
+#&gt; [[2]]$result[[9]]$codes$ccg_id
+#&gt; [1] "10L"
+#&gt; 
 #&gt; [[2]]$result[[9]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$result[[9]]$codes$nuts
 #&gt; [1] "UKJ34"
 #&gt; 
+#&gt; 
+#&gt; [[2]]$result[[9]]$distance
+#&gt; [1] 406.5884
 #&gt; 
 #&gt; 
 #&gt; [[2]]$result[[10]]
@@ -1936,9 +1992,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[10]]$outcode
 #&gt; [1] "PO33"
 #&gt; 
-#&gt; [[2]]$result[[10]]$distance
-#&gt; [1] 416.7166
-#&gt; 
 #&gt; [[2]]$result[[10]]$parliamentary_constituency
 #&gt; [1] "Isle of Wight"
 #&gt; 
@@ -1982,12 +2035,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[10]]$codes$ccg
 #&gt; [1] "E38000087"
 #&gt; 
+#&gt; [[2]]$result[[10]]$codes$ccg_id
+#&gt; [1] "10L"
+#&gt; 
 #&gt; [[2]]$result[[10]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$result[[10]]$codes$nuts
 #&gt; [1] "UKJ34"
 #&gt; 
+#&gt; 
+#&gt; [[2]]$result[[10]]$distance
+#&gt; [1] 416.7166
 #&gt; 
 #&gt; 
 #&gt; [[2]]$result[[11]]
@@ -2036,9 +2095,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[11]]$outcode
 #&gt; [1] "PO33"
 #&gt; 
-#&gt; [[2]]$result[[11]]$distance
-#&gt; [1] 427.8181
-#&gt; 
 #&gt; [[2]]$result[[11]]$parliamentary_constituency
 #&gt; [1] "Isle of Wight"
 #&gt; 
@@ -2082,12 +2138,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[11]]$codes$ccg
 #&gt; [1] "E38000087"
 #&gt; 
+#&gt; [[2]]$result[[11]]$codes$ccg_id
+#&gt; [1] "10L"
+#&gt; 
 #&gt; [[2]]$result[[11]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$result[[11]]$codes$nuts
 #&gt; [1] "UKJ34"
 #&gt; 
+#&gt; 
+#&gt; [[2]]$result[[11]]$distance
+#&gt; [1] 427.8181
 #&gt; 
 #&gt; 
 #&gt; [[2]]$result[[12]]
@@ -2136,9 +2198,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[12]]$outcode
 #&gt; [1] "PO33"
 #&gt; 
-#&gt; [[2]]$result[[12]]$distance
-#&gt; [1] 453.569
-#&gt; 
 #&gt; [[2]]$result[[12]]$parliamentary_constituency
 #&gt; [1] "Isle of Wight"
 #&gt; 
@@ -2182,12 +2241,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[12]]$codes$ccg
 #&gt; [1] "E38000087"
 #&gt; 
+#&gt; [[2]]$result[[12]]$codes$ccg_id
+#&gt; [1] "10L"
+#&gt; 
 #&gt; [[2]]$result[[12]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$result[[12]]$codes$nuts
 #&gt; [1] "UKJ34"
 #&gt; 
+#&gt; 
+#&gt; [[2]]$result[[12]]$distance
+#&gt; [1] 453.569
 #&gt; 
 #&gt; 
 #&gt; [[2]]$result[[13]]
@@ -2236,9 +2301,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[13]]$outcode
 #&gt; [1] "PO34"
 #&gt; 
-#&gt; [[2]]$result[[13]]$distance
-#&gt; [1] 472.1845
-#&gt; 
 #&gt; [[2]]$result[[13]]$parliamentary_constituency
 #&gt; [1] "Isle of Wight"
 #&gt; 
@@ -2282,12 +2344,18 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[13]]$codes$ccg
 #&gt; [1] "E38000087"
 #&gt; 
+#&gt; [[2]]$result[[13]]$codes$ccg_id
+#&gt; [1] "10L"
+#&gt; 
 #&gt; [[2]]$result[[13]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$result[[13]]$codes$nuts
 #&gt; [1] "UKJ34"
 #&gt; 
+#&gt; 
+#&gt; [[2]]$result[[13]]$distance
+#&gt; [1] 472.1845
 #&gt; 
 #&gt; 
 #&gt; [[2]]$result[[14]]
@@ -2336,9 +2404,6 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[14]]$outcode
 #&gt; [1] "PO33"
 #&gt; 
-#&gt; [[2]]$result[[14]]$distance
-#&gt; [1] 484.5718
-#&gt; 
 #&gt; [[2]]$result[[14]]$parliamentary_constituency
 #&gt; [1] "Isle of Wight"
 #&gt; 
@@ -2382,6 +2447,9 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [[2]]$result[[14]]$codes$ccg
 #&gt; [1] "E38000087"
 #&gt; 
+#&gt; [[2]]$result[[14]]$codes$ccg_id
+#&gt; [1] "10L"
+#&gt; 
 #&gt; [[2]]$result[[14]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
@@ -2389,9 +2457,13 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
 #&gt; [1] "UKJ34"
 #&gt; 
 #&gt; 
+#&gt; [[2]]$result[[14]]$distance
+#&gt; [1] 484.5718
 #&gt; 
 #&gt; 
-#&gt; </div><div class='input'>
+#&gt; 
+#&gt; </div><div class='input'># }
+
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -2411,19 +2483,23 @@ Both default to 100m and 10 respectively. It also accepts a wideSearch argument.
   </div>
 </div>
 
+
       <footer>
       <div class="copyright">
   <p>Developed by Eryk Walczak.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 
