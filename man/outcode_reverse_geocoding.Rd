@@ -4,8 +4,7 @@
 \alias{outcode_reverse_geocoding}
 \title{Outcode reverse geocoding}
 \usage{
-outcode_reverse_geocoding(longitude, latitude, limit = 10,
-  radius = 5000)
+outcode_reverse_geocoding(longitude, latitude, limit = 10, radius = 5000)
 }
 \arguments{
 \item{longitude}{A string, integer or float. Needs to have at least two decimal points.}

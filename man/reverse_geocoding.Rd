@@ -4,8 +4,13 @@
 \alias{reverse_geocoding}
 \title{Reverse geocoding}
 \usage{
-reverse_geocoding(longitude, latitude, limit = 10, radius = 100,
-  wideSearch = NULL)
+reverse_geocoding(
+  longitude,
+  latitude,
+  limit = 10,
+  radius = 100,
+  wideSearch = NULL
+)
 }
 \arguments{
 \item{longitude}{A string or numeric. Needs to have at least three decimal points.}
