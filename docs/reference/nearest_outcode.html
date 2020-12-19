@@ -8,23 +8,36 @@
 
 <title>Nearest outcode — nearest_outcode • PostcodesioR</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -32,11 +45,12 @@
 
 
 
-<meta property="og:title" content="Nearest outcode — nearest_outcode" />
 
+<meta property="og:title" content="Nearest outcode — nearest_outcode" />
 <meta property="og:description" content="Returns nearest outcodes for a given outcode.
 The search is based on the relative distance of the outcode centroid." />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="/logo.png" />
+
 
 
 
@@ -53,7 +67,7 @@ The search is based on the relative distance of the outcode centroid." />
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +89,7 @@ The search is based on the relative distance of the outcode centroid." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -98,9 +112,13 @@ The search is based on the relative distance of the outcode centroid." />
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/ropensci/PostcodesioR/">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -115,19 +133,17 @@ The search is based on the relative distance of the outcode centroid." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Nearest outcode</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/ropensci/PostcodesioR/blob/master/R/nearest_outcode.R'><code>R/nearest_outcode.R</code></a></small>
     <div class="hidden name"><code>nearest_outcode.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    
     <p>Returns nearest outcodes for a given outcode.
 The search is based on the relative distance of the outcode centroid.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'>nearest_outcode</span>(<span class='no'>outcode</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>radius</span> <span class='kw'>=</span> <span class='fl'>5000</span>)</pre>
-    
+    <pre class="usage"><span class='fu'>nearest_outcode</span><span class='op'>(</span><span class='va'>outcode</span>, limit <span class='op'>=</span> <span class='fl'>10</span>, radius <span class='op'>=</span> <span class='fl'>5000</span><span class='op'>)</span></pre>
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -146,24 +162,23 @@ Defaults to 10. Needs to be less than 100.</p></td>
 Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A list of geographical properties.</p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='postcode_lookup.html'>postcode_lookup</a></code> for documentation.</p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='fu'>nearest_outcode</span>(<span class='st'>"EC1Y"</span>)</div><div class='output co'>#&gt; [[1]]
+<span class='fu'>nearest_outcode</span><span class='op'>(</span><span class='st'>"EC1Y"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$outcode
 #&gt; [1] "EC1Y"
 #&gt; 
 #&gt; [[1]]$longitude
-#&gt; [1] -0.09240626
+#&gt; [1] -0.09246749
 #&gt; 
 #&gt; [[1]]$latitude
 #&gt; [1] 51.52305
@@ -172,7 +187,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] 182184
 #&gt; 
 #&gt; [[1]]$eastings
-#&gt; [1] 532439
+#&gt; [1] 532435
 #&gt; 
 #&gt; [[1]]$admin_district
 #&gt; [[1]]$admin_district[[1]]
@@ -212,25 +227,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[1]]$distance
-#&gt; [1] 0
-#&gt; 
 #&gt; 
 #&gt; [[2]]
 #&gt; [[2]]$outcode
 #&gt; [1] "EC2Y"
 #&gt; 
 #&gt; [[2]]$longitude
-#&gt; [1] -0.09351891
+#&gt; [1] -0.09343703
 #&gt; 
 #&gt; [[2]]$latitude
 #&gt; [1] 51.51943
 #&gt; 
 #&gt; [[2]]$northings
-#&gt; [1] 181778
+#&gt; [1] 181779
 #&gt; 
 #&gt; [[2]]$eastings
-#&gt; [1] 532372
+#&gt; [1] 532378
 #&gt; 
 #&gt; [[2]]$admin_district
 #&gt; [[2]]$admin_district[[1]]
@@ -276,25 +288,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[2]]$distance
-#&gt; [1] 410.5594
-#&gt; 
 #&gt; 
 #&gt; [[3]]
 #&gt; [[3]]$outcode
 #&gt; [1] "EC2A"
 #&gt; 
 #&gt; [[3]]$longitude
-#&gt; [1] -0.08560013
+#&gt; [1] -0.08555454
 #&gt; 
 #&gt; [[3]]$latitude
-#&gt; [1] 51.5237
+#&gt; [1] 51.52366
 #&gt; 
 #&gt; [[3]]$northings
-#&gt; [1] 182267
+#&gt; [1] 182265
 #&gt; 
 #&gt; [[3]]$eastings
-#&gt; [1] 532909
+#&gt; [1] 532913
 #&gt; 
 #&gt; [[3]]$admin_district
 #&gt; [[3]]$admin_district[[1]]
@@ -340,25 +349,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[3]]$distance
-#&gt; [1] 477.7771
-#&gt; 
 #&gt; 
 #&gt; [[4]]
 #&gt; [[4]]$outcode
 #&gt; [1] "EC1V"
 #&gt; 
 #&gt; [[4]]$longitude
-#&gt; [1] -0.09789149
+#&gt; [1] -0.09782032
 #&gt; 
 #&gt; [[4]]$latitude
-#&gt; [1] 51.52679
+#&gt; [1] 51.52681
 #&gt; 
 #&gt; [[4]]$northings
-#&gt; [1] 182590
+#&gt; [1] 182592
 #&gt; 
 #&gt; [[4]]$eastings
-#&gt; [1] 532047
+#&gt; [1] 532053
 #&gt; 
 #&gt; [[4]]$admin_district
 #&gt; [[4]]$admin_district[[1]]
@@ -401,25 +407,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[4]]$distance
-#&gt; [1] 564.1671
-#&gt; 
 #&gt; 
 #&gt; [[5]]
 #&gt; [[5]]$outcode
 #&gt; [1] "EC2M"
 #&gt; 
 #&gt; [[5]]$longitude
-#&gt; [1] -0.08650574
+#&gt; [1] -0.08652682
 #&gt; 
 #&gt; [[5]]$latitude
-#&gt; [1] 51.51865
+#&gt; [1] 51.51866
 #&gt; 
 #&gt; [[5]]$northings
-#&gt; [1] 181705
+#&gt; [1] 181707
 #&gt; 
 #&gt; [[5]]$eastings
-#&gt; [1] 532861
+#&gt; [1] 532860
 #&gt; 
 #&gt; [[5]]$admin_district
 #&gt; [[5]]$admin_district[[1]]
@@ -483,25 +486,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[5]]$distance
-#&gt; [1] 638.5113
-#&gt; 
 #&gt; 
 #&gt; [[6]]
 #&gt; [[6]]$outcode
 #&gt; [1] "EC1M"
 #&gt; 
 #&gt; [[6]]$longitude
-#&gt; [1] -0.1022952
+#&gt; [1] -0.1022676
 #&gt; 
 #&gt; [[6]]$latitude
-#&gt; [1] 51.52136
+#&gt; [1] 51.52132
 #&gt; 
 #&gt; [[6]]$northings
-#&gt; [1] 181977
+#&gt; [1] 181973
 #&gt; 
 #&gt; [[6]]$eastings
-#&gt; [1] 531757
+#&gt; [1] 531760
 #&gt; 
 #&gt; [[6]]$admin_district
 #&gt; [[6]]$admin_district[[1]]
@@ -550,16 +550,13 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[6]]$distance
-#&gt; [1] 711.7464
-#&gt; 
 #&gt; 
 #&gt; [[7]]
 #&gt; [[7]]$outcode
 #&gt; [1] "EC2R"
 #&gt; 
 #&gt; [[7]]$longitude
-#&gt; [1] -0.0909229
+#&gt; [1] -0.09096035
 #&gt; 
 #&gt; [[7]]$latitude
 #&gt; [1] 51.51607
@@ -568,7 +565,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] 181410
 #&gt; 
 #&gt; [[7]]$eastings
-#&gt; [1] 532562
+#&gt; [1] 532560
 #&gt; 
 #&gt; [[7]]$admin_district
 #&gt; [[7]]$admin_district[[1]]
@@ -620,25 +617,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[7]]$distance
-#&gt; [1] 783.8447
-#&gt; 
 #&gt; 
 #&gt; [[8]]
 #&gt; [[8]]$outcode
 #&gt; [1] "EC2V"
 #&gt; 
 #&gt; [[8]]$longitude
-#&gt; [1] -0.09393065
+#&gt; [1] -0.09391845
 #&gt; 
 #&gt; [[8]]$latitude
-#&gt; [1] 51.51565
+#&gt; [1] 51.51561
 #&gt; 
 #&gt; [[8]]$northings
-#&gt; [1] 181357
+#&gt; [1] 181354
 #&gt; 
 #&gt; [[8]]$eastings
-#&gt; [1] 532354
+#&gt; [1] 532356
 #&gt; 
 #&gt; [[8]]$admin_district
 #&gt; [[8]]$admin_district[[1]]
@@ -690,25 +684,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[8]]$distance
-#&gt; [1] 830.6345
-#&gt; 
 #&gt; 
 #&gt; [[9]]
 #&gt; [[9]]$outcode
 #&gt; [1] "EC1A"
 #&gt; 
 #&gt; [[9]]$longitude
-#&gt; [1] -0.1039063
+#&gt; [1] -0.1039303
 #&gt; 
 #&gt; [[9]]$latitude
-#&gt; [1] 51.5203
+#&gt; [1] 51.52037
 #&gt; 
 #&gt; [[9]]$northings
-#&gt; [1] 181857
+#&gt; [1] 181865
 #&gt; 
 #&gt; [[9]]$eastings
-#&gt; [1] 531649
+#&gt; [1] 531647
 #&gt; 
 #&gt; [[9]]$admin_district
 #&gt; [[9]]$admin_district[[1]]
@@ -757,25 +748,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[9]]$distance
-#&gt; [1] 854.7138
-#&gt; 
 #&gt; 
 #&gt; [[10]]
 #&gt; [[10]]$outcode
 #&gt; [1] "EC2N"
 #&gt; 
 #&gt; [[10]]$longitude
-#&gt; [1] -0.08554044
+#&gt; [1] -0.08550267
 #&gt; 
 #&gt; [[10]]$latitude
-#&gt; [1] 51.51576
+#&gt; [1] 51.51579
 #&gt; 
 #&gt; [[10]]$northings
-#&gt; [1] 181385
+#&gt; [1] 181388
 #&gt; 
 #&gt; [[10]]$eastings
-#&gt; [1] 532936
+#&gt; [1] 532939
 #&gt; 
 #&gt; [[10]]$admin_district
 #&gt; [[10]]$admin_district[[1]]
@@ -821,15 +809,13 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[10]]$distance
-#&gt; [1] 940.6419
-#&gt; 
-#&gt; </div><div class='input'><span class='fu'>nearest_outcode</span>(<span class='st'>"EC1Y"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>11</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; </div><div class='input'><span class='fu'>nearest_outcode</span><span class='op'>(</span><span class='st'>"EC1Y"</span>, limit <span class='op'>=</span> <span class='fl'>11</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$outcode
 #&gt; [1] "EC1Y"
 #&gt; 
 #&gt; [[1]]$longitude
-#&gt; [1] -0.09240626
+#&gt; [1] -0.09246749
 #&gt; 
 #&gt; [[1]]$latitude
 #&gt; [1] 51.52305
@@ -838,7 +824,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] 182184
 #&gt; 
 #&gt; [[1]]$eastings
-#&gt; [1] 532439
+#&gt; [1] 532435
 #&gt; 
 #&gt; [[1]]$admin_district
 #&gt; [[1]]$admin_district[[1]]
@@ -878,25 +864,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[1]]$distance
-#&gt; [1] 0
-#&gt; 
 #&gt; 
 #&gt; [[2]]
 #&gt; [[2]]$outcode
 #&gt; [1] "EC2Y"
 #&gt; 
 #&gt; [[2]]$longitude
-#&gt; [1] -0.09351891
+#&gt; [1] -0.09343703
 #&gt; 
 #&gt; [[2]]$latitude
 #&gt; [1] 51.51943
 #&gt; 
 #&gt; [[2]]$northings
-#&gt; [1] 181778
+#&gt; [1] 181779
 #&gt; 
 #&gt; [[2]]$eastings
-#&gt; [1] 532372
+#&gt; [1] 532378
 #&gt; 
 #&gt; [[2]]$admin_district
 #&gt; [[2]]$admin_district[[1]]
@@ -942,25 +925,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[2]]$distance
-#&gt; [1] 410.5594
-#&gt; 
 #&gt; 
 #&gt; [[3]]
 #&gt; [[3]]$outcode
 #&gt; [1] "EC2A"
 #&gt; 
 #&gt; [[3]]$longitude
-#&gt; [1] -0.08560013
+#&gt; [1] -0.08555454
 #&gt; 
 #&gt; [[3]]$latitude
-#&gt; [1] 51.5237
+#&gt; [1] 51.52366
 #&gt; 
 #&gt; [[3]]$northings
-#&gt; [1] 182267
+#&gt; [1] 182265
 #&gt; 
 #&gt; [[3]]$eastings
-#&gt; [1] 532909
+#&gt; [1] 532913
 #&gt; 
 #&gt; [[3]]$admin_district
 #&gt; [[3]]$admin_district[[1]]
@@ -1006,25 +986,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[3]]$distance
-#&gt; [1] 477.7771
-#&gt; 
 #&gt; 
 #&gt; [[4]]
 #&gt; [[4]]$outcode
 #&gt; [1] "EC1V"
 #&gt; 
 #&gt; [[4]]$longitude
-#&gt; [1] -0.09789149
+#&gt; [1] -0.09782032
 #&gt; 
 #&gt; [[4]]$latitude
-#&gt; [1] 51.52679
+#&gt; [1] 51.52681
 #&gt; 
 #&gt; [[4]]$northings
-#&gt; [1] 182590
+#&gt; [1] 182592
 #&gt; 
 #&gt; [[4]]$eastings
-#&gt; [1] 532047
+#&gt; [1] 532053
 #&gt; 
 #&gt; [[4]]$admin_district
 #&gt; [[4]]$admin_district[[1]]
@@ -1067,25 +1044,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[4]]$distance
-#&gt; [1] 564.1671
-#&gt; 
 #&gt; 
 #&gt; [[5]]
 #&gt; [[5]]$outcode
 #&gt; [1] "EC2M"
 #&gt; 
 #&gt; [[5]]$longitude
-#&gt; [1] -0.08650574
+#&gt; [1] -0.08652682
 #&gt; 
 #&gt; [[5]]$latitude
-#&gt; [1] 51.51865
+#&gt; [1] 51.51866
 #&gt; 
 #&gt; [[5]]$northings
-#&gt; [1] 181705
+#&gt; [1] 181707
 #&gt; 
 #&gt; [[5]]$eastings
-#&gt; [1] 532861
+#&gt; [1] 532860
 #&gt; 
 #&gt; [[5]]$admin_district
 #&gt; [[5]]$admin_district[[1]]
@@ -1149,25 +1123,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[5]]$distance
-#&gt; [1] 638.5113
-#&gt; 
 #&gt; 
 #&gt; [[6]]
 #&gt; [[6]]$outcode
 #&gt; [1] "EC1M"
 #&gt; 
 #&gt; [[6]]$longitude
-#&gt; [1] -0.1022952
+#&gt; [1] -0.1022676
 #&gt; 
 #&gt; [[6]]$latitude
-#&gt; [1] 51.52136
+#&gt; [1] 51.52132
 #&gt; 
 #&gt; [[6]]$northings
-#&gt; [1] 181977
+#&gt; [1] 181973
 #&gt; 
 #&gt; [[6]]$eastings
-#&gt; [1] 531757
+#&gt; [1] 531760
 #&gt; 
 #&gt; [[6]]$admin_district
 #&gt; [[6]]$admin_district[[1]]
@@ -1216,16 +1187,13 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[6]]$distance
-#&gt; [1] 711.7464
-#&gt; 
 #&gt; 
 #&gt; [[7]]
 #&gt; [[7]]$outcode
 #&gt; [1] "EC2R"
 #&gt; 
 #&gt; [[7]]$longitude
-#&gt; [1] -0.0909229
+#&gt; [1] -0.09096035
 #&gt; 
 #&gt; [[7]]$latitude
 #&gt; [1] 51.51607
@@ -1234,7 +1202,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] 181410
 #&gt; 
 #&gt; [[7]]$eastings
-#&gt; [1] 532562
+#&gt; [1] 532560
 #&gt; 
 #&gt; [[7]]$admin_district
 #&gt; [[7]]$admin_district[[1]]
@@ -1286,25 +1254,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[7]]$distance
-#&gt; [1] 783.8447
-#&gt; 
 #&gt; 
 #&gt; [[8]]
 #&gt; [[8]]$outcode
 #&gt; [1] "EC2V"
 #&gt; 
 #&gt; [[8]]$longitude
-#&gt; [1] -0.09393065
+#&gt; [1] -0.09391845
 #&gt; 
 #&gt; [[8]]$latitude
-#&gt; [1] 51.51565
+#&gt; [1] 51.51561
 #&gt; 
 #&gt; [[8]]$northings
-#&gt; [1] 181357
+#&gt; [1] 181354
 #&gt; 
 #&gt; [[8]]$eastings
-#&gt; [1] 532354
+#&gt; [1] 532356
 #&gt; 
 #&gt; [[8]]$admin_district
 #&gt; [[8]]$admin_district[[1]]
@@ -1356,25 +1321,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[8]]$distance
-#&gt; [1] 830.6345
-#&gt; 
 #&gt; 
 #&gt; [[9]]
 #&gt; [[9]]$outcode
 #&gt; [1] "EC1A"
 #&gt; 
 #&gt; [[9]]$longitude
-#&gt; [1] -0.1039063
+#&gt; [1] -0.1039303
 #&gt; 
 #&gt; [[9]]$latitude
-#&gt; [1] 51.5203
+#&gt; [1] 51.52037
 #&gt; 
 #&gt; [[9]]$northings
-#&gt; [1] 181857
+#&gt; [1] 181865
 #&gt; 
 #&gt; [[9]]$eastings
-#&gt; [1] 531649
+#&gt; [1] 531647
 #&gt; 
 #&gt; [[9]]$admin_district
 #&gt; [[9]]$admin_district[[1]]
@@ -1423,25 +1385,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[9]]$distance
-#&gt; [1] 854.7138
-#&gt; 
 #&gt; 
 #&gt; [[10]]
 #&gt; [[10]]$outcode
 #&gt; [1] "EC2N"
 #&gt; 
 #&gt; [[10]]$longitude
-#&gt; [1] -0.08554044
+#&gt; [1] -0.08550267
 #&gt; 
 #&gt; [[10]]$latitude
-#&gt; [1] 51.51576
+#&gt; [1] 51.51579
 #&gt; 
 #&gt; [[10]]$northings
-#&gt; [1] 181385
+#&gt; [1] 181388
 #&gt; 
 #&gt; [[10]]$eastings
-#&gt; [1] 532936
+#&gt; [1] 532939
 #&gt; 
 #&gt; [[10]]$admin_district
 #&gt; [[10]]$admin_district[[1]]
@@ -1486,9 +1445,6 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [[10]]$country[[1]]
 #&gt; [1] "England"
 #&gt; 
-#&gt; 
-#&gt; [[10]]$distance
-#&gt; [1] 940.6419
 #&gt; 
 #&gt; 
 #&gt; [[11]]
@@ -1496,16 +1452,16 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "EC4M"
 #&gt; 
 #&gt; [[11]]$longitude
-#&gt; [1] -0.09941032
+#&gt; [1] -0.09946143
 #&gt; 
 #&gt; [[11]]$latitude
-#&gt; [1] 51.51429
+#&gt; [1] 51.51431
 #&gt; 
 #&gt; [[11]]$northings
-#&gt; [1] 181196
+#&gt; [1] 181199
 #&gt; 
 #&gt; [[11]]$eastings
-#&gt; [1] 531978
+#&gt; [1] 531975
 #&gt; 
 #&gt; [[11]]$admin_district
 #&gt; [[11]]$admin_district[[1]]
@@ -1551,15 +1507,13 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[11]]$distance
-#&gt; [1] 1089.608
-#&gt; 
-#&gt; </div><div class='input'><span class='fu'>nearest_outcode</span>(<span class='st'>"EC1Y"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>11</span>, <span class='kw'>radius</span> <span class='kw'>=</span> <span class='fl'>6000</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; </div><div class='input'><span class='fu'>nearest_outcode</span><span class='op'>(</span><span class='st'>"EC1Y"</span>, limit <span class='op'>=</span> <span class='fl'>11</span>, radius <span class='op'>=</span> <span class='fl'>6000</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$outcode
 #&gt; [1] "EC1Y"
 #&gt; 
 #&gt; [[1]]$longitude
-#&gt; [1] -0.09240626
+#&gt; [1] -0.09246749
 #&gt; 
 #&gt; [[1]]$latitude
 #&gt; [1] 51.52305
@@ -1568,7 +1522,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] 182184
 #&gt; 
 #&gt; [[1]]$eastings
-#&gt; [1] 532439
+#&gt; [1] 532435
 #&gt; 
 #&gt; [[1]]$admin_district
 #&gt; [[1]]$admin_district[[1]]
@@ -1608,25 +1562,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[1]]$distance
-#&gt; [1] 0
-#&gt; 
 #&gt; 
 #&gt; [[2]]
 #&gt; [[2]]$outcode
 #&gt; [1] "EC2Y"
 #&gt; 
 #&gt; [[2]]$longitude
-#&gt; [1] -0.09351891
+#&gt; [1] -0.09343703
 #&gt; 
 #&gt; [[2]]$latitude
 #&gt; [1] 51.51943
 #&gt; 
 #&gt; [[2]]$northings
-#&gt; [1] 181778
+#&gt; [1] 181779
 #&gt; 
 #&gt; [[2]]$eastings
-#&gt; [1] 532372
+#&gt; [1] 532378
 #&gt; 
 #&gt; [[2]]$admin_district
 #&gt; [[2]]$admin_district[[1]]
@@ -1672,25 +1623,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[2]]$distance
-#&gt; [1] 410.5594
-#&gt; 
 #&gt; 
 #&gt; [[3]]
 #&gt; [[3]]$outcode
 #&gt; [1] "EC2A"
 #&gt; 
 #&gt; [[3]]$longitude
-#&gt; [1] -0.08560013
+#&gt; [1] -0.08555454
 #&gt; 
 #&gt; [[3]]$latitude
-#&gt; [1] 51.5237
+#&gt; [1] 51.52366
 #&gt; 
 #&gt; [[3]]$northings
-#&gt; [1] 182267
+#&gt; [1] 182265
 #&gt; 
 #&gt; [[3]]$eastings
-#&gt; [1] 532909
+#&gt; [1] 532913
 #&gt; 
 #&gt; [[3]]$admin_district
 #&gt; [[3]]$admin_district[[1]]
@@ -1736,25 +1684,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[3]]$distance
-#&gt; [1] 477.7771
-#&gt; 
 #&gt; 
 #&gt; [[4]]
 #&gt; [[4]]$outcode
 #&gt; [1] "EC1V"
 #&gt; 
 #&gt; [[4]]$longitude
-#&gt; [1] -0.09789149
+#&gt; [1] -0.09782032
 #&gt; 
 #&gt; [[4]]$latitude
-#&gt; [1] 51.52679
+#&gt; [1] 51.52681
 #&gt; 
 #&gt; [[4]]$northings
-#&gt; [1] 182590
+#&gt; [1] 182592
 #&gt; 
 #&gt; [[4]]$eastings
-#&gt; [1] 532047
+#&gt; [1] 532053
 #&gt; 
 #&gt; [[4]]$admin_district
 #&gt; [[4]]$admin_district[[1]]
@@ -1797,25 +1742,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[4]]$distance
-#&gt; [1] 564.1671
-#&gt; 
 #&gt; 
 #&gt; [[5]]
 #&gt; [[5]]$outcode
 #&gt; [1] "EC2M"
 #&gt; 
 #&gt; [[5]]$longitude
-#&gt; [1] -0.08650574
+#&gt; [1] -0.08652682
 #&gt; 
 #&gt; [[5]]$latitude
-#&gt; [1] 51.51865
+#&gt; [1] 51.51866
 #&gt; 
 #&gt; [[5]]$northings
-#&gt; [1] 181705
+#&gt; [1] 181707
 #&gt; 
 #&gt; [[5]]$eastings
-#&gt; [1] 532861
+#&gt; [1] 532860
 #&gt; 
 #&gt; [[5]]$admin_district
 #&gt; [[5]]$admin_district[[1]]
@@ -1879,25 +1821,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[5]]$distance
-#&gt; [1] 638.5113
-#&gt; 
 #&gt; 
 #&gt; [[6]]
 #&gt; [[6]]$outcode
 #&gt; [1] "EC1M"
 #&gt; 
 #&gt; [[6]]$longitude
-#&gt; [1] -0.1022952
+#&gt; [1] -0.1022676
 #&gt; 
 #&gt; [[6]]$latitude
-#&gt; [1] 51.52136
+#&gt; [1] 51.52132
 #&gt; 
 #&gt; [[6]]$northings
-#&gt; [1] 181977
+#&gt; [1] 181973
 #&gt; 
 #&gt; [[6]]$eastings
-#&gt; [1] 531757
+#&gt; [1] 531760
 #&gt; 
 #&gt; [[6]]$admin_district
 #&gt; [[6]]$admin_district[[1]]
@@ -1946,16 +1885,13 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[6]]$distance
-#&gt; [1] 711.7464
-#&gt; 
 #&gt; 
 #&gt; [[7]]
 #&gt; [[7]]$outcode
 #&gt; [1] "EC2R"
 #&gt; 
 #&gt; [[7]]$longitude
-#&gt; [1] -0.0909229
+#&gt; [1] -0.09096035
 #&gt; 
 #&gt; [[7]]$latitude
 #&gt; [1] 51.51607
@@ -1964,7 +1900,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] 181410
 #&gt; 
 #&gt; [[7]]$eastings
-#&gt; [1] 532562
+#&gt; [1] 532560
 #&gt; 
 #&gt; [[7]]$admin_district
 #&gt; [[7]]$admin_district[[1]]
@@ -2016,25 +1952,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[7]]$distance
-#&gt; [1] 783.8447
-#&gt; 
 #&gt; 
 #&gt; [[8]]
 #&gt; [[8]]$outcode
 #&gt; [1] "EC2V"
 #&gt; 
 #&gt; [[8]]$longitude
-#&gt; [1] -0.09393065
+#&gt; [1] -0.09391845
 #&gt; 
 #&gt; [[8]]$latitude
-#&gt; [1] 51.51565
+#&gt; [1] 51.51561
 #&gt; 
 #&gt; [[8]]$northings
-#&gt; [1] 181357
+#&gt; [1] 181354
 #&gt; 
 #&gt; [[8]]$eastings
-#&gt; [1] 532354
+#&gt; [1] 532356
 #&gt; 
 #&gt; [[8]]$admin_district
 #&gt; [[8]]$admin_district[[1]]
@@ -2086,25 +2019,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[8]]$distance
-#&gt; [1] 830.6345
-#&gt; 
 #&gt; 
 #&gt; [[9]]
 #&gt; [[9]]$outcode
 #&gt; [1] "EC1A"
 #&gt; 
 #&gt; [[9]]$longitude
-#&gt; [1] -0.1039063
+#&gt; [1] -0.1039303
 #&gt; 
 #&gt; [[9]]$latitude
-#&gt; [1] 51.5203
+#&gt; [1] 51.52037
 #&gt; 
 #&gt; [[9]]$northings
-#&gt; [1] 181857
+#&gt; [1] 181865
 #&gt; 
 #&gt; [[9]]$eastings
-#&gt; [1] 531649
+#&gt; [1] 531647
 #&gt; 
 #&gt; [[9]]$admin_district
 #&gt; [[9]]$admin_district[[1]]
@@ -2153,25 +2083,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[9]]$distance
-#&gt; [1] 854.7138
-#&gt; 
 #&gt; 
 #&gt; [[10]]
 #&gt; [[10]]$outcode
 #&gt; [1] "EC2N"
 #&gt; 
 #&gt; [[10]]$longitude
-#&gt; [1] -0.08554044
+#&gt; [1] -0.08550267
 #&gt; 
 #&gt; [[10]]$latitude
-#&gt; [1] 51.51576
+#&gt; [1] 51.51579
 #&gt; 
 #&gt; [[10]]$northings
-#&gt; [1] 181385
+#&gt; [1] 181388
 #&gt; 
 #&gt; [[10]]$eastings
-#&gt; [1] 532936
+#&gt; [1] 532939
 #&gt; 
 #&gt; [[10]]$admin_district
 #&gt; [[10]]$admin_district[[1]]
@@ -2217,25 +2144,22 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[10]]$distance
-#&gt; [1] 940.6419
-#&gt; 
 #&gt; 
 #&gt; [[11]]
 #&gt; [[11]]$outcode
 #&gt; [1] "EC4M"
 #&gt; 
 #&gt; [[11]]$longitude
-#&gt; [1] -0.09941032
+#&gt; [1] -0.09946143
 #&gt; 
 #&gt; [[11]]$latitude
-#&gt; [1] 51.51429
+#&gt; [1] 51.51431
 #&gt; 
 #&gt; [[11]]$northings
-#&gt; [1] 181196
+#&gt; [1] 181199
 #&gt; 
 #&gt; [[11]]$eastings
-#&gt; [1] 531978
+#&gt; [1] 531975
 #&gt; 
 #&gt; [[11]]$admin_district
 #&gt; [[11]]$admin_district[[1]]
@@ -2281,25 +2205,14 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[11]]$distance
-#&gt; [1] 1089.608
-#&gt; 
-#&gt; </div><div class='input'># }
+#&gt; </div><div class='input'><span class='co'># }</span>
 
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-
-      <li><a href="#see-also">See also</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -2310,7 +2223,7 @@ Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

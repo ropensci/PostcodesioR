@@ -8,23 +8,36 @@
 
 <title>Bulk postcode lookup — bulk_postcode_lookup • PostcodesioR</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -32,10 +45,11 @@
 
 
 
-<meta property="og:title" content="Bulk postcode lookup — bulk_postcode_lookup" />
 
+<meta property="og:title" content="Bulk postcode lookup — bulk_postcode_lookup" />
 <meta property="og:description" content="Returns a list of matching postcodes and respective available data." />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="/logo.png" />
+
 
 
 
@@ -52,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -74,7 +88,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -97,9 +111,13 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/ropensci/PostcodesioR/">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -114,18 +132,16 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Bulk postcode lookup</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/ropensci/PostcodesioR/blob/master/R/bulk_postcode_lookup.R'><code>R/bulk_postcode_lookup.R</code></a></small>
     <div class="hidden name"><code>bulk_postcode_lookup.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    
     <p>Returns a list of matching postcodes and respective available data.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'>bulk_postcode_lookup</span>(<span class='no'>postcodes</span>)</pre>
-    
+    <pre class="usage"><span class='fu'>bulk_postcode_lookup</span><span class='op'>(</span><span class='va'>postcodes</span><span class='op'>)</span></pre>
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -135,36 +151,35 @@
 For only one postcode use <code><a href='postcode_lookup.html'>postcode_lookup</a></code>.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A list.</p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='postcode_lookup.html'>postcode_lookup</a></code> for documentation.</p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='no'>pc_list</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
-<span class='kw'>postcodes</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"PR3 0SG"</span>, <span class='st'>"M45 6GN"</span>, <span class='st'>"EX165BL"</span>)) <span class='co'># spaces are ignored</span>
-<span class='fu'>bulk_postcode_lookup</span>(<span class='no'>pc_list</span>)</div><div class='output co'>#&gt; [[1]]
+<span class='va'>pc_list</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+postcodes <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"PR3 0SG"</span>, <span class='st'>"M45 6GN"</span>, <span class='st'>"EX165BL"</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># spaces are ignored</span>
+<span class='fu'>bulk_postcode_lookup</span><span class='op'>(</span><span class='va'>pc_list</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$query
-#&gt; [1] "PR3 0SG"
+#&gt; [1] "M45 6GN"
 #&gt; 
 #&gt; [[1]]$result
 #&gt; [[1]]$result$postcode
-#&gt; [1] "PR3 0SG"
+#&gt; [1] "M45 6GN"
 #&gt; 
 #&gt; [[1]]$result$quality
 #&gt; [1] 1
 #&gt; 
 #&gt; [[1]]$result$eastings
-#&gt; [1] 351012
+#&gt; [1] 380416
 #&gt; 
 #&gt; [[1]]$result$northings
-#&gt; [1] 440302
+#&gt; [1] 406002
 #&gt; 
 #&gt; [[1]]$result$country
 #&gt; [1] "England"
@@ -173,312 +188,331 @@ For only one postcode use <code><a href='postcode_lookup.html'>postcode_lookup</
 #&gt; [1] "North West"
 #&gt; 
 #&gt; [[1]]$result$longitude
-#&gt; [1] -2.746251
+#&gt; [1] -2.297052
 #&gt; 
 #&gt; [[1]]$result$latitude
-#&gt; [1] 53.85663
+#&gt; [1] 53.55028
 #&gt; 
 #&gt; [[1]]$result$european_electoral_region
 #&gt; [1] "North West"
 #&gt; 
 #&gt; [[1]]$result$primary_care_trust
-#&gt; [1] "North Lancashire Teaching"
+#&gt; [1] "Bury"
 #&gt; 
 #&gt; [[1]]$result$region
 #&gt; [1] "North West"
 #&gt; 
 #&gt; [[1]]$result$lsoa
-#&gt; [1] "Wyre 006A"
+#&gt; [1] "Bury 019C"
 #&gt; 
 #&gt; [[1]]$result$msoa
-#&gt; [1] "Wyre 006"
+#&gt; [1] "Bury 019"
 #&gt; 
 #&gt; [[1]]$result$incode
-#&gt; [1] "0SG"
+#&gt; [1] "6GN"
 #&gt; 
 #&gt; [[1]]$result$outcode
-#&gt; [1] "PR3"
+#&gt; [1] "M45"
 #&gt; 
 #&gt; [[1]]$result$parliamentary_constituency
-#&gt; [1] "Wyre and Preston North"
+#&gt; [1] "Bury South"
 #&gt; 
 #&gt; [[1]]$result$admin_district
-#&gt; [1] "Wyre"
+#&gt; [1] "Bury"
 #&gt; 
 #&gt; [[1]]$result$parish
-#&gt; [1] "Myerscough and Bilsborrow"
+#&gt; [1] "Bury, unparished area"
 #&gt; 
 #&gt; [[1]]$result$admin_county
-#&gt; [1] "Lancashire"
+#&gt; NULL
 #&gt; 
 #&gt; [[1]]$result$admin_ward
-#&gt; [1] "Brock with Catterall"
+#&gt; [1] "Pilkington Park"
 #&gt; 
 #&gt; [[1]]$result$ced
-#&gt; [1] "Wyre Rural East"
+#&gt; NULL
 #&gt; 
 #&gt; [[1]]$result$ccg
-#&gt; [1] "NHS Fylde and Wyre"
+#&gt; [1] "NHS Bury"
 #&gt; 
 #&gt; [[1]]$result$nuts
-#&gt; [1] "Lancaster and Wyre"
+#&gt; [1] "Greater Manchester North East"
 #&gt; 
 #&gt; [[1]]$result$codes
 #&gt; [[1]]$result$codes$admin_district
-#&gt; [1] "E07000128"
+#&gt; [1] "E08000002"
 #&gt; 
 #&gt; [[1]]$result$codes$admin_county
-#&gt; [1] "E10000017"
+#&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[1]]$result$codes$admin_ward
-#&gt; [1] "E05009934"
+#&gt; [1] "E05000677"
 #&gt; 
 #&gt; [[1]]$result$codes$parish
-#&gt; [1] "E04005340"
+#&gt; [1] "E43000156"
 #&gt; 
 #&gt; [[1]]$result$codes$parliamentary_constituency
-#&gt; [1] "E14001057"
+#&gt; [1] "E14000612"
 #&gt; 
 #&gt; [[1]]$result$codes$ccg
-#&gt; [1] "E38000226"
+#&gt; [1] "E38000024"
 #&gt; 
 #&gt; [[1]]$result$codes$ccg_id
-#&gt; [1] "02M"
+#&gt; [1] "00V"
 #&gt; 
 #&gt; [[1]]$result$codes$ced
-#&gt; [1] "E58000832"
+#&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[1]]$result$codes$nuts
-#&gt; [1] "UKD44"
+#&gt; [1] "UKD37"
+#&gt; 
+#&gt; [[1]]$result$codes$lsoa
+#&gt; [1] "E01004989"
+#&gt; 
+#&gt; [[1]]$result$codes$msoa
+#&gt; [1] "E02001037"
+#&gt; 
+#&gt; [[1]]$result$codes$lau2
+#&gt; [1] "E05000677"
 #&gt; 
 #&gt; 
 #&gt; 
 #&gt; 
 #&gt; [[2]]
 #&gt; [[2]]$query
-#&gt; [1] "M45 6GN"
+#&gt; [1] "EX165BL"
 #&gt; 
 #&gt; [[2]]$result
 #&gt; [[2]]$result$postcode
-#&gt; [1] "M45 6GN"
+#&gt; [1] "EX16 5BL"
 #&gt; 
 #&gt; [[2]]$result$quality
 #&gt; [1] 1
 #&gt; 
 #&gt; [[2]]$result$eastings
-#&gt; [1] 380416
+#&gt; [1] 294478
 #&gt; 
 #&gt; [[2]]$result$northings
-#&gt; [1] 406002
+#&gt; [1] 112252
 #&gt; 
 #&gt; [[2]]$result$country
 #&gt; [1] "England"
 #&gt; 
 #&gt; [[2]]$result$nhs_ha
-#&gt; [1] "North West"
+#&gt; [1] "South West"
 #&gt; 
 #&gt; [[2]]$result$longitude
-#&gt; [1] -2.297052
+#&gt; [1] -3.50197
 #&gt; 
 #&gt; [[2]]$result$latitude
-#&gt; [1] 53.55028
+#&gt; [1] 50.90006
 #&gt; 
 #&gt; [[2]]$result$european_electoral_region
-#&gt; [1] "North West"
+#&gt; [1] "South West"
 #&gt; 
 #&gt; [[2]]$result$primary_care_trust
-#&gt; [1] "Bury"
+#&gt; [1] "Devon"
 #&gt; 
 #&gt; [[2]]$result$region
-#&gt; [1] "North West"
+#&gt; [1] "South West"
 #&gt; 
 #&gt; [[2]]$result$lsoa
-#&gt; [1] "Bury 019C"
+#&gt; [1] "Mid Devon 005C"
 #&gt; 
 #&gt; [[2]]$result$msoa
-#&gt; [1] "Bury 019"
+#&gt; [1] "Mid Devon 005"
 #&gt; 
 #&gt; [[2]]$result$incode
-#&gt; [1] "6GN"
+#&gt; [1] "5BL"
 #&gt; 
 #&gt; [[2]]$result$outcode
-#&gt; [1] "M45"
+#&gt; [1] "EX16"
 #&gt; 
 #&gt; [[2]]$result$parliamentary_constituency
-#&gt; [1] "Bury South"
+#&gt; [1] "Tiverton and Honiton"
 #&gt; 
 #&gt; [[2]]$result$admin_district
-#&gt; [1] "Bury"
+#&gt; [1] "Mid Devon"
 #&gt; 
 #&gt; [[2]]$result$parish
-#&gt; [1] "Bury, unparished area"
+#&gt; [1] "Tiverton"
 #&gt; 
 #&gt; [[2]]$result$admin_county
-#&gt; NULL
+#&gt; [1] "Devon"
 #&gt; 
 #&gt; [[2]]$result$admin_ward
-#&gt; [1] "Pilkington Park"
+#&gt; [1] "Westexe"
 #&gt; 
 #&gt; [[2]]$result$ced
-#&gt; NULL
+#&gt; [1] "Tiverton West"
 #&gt; 
 #&gt; [[2]]$result$ccg
-#&gt; [1] "NHS Bury"
+#&gt; [1] "NHS Devon"
 #&gt; 
 #&gt; [[2]]$result$nuts
-#&gt; [1] "Greater Manchester North East"
+#&gt; [1] "Devon CC"
 #&gt; 
 #&gt; [[2]]$result$codes
 #&gt; [[2]]$result$codes$admin_district
-#&gt; [1] "E08000002"
+#&gt; [1] "E07000042"
 #&gt; 
 #&gt; [[2]]$result$codes$admin_county
-#&gt; [1] "E99999999"
+#&gt; [1] "E10000008"
 #&gt; 
 #&gt; [[2]]$result$codes$admin_ward
-#&gt; [1] "E05000677"
+#&gt; [1] "E05003531"
 #&gt; 
 #&gt; [[2]]$result$codes$parish
-#&gt; [1] "E43000156"
+#&gt; [1] "E04003055"
 #&gt; 
 #&gt; [[2]]$result$codes$parliamentary_constituency
-#&gt; [1] "E14000612"
+#&gt; [1] "E14000996"
 #&gt; 
 #&gt; [[2]]$result$codes$ccg
-#&gt; [1] "E38000024"
+#&gt; [1] "E38000230"
 #&gt; 
 #&gt; [[2]]$result$codes$ccg_id
-#&gt; [1] "00V"
+#&gt; [1] "15N"
 #&gt; 
 #&gt; [[2]]$result$codes$ced
-#&gt; [1] "E99999999"
+#&gt; [1] "E58000304"
 #&gt; 
 #&gt; [[2]]$result$codes$nuts
-#&gt; [1] "UKD37"
+#&gt; [1] "UKK43"
+#&gt; 
+#&gt; [[2]]$result$codes$lsoa
+#&gt; [1] "E01020079"
+#&gt; 
+#&gt; [[2]]$result$codes$msoa
+#&gt; [1] "E02004168"
+#&gt; 
+#&gt; [[2]]$result$codes$lau2
+#&gt; [1] "E05003531"
 #&gt; 
 #&gt; 
 #&gt; 
 #&gt; 
 #&gt; [[3]]
 #&gt; [[3]]$query
-#&gt; [1] "EX165BL"
+#&gt; [1] "PR3 0SG"
 #&gt; 
 #&gt; [[3]]$result
 #&gt; [[3]]$result$postcode
-#&gt; [1] "EX16 5BL"
+#&gt; [1] "PR3 0SG"
 #&gt; 
 #&gt; [[3]]$result$quality
 #&gt; [1] 1
 #&gt; 
 #&gt; [[3]]$result$eastings
-#&gt; [1] 294478
+#&gt; [1] 351012
 #&gt; 
 #&gt; [[3]]$result$northings
-#&gt; [1] 112252
+#&gt; [1] 440302
 #&gt; 
 #&gt; [[3]]$result$country
 #&gt; [1] "England"
 #&gt; 
 #&gt; [[3]]$result$nhs_ha
-#&gt; [1] "South West"
+#&gt; [1] "North West"
 #&gt; 
 #&gt; [[3]]$result$longitude
-#&gt; [1] -3.50197
+#&gt; [1] -2.746251
 #&gt; 
 #&gt; [[3]]$result$latitude
-#&gt; [1] 50.90006
+#&gt; [1] 53.85663
 #&gt; 
 #&gt; [[3]]$result$european_electoral_region
-#&gt; [1] "South West"
+#&gt; [1] "North West"
 #&gt; 
 #&gt; [[3]]$result$primary_care_trust
-#&gt; [1] "Devon"
+#&gt; [1] "North Lancashire Teaching"
 #&gt; 
 #&gt; [[3]]$result$region
-#&gt; [1] "South West"
+#&gt; [1] "North West"
 #&gt; 
 #&gt; [[3]]$result$lsoa
-#&gt; [1] "Mid Devon 005C"
+#&gt; [1] "Wyre 006A"
 #&gt; 
 #&gt; [[3]]$result$msoa
-#&gt; [1] "Mid Devon 005"
+#&gt; [1] "Wyre 006"
 #&gt; 
 #&gt; [[3]]$result$incode
-#&gt; [1] "5BL"
+#&gt; [1] "0SG"
 #&gt; 
 #&gt; [[3]]$result$outcode
-#&gt; [1] "EX16"
+#&gt; [1] "PR3"
 #&gt; 
 #&gt; [[3]]$result$parliamentary_constituency
-#&gt; [1] "Tiverton and Honiton"
+#&gt; [1] "Wyre and Preston North"
 #&gt; 
 #&gt; [[3]]$result$admin_district
-#&gt; [1] "Mid Devon"
+#&gt; [1] "Wyre"
 #&gt; 
 #&gt; [[3]]$result$parish
-#&gt; [1] "Tiverton"
+#&gt; [1] "Myerscough and Bilsborrow"
 #&gt; 
 #&gt; [[3]]$result$admin_county
-#&gt; [1] "Devon"
+#&gt; [1] "Lancashire"
 #&gt; 
 #&gt; [[3]]$result$admin_ward
-#&gt; [1] "Westexe"
+#&gt; [1] "Brock with Catterall"
 #&gt; 
 #&gt; [[3]]$result$ced
-#&gt; [1] "Tiverton West"
+#&gt; [1] "Wyre Rural East"
 #&gt; 
 #&gt; [[3]]$result$ccg
-#&gt; [1] "NHS Devon"
+#&gt; [1] "NHS Fylde and Wyre"
 #&gt; 
 #&gt; [[3]]$result$nuts
-#&gt; [1] "Devon CC"
+#&gt; [1] "Lancaster and Wyre"
 #&gt; 
 #&gt; [[3]]$result$codes
 #&gt; [[3]]$result$codes$admin_district
-#&gt; [1] "E07000042"
+#&gt; [1] "E07000128"
 #&gt; 
 #&gt; [[3]]$result$codes$admin_county
-#&gt; [1] "E10000008"
+#&gt; [1] "E10000017"
 #&gt; 
 #&gt; [[3]]$result$codes$admin_ward
-#&gt; [1] "E05003531"
+#&gt; [1] "E05009934"
 #&gt; 
 #&gt; [[3]]$result$codes$parish
-#&gt; [1] "E04003055"
+#&gt; [1] "E04005340"
 #&gt; 
 #&gt; [[3]]$result$codes$parliamentary_constituency
-#&gt; [1] "E14000996"
+#&gt; [1] "E14001057"
 #&gt; 
 #&gt; [[3]]$result$codes$ccg
-#&gt; [1] "E38000230"
+#&gt; [1] "E38000226"
 #&gt; 
 #&gt; [[3]]$result$codes$ccg_id
-#&gt; [1] "15N"
+#&gt; [1] "02M"
 #&gt; 
 #&gt; [[3]]$result$codes$ced
-#&gt; [1] "E58000304"
+#&gt; [1] "E58000832"
 #&gt; 
 #&gt; [[3]]$result$codes$nuts
-#&gt; [1] "UKK43"
+#&gt; [1] "UKD44"
+#&gt; 
+#&gt; [[3]]$result$codes$lsoa
+#&gt; [1] "E01025547"
+#&gt; 
+#&gt; [[3]]$result$codes$msoa
+#&gt; [1] "E02005324"
+#&gt; 
+#&gt; [[3]]$result$codes$lau2
+#&gt; [1] "E05009934"
 #&gt; 
 #&gt; 
 #&gt; 
-#&gt; </div><div class='input'># }
+#&gt; </div><div class='input'><span class='co'># }</span>
 
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-
-      <li><a href="#see-also">See also</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -489,7 +523,7 @@ For only one postcode use <code><a href='postcode_lookup.html'>postcode_lookup</
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

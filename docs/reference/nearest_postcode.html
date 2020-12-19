@@ -8,23 +8,36 @@
 
 <title>Nearest postcode — nearest_postcode • PostcodesioR</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -32,11 +45,12 @@
 
 
 
-<meta property="og:title" content="Nearest postcode — nearest_postcode" />
 
+<meta property="og:title" content="Nearest postcode — nearest_postcode" />
 <meta property="og:description" content="Returns nearest postcodes for a given postcode.
 The search is based on the relative distance of the postcode centroid." />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="/logo.png" />
+
 
 
 
@@ -53,7 +67,7 @@ The search is based on the relative distance of the postcode centroid." />
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +89,7 @@ The search is based on the relative distance of the postcode centroid." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -98,9 +112,13 @@ The search is based on the relative distance of the postcode centroid." />
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/ropensci/PostcodesioR/">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -115,19 +133,17 @@ The search is based on the relative distance of the postcode centroid." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Nearest postcode</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/ropensci/PostcodesioR/blob/master/R/nearest_postcode.R'><code>R/nearest_postcode.R</code></a></small>
     <div class="hidden name"><code>nearest_postcode.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    
     <p>Returns nearest postcodes for a given postcode.
 The search is based on the relative distance of the postcode centroid.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'>nearest_postcode</span>(<span class='no'>postcode</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>radius</span> <span class='kw'>=</span> <span class='fl'>100</span>)</pre>
-    
+    <pre class="usage"><span class='fu'>nearest_postcode</span><span class='op'>(</span><span class='va'>postcode</span>, limit <span class='op'>=</span> <span class='fl'>10</span>, radius <span class='op'>=</span> <span class='fl'>100</span><span class='op'>)</span></pre>
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -144,15 +160,15 @@ The search is based on the relative distance of the postcode centroid.</p>
       <td><p>Limits number of postcodes matches to return. Defaults to 100m. Needs to be less than 2,000m.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A list of geographic properties of the nearest postcode.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='fu'>nearest_postcode</span>(<span class='st'>"EC1Y 8LX"</span>)</div><div class='output co'>#&gt; [[1]]
+<span class='fu'>nearest_postcode</span><span class='op'>(</span><span class='st'>"EC1Y 8LX"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$postcode
 #&gt; [1] "EC1Y 8LX"
 #&gt; 
@@ -217,7 +233,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[1]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[1]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -239,16 +255,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[1]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[1]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[1]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[1]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[1]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[1]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[1]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[1]]$distance
@@ -320,7 +345,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[2]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[2]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -342,16 +367,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[2]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[2]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[2]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[2]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[2]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[2]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[2]]$distance
@@ -423,7 +457,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[3]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[3]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -445,16 +479,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[3]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[3]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[3]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[3]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[3]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[3]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[3]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[3]]$distance
@@ -463,16 +506,16 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; 
 #&gt; [[4]]
 #&gt; [[4]]$postcode
-#&gt; [1] "EC1Y 8LE"
+#&gt; [1] "EC1Y 8SE"
 #&gt; 
 #&gt; [[4]]$quality
 #&gt; [1] 1
 #&gt; 
 #&gt; [[4]]$eastings
-#&gt; [1] 532563
+#&gt; [1] 532508
 #&gt; 
 #&gt; [[4]]$northings
-#&gt; [1] 182101
+#&gt; [1] 182130
 #&gt; 
 #&gt; [[4]]$country
 #&gt; [1] "England"
@@ -481,10 +524,10 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "London"
 #&gt; 
 #&gt; [[4]]$longitude
-#&gt; [1] -0.090633
+#&gt; [1] -0.091414
 #&gt; 
 #&gt; [[4]]$latitude
-#&gt; [1] 51.52228
+#&gt; [1] 51.52255
 #&gt; 
 #&gt; [[4]]$european_electoral_region
 #&gt; [1] "London"
@@ -502,7 +545,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "Islington 023"
 #&gt; 
 #&gt; [[4]]$incode
-#&gt; [1] "8LE"
+#&gt; [1] "8SE"
 #&gt; 
 #&gt; [[4]]$outcode
 #&gt; [1] "EC1Y"
@@ -526,7 +569,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[4]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[4]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -548,10 +591,10 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[4]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[4]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[4]]$codes$ced
 #&gt; [1] "E99999999"
@@ -559,23 +602,32 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [[4]]$codes$nuts
 #&gt; [1] "UKI43"
 #&gt; 
+#&gt; [[4]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[4]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[4]]$codes$lau2
+#&gt; [1] "E05000367"
+#&gt; 
 #&gt; 
 #&gt; [[4]]$distance
-#&gt; [1] 33.93278
+#&gt; [1] 34.28968
 #&gt; 
 #&gt; 
 #&gt; [[5]]
 #&gt; [[5]]$postcode
-#&gt; [1] "EC1Y 8SE"
+#&gt; [1] "EC1Y 8LE"
 #&gt; 
 #&gt; [[5]]$quality
 #&gt; [1] 1
 #&gt; 
 #&gt; [[5]]$eastings
-#&gt; [1] 532508
+#&gt; [1] 532563
 #&gt; 
 #&gt; [[5]]$northings
-#&gt; [1] 182130
+#&gt; [1] 182100
 #&gt; 
 #&gt; [[5]]$country
 #&gt; [1] "England"
@@ -584,10 +636,10 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "London"
 #&gt; 
 #&gt; [[5]]$longitude
-#&gt; [1] -0.091414
+#&gt; [1] -0.090633
 #&gt; 
 #&gt; [[5]]$latitude
-#&gt; [1] 51.52255
+#&gt; [1] 51.52227
 #&gt; 
 #&gt; [[5]]$european_electoral_region
 #&gt; [1] "London"
@@ -605,7 +657,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "Islington 023"
 #&gt; 
 #&gt; [[5]]$incode
-#&gt; [1] "8SE"
+#&gt; [1] "8LE"
 #&gt; 
 #&gt; [[5]]$outcode
 #&gt; [1] "EC1Y"
@@ -629,7 +681,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[5]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[5]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -651,10 +703,10 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[5]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[5]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[5]]$codes$ced
 #&gt; [1] "E99999999"
@@ -662,9 +714,18 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [[5]]$codes$nuts
 #&gt; [1] "UKI43"
 #&gt; 
+#&gt; [[5]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[5]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[5]]$codes$lau2
+#&gt; [1] "E05000367"
+#&gt; 
 #&gt; 
 #&gt; [[5]]$distance
-#&gt; [1] 34.28968
+#&gt; [1] 34.74547
 #&gt; 
 #&gt; 
 #&gt; [[6]]
@@ -732,7 +793,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[6]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[6]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -754,16 +815,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[6]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[6]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[6]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[6]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[6]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[6]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[6]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[6]]$distance
@@ -835,7 +905,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[7]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[7]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -857,16 +927,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[7]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[7]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[7]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[7]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[7]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[7]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[7]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[7]]$distance
@@ -938,7 +1017,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[8]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[8]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -960,16 +1039,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[8]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[8]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[8]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[8]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[8]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[8]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[8]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[8]]$distance
@@ -1041,7 +1129,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[9]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[9]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -1063,16 +1151,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[9]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[9]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[9]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[9]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[9]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[9]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[9]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[9]]$distance
@@ -1144,7 +1241,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[10]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[10]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -1166,22 +1263,32 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[10]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[10]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[10]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[10]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[10]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[10]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[10]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[10]]$distance
 #&gt; [1] 60.00648
 #&gt; 
-#&gt; </div><div class='input'><span class='fu'>nearest_postcode</span>(<span class='st'>"EC1Y 8LX"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>11</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; </div><div class='input'><span class='fu'>nearest_postcode</span><span class='op'>(</span><span class='st'>"EC1Y 8LX"</span>, limit <span class='op'>=</span> <span class='fl'>11</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$postcode
 #&gt; [1] "EC1Y 8LX"
 #&gt; 
@@ -1246,7 +1353,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[1]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[1]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -1268,16 +1375,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[1]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[1]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[1]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[1]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[1]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[1]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[1]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[1]]$distance
@@ -1349,7 +1465,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[2]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[2]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -1371,16 +1487,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[2]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[2]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[2]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[2]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[2]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[2]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[2]]$distance
@@ -1452,7 +1577,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[3]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[3]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -1474,16 +1599,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[3]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[3]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[3]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[3]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[3]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[3]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[3]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[3]]$distance
@@ -1492,16 +1626,16 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; 
 #&gt; [[4]]
 #&gt; [[4]]$postcode
-#&gt; [1] "EC1Y 8LE"
+#&gt; [1] "EC1Y 8SE"
 #&gt; 
 #&gt; [[4]]$quality
 #&gt; [1] 1
 #&gt; 
 #&gt; [[4]]$eastings
-#&gt; [1] 532563
+#&gt; [1] 532508
 #&gt; 
 #&gt; [[4]]$northings
-#&gt; [1] 182101
+#&gt; [1] 182130
 #&gt; 
 #&gt; [[4]]$country
 #&gt; [1] "England"
@@ -1510,10 +1644,10 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "London"
 #&gt; 
 #&gt; [[4]]$longitude
-#&gt; [1] -0.090633
+#&gt; [1] -0.091414
 #&gt; 
 #&gt; [[4]]$latitude
-#&gt; [1] 51.52228
+#&gt; [1] 51.52255
 #&gt; 
 #&gt; [[4]]$european_electoral_region
 #&gt; [1] "London"
@@ -1531,7 +1665,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "Islington 023"
 #&gt; 
 #&gt; [[4]]$incode
-#&gt; [1] "8LE"
+#&gt; [1] "8SE"
 #&gt; 
 #&gt; [[4]]$outcode
 #&gt; [1] "EC1Y"
@@ -1555,7 +1689,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[4]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[4]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -1577,10 +1711,10 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[4]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[4]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[4]]$codes$ced
 #&gt; [1] "E99999999"
@@ -1588,23 +1722,32 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [[4]]$codes$nuts
 #&gt; [1] "UKI43"
 #&gt; 
+#&gt; [[4]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[4]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[4]]$codes$lau2
+#&gt; [1] "E05000367"
+#&gt; 
 #&gt; 
 #&gt; [[4]]$distance
-#&gt; [1] 33.93278
+#&gt; [1] 34.28968
 #&gt; 
 #&gt; 
 #&gt; [[5]]
 #&gt; [[5]]$postcode
-#&gt; [1] "EC1Y 8SE"
+#&gt; [1] "EC1Y 8LE"
 #&gt; 
 #&gt; [[5]]$quality
 #&gt; [1] 1
 #&gt; 
 #&gt; [[5]]$eastings
-#&gt; [1] 532508
+#&gt; [1] 532563
 #&gt; 
 #&gt; [[5]]$northings
-#&gt; [1] 182130
+#&gt; [1] 182100
 #&gt; 
 #&gt; [[5]]$country
 #&gt; [1] "England"
@@ -1613,10 +1756,10 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "London"
 #&gt; 
 #&gt; [[5]]$longitude
-#&gt; [1] -0.091414
+#&gt; [1] -0.090633
 #&gt; 
 #&gt; [[5]]$latitude
-#&gt; [1] 51.52255
+#&gt; [1] 51.52227
 #&gt; 
 #&gt; [[5]]$european_electoral_region
 #&gt; [1] "London"
@@ -1634,7 +1777,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "Islington 023"
 #&gt; 
 #&gt; [[5]]$incode
-#&gt; [1] "8SE"
+#&gt; [1] "8LE"
 #&gt; 
 #&gt; [[5]]$outcode
 #&gt; [1] "EC1Y"
@@ -1658,7 +1801,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[5]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[5]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -1680,10 +1823,10 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[5]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[5]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[5]]$codes$ced
 #&gt; [1] "E99999999"
@@ -1691,9 +1834,18 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [[5]]$codes$nuts
 #&gt; [1] "UKI43"
 #&gt; 
+#&gt; [[5]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[5]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[5]]$codes$lau2
+#&gt; [1] "E05000367"
+#&gt; 
 #&gt; 
 #&gt; [[5]]$distance
-#&gt; [1] 34.28968
+#&gt; [1] 34.74547
 #&gt; 
 #&gt; 
 #&gt; [[6]]
@@ -1761,7 +1913,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[6]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[6]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -1783,16 +1935,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[6]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[6]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[6]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[6]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[6]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[6]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[6]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[6]]$distance
@@ -1864,7 +2025,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[7]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[7]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -1886,16 +2047,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[7]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[7]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[7]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[7]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[7]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[7]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[7]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[7]]$distance
@@ -1967,7 +2137,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[8]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[8]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -1989,16 +2159,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[8]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[8]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[8]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[8]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[8]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[8]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[8]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[8]]$distance
@@ -2070,7 +2249,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[9]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[9]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -2092,16 +2271,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[9]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[9]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[9]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[9]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[9]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[9]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[9]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[9]]$distance
@@ -2173,7 +2361,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[10]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[10]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -2195,16 +2383,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[10]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[10]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[10]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[10]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[10]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[10]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[10]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[10]]$distance
@@ -2276,7 +2473,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[11]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[11]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -2298,22 +2495,32 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[11]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[11]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[11]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[11]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[11]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[11]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[11]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[11]]$distance
 #&gt; [1] 63.30356
 #&gt; 
-#&gt; </div><div class='input'><span class='fu'>nearest_postcode</span>(<span class='st'>"EC1Y 8LX"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>12</span>, <span class='kw'>radius</span> <span class='kw'>=</span> <span class='fl'>200</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; </div><div class='input'><span class='fu'>nearest_postcode</span><span class='op'>(</span><span class='st'>"EC1Y 8LX"</span>, limit <span class='op'>=</span> <span class='fl'>12</span>, radius <span class='op'>=</span> <span class='fl'>200</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$postcode
 #&gt; [1] "EC1Y 8LX"
 #&gt; 
@@ -2378,7 +2585,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[1]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[1]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -2400,16 +2607,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[1]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[1]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[1]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[1]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[1]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[1]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[1]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[1]]$distance
@@ -2481,7 +2697,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[2]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[2]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -2503,16 +2719,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[2]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[2]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[2]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[2]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[2]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[2]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[2]]$distance
@@ -2584,7 +2809,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[3]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[3]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -2606,16 +2831,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[3]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[3]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[3]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[3]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[3]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[3]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[3]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[3]]$distance
@@ -2624,16 +2858,16 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; 
 #&gt; [[4]]
 #&gt; [[4]]$postcode
-#&gt; [1] "EC1Y 8LE"
+#&gt; [1] "EC1Y 8SE"
 #&gt; 
 #&gt; [[4]]$quality
 #&gt; [1] 1
 #&gt; 
 #&gt; [[4]]$eastings
-#&gt; [1] 532563
+#&gt; [1] 532508
 #&gt; 
 #&gt; [[4]]$northings
-#&gt; [1] 182101
+#&gt; [1] 182130
 #&gt; 
 #&gt; [[4]]$country
 #&gt; [1] "England"
@@ -2642,10 +2876,10 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "London"
 #&gt; 
 #&gt; [[4]]$longitude
-#&gt; [1] -0.090633
+#&gt; [1] -0.091414
 #&gt; 
 #&gt; [[4]]$latitude
-#&gt; [1] 51.52228
+#&gt; [1] 51.52255
 #&gt; 
 #&gt; [[4]]$european_electoral_region
 #&gt; [1] "London"
@@ -2663,7 +2897,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "Islington 023"
 #&gt; 
 #&gt; [[4]]$incode
-#&gt; [1] "8LE"
+#&gt; [1] "8SE"
 #&gt; 
 #&gt; [[4]]$outcode
 #&gt; [1] "EC1Y"
@@ -2687,7 +2921,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[4]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[4]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -2709,10 +2943,10 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[4]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[4]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[4]]$codes$ced
 #&gt; [1] "E99999999"
@@ -2720,23 +2954,32 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [[4]]$codes$nuts
 #&gt; [1] "UKI43"
 #&gt; 
+#&gt; [[4]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[4]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[4]]$codes$lau2
+#&gt; [1] "E05000367"
+#&gt; 
 #&gt; 
 #&gt; [[4]]$distance
-#&gt; [1] 33.93278
+#&gt; [1] 34.28968
 #&gt; 
 #&gt; 
 #&gt; [[5]]
 #&gt; [[5]]$postcode
-#&gt; [1] "EC1Y 8SE"
+#&gt; [1] "EC1Y 8LE"
 #&gt; 
 #&gt; [[5]]$quality
 #&gt; [1] 1
 #&gt; 
 #&gt; [[5]]$eastings
-#&gt; [1] 532508
+#&gt; [1] 532563
 #&gt; 
 #&gt; [[5]]$northings
-#&gt; [1] 182130
+#&gt; [1] 182100
 #&gt; 
 #&gt; [[5]]$country
 #&gt; [1] "England"
@@ -2745,10 +2988,10 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "London"
 #&gt; 
 #&gt; [[5]]$longitude
-#&gt; [1] -0.091414
+#&gt; [1] -0.090633
 #&gt; 
 #&gt; [[5]]$latitude
-#&gt; [1] 51.52255
+#&gt; [1] 51.52227
 #&gt; 
 #&gt; [[5]]$european_electoral_region
 #&gt; [1] "London"
@@ -2766,7 +3009,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "Islington 023"
 #&gt; 
 #&gt; [[5]]$incode
-#&gt; [1] "8SE"
+#&gt; [1] "8LE"
 #&gt; 
 #&gt; [[5]]$outcode
 #&gt; [1] "EC1Y"
@@ -2790,7 +3033,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[5]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[5]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -2812,10 +3055,10 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[5]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[5]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[5]]$codes$ced
 #&gt; [1] "E99999999"
@@ -2823,9 +3066,18 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [[5]]$codes$nuts
 #&gt; [1] "UKI43"
 #&gt; 
+#&gt; [[5]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[5]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[5]]$codes$lau2
+#&gt; [1] "E05000367"
+#&gt; 
 #&gt; 
 #&gt; [[5]]$distance
-#&gt; [1] 34.28968
+#&gt; [1] 34.74547
 #&gt; 
 #&gt; 
 #&gt; [[6]]
@@ -2893,7 +3145,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[6]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[6]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -2915,16 +3167,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[6]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[6]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[6]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[6]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[6]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[6]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[6]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[6]]$distance
@@ -2996,7 +3257,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[7]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[7]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -3018,16 +3279,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[7]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[7]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[7]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[7]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[7]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[7]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[7]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[7]]$distance
@@ -3099,7 +3369,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[8]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[8]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -3121,16 +3391,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[8]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[8]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[8]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[8]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[8]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[8]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[8]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[8]]$distance
@@ -3202,7 +3481,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[9]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[9]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -3224,16 +3503,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[9]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[9]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[9]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[9]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[9]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[9]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[9]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[9]]$distance
@@ -3305,7 +3593,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[10]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[10]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -3327,16 +3615,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[10]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[10]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[10]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[10]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[10]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[10]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[10]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[10]]$distance
@@ -3408,7 +3705,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[11]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[11]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -3430,16 +3727,25 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[11]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[11]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[11]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[11]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[11]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[11]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[11]]$codes$lau2
+#&gt; [1] "E05000367"
 #&gt; 
 #&gt; 
 #&gt; [[11]]$distance
@@ -3511,7 +3817,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; NULL
 #&gt; 
 #&gt; [[12]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[12]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -3533,10 +3839,10 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[12]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[12]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[12]]$codes$ced
 #&gt; [1] "E99999999"
@@ -3544,24 +3850,27 @@ The search is based on the relative distance of the postcode centroid.</p>
 #&gt; [[12]]$codes$nuts
 #&gt; [1] "UKI43"
 #&gt; 
+#&gt; [[12]]$codes$lsoa
+#&gt; [1] "E01002704"
+#&gt; 
+#&gt; [[12]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[12]]$codes$lau2
+#&gt; [1] "E05000367"
+#&gt; 
 #&gt; 
 #&gt; [[12]]$distance
 #&gt; [1] 67.10526
 #&gt; 
-#&gt; </div><div class='input'># }
+#&gt; </div><div class='input'><span class='co'># }</span>
 
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -3572,7 +3881,7 @@ The search is based on the relative distance of the postcode centroid.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

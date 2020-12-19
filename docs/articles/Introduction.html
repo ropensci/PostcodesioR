@@ -6,19 +6,26 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Introduction • PostcodesioR</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="Introduction">
-<meta property="og:description" content="">
-<meta name="twitter:card" content="summary">
+<meta property="og:description" content="PostcodesioR">
+<meta property="og:image" content="/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body>
+<body data-spy="scroll" data-target="#toc">
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -39,7 +46,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -62,7 +69,14 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="https://github.com/ropensci/PostcodesioR/">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -72,15 +86,15 @@
 
       
 
-      </header><div class="row">
+      </header><script src="Introduction_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>Introduction</h1>
+      <h1 data-toc-skip>Introduction</h1>
                         <h4 class="author">Eryk Walczak</h4>
             
-            <h4 class="date">2020-03-04</h4>
+            <h4 class="date">2020-12-19</h4>
       
-      
+      <small class="dont-index">Source: <a href="https://github.com/ropensci/PostcodesioR/blob/master/vignettes/Introduction.Rmd"><code>vignettes/Introduction.Rmd</code></a></small>
       <div class="hidden name"><code>Introduction.Rmd</code></div>
 
     </div>
@@ -91,8 +105,9 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span>(<span class="st">"devtools"</span>)) <span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"devtools"</span>)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/reexports.html">install_github</a></span>(<span class="st">"erzk/PostcodesioR"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"erzk/PostcodesioR"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="lookup-postcodes-and-outcodes" class="section level2">
 <h2 class="hasAnchor">
@@ -101,13 +116,14 @@
 <h3 class="hasAnchor">
 <a href="#single-postcode" class="anchor"></a>Single postcode</h3>
 <p>Provide a postcode to obtain all available information</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(PostcodesioR)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3">lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/postcode_lookup.html">postcode_lookup</a></span>(<span class="st">"EC1Y8LX"</span>)</a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#overview</span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="kw"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(lookup_result)</a></code></pre></div>
-<pre><code>## 'data.frame':    1 obs. of  32 variables:
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/PostcodesioR">PostcodesioR</a></span><span class="op">)</span>
+
+<span class="va">lookup_result</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/postcode_lookup.html">postcode_lookup</a></span><span class="op">(</span><span class="st">"EC1Y8LX"</span><span class="op">)</span>
+
+<span class="co">#overview</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">lookup_result</span><span class="op">)</span></code></pre></div>
+<pre><code>## 'data.frame':    1 obs. of  35 variables:
 ##  $ postcode                       : chr "EC1Y 8LX"
 ##  $ quality                        : int 1
 ##  $ eastings                       : int 532544
@@ -129,22 +145,26 @@
 ##  $ admin_county                   : logi NA
 ##  $ admin_ward                     : chr "Bunhill"
 ##  $ ced                            : logi NA
-##  $ ccg                            : chr "NHS Islington"
+##  $ ccg                            : chr "NHS North Central London"
 ##  $ nuts                           : chr "Haringey and Islington"
 ##  $ admin_district_code            : chr "E09000019"
 ##  $ admin_county_code              : chr "E99999999"
 ##  $ admin_ward_code                : chr "E05000367"
 ##  $ parish_code                    : chr "E43000209"
 ##  $ parliamentary_constituency_code: chr "E14000764"
-##  $ ccg_code                       : chr "E38000088"
-##  $ ccg_id_code                    : chr "08H"
+##  $ ccg_code                       : chr "E38000240"
+##  $ ccg_id_code                    : chr "93C"
 ##  $ ced_code                       : chr "E99999999"
-##  $ nuts_code                      : chr "UKI43"</code></pre>
+##  $ nuts_code                      : chr "UKI43"
+##  $ lsoa_code                      : chr "E01002704"
+##  $ msoa_code                      : chr "E02000576"
+##  $ lau2_code                      : chr "E05000367"</code></pre>
 <p>There is another function that returns the same data points but returns a list and allows optional parameters</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">query_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/postcode_query.html">postcode_query</a></span>(<span class="st">"EC1Y8LX"</span>)</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#overview</span></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="kw"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(query_result)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">query_result</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/postcode_query.html">postcode_query</a></span><span class="op">(</span><span class="st">"EC1Y8LX"</span><span class="op">)</span>
+
+<span class="co">#overview</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">query_result</span><span class="op">)</span></code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 24
 ##   ..$ postcode                  : chr "EC1Y 8LX"
@@ -168,29 +188,33 @@
 ##   ..$ admin_county              : NULL
 ##   ..$ admin_ward                : chr "Bunhill"
 ##   ..$ ced                       : NULL
-##   ..$ ccg                       : chr "NHS Islington"
+##   ..$ ccg                       : chr "NHS North Central London"
 ##   ..$ nuts                      : chr "Haringey and Islington"
-##   ..$ codes                     :List of 9
+##   ..$ codes                     :List of 12
 ##   .. ..$ admin_district            : chr "E09000019"
 ##   .. ..$ admin_county              : chr "E99999999"
 ##   .. ..$ admin_ward                : chr "E05000367"
 ##   .. ..$ parish                    : chr "E43000209"
 ##   .. ..$ parliamentary_constituency: chr "E14000764"
-##   .. ..$ ccg                       : chr "E38000088"
-##   .. ..$ ccg_id                    : chr "08H"
+##   .. ..$ ccg                       : chr "E38000240"
+##   .. ..$ ccg_id                    : chr "93C"
 ##   .. ..$ ced                       : chr "E99999999"
-##   .. ..$ nuts                      : chr "UKI43"</code></pre>
+##   .. ..$ nuts                      : chr "UKI43"
+##   .. ..$ lsoa                      : chr "E01002704"
+##   .. ..$ msoa                      : chr "E02000576"
+##   .. ..$ lau2                      : chr "E05000367"</code></pre>
 <p>This function creates a nested list with the codes for administrative district, county, ward, parish, parliamentary constituency, CCG, and NUTS.</p>
 </div>
 <div id="multiple-postcodes" class="section level3">
 <h3 class="hasAnchor">
 <a href="#multiple-postcodes" class="anchor"></a>Multiple postcodes</h3>
 <p>To query two or more postcodes, use <code>bulk_</code> functions.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">pc_list &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="dt">postcodes =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"PR3 0SG"</span>, <span class="st">"M45 6GN"</span>, <span class="st">"EX165BL"</span>))</a>
-<a class="sourceLine" id="cb6-2" data-line-number="2">bulk_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/bulk_postcode_lookup.html">bulk_postcode_lookup</a></span>(pc_list)</a>
-<a class="sourceLine" id="cb6-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="co">#overview</span></a>
-<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="kw"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(bulk_lookup_result[<span class="dv">1</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">pc_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>postcodes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"PR3 0SG"</span>, <span class="st">"M45 6GN"</span>, <span class="st">"EX165BL"</span><span class="op">)</span><span class="op">)</span>
+<span class="va">bulk_lookup_result</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bulk_postcode_lookup.html">bulk_postcode_lookup</a></span><span class="op">(</span><span class="va">pc_list</span><span class="op">)</span>
+
+<span class="co">#overview</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">bulk_lookup_result</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 2
 ##   ..$ query : chr "PR3 0SG"
@@ -218,7 +242,7 @@
 ##   .. ..$ ced                       : chr "Wyre Rural East"
 ##   .. ..$ ccg                       : chr "NHS Fylde and Wyre"
 ##   .. ..$ nuts                      : chr "Lancaster and Wyre"
-##   .. ..$ codes                     :List of 9
+##   .. ..$ codes                     :List of 12
 ##   .. .. ..$ admin_district            : chr "E07000128"
 ##   .. .. ..$ admin_county              : chr "E10000017"
 ##   .. .. ..$ admin_ward                : chr "E05009934"
@@ -227,31 +251,36 @@
 ##   .. .. ..$ ccg                       : chr "E38000226"
 ##   .. .. ..$ ccg_id                    : chr "02M"
 ##   .. .. ..$ ced                       : chr "E58000832"
-##   .. .. ..$ nuts                      : chr "UKD44"</code></pre>
+##   .. .. ..$ nuts                      : chr "UKD44"
+##   .. .. ..$ lsoa                      : chr "E01025547"
+##   .. .. ..$ msoa                      : chr "E02005324"
+##   .. .. ..$ lau2                      : chr "E05009934"</code></pre>
 <p>If you want to work with data frame then the nested list created above can be turned into a data frame</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(purrr)</a>
-<a class="sourceLine" id="cb8-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb8-3" data-line-number="3">bulk_list &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span>(bulk_lookup_result, <span class="st">"[["</span>, <span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb8-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb8-5" data-line-number="5">bulk_df &lt;-</a>
-<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span>(bulk_list,</a>
-<a class="sourceLine" id="cb8-7" data-line-number="7">          <span class="st">`</span><span class="dt">[</span><span class="st">`</span>,</a>
-<a class="sourceLine" id="cb8-8" data-line-number="8">          <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"postcode"</span>, <span class="st">"longitude"</span>, <span class="st">"latitude"</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://purrr.tidyverse.org">purrr</a></span><span class="op">)</span>
+
+<span class="va">bulk_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="va">bulk_lookup_result</span>, <span class="st">"[["</span>, <span class="fl">2</span><span class="op">)</span>
+
+<span class="va">bulk_df</span> <span class="op">&lt;-</span>
+  <span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html">map_dfr</a></span><span class="op">(</span><span class="va">bulk_list</span>,
+          <span class="va">`[`</span>,
+          <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"postcode"</span>, <span class="st">"longitude"</span>, <span class="st">"latitude"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="outward-code-lookup" class="section level3">
 <h3 class="hasAnchor">
 <a href="#outward-code-lookup" class="anchor"></a>Outward code lookup</h3>
 <p>Provide an outcode to obtain geolocation data for the centroid of the specified outcode:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">ocl &lt;-<span class="st"> </span><span class="kw"><a href="../reference/outward_code_lookup.html">outward_code_lookup</a></span>(<span class="st">"E1"</span>)</a>
-<a class="sourceLine" id="cb9-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="co">#overview</span></a>
-<a class="sourceLine" id="cb9-4" data-line-number="4"><span class="kw"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(ocl)</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">ocl</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/outward_code_lookup.html">outward_code_lookup</a></span><span class="op">(</span><span class="st">"E1"</span><span class="op">)</span>
+
+<span class="co">#overview</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">ocl</span><span class="op">)</span></code></pre></div>
 <pre><code>## List of 10
 ##  $ outcode       : chr "E1"
-##  $ longitude     : num -0.0594
+##  $ longitude     : num -0.0595
 ##  $ latitude      : num 51.5
-##  $ northings     : int 181616
-##  $ eastings      : int 534742
+##  $ northings     : int 181614
+##  $ eastings      : int 534739
 ##  $ admin_district:List of 3
 ##   ..$ : chr "Hackney"
 ##   ..$ : chr "City of London"
@@ -286,10 +315,11 @@
 <div id="single-postcode-1" class="section level3">
 <h3 class="hasAnchor">
 <a href="#single-postcode-1" class="anchor"></a>Single postcode</h3>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../reference/reverse_geocoding.html">reverse_geocoding</a></span>(<span class="fl">0.127</span>, <span class="fl">51.507</span>)</a>
-<a class="sourceLine" id="cb11-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb11-3" data-line-number="3"><span class="co"># overview</span></a>
-<a class="sourceLine" id="cb11-4" data-line-number="4"><span class="kw"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(rev_geo[<span class="dv">1</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">rev_geo</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/reverse_geocoding.html">reverse_geocoding</a></span><span class="op">(</span><span class="fl">0.127</span>, <span class="fl">51.507</span><span class="op">)</span>
+
+<span class="co"># overview</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">rev_geo</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 25
 ##   ..$ postcode                  : chr "SE28 8NH"
@@ -313,41 +343,45 @@
 ##   ..$ admin_county              : NULL
 ##   ..$ admin_ward                : chr "Thamesmead East"
 ##   ..$ ced                       : NULL
-##   ..$ ccg                       : chr "NHS Bexley"
+##   ..$ ccg                       : chr "NHS South East London"
 ##   ..$ nuts                      : chr "Bexley and Greenwich"
-##   ..$ codes                     :List of 9
+##   ..$ codes                     :List of 12
 ##   .. ..$ admin_district            : chr "E09000004"
 ##   .. ..$ admin_county              : chr "E99999999"
 ##   .. ..$ admin_ward                : chr "E05011232"
 ##   .. ..$ parish                    : chr "E43000194"
 ##   .. ..$ parliamentary_constituency: chr "E14000696"
-##   .. ..$ ccg                       : chr "E38000011"
-##   .. ..$ ccg_id                    : chr "07N"
+##   .. ..$ ccg                       : chr "E38000244"
+##   .. ..$ ccg_id                    : chr "72Q"
 ##   .. ..$ ced                       : chr "E99999999"
 ##   .. ..$ nuts                      : chr "UKI51"
+##   .. ..$ lsoa                      : chr "E01000469"
+##   .. ..$ msoa                      : chr "E02000065"
+##   .. ..$ lau2                      : chr "E05011232"
 ##   ..$ distance                  : num 38.9</code></pre>
 </div>
 <div id="multiple-postcodes-1" class="section level3">
 <h3 class="hasAnchor">
 <a href="#multiple-postcodes-1" class="anchor"></a>Multiple postcodes</h3>
 <p>To reverse geocode multiple values use the function underneath. The result is a nested list, which might be a bit intimidating, but it allows storing unequal number of elements.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="co"># create a list with the coordinates</span></a>
-<a class="sourceLine" id="cb13-2" data-line-number="2">geolocations_list &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/structure.html">structure</a></span>(</a>
-<a class="sourceLine" id="cb13-3" data-line-number="3"> <span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(</a>
-<a class="sourceLine" id="cb13-4" data-line-number="4"> <span class="dt">geolocations =</span> <span class="kw"><a href="https://rdrr.io/r/base/structure.html">structure</a></span>(</a>
-<a class="sourceLine" id="cb13-5" data-line-number="5"> <span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(</a>
-<a class="sourceLine" id="cb13-6" data-line-number="6"> <span class="dt">longitude =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="op">-</span><span class="fl">3.15807731271522</span>, <span class="fl">-1.12935802905177</span>),</a>
-<a class="sourceLine" id="cb13-7" data-line-number="7"> <span class="dt">latitude =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="fl">51.4799900627036</span>, <span class="fl">50.7186356978817</span>),</a>
-<a class="sourceLine" id="cb13-8" data-line-number="8"> <span class="dt">limit =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="ot">NA</span>, 100L),</a>
-<a class="sourceLine" id="cb13-9" data-line-number="9"> <span class="dt">radius =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="ot">NA</span>, 500L)),</a>
-<a class="sourceLine" id="cb13-10" data-line-number="10"> <span class="dt">.Names =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"longitude"</span>, <span class="st">"latitude"</span>, <span class="st">"limit"</span>, <span class="st">"radius"</span>),</a>
-<a class="sourceLine" id="cb13-11" data-line-number="11"> <span class="dt">class =</span> <span class="st">"data.frame"</span>,</a>
-<a class="sourceLine" id="cb13-12" data-line-number="12"> <span class="dt">row.names =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>)),</a>
-<a class="sourceLine" id="cb13-13" data-line-number="13"> <span class="dt">.Names =</span> <span class="st">"geolocations"</span>)</a>
-<a class="sourceLine" id="cb13-14" data-line-number="14"></a>
-<a class="sourceLine" id="cb13-15" data-line-number="15">bulk_rev_geo &lt;-<span class="st"> </span><span class="kw"><a href="../reference/bulk_reverse_geocoding.html">bulk_reverse_geocoding</a></span>(geolocations_list)</a>
-<a class="sourceLine" id="cb13-16" data-line-number="16"></a>
-<a class="sourceLine" id="cb13-17" data-line-number="17">bulk_rev_geo[[<span class="dv">1</span>]]<span class="op">$</span>result[[<span class="dv">1</span>]]</a></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># create a list with the coordinates</span>
+<span class="va">geolocations_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/structure.html">structure</a></span><span class="op">(</span>
+ <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
+ geolocations <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/structure.html">structure</a></span><span class="op">(</span>
+ <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
+ longitude <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">3.15807731271522</span>, <span class="op">-</span><span class="fl">1.12935802905177</span><span class="op">)</span>,
+ latitude <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">51.4799900627036</span>, <span class="fl">50.7186356978817</span><span class="op">)</span>,
+ limit <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="fl">100L</span><span class="op">)</span>,
+ radius <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="fl">500L</span><span class="op">)</span><span class="op">)</span>,
+ .Names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"longitude"</span>, <span class="st">"latitude"</span>, <span class="st">"limit"</span>, <span class="st">"radius"</span><span class="op">)</span>,
+ class <span class="op">=</span> <span class="st">"data.frame"</span>,
+ row.names <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span>,
+ .Names <span class="op">=</span> <span class="st">"geolocations"</span><span class="op">)</span>
+
+<span class="va">bulk_rev_geo</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/bulk_reverse_geocoding.html">bulk_reverse_geocoding</a></span><span class="op">(</span><span class="va">geolocations_list</span><span class="op">)</span>
+
+<span class="va">bulk_rev_geo</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">result</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></code></pre></div>
 <pre><code>## $postcode
 ## [1] "CF24 2BT"
 ## 
@@ -445,53 +479,66 @@
 ## $codes$nuts
 ## [1] "UKL22"
 ## 
+## $codes$lsoa
+## [1] "W01001874"
+## 
+## $codes$msoa
+## [1] "W02000404"
+## 
+## $codes$lau2
+## [1] "W05000879"
+## 
 ## 
 ## $distance
 ## [1] 1.567236</code></pre>
 <p>The list above is not the most common way of storing files. It’s more likely that a data frame will be used to store the geodata. In that case, it has to be turned into a list of a specific format required by the API:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1">geolocations_df &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/structure.html">structure</a></span>(</a>
-<a class="sourceLine" id="cb15-2" data-line-number="2">  <span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(</a>
-<a class="sourceLine" id="cb15-3" data-line-number="3">    <span class="dt">longitude =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="op">-</span><span class="fl">3.15807731271522</span>, <span class="fl">-1.12935802905177</span>),</a>
-<a class="sourceLine" id="cb15-4" data-line-number="4">    <span class="dt">latitude =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="fl">51.4799900627036</span>, <span class="fl">50.7186356978817</span>),</a>
-<a class="sourceLine" id="cb15-5" data-line-number="5">    <span class="dt">limit =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="ot">NA</span>, 100L),</a>
-<a class="sourceLine" id="cb15-6" data-line-number="6">    <span class="dt">radius =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="ot">NA</span>, 500L)),</a>
-<a class="sourceLine" id="cb15-7" data-line-number="7">  <span class="dt">.Names =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"longitude"</span>, <span class="st">"latitude"</span>, <span class="st">"limit"</span>, <span class="st">"radius"</span>),</a>
-<a class="sourceLine" id="cb15-8" data-line-number="8">  <span class="dt">row.names =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,</a>
-<a class="sourceLine" id="cb15-9" data-line-number="9">  <span class="dt">class =</span> <span class="st">"data.frame"</span>)</a>
-<a class="sourceLine" id="cb15-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb15-11" data-line-number="11">geolocations_df</a></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">geolocations_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/structure.html">structure</a></span><span class="op">(</span>
+  <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>
+    longitude <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">3.15807731271522</span>, <span class="op">-</span><span class="fl">1.12935802905177</span><span class="op">)</span>,
+    latitude <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">51.4799900627036</span>, <span class="fl">50.7186356978817</span><span class="op">)</span>,
+    limit <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="fl">100L</span><span class="op">)</span>,
+    radius <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="fl">500L</span><span class="op">)</span><span class="op">)</span>,
+  .Names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"longitude"</span>, <span class="st">"latitude"</span>, <span class="st">"limit"</span>, <span class="st">"radius"</span><span class="op">)</span>,
+  row.names <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">2</span>,
+  class <span class="op">=</span> <span class="st">"data.frame"</span><span class="op">)</span>
+
+<span class="va">geolocations_df</span></code></pre></div>
 <pre><code>##   longitude latitude limit radius
 ## 1 -3.158077 51.47999    NA     NA
 ## 2 -1.129358 50.71864   100    500</code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="co"># turn a data frame into a list</span></a>
-<a class="sourceLine" id="cb17-2" data-line-number="2">geolocations_df2list &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/list.html">list</a></span>(geolocations_df)</a>
-<a class="sourceLine" id="cb17-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb17-4" data-line-number="4"><span class="co"># add a list name</span></a>
-<a class="sourceLine" id="cb17-5" data-line-number="5"><span class="kw"><a href="https://rdrr.io/r/base/names.html">names</a></span>(geolocations_df2list) &lt;-<span class="st"> "geolocations"</span></a>
-<a class="sourceLine" id="cb17-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb17-7" data-line-number="7"><span class="co"># display correct input for the function</span></a>
-<a class="sourceLine" id="cb17-8" data-line-number="8">geolocations_df2list</a></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># turn a data frame into a list</span>
+<span class="va">geolocations_df2list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">geolocations_df</span><span class="op">)</span>
+
+<span class="co"># add a list name</span>
+<span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">geolocations_df2list</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"geolocations"</span>
+
+<span class="co"># display correct input for the function</span>
+<span class="va">geolocations_df2list</span></code></pre></div>
 <pre><code>## $geolocations
 ##   longitude latitude limit radius
 ## 1 -3.158077 51.47999    NA     NA
 ## 2 -1.129358 50.71864   100    500</code></pre>
 <p>Common usage of this function might be extracting particular variables. You can extract one variable like this:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="co"># extract one postcode</span></a>
-<a class="sourceLine" id="cb19-2" data-line-number="2">bulk_rev_geo[[<span class="dv">1</span>]]<span class="op">$</span>result[[<span class="dv">8</span>]]<span class="op">$</span>postcode</a></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># extract one postcode</span>
+<span class="va">bulk_rev_geo</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">result</span><span class="op">[[</span><span class="fl">8</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">postcode</span></code></pre></div>
 <pre><code>## [1] "CF24 2AL"</code></pre>
 <p>But more likely you will want more than one result. After all, that’s the point of using a bulk function:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" data-line-number="1"><span class="co"># function to extract variables of interest</span></a>
-<a class="sourceLine" id="cb21-2" data-line-number="2">extract_bulk_geo_variable &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</a>
-<a class="sourceLine" id="cb21-3" data-line-number="3">  bulk_results &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span>(bulk_rev_geo, <span class="st">`</span><span class="dt">[[</span><span class="st">`</span>, <span class="st">"result"</span>)</a>
-<a class="sourceLine" id="cb21-4" data-line-number="4">  <span class="kw"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span>(bulk_results, <span class="dt">recursive =</span> <span class="ot">FALSE</span>), <span class="st">`</span><span class="dt">[[</span><span class="st">`</span>, x)</a>
-<a class="sourceLine" id="cb21-5" data-line-number="5">}</a>
-<a class="sourceLine" id="cb21-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb21-7" data-line-number="7"><span class="co"># define the variables you need</span></a>
-<a class="sourceLine" id="cb21-8" data-line-number="8">variables_of_interest &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"postcode"</span>, <span class="st">"latitude"</span>, <span class="st">"longitude"</span>)</a>
-<a class="sourceLine" id="cb21-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb21-10" data-line-number="10"><span class="co"># return a data frame with the variables</span></a>
-<a class="sourceLine" id="cb21-11" data-line-number="11"><span class="kw"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span>(</a>
-<a class="sourceLine" id="cb21-12" data-line-number="12">  <span class="kw"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span>(variables_of_interest, extract_bulk_geo_variable))</a></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># function to extract variables of interest</span>
+<span class="va">extract_bulk_geo_variable</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span>
+  <span class="va">bulk_results</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="va">bulk_rev_geo</span>, <span class="va">`[[`</span>, <span class="st">"result"</span><span class="op">)</span>
+  <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span><span class="op">(</span><span class="va">bulk_results</span>, recursive <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>, <span class="va">`[[`</span>, <span class="va">x</span><span class="op">)</span>
+<span class="op">}</span>
+
+<span class="co"># define the variables you need</span>
+<span class="va">variables_of_interest</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"postcode"</span>, <span class="st">"latitude"</span>, <span class="st">"longitude"</span><span class="op">)</span>
+
+<span class="co"># return a data frame with the variables</span>
+<span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
+  <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span><span class="op">(</span><span class="va">variables_of_interest</span>, <span class="va">extract_bulk_geo_variable</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <pre><code>##    postcode  latitude longitude
 ## 1  CF24 2BT 51.479976 -3.158076
 ## 2  CF24 2ED 51.479691 -3.158688
@@ -511,7 +558,7 @@
 ## 16 PO33 1QR  50.71574 -1.125998
 ## 17 PO33 1PB 50.721022 -1.133719
 ## 18 PO33 1PR 50.721486 -1.133187
-## 19 PO33 1FS 50.717205 -1.123735
+## 19 PO33 1FS 50.717285  -1.12372
 ## 20 PO33 1QP 50.715694 -1.124911
 ## 21 PO34 5AP 50.721536 -1.124476
 ## 22 PO33 1PY 50.715218 -1.125104</code></pre>
@@ -519,11 +566,12 @@
 <div id="single-outcode" class="section level3">
 <h3 class="hasAnchor">
 <a href="#single-outcode" class="anchor"></a>Single outcode</h3>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1">out_rev_geocode &lt;-<span class="st"> </span><span class="kw"><a href="../reference/outcode_reverse_geocoding.html">outcode_reverse_geocoding</a></span>(<span class="st">"-3.15"</span>, <span class="st">"51.47"</span>)</a>
-<a class="sourceLine" id="cb23-2" data-line-number="2"><span class="co"># overview</span></a>
-<a class="sourceLine" id="cb23-3" data-line-number="3"><span class="kw"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(out_rev_geocode[<span class="dv">1</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">out_rev_geocode</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/outcode_reverse_geocoding.html">outcode_reverse_geocoding</a></span><span class="op">(</span><span class="st">"-3.15"</span>, <span class="st">"51.47"</span><span class="op">)</span>
+<span class="co"># overview</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">out_rev_geocode</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></code></pre></div>
 <pre><code>## List of 1
-##  $ :List of 11
+##  $ :List of 10
 ##   ..$ outcode       : chr "CF99"
 ##   ..$ longitude     : num -3.16
 ##   ..$ latitude      : num 51.5
@@ -537,8 +585,7 @@
 ##   ..$ admin_ward    :List of 1
 ##   .. ..$ : chr "Butetown"
 ##   ..$ country       :List of 1
-##   .. ..$ : chr "Wales"
-##   ..$ distance      : num 997</code></pre>
+##   .. ..$ : chr "Wales"</code></pre>
 </div>
 </div>
 <div id="generate-random-entries" class="section level2">
@@ -548,118 +595,129 @@
 <h3 class="hasAnchor">
 <a href="#postcodes" class="anchor"></a>Postcodes</h3>
 <p>Generates a list with a random UK postcode and corresponding geographic information:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1"><span class="co"># without restrictions</span></a>
-<a class="sourceLine" id="cb25-2" data-line-number="2"><span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>()</a></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># without restrictions</span>
+<span class="fu"><a href="../reference/random_postcode.html">random_postcode</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <pre><code>## $postcode
-## [1] "ME4 6RX"
+## [1] "GU14 9HB"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 575358
+## [1] 485032
 ## 
 ## $northings
-## [1] 166823
+## [1] 157501
 ## 
 ## $country
 ## [1] "England"
 ## 
 ## $nhs_ha
-## [1] "South East Coast"
+## [1] "South Central"
 ## 
 ## $longitude
-## [1] 0.518051
+## [1] -0.781439
 ## 
 ## $latitude
-## [1] 51.37338
+## [1] 51.31028
 ## 
 ## $european_electoral_region
 ## [1] "South East"
 ## 
 ## $primary_care_trust
-## [1] "Medway"
+## [1] "Hampshire"
 ## 
 ## $region
 ## [1] "South East"
 ## 
 ## $lsoa
-## [1] "Medway 021C"
+## [1] "Rushmoor 003B"
 ## 
 ## $msoa
-## [1] "Medway 021"
+## [1] "Rushmoor 003"
 ## 
 ## $incode
-## [1] "6RX"
+## [1] "9HB"
 ## 
 ## $outcode
-## [1] "ME4"
+## [1] "GU14"
 ## 
 ## $parliamentary_constituency
-## [1] "Chatham and Aylesford"
+## [1] "Aldershot"
 ## 
 ## $admin_district
-## [1] "Medway"
+## [1] "Rushmoor"
 ## 
 ## $parish
-## [1] "Medway, unparished area"
+## [1] "Rushmoor, unparished area"
 ## 
 ## $admin_county
-## NULL
+## [1] "Hampshire"
 ## 
 ## $admin_ward
-## [1] "Chatham Central"
+## [1] "Fernhill"
 ## 
 ## $ced
-## NULL
+## [1] "Farnborough North"
 ## 
 ## $ccg
-## [1] "NHS Medway"
+## [1] "NHS North East Hampshire and Farnham"
 ## 
 ## $nuts
-## [1] "Medway"
+## [1] "North Hampshire"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "E06000035"
+## [1] "E07000092"
 ## 
 ## $codes$admin_county
-## [1] "E99999999"
+## [1] "E10000014"
 ## 
 ## $codes$admin_ward
-## [1] "E05002249"
+## [1] "E05008993"
 ## 
 ## $codes$parish
-## [1] "E43000030"
+## [1] "E43000073"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "E14000626"
+## [1] "E14000530"
 ## 
 ## $codes$ccg
-## [1] "E38000104"
+## [1] "E38000118"
 ## 
 ## $codes$ccg_id
-## [1] "09W"
+## [1] "99M"
 ## 
 ## $codes$ced
-## [1] "E99999999"
+## [1] "E58000559"
 ## 
 ## $codes$nuts
-## [1] "UKJ41"</code></pre>
+## [1] "UKJ37"
+## 
+## $codes$lsoa
+## [1] "E01023101"
+## 
+## $codes$msoa
+## [1] "E02004804"
+## 
+## $codes$lau2
+## [1] "E05008993"</code></pre>
 <p>A randomly generated postcode can also belong to a particular outcode:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1"><span class="co"># restrict to an outcode</span></a>
-<a class="sourceLine" id="cb27-2" data-line-number="2"><span class="kw"><a href="../reference/random_postcode.html">random_postcode</a></span>(<span class="st">"N1"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># restrict to an outcode</span>
+<span class="fu"><a href="../reference/random_postcode.html">random_postcode</a></span><span class="op">(</span><span class="st">"N1"</span><span class="op">)</span></code></pre></div>
 <pre><code>## $postcode
-## [1] "N1 3XF"
+## [1] "N1 1HB"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 531630
+## [1] 531287
 ## 
 ## $northings
-## [1] 183943
+## [1] 184305
 ## 
 ## $country
 ## [1] "England"
@@ -668,10 +726,10 @@
 ## [1] "London"
 ## 
 ## $longitude
-## [1] -0.103385
+## [1] -0.108219
 ## 
 ## $latitude
-## [1] 51.53905
+## [1] 51.54238
 ## 
 ## $european_electoral_region
 ## [1] "London"
@@ -683,13 +741,13 @@
 ## [1] "London"
 ## 
 ## $lsoa
-## [1] "Islington 020B"
+## [1] "Islington 017B"
 ## 
 ## $msoa
-## [1] "Islington 020"
+## [1] "Islington 017"
 ## 
 ## $incode
-## [1] "3XF"
+## [1] "1HB"
 ## 
 ## $outcode
 ## [1] "N1"
@@ -707,13 +765,13 @@
 ## NULL
 ## 
 ## $admin_ward
-## [1] "St Mary's"
+## [1] "Barnsbury"
 ## 
 ## $ced
 ## NULL
 ## 
 ## $ccg
-## [1] "NHS Islington"
+## [1] "NHS North Central London"
 ## 
 ## $nuts
 ## [1] "Haringey and Islington"
@@ -726,7 +784,7 @@
 ## [1] "E99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05000379"
+## [1] "E05000366"
 ## 
 ## $codes$parish
 ## [1] "E43000209"
@@ -735,46 +793,59 @@
 ## [1] "E14000764"
 ## 
 ## $codes$ccg
-## [1] "E38000088"
+## [1] "E38000240"
 ## 
 ## $codes$ccg_id
-## [1] "08H"
+## [1] "93C"
 ## 
 ## $codes$ced
 ## [1] "E99999999"
 ## 
 ## $codes$nuts
-## [1] "UKI43"</code></pre>
+## [1] "UKI43"
+## 
+## $codes$lsoa
+## [1] "E01002699"
+## 
+## $codes$msoa
+## [1] "E02000570"
+## 
+## $codes$lau2
+## [1] "E05000366"</code></pre>
 </div>
 </div>
 <div id="places" class="section level2">
 <h2 class="hasAnchor">
 <a href="#places" class="anchor"></a>Places</h2>
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1"><span class="kw"><a href="../reference/random_place.html">random_place</a></span>()</a></code></pre></div>
-<pre><code>##                   code        name_1 name_1_lang name_2 name_2_lang
-## 1 osgb4000000074561704 Little Ponton        NULL   NULL        NULL
-##   local_type outcode county_unitary county_unitary_type district_borough
-## 1    Village    NG33   Lincolnshire              County   South Kesteven
-##   district_borough_type        region country  longitude latitude eastings
-## 1              District East Midlands England -0.6326971 52.87904   492114
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/random_place.html">random_place</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<pre><code>##                   code       name_1 name_1_lang name_2 name_2_lang local_type
+## 1 osgb4000000074565915 High Wycombe        NULL   NULL        NULL       Town
+##   outcode  county_unitary county_unitary_type district_borough
+## 1    HP11 Buckinghamshire              County          Wycombe
+##   district_borough_type     region country  longitude latitude eastings
+## 1              District South East England -0.7494634 51.62877   486656
 ##   northings min_eastings min_northings max_eastings max_northings
-## 1    332161       491735        331837       492824        332352</code></pre>
+## 1    192957       483045        190817       490082        195258</code></pre>
 </div>
 <div id="postcode-validation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#postcode-validation" class="anchor"></a>Postcode validation</h2>
 <p>This function can validate a UK postcode:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1"><span class="kw"><a href="../reference/postcode_validation.html">postcode_validation</a></span>(<span class="st">"EC1Y 8LX"</span>) <span class="co"># actual UK postcode</span></a></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/postcode_validation.html">postcode_validation</a></span><span class="op">(</span><span class="st">"EC1Y 8LX"</span><span class="op">)</span> <span class="co"># actual UK postcode</span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="kw"><a href="../reference/postcode_validation.html">postcode_validation</a></span>(<span class="st">"XYZ"</span>) <span class="co"># incorrect UK postcode</span></a></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/postcode_validation.html">postcode_validation</a></span><span class="op">(</span><span class="st">"XYZ"</span><span class="op">)</span> <span class="co"># incorrect UK postcode</span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
 </div>
 <div id="autocomplete-postcodes" class="section level2">
 <h2 class="hasAnchor">
 <a href="#autocomplete-postcodes" class="anchor"></a>Autocomplete postcodes</h2>
 <p>Find the potential candidates for a postcode if you only know the beginning characters</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1"><span class="kw"><a href="../reference/postcode_autocomplete.html">postcode_autocomplete</a></span>(<span class="st">"EC1"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/postcode_autocomplete.html">postcode_autocomplete</a></span><span class="op">(</span><span class="st">"EC1"</span><span class="op">)</span></code></pre></div>
 <pre><code>##    postcode
 ## 1  EC1A 1AA
 ## 2  EC1A 1AH
@@ -792,10 +863,11 @@
 <h2 class="hasAnchor">
 <a href="#find-nearest-postcodes-or-outcodes" class="anchor"></a>Find nearest postcodes or outcodes</h2>
 <p>Provide a postcode to get a list of the nearest postcodes:</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" data-line-number="1">near_pc &lt;-<span class="st"> </span><span class="kw"><a href="../reference/nearest_postcode.html">nearest_postcode</a></span>(<span class="st">"EC1Y 8LX"</span>)</a>
-<a class="sourceLine" id="cb37-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb37-3" data-line-number="3"><span class="co">#overview</span></a>
-<a class="sourceLine" id="cb37-4" data-line-number="4"><span class="kw"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(near_pc[<span class="dv">1</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">near_pc</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/nearest_postcode.html">nearest_postcode</a></span><span class="op">(</span><span class="st">"EC1Y 8LX"</span><span class="op">)</span>
+
+<span class="co">#overview</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">near_pc</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 25
 ##   ..$ postcode                  : chr "EC1Y 8LX"
@@ -819,31 +891,35 @@
 ##   ..$ admin_county              : NULL
 ##   ..$ admin_ward                : chr "Bunhill"
 ##   ..$ ced                       : NULL
-##   ..$ ccg                       : chr "NHS Islington"
+##   ..$ ccg                       : chr "NHS North Central London"
 ##   ..$ nuts                      : chr "Haringey and Islington"
-##   ..$ codes                     :List of 9
+##   ..$ codes                     :List of 12
 ##   .. ..$ admin_district            : chr "E09000019"
 ##   .. ..$ admin_county              : chr "E99999999"
 ##   .. ..$ admin_ward                : chr "E05000367"
 ##   .. ..$ parish                    : chr "E43000209"
 ##   .. ..$ parliamentary_constituency: chr "E14000764"
-##   .. ..$ ccg                       : chr "E38000088"
-##   .. ..$ ccg_id                    : chr "08H"
+##   .. ..$ ccg                       : chr "E38000240"
+##   .. ..$ ccg_id                    : chr "93C"
 ##   .. ..$ ced                       : chr "E99999999"
 ##   .. ..$ nuts                      : chr "UKI43"
+##   .. ..$ lsoa                      : chr "E01002704"
+##   .. ..$ msoa                      : chr "E02000576"
+##   .. ..$ lau2                      : chr "E05000367"
 ##   ..$ distance                  : int 0</code></pre>
 <p>You can also use outcodes:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" data-line-number="1">near_outcode &lt;-<span class="st"> </span><span class="kw"><a href="../reference/nearest_outcode.html">nearest_outcode</a></span>(<span class="st">"EC1Y"</span>)</a>
-<a class="sourceLine" id="cb39-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb39-3" data-line-number="3"><span class="co"># overview</span></a>
-<a class="sourceLine" id="cb39-4" data-line-number="4"><span class="kw"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(near_outcode[<span class="dv">2</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">near_outcode</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/nearest_outcode.html">nearest_outcode</a></span><span class="op">(</span><span class="st">"EC1Y"</span><span class="op">)</span>
+
+<span class="co"># overview</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">near_outcode</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span></code></pre></div>
 <pre><code>## List of 1
-##  $ :List of 11
+##  $ :List of 10
 ##   ..$ outcode       : chr "EC2Y"
-##   ..$ longitude     : num -0.0935
+##   ..$ longitude     : num -0.0934
 ##   ..$ latitude      : num 51.5
-##   ..$ northings     : int 181778
-##   ..$ eastings      : int 532372
+##   ..$ northings     : int 181779
+##   ..$ eastings      : int 532378
 ##   ..$ admin_district:List of 2
 ##   .. ..$ : chr "Islington"
 ##   .. ..$ : chr "City of London"
@@ -859,20 +935,20 @@
 ##   .. ..$ : chr "Clerkenwell"
 ##   .. ..$ : chr "Cripplegate"
 ##   ..$ country       :List of 1
-##   .. ..$ : chr "England"
-##   ..$ distance      : num 411</code></pre>
+##   .. ..$ : chr "England"</code></pre>
 <p>Or longitude and latitude</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" data-line-number="1">near_ll &lt;-<span class="st"> </span><span class="kw"><a href="../reference/nearest_outcode_lonlat.html">nearest_outcode_lonlat</a></span>(<span class="fl">0.127</span>, <span class="fl">51.507</span>)</a>
-<a class="sourceLine" id="cb41-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb41-3" data-line-number="3"><span class="co">#overview</span></a>
-<a class="sourceLine" id="cb41-4" data-line-number="4"><span class="kw"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(near_ll[<span class="dv">1</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">near_ll</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/nearest_outcode_lonlat.html">nearest_outcode_lonlat</a></span><span class="op">(</span><span class="fl">0.127</span>, <span class="fl">51.507</span><span class="op">)</span>
+
+<span class="co">#overview</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">near_ll</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></code></pre></div>
 <pre><code>## List of 1
-##  $ :List of 11
+##  $ :List of 10
 ##   ..$ outcode       : chr "DA18"
 ##   ..$ longitude     : num 0.136
 ##   ..$ latitude      : num 51.5
-##   ..$ northings     : int 179424
-##   ..$ eastings      : int 548402
+##   ..$ northings     : int 179421
+##   ..$ eastings      : int 548388
 ##   ..$ admin_district:List of 1
 ##   .. ..$ : chr "Bexley"
 ##   ..$ parish        :List of 1
@@ -882,45 +958,46 @@
 ##   .. ..$ : chr "Slade Green &amp; Northend"
 ##   .. ..$ : chr "Thamesmead East"
 ##   ..$ country       :List of 1
-##   .. ..$ : chr "England"
-##   ..$ distance      : num 1556</code></pre>
+##   .. ..$ : chr "England"</code></pre>
 </div>
 <div id="find-places" class="section level2">
 <h2 class="hasAnchor">
 <a href="#find-places" class="anchor"></a>Find places</h2>
 <p>Provide a name of a place of interest. You can specify the number of results (default is 10):</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" data-line-number="1">place_query_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/place_query.html">place_query</a></span>(<span class="st">"Hills"</span>, <span class="dt">limit =</span> <span class="dv">11</span>)</a>
-<a class="sourceLine" id="cb43-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb43-3" data-line-number="3"><span class="co"># overview</span></a>
-<a class="sourceLine" id="cb43-4" data-line-number="4"><span class="kw"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(place_query_result[<span class="dv">1</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">place_query_result</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/place_query.html">place_query</a></span><span class="op">(</span><span class="st">"Hills"</span>, limit <span class="op">=</span> <span class="fl">11</span><span class="op">)</span>
+
+<span class="co"># overview</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">place_query_result</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 21
-##   ..$ code                 : chr "osgb4000000074555222"
-##   ..$ name_1               : chr "Tan Hills"
+##   ..$ code                 : chr "osgb4000000074547803"
+##   ..$ name_1               : chr "Red Hills"
 ##   ..$ name_1_lang          : NULL
 ##   ..$ name_2               : NULL
 ##   ..$ name_2_lang          : NULL
-##   ..$ local_type           : chr "Village"
-##   ..$ outcode              : chr "DH2"
-##   ..$ county_unitary       : chr "County Durham"
-##   ..$ county_unitary_type  : chr "UnitaryAuthority"
-##   ..$ district_borough     : NULL
-##   ..$ district_borough_type: NULL
-##   ..$ region               : chr "North East"
+##   ..$ local_type           : chr "Hamlet"
+##   ..$ outcode              : chr "CA11"
+##   ..$ county_unitary       : chr "Cumbria"
+##   ..$ county_unitary_type  : chr "County"
+##   ..$ district_borough     : chr "Eden"
+##   ..$ district_borough_type: chr "District"
+##   ..$ region               : chr "North West"
 ##   ..$ country              : chr "England"
-##   ..$ longitude            : num -1.6
-##   ..$ latitude             : num 54.8
-##   ..$ eastings             : int 425936
-##   ..$ northings            : int 547579
-##   ..$ min_eastings         : int 425721
-##   ..$ min_northings        : int 547375
-##   ..$ max_eastings         : int 426221
-##   ..$ max_northings        : int 547875</code></pre>
+##   ..$ longitude            : num -2.77
+##   ..$ latitude             : num 54.7
+##   ..$ eastings             : int 350463
+##   ..$ northings            : int 528605
+##   ..$ min_eastings         : int 349916
+##   ..$ min_northings        : int 528349
+##   ..$ max_eastings         : int 350584
+##   ..$ max_northings        : int 528849</code></pre>
 <p>You can also find a place using an OSGB code:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb45-1" data-line-number="1">place_lookup_result &lt;-<span class="st"> </span><span class="kw"><a href="../reference/place_lookup.html">place_lookup</a></span>(<span class="st">"osgb4000000074544700"</span>)</a>
-<a class="sourceLine" id="cb45-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb45-3" data-line-number="3"><span class="co"># overview</span></a>
-<a class="sourceLine" id="cb45-4" data-line-number="4"><span class="kw"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(place_lookup_result)</a></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">place_lookup_result</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/place_lookup.html">place_lookup</a></span><span class="op">(</span><span class="st">"osgb4000000074544700"</span><span class="op">)</span>
+
+<span class="co"># overview</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">place_lookup_result</span><span class="op">)</span></code></pre></div>
 <pre><code>## List of 21
 ##  $ code                 : chr "osgb4000000074544700"
 ##  $ name_1               : chr "Cutler Heights"
@@ -948,30 +1025,18 @@
 <h2 class="hasAnchor">
 <a href="#terminated-postcodes" class="anchor"></a>Terminated postcodes</h2>
 <p>You might end up having terminated postcodes in your data set. These are postcodes that are no longer active. UK postcodes can change so it’s worth checking whether used postcodes are still active. If you need more information about when a particular postcode was terminated use:</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb47-1" data-line-number="1"><span class="kw"><a href="../reference/terminated_postcode.html">terminated_postcode</a></span>(<span class="st">"E1W 1UU"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/terminated_postcode.html">terminated_postcode</a></span><span class="op">(</span><span class="st">"E1W 1UU"</span><span class="op">)</span></code></pre></div>
 <pre><code>##   postcode year_terminated month_terminated longitude latitude
 ## 1  E1W 1UU            2015                2 -0.073732 51.50801</code></pre>
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-        <div id="tocnav">
-      <h2 class="hasAnchor">
-<a href="#tocnav" class="anchor"></a>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-<li><a href="#installation">Installation</a></li>
-      <li><a href="#lookup-postcodes-and-outcodes">Lookup postcodes and outcodes</a></li>
-      <li><a href="#reverse-geocoding">Reverse geocoding</a></li>
-      <li><a href="#generate-random-entries">Generate random entries</a></li>
-      <li><a href="#places">Places</a></li>
-      <li><a href="#postcode-validation">Postcode validation</a></li>
-      <li><a href="#autocomplete-postcodes">Autocomplete postcodes</a></li>
-      <li><a href="#find-nearest-postcodes-or-outcodes">Find nearest postcodes or outcodes</a></li>
-      <li><a href="#find-places">Find places</a></li>
-      <li><a href="#terminated-postcodes">Terminated postcodes</a></li>
-      </ul>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
 </div>
-      </div>
 
 </div>
 
@@ -982,7 +1047,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

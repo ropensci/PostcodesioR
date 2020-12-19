@@ -8,23 +8,36 @@
 
 <title>Postcode query — postcode_query • PostcodesioR</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -32,10 +45,11 @@
 
 
 
-<meta property="og:title" content="Postcode query — postcode_query" />
 
+<meta property="og:title" content="Postcode query — postcode_query" />
 <meta property="og:description" content="Submit a postcode query and receive a complete list of postcode matches and all associated postcode data." />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="/logo.png" />
+
 
 
 
@@ -52,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -74,7 +88,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -97,9 +111,13 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/ropensci/PostcodesioR/">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -114,18 +132,16 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Postcode query</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/ropensci/PostcodesioR/blob/master/R/postcode_query.R'><code>R/postcode_query.R</code></a></small>
     <div class="hidden name"><code>postcode_query.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    
     <p>Submit a postcode query and receive a complete list of postcode matches and all associated postcode data.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'>postcode_query</span>(<span class='no'>postcode</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>)</pre>
-    
+    <pre class="usage"><span class='fu'>postcode_query</span><span class='op'>(</span><span class='va'>postcode</span>, limit <span class='op'>=</span> <span class='fl'>10</span><span class='op'>)</span></pre>
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -138,16 +154,16 @@
       <td><p>An integer. Limits the number of matches to return. Defaults to 10. Needs to be less than 100.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A list of geographic properties.
 To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='fu'>postcode_query</span>(<span class='st'>"EC1Y8LX"</span>)</div><div class='output co'>#&gt; [[1]]
+<span class='fu'>postcode_query</span><span class='op'>(</span><span class='st'>"EC1Y8LX"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$postcode
 #&gt; [1] "EC1Y 8LX"
 #&gt; 
@@ -212,7 +228,7 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; NULL
 #&gt; 
 #&gt; [[1]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[1]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -234,10 +250,10 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[1]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[1]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[1]]$codes$ced
 #&gt; [1] "E99999999"
@@ -245,8 +261,18 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; [[1]]$codes$nuts
 #&gt; [1] "UKI43"
 #&gt; 
+#&gt; [[1]]$codes$lsoa
+#&gt; [1] "E01002704"
 #&gt; 
-#&gt; </div><div class='input'><span class='fu'>postcode_query</span>(<span class='st'>"EC1"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>11</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; [[1]]$codes$msoa
+#&gt; [1] "E02000576"
+#&gt; 
+#&gt; [[1]]$codes$lau2
+#&gt; [1] "E05000367"
+#&gt; 
+#&gt; 
+#&gt; </div><div class='input'><span class='fu'>postcode_query</span><span class='op'>(</span><span class='st'>"EC1"</span>, limit <span class='op'>=</span> <span class='fl'>11</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$postcode
 #&gt; [1] "EC1A 1AA"
 #&gt; 
@@ -311,7 +337,7 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; NULL
 #&gt; 
 #&gt; [[1]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[1]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -333,16 +359,25 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[1]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[1]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[1]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[1]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[1]]$codes$lsoa
+#&gt; [1] "E01002726"
+#&gt; 
+#&gt; [[1]]$codes$msoa
+#&gt; [1] "E02000575"
+#&gt; 
+#&gt; [[1]]$codes$lau2
+#&gt; [1] "E05000370"
 #&gt; 
 #&gt; 
 #&gt; 
@@ -411,7 +446,7 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; NULL
 #&gt; 
 #&gt; [[2]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[2]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -433,16 +468,25 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[2]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[2]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[2]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[2]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[2]]$codes$lsoa
+#&gt; [1] "E01002726"
+#&gt; 
+#&gt; [[2]]$codes$msoa
+#&gt; [1] "E02000575"
+#&gt; 
+#&gt; [[2]]$codes$lau2
+#&gt; [1] "E05000370"
 #&gt; 
 #&gt; 
 #&gt; 
@@ -511,7 +555,7 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; NULL
 #&gt; 
 #&gt; [[3]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[3]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -533,16 +577,25 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[3]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[3]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[3]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[3]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[3]]$codes$lsoa
+#&gt; [1] "E01002726"
+#&gt; 
+#&gt; [[3]]$codes$msoa
+#&gt; [1] "E02000575"
+#&gt; 
+#&gt; [[3]]$codes$lau2
+#&gt; [1] "E05000370"
 #&gt; 
 #&gt; 
 #&gt; 
@@ -611,7 +664,7 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; NULL
 #&gt; 
 #&gt; [[4]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[4]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -633,16 +686,25 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[4]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[4]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[4]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[4]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[4]]$codes$lsoa
+#&gt; [1] "E01002726"
+#&gt; 
+#&gt; [[4]]$codes$msoa
+#&gt; [1] "E02000575"
+#&gt; 
+#&gt; [[4]]$codes$lau2
+#&gt; [1] "E05000370"
 #&gt; 
 #&gt; 
 #&gt; 
@@ -711,7 +773,7 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; NULL
 #&gt; 
 #&gt; [[5]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[5]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -733,16 +795,25 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[5]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[5]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[5]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[5]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[5]]$codes$lsoa
+#&gt; [1] "E01002726"
+#&gt; 
+#&gt; [[5]]$codes$msoa
+#&gt; [1] "E02000575"
+#&gt; 
+#&gt; [[5]]$codes$lau2
+#&gt; [1] "E05000370"
 #&gt; 
 #&gt; 
 #&gt; 
@@ -811,7 +882,7 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; NULL
 #&gt; 
 #&gt; [[6]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[6]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -833,16 +904,25 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[6]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[6]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[6]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[6]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[6]]$codes$lsoa
+#&gt; [1] "E01002726"
+#&gt; 
+#&gt; [[6]]$codes$msoa
+#&gt; [1] "E02000575"
+#&gt; 
+#&gt; [[6]]$codes$lau2
+#&gt; [1] "E05000370"
 #&gt; 
 #&gt; 
 #&gt; 
@@ -944,6 +1024,15 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; [[7]]$codes$nuts
 #&gt; [1] "UKI31"
 #&gt; 
+#&gt; [[7]]$codes$lsoa
+#&gt; [1] "E01032739"
+#&gt; 
+#&gt; [[7]]$codes$msoa
+#&gt; [1] "E02000001"
+#&gt; 
+#&gt; [[7]]$codes$lau2
+#&gt; [1] "E05009304"
+#&gt; 
 #&gt; 
 #&gt; 
 #&gt; [[8]]
@@ -1011,7 +1100,7 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; NULL
 #&gt; 
 #&gt; [[8]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[8]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -1033,16 +1122,25 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[8]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[8]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[8]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[8]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[8]]$codes$lsoa
+#&gt; [1] "E01002726"
+#&gt; 
+#&gt; [[8]]$codes$msoa
+#&gt; [1] "E02000575"
+#&gt; 
+#&gt; [[8]]$codes$lau2
+#&gt; [1] "E05000370"
 #&gt; 
 #&gt; 
 #&gt; 
@@ -1111,7 +1209,7 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; NULL
 #&gt; 
 #&gt; [[9]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[9]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -1133,16 +1231,25 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[9]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[9]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[9]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[9]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[9]]$codes$lsoa
+#&gt; [1] "E01002726"
+#&gt; 
+#&gt; [[9]]$codes$msoa
+#&gt; [1] "E02000575"
+#&gt; 
+#&gt; [[9]]$codes$lau2
+#&gt; [1] "E05000370"
 #&gt; 
 #&gt; 
 #&gt; 
@@ -1211,7 +1318,7 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; NULL
 #&gt; 
 #&gt; [[10]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[10]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -1233,16 +1340,25 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[10]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[10]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[10]]$codes$ced
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; [[10]]$codes$nuts
 #&gt; [1] "UKI43"
+#&gt; 
+#&gt; [[10]]$codes$lsoa
+#&gt; [1] "E01002726"
+#&gt; 
+#&gt; [[10]]$codes$msoa
+#&gt; [1] "E02000575"
+#&gt; 
+#&gt; [[10]]$codes$lau2
+#&gt; [1] "E05000370"
 #&gt; 
 #&gt; 
 #&gt; 
@@ -1311,7 +1427,7 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; NULL
 #&gt; 
 #&gt; [[11]]$ccg
-#&gt; [1] "NHS Islington"
+#&gt; [1] "NHS North Central London"
 #&gt; 
 #&gt; [[11]]$nuts
 #&gt; [1] "Haringey and Islington"
@@ -1333,10 +1449,10 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; [1] "E14000764"
 #&gt; 
 #&gt; [[11]]$codes$ccg
-#&gt; [1] "E38000088"
+#&gt; [1] "E38000240"
 #&gt; 
 #&gt; [[11]]$codes$ccg_id
-#&gt; [1] "08H"
+#&gt; [1] "93C"
 #&gt; 
 #&gt; [[11]]$codes$ced
 #&gt; [1] "E99999999"
@@ -1344,21 +1460,24 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 #&gt; [[11]]$codes$nuts
 #&gt; [1] "UKI43"
 #&gt; 
+#&gt; [[11]]$codes$lsoa
+#&gt; [1] "E01002726"
 #&gt; 
-#&gt; </div><div class='input'># }
+#&gt; [[11]]$codes$msoa
+#&gt; [1] "E02000575"
+#&gt; 
+#&gt; [[11]]$codes$lau2
+#&gt; [1] "E05000370"
+#&gt; 
+#&gt; 
+#&gt; </div><div class='input'><span class='co'># }</span>
 
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -1369,7 +1488,7 @@ To return a data frame use <a href='postcode_lookup.html'>postcode_lookup</a>.</
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

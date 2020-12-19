@@ -8,23 +8,36 @@
 
 <title>Outcode reverse geocoding — outcode_reverse_geocoding • PostcodesioR</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -32,10 +45,11 @@
 
 
 
-<meta property="og:title" content="Outcode reverse geocoding — outcode_reverse_geocoding" />
 
+<meta property="og:title" content="Outcode reverse geocoding — outcode_reverse_geocoding" />
 <meta property="og:description" content="Returns nearest outcodes for a given longitude and latitude." />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="/logo.png" />
+
 
 
 
@@ -52,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -74,7 +88,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -97,9 +111,13 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/ropensci/PostcodesioR/">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -114,18 +132,16 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Outcode reverse geocoding</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/ropensci/PostcodesioR/blob/master/R/outcode_reverse_geocoding.R'><code>R/outcode_reverse_geocoding.R</code></a></small>
     <div class="hidden name"><code>outcode_reverse_geocoding.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    
     <p>Returns nearest outcodes for a given longitude and latitude.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'>outcode_reverse_geocoding</span>(<span class='no'>longitude</span>, <span class='no'>latitude</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>radius</span> <span class='kw'>=</span> <span class='fl'>5000</span>)</pre>
-    
+    <pre class="usage"><span class='fu'>outcode_reverse_geocoding</span><span class='op'>(</span><span class='va'>longitude</span>, <span class='va'>latitude</span>, limit <span class='op'>=</span> <span class='fl'>10</span>, radius <span class='op'>=</span> <span class='fl'>5000</span><span class='op'>)</span></pre>
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -146,27 +162,26 @@
       <td><p>A string, integer or float. Limits number of postcodes matches to return. Defaults to 5,000m. Needs to be less than 25,000m.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A list of geographical properties.</p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='postcode_lookup.html'>postcode_lookup</a></code> for documentation.</p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='fu'>outcode_reverse_geocoding</span>(<span class='st'>"-3.15"</span>, <span class='st'>"51.47"</span>)</div><div class='output co'>#&gt; [[1]]
+<span class='fu'>outcode_reverse_geocoding</span><span class='op'>(</span><span class='st'>"-3.15"</span>, <span class='st'>"51.47"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$outcode
 #&gt; [1] "CF99"
 #&gt; 
 #&gt; [[1]]$longitude
-#&gt; [1] -3.161341
+#&gt; [1] -3.16135
 #&gt; 
 #&gt; [[1]]$latitude
-#&gt; [1] 51.4645
+#&gt; [1] 51.46451
 #&gt; 
 #&gt; [[1]]$northings
 #&gt; [1] 174588
@@ -197,25 +212,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[1]]$distance
-#&gt; [1] 997.4867
-#&gt; 
 #&gt; 
 #&gt; [[2]]
 #&gt; [[2]]$outcode
 #&gt; [1] "CF10"
 #&gt; 
 #&gt; [[2]]$longitude
-#&gt; [1] -3.173434
+#&gt; [1] -3.173407
 #&gt; 
 #&gt; [[2]]$latitude
-#&gt; [1] 51.47463
+#&gt; [1] 51.4747
 #&gt; 
 #&gt; [[2]]$northings
-#&gt; [1] 175727
+#&gt; [1] 175735
 #&gt; 
 #&gt; [[2]]$eastings
-#&gt; [1] 318599
+#&gt; [1] 318601
 #&gt; 
 #&gt; [[2]]$admin_district
 #&gt; [[2]]$admin_district[[1]]
@@ -261,9 +273,6 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[2]]$distance
-#&gt; [1] 1707.932
-#&gt; 
 #&gt; 
 #&gt; [[3]]
 #&gt; [[3]]$outcode
@@ -304,25 +313,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[3]]$distance
-#&gt; [1] 1920.493
-#&gt; 
 #&gt; 
 #&gt; [[4]]
 #&gt; [[4]]$outcode
 #&gt; [1] "CF24"
 #&gt; 
 #&gt; [[4]]$longitude
-#&gt; [1] -3.161976
+#&gt; [1] -3.162024
 #&gt; 
 #&gt; [[4]]$latitude
-#&gt; [1] 51.48797
+#&gt; [1] 51.488
 #&gt; 
 #&gt; [[4]]$northings
-#&gt; [1] 177198
+#&gt; [1] 177201
 #&gt; 
 #&gt; [[4]]$eastings
-#&gt; [1] 319418
+#&gt; [1] 319415
 #&gt; 
 #&gt; [[4]]$admin_district
 #&gt; [[4]]$admin_district[[1]]
@@ -386,25 +392,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[4]]$distance
-#&gt; [1] 2165.382
-#&gt; 
 #&gt; 
 #&gt; [[5]]
 #&gt; [[5]]$outcode
 #&gt; [1] "CF11"
 #&gt; 
 #&gt; [[5]]$longitude
-#&gt; [1] -3.192021
+#&gt; [1] -3.192201
 #&gt; 
 #&gt; [[5]]$latitude
-#&gt; [1] 51.4724
+#&gt; [1] 51.47247
 #&gt; 
 #&gt; [[5]]$northings
-#&gt; [1] 175500
+#&gt; [1] 175509
 #&gt; 
 #&gt; [[5]]$eastings
-#&gt; [1] 317304
+#&gt; [1] 317292
 #&gt; 
 #&gt; [[5]]$admin_district
 #&gt; [[5]]$admin_district[[1]]
@@ -471,9 +474,6 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[5]]$distance
-#&gt; [1] 2931.996
-#&gt; 
 #&gt; 
 #&gt; [[6]]
 #&gt; [[6]]$outcode
@@ -514,25 +514,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[6]]$distance
-#&gt; [1] 3096.363
-#&gt; 
 #&gt; 
 #&gt; [[7]]
 #&gt; [[7]]$outcode
 #&gt; [1] "CF23"
 #&gt; 
 #&gt; [[7]]$longitude
-#&gt; [1] -3.1553
+#&gt; [1] -3.155178
 #&gt; 
 #&gt; [[7]]$latitude
-#&gt; [1] 51.51448
+#&gt; [1] 51.51447
 #&gt; 
 #&gt; [[7]]$northings
 #&gt; [1] 180138
 #&gt; 
 #&gt; [[7]]$eastings
-#&gt; [1] 319928
+#&gt; [1] 319937
 #&gt; 
 #&gt; [[7]]$admin_district
 #&gt; [[7]]$admin_district[[1]]
@@ -602,18 +599,16 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[7]]$distance
-#&gt; [1] 4962.026
-#&gt; 
-#&gt; </div><div class='input'><span class='fu'>outcode_reverse_geocoding</span>(-<span class='fl'>3.15</span>, <span class='fl'>51.47</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; </div><div class='input'><span class='fu'>outcode_reverse_geocoding</span><span class='op'>(</span><span class='op'>-</span><span class='fl'>3.15</span>, <span class='fl'>51.47</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$outcode
 #&gt; [1] "CF99"
 #&gt; 
 #&gt; [[1]]$longitude
-#&gt; [1] -3.161341
+#&gt; [1] -3.16135
 #&gt; 
 #&gt; [[1]]$latitude
-#&gt; [1] 51.4645
+#&gt; [1] 51.46451
 #&gt; 
 #&gt; [[1]]$northings
 #&gt; [1] 174588
@@ -644,25 +639,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[1]]$distance
-#&gt; [1] 997.4867
-#&gt; 
 #&gt; 
 #&gt; [[2]]
 #&gt; [[2]]$outcode
 #&gt; [1] "CF10"
 #&gt; 
 #&gt; [[2]]$longitude
-#&gt; [1] -3.173434
+#&gt; [1] -3.173407
 #&gt; 
 #&gt; [[2]]$latitude
-#&gt; [1] 51.47463
+#&gt; [1] 51.4747
 #&gt; 
 #&gt; [[2]]$northings
-#&gt; [1] 175727
+#&gt; [1] 175735
 #&gt; 
 #&gt; [[2]]$eastings
-#&gt; [1] 318599
+#&gt; [1] 318601
 #&gt; 
 #&gt; [[2]]$admin_district
 #&gt; [[2]]$admin_district[[1]]
@@ -708,9 +700,6 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[2]]$distance
-#&gt; [1] 1707.932
-#&gt; 
 #&gt; 
 #&gt; [[3]]
 #&gt; [[3]]$outcode
@@ -751,25 +740,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[3]]$distance
-#&gt; [1] 1920.493
-#&gt; 
 #&gt; 
 #&gt; [[4]]
 #&gt; [[4]]$outcode
 #&gt; [1] "CF24"
 #&gt; 
 #&gt; [[4]]$longitude
-#&gt; [1] -3.161976
+#&gt; [1] -3.162024
 #&gt; 
 #&gt; [[4]]$latitude
-#&gt; [1] 51.48797
+#&gt; [1] 51.488
 #&gt; 
 #&gt; [[4]]$northings
-#&gt; [1] 177198
+#&gt; [1] 177201
 #&gt; 
 #&gt; [[4]]$eastings
-#&gt; [1] 319418
+#&gt; [1] 319415
 #&gt; 
 #&gt; [[4]]$admin_district
 #&gt; [[4]]$admin_district[[1]]
@@ -833,25 +819,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[4]]$distance
-#&gt; [1] 2165.382
-#&gt; 
 #&gt; 
 #&gt; [[5]]
 #&gt; [[5]]$outcode
 #&gt; [1] "CF11"
 #&gt; 
 #&gt; [[5]]$longitude
-#&gt; [1] -3.192021
+#&gt; [1] -3.192201
 #&gt; 
 #&gt; [[5]]$latitude
-#&gt; [1] 51.4724
+#&gt; [1] 51.47247
 #&gt; 
 #&gt; [[5]]$northings
-#&gt; [1] 175500
+#&gt; [1] 175509
 #&gt; 
 #&gt; [[5]]$eastings
-#&gt; [1] 317304
+#&gt; [1] 317292
 #&gt; 
 #&gt; [[5]]$admin_district
 #&gt; [[5]]$admin_district[[1]]
@@ -918,9 +901,6 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[5]]$distance
-#&gt; [1] 2931.996
-#&gt; 
 #&gt; 
 #&gt; [[6]]
 #&gt; [[6]]$outcode
@@ -961,25 +941,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[6]]$distance
-#&gt; [1] 3096.363
-#&gt; 
 #&gt; 
 #&gt; [[7]]
 #&gt; [[7]]$outcode
 #&gt; [1] "CF23"
 #&gt; 
 #&gt; [[7]]$longitude
-#&gt; [1] -3.1553
+#&gt; [1] -3.155178
 #&gt; 
 #&gt; [[7]]$latitude
-#&gt; [1] 51.51448
+#&gt; [1] 51.51447
 #&gt; 
 #&gt; [[7]]$northings
 #&gt; [1] 180138
 #&gt; 
 #&gt; [[7]]$eastings
-#&gt; [1] 319928
+#&gt; [1] 319937
 #&gt; 
 #&gt; [[7]]$admin_district
 #&gt; [[7]]$admin_district[[1]]
@@ -1049,10 +1026,8 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[7]]$distance
-#&gt; [1] 4962.026
-#&gt; 
-#&gt; </div><div class='input'><span class='fu'>outcode_reverse_geocoding</span>(<span class='st'>"-3.15807731271522"</span>, <span class='st'>"51.4799900627036"</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; </div><div class='input'><span class='fu'>outcode_reverse_geocoding</span><span class='op'>(</span><span class='st'>"-3.15807731271522"</span>, <span class='st'>"51.4799900627036"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$outcode
 #&gt; [1] "CF95"
 #&gt; 
@@ -1091,25 +1066,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[1]]$distance
-#&gt; [1] 910.3894
-#&gt; 
 #&gt; 
 #&gt; [[2]]
 #&gt; [[2]]$outcode
 #&gt; [1] "CF24"
 #&gt; 
 #&gt; [[2]]$longitude
-#&gt; [1] -3.161976
+#&gt; [1] -3.162024
 #&gt; 
 #&gt; [[2]]$latitude
-#&gt; [1] 51.48797
+#&gt; [1] 51.488
 #&gt; 
 #&gt; [[2]]$northings
-#&gt; [1] 177198
+#&gt; [1] 177201
 #&gt; 
 #&gt; [[2]]$eastings
-#&gt; [1] 319418
+#&gt; [1] 319415
 #&gt; 
 #&gt; [[2]]$admin_district
 #&gt; [[2]]$admin_district[[1]]
@@ -1173,25 +1145,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[2]]$distance
-#&gt; [1] 928.0889
-#&gt; 
 #&gt; 
 #&gt; [[3]]
 #&gt; [[3]]$outcode
 #&gt; [1] "CF10"
 #&gt; 
 #&gt; [[3]]$longitude
-#&gt; [1] -3.173434
+#&gt; [1] -3.173407
 #&gt; 
 #&gt; [[3]]$latitude
-#&gt; [1] 51.47463
+#&gt; [1] 51.4747
 #&gt; 
 #&gt; [[3]]$northings
-#&gt; [1] 175727
+#&gt; [1] 175735
 #&gt; 
 #&gt; [[3]]$eastings
-#&gt; [1] 318599
+#&gt; [1] 318601
 #&gt; 
 #&gt; [[3]]$admin_district
 #&gt; [[3]]$admin_district[[1]]
@@ -1237,19 +1206,16 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[3]]$distance
-#&gt; [1] 1222.018
-#&gt; 
 #&gt; 
 #&gt; [[4]]
 #&gt; [[4]]$outcode
 #&gt; [1] "CF99"
 #&gt; 
 #&gt; [[4]]$longitude
-#&gt; [1] -3.161341
+#&gt; [1] -3.16135
 #&gt; 
 #&gt; [[4]]$latitude
-#&gt; [1] 51.4645
+#&gt; [1] 51.46451
 #&gt; 
 #&gt; [[4]]$northings
 #&gt; [1] 174588
@@ -1280,25 +1246,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[4]]$distance
-#&gt; [1] 1737.797
-#&gt; 
 #&gt; 
 #&gt; [[5]]
 #&gt; [[5]]$outcode
 #&gt; [1] "CF11"
 #&gt; 
 #&gt; [[5]]$longitude
-#&gt; [1] -3.192021
+#&gt; [1] -3.192201
 #&gt; 
 #&gt; [[5]]$latitude
-#&gt; [1] 51.4724
+#&gt; [1] 51.47247
 #&gt; 
 #&gt; [[5]]$northings
-#&gt; [1] 175500
+#&gt; [1] 175509
 #&gt; 
 #&gt; [[5]]$eastings
-#&gt; [1] 317304
+#&gt; [1] 317292
 #&gt; 
 #&gt; [[5]]$admin_district
 #&gt; [[5]]$admin_district[[1]]
@@ -1365,9 +1328,6 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[5]]$distance
-#&gt; [1] 2504.877
-#&gt; 
 #&gt; 
 #&gt; [[6]]
 #&gt; [[6]]$outcode
@@ -1408,25 +1368,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[6]]$distance
-#&gt; [1] 2966.799
-#&gt; 
 #&gt; 
 #&gt; [[7]]
 #&gt; [[7]]$outcode
 #&gt; [1] "CF23"
 #&gt; 
 #&gt; [[7]]$longitude
-#&gt; [1] -3.1553
+#&gt; [1] -3.155178
 #&gt; 
 #&gt; [[7]]$latitude
-#&gt; [1] 51.51448
+#&gt; [1] 51.51447
 #&gt; 
 #&gt; [[7]]$northings
 #&gt; [1] 180138
 #&gt; 
 #&gt; [[7]]$eastings
-#&gt; [1] 319928
+#&gt; [1] 319937
 #&gt; 
 #&gt; [[7]]$admin_district
 #&gt; [[7]]$admin_district[[1]]
@@ -1496,18 +1453,16 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[7]]$distance
-#&gt; [1] 3841.727
-#&gt; 
-#&gt; </div><div class='input'><span class='fu'>outcode_reverse_geocoding</span>(-<span class='fl'>3.15</span>, <span class='fl'>51.47</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>11</span>, <span class='kw'>radius</span> <span class='kw'>=</span> <span class='fl'>20000</span>)</div><div class='output co'>#&gt; [[1]]
+#&gt; </div><div class='input'><span class='fu'>outcode_reverse_geocoding</span><span class='op'>(</span><span class='op'>-</span><span class='fl'>3.15</span>, <span class='fl'>51.47</span>, limit <span class='op'>=</span> <span class='fl'>11</span>, radius <span class='op'>=</span> <span class='fl'>20000</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$outcode
 #&gt; [1] "CF99"
 #&gt; 
 #&gt; [[1]]$longitude
-#&gt; [1] -3.161341
+#&gt; [1] -3.16135
 #&gt; 
 #&gt; [[1]]$latitude
-#&gt; [1] 51.4645
+#&gt; [1] 51.46451
 #&gt; 
 #&gt; [[1]]$northings
 #&gt; [1] 174588
@@ -1538,25 +1493,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[1]]$distance
-#&gt; [1] 997.4867
-#&gt; 
 #&gt; 
 #&gt; [[2]]
 #&gt; [[2]]$outcode
 #&gt; [1] "CF10"
 #&gt; 
 #&gt; [[2]]$longitude
-#&gt; [1] -3.173434
+#&gt; [1] -3.173407
 #&gt; 
 #&gt; [[2]]$latitude
-#&gt; [1] 51.47463
+#&gt; [1] 51.4747
 #&gt; 
 #&gt; [[2]]$northings
-#&gt; [1] 175727
+#&gt; [1] 175735
 #&gt; 
 #&gt; [[2]]$eastings
-#&gt; [1] 318599
+#&gt; [1] 318601
 #&gt; 
 #&gt; [[2]]$admin_district
 #&gt; [[2]]$admin_district[[1]]
@@ -1602,9 +1554,6 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[2]]$distance
-#&gt; [1] 1707.932
-#&gt; 
 #&gt; 
 #&gt; [[3]]
 #&gt; [[3]]$outcode
@@ -1645,25 +1594,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[3]]$distance
-#&gt; [1] 1920.493
-#&gt; 
 #&gt; 
 #&gt; [[4]]
 #&gt; [[4]]$outcode
 #&gt; [1] "CF24"
 #&gt; 
 #&gt; [[4]]$longitude
-#&gt; [1] -3.161976
+#&gt; [1] -3.162024
 #&gt; 
 #&gt; [[4]]$latitude
-#&gt; [1] 51.48797
+#&gt; [1] 51.488
 #&gt; 
 #&gt; [[4]]$northings
-#&gt; [1] 177198
+#&gt; [1] 177201
 #&gt; 
 #&gt; [[4]]$eastings
-#&gt; [1] 319418
+#&gt; [1] 319415
 #&gt; 
 #&gt; [[4]]$admin_district
 #&gt; [[4]]$admin_district[[1]]
@@ -1727,25 +1673,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[4]]$distance
-#&gt; [1] 2165.382
-#&gt; 
 #&gt; 
 #&gt; [[5]]
 #&gt; [[5]]$outcode
 #&gt; [1] "CF11"
 #&gt; 
 #&gt; [[5]]$longitude
-#&gt; [1] -3.192021
+#&gt; [1] -3.192201
 #&gt; 
 #&gt; [[5]]$latitude
-#&gt; [1] 51.4724
+#&gt; [1] 51.47247
 #&gt; 
 #&gt; [[5]]$northings
-#&gt; [1] 175500
+#&gt; [1] 175509
 #&gt; 
 #&gt; [[5]]$eastings
-#&gt; [1] 317304
+#&gt; [1] 317292
 #&gt; 
 #&gt; [[5]]$admin_district
 #&gt; [[5]]$admin_district[[1]]
@@ -1812,9 +1755,6 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[5]]$distance
-#&gt; [1] 2931.996
-#&gt; 
 #&gt; 
 #&gt; [[6]]
 #&gt; [[6]]$outcode
@@ -1855,25 +1795,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[6]]$distance
-#&gt; [1] 3096.363
-#&gt; 
 #&gt; 
 #&gt; [[7]]
 #&gt; [[7]]$outcode
 #&gt; [1] "CF23"
 #&gt; 
 #&gt; [[7]]$longitude
-#&gt; [1] -3.1553
+#&gt; [1] -3.155178
 #&gt; 
 #&gt; [[7]]$latitude
-#&gt; [1] 51.51448
+#&gt; [1] 51.51447
 #&gt; 
 #&gt; [[7]]$northings
 #&gt; [1] 180138
 #&gt; 
 #&gt; [[7]]$eastings
-#&gt; [1] 319928
+#&gt; [1] 319937
 #&gt; 
 #&gt; [[7]]$admin_district
 #&gt; [[7]]$admin_district[[1]]
@@ -1943,25 +1880,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[7]]$distance
-#&gt; [1] 4962.026
-#&gt; 
 #&gt; 
 #&gt; [[8]]
 #&gt; [[8]]$outcode
 #&gt; [1] "CF64"
 #&gt; 
 #&gt; [[8]]$longitude
-#&gt; [1] -3.191802
+#&gt; [1] -3.191703
 #&gt; 
 #&gt; [[8]]$latitude
-#&gt; [1] 51.43329
+#&gt; [1] 51.43333
 #&gt; 
 #&gt; [[8]]$northings
-#&gt; [1] 171150
+#&gt; [1] 171155
 #&gt; 
 #&gt; [[8]]$eastings
-#&gt; [1] 317248
+#&gt; [1] 317255
 #&gt; 
 #&gt; [[8]]$admin_district
 #&gt; [[8]]$admin_district[[1]]
@@ -2022,16 +1956,13 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[8]]$distance
-#&gt; [1] 5012.667
-#&gt; 
 #&gt; 
 #&gt; [[9]]
 #&gt; [[9]]$outcode
 #&gt; [1] "CF30"
 #&gt; 
 #&gt; [[9]]$longitude
-#&gt; [1] -3.119567
+#&gt; [1] -3.119566
 #&gt; 
 #&gt; [[9]]$latitude
 #&gt; [1] 51.51963
@@ -2065,25 +1996,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[9]]$distance
-#&gt; [1] 5912.038
-#&gt; 
 #&gt; 
 #&gt; [[10]]
 #&gt; [[10]]$outcode
 #&gt; [1] "CF3"
 #&gt; 
 #&gt; [[10]]$longitude
-#&gt; [1] -3.111067
+#&gt; [1] -3.111083
 #&gt; 
 #&gt; [[10]]$latitude
-#&gt; [1] 51.52033
+#&gt; [1] 51.52035
 #&gt; 
 #&gt; [[10]]$northings
-#&gt; [1] 180742
+#&gt; [1] 180744
 #&gt; 
 #&gt; [[10]]$eastings
-#&gt; [1] 323007
+#&gt; [1] 323006
 #&gt; 
 #&gt; [[10]]$admin_district
 #&gt; [[10]]$admin_district[[1]]
@@ -2150,25 +2078,22 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[10]]$distance
-#&gt; [1] 6217.937
-#&gt; 
 #&gt; 
 #&gt; [[11]]
 #&gt; [[11]]$outcode
 #&gt; [1] "CF14"
 #&gt; 
 #&gt; [[11]]$longitude
-#&gt; [1] -3.204359
+#&gt; [1] -3.204332
 #&gt; 
 #&gt; [[11]]$latitude
-#&gt; [1] 51.51982
+#&gt; [1] 51.51986
 #&gt; 
 #&gt; [[11]]$northings
-#&gt; [1] 180787
+#&gt; [1] 180793
 #&gt; 
 #&gt; [[11]]$eastings
-#&gt; [1] 316533
+#&gt; [1] 316536
 #&gt; 
 #&gt; [[11]]$admin_district
 #&gt; [[11]]$admin_district[[1]]
@@ -2262,25 +2187,14 @@
 #&gt; [1] "Wales"
 #&gt; 
 #&gt; 
-#&gt; [[11]]$distance
-#&gt; [1] 6705.969
-#&gt; 
-#&gt; </div><div class='input'># }
+#&gt; </div><div class='input'><span class='co'># }</span>
 
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-
-      <li><a href="#see-also">See also</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -2291,7 +2205,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

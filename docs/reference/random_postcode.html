@@ -8,23 +8,36 @@
 
 <title>Random postcode — random_postcode • PostcodesioR</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -32,10 +45,11 @@
 
 
 
-<meta property="og:title" content="Random postcode — random_postcode" />
 
+<meta property="og:title" content="Random postcode — random_postcode" />
 <meta property="og:description" content="Returns a random postcode and all available data for that postcode." />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="/logo.png" />
+
 
 
 
@@ -52,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -74,7 +88,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -97,9 +111,13 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/ropensci/PostcodesioR/">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -114,18 +132,16 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Random postcode</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/ropensci/PostcodesioR/blob/master/R/random_postcode.R'><code>R/random_postcode.R</code></a></small>
     <div class="hidden name"><code>random_postcode.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    
     <p>Returns a random postcode and all available data for that postcode.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'>random_postcode</span>(<span class='kw'>outcode</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
-    
+    <pre class="usage"><span class='fu'>random_postcode</span><span class='op'>(</span>outcode <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -135,126 +151,135 @@
 Returns null if invalid outcode. Optional.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A list with a random postcode with corresponding characteristics.</p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='postcode_lookup.html'>postcode_lookup</a></code> for documentation.</p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='fu'>random_postcode</span>()</div><div class='output co'>#&gt; $postcode
-#&gt; [1] "DT10 2QJ"
+<span class='fu'>random_postcode</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; $postcode
+#&gt; [1] "B73 6DX"
 #&gt; 
 #&gt; $quality
 #&gt; [1] 1
 #&gt; 
 #&gt; $eastings
-#&gt; [1] 374698
+#&gt; [1] 411708
 #&gt; 
 #&gt; $northings
-#&gt; [1] 113707
+#&gt; [1] 296086
 #&gt; 
 #&gt; $country
 #&gt; [1] "England"
 #&gt; 
 #&gt; $nhs_ha
-#&gt; [1] "South West"
+#&gt; [1] "West Midlands"
 #&gt; 
 #&gt; $longitude
-#&gt; [1] -2.361344
+#&gt; [1] -1.828719
 #&gt; 
 #&gt; $latitude
-#&gt; [1] 50.92226
+#&gt; [1] 52.56248
 #&gt; 
 #&gt; $european_electoral_region
-#&gt; [1] "South West"
+#&gt; [1] "West Midlands"
 #&gt; 
 #&gt; $primary_care_trust
-#&gt; [1] "Dorset"
+#&gt; [1] "Birmingham East and North"
 #&gt; 
 #&gt; $region
-#&gt; [1] "South West"
+#&gt; [1] "West Midlands"
 #&gt; 
 #&gt; $lsoa
-#&gt; [1] "North Dorset 004A"
+#&gt; [1] "Birmingham 009A"
 #&gt; 
 #&gt; $msoa
-#&gt; [1] "North Dorset 004"
+#&gt; [1] "Birmingham 009"
 #&gt; 
 #&gt; $incode
-#&gt; [1] "2QJ"
+#&gt; [1] "6DX"
 #&gt; 
 #&gt; $outcode
-#&gt; [1] "DT10"
+#&gt; [1] "B73"
 #&gt; 
 #&gt; $parliamentary_constituency
-#&gt; [1] "North Dorset"
+#&gt; [1] "Sutton Coldfield"
 #&gt; 
 #&gt; $admin_district
-#&gt; [1] "Dorset"
+#&gt; [1] "Birmingham"
 #&gt; 
 #&gt; $parish
-#&gt; [1] "Lydlinch"
+#&gt; [1] "Sutton Coldfield"
 #&gt; 
 #&gt; $admin_county
 #&gt; NULL
 #&gt; 
 #&gt; $admin_ward
-#&gt; [1] "Blackmore Vale"
+#&gt; [1] "Sutton Trinity"
 #&gt; 
 #&gt; $ced
-#&gt; [1] "Blackmore Vale"
+#&gt; NULL
 #&gt; 
 #&gt; $ccg
-#&gt; [1] "NHS Dorset"
+#&gt; [1] "NHS Birmingham and Solihull"
 #&gt; 
 #&gt; $nuts
-#&gt; [1] "Dorset CC"
+#&gt; [1] "Birmingham"
 #&gt; 
 #&gt; $codes
 #&gt; $codes$admin_district
-#&gt; [1] "E06000059"
+#&gt; [1] "E08000025"
 #&gt; 
 #&gt; $codes$admin_county
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; $codes$admin_ward
-#&gt; [1] "E05012684"
+#&gt; [1] "E05011178"
 #&gt; 
 #&gt; $codes$parish
-#&gt; [1] "E04003422"
+#&gt; [1] "E04012653"
 #&gt; 
 #&gt; $codes$parliamentary_constituency
-#&gt; [1] "E14000839"
+#&gt; [1] "E14000985"
 #&gt; 
 #&gt; $codes$ccg
-#&gt; [1] "E38000045"
+#&gt; [1] "E38000220"
 #&gt; 
 #&gt; $codes$ccg_id
-#&gt; [1] "11J"
+#&gt; [1] "15E"
 #&gt; 
 #&gt; $codes$ced
-#&gt; [1] "E58000313"
+#&gt; [1] "E99999999"
 #&gt; 
 #&gt; $codes$nuts
-#&gt; [1] "UKK22"
+#&gt; [1] "UKG31"
 #&gt; 
-#&gt; </div><div class='input'><span class='fu'>random_postcode</span>(<span class='st'>"N1"</span>)</div><div class='output co'>#&gt; $postcode
-#&gt; [1] "N1 6NN"
+#&gt; $codes$lsoa
+#&gt; [1] "E01009449"
+#&gt; 
+#&gt; $codes$msoa
+#&gt; [1] "E02001835"
+#&gt; 
+#&gt; $codes$lau2
+#&gt; [1] "E05011178"
+#&gt; 
+#&gt; </div><div class='input'><span class='fu'>random_postcode</span><span class='op'>(</span><span class='st'>"N1"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; $postcode
+#&gt; [1] "N1 6FT"
 #&gt; 
 #&gt; $quality
 #&gt; [1] 1
 #&gt; 
 #&gt; $eastings
-#&gt; [1] 533246
+#&gt; [1] 532751
 #&gt; 
 #&gt; $northings
-#&gt; [1] 182712
+#&gt; [1] 182700
 #&gt; 
 #&gt; $country
 #&gt; [1] "England"
@@ -263,7 +288,7 @@ Returns null if invalid outcode. Optional.</p></td>
 #&gt; [1] "London"
 #&gt; 
 #&gt; $longitude
-#&gt; [1] -0.080589
+#&gt; [1] -0.087725
 #&gt; 
 #&gt; $latitude
 #&gt; [1] 51.52761
@@ -278,13 +303,13 @@ Returns null if invalid outcode. Optional.</p></td>
 #&gt; [1] "London"
 #&gt; 
 #&gt; $lsoa
-#&gt; [1] "Hackney 027G"
+#&gt; [1] "Hackney 027I"
 #&gt; 
 #&gt; $msoa
 #&gt; [1] "Hackney 027"
 #&gt; 
 #&gt; $incode
-#&gt; [1] "6NN"
+#&gt; [1] "6FT"
 #&gt; 
 #&gt; $outcode
 #&gt; [1] "N1"
@@ -302,7 +327,7 @@ Returns null if invalid outcode. Optional.</p></td>
 #&gt; NULL
 #&gt; 
 #&gt; $admin_ward
-#&gt; [1] "Hoxton East &amp; Shoreditch"
+#&gt; [1] "Hoxton West"
 #&gt; 
 #&gt; $ced
 #&gt; NULL
@@ -321,7 +346,7 @@ Returns null if invalid outcode. Optional.</p></td>
 #&gt; [1] "E99999999"
 #&gt; 
 #&gt; $codes$admin_ward
-#&gt; [1] "E05009377"
+#&gt; [1] "E05009378"
 #&gt; 
 #&gt; $codes$parish
 #&gt; [1] "E43000202"
@@ -341,22 +366,23 @@ Returns null if invalid outcode. Optional.</p></td>
 #&gt; $codes$nuts
 #&gt; [1] "UKI41"
 #&gt; 
-#&gt; </div><div class='input'># }
+#&gt; $codes$lsoa
+#&gt; [1] "E01033711"
+#&gt; 
+#&gt; $codes$msoa
+#&gt; [1] "E02000371"
+#&gt; 
+#&gt; $codes$lau2
+#&gt; [1] "E05009378"
+#&gt; 
+#&gt; </div><div class='input'><span class='co'># }</span>
 
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-
-      <li><a href="#see-also">See also</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -367,7 +393,7 @@ Returns null if invalid outcode. Optional.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

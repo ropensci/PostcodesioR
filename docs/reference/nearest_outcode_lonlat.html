@@ -8,23 +8,36 @@
 
 <title>Nearest outcodes given longitude and latitude — nearest_outcode_lonlat • PostcodesioR</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -32,11 +45,12 @@
 
 
 
-<meta property="og:title" content="Nearest outcodes given longitude and latitude — nearest_outcode_lonlat" />
 
+<meta property="og:title" content="Nearest outcodes given longitude and latitude — nearest_outcode_lonlat" />
 <meta property="og:description" content="Returns nearest outward codes for a given longitude and latitude.
 The search is based on the relative distance of the outcode centroid." />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="/logo.png" />
+
 
 
 
@@ -53,7 +67,7 @@ The search is based on the relative distance of the outcode centroid." />
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +89,7 @@ The search is based on the relative distance of the outcode centroid." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -98,9 +112,13 @@ The search is based on the relative distance of the outcode centroid." />
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/ropensci/PostcodesioR/">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -115,19 +133,17 @@ The search is based on the relative distance of the outcode centroid." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Nearest outcodes given longitude and latitude</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/ropensci/PostcodesioR/blob/master/R/nearest_outcode_lonlat.R'><code>R/nearest_outcode_lonlat.R</code></a></small>
     <div class="hidden name"><code>nearest_outcode_lonlat.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    
     <p>Returns nearest outward codes for a given longitude and latitude.
 The search is based on the relative distance of the outcode centroid.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'>nearest_outcode_lonlat</span>(<span class='no'>longitude</span>, <span class='no'>latitude</span>)</pre>
-    
+    <pre class="usage"><span class='fu'>nearest_outcode_lonlat</span><span class='op'>(</span><span class='va'>longitude</span>, <span class='va'>latitude</span><span class='op'>)</span></pre>
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -140,33 +156,32 @@ The search is based on the relative distance of the outcode centroid.</p>
       <td><p>A string or numeric. Needs to have at least three decimal points.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A list with available data.</p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='postcode_lookup.html'>postcode_lookup</a></code> for documentation.</p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='fu'>nearest_outcode_lonlat</span>(<span class='fl'>0.127</span>, <span class='fl'>51.507</span>)</div><div class='output co'>#&gt; [[1]]
+<span class='fu'>nearest_outcode_lonlat</span><span class='op'>(</span><span class='fl'>0.127</span>, <span class='fl'>51.507</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [[1]]
 #&gt; [[1]]$outcode
 #&gt; [1] "DA18"
 #&gt; 
 #&gt; [[1]]$longitude
-#&gt; [1] 0.1363693
+#&gt; [1] 0.1361489
 #&gt; 
 #&gt; [[1]]$latitude
-#&gt; [1] 51.49429
+#&gt; [1] 51.49427
 #&gt; 
 #&gt; [[1]]$northings
-#&gt; [1] 179424
+#&gt; [1] 179421
 #&gt; 
 #&gt; [[1]]$eastings
-#&gt; [1] 548402
+#&gt; [1] 548388
 #&gt; 
 #&gt; [[1]]$admin_district
 #&gt; [[1]]$admin_district[[1]]
@@ -194,25 +209,22 @@ The search is based on the relative distance of the outcode centroid.</p>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[1]]$distance
-#&gt; [1] 1556.492
-#&gt; 
 #&gt; 
 #&gt; [[2]]
 #&gt; [[2]]$outcode
 #&gt; [1] "SE28"
 #&gt; 
 #&gt; [[2]]$longitude
-#&gt; [1] 0.1044483
+#&gt; [1] 0.1044373
 #&gt; 
 #&gt; [[2]]$latitude
-#&gt; [1] 51.50234
+#&gt; [1] 51.50237
 #&gt; 
 #&gt; [[2]]$northings
-#&gt; [1] 180255
+#&gt; [1] 180258
 #&gt; 
 #&gt; [[2]]$eastings
-#&gt; [1] 546161
+#&gt; [1] 546160
 #&gt; 
 #&gt; [[2]]$admin_district
 #&gt; [[2]]$admin_district[[1]]
@@ -252,22 +264,19 @@ The search is based on the relative distance of the outcode centroid.</p>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[2]]$distance
-#&gt; [1] 1649.445
-#&gt; 
 #&gt; 
 #&gt; [[3]]
 #&gt; [[3]]$outcode
 #&gt; [1] "SE2"
 #&gt; 
 #&gt; [[3]]$longitude
-#&gt; [1] 0.1159578
+#&gt; [1] 0.1159447
 #&gt; 
 #&gt; [[3]]$latitude
-#&gt; [1] 51.48976
+#&gt; [1] 51.48965
 #&gt; 
 #&gt; [[3]]$northings
-#&gt; [1] 178879
+#&gt; [1] 178867
 #&gt; 
 #&gt; [[3]]$eastings
 #&gt; [1] 547000
@@ -316,19 +325,16 @@ The search is based on the relative distance of the outcode centroid.</p>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[3]]$distance
-#&gt; [1] 2065.839
-#&gt; 
 #&gt; 
 #&gt; [[4]]
 #&gt; [[4]]$outcode
 #&gt; [1] "DA17"
 #&gt; 
 #&gt; [[4]]$longitude
-#&gt; [1] 0.1494894
+#&gt; [1] 0.1494741
 #&gt; 
 #&gt; [[4]]$latitude
-#&gt; [1] 51.48596
+#&gt; [1] 51.48595
 #&gt; 
 #&gt; [[4]]$northings
 #&gt; [1] 178524
@@ -379,25 +385,22 @@ The search is based on the relative distance of the outcode centroid.</p>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[4]]$distance
-#&gt; [1] 2813.999
-#&gt; 
 #&gt; 
 #&gt; [[5]]
 #&gt; [[5]]$outcode
 #&gt; [1] "RM9"
 #&gt; 
 #&gt; [[5]]$longitude
-#&gt; [1] 0.1338395
+#&gt; [1] 0.1337999
 #&gt; 
 #&gt; [[5]]$latitude
-#&gt; [1] 51.54095
+#&gt; [1] 51.54093
 #&gt; 
 #&gt; [[5]]$northings
-#&gt; [1] 184608
+#&gt; [1] 184605
 #&gt; 
 #&gt; [[5]]$eastings
-#&gt; [1] 548075
+#&gt; [1] 548073
 #&gt; 
 #&gt; [[5]]$admin_district
 #&gt; [[5]]$admin_district[[1]]
@@ -452,25 +455,22 @@ The search is based on the relative distance of the outcode centroid.</p>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[5]]$distance
-#&gt; [1] 3807.202
-#&gt; 
 #&gt; 
 #&gt; [[6]]
 #&gt; [[6]]$outcode
 #&gt; [1] "IG11"
 #&gt; 
 #&gt; [[6]]$longitude
-#&gt; [1] 0.09326231
+#&gt; [1] 0.09329773
 #&gt; 
 #&gt; [[6]]$latitude
-#&gt; [1] 51.53506
+#&gt; [1] 51.53502
 #&gt; 
 #&gt; [[6]]$northings
-#&gt; [1] 183871
+#&gt; [1] 183867
 #&gt; 
 #&gt; [[6]]$eastings
-#&gt; [1] 545280
+#&gt; [1] 545283
 #&gt; 
 #&gt; [[6]]$admin_district
 #&gt; [[6]]$admin_district[[1]]
@@ -531,25 +531,22 @@ The search is based on the relative distance of the outcode centroid.</p>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[6]]$distance
-#&gt; [1] 3902.101
-#&gt; 
 #&gt; 
 #&gt; [[7]]
 #&gt; [[7]]$outcode
 #&gt; [1] "SE18"
 #&gt; 
 #&gt; [[7]]$longitude
-#&gt; [1] 0.07256292
+#&gt; [1] 0.07258548
 #&gt; 
 #&gt; [[7]]$latitude
-#&gt; [1] 51.48431
+#&gt; [1] 51.48434
 #&gt; 
 #&gt; [[7]]$northings
-#&gt; [1] 178187
+#&gt; [1] 178190
 #&gt; 
 #&gt; [[7]]$eastings
-#&gt; [1] 544005
+#&gt; [1] 544007
 #&gt; 
 #&gt; [[7]]$admin_district
 #&gt; [[7]]$admin_district[[1]]
@@ -589,25 +586,22 @@ The search is based on the relative distance of the outcode centroid.</p>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[7]]$distance
-#&gt; [1] 4545.629
-#&gt; 
 #&gt; 
 #&gt; [[8]]
 #&gt; [[8]]$outcode
 #&gt; [1] "RM10"
 #&gt; 
 #&gt; [[8]]$longitude
-#&gt; [1] 0.1578703
+#&gt; [1] 0.1578737
 #&gt; 
 #&gt; [[8]]$latitude
-#&gt; [1] 51.54484
+#&gt; [1] 51.54486
 #&gt; 
 #&gt; [[8]]$northings
-#&gt; [1] 185089
+#&gt; [1] 185091
 #&gt; 
 #&gt; [[8]]$eastings
-#&gt; [1] 549729
+#&gt; [1] 549730
 #&gt; 
 #&gt; [[8]]$admin_district
 #&gt; [[8]]$admin_district[[1]]
@@ -644,16 +638,13 @@ The search is based on the relative distance of the outcode centroid.</p>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[8]]$distance
-#&gt; [1] 4724.222
-#&gt; 
 #&gt; 
 #&gt; [[9]]
 #&gt; [[9]]$outcode
 #&gt; [1] "DA7"
 #&gt; 
 #&gt; [[9]]$longitude
-#&gt; [1] 0.1460105
+#&gt; [1] 0.1460127
 #&gt; 
 #&gt; [[9]]$latitude
 #&gt; [1] 51.46561
@@ -662,7 +653,7 @@ The search is based on the relative distance of the outcode centroid.</p>
 #&gt; [1] 176255
 #&gt; 
 #&gt; [[9]]$eastings
-#&gt; [1] 549165
+#&gt; [1] 549166
 #&gt; 
 #&gt; [[9]]$admin_district
 #&gt; [[9]]$admin_district[[1]]
@@ -702,25 +693,22 @@ The search is based on the relative distance of the outcode centroid.</p>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[9]]$distance
-#&gt; [1] 4790.021
-#&gt; 
 #&gt; 
 #&gt; [[10]]
 #&gt; [[10]]$outcode
 #&gt; [1] "DA8"
 #&gt; 
 #&gt; [[10]]$longitude
-#&gt; [1] 0.1760405
+#&gt; [1] 0.1759264
 #&gt; 
 #&gt; [[10]]$latitude
-#&gt; [1] 51.47572
+#&gt; [1] 51.47576
 #&gt; 
 #&gt; [[10]]$northings
-#&gt; [1] 177440
+#&gt; [1] 177445
 #&gt; 
 #&gt; [[10]]$eastings
-#&gt; [1] 551217
+#&gt; [1] 551210
 #&gt; 
 #&gt; [[10]]$admin_district
 #&gt; [[10]]$admin_district[[1]]
@@ -757,25 +745,14 @@ The search is based on the relative distance of the outcode centroid.</p>
 #&gt; [1] "England"
 #&gt; 
 #&gt; 
-#&gt; [[10]]$distance
-#&gt; [1] 4869.752
-#&gt; 
-#&gt; </div><div class='input'># }
+#&gt; </div><div class='input'><span class='co'># }</span>
 
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-
-      <li><a href="#see-also">See also</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -786,7 +763,7 @@ The search is based on the relative distance of the outcode centroid.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
