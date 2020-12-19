@@ -5,12 +5,14 @@
 #' @importFrom httr GET
 #' @importFrom httr warn_for_status
 #'
-#' @param postcode A string. One valid UK postcode. This function is case- and space-insensitive.
+#' @param postcode A string. One valid UK postcode.
+#' This function is case- and space-insensitive.
 #' For more than one postcode use \code{\link{bulk_postcode_lookup}}.
+#' For Scottish postcodes use \code{\link{scottish_postcode_lookup}}.
 #'
 #' @export
 #'
-#' @return A data frame. Returns all available data if found. Returns 404 if postcode does not exist.
+#' @return A data frame. Returns all available data if found. Returns NAs if postcode does not exist (404).
 #'  * \code{postcode} Postcode. All current ('live') postcodes within the United Kingdom,
 #'  the Channel Islands and the Isle of Man, received monthly from Royal Mail.
 #'  2, 3 or 4-character outward code, single space and 3-character inward code.
@@ -142,7 +144,9 @@ postcode_lookup <- function(postcode) {
                      nuts = NA, admin_district_code = NA,
                      admin_county_code = NA, admin_ward_code = NA,
                      parish_code = NA, parliamentary_constituency_code = NA,
-                     ccg_code = NA, ced_code = NA, nuts_code = NA),
+                     ccg_code = NA, ccg_id_code = NA,
+                     ced_code = NA, nuts_code = NA,
+                     lsoa_code = NA, msoa_code = NA, lau2_code = NA),
                 class = "data.frame", row.names = c(NA, -1L))
     return(pc_df)
   }
