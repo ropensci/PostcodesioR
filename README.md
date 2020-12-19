@@ -1,6 +1,8 @@
 PostcodesioR
 ================
 
+# PostcodesioR <img src='man/figures/logo.png' align="right" height="139" />
+
 [![Travis-CI Build
 Status](https://travis-ci.org/ropensci/PostcodesioR.svg?branch=master)](https://travis-ci.org/ropensci/PostcodesioR)
 [![Coverage
@@ -11,6 +13,7 @@ Status](https://img.shields.io/codecov/c/github/ropensci/PostcodesioR/master.svg
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/PostcodesioR)](https://cran.r-project.org/package=PostcodesioR)
+![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/PostcodesioR)
 
 An API wrapper around [postcodes.io](https://postcodes.io/) - free UK
 postcode lookup and geocoder. This package helps to find and transform
@@ -75,7 +78,7 @@ lookup_result <- postcode_lookup("EC1Y8LX")
 str(lookup_result)
 ```
 
-    ## 'data.frame':    1 obs. of  31 variables:
+    ## 'data.frame':    1 obs. of  35 variables:
     ##  $ postcode                       : chr "EC1Y 8LX"
     ##  $ quality                        : int 1
     ##  $ eastings                       : int 532544
@@ -97,16 +100,20 @@ str(lookup_result)
     ##  $ admin_county                   : logi NA
     ##  $ admin_ward                     : chr "Bunhill"
     ##  $ ced                            : logi NA
-    ##  $ ccg                            : chr "NHS Islington"
+    ##  $ ccg                            : chr "NHS North Central London"
     ##  $ nuts                           : chr "Haringey and Islington"
     ##  $ admin_district_code            : chr "E09000019"
     ##  $ admin_county_code              : chr "E99999999"
     ##  $ admin_ward_code                : chr "E05000367"
     ##  $ parish_code                    : chr "E43000209"
     ##  $ parliamentary_constituency_code: chr "E14000764"
-    ##  $ ccg_code                       : chr "E38000088"
+    ##  $ ccg_code                       : chr "E38000240"
+    ##  $ ccg_id_code                    : chr "93C"
     ##  $ ced_code                       : chr "E99999999"
     ##  $ nuts_code                      : chr "UKI43"
+    ##  $ lsoa_code                      : chr "E01002704"
+    ##  $ msoa_code                      : chr "E02000576"
+    ##  $ lau2_code                      : chr "E05000367"
 
 Check the
 [vignette](https://docs.ropensci.org/PostcodesioR/articles/Introduction.html)
@@ -131,7 +138,6 @@ examples.
 
 Please note that this project is released with a [Contributor Code of
 Conduct](https://github.com/ropensci/PostcodesioR/blob/master/CONDUCT.md).
-By participating in this project you agree to abide by its
-terms.
+By participating in this project you agree to abide by its terms.
 
 [![ropensci\_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)
