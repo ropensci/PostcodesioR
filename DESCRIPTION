@@ -1,7 +1,7 @@
 Package: PostcodesioR
 Type: Package
 Title: API Wrapper Around 'Postcodes.io'
-Version: 0.2.0
+Version: 0.3.0
 Authors@R: c(person("Eryk", "Walczak", 
                   email = "eryk.j.walczak@gmail.com", 
                   role = c("aut", "cre"),
