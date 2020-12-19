@@ -38,7 +38,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">PostcodesioR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
       </span>
     </div>
 
@@ -599,125 +599,125 @@
 <code class="sourceCode R"><span class="co"># without restrictions</span>
 <span class="fu"><a href="../reference/random_postcode.html">random_postcode</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <pre><code>## $postcode
-## [1] "GU14 9HB"
+## [1] "BT78 3QF"
 ## 
 ## $quality
-## [1] 1
+## [1] 5
 ## 
 ## $eastings
-## [1] 485032
+## [1] 240283
 ## 
 ## $northings
-## [1] 157501
+## [1] 355994
 ## 
 ## $country
-## [1] "England"
+## [1] "Northern Ireland"
 ## 
 ## $nhs_ha
-## [1] "South Central"
+## [1] "Health &amp; Social Care Board"
 ## 
 ## $longitude
-## [1] -0.781439
+## [1] -7.379738
 ## 
 ## $latitude
-## [1] 51.31028
+## [1] 54.45087
 ## 
 ## $european_electoral_region
-## [1] "South East"
+## [1] "Northern Ireland"
 ## 
 ## $primary_care_trust
-## [1] "Hampshire"
+## [1] "Western"
 ## 
 ## $region
-## [1] "South East"
+## NULL
 ## 
 ## $lsoa
-## [1] "Rushmoor 003B"
+## [1] "Trillick"
 ## 
 ## $msoa
-## [1] "Rushmoor 003"
+## NULL
 ## 
 ## $incode
-## [1] "9HB"
+## [1] "3QF"
 ## 
 ## $outcode
-## [1] "GU14"
+## [1] "BT78"
 ## 
 ## $parliamentary_constituency
-## [1] "Aldershot"
+## [1] "West Tyrone"
 ## 
 ## $admin_district
-## [1] "Rushmoor"
+## [1] "Fermanagh and Omagh"
 ## 
 ## $parish
-## [1] "Rushmoor, unparished area"
+## NULL
 ## 
 ## $admin_county
-## [1] "Hampshire"
+## NULL
 ## 
 ## $admin_ward
-## [1] "Fernhill"
+## [1] "Trillick"
 ## 
 ## $ced
-## [1] "Farnborough North"
+## NULL
 ## 
 ## $ccg
-## [1] "NHS North East Hampshire and Farnham"
+## [1] "Western"
 ## 
 ## $nuts
-## [1] "North Hampshire"
+## [1] "Fermanagh and Omagh"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "E07000092"
+## [1] "N09000006"
 ## 
 ## $codes$admin_county
-## [1] "E10000014"
+## [1] "N99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05008993"
+## [1] "N08000640"
 ## 
 ## $codes$parish
-## [1] "E43000073"
+## [1] "N99999999"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "E14000530"
+## [1] "N06000018"
 ## 
 ## $codes$ccg
-## [1] "E38000118"
+## [1] "ZC050"
 ## 
 ## $codes$ccg_id
-## [1] "99M"
+## [1] "ZC050"
 ## 
 ## $codes$ced
-## [1] "E58000559"
+## [1] "N99999999"
 ## 
 ## $codes$nuts
-## [1] "UKJ37"
+## [1] "UKN16"
 ## 
 ## $codes$lsoa
-## [1] "E01023101"
+## [1] "95YY21W1"
 ## 
 ## $codes$msoa
-## [1] "E02004804"
+## [1] "N99999999"
 ## 
 ## $codes$lau2
-## [1] "E05008993"</code></pre>
+## [1] "N08000640"</code></pre>
 <p>A randomly generated postcode can also belong to a particular outcode:</p>
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># restrict to an outcode</span>
 <span class="fu"><a href="../reference/random_postcode.html">random_postcode</a></span><span class="op">(</span><span class="st">"N1"</span><span class="op">)</span></code></pre></div>
 <pre><code>## $postcode
-## [1] "N1 1HB"
+## [1] "N1 5TP"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 531287
+## [1] 532924
 ## 
 ## $northings
-## [1] 184305
+## [1] 183983
 ## 
 ## $country
 ## [1] "England"
@@ -726,92 +726,92 @@
 ## [1] "London"
 ## 
 ## $longitude
-## [1] -0.108219
+## [1] -0.084749
 ## 
 ## $latitude
-## [1] 51.54238
+## [1] 51.5391
 ## 
 ## $european_electoral_region
 ## [1] "London"
 ## 
 ## $primary_care_trust
-## [1] "Islington"
+## [1] "City and Hackney Teaching"
 ## 
 ## $region
 ## [1] "London"
 ## 
 ## $lsoa
-## [1] "Islington 017B"
+## [1] "Hackney 025A"
 ## 
 ## $msoa
-## [1] "Islington 017"
+## [1] "Hackney 025"
 ## 
 ## $incode
-## [1] "1HB"
+## [1] "5TP"
 ## 
 ## $outcode
 ## [1] "N1"
 ## 
 ## $parliamentary_constituency
-## [1] "Islington South and Finsbury"
+## [1] "Hackney South and Shoreditch"
 ## 
 ## $admin_district
-## [1] "Islington"
+## [1] "Hackney"
 ## 
 ## $parish
-## [1] "Islington, unparished area"
+## [1] "Hackney, unparished area"
 ## 
 ## $admin_county
 ## NULL
 ## 
 ## $admin_ward
-## [1] "Barnsbury"
+## [1] "De Beauvoir"
 ## 
 ## $ced
 ## NULL
 ## 
 ## $ccg
-## [1] "NHS North Central London"
+## [1] "NHS City and Hackney"
 ## 
 ## $nuts
-## [1] "Haringey and Islington"
+## [1] "Hackney and Newham"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "E09000019"
+## [1] "E09000012"
 ## 
 ## $codes$admin_county
 ## [1] "E99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05000366"
+## [1] "E05009371"
 ## 
 ## $codes$parish
-## [1] "E43000209"
+## [1] "E43000202"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "E14000764"
+## [1] "E14000721"
 ## 
 ## $codes$ccg
-## [1] "E38000240"
+## [1] "E38000035"
 ## 
 ## $codes$ccg_id
-## [1] "93C"
+## [1] "07T"
 ## 
 ## $codes$ced
 ## [1] "E99999999"
 ## 
 ## $codes$nuts
-## [1] "UKI43"
+## [1] "UKI41"
 ## 
 ## $codes$lsoa
-## [1] "E01002699"
+## [1] "E01001752"
 ## 
 ## $codes$msoa
-## [1] "E02000570"
+## [1] "E02000369"
 ## 
 ## $codes$lau2
-## [1] "E05000366"</code></pre>
+## [1] "E05009371"</code></pre>
 </div>
 </div>
 <div id="places" class="section level2">
@@ -820,14 +820,14 @@
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
 <div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/random_place.html">random_place</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<pre><code>##                   code       name_1 name_1_lang name_2 name_2_lang local_type
-## 1 osgb4000000074565915 High Wycombe        NULL   NULL        NULL       Town
-##   outcode  county_unitary county_unitary_type district_borough
-## 1    HP11 Buckinghamshire              County          Wycombe
-##   district_borough_type     region country  longitude latitude eastings
-## 1              District South East England -0.7494634 51.62877   486656
+<pre><code>##                   code        name_1 name_1_lang name_2 name_2_lang
+## 1 osgb4000000074813548 Regent Street        NULL   NULL        NULL
+##         local_type outcode county_unitary county_unitary_type district_borough
+## 1 Other Settlement    DL14  County Durham    UnitaryAuthority             NULL
+##   district_borough_type     region country longitude latitude eastings
+## 1                  NULL North East England -1.651494  54.6457   422588
 ##   northings min_eastings min_northings max_eastings max_northings
-## 1    192957       483045        190817       490082        195258</code></pre>
+## 1    527899       422340        527651       422840        528151</code></pre>
 </div>
 <div id="postcode-validation" class="section level2">
 <h2 class="hasAnchor">
