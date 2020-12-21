@@ -38,7 +38,7 @@ nearest_outcode <- function(outcode, limit = 10, radius = 5000) {
                   "/nearest",
                   "?limit=",
                   limit,
-                  "?radius=",
+                  "&radius=",
                   radius))
   extract_results(r)
 }

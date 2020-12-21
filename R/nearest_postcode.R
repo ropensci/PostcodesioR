@@ -35,7 +35,7 @@ nearest_postcode <- function(postcode, limit = 10, radius = 100) {
                   "/nearest",
                   "?limit=",
                   limit,
-                  "?radius=",
+                  "&radius=",
                   radius))
   extract_results(r)
 }
