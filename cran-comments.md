@@ -1,6 +1,22 @@
-## Update
+## Update (v 0.3)
 
 * Minor bus fixes.
+* `scottish_postcode_lookup` added
+* New fields (codes) added
+* README updated (hex logo and downloads)
+* New tests
+
+## Test environments
+* local ubuntu 20.04, R 4.0.3
+* R-hub using `rhub::check_for_cran()`. No errors, warnings or notes
+* R-hub tested on:
+- Windows Server 2008 R2 SP1, R-devel, 32/64 bit,
+- Ubuntu Linux 16.04 LTS, R-release, GCC
+- Fedora Linux, R-devel, clang, gfortran
+
+## R CMD check results
+
+0 errors | 0 warnings | 0 notes
 
 ## Resubmission
 
