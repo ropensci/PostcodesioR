@@ -73,6 +73,14 @@ bulk_df <-
           c("postcode", "longitude", "latitude"))
 ```
 
+Querying Scottish postcodes requires a separate function:
+
+```{r}
+scottish_lookup <- scottish_postcode_lookup("EH12NG")
+
+str(scottish_lookup)
+```
+
 
 ### Outward code lookup
 
