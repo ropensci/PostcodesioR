@@ -17,13 +17,7 @@
 
 ## R CMD check results
 
-0 errors | 1 warning | 0 notes
-
-- ‘qpdf’ is needed for checks on size reduction of PDFs
-
-This warning is due to the updates in R 4.0 but is not occurring on the remote 
-servers. 
-Issue: https://community.rstudio.com/t/qpdf-is-needed-error-package/75485/3 
+0 errors | 0 warnings | 0 notes
 
 ## Resubmission
 
