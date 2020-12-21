@@ -8,6 +8,7 @@
 
 ## Test environments
 * local ubuntu 20.04, R 4.0.3
+* win-builder (devel and release). No errors, warnings or notes
 * R-hub using `rhub::check_for_cran()`. No errors, warnings or notes
 * R-hub tested on:
 - Windows Server 2008 R2 SP1, R-devel, 32/64 bit,
@@ -16,7 +17,13 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 notes
+0 errors | 1 warning | 0 notes
+
+- ‘qpdf’ is needed for checks on size reduction of PDFs
+
+This warning is due to the updates in R 4.0 but is not occurring on the remote 
+servers. 
+Issue: https://community.rstudio.com/t/qpdf-is-needed-error-package/75485/3 
 
 ## Resubmission
 
