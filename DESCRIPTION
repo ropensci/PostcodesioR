@@ -18,18 +18,18 @@ Description: Free UK geocoding using data from Office for National Statistics.
     codes, reverse geocoding, nearest post codes/outward codes, validation, or
     randomly generate a post code. API wrapper around <https://postcodes.io>.
 License: GPL-3
-URL: https://docs.ropensci.org/PostcodesioR
+URL: https://docs.ropensci.org/PostcodesioR/
 LazyData: TRUE
 Depends:
     R (>= 3.1)
 Imports:
-    httr,
-    purrr,
-    dplyr
+    httr
 RoxygenNote: 7.1.1
 Suggests: knitr,
+    dplyr,
     rmarkdown,
     testthat,
-    covr
+    covr,
+    purrr
 VignetteBuilder: knitr
 BugReports: https://github.com/ropensci/PostcodesioR/issues
