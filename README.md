@@ -125,8 +125,7 @@ Currently, there is a limit to the number of API calls that can be made.
 However, [postcodes.io](https://postcodes.io/) provides full list of
 geolocation data that can be used locally without limitations. The
 original data is sourced from [Office for National Statistics Data
-Portal](https://geoportal.statistics.gov.uk/geoportal/catalog/main/home.page).
-That
+Portal](https://geoportal.statistics.gov.uk/). That
 [file](https://github.com/ideal-postcodes/postcodes.io/blob/master/latest)
 is rather large so I didn’t include it in the package.
 
