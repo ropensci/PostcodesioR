@@ -5,6 +5,7 @@
 * New fields (codes) added
 * README updated (hex logo and downloads)
 * New tests
+* URLs in README updated
 
 ## Test environments
 * local ubuntu 20.04, R 4.0.3
