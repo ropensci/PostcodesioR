@@ -7,7 +7,7 @@
 #' @param postcodes Accepts a list of postcodes. Accepts up to 100 postcodes.
 #' For only one postcode use \code{\link{postcode_lookup}}.
 #'
-#' @return A list.
+#' @return A list of length one.
 #' @seealso \code{\link{postcode_lookup}} for documentation.
 #'
 #' @export
@@ -17,6 +17,8 @@
 #' pc_list <- list(
 #' postcodes = c("PR3 0SG", "M45 6GN", "EX165BL")) # spaces are ignored
 #' bulk_postcode_lookup(pc_list)
+#' # The function needs a list of length one. This won't work:
+#' bulk_postcode_lookup(list("PR3 0SG", "M45 6GN", "EX165BL"))
 #' }
 #'
 bulk_postcode_lookup <- function(postcodes) {

@@ -11,7 +11,7 @@ bulk_postcode_lookup(postcodes)
 For only one postcode use \code{\link{postcode_lookup}}.}
 }
 \value{
-A list.
+A list of length one.
 }
 \description{
 Returns a list of matching postcodes and respective available data.
@@ -21,6 +21,8 @@ Returns a list of matching postcodes and respective available data.
 pc_list <- list(
 postcodes = c("PR3 0SG", "M45 6GN", "EX165BL")) # spaces are ignored
 bulk_postcode_lookup(pc_list)
+# The function needs a list of length one. This won't work:
+bulk_postcode_lookup(list("PR3 0SG", "M45 6GN", "EX165BL"))
 }
 
 }
