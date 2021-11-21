@@ -3,7 +3,7 @@ Type: Package
 Title: API Wrapper Around 'Postcodes.io'
 Version: 0.3.1
 Authors@R: c(person("Eryk", "Walczak", 
-                  email = "eryk.j.walczak@gmail.com", 
+                  email = "erykjwalczak@gmail.com", 
                   role = c("aut", "cre"),
                   comment = c(ORCID = "0000-0001-8724-462X")),
              person("Claudia", "Vitolo", 
@@ -12,7 +12,7 @@ Authors@R: c(person("Eryk", "Walczak",
              person("Robin", "Lovelace",
                   role = "rev",
                   comment = c(ORCID = "0000-0001-5679-6536")))
-Maintainer: Eryk Walczak <eryk.j.walczak@gmail.com>
+Maintainer: Eryk Walczak <erykjwalczak@gmail.com>
 Description: Free UK geocoding using data from Office for National Statistics.
     It is using several functions to get information about post codes, outward
     codes, reverse geocoding, nearest post codes/outward codes, validation, or
