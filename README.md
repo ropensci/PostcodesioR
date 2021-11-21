@@ -48,7 +48,7 @@ or
 if(!require("devtools")) {
   install.packages("devtools")
 }
-devtools::install_github("erzk/PostcodesioR")
+devtools::install_github("ropensci/PostcodesioR")
 ```
 
 ## Loading
