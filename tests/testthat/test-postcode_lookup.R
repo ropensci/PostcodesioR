@@ -6,7 +6,7 @@ test_that("postcode_lookup works as expected", {
 
   incorrect_postcode1 <- 1
   incorrect_postcode2 <- "E"
-  incorrect_postcode3 <- c("EC1Y8LX", "EX165BL")
+  incorrect_postcode3 <- list("EC1Y8LX", "EX165BL")
 
   postcode_lookup_result <- postcode_lookup("EC1Y8LX")
 
