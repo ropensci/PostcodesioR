@@ -19,7 +19,6 @@ Description: Free UK geocoding using data from Office for National Statistics.
     randomly generate a post code. API wrapper around <https://postcodes.io>.
 License: GPL-3
 URL: https://docs.ropensci.org/PostcodesioR/
-LazyData: TRUE
 Depends:
     R (>= 3.1)
 Imports:
