@@ -41,7 +41,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">PostcodesioR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
       </span>
     </div>
 
@@ -137,42 +137,42 @@
 
 <span class="co">#overview</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">lookup_result</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">## 'data.frame':    1 obs. of  35 variables:</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="co">##  $ postcode                       : chr "EC1Y 8LX"</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="co">##  $ quality                        : int 1</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="co">##  $ eastings                       : int 532544</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="co">##  $ northings                      : int 182128</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="co">##  $ country                        : chr "England"</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="co">##  $ nhs_ha                         : chr "London"</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a><span class="co">##  $ longitude                      : num -0.0909</span></span>
-<span id="cb5-9"><a href="#cb5-9"></a><span class="co">##  $ latitude                       : num 51.5</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a><span class="co">##  $ european_electoral_region      : chr "London"</span></span>
-<span id="cb5-11"><a href="#cb5-11"></a><span class="co">##  $ primary_care_trust             : chr "Islington"</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a><span class="co">##  $ region                         : chr "London"</span></span>
-<span id="cb5-13"><a href="#cb5-13"></a><span class="co">##  $ lsoa                           : chr "Islington 023D"</span></span>
-<span id="cb5-14"><a href="#cb5-14"></a><span class="co">##  $ msoa                           : chr "Islington 023"</span></span>
-<span id="cb5-15"><a href="#cb5-15"></a><span class="co">##  $ incode                         : chr "8LX"</span></span>
-<span id="cb5-16"><a href="#cb5-16"></a><span class="co">##  $ outcode                        : chr "EC1Y"</span></span>
-<span id="cb5-17"><a href="#cb5-17"></a><span class="co">##  $ parliamentary_constituency     : chr "Islington South and Finsbury"</span></span>
-<span id="cb5-18"><a href="#cb5-18"></a><span class="co">##  $ admin_district                 : chr "Islington"</span></span>
-<span id="cb5-19"><a href="#cb5-19"></a><span class="co">##  $ parish                         : chr "Islington, unparished area"</span></span>
-<span id="cb5-20"><a href="#cb5-20"></a><span class="co">##  $ admin_county                   : logi NA</span></span>
-<span id="cb5-21"><a href="#cb5-21"></a><span class="co">##  $ admin_ward                     : chr "Bunhill"</span></span>
-<span id="cb5-22"><a href="#cb5-22"></a><span class="co">##  $ ced                            : logi NA</span></span>
-<span id="cb5-23"><a href="#cb5-23"></a><span class="co">##  $ ccg                            : chr "NHS North Central London"</span></span>
-<span id="cb5-24"><a href="#cb5-24"></a><span class="co">##  $ nuts                           : chr "Haringey and Islington"</span></span>
-<span id="cb5-25"><a href="#cb5-25"></a><span class="co">##  $ admin_district_code            : chr "E09000019"</span></span>
-<span id="cb5-26"><a href="#cb5-26"></a><span class="co">##  $ admin_county_code              : chr "E99999999"</span></span>
-<span id="cb5-27"><a href="#cb5-27"></a><span class="co">##  $ admin_ward_code                : chr "E05000367"</span></span>
-<span id="cb5-28"><a href="#cb5-28"></a><span class="co">##  $ parish_code                    : chr "E43000209"</span></span>
-<span id="cb5-29"><a href="#cb5-29"></a><span class="co">##  $ parliamentary_constituency_code: chr "E14000764"</span></span>
-<span id="cb5-30"><a href="#cb5-30"></a><span class="co">##  $ ccg_code                       : chr "E38000240"</span></span>
-<span id="cb5-31"><a href="#cb5-31"></a><span class="co">##  $ ccg_id_code                    : chr "93C"</span></span>
-<span id="cb5-32"><a href="#cb5-32"></a><span class="co">##  $ ced_code                       : chr "E99999999"</span></span>
-<span id="cb5-33"><a href="#cb5-33"></a><span class="co">##  $ nuts_code                      : chr "UKI43"</span></span>
-<span id="cb5-34"><a href="#cb5-34"></a><span class="co">##  $ lsoa_code                      : chr "E01002704"</span></span>
-<span id="cb5-35"><a href="#cb5-35"></a><span class="co">##  $ msoa_code                      : chr "E02000576"</span></span>
-<span id="cb5-36"><a href="#cb5-36"></a><span class="co">##  $ lau2_code                      : chr "E05000367"</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## 'data.frame':    1 obs. of  35 variables:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ postcode                       : chr "EC1Y 8LX"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ quality                        : int 1</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ eastings                       : int 532544</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ northings                      : int 182128</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ country                        : chr "England"</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ nhs_ha                         : chr "London"</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ longitude                      : num -0.0909</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ latitude                       : num 51.5</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ european_electoral_region      : chr "London"</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ primary_care_trust             : chr "Islington"</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ region                         : chr "London"</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ lsoa                           : chr "Islington 023D"</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ msoa                           : chr "Islington 023"</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ incode                         : chr "8LX"</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ outcode                        : chr "EC1Y"</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ parliamentary_constituency     : chr "Islington South and Finsbury"</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ admin_district                 : chr "Islington"</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ parish                         : chr "Islington, unparished area"</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ admin_county                   : logi NA</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ admin_ward                     : chr "Bunhill"</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ ced                            : logi NA</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ ccg                            : chr "NHS North Central London"</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ nuts                           : chr "Haringey and Islington"</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ admin_district_code            : chr "E09000019"</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ admin_county_code              : chr "E99999999"</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ admin_ward_code                : chr "E05000367"</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ parish_code                    : chr "E43000209"</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ parliamentary_constituency_code: chr "E14000764"</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ ccg_code                       : chr "E38000240"</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ ccg_id_code                    : chr "93C"</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ ced_code                       : chr "E99999999"</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ nuts_code                      : chr "UKI43"</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ lsoa_code                      : chr "E01002704"</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ msoa_code                      : chr "E02000576"</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ lau2_code                      : chr "E05000367"</span></span></code></pre></div>
 <p>Check the <a href="https://docs.ropensci.org/PostcodesioR/articles/Introduction.html">vignette</a> to see all functions in action.</p>
 </div>
 <div id="notes" class="section level2">

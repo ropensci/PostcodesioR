@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">PostcodesioR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
       </span>
     </div>
 
@@ -160,224 +160,226 @@ Returns null if invalid outcode. Optional.</p></td>
     <div class='dont-index'><p><code><a href='postcode_lookup.html'>postcode_lookup</a></code> for documentation.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='fu'>random_postcode</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; $postcode
-#&gt; [1] "SK5 8NF"
-#&gt; 
-#&gt; $quality
-#&gt; [1] 1
-#&gt; 
-#&gt; $eastings
-#&gt; [1] 390770
-#&gt; 
-#&gt; $northings
-#&gt; [1] 392644
-#&gt; 
-#&gt; $country
-#&gt; [1] "England"
-#&gt; 
-#&gt; $nhs_ha
-#&gt; [1] "North West"
-#&gt; 
-#&gt; $longitude
-#&gt; [1] -2.140382
-#&gt; 
-#&gt; $latitude
-#&gt; [1] 53.4305
-#&gt; 
-#&gt; $european_electoral_region
-#&gt; [1] "North West"
-#&gt; 
-#&gt; $primary_care_trust
-#&gt; [1] "Stockport"
-#&gt; 
-#&gt; $region
-#&gt; [1] "North West"
-#&gt; 
-#&gt; $lsoa
-#&gt; [1] "Stockport 004B"
-#&gt; 
-#&gt; $msoa
-#&gt; [1] "Stockport 004"
-#&gt; 
-#&gt; $incode
-#&gt; [1] "8NF"
-#&gt; 
-#&gt; $outcode
-#&gt; [1] "SK5"
-#&gt; 
-#&gt; $parliamentary_constituency
-#&gt; [1] "Stockport"
-#&gt; 
-#&gt; $admin_district
-#&gt; [1] "Stockport"
-#&gt; 
-#&gt; $parish
-#&gt; [1] "Stockport, unparished area"
-#&gt; 
-#&gt; $admin_county
-#&gt; NULL
-#&gt; 
-#&gt; $admin_ward
-#&gt; [1] "Brinnington and Central"
-#&gt; 
-#&gt; $ced
-#&gt; NULL
-#&gt; 
-#&gt; $ccg
-#&gt; [1] "NHS Stockport"
-#&gt; 
-#&gt; $nuts
-#&gt; [1] "Greater Manchester South East"
-#&gt; 
-#&gt; $codes
-#&gt; $codes$admin_district
-#&gt; [1] "E08000007"
-#&gt; 
-#&gt; $codes$admin_county
-#&gt; [1] "E99999999"
-#&gt; 
-#&gt; $codes$admin_ward
-#&gt; [1] "E05000783"
-#&gt; 
-#&gt; $codes$parish
-#&gt; [1] "E43000161"
-#&gt; 
-#&gt; $codes$parliamentary_constituency
-#&gt; [1] "E14000969"
-#&gt; 
-#&gt; $codes$ccg
-#&gt; [1] "E38000174"
-#&gt; 
-#&gt; $codes$ccg_id
-#&gt; [1] "01W"
-#&gt; 
-#&gt; $codes$ced
-#&gt; [1] "E99999999"
-#&gt; 
-#&gt; $codes$nuts
-#&gt; [1] "UKD35"
-#&gt; 
-#&gt; $codes$lsoa
-#&gt; [1] "E01005754"
-#&gt; 
-#&gt; $codes$msoa
-#&gt; [1] "E02001190"
-#&gt; 
-#&gt; $codes$lau2
-#&gt; [1] "E05000783"
-#&gt; 
-#&gt; </div><div class='input'><span class='fu'>random_postcode</span><span class='op'>(</span><span class='st'>"N1"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; $postcode
-#&gt; [1] "N1 1HZ"
-#&gt; 
-#&gt; $quality
-#&gt; [1] 1
-#&gt; 
-#&gt; $eastings
-#&gt; [1] 531122
-#&gt; 
-#&gt; $northings
-#&gt; [1] 184084
-#&gt; 
-#&gt; $country
-#&gt; [1] "England"
-#&gt; 
-#&gt; $nhs_ha
-#&gt; [1] "London"
-#&gt; 
-#&gt; $longitude
-#&gt; [1] -0.110679
-#&gt; 
-#&gt; $latitude
-#&gt; [1] 51.54043
-#&gt; 
-#&gt; $european_electoral_region
-#&gt; [1] "London"
-#&gt; 
-#&gt; $primary_care_trust
-#&gt; [1] "Islington"
-#&gt; 
-#&gt; $region
-#&gt; [1] "London"
-#&gt; 
-#&gt; $lsoa
-#&gt; [1] "Islington 017B"
-#&gt; 
-#&gt; $msoa
-#&gt; [1] "Islington 017"
-#&gt; 
-#&gt; $incode
-#&gt; [1] "1HZ"
-#&gt; 
-#&gt; $outcode
-#&gt; [1] "N1"
-#&gt; 
-#&gt; $parliamentary_constituency
-#&gt; [1] "Islington South and Finsbury"
-#&gt; 
-#&gt; $admin_district
-#&gt; [1] "Islington"
-#&gt; 
-#&gt; $parish
-#&gt; [1] "Islington, unparished area"
-#&gt; 
-#&gt; $admin_county
-#&gt; NULL
-#&gt; 
-#&gt; $admin_ward
-#&gt; [1] "Barnsbury"
-#&gt; 
-#&gt; $ced
-#&gt; NULL
-#&gt; 
-#&gt; $ccg
-#&gt; [1] "NHS North Central London"
-#&gt; 
-#&gt; $nuts
-#&gt; [1] "Haringey and Islington"
-#&gt; 
-#&gt; $codes
-#&gt; $codes$admin_district
-#&gt; [1] "E09000019"
-#&gt; 
-#&gt; $codes$admin_county
-#&gt; [1] "E99999999"
-#&gt; 
-#&gt; $codes$admin_ward
-#&gt; [1] "E05000366"
-#&gt; 
-#&gt; $codes$parish
-#&gt; [1] "E43000209"
-#&gt; 
-#&gt; $codes$parliamentary_constituency
-#&gt; [1] "E14000764"
-#&gt; 
-#&gt; $codes$ccg
-#&gt; [1] "E38000240"
-#&gt; 
-#&gt; $codes$ccg_id
-#&gt; [1] "93C"
-#&gt; 
-#&gt; $codes$ced
-#&gt; [1] "E99999999"
-#&gt; 
-#&gt; $codes$nuts
-#&gt; [1] "UKI43"
-#&gt; 
-#&gt; $codes$lsoa
-#&gt; [1] "E01002699"
-#&gt; 
-#&gt; $codes$msoa
-#&gt; [1] "E02000570"
-#&gt; 
-#&gt; $codes$lau2
-#&gt; [1] "E05000366"
-#&gt; 
-#&gt; </div><div class='input'><span class='co'># }</span>
-
-</div></pre>
+    <pre class="examples"><span class='r-in'><span class='co'># \donttest{</span></span>
+<span class='r-in'><span class='fu'>random_postcode</span><span class='op'>(</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $postcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "TA7 9EN"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $quality</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 1</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 337842</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 139702</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $country</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "England"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $nhs_ha</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "South West"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $longitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] -2.890116</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 51.15318</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $european_electoral_region</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "South West"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $primary_care_trust</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Somerset"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $region</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "South West"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $lsoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Sedgemoor 012F"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $msoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Sedgemoor 012"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $incode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "9EN"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $outcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "TA7"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $parliamentary_constituency</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bridgwater and West Somerset"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Sedgemoor"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Chilton Polden"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Somerset"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "West Polden"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $ced</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Huntspill"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $ccg</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "NHS Somerset"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $nuts</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Somerset CC"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E07000188"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E10000027"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E05008915"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E04008619"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$parliamentary_constituency</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E14000595"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$ccg</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E38000150"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$ccg_id</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "11X"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$ced</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E58001309"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$nuts</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "TLK23"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$lsoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E01029151"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$msoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E02006072"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$lau2</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E07000188"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-in'><span class='fu'>random_postcode</span><span class='op'>(</span><span class='st'>"N1"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $postcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "N1 9RG"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $quality</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 1</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 530684</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 183454</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $country</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "England"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $nhs_ha</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "London"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $longitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] -0.117225</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 51.53487</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $european_electoral_region</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "London"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $primary_care_trust</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Islington"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $region</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "London"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $lsoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Islington 019D"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $msoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Islington 019"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $incode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "9RG"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $outcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "N1"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $parliamentary_constituency</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Islington South and Finsbury"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Islington"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Islington, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> NULL</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Caledonian"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $ced</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> NULL</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $ccg</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "NHS North Central London"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $nuts</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Haringey and Islington"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E09000019"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E99999999"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E05000368"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E43000209"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$parliamentary_constituency</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E14000764"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$ccg</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E38000240"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$ccg_id</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "93C"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$ced</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E99999999"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$nuts</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "TLI43"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$lsoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E01002710"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$msoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E02000572"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $codes$lau2</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E09000019"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-in'><span class='co'># }</span></span>
+<span class='r-in'></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

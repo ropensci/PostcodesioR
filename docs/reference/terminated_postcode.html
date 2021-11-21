@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">PostcodesioR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
       </span>
     </div>
 
@@ -172,13 +172,15 @@ The WGS84 latitude given the Postcode's national grid reference.</p></li>
 <a href='https://postcodes.io/docs'>https://postcodes.io/docs</a> for more details.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='fu'>terminated_postcode</span><span class='op'>(</span><span class='st'>"EC1Y 8LX"</span><span class='op'>)</span> <span class='co'># existing postcode</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: Not Found (HTTP 404).</span></div><div class='input'><span class='fu'>terminated_postcode</span><span class='op'>(</span><span class='st'>"E1W 1UU"</span><span class='op'>)</span> <span class='co'># terminated postcode</span>
-</div><div class='output co'>#&gt;   postcode year_terminated month_terminated longitude latitude
-#&gt; 1  E1W 1UU            2015                2 -0.073732 51.50801</div><div class='input'><span class='co'># }</span>
-
-</div></pre>
+    <pre class="examples"><span class='r-in'><span class='co'># \donttest{</span></span>
+<span class='r-in'><span class='fu'>terminated_postcode</span><span class='op'>(</span><span class='st'>"EC1Y 8LX"</span><span class='op'>)</span> <span class='co'># existing postcode</span></span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span> <span class='warning'>Warning: </span>Not Found (HTTP 404).</span>
+<span class='r-in'><span class='fu'>terminated_postcode</span><span class='op'>(</span><span class='st'>"E1W 1UU"</span><span class='op'>)</span> <span class='co'># terminated postcode</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   postcode year_terminated month_terminated longitude latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> 1  E1W 1UU            2015                2 -0.073732 51.50801</span>
+<span class='r-in'><span class='co'># }</span></span>
+<span class='r-in'></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

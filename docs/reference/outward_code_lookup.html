@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">PostcodesioR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
       </span>
     </div>
 
@@ -159,96 +159,100 @@
     <div class='dont-index'><p><code><a href='postcode_lookup.html'>postcode_lookup</a></code> for documentation.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='fu'>outward_code_lookup</span><span class='op'>(</span><span class='st'>"E1"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; $outcode
-#&gt; [1] "E1"
-#&gt; 
-#&gt; $longitude
-#&gt; [1] -0.05948891
-#&gt; 
-#&gt; $latitude
-#&gt; [1] 51.51739
-#&gt; 
-#&gt; $northings
-#&gt; [1] 181614
-#&gt; 
-#&gt; $eastings
-#&gt; [1] 534739
-#&gt; 
-#&gt; $admin_district
-#&gt; $admin_district[[1]]
-#&gt; [1] "Hackney"
-#&gt; 
-#&gt; $admin_district[[2]]
-#&gt; [1] "City of London"
-#&gt; 
-#&gt; $admin_district[[3]]
-#&gt; [1] "Tower Hamlets"
-#&gt; 
-#&gt; 
-#&gt; $parish
-#&gt; $parish[[1]]
-#&gt; [1] "Hackney, unparished area"
-#&gt; 
-#&gt; $parish[[2]]
-#&gt; [1] "City of London, unparished area"
-#&gt; 
-#&gt; $parish[[3]]
-#&gt; [1] "Tower Hamlets, unparished area"
-#&gt; 
-#&gt; 
-#&gt; $admin_county
-#&gt; list()
-#&gt; 
-#&gt; $admin_ward
-#&gt; $admin_ward[[1]]
-#&gt; [1] "Shadwell"
-#&gt; 
-#&gt; $admin_ward[[2]]
-#&gt; [1] "Spitalfields &amp; Banglatown"
-#&gt; 
-#&gt; $admin_ward[[3]]
-#&gt; [1] "St Dunstan's"
-#&gt; 
-#&gt; $admin_ward[[4]]
-#&gt; [1] "Portsoken"
-#&gt; 
-#&gt; $admin_ward[[5]]
-#&gt; [1] "Stepney Green"
-#&gt; 
-#&gt; $admin_ward[[6]]
-#&gt; [1] "Weavers"
-#&gt; 
-#&gt; $admin_ward[[7]]
-#&gt; [1] "Whitechapel"
-#&gt; 
-#&gt; $admin_ward[[8]]
-#&gt; [1] "Bethnal Green"
-#&gt; 
-#&gt; $admin_ward[[9]]
-#&gt; [1] "Bishopsgate"
-#&gt; 
-#&gt; $admin_ward[[10]]
-#&gt; [1] "Hoxton East &amp; Shoreditch"
-#&gt; 
-#&gt; $admin_ward[[11]]
-#&gt; [1] "Tower"
-#&gt; 
-#&gt; $admin_ward[[12]]
-#&gt; [1] "Aldgate"
-#&gt; 
-#&gt; $admin_ward[[13]]
-#&gt; [1] "St Peter's"
-#&gt; 
-#&gt; 
-#&gt; $country
-#&gt; $country[[1]]
-#&gt; [1] "England"
-#&gt; 
-#&gt; </div><div class='input'><span class='co'># }</span>
-
-</div></pre>
+    <pre class="examples"><span class='r-in'><span class='co'># \donttest{</span></span>
+<span class='r-in'><span class='fu'>outward_code_lookup</span><span class='op'>(</span><span class='st'>"E1"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $outcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E1"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $longitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] -0.05946509</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 51.51738</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 181613</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 534741</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_district[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Hackney"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_district[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "City of London"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_district[[3]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Tower Hamlets"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $parish[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Hackney, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $parish[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "City of London, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $parish[[3]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Tower Hamlets, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> list()</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Shadwell"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Spitalfields &amp; Banglatown"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward[[3]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "St Dunstan's"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward[[4]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Portsoken"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward[[5]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Stepney Green"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward[[6]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Weavers"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward[[7]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Whitechapel"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward[[8]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bow West"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward[[9]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bethnal Green"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward[[10]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bishopsgate"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward[[11]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Hoxton East &amp; Shoreditch"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward[[12]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Tower"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward[[13]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Aldgate"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $admin_ward[[14]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "St Peter's"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $country</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> $country[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "England"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-in'><span class='co'># }</span></span>
+<span class='r-in'></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

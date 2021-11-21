@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">PostcodesioR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
       </span>
     </div>
 
@@ -154,360 +154,364 @@ For only one postcode use <code><a href='postcode_lookup.html'>postcode_lookup</
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A list.</p>
+    <p>A list of length one.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='postcode_lookup.html'>postcode_lookup</a></code> for documentation.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='va'>pc_list</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-postcodes <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"PR3 0SG"</span>, <span class='st'>"M45 6GN"</span>, <span class='st'>"EX165BL"</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># spaces are ignored</span>
-<span class='fu'>bulk_postcode_lookup</span><span class='op'>(</span><span class='va'>pc_list</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [[1]]
-#&gt; [[1]]$query
-#&gt; [1] "PR3 0SG"
-#&gt; 
-#&gt; [[1]]$result
-#&gt; [[1]]$result$postcode
-#&gt; [1] "PR3 0SG"
-#&gt; 
-#&gt; [[1]]$result$quality
-#&gt; [1] 1
-#&gt; 
-#&gt; [[1]]$result$eastings
-#&gt; [1] 351012
-#&gt; 
-#&gt; [[1]]$result$northings
-#&gt; [1] 440302
-#&gt; 
-#&gt; [[1]]$result$country
-#&gt; [1] "England"
-#&gt; 
-#&gt; [[1]]$result$nhs_ha
-#&gt; [1] "North West"
-#&gt; 
-#&gt; [[1]]$result$longitude
-#&gt; [1] -2.746251
-#&gt; 
-#&gt; [[1]]$result$latitude
-#&gt; [1] 53.85663
-#&gt; 
-#&gt; [[1]]$result$european_electoral_region
-#&gt; [1] "North West"
-#&gt; 
-#&gt; [[1]]$result$primary_care_trust
-#&gt; [1] "North Lancashire Teaching"
-#&gt; 
-#&gt; [[1]]$result$region
-#&gt; [1] "North West"
-#&gt; 
-#&gt; [[1]]$result$lsoa
-#&gt; [1] "Wyre 006A"
-#&gt; 
-#&gt; [[1]]$result$msoa
-#&gt; [1] "Wyre 006"
-#&gt; 
-#&gt; [[1]]$result$incode
-#&gt; [1] "0SG"
-#&gt; 
-#&gt; [[1]]$result$outcode
-#&gt; [1] "PR3"
-#&gt; 
-#&gt; [[1]]$result$parliamentary_constituency
-#&gt; [1] "Wyre and Preston North"
-#&gt; 
-#&gt; [[1]]$result$admin_district
-#&gt; [1] "Wyre"
-#&gt; 
-#&gt; [[1]]$result$parish
-#&gt; [1] "Myerscough and Bilsborrow"
-#&gt; 
-#&gt; [[1]]$result$admin_county
-#&gt; [1] "Lancashire"
-#&gt; 
-#&gt; [[1]]$result$admin_ward
-#&gt; [1] "Brock with Catterall"
-#&gt; 
-#&gt; [[1]]$result$ced
-#&gt; [1] "Wyre Rural East"
-#&gt; 
-#&gt; [[1]]$result$ccg
-#&gt; [1] "NHS Fylde and Wyre"
-#&gt; 
-#&gt; [[1]]$result$nuts
-#&gt; [1] "Lancaster and Wyre"
-#&gt; 
-#&gt; [[1]]$result$codes
-#&gt; [[1]]$result$codes$admin_district
-#&gt; [1] "E07000128"
-#&gt; 
-#&gt; [[1]]$result$codes$admin_county
-#&gt; [1] "E10000017"
-#&gt; 
-#&gt; [[1]]$result$codes$admin_ward
-#&gt; [1] "E05009934"
-#&gt; 
-#&gt; [[1]]$result$codes$parish
-#&gt; [1] "E04005340"
-#&gt; 
-#&gt; [[1]]$result$codes$parliamentary_constituency
-#&gt; [1] "E14001057"
-#&gt; 
-#&gt; [[1]]$result$codes$ccg
-#&gt; [1] "E38000226"
-#&gt; 
-#&gt; [[1]]$result$codes$ccg_id
-#&gt; [1] "02M"
-#&gt; 
-#&gt; [[1]]$result$codes$ced
-#&gt; [1] "E58000832"
-#&gt; 
-#&gt; [[1]]$result$codes$nuts
-#&gt; [1] "UKD44"
-#&gt; 
-#&gt; [[1]]$result$codes$lsoa
-#&gt; [1] "E01025547"
-#&gt; 
-#&gt; [[1]]$result$codes$msoa
-#&gt; [1] "E02005324"
-#&gt; 
-#&gt; [[1]]$result$codes$lau2
-#&gt; [1] "E05009934"
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; [[2]]
-#&gt; [[2]]$query
-#&gt; [1] "M45 6GN"
-#&gt; 
-#&gt; [[2]]$result
-#&gt; [[2]]$result$postcode
-#&gt; [1] "M45 6GN"
-#&gt; 
-#&gt; [[2]]$result$quality
-#&gt; [1] 1
-#&gt; 
-#&gt; [[2]]$result$eastings
-#&gt; [1] 380416
-#&gt; 
-#&gt; [[2]]$result$northings
-#&gt; [1] 406002
-#&gt; 
-#&gt; [[2]]$result$country
-#&gt; [1] "England"
-#&gt; 
-#&gt; [[2]]$result$nhs_ha
-#&gt; [1] "North West"
-#&gt; 
-#&gt; [[2]]$result$longitude
-#&gt; [1] -2.297052
-#&gt; 
-#&gt; [[2]]$result$latitude
-#&gt; [1] 53.55028
-#&gt; 
-#&gt; [[2]]$result$european_electoral_region
-#&gt; [1] "North West"
-#&gt; 
-#&gt; [[2]]$result$primary_care_trust
-#&gt; [1] "Bury"
-#&gt; 
-#&gt; [[2]]$result$region
-#&gt; [1] "North West"
-#&gt; 
-#&gt; [[2]]$result$lsoa
-#&gt; [1] "Bury 019C"
-#&gt; 
-#&gt; [[2]]$result$msoa
-#&gt; [1] "Bury 019"
-#&gt; 
-#&gt; [[2]]$result$incode
-#&gt; [1] "6GN"
-#&gt; 
-#&gt; [[2]]$result$outcode
-#&gt; [1] "M45"
-#&gt; 
-#&gt; [[2]]$result$parliamentary_constituency
-#&gt; [1] "Bury South"
-#&gt; 
-#&gt; [[2]]$result$admin_district
-#&gt; [1] "Bury"
-#&gt; 
-#&gt; [[2]]$result$parish
-#&gt; [1] "Bury, unparished area"
-#&gt; 
-#&gt; [[2]]$result$admin_county
-#&gt; NULL
-#&gt; 
-#&gt; [[2]]$result$admin_ward
-#&gt; [1] "Pilkington Park"
-#&gt; 
-#&gt; [[2]]$result$ced
-#&gt; NULL
-#&gt; 
-#&gt; [[2]]$result$ccg
-#&gt; [1] "NHS Bury"
-#&gt; 
-#&gt; [[2]]$result$nuts
-#&gt; [1] "Greater Manchester North East"
-#&gt; 
-#&gt; [[2]]$result$codes
-#&gt; [[2]]$result$codes$admin_district
-#&gt; [1] "E08000002"
-#&gt; 
-#&gt; [[2]]$result$codes$admin_county
-#&gt; [1] "E99999999"
-#&gt; 
-#&gt; [[2]]$result$codes$admin_ward
-#&gt; [1] "E05000677"
-#&gt; 
-#&gt; [[2]]$result$codes$parish
-#&gt; [1] "E43000156"
-#&gt; 
-#&gt; [[2]]$result$codes$parliamentary_constituency
-#&gt; [1] "E14000612"
-#&gt; 
-#&gt; [[2]]$result$codes$ccg
-#&gt; [1] "E38000024"
-#&gt; 
-#&gt; [[2]]$result$codes$ccg_id
-#&gt; [1] "00V"
-#&gt; 
-#&gt; [[2]]$result$codes$ced
-#&gt; [1] "E99999999"
-#&gt; 
-#&gt; [[2]]$result$codes$nuts
-#&gt; [1] "UKD37"
-#&gt; 
-#&gt; [[2]]$result$codes$lsoa
-#&gt; [1] "E01004989"
-#&gt; 
-#&gt; [[2]]$result$codes$msoa
-#&gt; [1] "E02001037"
-#&gt; 
-#&gt; [[2]]$result$codes$lau2
-#&gt; [1] "E05000677"
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; [[3]]
-#&gt; [[3]]$query
-#&gt; [1] "EX165BL"
-#&gt; 
-#&gt; [[3]]$result
-#&gt; [[3]]$result$postcode
-#&gt; [1] "EX16 5BL"
-#&gt; 
-#&gt; [[3]]$result$quality
-#&gt; [1] 1
-#&gt; 
-#&gt; [[3]]$result$eastings
-#&gt; [1] 294478
-#&gt; 
-#&gt; [[3]]$result$northings
-#&gt; [1] 112252
-#&gt; 
-#&gt; [[3]]$result$country
-#&gt; [1] "England"
-#&gt; 
-#&gt; [[3]]$result$nhs_ha
-#&gt; [1] "South West"
-#&gt; 
-#&gt; [[3]]$result$longitude
-#&gt; [1] -3.50197
-#&gt; 
-#&gt; [[3]]$result$latitude
-#&gt; [1] 50.90006
-#&gt; 
-#&gt; [[3]]$result$european_electoral_region
-#&gt; [1] "South West"
-#&gt; 
-#&gt; [[3]]$result$primary_care_trust
-#&gt; [1] "Devon"
-#&gt; 
-#&gt; [[3]]$result$region
-#&gt; [1] "South West"
-#&gt; 
-#&gt; [[3]]$result$lsoa
-#&gt; [1] "Mid Devon 005C"
-#&gt; 
-#&gt; [[3]]$result$msoa
-#&gt; [1] "Mid Devon 005"
-#&gt; 
-#&gt; [[3]]$result$incode
-#&gt; [1] "5BL"
-#&gt; 
-#&gt; [[3]]$result$outcode
-#&gt; [1] "EX16"
-#&gt; 
-#&gt; [[3]]$result$parliamentary_constituency
-#&gt; [1] "Tiverton and Honiton"
-#&gt; 
-#&gt; [[3]]$result$admin_district
-#&gt; [1] "Mid Devon"
-#&gt; 
-#&gt; [[3]]$result$parish
-#&gt; [1] "Tiverton"
-#&gt; 
-#&gt; [[3]]$result$admin_county
-#&gt; [1] "Devon"
-#&gt; 
-#&gt; [[3]]$result$admin_ward
-#&gt; [1] "Westexe"
-#&gt; 
-#&gt; [[3]]$result$ced
-#&gt; [1] "Tiverton West"
-#&gt; 
-#&gt; [[3]]$result$ccg
-#&gt; [1] "NHS Devon"
-#&gt; 
-#&gt; [[3]]$result$nuts
-#&gt; [1] "Devon CC"
-#&gt; 
-#&gt; [[3]]$result$codes
-#&gt; [[3]]$result$codes$admin_district
-#&gt; [1] "E07000042"
-#&gt; 
-#&gt; [[3]]$result$codes$admin_county
-#&gt; [1] "E10000008"
-#&gt; 
-#&gt; [[3]]$result$codes$admin_ward
-#&gt; [1] "E05003531"
-#&gt; 
-#&gt; [[3]]$result$codes$parish
-#&gt; [1] "E04003055"
-#&gt; 
-#&gt; [[3]]$result$codes$parliamentary_constituency
-#&gt; [1] "E14000996"
-#&gt; 
-#&gt; [[3]]$result$codes$ccg
-#&gt; [1] "E38000230"
-#&gt; 
-#&gt; [[3]]$result$codes$ccg_id
-#&gt; [1] "15N"
-#&gt; 
-#&gt; [[3]]$result$codes$ced
-#&gt; [1] "E58000304"
-#&gt; 
-#&gt; [[3]]$result$codes$nuts
-#&gt; [1] "UKK43"
-#&gt; 
-#&gt; [[3]]$result$codes$lsoa
-#&gt; [1] "E01020079"
-#&gt; 
-#&gt; [[3]]$result$codes$msoa
-#&gt; [1] "E02004168"
-#&gt; 
-#&gt; [[3]]$result$codes$lau2
-#&gt; [1] "E05003531"
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; </div><div class='input'><span class='co'># }</span>
-
-</div></pre>
+    <pre class="examples"><span class='r-in'><span class='co'># \donttest{</span></span>
+<span class='r-in'><span class='va'>pc_list</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span></span>
+<span class='r-in'>postcodes <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"PR3 0SG"</span>, <span class='st'>"M45 6GN"</span>, <span class='st'>"EX165BL"</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># spaces are ignored</span></span>
+<span class='r-in'><span class='fu'>bulk_postcode_lookup</span><span class='op'>(</span><span class='va'>pc_list</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$query</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "PR3 0SG"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$postcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "PR3 0SG"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$quality</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 1</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 351012</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 440302</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$country</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "England"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$nhs_ha</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "North West"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$longitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] -2.746251</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 53.85663</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$european_electoral_region</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "North West"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$primary_care_trust</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "North Lancashire Teaching"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$region</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "North West"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$lsoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Wyre 006A"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$msoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Wyre 006"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$incode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "0SG"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$outcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "PR3"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$parliamentary_constituency</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Wyre and Preston North"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Wyre"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Myerscough and Bilsborrow"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Lancashire"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Brock with Catterall"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$ced</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Wyre Rural East"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$ccg</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "NHS Fylde and Wyre"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$nuts</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Lancaster and Wyre"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$codes</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$codes$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E07000128"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$codes$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E10000017"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$codes$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E05009934"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$codes$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E04005340"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$codes$parliamentary_constituency</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E14001057"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$codes$ccg</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E38000226"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$codes$ccg_id</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "02M"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$codes$ced</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E58000832"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$codes$nuts</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "TLD44"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$codes$lsoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E01025547"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$codes$msoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E02005324"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$result$codes$lau2</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E07000128"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$query</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "M45 6GN"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$postcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "M45 6GN"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$quality</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 1</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 380402</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 406021</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$country</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "England"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$nhs_ha</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "North West"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$longitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] -2.297262</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 53.55047</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$european_electoral_region</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "North West"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$primary_care_trust</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bury"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$region</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "North West"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$lsoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bury 019C"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$msoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bury 019"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$incode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "6GN"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$outcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "M45"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$parliamentary_constituency</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bury South"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bury"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bury, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> NULL</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Pilkington Park"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$ced</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> NULL</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$ccg</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "NHS Bury"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$nuts</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Greater Manchester North East"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$codes</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$codes$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E08000002"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$codes$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E99999999"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$codes$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E05000677"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$codes$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E43000156"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$codes$parliamentary_constituency</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E14000612"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$codes$ccg</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E38000024"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$codes$ccg_id</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "00V"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$codes$ced</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E99999999"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$codes$nuts</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "TLD37"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$codes$lsoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E01004989"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$codes$msoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E02001037"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$result$codes$lau2</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E08000002"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$query</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "EX165BL"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$postcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "EX16 5BL"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$quality</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 1</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 294478</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 112252</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$country</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "England"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$nhs_ha</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "South West"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$longitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] -3.50197</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 50.90006</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$european_electoral_region</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "South West"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$primary_care_trust</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Devon"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$region</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "South West"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$lsoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Mid Devon 005C"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$msoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Mid Devon 005"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$incode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "5BL"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$outcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "EX16"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$parliamentary_constituency</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Tiverton and Honiton"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Mid Devon"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Tiverton"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Devon"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Westexe"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$ced</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Tiverton West"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$ccg</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "NHS Devon"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$nuts</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Devon CC"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$codes</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$codes$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E07000042"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$codes$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E10000008"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$codes$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E05003531"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$codes$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E04003055"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$codes$parliamentary_constituency</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E14000996"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$codes$ccg</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E38000230"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$codes$ccg_id</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "15N"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$codes$ced</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E58000304"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$codes$nuts</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "TLK43"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$codes$lsoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E01020079"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$codes$msoa</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E02004168"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$result$codes$lau2</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "E07000042"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-in'><span class='co'># The function needs a list of length one. This won't work:</span></span>
+<span class='r-in'><span class='fu'>bulk_postcode_lookup</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='st'>"PR3 0SG"</span>, <span class='st'>"M45 6GN"</span>, <span class='st'>"EX165BL"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span class='r-wrn co'><span class='r-pr'>#&gt;</span> <span class='warning'>Warning: </span>Bad Request (HTTP 400).</span>
+<span class='r-in'><span class='co'># }</span></span>
+<span class='r-in'></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

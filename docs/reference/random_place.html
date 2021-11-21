@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">PostcodesioR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
       </span>
     </div>
 
@@ -151,18 +151,19 @@
     <div class='dont-index'><p><code><a href='place_lookup.html'>place_lookup</a></code> for documentation.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='fu'>random_place</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt;                   code    name_1 name_1_lang name_2 name_2_lang local_type
-#&gt; 1 osgb4000000074575589 Millhayes        NULL   NULL        NULL    Village
-#&gt;   outcode county_unitary county_unitary_type district_borough
-#&gt; 1    EX15          Devon              County        Mid Devon
-#&gt;   district_borough_type     region country longitude latitude eastings
-#&gt; 1              District South West England -3.225829 50.91921   313930
-#&gt;   northings min_eastings min_northings max_eastings max_northings
-#&gt; 1    114021       313761        113786       314284        114286</div><div class='input'><span class='co'># }</span>
-
-</div></pre>
+    <pre class="examples"><span class='r-in'><span class='co'># \donttest{</span></span>
+<span class='r-in'><span class='fu'>random_place</span><span class='op'>(</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>                   code    name_1 name_1_lang name_2 name_2_lang    local_type</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> 1 osgb4000000074570095 Woodstock        NULL   NULL        NULL Suburban Area</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   outcode        county_unitary county_unitary_type district_borough</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> 1    BS15 South Gloucestershire    UnitaryAuthority             NULL</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   district_borough_type     region country longitude latitude eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> 1                  NULL South West England -2.494697 51.45814   365726</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   northings min_eastings min_northings max_eastings max_northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> 1    173356       365379        173070       366076        173570</span>
+<span class='r-in'><span class='co'># }</span></span>
+<span class='r-in'></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -81,7 +81,7 @@ The search is based on the relative distance of the outcode centroid." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">PostcodesioR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
       </span>
     </div>
 
@@ -165,589 +165,590 @@ The search is based on the relative distance of the outcode centroid.</p>
     <div class='dont-index'><p><code><a href='postcode_lookup.html'>postcode_lookup</a></code> for documentation.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
-<span class='fu'>nearest_outcode_lonlat</span><span class='op'>(</span><span class='fl'>0.127</span>, <span class='fl'>51.507</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [[1]]
-#&gt; [[1]]$outcode
-#&gt; [1] "DA18"
-#&gt; 
-#&gt; [[1]]$longitude
-#&gt; [1] 0.1361489
-#&gt; 
-#&gt; [[1]]$latitude
-#&gt; [1] 51.49427
-#&gt; 
-#&gt; [[1]]$northings
-#&gt; [1] 179421
-#&gt; 
-#&gt; [[1]]$eastings
-#&gt; [1] 548388
-#&gt; 
-#&gt; [[1]]$admin_district
-#&gt; [[1]]$admin_district[[1]]
-#&gt; [1] "Bexley"
-#&gt; 
-#&gt; 
-#&gt; [[1]]$parish
-#&gt; [[1]]$parish[[1]]
-#&gt; [1] "Bexley, unparished area"
-#&gt; 
-#&gt; 
-#&gt; [[1]]$admin_county
-#&gt; list()
-#&gt; 
-#&gt; [[1]]$admin_ward
-#&gt; [[1]]$admin_ward[[1]]
-#&gt; [1] "Slade Green &amp; Northend"
-#&gt; 
-#&gt; [[1]]$admin_ward[[2]]
-#&gt; [1] "Thamesmead East"
-#&gt; 
-#&gt; 
-#&gt; [[1]]$country
-#&gt; [[1]]$country[[1]]
-#&gt; [1] "England"
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; [[2]]
-#&gt; [[2]]$outcode
-#&gt; [1] "SE28"
-#&gt; 
-#&gt; [[2]]$longitude
-#&gt; [1] 0.1044373
-#&gt; 
-#&gt; [[2]]$latitude
-#&gt; [1] 51.50237
-#&gt; 
-#&gt; [[2]]$northings
-#&gt; [1] 180258
-#&gt; 
-#&gt; [[2]]$eastings
-#&gt; [1] 546160
-#&gt; 
-#&gt; [[2]]$admin_district
-#&gt; [[2]]$admin_district[[1]]
-#&gt; [1] "Greenwich"
-#&gt; 
-#&gt; [[2]]$admin_district[[2]]
-#&gt; [1] "Bexley"
-#&gt; 
-#&gt; 
-#&gt; [[2]]$parish
-#&gt; [[2]]$parish[[1]]
-#&gt; [1] "Greenwich, unparished area"
-#&gt; 
-#&gt; [[2]]$parish[[2]]
-#&gt; [1] "Bexley, unparished area"
-#&gt; 
-#&gt; 
-#&gt; [[2]]$admin_county
-#&gt; list()
-#&gt; 
-#&gt; [[2]]$admin_ward
-#&gt; [[2]]$admin_ward[[1]]
-#&gt; [1] "Plumstead"
-#&gt; 
-#&gt; [[2]]$admin_ward[[2]]
-#&gt; [1] "Glyndon"
-#&gt; 
-#&gt; [[2]]$admin_ward[[3]]
-#&gt; [1] "Thamesmead Moorings"
-#&gt; 
-#&gt; [[2]]$admin_ward[[4]]
-#&gt; [1] "Thamesmead East"
-#&gt; 
-#&gt; 
-#&gt; [[2]]$country
-#&gt; [[2]]$country[[1]]
-#&gt; [1] "England"
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; [[3]]
-#&gt; [[3]]$outcode
-#&gt; [1] "SE2"
-#&gt; 
-#&gt; [[3]]$longitude
-#&gt; [1] 0.1159447
-#&gt; 
-#&gt; [[3]]$latitude
-#&gt; [1] 51.48965
-#&gt; 
-#&gt; [[3]]$northings
-#&gt; [1] 178867
-#&gt; 
-#&gt; [[3]]$eastings
-#&gt; [1] 547000
-#&gt; 
-#&gt; [[3]]$admin_district
-#&gt; [[3]]$admin_district[[1]]
-#&gt; [1] "Greenwich"
-#&gt; 
-#&gt; [[3]]$admin_district[[2]]
-#&gt; [1] "Bexley"
-#&gt; 
-#&gt; 
-#&gt; [[3]]$parish
-#&gt; [[3]]$parish[[1]]
-#&gt; [1] "Greenwich, unparished area"
-#&gt; 
-#&gt; [[3]]$parish[[2]]
-#&gt; [1] "Bexley, unparished area"
-#&gt; 
-#&gt; 
-#&gt; [[3]]$admin_county
-#&gt; list()
-#&gt; 
-#&gt; [[3]]$admin_ward
-#&gt; [[3]]$admin_ward[[1]]
-#&gt; [1] "Plumstead"
-#&gt; 
-#&gt; [[3]]$admin_ward[[2]]
-#&gt; [1] "West Heath"
-#&gt; 
-#&gt; [[3]]$admin_ward[[3]]
-#&gt; [1] "Belvedere"
-#&gt; 
-#&gt; [[3]]$admin_ward[[4]]
-#&gt; [1] "Thamesmead Moorings"
-#&gt; 
-#&gt; [[3]]$admin_ward[[5]]
-#&gt; [1] "Abbey Wood"
-#&gt; 
-#&gt; [[3]]$admin_ward[[6]]
-#&gt; [1] "Thamesmead East"
-#&gt; 
-#&gt; 
-#&gt; [[3]]$country
-#&gt; [[3]]$country[[1]]
-#&gt; [1] "England"
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; [[4]]
-#&gt; [[4]]$outcode
-#&gt; [1] "DA17"
-#&gt; 
-#&gt; [[4]]$longitude
-#&gt; [1] 0.1494741
-#&gt; 
-#&gt; [[4]]$latitude
-#&gt; [1] 51.48595
-#&gt; 
-#&gt; [[4]]$northings
-#&gt; [1] 178524
-#&gt; 
-#&gt; [[4]]$eastings
-#&gt; [1] 549340
-#&gt; 
-#&gt; [[4]]$admin_district
-#&gt; [[4]]$admin_district[[1]]
-#&gt; [1] "Bexley"
-#&gt; 
-#&gt; [[4]]$admin_district[[2]]
-#&gt; [1] "Dartford"
-#&gt; 
-#&gt; 
-#&gt; [[4]]$parish
-#&gt; [[4]]$parish[[1]]
-#&gt; [1] "Dartford, unparished area"
-#&gt; 
-#&gt; [[4]]$parish[[2]]
-#&gt; [1] "Bexley, unparished area"
-#&gt; 
-#&gt; 
-#&gt; [[4]]$admin_county
-#&gt; [[4]]$admin_county[[1]]
-#&gt; [1] "Kent"
-#&gt; 
-#&gt; 
-#&gt; [[4]]$admin_ward
-#&gt; [[4]]$admin_ward[[1]]
-#&gt; [1] "West Heath"
-#&gt; 
-#&gt; [[4]]$admin_ward[[2]]
-#&gt; [1] "Belvedere"
-#&gt; 
-#&gt; [[4]]$admin_ward[[3]]
-#&gt; [1] "Erith"
-#&gt; 
-#&gt; [[4]]$admin_ward[[4]]
-#&gt; [1] "Northumberland Heath"
-#&gt; 
-#&gt; [[4]]$admin_ward[[5]]
-#&gt; [1] "West Hill"
-#&gt; 
-#&gt; 
-#&gt; [[4]]$country
-#&gt; [[4]]$country[[1]]
-#&gt; [1] "England"
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; [[5]]
-#&gt; [[5]]$outcode
-#&gt; [1] "RM9"
-#&gt; 
-#&gt; [[5]]$longitude
-#&gt; [1] 0.1337999
-#&gt; 
-#&gt; [[5]]$latitude
-#&gt; [1] 51.54093
-#&gt; 
-#&gt; [[5]]$northings
-#&gt; [1] 184605
-#&gt; 
-#&gt; [[5]]$eastings
-#&gt; [1] 548073
-#&gt; 
-#&gt; [[5]]$admin_district
-#&gt; [[5]]$admin_district[[1]]
-#&gt; [1] "Havering"
-#&gt; 
-#&gt; [[5]]$admin_district[[2]]
-#&gt; [1] "Barking and Dagenham"
-#&gt; 
-#&gt; 
-#&gt; [[5]]$parish
-#&gt; [[5]]$parish[[1]]
-#&gt; [1] "Barking and Dagenham, unparished area"
-#&gt; 
-#&gt; [[5]]$parish[[2]]
-#&gt; [1] "Havering, unparished area"
-#&gt; 
-#&gt; 
-#&gt; [[5]]$admin_county
-#&gt; list()
-#&gt; 
-#&gt; [[5]]$admin_ward
-#&gt; [[5]]$admin_ward[[1]]
-#&gt; [1] "Mayesbrook"
-#&gt; 
-#&gt; [[5]]$admin_ward[[2]]
-#&gt; [1] "Parsloes"
-#&gt; 
-#&gt; [[5]]$admin_ward[[3]]
-#&gt; [1] "Thames"
-#&gt; 
-#&gt; [[5]]$admin_ward[[4]]
-#&gt; [1] "Heath"
-#&gt; 
-#&gt; [[5]]$admin_ward[[5]]
-#&gt; [1] "Goresbrook"
-#&gt; 
-#&gt; [[5]]$admin_ward[[6]]
-#&gt; [1] "South Hornchurch"
-#&gt; 
-#&gt; [[5]]$admin_ward[[7]]
-#&gt; [1] "Eastbury"
-#&gt; 
-#&gt; [[5]]$admin_ward[[8]]
-#&gt; [1] "Alibon"
-#&gt; 
-#&gt; [[5]]$admin_ward[[9]]
-#&gt; [1] "River"
-#&gt; 
-#&gt; 
-#&gt; [[5]]$country
-#&gt; [[5]]$country[[1]]
-#&gt; [1] "England"
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; [[6]]
-#&gt; [[6]]$outcode
-#&gt; [1] "IG11"
-#&gt; 
-#&gt; [[6]]$longitude
-#&gt; [1] 0.09329773
-#&gt; 
-#&gt; [[6]]$latitude
-#&gt; [1] 51.53502
-#&gt; 
-#&gt; [[6]]$northings
-#&gt; [1] 183867
-#&gt; 
-#&gt; [[6]]$eastings
-#&gt; [1] 545283
-#&gt; 
-#&gt; [[6]]$admin_district
-#&gt; [[6]]$admin_district[[1]]
-#&gt; [1] "Barking and Dagenham"
-#&gt; 
-#&gt; [[6]]$admin_district[[2]]
-#&gt; [1] "Newham"
-#&gt; 
-#&gt; [[6]]$admin_district[[3]]
-#&gt; [1] "Redbridge"
-#&gt; 
-#&gt; 
-#&gt; [[6]]$parish
-#&gt; [[6]]$parish[[1]]
-#&gt; [1] "Barking and Dagenham, unparished area"
-#&gt; 
-#&gt; [[6]]$parish[[2]]
-#&gt; [1] "Redbridge, unparished area"
-#&gt; 
-#&gt; [[6]]$parish[[3]]
-#&gt; [1] "Newham, unparished area"
-#&gt; 
-#&gt; 
-#&gt; [[6]]$admin_county
-#&gt; list()
-#&gt; 
-#&gt; [[6]]$admin_ward
-#&gt; [[6]]$admin_ward[[1]]
-#&gt; [1] "Longbridge"
-#&gt; 
-#&gt; [[6]]$admin_ward[[2]]
-#&gt; [1] "Becontree"
-#&gt; 
-#&gt; [[6]]$admin_ward[[3]]
-#&gt; [1] "Thames"
-#&gt; 
-#&gt; [[6]]$admin_ward[[4]]
-#&gt; [1] "East Ham South"
-#&gt; 
-#&gt; [[6]]$admin_ward[[5]]
-#&gt; [1] "Beckton"
-#&gt; 
-#&gt; [[6]]$admin_ward[[6]]
-#&gt; [1] "Mayfield"
-#&gt; 
-#&gt; [[6]]$admin_ward[[7]]
-#&gt; [1] "Eastbury"
-#&gt; 
-#&gt; [[6]]$admin_ward[[8]]
-#&gt; [1] "Abbey"
-#&gt; 
-#&gt; [[6]]$admin_ward[[9]]
-#&gt; [1] "Gascoigne"
-#&gt; 
-#&gt; 
-#&gt; [[6]]$country
-#&gt; [[6]]$country[[1]]
-#&gt; [1] "England"
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; [[7]]
-#&gt; [[7]]$outcode
-#&gt; [1] "SE18"
-#&gt; 
-#&gt; [[7]]$longitude
-#&gt; [1] 0.07258548
-#&gt; 
-#&gt; [[7]]$latitude
-#&gt; [1] 51.48434
-#&gt; 
-#&gt; [[7]]$northings
-#&gt; [1] 178190
-#&gt; 
-#&gt; [[7]]$eastings
-#&gt; [1] 544007
-#&gt; 
-#&gt; [[7]]$admin_district
-#&gt; [[7]]$admin_district[[1]]
-#&gt; [1] "Greenwich"
-#&gt; 
-#&gt; 
-#&gt; [[7]]$parish
-#&gt; [[7]]$parish[[1]]
-#&gt; [1] "Greenwich, unparished area"
-#&gt; 
-#&gt; 
-#&gt; [[7]]$admin_county
-#&gt; list()
-#&gt; 
-#&gt; [[7]]$admin_ward
-#&gt; [[7]]$admin_ward[[1]]
-#&gt; [1] "Plumstead"
-#&gt; 
-#&gt; [[7]]$admin_ward[[2]]
-#&gt; [1] "Glyndon"
-#&gt; 
-#&gt; [[7]]$admin_ward[[3]]
-#&gt; [1] "Woolwich Riverside"
-#&gt; 
-#&gt; [[7]]$admin_ward[[4]]
-#&gt; [1] "Shooters Hill"
-#&gt; 
-#&gt; [[7]]$admin_ward[[5]]
-#&gt; [1] "Kidbrooke with Hornfair"
-#&gt; 
-#&gt; [[7]]$admin_ward[[6]]
-#&gt; [1] "Woolwich Common"
-#&gt; 
-#&gt; 
-#&gt; [[7]]$country
-#&gt; [[7]]$country[[1]]
-#&gt; [1] "England"
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; [[8]]
-#&gt; [[8]]$outcode
-#&gt; [1] "RM10"
-#&gt; 
-#&gt; [[8]]$longitude
-#&gt; [1] 0.1578737
-#&gt; 
-#&gt; [[8]]$latitude
-#&gt; [1] 51.54486
-#&gt; 
-#&gt; [[8]]$northings
-#&gt; [1] 185091
-#&gt; 
-#&gt; [[8]]$eastings
-#&gt; [1] 549730
-#&gt; 
-#&gt; [[8]]$admin_district
-#&gt; [[8]]$admin_district[[1]]
-#&gt; [1] "Barking and Dagenham"
-#&gt; 
-#&gt; 
-#&gt; [[8]]$parish
-#&gt; [[8]]$parish[[1]]
-#&gt; [1] "Barking and Dagenham, unparished area"
-#&gt; 
-#&gt; 
-#&gt; [[8]]$admin_county
-#&gt; list()
-#&gt; 
-#&gt; [[8]]$admin_ward
-#&gt; [[8]]$admin_ward[[1]]
-#&gt; [1] "Heath"
-#&gt; 
-#&gt; [[8]]$admin_ward[[2]]
-#&gt; [1] "Village"
-#&gt; 
-#&gt; [[8]]$admin_ward[[3]]
-#&gt; [1] "Alibon"
-#&gt; 
-#&gt; [[8]]$admin_ward[[4]]
-#&gt; [1] "River"
-#&gt; 
-#&gt; [[8]]$admin_ward[[5]]
-#&gt; [1] "Eastbrook"
-#&gt; 
-#&gt; 
-#&gt; [[8]]$country
-#&gt; [[8]]$country[[1]]
-#&gt; [1] "England"
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; [[9]]
-#&gt; [[9]]$outcode
-#&gt; [1] "DA7"
-#&gt; 
-#&gt; [[9]]$longitude
-#&gt; [1] 0.1460127
-#&gt; 
-#&gt; [[9]]$latitude
-#&gt; [1] 51.46561
-#&gt; 
-#&gt; [[9]]$northings
-#&gt; [1] 176255
-#&gt; 
-#&gt; [[9]]$eastings
-#&gt; [1] 549166
-#&gt; 
-#&gt; [[9]]$admin_district
-#&gt; [[9]]$admin_district[[1]]
-#&gt; [1] "Bexley"
-#&gt; 
-#&gt; 
-#&gt; [[9]]$parish
-#&gt; [[9]]$parish[[1]]
-#&gt; [1] "Bexley, unparished area"
-#&gt; 
-#&gt; 
-#&gt; [[9]]$admin_county
-#&gt; list()
-#&gt; 
-#&gt; [[9]]$admin_ward
-#&gt; [[9]]$admin_ward[[1]]
-#&gt; [1] "Bexleyheath"
-#&gt; 
-#&gt; [[9]]$admin_ward[[2]]
-#&gt; [1] "Crook Log"
-#&gt; 
-#&gt; [[9]]$admin_ward[[3]]
-#&gt; [1] "West Heath"
-#&gt; 
-#&gt; [[9]]$admin_ward[[4]]
-#&gt; [1] "Northumberland Heath"
-#&gt; 
-#&gt; [[9]]$admin_ward[[5]]
-#&gt; [1] "Crayford"
-#&gt; 
-#&gt; [[9]]$admin_ward[[6]]
-#&gt; [1] "Barnehurst"
-#&gt; 
-#&gt; 
-#&gt; [[9]]$country
-#&gt; [[9]]$country[[1]]
-#&gt; [1] "England"
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; [[10]]
-#&gt; [[10]]$outcode
-#&gt; [1] "DA8"
-#&gt; 
-#&gt; [[10]]$longitude
-#&gt; [1] 0.1759264
-#&gt; 
-#&gt; [[10]]$latitude
-#&gt; [1] 51.47576
-#&gt; 
-#&gt; [[10]]$northings
-#&gt; [1] 177445
-#&gt; 
-#&gt; [[10]]$eastings
-#&gt; [1] 551210
-#&gt; 
-#&gt; [[10]]$admin_district
-#&gt; [[10]]$admin_district[[1]]
-#&gt; [1] "Bexley"
-#&gt; 
-#&gt; 
-#&gt; [[10]]$parish
-#&gt; [[10]]$parish[[1]]
-#&gt; [1] "Bexley, unparished area"
-#&gt; 
-#&gt; 
-#&gt; [[10]]$admin_county
-#&gt; list()
-#&gt; 
-#&gt; [[10]]$admin_ward
-#&gt; [[10]]$admin_ward[[1]]
-#&gt; [1] "Belvedere"
-#&gt; 
-#&gt; [[10]]$admin_ward[[2]]
-#&gt; [1] "Erith"
-#&gt; 
-#&gt; [[10]]$admin_ward[[3]]
-#&gt; [1] "Northumberland Heath"
-#&gt; 
-#&gt; [[10]]$admin_ward[[4]]
-#&gt; [1] "Slade Green &amp; Northend"
-#&gt; 
-#&gt; [[10]]$admin_ward[[5]]
-#&gt; [1] "Barnehurst"
-#&gt; 
-#&gt; 
-#&gt; [[10]]$country
-#&gt; [[10]]$country[[1]]
-#&gt; [1] "England"
-#&gt; 
-#&gt; 
-#&gt; </div><div class='input'><span class='co'># }</span>
-
-</div></pre>
+    <pre class="examples"><span class='r-in'><span class='co'># \donttest{</span></span>
+<span class='r-in'><span class='fu'>nearest_outcode_lonlat</span><span class='op'>(</span><span class='fl'>0.127</span>, <span class='fl'>51.507</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$outcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "DA18"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$longitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 0.1361732</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 51.49427</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 179422</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 548389</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$admin_district[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bexley"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$parish[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bexley, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> list()</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$admin_ward[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Slade Green &amp; Northend"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$admin_ward[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Thamesmead East"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$country</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[1]]$country[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "England"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$outcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "SE28"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$longitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 0.1044559</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 51.50236</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 180257</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 546162</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$admin_district[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Greenwich"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$admin_district[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bexley"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$parish[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Greenwich, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$parish[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bexley, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> list()</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$admin_ward[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Plumstead"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$admin_ward[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Glyndon"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$admin_ward[[3]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Thamesmead Moorings"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$admin_ward[[4]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Thamesmead East"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$country</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[2]]$country[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "England"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$outcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "SE2"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$longitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 0.1159018</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 51.48975</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 178879</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 546997</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$admin_district[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Greenwich"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$admin_district[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bexley"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$parish[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Greenwich, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$parish[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bexley, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> list()</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$admin_ward[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Plumstead"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$admin_ward[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "West Heath"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$admin_ward[[3]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Belvedere"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$admin_ward[[4]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Thamesmead Moorings"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$admin_ward[[5]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Abbey Wood"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$admin_ward[[6]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Thamesmead East"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$country</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[3]]$country[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "England"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$outcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "DA17"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$longitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 0.1491299</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 51.4862</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 178550</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 549315</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$admin_district[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bexley"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$admin_district[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Dartford"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$parish[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Dartford, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$parish[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bexley, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$admin_county[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Kent"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$admin_ward[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "West Heath"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$admin_ward[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Belvedere"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$admin_ward[[3]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Erith"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$admin_ward[[4]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Northumberland Heath"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$admin_ward[[5]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "West Hill"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$country</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[4]]$country[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "England"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$outcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "RM9"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$longitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 0.133861</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 51.54096</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 184609</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 548077</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$admin_district[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Havering"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$admin_district[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Barking and Dagenham"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$parish[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Barking and Dagenham, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$parish[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Havering, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> list()</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$admin_ward[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Mayesbrook"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$admin_ward[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Parsloes"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$admin_ward[[3]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Thames"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$admin_ward[[4]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Heath"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$admin_ward[[5]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Goresbrook"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$admin_ward[[6]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "South Hornchurch"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$admin_ward[[7]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Eastbury"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$admin_ward[[8]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Alibon"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$admin_ward[[9]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "River"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$country</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[5]]$country[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "England"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$outcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "IG11"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$longitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 0.09322834</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 51.53496</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 183860</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 545279</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$admin_district[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Barking and Dagenham"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$admin_district[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Newham"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$admin_district[[3]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Redbridge"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$parish[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Barking and Dagenham, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$parish[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Redbridge, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$parish[[3]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Newham, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> list()</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$admin_ward[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Longbridge"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$admin_ward[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Becontree"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$admin_ward[[3]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Thames"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$admin_ward[[4]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "East Ham South"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$admin_ward[[5]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Beckton"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$admin_ward[[6]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Mayfield"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$admin_ward[[7]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Eastbury"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$admin_ward[[8]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Abbey"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$admin_ward[[9]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Gascoigne"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$country</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[6]]$country[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "England"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$outcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "SE18"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$longitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 0.07273975</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 51.48435</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 178192</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 544017</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$admin_district[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Greenwich"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$parish[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Greenwich, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> list()</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$admin_ward[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Plumstead"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$admin_ward[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Glyndon"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$admin_ward[[3]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Woolwich Riverside"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$admin_ward[[4]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Shooters Hill"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$admin_ward[[5]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Kidbrooke with Hornfair"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$admin_ward[[6]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Woolwich Common"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$country</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[7]]$country[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "England"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$outcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "RM10"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$longitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 0.1578643</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 51.54491</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 185097</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 549729</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$admin_district[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Barking and Dagenham"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$parish[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Barking and Dagenham, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> list()</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$admin_ward[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Heath"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$admin_ward[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Village"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$admin_ward[[3]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Alibon"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$admin_ward[[4]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "River"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$admin_ward[[5]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Eastbrook"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$country</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[8]]$country[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "England"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$outcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "DA7"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$longitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 0.1459445</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 51.4656</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 176254</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 549161</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$admin_district[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bexley"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$parish[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bexley, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> list()</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$admin_ward[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bexleyheath"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$admin_ward[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Crook Log"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$admin_ward[[3]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "West Heath"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$admin_ward[[4]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Northumberland Heath"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$admin_ward[[5]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Crayford"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$admin_ward[[6]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Barnehurst"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$country</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[9]]$country[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "England"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$outcode</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "DA8"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$longitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 0.1757381</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$latitude</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 51.47576</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$northings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 177445</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$eastings</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] 551197</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$admin_district</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$admin_district[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bexley"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$parish</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$parish[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Bexley, unparished area"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$admin_county</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> list()</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$admin_ward</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$admin_ward[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Belvedere"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$admin_ward[[2]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Erith"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$admin_ward[[3]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Northumberland Heath"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$admin_ward[[4]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Slade Green &amp; Northend"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$admin_ward[[5]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "Barnehurst"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$country</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [[10]]$country[[1]]</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "England"</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-in'><span class='co'># }</span></span>
+<span class='r-in'></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
