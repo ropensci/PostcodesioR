@@ -221,7 +221,7 @@ random_place()
 This function can validate a UK postcode:
 
 ```{r}
-postcode_validation("EC1Y 8LX") # actual UK postcode
+postcode_validation("EC1Y8LX") # actual UK postcode
 ```
 
 
