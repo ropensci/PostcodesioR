@@ -92,7 +92,7 @@
       <h1 data-toc-skip>Introduction</h1>
                         <h4 class="author">Eryk Walczak</h4>
             
-            <h4 class="date">2021-11-21</h4>
+            <h4 class="date">2021-11-28</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/ropensci/PostcodesioR/blob/master/vignettes/Introduction.Rmd"><code>vignettes/Introduction.Rmd</code></a></small>
       <div class="hidden name"><code>Introduction.Rmd</code></div>
@@ -609,125 +609,16 @@
 <code class="sourceCode R"><span class="co"># without restrictions</span>
 <span class="fu"><a href="../reference/random_postcode.html">random_postcode</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <pre><code>## $postcode
-## [1] "BS21 5DT"
+## [1] "BR2 0AA"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 340495
+## [1] 538969
 ## 
 ## $northings
-## [1] 171582
-## 
-## $country
-## [1] "England"
-## 
-## $nhs_ha
-## [1] "South West"
-## 
-## $longitude
-## [1] -2.857513
-## 
-## $latitude
-## [1] 51.44009
-## 
-## $european_electoral_region
-## [1] "South West"
-## 
-## $primary_care_trust
-## [1] "North Somerset"
-## 
-## $region
-## [1] "South West"
-## 
-## $lsoa
-## [1] "North Somerset 007D"
-## 
-## $msoa
-## [1] "North Somerset 007"
-## 
-## $incode
-## [1] "5DT"
-## 
-## $outcode
-## [1] "BS21"
-## 
-## $parliamentary_constituency
-## [1] "North Somerset"
-## 
-## $admin_district
-## [1] "North Somerset"
-## 
-## $parish
-## [1] "Clevedon"
-## 
-## $admin_county
-## NULL
-## 
-## $admin_ward
-## [1] "Clevedon West"
-## 
-## $ced
-## NULL
-## 
-## $ccg
-## [1] "NHS Bristol, North Somerset and South Gloucestershire"
-## 
-## $nuts
-## [1] "Bath and North East Somerset, North Somerset and South Gloucestershire"
-## 
-## $codes
-## $codes$admin_district
-## [1] "E06000024"
-## 
-## $codes$admin_county
-## [1] "E99999999"
-## 
-## $codes$admin_ward
-## [1] "E05010282"
-## 
-## $codes$parish
-## [1] "E04001011"
-## 
-## $codes$parliamentary_constituency
-## [1] "E14000850"
-## 
-## $codes$ccg
-## [1] "E38000222"
-## 
-## $codes$ccg_id
-## [1] "15C"
-## 
-## $codes$ced
-## [1] "E99999999"
-## 
-## $codes$nuts
-## [1] "TLK12"
-## 
-## $codes$lsoa
-## [1] "E01014755"
-## 
-## $codes$msoa
-## [1] "E02003071"
-## 
-## $codes$lau2
-## [1] "E06000024"</code></pre>
-<p>A randomly generated postcode can also belong to a particular outcode:</p>
-<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># restrict to an outcode</span>
-<span class="fu"><a href="../reference/random_postcode.html">random_postcode</a></span><span class="op">(</span><span class="st">"N1"</span><span class="op">)</span></code></pre></div>
-<pre><code>## $postcode
-## [1] "N1 2SH"
-## 
-## $quality
-## [1] 1
-## 
-## $eastings
-## [1] 531832
-## 
-## $northings
-## [1] 183808
+## [1] 169530
 ## 
 ## $country
 ## [1] "England"
@@ -736,10 +627,119 @@
 ## [1] "London"
 ## 
 ## $longitude
-## [1] -0.100551
+## [1] -0.003321
 ## 
 ## $latitude
-## [1] 51.53779
+## [1] 51.40778
+## 
+## $european_electoral_region
+## [1] "London"
+## 
+## $primary_care_trust
+## [1] "Bromley"
+## 
+## $region
+## [1] "London"
+## 
+## $lsoa
+## [1] "Bromley 012B"
+## 
+## $msoa
+## [1] "Bromley 012"
+## 
+## $incode
+## [1] "0AA"
+## 
+## $outcode
+## [1] "BR2"
+## 
+## $parliamentary_constituency
+## [1] "Beckenham"
+## 
+## $admin_district
+## [1] "Bromley"
+## 
+## $parish
+## [1] "Bromley, unparished area"
+## 
+## $admin_county
+## NULL
+## 
+## $admin_ward
+## [1] "Copers Cope"
+## 
+## $ced
+## NULL
+## 
+## $ccg
+## [1] "NHS South East London"
+## 
+## $nuts
+## [1] "Bromley"
+## 
+## $codes
+## $codes$admin_district
+## [1] "E09000006"
+## 
+## $codes$admin_county
+## [1] "E99999999"
+## 
+## $codes$admin_ward
+## [1] "E05000113"
+## 
+## $codes$parish
+## [1] "E43000196"
+## 
+## $codes$parliamentary_constituency
+## [1] "E14000551"
+## 
+## $codes$ccg
+## [1] "E38000244"
+## 
+## $codes$ccg_id
+## [1] "72Q"
+## 
+## $codes$ced
+## [1] "E99999999"
+## 
+## $codes$nuts
+## [1] "TLI61"
+## 
+## $codes$lsoa
+## [1] "E01000713"
+## 
+## $codes$msoa
+## [1] "E02000138"
+## 
+## $codes$lau2
+## [1] "E09000006"</code></pre>
+<p>A randomly generated postcode can also belong to a particular outcode:</p>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># restrict to an outcode</span>
+<span class="fu"><a href="../reference/random_postcode.html">random_postcode</a></span><span class="op">(</span><span class="st">"N1"</span><span class="op">)</span></code></pre></div>
+<pre><code>## $postcode
+## [1] "N1 2TZ"
+## 
+## $quality
+## [1] 1
+## 
+## $eastings
+## [1] 531702
+## 
+## $northings
+## [1] 184041
+## 
+## $country
+## [1] "England"
+## 
+## $nhs_ha
+## [1] "London"
+## 
+## $longitude
+## [1] -0.102337
+## 
+## $latitude
+## [1] 51.53991
 ## 
 ## $european_electoral_region
 ## [1] "London"
@@ -751,13 +751,13 @@
 ## [1] "London"
 ## 
 ## $lsoa
-## [1] "Islington 016F"
+## [1] "Islington 017E"
 ## 
 ## $msoa
-## [1] "Islington 016"
+## [1] "Islington 017"
 ## 
 ## $incode
-## [1] "2SH"
+## [1] "2TZ"
 ## 
 ## $outcode
 ## [1] "N1"
@@ -815,10 +815,10 @@
 ## [1] "TLI43"
 ## 
 ## $codes$lsoa
-## [1] "E01002793"
+## [1] "E01002792"
 ## 
 ## $codes$msoa
-## [1] "E02000569"
+## [1] "E02000570"
 ## 
 ## $codes$lau2
 ## [1] "E09000019"</code></pre>
@@ -830,14 +830,14 @@
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/random_place.html">random_place</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<pre><code>##                   code           name_1 name_1_lang name_2 name_2_lang
-## 1 osgb4000000074817950 Lynne Mhor Croft        NULL   NULL        NULL
-##         local_type outcode county_unitary county_unitary_type district_borough
-## 1 Other Settlement     IV2       Highland    UnitaryAuthority             NULL
-##   district_borough_type   region  country longitude latitude eastings northings
-## 1                  NULL Scotland Scotland -4.420696 57.24998   254048    820294
+<pre><code>##                   code name_1 name_1_lang name_2 name_2_lang local_type outcode
+## 1 osgb4000000074564288 Cwmdwr        NULL   NULL        NULL     Hamlet    SA19
+##                      county_unitary county_unitary_type district_borough
+## 1 Sir Gaerfyrddin - Carmarthenshire    UnitaryAuthority             NULL
+##   district_borough_type region country longitude latitude eastings northings
+## 1                  NULL  Wales   Wales -3.881172 51.97839   270893    232774
 ##   min_eastings min_northings max_eastings max_northings
-## 1       253782        820050       254282        820550</code></pre>
+## 1       270625        232469       271168        233042</code></pre>
 </div>
 <div id="postcode-validation" class="section level2">
 <h2 class="hasAnchor">
@@ -874,7 +874,7 @@
 <a href="#find-nearest-postcodes-or-outcodes" class="anchor"></a>Find nearest postcodes or outcodes</h2>
 <p>Provide a postcode to get a list of the nearest postcodes:</p>
 <div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">near_pc</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/nearest_postcode.html">nearest_postcode</a></span><span class="op">(</span><span class="st">"EC1Y 8LX"</span><span class="op">)</span>
+<code class="sourceCode R"><span class="va">near_pc</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/nearest_postcode.html">nearest_postcode</a></span><span class="op">(</span><span class="st">"EC1Y8LX"</span><span class="op">)</span>
 
 <span class="co">#overview</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">near_pc</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></code></pre></div>

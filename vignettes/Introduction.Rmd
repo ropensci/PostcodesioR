@@ -245,7 +245,7 @@ It defaults to 10 candidates, but can be changed by specifying the `limit` argum
 Provide a postcode to get a list of the nearest postcodes:
 
 ```{r}
-near_pc <- nearest_postcode("EC1Y 8LX")
+near_pc <- nearest_postcode("EC1Y8LX")
 
 #overview
 str(near_pc[1])
