@@ -4,6 +4,7 @@
 #'
 #' @importFrom httr GET
 #' @importFrom httr warn_for_status
+#' @importFrom utils URLencode
 #'
 #' @param postcode A string. One valid UK postcode.
 #' This function is case- and space-insensitive.
@@ -115,6 +116,7 @@ postcode_lookup <- function(postcode) {
   if (length(nchar(postcode)) > 1) {
     stop("This function accepts only one postcode. For multiple requests please use bulk_postcode_lookup().")
   }
+  postcode <- URLencode(postcode)
   r <- GET(paste0("https://api.postcodes.io/postcodes/", postcode))
   warn_for_status(r)
   if (status_code(r) == 200) {

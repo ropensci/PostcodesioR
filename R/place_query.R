@@ -5,6 +5,7 @@
 #' and allows limiting the results.
 #'
 #' @importFrom httr GET
+#' @importFrom utils URLencode
 #'
 #' @param place A string. Name of a place to search for.
 #' @param limit An integer. Limits the number of matches to return.
@@ -28,6 +29,7 @@ place_query <- function(place, limit = 10) {
   if (limit > 100) {
     stop("Please provide an integer lower than 100.")
   }
+  place <- URLencode(place)
   r <- GET(paste0("https://api.postcodes.io/places?q=",
                   place, "&limit=", limit))
   extract_results(r)

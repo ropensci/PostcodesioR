@@ -30,6 +30,7 @@ nearest_postcode <- function(postcode, limit = 10, radius = 100) {
   if (radius > 2000 || radius < 100) {
     stop("Please provide a radius between 100 and 2000 (m).")
   }
+  postcode <- URLencode(postcode)
   r <- GET(paste0("https://api.postcodes.io/postcodes/",
                   postcode,
                   "/nearest",

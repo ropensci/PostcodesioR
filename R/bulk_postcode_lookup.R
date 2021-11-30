@@ -3,6 +3,7 @@
 #' Returns a list of matching postcodes and respective available data.
 #'
 #' @importFrom httr POST
+#' @importFrom utils URLencode
 #'
 #' @param postcodes Accepts a list of postcodes. Accepts up to 100 postcodes.
 #' For only one postcode use \code{\link{postcode_lookup}}.
@@ -23,6 +24,7 @@
 #'
 bulk_postcode_lookup <- function(postcodes) {
   check_list_limit(postcodes)
+  postcodes <- lapply(postcodes, URLencode)
   r <- POST("https://api.postcodes.io/postcodes",
             body = postcodes,
             encode = "json")

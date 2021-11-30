@@ -5,6 +5,7 @@
 #' @importFrom httr GET
 #' @importFrom httr warn_for_status
 #' @importFrom httr status_code
+#' @importFrom utils URLencode
 #'
 #' @param postcode A string. Terminated UK postcode.
 #'
@@ -38,7 +39,7 @@ terminated_postcode <- function(postcode) {
   if (!is.character(postcode) || nchar(postcode) < 3) {
     stop("Please provide a UK postcode.")
   }
-
+  postcode <- URLencode(postcode)
   r <- GET(paste0("https://api.postcodes.io/terminated_postcodes/", postcode))
   warn_for_status(r)
 

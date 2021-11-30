@@ -9,14 +9,12 @@ test_that("scottish_postcode_lookup works as expected", {
   incorrect_postcode3 <- "EC1Y8LX"
 
   postcode_lookup_result <- scottish_postcode_lookup("EH12NG")
-  incorrect_pc_lookup_result <- scottish_postcode_lookup(incorrect_postcode3)
 
   expect_error(scottish_postcode_lookup(incorrect_postcode1))
   expect_error(scottish_postcode_lookup(incorrect_postcode2))
   expect_warning(scottish_postcode_lookup(incorrect_postcode3))
 
   expect_that(postcode_lookup_result, is_a("data.frame"))
-  expect_that(incorrect_pc_lookup_result, is_a("data.frame"))
 
   # Check if new variables were added to the API
   harcoded_scottish_lookup_names <-

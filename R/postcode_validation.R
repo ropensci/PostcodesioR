@@ -3,6 +3,7 @@
 #' Convenience method to validate a postcode.
 #'
 #' @importFrom httr GET
+#' @importFrom utils URLencode
 #'
 #' @param postcode A string. Valid UK postcode.
 #'
@@ -17,6 +18,7 @@
 #' }
 #'
 postcode_validation <- function(postcode) {
+  postcode <- URLencode(postcode)
   r <- GET(paste0("https://api.postcodes.io/postcodes/", postcode, "/validate"))
   extract_results(r)
 }
