@@ -86,13 +86,13 @@
 
       
 
-      </header><script src="Introduction_files/header-attrs-2.8/header-attrs.js"></script><div class="row">
+      </header><script src="Introduction_files/header-attrs-2.11/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Introduction</h1>
                         <h4 class="author">Eryk Walczak</h4>
             
-            <h4 class="date">2021-11-28</h4>
+            <h4 class="date">2021-11-30</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/ropensci/PostcodesioR/blob/master/vignettes/Introduction.Rmd"><code>vignettes/Introduction.Rmd</code></a></small>
       <div class="hidden name"><code>Introduction.Rmd</code></div>
@@ -217,44 +217,8 @@
 <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">bulk_lookup_result</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></code></pre></div>
 <pre><code>## List of 1
 ##  $ :List of 2
-##   ..$ query : chr "PR3 0SG"
-##   ..$ result:List of 24
-##   .. ..$ postcode                  : chr "PR3 0SG"
-##   .. ..$ quality                   : int 1
-##   .. ..$ eastings                  : int 351012
-##   .. ..$ northings                 : int 440302
-##   .. ..$ country                   : chr "England"
-##   .. ..$ nhs_ha                    : chr "North West"
-##   .. ..$ longitude                 : num -2.75
-##   .. ..$ latitude                  : num 53.9
-##   .. ..$ european_electoral_region : chr "North West"
-##   .. ..$ primary_care_trust        : chr "North Lancashire Teaching"
-##   .. ..$ region                    : chr "North West"
-##   .. ..$ lsoa                      : chr "Wyre 006A"
-##   .. ..$ msoa                      : chr "Wyre 006"
-##   .. ..$ incode                    : chr "0SG"
-##   .. ..$ outcode                   : chr "PR3"
-##   .. ..$ parliamentary_constituency: chr "Wyre and Preston North"
-##   .. ..$ admin_district            : chr "Wyre"
-##   .. ..$ parish                    : chr "Myerscough and Bilsborrow"
-##   .. ..$ admin_county              : chr "Lancashire"
-##   .. ..$ admin_ward                : chr "Brock with Catterall"
-##   .. ..$ ced                       : chr "Wyre Rural East"
-##   .. ..$ ccg                       : chr "NHS Fylde and Wyre"
-##   .. ..$ nuts                      : chr "Lancaster and Wyre"
-##   .. ..$ codes                     :List of 12
-##   .. .. ..$ admin_district            : chr "E07000128"
-##   .. .. ..$ admin_county              : chr "E10000017"
-##   .. .. ..$ admin_ward                : chr "E05009934"
-##   .. .. ..$ parish                    : chr "E04005340"
-##   .. .. ..$ parliamentary_constituency: chr "E14001057"
-##   .. .. ..$ ccg                       : chr "E38000226"
-##   .. .. ..$ ccg_id                    : chr "02M"
-##   .. .. ..$ ced                       : chr "E58000832"
-##   .. .. ..$ nuts                      : chr "TLD44"
-##   .. .. ..$ lsoa                      : chr "E01025547"
-##   .. .. ..$ msoa                      : chr "E02005324"
-##   .. .. ..$ lau2                      : chr "E07000128"</code></pre>
+##   ..$ query : chr "PR3%200SG"
+##   ..$ result: NULL</code></pre>
 <p>If you want to work with data frame then the nested list created above can be turned into a data frame</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://purrr.tidyverse.org">purrr</a></span><span class="op">)</span>
@@ -609,125 +573,125 @@
 <code class="sourceCode R"><span class="co"># without restrictions</span>
 <span class="fu"><a href="../reference/random_postcode.html">random_postcode</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <pre><code>## $postcode
-## [1] "BR2 0AA"
+## [1] "NE48 1RR"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 538969
+## [1] 380726
 ## 
 ## $northings
-## [1] 169530
+## [1] 593845
 ## 
 ## $country
 ## [1] "England"
 ## 
 ## $nhs_ha
-## [1] "London"
+## [1] "North East"
 ## 
 ## $longitude
-## [1] -0.003321
+## [1] -2.30464
 ## 
 ## $latitude
-## [1] 51.40778
+## [1] 55.23842
 ## 
 ## $european_electoral_region
-## [1] "London"
+## [1] "North East"
 ## 
 ## $primary_care_trust
-## [1] "Bromley"
+## [1] "Northumberland"
 ## 
 ## $region
-## [1] "London"
+## [1] "North East"
 ## 
 ## $lsoa
-## [1] "Bromley 012B"
+## [1] "Northumberland 019C"
 ## 
 ## $msoa
-## [1] "Bromley 012"
+## [1] "Northumberland 019"
 ## 
 ## $incode
-## [1] "0AA"
+## [1] "1RR"
 ## 
 ## $outcode
-## [1] "BR2"
+## [1] "NE48"
 ## 
 ## $parliamentary_constituency
-## [1] "Beckenham"
+## [1] "Hexham"
 ## 
 ## $admin_district
-## [1] "Bromley"
+## [1] "Northumberland"
 ## 
 ## $parish
-## [1] "Bromley, unparished area"
+## [1] "Tarset"
 ## 
 ## $admin_county
 ## NULL
 ## 
 ## $admin_ward
-## [1] "Copers Cope"
+## [1] "Bellingham"
 ## 
 ## $ced
 ## NULL
 ## 
 ## $ccg
-## [1] "NHS South East London"
+## [1] "NHS Northumberland"
 ## 
 ## $nuts
-## [1] "Bromley"
+## [1] "Northumberland"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "E09000006"
+## [1] "E06000057"
 ## 
 ## $codes$admin_county
 ## [1] "E99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05000113"
+## [1] "E05009101"
 ## 
 ## $codes$parish
-## [1] "E43000196"
+## [1] "E04010867"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "E14000551"
+## [1] "E14000746"
 ## 
 ## $codes$ccg
-## [1] "E38000244"
+## [1] "E38000130"
 ## 
 ## $codes$ccg_id
-## [1] "72Q"
+## [1] "00L"
 ## 
 ## $codes$ced
 ## [1] "E99999999"
 ## 
 ## $codes$nuts
-## [1] "TLI61"
+## [1] "TLC21"
 ## 
 ## $codes$lsoa
-## [1] "E01000713"
+## [1] "E01027503"
 ## 
 ## $codes$msoa
-## [1] "E02000138"
+## [1] "E02005727"
 ## 
 ## $codes$lau2
-## [1] "E09000006"</code></pre>
+## [1] "E06000057"</code></pre>
 <p>A randomly generated postcode can also belong to a particular outcode:</p>
 <div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># restrict to an outcode</span>
 <span class="fu"><a href="../reference/random_postcode.html">random_postcode</a></span><span class="op">(</span><span class="st">"N1"</span><span class="op">)</span></code></pre></div>
 <pre><code>## $postcode
-## [1] "N1 2TZ"
+## [1] "N1 5EQ"
 ## 
 ## $quality
 ## [1] 1
 ## 
 ## $eastings
-## [1] 531702
+## [1] 532764
 ## 
 ## $northings
-## [1] 184041
+## [1] 183649
 ## 
 ## $country
 ## [1] "England"
@@ -736,92 +700,92 @@
 ## [1] "London"
 ## 
 ## $longitude
-## [1] -0.102337
+## [1] -0.08718
 ## 
 ## $latitude
-## [1] 51.53991
+## [1] 51.53614
 ## 
 ## $european_electoral_region
 ## [1] "London"
 ## 
 ## $primary_care_trust
-## [1] "Islington"
+## [1] "City and Hackney Teaching"
 ## 
 ## $region
 ## [1] "London"
 ## 
 ## $lsoa
-## [1] "Islington 017E"
+## [1] "Hackney 025A"
 ## 
 ## $msoa
-## [1] "Islington 017"
+## [1] "Hackney 025"
 ## 
 ## $incode
-## [1] "2TZ"
+## [1] "5EQ"
 ## 
 ## $outcode
 ## [1] "N1"
 ## 
 ## $parliamentary_constituency
-## [1] "Islington South and Finsbury"
+## [1] "Hackney South and Shoreditch"
 ## 
 ## $admin_district
-## [1] "Islington"
+## [1] "Hackney"
 ## 
 ## $parish
-## [1] "Islington, unparished area"
+## [1] "Hackney, unparished area"
 ## 
 ## $admin_county
 ## NULL
 ## 
 ## $admin_ward
-## [1] "St Mary's"
+## [1] "Hoxton East &amp; Shoreditch"
 ## 
 ## $ced
 ## NULL
 ## 
 ## $ccg
-## [1] "NHS North Central London"
+## [1] "NHS North East London"
 ## 
 ## $nuts
-## [1] "Haringey and Islington"
+## [1] "Hackney and Newham"
 ## 
 ## $codes
 ## $codes$admin_district
-## [1] "E09000019"
+## [1] "E09000012"
 ## 
 ## $codes$admin_county
 ## [1] "E99999999"
 ## 
 ## $codes$admin_ward
-## [1] "E05000379"
+## [1] "E05009377"
 ## 
 ## $codes$parish
-## [1] "E43000209"
+## [1] "E43000202"
 ## 
 ## $codes$parliamentary_constituency
-## [1] "E14000764"
+## [1] "E14000721"
 ## 
 ## $codes$ccg
-## [1] "E38000240"
+## [1] "E38000255"
 ## 
 ## $codes$ccg_id
-## [1] "93C"
+## [1] "A3A8R"
 ## 
 ## $codes$ced
 ## [1] "E99999999"
 ## 
 ## $codes$nuts
-## [1] "TLI43"
+## [1] "TLI41"
 ## 
 ## $codes$lsoa
-## [1] "E01002792"
+## [1] "E01001752"
 ## 
 ## $codes$msoa
-## [1] "E02000570"
+## [1] "E02000369"
 ## 
 ## $codes$lau2
-## [1] "E09000019"</code></pre>
+## [1] "E09000012"</code></pre>
 </div>
 </div>
 <div id="places" class="section level2">
@@ -830,14 +794,14 @@
 <p>You can also generate a random place, specified by an OSGB code, with corresponding geographic information:</p>
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/random_place.html">random_place</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<pre><code>##                   code name_1 name_1_lang name_2 name_2_lang local_type outcode
-## 1 osgb4000000074564288 Cwmdwr        NULL   NULL        NULL     Hamlet    SA19
-##                      county_unitary county_unitary_type district_borough
-## 1 Sir Gaerfyrddin - Carmarthenshire    UnitaryAuthority             NULL
-##   district_borough_type region country longitude latitude eastings northings
-## 1                  NULL  Wales   Wales -3.881172 51.97839   270893    232774
-##   min_eastings min_northings max_eastings max_northings
-## 1       270625        232469       271168        233042</code></pre>
+<pre><code>##                   code      name_1 name_1_lang name_2 name_2_lang local_type
+## 1 osgb4000000074550257 Collins End        NULL   NULL        NULL     Hamlet
+##   outcode county_unitary county_unitary_type  district_borough
+## 1     RG8    Oxfordshire              County South Oxfordshire
+##   district_borough_type     region country longitude latitude eastings
+## 1              District South East England -1.052471  51.5052   465861
+##   northings min_eastings min_northings max_eastings max_northings
+## 1    178899       465606        178580       466106        179080</code></pre>
 </div>
 <div id="postcode-validation" class="section level2">
 <h2 class="hasAnchor">
