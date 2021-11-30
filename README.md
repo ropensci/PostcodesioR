@@ -5,8 +5,6 @@ PostcodesioR
 
 [![Travis-CI Build
 Status](https://travis-ci.org/ropensci/PostcodesioR.svg?branch=master)](https://travis-ci.org/ropensci/PostcodesioR)
-[![Codecov test
-coverage](https://codecov.io/gh/ropensci/PostcodesioR/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/PostcodesioR?branch=master)
 [![Package-License](https://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![](https://badges.ropensci.org/176_status.svg)](https://github.com/ropensci/software-review/issues/176)
 [![Project Status: Active – The project has reached a stable, usable
