@@ -118,6 +118,25 @@ Check the
 [vignette](https://docs.ropensci.org/PostcodesioR/articles/Introduction.html)
 to see all functions in action.
 
+## Citation
+
+Please cite this package if it is used in a publication
+
+`Walczak, E. (2021). PostcodesioR: API Wrapper Around 'Postcodes.io'. R package version 0.3.1, https://cran.r-project.org/web/packages/PostcodesioR/.`
+
+BibTeX entry is here:
+
+``` latex
+@Manual{,
+  title = {PostcodesioR: API Wrapper Around 'Postcodes.io'},
+  author = {Eryk Walczak},
+  year = {2021},
+  doi = {10.5281/zenodo.5717210},
+  note = {R package version 0.3.1},
+  url = {https://cran.r-project.org/web/packages/PostcodesioR/},
+}
+```
+
 ## Notes
 
 Currently, there is a limit to the number of API calls that can be made.
