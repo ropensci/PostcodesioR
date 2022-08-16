@@ -73,7 +73,7 @@ BibTeX entry is here:
 
 ```{latex, echo=TRUE, eval=FALSE}
 @Manual{,
-  title = {PostcodesioR: API Wrapper Around 'Postcodes.io'},
+  title = {PostcodesioR: API Wrapper Around Postcodes.io},
   author = {Eryk Walczak},
   year = {2021},
   doi = {10.5281/zenodo.5717210},
