@@ -14,7 +14,7 @@ affiliations:
  - name: University College London
    index: 1
 citation_author: Walczak
-date: 19 March 2023
+date: 1 April 2023
 year: 2023
 bibliography: paper.bib
 output: rticles::joss_article
@@ -40,14 +40,16 @@ This package can be installed from GitHub (developmental version) or CRAN (stabl
 
 In order to install ``PostcodesioR`` use one of the following commands:
 
-```{r, eval = FALSE}
+
+```r
 # stable version
 install.packages("PostcodesioR")
 ```
 
 or
 
-```{r, eval = FALSE}
+
+```r
 # developmental version
 if(!require("devtools")) {
   install.packages("devtools")
@@ -59,7 +61,8 @@ devtools::install_github("ropensci/PostcodesioR")
 
 Load the package by typing
 
-```{r, warning = FALSE, message = FALSE}
+
+```r
 library(PostcodesioR)
 ```
 
@@ -71,11 +74,34 @@ For additional information about the returned data and the function calls see th
 
 The main function of this package provides information related to a given UK postcode
 
-```{r, message = FALSE, warning = FALSE}
+
+```r
 lookup_result <- postcode_lookup("EC1Y8LX")
 
 #overview
 names(lookup_result)
+```
+
+```
+##  [1] "postcode"                        "quality"                        
+##  [3] "eastings"                        "northings"                      
+##  [5] "country"                         "nhs_ha"                         
+##  [7] "longitude"                       "latitude"                       
+##  [9] "european_electoral_region"       "primary_care_trust"             
+## [11] "region"                          "lsoa"                           
+## [13] "msoa"                            "incode"                         
+## [15] "outcode"                         "parliamentary_constituency"     
+## [17] "admin_district"                  "parish"                         
+## [19] "admin_county"                    "date_of_introduction"           
+## [21] "admin_ward"                      "ced"                            
+## [23] "ccg"                             "nuts"                           
+## [25] "pfa"                             "admin_district_code"            
+## [27] "admin_county_code"               "admin_ward_code"                
+## [29] "parish_code"                     "parliamentary_constituency_code"
+## [31] "ccg_code"                        "ccg_id_code"                    
+## [33] "ced_code"                        "nuts_code"                      
+## [35] "lsoa_code"                       "msoa_code"                      
+## [37] "lau2_code"                       "pfa_code"
 ```
 
 Read the package's [vignette](https://docs.ropensci.org/PostcodesioR/articles/Introduction.html) to extensive documentation of all functions used in the package.

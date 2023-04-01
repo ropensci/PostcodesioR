@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.19)  19 MAR 2023 17:26
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.3.19)  1 APR 2023 20:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**PostcodesioR.tex
-(./PostcodesioR.tex
+**paper.tex
+(./paper.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/home/e/.TinyTeX/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -838,8 +838,8 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \cslentryspacingunit=\skip95
 \@quotelevel=\count466
 \@quotereset=\count467
-(./PostcodesioR.aux)
-\openout1 = `PostcodesioR.aux'.
+(./paper.aux)
+\openout1 = `paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 265.
 LaTeX Font Info:    ... okay on input line 265.
@@ -866,9 +866,9 @@ LaTeX Font Info:    ... okay on input line 265.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 265.
 LaTeX Font Info:    ... okay on input line 265.
 Package hyperref Info: Link coloring ON on input line 265.
-(./PostcodesioR.out) (./PostcodesioR.out)
+(./paper.out) (./paper.out)
 \@outlinefile=\write6
-\openout6 = `PostcodesioR.out'.
+\openout6 = `paper.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
@@ -881,11 +881,11 @@ Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `PostcodesioR.bcf'.
+\openout4 = `paper.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'PostcodesioR.bbl' not found.
-No file PostcodesioR.bbl.
+Package biblatex Info: ... file 'paper.bbl' not found.
+No file paper.bbl.
 Package biblatex Info: Reference section=0 on input line 265.
 Package biblatex Info: Reference segment=0 on input line 265.
 *geometry* driver: auto-detecting
@@ -982,20 +982,20 @@ Package fancyhdr Warning: \headheight is too small (62.59596pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.95425pt}.
 
-[3] (./PostcodesioR.aux)
-Package rerunfilecheck Info: File `PostcodesioR.out' has not changed.
+[3] (./paper.aux)
+Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: FF231B4D968DB03DE619606EF3C8933B;827.
-Package logreq Info: Writing requests to 'PostcodesioR.run.xml'.
-\openout1 = `PostcodesioR.run.xml'.
+Package logreq Info: Writing requests to 'paper.run.xml'.
+\openout1 = `paper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  34957 strings out of 478683
- 714851 string characters out of 5848772
+ 714704 string characters out of 5848772
  1865018 words of memory out of 5000000
  54556 multiletter control sequences out of 15000+600000
  519159 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 84i,12n,81p,685b,848s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,81p,678b,848s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on PostcodesioR.pdf (3 pages).
+Output written on paper.pdf (3 pages).
