@@ -10,8 +10,8 @@ Status](https://travis-ci.org/ropensci/PostcodesioR.svg?branch=master)](https://
 [![Project Status: Active – The project has reached a stable, usable
 state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/)
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/PostcodesioR)](https://cran.r-project.org/package=PostcodesioR)
-[![DOI](https://zenodo.org/badge/64221541.svg)](https://zenodo.org/badge/latestdoi/64221541)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/PostcodesioR)](https://cran.r-project.org/package=PostcodesioR)
+[![DOI](https://joss.theoj.org/papers/10.21105/joss.05334/status.svg)](https://doi.org/10.21105/joss.05334)
 ![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/PostcodesioR)
 
 An API wrapper around [postcodes.io](https://postcodes.io/) - free UK
@@ -77,7 +77,7 @@ lookup_result <- postcode_lookup("EC1Y8LX")
 str(lookup_result)
 ```
 
-    ## 'data.frame':    1 obs. of  35 variables:
+    ## 'data.frame':    1 obs. of  38 variables:
     ##  $ postcode                       : chr "EC1Y 8LX"
     ##  $ quality                        : int 1
     ##  $ eastings                       : int 532544
@@ -97,13 +97,15 @@ str(lookup_result)
     ##  $ admin_district                 : chr "Islington"
     ##  $ parish                         : chr "Islington, unparished area"
     ##  $ admin_county                   : logi NA
+    ##  $ date_of_introduction           : chr "198001"
     ##  $ admin_ward                     : chr "Bunhill"
     ##  $ ced                            : logi NA
     ##  $ ccg                            : chr "NHS North Central London"
     ##  $ nuts                           : chr "Haringey and Islington"
+    ##  $ pfa                            : chr "Metropolitan Police"
     ##  $ admin_district_code            : chr "E09000019"
     ##  $ admin_county_code              : chr "E99999999"
-    ##  $ admin_ward_code                : chr "E05000367"
+    ##  $ admin_ward_code                : chr "E05013699"
     ##  $ parish_code                    : chr "E43000209"
     ##  $ parliamentary_constituency_code: chr "E14000764"
     ##  $ ccg_code                       : chr "E38000240"
@@ -113,6 +115,7 @@ str(lookup_result)
     ##  $ lsoa_code                      : chr "E01002704"
     ##  $ msoa_code                      : chr "E02000576"
     ##  $ lau2_code                      : chr "E09000019"
+    ##  $ pfa_code                       : chr "E23000001"
 
 Check the
 [vignette](https://docs.ropensci.org/PostcodesioR/articles/Introduction.html)
@@ -122,16 +125,20 @@ to see all functions in action.
 
 Please cite this package if it is used in a publication
 
-`Walczak, E. (2021). PostcodesioR: API Wrapper Around 'Postcodes.io'. R package version 0.3.1, https://cran.r-project.org/web/packages/PostcodesioR/.`
+`Walczak, E. J., (2023). PostcodesioR: An R package for UK geocoding. Journal of Open Source Software, 8(84), 5334, https://doi.org/10.21105/joss.05334`
 
 BibTeX entry is here:
 
 ``` latex
-@Manual{,
-  title = {PostcodesioR: API Wrapper Around Postcodes.io},
-  author = {Eryk Walczak},
-  year = {2021},
-  doi = {10.5281/zenodo.5717210},
+@article{postcodesior:2023,
+  title = {{PostcodesioR: An R package for UK geocoding}},
+  author = {Eryk J. Walczak},
+  journal = {Journal of Open Source Software},
+  volume = {8},
+  number = {84},
+  pages = {5334},
+  year = {2023},
+  doi = {10.21105/joss.05334},
   note = {R package version 0.3.1},
   url = {https://cran.r-project.org/web/packages/PostcodesioR/},
 }
@@ -157,4 +164,4 @@ Please note that this project is released with a [Contributor Code of
 Conduct](https://github.com/ropensci/PostcodesioR/blob/master/CONDUCT.md).
 By participating in this project you agree to abide by its terms.
 
-[![ropensci\_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)
+[![ropensci_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)

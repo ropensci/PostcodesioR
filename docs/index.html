@@ -88,8 +88,10 @@
       </header><div class="row">
   <div class="contents col-md-9">
 
-<div class="section level1"><div class="page-header"><h1 id="postcodesior">PostcodesioR<a class="anchor" aria-label="anchor" href="#postcodesior"></a>
-</h1></div></div>
+<div class="section level1">
+<div class="page-header"><h1 id="postcodesior">PostcodesioR<a class="anchor" aria-label="anchor" href="#postcodesior"></a>
+</h1></div>
+</div>
 <div class="section level1">
 <h1 id="postcodesior-">PostcodesioR <img src="reference/figures/logo.png" align="right" height="139"><a class="anchor" aria-label="anchor" href="#postcodesior-"></a>
 </h1>
@@ -130,7 +132,7 @@
 <span></span>
 <span><span class="co">#overview</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">lookup_result</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## 'data.frame':    1 obs. of  35 variables:</span></span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## 'data.frame':    1 obs. of  38 variables:</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ postcode                       : chr "EC1Y 8LX"</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ quality                        : int 1</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ eastings                       : int 532544</span></span>
@@ -150,38 +152,45 @@
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ admin_district                 : chr "Islington"</span></span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ parish                         : chr "Islington, unparished area"</span></span>
 <span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ admin_county                   : logi NA</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ admin_ward                     : chr "Bunhill"</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ ced                            : logi NA</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ ccg                            : chr "NHS North Central London"</span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ nuts                           : chr "Haringey and Islington"</span></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ admin_district_code            : chr "E09000019"</span></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ admin_county_code              : chr "E99999999"</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ admin_ward_code                : chr "E05000367"</span></span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ parish_code                    : chr "E43000209"</span></span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ parliamentary_constituency_code: chr "E14000764"</span></span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ ccg_code                       : chr "E38000240"</span></span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ ccg_id_code                    : chr "93C"</span></span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ ced_code                       : chr "E99999999"</span></span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ nuts_code                      : chr "TLI43"</span></span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ lsoa_code                      : chr "E01002704"</span></span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ msoa_code                      : chr "E02000576"</span></span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ lau2_code                      : chr "E09000019"</span></span></code></pre></div>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ date_of_introduction           : chr "198001"</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ admin_ward                     : chr "Bunhill"</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ ced                            : logi NA</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ ccg                            : chr "NHS North Central London"</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ nuts                           : chr "Haringey and Islington"</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ pfa                            : chr "Metropolitan Police"</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ admin_district_code            : chr "E09000019"</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ admin_county_code              : chr "E99999999"</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ admin_ward_code                : chr "E05013699"</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ parish_code                    : chr "E43000209"</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ parliamentary_constituency_code: chr "E14000764"</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ ccg_code                       : chr "E38000240"</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ ccg_id_code                    : chr "93C"</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ ced_code                       : chr "E99999999"</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ nuts_code                      : chr "TLI43"</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ lsoa_code                      : chr "E01002704"</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ msoa_code                      : chr "E02000576"</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ lau2_code                      : chr "E09000019"</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a><span class="do">##  $ pfa_code                       : chr "E23000001"</span></span></code></pre></div>
 <p>Check the <a href="https://docs.ropensci.org/PostcodesioR/articles/Introduction.html" class="external-link">vignette</a> to see all functions in action.</p>
 </div>
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
 </h2>
 <p>Please cite this package if it is used in a publication</p>
-<p><code>Walczak, E. (2021). PostcodesioR: API Wrapper Around 'Postcodes.io'. R package version 0.3.1, https://cran.r-project.org/web/packages/PostcodesioR/.</code></p>
+<p><code>Walczak, E. J., (2023). PostcodesioR: An R package for UK geocoding. Journal of Open Source Software, 8(84), 5334, https://doi.org/10.21105/joss.05334</code></p>
 <p>BibTeX entry is here:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>@Manual{,</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  title = {PostcodesioR: API Wrapper Around Postcodes.io},</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  author = {Eryk Walczak},</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  year = {2021},</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  doi = {10.5281/zenodo.5717210},</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  note = {R package version 0.3.1},</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  url = {https://cran.r-project.org/web/packages/PostcodesioR/},</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>@article{postcodesior:2023,</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  title = {{PostcodesioR: An R package for UK geocoding}},</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  author = {Eryk J. Walczak},</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  journal = {Journal of Open Source Software},</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  volume = {8},</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  number = {84},</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  pages = {5334},</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  year = {2023},</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  doi = {10.21105/joss.05334},</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  note = {R package version 0.3.1},</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  url = {https://cran.r-project.org/web/packages/PostcodesioR/},</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="notes">Notes<a class="anchor" aria-label="anchor" href="#notes"></a>
@@ -240,7 +249,7 @@
 <li><a href="https://github.com/ropensci/software-review/issues/176" class="external-link"><img src="https://badges.ropensci.org/176_status.svg"></a></li>
 <li><a href="https://www.repostatus.org/" class="external-link"><img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed."></a></li>
 <li><a href="https://cran.r-project.org/package=PostcodesioR" class="external-link"><img src="https://www.r-pkg.org/badges/version/PostcodesioR" alt="CRAN_Status_Badge"></a></li>
-<li><a href="https://zenodo.org/badge/latestdoi/64221541" class="external-link"><img src="https://zenodo.org/badge/64221541.svg" alt="DOI"></a></li>
+<li><a href="https://doi.org/10.21105/joss.05334" class="external-link"><img src="https://joss.theoj.org/papers/10.21105/joss.05334/status.svg" alt="DOI"></a></li>
 </ul>
 </div>
 

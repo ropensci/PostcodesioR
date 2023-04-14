@@ -10,7 +10,7 @@ output: rmarkdown::github_document
 [![](https://badges.ropensci.org/176_status.svg)](https://github.com/ropensci/software-review/issues/176)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/PostcodesioR)](https://cran.r-project.org/package=PostcodesioR)
-[![DOI](https://zenodo.org/badge/64221541.svg)](https://zenodo.org/badge/latestdoi/64221541)
+[![DOI](https://joss.theoj.org/papers/10.21105/joss.05334/status.svg)](https://doi.org/10.21105/joss.05334)
 ![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/PostcodesioR)
 
 An API wrapper around [postcodes.io](https://postcodes.io/) - free UK postcode lookup and geocoder. This package helps to find and transform information about UK administrative geography like postcodes, LSOA, MSOA, constituencies, counties, wards, districts, CCG or NUTS.
@@ -67,16 +67,20 @@ Check the [vignette](https://docs.ropensci.org/PostcodesioR/articles/Introductio
 
 Please cite this package if it is used in a publication
 
-`Walczak, E. (2021). PostcodesioR: API Wrapper Around 'Postcodes.io'. R package version 0.3.1, https://cran.r-project.org/web/packages/PostcodesioR/.`
+`Walczak, E. J., (2023). PostcodesioR: An R package for UK geocoding. Journal of Open Source Software, 8(84), 5334, https://doi.org/10.21105/joss.05334`
 
 BibTeX entry is here:
 
 ```{latex, echo=TRUE, eval=FALSE}
-@Manual{,
-  title = {PostcodesioR: API Wrapper Around Postcodes.io},
-  author = {Eryk Walczak},
-  year = {2021},
-  doi = {10.5281/zenodo.5717210},
+@article{postcodesior:2023,
+  title = {{PostcodesioR: An R package for UK geocoding}},
+  author = {Eryk J. Walczak},
+  journal = {Journal of Open Source Software},
+  volume = {8},
+  number = {84},
+  pages = {5334},
+  year = {2023},
+  doi = {10.21105/joss.05334},
   note = {R package version 0.3.1},
   url = {https://cran.r-project.org/web/packages/PostcodesioR/},
 }
