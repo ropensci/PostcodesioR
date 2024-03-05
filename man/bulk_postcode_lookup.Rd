@@ -4,27 +4,25 @@
 \alias{bulk_postcode_lookup}
 \title{Bulk postcode lookup}
 \usage{
-bulk_postcode_lookup(postcodes)
+bulk_postcode_lookup(...)
 }
 \arguments{
-\item{postcodes}{Accepts a list of postcodes. Accepts up to 100 postcodes.
+\item{...}{One or more vectors containing postcodes to look up. Up to 100 postcodes are accepted.
 For only one postcode use \code{\link{postcode_lookup}}.}
 }
 \value{
-A list of length one.
+A list
 }
 \description{
 Returns a list of matching postcodes and respective available data.
 }
 \examples{
 \donttest{
-pc_list <- list(
-postcodes = c("PR3 0SG", "M45 6GN", "EX165BL")) # spaces are ignored
-bulk_postcode_lookup(pc_list)
-# The function needs a list of length one. This won't work:
-bulk_postcode_lookup(list("PR3 0SG", "M45 6GN", "EX165BL"))
+## Postcodes can be provided as individual arguments
+bulk_postcode_lookup("PR30SG", "M456GN", "EX165BL")
+## Or as one or more vectors:
+bulk_postcode_lookup(c("PR30SG", "M456GN"), "EX165BL")
 }
-
 }
 \seealso{
 \code{\link{postcode_lookup}} for documentation.

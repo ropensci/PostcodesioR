@@ -16,3 +16,11 @@ test_that("bulk_postcode_lookup works as expected", {
   expect_error(bulk_postcode_lookup(pc_list))
   expect_that(lookup_results, is_a("list"))
 })
+
+test_that("bulk_postcode_lookup_accepts_multiple_vectors", {
+  # Don't run these tests on the CRAN build servers
+  skip_on_cran()
+
+  expect_no_error(bulk_postcode_lookup("PR30SG", "M456GN", "EX165BL"))
+  expect_no_error(bulk_postcode_lookup("PR30SG", c("M456GN", "EX165BL")))
+})
