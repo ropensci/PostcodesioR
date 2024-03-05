@@ -8,7 +8,7 @@
 #' @param postcodes Accepts a list of postcodes. Accepts up to 100 postcodes.
 #' For only one postcode use \code{\link{postcode_lookup}}.
 #'
-#' @return A list of length one.
+#' @return A list
 #' @seealso \code{\link{postcode_lookup}} for documentation.
 #'
 #' @export
@@ -24,7 +24,7 @@
 #'
 bulk_postcode_lookup <- function(...) {
   dots <- unlist(c(...), recursive = TRUE)
-  postcodes <- list(postcodes = ...)
+  postcodes <- list(postcodes = dots)
   check_list_limit(postcodes)
   postcodes <- lapply(postcodes, URLencode)
   r <- POST("https://api.postcodes.io/postcodes",
