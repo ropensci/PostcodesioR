@@ -22,7 +22,9 @@
 #' bulk_postcode_lookup(list("PR3 0SG", "M45 6GN", "EX165BL"))
 #' }
 #'
-bulk_postcode_lookup <- function(postcodes) {
+bulk_postcode_lookup <- function(...) {
+  dots <- unlist(c(...), recursive = TRUE)
+  postcodes <- list(postcodes = ...)
   check_list_limit(postcodes)
   postcodes <- lapply(postcodes, URLencode)
   r <- POST("https://api.postcodes.io/postcodes",
