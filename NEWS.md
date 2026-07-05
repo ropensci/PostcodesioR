@@ -14,3 +14,7 @@
 # PostcodesioR 0.1.1
 
 * Added a `NEWS.md` file to track changes to the package.
+
+# Unreleased
+
+* bulk_postcode_lookup: accept character vectors and `...` inputs, normalize whitespace in postcodes, and preserve the legacy `list(postcodes = ...)` form. Fixes #16, #17, #18.

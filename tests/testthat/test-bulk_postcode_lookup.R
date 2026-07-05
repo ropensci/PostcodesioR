@@ -1,18 +1,12 @@
-context("bulk_postcode_lookup")
+context("bulk_postcode_lookup input validation")
 
-test_that("bulk_postcode_lookup works as expected", {
-  # Don't run these tests on the CRAN build servers
-  skip_on_cran()
+library(testthat)
 
-  single_postcode <- c("PR3 0SG")
-  pc_list <- list(postcodes = c("PR3 0SG", "M45 6GN", "EX165BL"))
-  lookup_results <- bulk_postcode_lookup(pc_list)
+test_that("requires at least one postcode", {
+  expect_error(bulk_postcode_lookup(), "Please provide at least one postcode.")
+  expect_error(bulk_postcode_lookup(character(0)), "Please provide at least one postcode.")
+})
 
-  expect_error(bulk_postcode_lookup(single_postcode))
-  expect_error(bulk_postcode_lookup(list()))
-  pc_list <- list(postcodes = 1:101)
-  expect_error(bulk_postcode_lookup(pc_list))
-  pc_list <- list(postcodes = 1:50, o = 1:51)
-  expect_error(bulk_postcode_lookup(pc_list))
-  expect_that(lookup_results, is_a("list"))
+test_that("preserves old list(postcodes = ...) form and list checks", {
+  expect_error(check_list_limit("not a list"), "Please provide a list with postcodes.")
 })

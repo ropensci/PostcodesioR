@@ -53,8 +53,17 @@ This function creates a nested list with the codes for administrative district, 
 To query two or more postcodes, use `bulk_` functions.
 
 ```{r}
+# You can provide a character vector:
+bulk_lookup_result <- bulk_postcode_lookup(c("PR3 0SG", "M45 6GN", "EX165BL"))
+
+# Or provide multiple arguments:
+bulk_lookup_result <- bulk_postcode_lookup("PR3 0SG", "M45 6GN", "EX165BL")
+
+# The old list form is still supported:
 pc_list <- list(postcodes = c("PR3 0SG", "M45 6GN", "EX165BL"))
 bulk_lookup_result <- bulk_postcode_lookup(pc_list)
+
+# Note: whitespace in input postcodes is ignored (e.g. "S7 1FL" -> "S71FL")
 
 #overview
 str(bulk_lookup_result[1])
@@ -130,7 +139,7 @@ bulk_rev_geo <- bulk_reverse_geocoding(geolocations_list)
 bulk_rev_geo[[1]]$result[[1]]
 ```
 
-The list above is not the most common way of storing files. It's more likely that a data frame will be used to store the geodata. In that case, it has to be turned into a list of a specific format required by the API:
+The list above is not the most common way of storing files. It's more likely that a data frame will be used to store the geodata. In that case, it has to be turned into a list of a specific forma[...]
 
 ```{r}
 geolocations_df <- structure(
@@ -292,7 +301,7 @@ str(place_lookup_result)
 
 ## Terminated postcodes
 
-You might end up having terminated postcodes in your data set. These are postcodes that are no longer active. UK postcodes can change so it's worth checking whether used postcodes are still active. If you need more information about when a particular postcode was terminated use:
+You might end up having terminated postcodes in your data set. These are postcodes that are no longer active. UK postcodes can change so it's worth checking whether used postcodes are still activ[...]
 
 ```{r}
 terminated_postcode("E1W 1UU")
