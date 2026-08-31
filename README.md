@@ -10,7 +10,7 @@ state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/PostcodesioR)](https://cran.r-project.org/package=PostcodesioR)
 [![DOI](https://joss.theoj.org/papers/10.21105/joss.05334/status.svg)](https://doi.org/10.21105/joss.05334)
-![R-CMD-check](https://github.com/ropensci/PostcodesioR/actions/workflows/R-CMD-check.yaml/badge.svg)\](<https://github.com/ropensci/PostcodesioR/actions/workflows/R-CMD-check.yaml>)
+![R-CMD-check](https://github.com/ropensci/PostcodesioR/actions/workflows/R-CMD-check.yaml/badge.svg)
 ![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/PostcodesioR)
 
 An API wrapper around [postcodes.io](https://postcodes.io/) - free UK
