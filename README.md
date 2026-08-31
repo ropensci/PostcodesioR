@@ -10,6 +10,7 @@ state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/PostcodesioR)](https://cran.r-project.org/package=PostcodesioR)
 [![DOI](https://joss.theoj.org/papers/10.21105/joss.05334/status.svg)](https://doi.org/10.21105/joss.05334)
+![R-CMD-check](https://github.com/ropensci/PostcodesioR/actions/workflows/R-CMD-check.yaml/badge.svg)\](<https://github.com/ropensci/PostcodesioR/actions/workflows/R-CMD-check.yaml>)
 ![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/PostcodesioR)
 
 An API wrapper around [postcodes.io](https://postcodes.io/) - free UK
@@ -75,45 +76,80 @@ lookup_result <- postcode_lookup("EC1Y8LX")
 str(lookup_result)
 ```
 
-    ## 'data.frame':    1 obs. of  38 variables:
-    ##  $ postcode                       : chr "EC1Y 8LX"
-    ##  $ quality                        : int 1
-    ##  $ eastings                       : int 532544
-    ##  $ northings                      : int 182128
-    ##  $ country                        : chr "England"
-    ##  $ nhs_ha                         : chr "London"
-    ##  $ longitude                      : num -0.0909
-    ##  $ latitude                       : num 51.5
-    ##  $ european_electoral_region      : chr "London"
-    ##  $ primary_care_trust             : chr "Islington"
-    ##  $ region                         : chr "London"
-    ##  $ lsoa                           : chr "Islington 023D"
-    ##  $ msoa                           : chr "Islington 023"
-    ##  $ incode                         : chr "8LX"
-    ##  $ outcode                        : chr "EC1Y"
-    ##  $ parliamentary_constituency     : chr "Islington South and Finsbury"
-    ##  $ admin_district                 : chr "Islington"
-    ##  $ parish                         : chr "Islington, unparished area"
-    ##  $ admin_county                   : logi NA
-    ##  $ date_of_introduction           : chr "198001"
-    ##  $ admin_ward                     : chr "Bunhill"
-    ##  $ ced                            : logi NA
-    ##  $ ccg                            : chr "NHS North Central London"
-    ##  $ nuts                           : chr "Haringey and Islington"
-    ##  $ pfa                            : chr "Metropolitan Police"
-    ##  $ admin_district_code            : chr "E09000019"
-    ##  $ admin_county_code              : chr "E99999999"
-    ##  $ admin_ward_code                : chr "E05013699"
-    ##  $ parish_code                    : chr "E43000209"
-    ##  $ parliamentary_constituency_code: chr "E14000764"
-    ##  $ ccg_code                       : chr "E38000240"
-    ##  $ ccg_id_code                    : chr "93C"
-    ##  $ ced_code                       : chr "E99999999"
-    ##  $ nuts_code                      : chr "TLI43"
-    ##  $ lsoa_code                      : chr "E01002704"
-    ##  $ msoa_code                      : chr "E02000576"
-    ##  $ lau2_code                      : chr "E09000019"
-    ##  $ pfa_code                       : chr "E23000001"
+    ## 'data.frame':    1 obs. of  73 variables:
+    ##  $ postcode                            : chr "EC1Y 8LX"
+    ##  $ quality                             : int 1
+    ##  $ eastings                            : int 532544
+    ##  $ northings                           : int 182128
+    ##  $ country                             : chr "England"
+    ##  $ nhs_ha                              : chr "London"
+    ##  $ longitude                           : num -0.0909
+    ##  $ latitude                            : num 51.5
+    ##  $ european_electoral_region           : chr "London"
+    ##  $ primary_care_trust                  : chr "Islington"
+    ##  $ region                              : chr "London"
+    ##  $ lsoa                                : chr "Islington 023D"
+    ##  $ msoa                                : chr "Islington 023"
+    ##  $ incode                              : chr "8LX"
+    ##  $ outcode                             : chr "EC1Y"
+    ##  $ parliamentary_constituency          : chr "Islington South and Finsbury"
+    ##  $ parliamentary_constituency_2024     : chr "Islington South and Finsbury"
+    ##  $ senedd_constituency                 : logi NA
+    ##  $ senedd_constituency_no              : logi NA
+    ##  $ admin_district                      : chr "Islington"
+    ##  $ parish                              : chr "Islington, unparished area"
+    ##  $ admin_county                        : logi NA
+    ##  $ date_of_introduction                : chr "198001"
+    ##  $ date_of_termination                 : logi NA
+    ##  $ index_of_multiple_deprivation       : int 12549
+    ##  $ admin_ward                          : chr "Bunhill"
+    ##  $ ced                                 : logi NA
+    ##  $ ccg                                 : chr "NHS West and North London"
+    ##  $ nuts                                : chr "Islington"
+    ##  $ pfa                                 : chr "Metropolitan Police"
+    ##  $ nhs_region                          : chr "London"
+    ##  $ ttwa                                : chr "London"
+    ##  $ national_park                       : chr "England (non-National Park)"
+    ##  $ bua                                 : chr "Islington"
+    ##  $ icb                                 : chr "NHS West and North London Integrated Care Board"
+    ##  $ cancer_alliance                     : chr "North Central London"
+    ##  $ lsoa11                              : chr "Islington 023D"
+    ##  $ msoa11                              : chr "Islington 023"
+    ##  $ lsoa21                              : chr "Islington 023D"
+    ##  $ msoa21                              : chr "Islington 023"
+    ##  $ oa21                                : chr "E00013429"
+    ##  $ ruc11                               : chr "(England/Wales) Urban major conurbation"
+    ##  $ ruc21                               : chr "Urban: Nearer to a major town or city"
+    ##  $ lep1                                : chr "London"
+    ##  $ lep2                                : logi NA
+    ##  $ admin_district_code                 : chr "E09000019"
+    ##  $ admin_county_code                   : chr "E99999999"
+    ##  $ admin_ward_code                     : chr "E05013699"
+    ##  $ parish_code                         : chr "E43000209"
+    ##  $ parliamentary_constituency_code     : chr "E14001306"
+    ##  $ parliamentary_constituency_2024_code: chr "E14001306"
+    ##  $ ccg_code                            : chr "E38000240"
+    ##  $ ccg_id_code                         : chr "93C"
+    ##  $ ced_code                            : chr "E99999999"
+    ##  $ nuts_code                           : chr "TLI43"
+    ##  $ lsoa_code                           : chr "E01002704"
+    ##  $ msoa_code                           : chr "E02000576"
+    ##  $ lau2_code                           : chr "E09000019"
+    ##  $ pfa_code                            : chr "E23000001"
+    ##  $ nhs_region_code                     : chr "E40000003"
+    ##  $ ttwa_code                           : chr "E30000234"
+    ##  $ national_park_code                  : chr "E65000001"
+    ##  $ bua_code                            : chr "E63011980"
+    ##  $ icb_code                            : chr "E54000071"
+    ##  $ cancer_alliance_code                : chr "E56000027"
+    ##  $ lsoa11_code                         : chr "E01002704"
+    ##  $ msoa11_code                         : chr "E02000576"
+    ##  $ lsoa21_code                         : chr "E01002704"
+    ##  $ msoa21_code                         : chr "E02000576"
+    ##  $ oa21_code                           : chr "E00013429"
+    ##  $ ruc11_code                          : chr "A1"
+    ##  $ ruc21_code                          : chr "UN1"
+    ##  $ lep1_code                           : chr "E37000051"
 
 Check the
 [vignette](https://docs.ropensci.org/PostcodesioR/articles/Introduction.html)
